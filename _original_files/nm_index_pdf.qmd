@@ -1,0 +1,104 @@
+```{r chart_cap_er, include=FALSE}
+#| file: R/chart_level1_cap_er_nm.R
+#| out.width: "100%"
+```
+
+```{r chart_cap_trm, include=FALSE}
+#| file: R/chart_level1_cap_trm_nm.R
+#| out.width: "100%"
+```
+
+
+```{=tex}
+\setlength{\fboxrule}{0pt} % Set the border width to 0pt (no border)
+\setlength{\fboxsep}{0pt} % Remove padding
+```
+
+# OVERVIEW
+
+*`r pp_version`*
+
+## Safety (Network Manager - SES RP3 area)
+
+```{r chart_eosm}
+#| file: R/chart_level1_saf_nm.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+```{r concl-eosm}
+saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_findings_EoSM")
+```
+
+`r saf_conc1`
+
+
+```{r chart_deliveries}
+#| file: R/chart_level1_saf_deliveries_nm.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+
+```{r concl-deliveries}
+saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_findings_over")
+```
+
+`r saf_conc2`
+
+\needspace{2\baselineskip}
+
+## Environment (Network Manager - SES RP3 area)
+
+```{r chart_env_kea, options = (doclevel=c("level1"))}
+#| file: R/chart_level1_kea.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+
+```{r concl-env}
+env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_findings_KEP")
+```
+
+`r env_conc1`
+
+\needspace{2\baselineskip}
+
+## Capacity (Network Manager - SES RP3 area)
+
+`r layout_2fig("chart_cap_er", "chart_cap_trm")`
+
+```{r chart_cap_15m}
+#| file: R/chart_level1_cap_15m_nm.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+```{r concl-cap}
+cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_findings_CAP")
+```
+
+`r cap_er_conc1`
+
+\needspace{2\baselineskip}
+
+## Cost-efficiency (Network Manager - SES RP3 area)
+
+```{r chart_cef}
+#| file: R/chart_level1_cef_nm.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+```{r concl-cef}
+cef_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CEFF", "NM_findings_CEFF")
+```
+
+`r cef_conc1`
+

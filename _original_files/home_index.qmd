@@ -1,0 +1,128 @@
+## PRB Annual Monitoring Report (AMR) digital dashboard (detailed analysis per Member State)
+
+::: {#container-su style="clear: both"}
+:::: {#summary-kpi-table class="equal-column"}
+### 2024 PERFORMANCE IN A NUTSHELL{style="margin-top: 0rem; margin-bottom: 1rem;"} 
+::::: grid
+:::::: {.g-col-12}
+
+::::::: {.grid style="gap: 0rem"}
+:::::::: {.g-col-3 .text-center .text-pad-top style="border: 1px solid black"}
+[{{< fa solid plane >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
+::::::::
+
+:::::::: {.g-col-9  style="border-top: 1px solid black; border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 1.5rem;"}
+[**TRAFFIC**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
+9.6 million flights controlled in the SES airspace
+::::::::
+:::::::
+
+::::::: {.grid style="gap: 0rem"}
+:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
+[{{< fa solid helmet-safety >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
+::::::::
+
+:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
+[**SAFETY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
+Most of the service providers achieved or exceeded the targeted safety maturity levels
+::::::::
+:::::::
+
+::::::: {.grid style="gap: 0rem"}
+:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
+[{{< fa solid seedling >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
+::::::::
+
+:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
+[**ENVIRONMENT**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
+Average air route +20% longer than the targeted distance 
+::::::::
+:::::::
+
+::::::: {.grid style="gap: 0rem"}
+:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
+[{{< fa solid clock >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
+::::::::
+
+:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 1.5rem;"}
+[**CAPACITY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
+Average en route ATFM delay of 2.19 minutes per flight 
+::::::::
+:::::::
+
+::::::: {.grid style="gap: 0rem"}
+:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
+[{{< fa solid coins >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
+::::::::
+
+:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
+[**COST-EFFICIENCY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
+The unitary cost of providing air navigation services amounts to 46.62€ 
+::::::::
+:::::::
+
+::::::
+:::::
+::::
+
+### REMARKS FROM THE CHAIR
+
+The annual monitoring report for 2024 comes at a time when the Performance Review Board, appointed by the Commission in September 2025, is beginning the mandate. I would like to welcome my colleagues within the Board and extend my thanks to the previous Performance Review Body for its extensive contribution to the field of air traffic management performance over the last eight years. 
+
+The new arrangement sees the group of experts become a board. Naturally, the ways of working will change compared to the previous eight years and I look forward to working with my fellow PRB colleagues and the European Commission to define our working arrangements under the SES II+ legislation. We will publish further information about this in the coming months, but one of our guiding principles is to work closely with stakeholders, particularly our colleagues at National Supervisory Authorities, on performance of the industry. 
+
+During this time of transition, this version of the report was developed by the PRB secretariat and provides the findings of the performance in 2024 but does not yet provide conclusions and recommendations. The PRB and I will draw them in the coming weeks and publish an update later in 2025. However, it remains important to highlight several of the key performance outcomes observed in 2024:
+
+Traffic increased in 2024, approaching the levels seen in 2019 before the COVID-19 pandemic. Many Member States see traffic levels significantly above pre-pandemic levels, whereas some (those mainly proximate to Ukraine and Russia) remain below.
+Nine ANSPs did not achieve the RP3 targets for the effectiveness of safety management, moreover rates of runway incursions and separation minima infringements increased.
+
+The geopolitical situations in Ukraine and the Middle East and the high levels of delay continue to impact on environmental performance, with en route flight efficiency remaining well in excess of the Union-wide targets.
+The high levels of delay observed in 2022 and 2023 further increased in 2024 to over two minutes per flight. These delays are driven by a lack of capacity in some Member States with air navigation service providers struggling to recruit sufficient numbers of air traffic controllers to meet demand. Capacity shortfalls need to be addressed to reduce the costs of delay incurred by airspace users and to drive performance to achieve the Union-wide targets.
+Cost-efficiency targets have been met also in 2024. As for the previous years, 2024 was also characterised by a significantly higher actual inflation than planned, leading to substantial inflation adjustments being charged to airspace users.
+
+2024 is the final year of RP3. The first monitoring report for RP4, to be published in September next year, will monitor performance of the new indicators included within the Regulation and under the performance plans approved. There remain several Member States with performance plans currently under revision, and the PRB looks forward to working with the Commission and NSAs to ensure robust plans are in place at the earliest opportunity.
+
+On behalf of all the PRB members, I would like to thank the PRB secretariat for its invaluable help in preparing this report. I would also like to thank our colleagues from European Aviation Safety Agency (EASA) and from EUROCONTROL, namely the Aviation Transformation Directorate and its Aviation Intelligence Unit as well as the Network Management Directorate for their contributions. 
+
+
+![](images/prb_chair_signature.jpg){width=20%}\
+Koen Milis\
+PRB Chair
+
+:::
+
+
+
+### SINGLE EUROPEAN SKY – GEOGRAPHICAL SCOPE{style="margin-bottom: 1.1rem;"} 
+
+::: {.cell}
+<div class="equal-column-right">
+
+<div id="observablehq-mmm-a2de41c4"></div>
+<div id="observablehq-link-a2de41c4"></div>
+
+</div>
+
+<p> 
+The Single European Sky (SES) framework covers the provision of Air Navigation Servies in the airspace of 29 European States (27 members of the European Union, Norway, and Switzerland). 
+
+Over 70 different entities are involved, at national level, in the provision of air traffic, communication, navigation and surveillance and/or meteorological services in this area.
+
+Air traffic services are delivered to airspace users through 49 Area Control Centres (ACCs) and 145 airports. 
+
+The costs related to the provision of these services are financed directly by the users though a system of charges, which is organised on the basis of 29 en route and 26 terminal charging zones.
+</p>
+
+
+:::
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@espinielli/prb-dashboard-map.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "mmm") return new Inspector(document.querySelector("#observablehq-mmm-a2de41c4"));
+  if (name === "link") return new Inspector(document.querySelector("#observablehq-link-a2de41c4"));
+});
+</script>

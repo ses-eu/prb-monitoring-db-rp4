@@ -1,0 +1,339 @@
+```{r saf_level2_text}
+# get yearly xrates
+
+xrate <- get_xrates("enroute", ecz_list$ecz_id[1]) |> 
+  filter(year == year_report) |> 
+  select(pp_exchangerate)
+
+xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
+
+```
+
+::: {.grid .align-items-center}
+:::: {.g-col-9}
+[Annual Monitoring Report `r toupper(params$year_folder)` - {{< var doc.country >}}]{.fakeh1}
+::::
+
+:::: {.g-col-3}
+<span class="no-external-icon">[<i class="fa fa-download"></i> Download Report](`r params$home_address`/download/{{< var doc.year_report >}}/PRB-Annual-Monitoring-Report_{{< var doc.country >}}_{{< var doc.year_report >}}.pdf){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+::::
+:::
+
+
+## Contextual information
+*`r pp_version`*
+
+<!-- ******************* 1st column -->
+::: columns
+:::: {.column width="30%"}
+::::: columns
+:::::: {.column width="50%"}
+**List of ACCs  ** `r acc_no`
+::::::
+
+:::::: {.column width="50%"}
+`r acc1`<br/>`r acc2`<br/>`r acc3`<br/>`r acc4`<br/>`r acc5`
+::::::
+:::::
+
+::::: columns
+:::::: {.column width="50%"}
+**No of airports in the scope of the performance plan**
+::::::
+
+:::::: {.column width="50%"}
+**≥80'K    ** `r no_apt_big`<br/> **<80'K     ** `r no_apt_small`
+::::::
+:::::
+::::
+
+<!-- ******************* 2nd column -->
+:::: {.column width="38%"}
+
+`r if (params$year_folder == "rp3") ":::: {.content-hidden}"`
+::::: columns
+:::::: {.column width="50%"}
+**Exchange rate (1 EUR=) **
+::::::
+`r if (params$year_folder == "rp3") "::::"`
+
+:::::: {.column width="50%"}
+`r paste0("2017: ", xrate2017, " ", nat_curr)`\
+`r paste0(year_report, ": ", xrate_year_report, " ", nat_curr)`
+::::::
+:::::
+
+<p style="margin-bottom: 0.5rem"> **Share of Union-wide traffic (TSUs) `r toupper(params$year_folder)` **  `r tsu_share` </p>
+
+<p style="margin-bottom: 0.5rem"> **Share of Union-wide en route costs `r toupper(params$year_folder)` ** `r ert_cost_share` </p>
+
+**Share en route / terminal costs `r toupper(params$year_folder)` ** `r ert_trm_share`
+
+::::: columns
+:::::: {.column width="50%"}
+<p style="margin-bottom: 0.5rem">**En route charging zone(s)**</p>
+::::::
+
+:::::: {.column width="50%"}
+```{r}
+ecz_list_string <- paste0(
+  ecz_list$ecz_name[1],
+  if_else(is.na(ecz_list$ecz_name[2]) == TRUE, '' ,  paste0('<br/>', ecz_list$ecz_name[2]))
+)
+```
+
+<p style="margin-bottom: 0.5rem">`r ecz_list_string`</p>
+
+::::::
+:::::
+
+::::: columns
+:::::: {.column width="50%"}
+[**Terminal charging zone(s)**]{.context-text}
+::::::
+
+:::::: {.column width="50%"}
+```{r}
+tcz_list_string <- if_else(no_tcz == 0, '',
+                           paste0(tcz_list$tcz_name[1], 
+                                  if_else(is.na(tcz_list$tcz_name[2]) == TRUE, '' ,  
+                                          paste0('<br/>', tcz_list$tcz_name[2])
+                                          )
+                                  )
+                           )
+```
+
+`r tcz_list_string`
+
+::::::
+:::::
+::::
+
+<!-- ******************* 3rd column -->
+:::: {.column width="32%"}
+::::: columns
+:::::: {.column width="30%"}
+**Main ANSP ** 
+::::::
+
+:::::: {.column width="70%"}
+• `r main_ansp`
+::::::
+:::::
+
+::::: columns
+:::::: {.column width="30%"}
+**Other ANSPs **
+::::::
+
+:::::: {.column width="70%"}
+`r other_ansps_str`
+::::::
+:::::
+
+::::: columns
+:::::: {.column width="30%"}
+**MET Providers **
+::::::
+
+:::::: {.column width="70%"}
+`r other_met_str`
+::::::
+:::::
+
+::::
+:::
+
+## Traffic (En route traffic zone)
+
+::: {#container-mvt}
+:::: {#chart-mvt class="mychart"}
+```{r chart-mvt}
+#| file: R/chart_level1_traffic_mvt.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-mvt}
+```{r concl-mvt}
+mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Findings_traffic_IFR")
+```
+
+`r mvt_conc1`
+::::
+:::
+
+::: {#container-su style="clear: both"}
+
+<br>
+
+:::: {#chart-su class="mychart"}
+```{r chart-su}
+#| file: R/chart_level1_traffic_su.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-su}
+```{r concl-su}
+tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Findings_traffic_TSU")
+```
+
+`r tsu_conc1`
+::::
+:::
+
+::: {#container-saf style="clear: both"}
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+## Safety (Main ANSP)
+
+```{r chart-saf-code}
+#| label: chart_saf_eosm
+#| out.width: "100%"
+#| echo: false
+
+source("R/chart_level1_saf.R")
+```
+
+:::: {#chart-saf class="mychart"}
+```{r chart-saf}
+#| echo: false
+mycharts[[1]]
+```
+::::
+
+:::: {#concl-saf}
+```{r concl-saf}
+saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+```
+
+`r saf_conc1`
+::::
+:::
+
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+`r if (params$country == "Luxembourg") "::: {.content-hidden}"`
+::: {#container-env style="clear: both"}
+
+## Environment (Member State)
+
+:::: {#chart-env class="mychart"}
+```{r chart-env-kea, options = (doclevel=c("level1"))}
+#| file: R/chart_level1_kea.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-env}
+```{r concl-env}
+env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Findings_environment")
+```
+
+`r env_conc1`
+::::
+:::
+`r if (params$country == "Luxembourg") ":::"`
+
+
+::: {#container-cap style="clear: both"}
+
+## Capacity (Member State)
+<!-- empty line to ensure next heading leaves enough space -->
+<!-- <div style="height: 1px"></div> -->
+
+:::: {#chart-cap class="mychart"}
+`r if (params$country == "Luxembourg") "::::: {.content-hidden}"`
+```{r chart-cap-er, options = (cztype=c("enroute"))}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+
+<br>
+
+`r if (params$country == "Luxembourg") ":::::"`
+
+
+`r if (params$no_tcz == 0) "::::: {.content-hidden}"`
+
+```{r chart-cap-trm, options = (cztype=c("terminal"))}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+
+`r if (params$no_tcz == 0) ":::::"`
+::::
+
+:::: {#concl-cap}
+```{r concl-cap}
+cap_er_conc1 <-  if_else(country == "Luxembourg", "", get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity"))
+
+cap_trm_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "TRM_capacity", "Table_Findings_TRM_capacity")
+
+cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
+
+```
+
+`r cap_er_conc1`
+
+`r cap_trm_conc1`
+
+::::
+:::
+
+::: {#container-cef style="clear: both"}
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+## Cost-efficiency (En route/Terminal charging zone(s))
+
+:::: {#chart-cef-1 class="mychart"}
+```{r chart-cef-er-1, options = (cz=c("1", "enroute", "level1"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
+<br>
+
+`r if (params$no_ecz < 2) "::::: {.content-hidden}"`
+
+```{r chart-cef-er-2, options = (cz=c("2", "enroute", "level1"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
+`r if (params$no_ecz < 2) ":::::"`
+
+
+`r if (params$no_tcz == 0) "::::: {.content-hidden}"`
+<br>
+
+```{r chart-cef-trm-1, options = (cz=c("1", "terminal", "level1"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
+`r if (params$no_tcz == 1) ":::::: {.content-hidden}"`
+<br>
+
+```{r chart-cef-trm-2, options = (cz=c("2", "terminal", "level1"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
+`r if (params$no_tcz == 1) "::::::"`
+
+`r if (params$no_tcz == 0) ":::::"`
+::::
+
+:::: {#concl-cef}
+```{r concl-cef}
+cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+```
+
+`r cef_conc1`
+::::
+:::

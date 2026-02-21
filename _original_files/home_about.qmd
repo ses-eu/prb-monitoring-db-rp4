@@ -1,0 +1,283 @@
+## Overview
+
+The performance and charging schemes are established on the basis of Article 11 of Regulation (EC) No 549/2004 laying down the framework for the creation of the Single European Sky (the Framework Regulation) and Articles 14-16 of Regulation (EC) No 550/2004 on the provision of air navigation services in the Single European Sky (the Service Provision Regulation) respectively. Technical provisions for the third reference period (RP3), covering 2020 to 2024, are set out in  [Commission Implementing Regulation (EU) 2019/317](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R0317) as well as [Commission Implementing Regulation (EU) 2020/1627](https://eur-lex.europa.eu/legal-content/EN/TXT/?toc=OJ%3AL%3A2020%3A366%3ATOC&uri=uriserv%3AOJ.L_.2020.366.01.0007.01.ENG#:~:text=This%20Regulation%20establishes%20exceptional%20measures%20to%20be%20applied,Article%207%20%281%29%20of%20Implementing%20Regulation%20%28EU%29%202019%2F317.).
+
+The regulatory framework defines key performance indicators (KPIs) for the key performance areas (KPAs) of:
+
+-   Safety;
+-   Environment;
+-   Capacity; and
+-   Cost-efficiency.
+
+These are used to set performance targets at Union level, national level, or functional airspace block level. The KPIs cover both en route and terminal air navigation services, as well as network functions, to improve the overall performance of the network.
+
+The Union-wide revised performance targets for the third reference period are defined in [Commission Implementing Decision (EU) 2021/891](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021D0891) (repealing Implementing Decision (EU) 2019/903). Based on the targets, Member States prepare the performance plans, which they submitted to the Commission, as assisted by the Performance Review Body (PRB).
+
+Under Commission Implementing Regulation (EU) 2019/317, monitoring is one of the primary tasks of the PRB. It ensures that Member States, the European Commission, and stakeholders are informed about how Air Navigation Service Providers (ANSPs) perform in relation to their performance targets. The PRB Annual Monitoring Report (AMR) analyses the performance of the air navigation services of the Single European Sky (SES) against targets. The current dashboard is meant to support the dissemination of the PRB AMR analysis and conclusions for:
+
+-   The SES system as a whole;
+-   Individual Member States (including MUAC); and
+-   Network functions performed by the Network Manager.
+
+All the values and comments included in this dashboard reflect the information published in the PRB annual monitoring. The actual values for each year of the reference period are updated each year with the latest information provided by the Member States. Therefore, in case of ex-post corrections of data, the values displayed in the graphs may slightly differ with the comments provided in the bullet points.
+
+The monitoring analysis is completed by an RP3 page, providing an overview of the various KPIs and their evolution though the entire RP3 period. This analysis aims to offer additional insights into the overall results achieved over the past 5 years, both at the aggregate SES level and by individual States, including a summary of the main factors driving performance. 
+
+Finally, each page of this digital report can be downloaded in Portable Document Format (PDF) either though the specific “Download Report” button at the top-right corner of each page or though the Download page accessible from the menu bar at the top of the screen. 
+
+
+## Traffic
+
+Air traffic is presented, for the SES reference area and for the individual Member States, in terms of:
+
+-   Instrumental Flight Rules movements (IFR); and
+-   Total service units (TSUs) (i.e. unit of measurement used for charging purposes based on the multiplication of aircraft weight factor by distance factor).
+
+Actual traffic is compared with both the planned/determined traffic included in the adopted performance plan, as well as with the latest  [STATFOR](https://www.eurocontrol.int/forecasting#deliverables) forecast available at the time of adoption of the local performance plans. For IFR movements, planned data reflect the information included in the adopted performance plan while actual data are sourced from the relevant STATFOR forecast. Differently, service units determined and actuals data are sourced from the en route reporting tables.
+
+## Safety - Effectiveness of safety management (EoSM) – KPI#1
+
+Safety is monitored through the effectiveness of safety management (EoSM) of the ANSPs KPI. The EoSM KPI measures the level of implementation of the following safety management objectives (MOs):
+
+a)  Safety policy and objectives;
+b)  Safety risk management;
+c)  Safety assurance;
+d)  Safety promotion; and
+e)  Safety culture.
+
+The EoSM for ANSPs is a set of questions to determine the minimum level of maturity for each management objective. The answers are provided by the ANSPs and verified by the NSAs. The questions are developed by EASA and included in the supporting [technical material](https://wikis.ec.europa.eu/display/eusinglesky/RP3+Supporting+Materials?preview=/54034654/77530202/RP3%20EoSM%20template.xlsx) to the Regulation. For each objective, the maturity level achieved is determined by the lowest maturity level of any question allocated to a management objective. When answering the questions, one of the following maturity levels of implementation should be selected:
+
+-   Level A which is defined as 'Informal Arrangements' --- SMS processes and/or requirements have not been agreed at the organisation level; they are either not routinely undertaken or depend on the individual assigned to the task.
+-   Level B which is defined as 'Defined' --- SMS processes and/or requirements are defined but not yet fully implemented, documented or consistently applied.
+-   Level C which is defined as 'Managed' --- SMS processes and/or requirements are fully documented and consistently applied.
+-   Level D which is defined as 'Assured' --- Evidence is available to provide confidence that SMS processes and/or requirements are being applied appropriately and are delivering positive, measurable results.
+
+In addition to the minimum level achieved for a MO, an EoSM score is calculated. Each of the 100 questions in the EoSM questionnaire scores one (1) if the target for the associated MO is achieved or nil (0) if not achieved. The score gives an indication of how many areas (questions) the ANSPs need to improve.
+
+Applicable EoSM targets are defined at Union-wide level, local level (ANSPs) and for network functions (Network Manager). For RP3, the following target should be achieved by 2024:
+
+-   At least Level C in the safety management objectives 'safety culture', 'safety policy and objectives', 'safety assurance', and 'safety promotion'; and
+-   At least Level D in the safety management objective 'safety risk management'.
+
+In addition, for the Network Manager the safety PI, defined as the ATFM over-deliveries above the capacity limits of a sector declared by the air navigation service provider where ATFM regulations are imposed, is presented.
+
+## Occurrences - Rate of runway incursions (RIs) (PI#1) & Rate of separation minima infringements (SMIs) (PI#2)
+
+Two additional performance indicators are defined by Implementing Regulation (EU) 2019/317 to monitor safety performance: 
+- 	The rate of runway incursions (RIs) (PI#1); and
+- 	The rate of separation minima infringement (SMIs) (PI#2).
+
+The rate of runway incursions at airports located in a Member State, calculated as the total number of runway incursions with a safety impact that occurred at those airports divided by the total number of IFR and VFR movements at those airports.’ The RIs included in the indicator are those that occur at the airports included by the Member States in their performance plans, where the airports to be considered are specified by Article 1(3) of Commission Implementing Regulation (EU) 2019/317.
+
+The rate of separation minima infringements within the airspace of all controlling air traffic services units in a Member State, calculated as the total number of separation minima infringements with a safety impact that occurred in that airspace divided by the total number of controlled flight hours within that airspace. This indicator captures all SMIs that occur within the geographical boundary of a Member State, irrespective of which ANSP is providing the ATC service.
+
+## Use of automated safety data recording system (ASDRS) (PI#3)
+
+Finally, the use of automated safety data recording systems (ASDRS) performance indicator captures extent to which air navigation service providers (ANSPs) employ these systems to detect, record, analyse, or report—at a minimum—separation minima infringements and runway incursions. This indicator is considered an integral part of an ANSP’s safety risk management framework.
+
+## Environment - Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) & shortest constrained route (SCR) (PI#2)
+
+Environmental performance is measured through the horizontal en route flight efficiency of the actual flight path (KEA) KPI. KEA measures the additional distance of the flown trajectory beyond the great circle distance. ‘En route’ is defined as the portion of the flight outside a circle of 40 NM around the airport(s). The indicator is calculated for the whole calendar year and for each year of the reference period, as an average (excluding the ten highest daily values and the ten lowest daily values).
+
+This additional distance flown is impacted by the actions of ANSPs but also the route choices of airspace users, airspace restrictions or network measures. The higher the KEA value, the worse the performance.
+
+KEA is the only environment KPI upon which Union-wide and local (national or FAB level) performance is assessed. Two additional indicators contribute to the analysis of horizontal flight efficiency environmental performance: 
+
+- 	KEP (PI#1): The horizontal en route flight efficiency of the last filed flight plan (KEP) ; and 
+- 	SCR (PI#2): The horizontal en route flight efficiency of the shortest constrained route. 
+
+KEP measures the difference between the additional distance of the planned trajectory and the great circle distance, assessing the additional distance planned in the flight plan. 
+
+SCR measures the difference between the shortest possible distance which could have been planned and the great circle distance, reflecting how close the trajectory is to the theoretical shortest path. 
+
+KEA, KEP, and SCR indicators are computed at Union-wide, national, and local level.
+
+For the Network Manager, KEP is used as the environment KPI, measuring the efficiency of the European route network in the flight planning phase.
+
+## Environment - Additional taxi-out time (AXOT) (PI#3) & Arrival Sequencing and Metering Area (ASMA) time (PI#4)
+
+The Additional taxi-out time (AXOT) and the additional Arrival Sequencing and Metering Area (ASMA) time are defined by Implementing Regulation (EU) 2019/317 as environment performance indicators at local level, respectively PI#4 and PI#5.
+
+AXOT  is the difference between the actual taxi-out time of a flight and a statistically determined unimpeded taxi-out time based on taxi-out times in periods of low traffic demand.
+
+Similarly, ASMA time is the difference between the actual ASMA time of a flight and a statistically determined unimpeded ASMA time based on ASMA times in periods of low traffic demand.
+
+These indicators are computed at airport level with a minimum of 80 000 IFR movements per year. The indicators are presented at national level and broken down at the level of the main airports.
+
+This section is not presented for Member States having no airports in the scope of Implementing Regulation 2019/317. 
+
+## Environment - Share of arrivals applying continuous descent operations (CDOs) (PI#5)
+
+The share of arrivals applying Continuous Descent Operation (CDOs) (PI#5) is defined as the ratio between the total number of arrivals performing a CDO from a reference point at a height above ground and the total number of arrival operations.
+
+CDO operations allow aircraft to follow a flexible, optimum flight path that delivers major environmental and economic benefits - reduced fuel burn, gaseous emissions, noise and fuel costs - without any adverse effect on safety.
+
+The indicator is computed at airport level and it is presented both at aggregate national level and broken down at airport level.
+This section is not presented for Member States having no airports in the scope of Implementing Regulation 2019/317.
+
+## Civil-Military dimension
+
+Three performance indicators capturing the level of civil-military cooperation in the management of environmental performance are defined by Implementing Regulation 2019/317:
+
+- ERSA (PI#6): The effective use of reserved or segregated airspace;
+-	RAI (PI#7): The rate of planning via available airspace structures, including reserved or segregated airspace and conditional routes; and
+-	RAU (PI#8): The rate of using available airspace structures, including reserved or segregated airspace and conditional routes.
+
+ERSA is calculated as the ratio of the initial requested allocated time for reservation or segregation from general air traffic, and the final allocated time used for the activity requiring such segregation or reservation. The indicator is calculated for all airspace allocations notified to the Network Manager.
+
+The RAI is calculated as the ratio of aircraft filing flight plans via such airspace structures and the number of aircraft that could have planned through those airspace structures, while the RAU reflects the ratio of aircraft flying via such airspace structures and the number of aircraft that could have planned through these airspace structures. Both RAI and RAU are monitored in terms of available conditional routes and as well as available restricted and segregated airspace.
+
+These indicators are presented at national and local level.
+
+
+## Capacity - Average en route ATFM delay per flight (KPI#1) 
+
+En route capacity performance is monitored through the average en route air traffic flow management (ATFM) delay generated by en route area control centres (ACC). ATFM delay is calculated by the Network Manager and expressed as the difference between the estimated take-off time (ETOT) and the calculated take-off time (CTOT) allocated by the Network Manager. This indicator covers all IFR flights and all ATFM delay causes, excluding exceptional events and it is calculated for the whole calendar year and for each year of the reference period.
+
+Total ATFM delay per flight is broken down across the following delay groups:
+
+-  ATC Capacity (delay code C);
+-  ATC Staffing (S); 
+-  ATC Disruptions (I, T);
+-  Weather (D, W); and
+-  Other non-ATC (A, E, G, M, N, O, P, R, V, NA).
+
+Average en route ATFM delay per flight is the only capacity KPI upon which Union-wide performance targets are set. 
+
+Differently, at the local level (national or FAB level), also the average airport arrival ATFM delay per flight is used as KPI. Average airport arrival ATFM delay is calculated as the average arrival air traffic flow management (ATFM) delay per flight attributable to terminal and airport air navigation services. Average arrival ATFM delay analysis is not included for Member States having no airports in the scope of Implementing Regulation 2019/317 and which have not set local targets.
+
+In addition to their yearly values, a monthly breakdown of the average en route and arrival ATFM delay indicators is presented for the reference year. Applicable ATFM delay targets are defined at the Union-wide level, while local targets are derived from the national reference values calculated by the Network Manager at the time of adoption of the Union-wide performance targets.
+
+For the network functions, two capacity KPIs are defined:
+
+-  The share of en route ATFM delay savings due to collaborative decision making (CDM) network procedures, and Network Manager Operations Centre (NMOC) actions.
+-  The percentage of arrival ATFM delay savings from the collaborative decision-making network procedures and Network Manager Operations Centre actions.
+
+In addition, for the Network Manager also the capacity PI, defined as the annual percentage of IFR flights with ATFM delay above 15 minutes, is presented.
+
+## Capacity – Oher en route indicators 
+
+In addition to the KPIs on en route ATFM delay, the evolution of the number of air traffic control officers (ATCOs) in operations (OPS) expressed as full-time equivalents (FTEs), and the sum of sector-opening hours provided by the ANSPs is also monitored.
+
+For the number of ATCOs in OPS FTEs, both the values planned in the performance plan and the actual figures reported by the Member States are shown on the level of the ANSP, and for each ACC as well. 
+The sum of sector-opening hours is calculated for each year of the reference period based on the data included in the Demand Data Repository (DDR2) of Eurocontrol. 
+
+The sum of sector-opening hours is defined as the total opening time of each Air Traffic Services (ATS) sector that was activated over a calendar year. For example, the opening time is measured as follows:
+
+-  One sector open for one hour is measured as one sector-opening hour;
+-  Two sectors open for one hour is measured as two sector-opening hours;
+-  Two sectors open for 30 minutes (i.e. half an hour) equals one sector-opening hour.
+
+The total number of sector-opening hours is calculated as the product of the number of sectors in each sector configuration and the time during which each configuration was active.
+
+## Capacity - Other terminal performance indicators (PI#1-3)
+
+Three other indicators are defined by Implementing Regulation 2019/317 as capacity performance indicators a terminal level: 
+
+-  Percentage of IFR flights adhering to their ATFM departure slots (PI#1)
+-  The average minutes of air traffic control pre-departure delay per flight caused by take-off restrictions at the departure airport (PI#2); and
+-  The average departure delay from all causes per flight (PI#3).
+
+ATFM departure slots are allocated centrally by the Network Manager to hold aircraft on the ground when there is an envisaged imbalance between demand and capacity at airports or en-route. ATFM slot adherence measures the share of take-offs outside the allocated ATFM window. Within the EU, the monitoring of ATFM slot adherence is required by Regulation (EU 2010). ATS units are required to provide information on non-compliance for airports where non-adherence equals or exceeds 20% of regulated departures.
+
+ATC pre-departure delay is the additional time that the aircraft is held at the stand to avoid queuing at the departure runway.
+
+All causes departure delay is the average delay attributable to: 
+
+-  delays due to airline operations; 
+-  en route ATFM delay reported by airspace users; 
+-  reactionary (knock-on) delay; 
+-  airport operations delay, including ATFM airport delay reported by airspace users caused by regulation based on traffic volume which has a reference location classified as Aerodrome Zone or Aerodrome.
+
+All these indicators (except c) above) are computed only at local level, airport, level. The table provided details on the value of these indicators for all the airports included in the RP3 scope.
+
+This section is not presented for Member States having no airports in the scope of Implementing Regulation 2019/317.
+
+## Cost-efficiency - Unit costs (DUC/AUCU) (KPI#1)
+
+The en route cost-efficiency performance is monitored through the year-on-year change of the determined unit costs (DUC) for en route air navigation services KPI. The KPI is defined as the en route determined costs (in real terms) divided by the total en route service units and is calculated for the whole calendar year and for each year of the reference period.
+
+The indicator measures improvements in the unitary cost for the provision of en route air navigation services. At Union-wide level the cost-efficiency KPI is expressed in terms of year-on-year percentage change against the target. At local level (charging zone), the yearly DUC values, as included in the adopted performance plan, are fixed in advance for the entire reference period and cost-efficiency performance are monitored by comparing the DUC to the actual unit cost (AUC), which is computed as the ratio between actual costs and actual service units.
+
+At local level, also the terminal DUC/AUC is monitored as KPI.
+
+Applicable cost-efficiency targets are defined at Union-wide level, while local targets are expressed in terms of consistency of the DUC at charging zone level with the Union-wide DUC trend over the reference period.
+
+The monitoring of unit costs includes analysis on two variables defining the ratio: 
+
+- 	Total costs, which are presented in both nominal EURO and real 2017 EURO terms as well as broken down by entity group and across cost categories for the main ANSP, and
+-	 Total forecasted and actual service units (and their impact on the traffic risk sharing adjustment).
+
+This analysis is repeated for all the en route and terminal charging zones within the scope of Implementing Regulation 2019/317. 
+
+For the network functions, the cost-efficiency KPI is the actual unit cost for the execution of the Network Manager tasks. The indicator is calculated as the ratio between the actual costs and the service units at the level of the geographical area where the Network Manager executes its tasks.
+
+## Cost-efficiency - Actual unit cost incurred by the users (AUCU) (PI#1)
+
+The Actual Unit Cost for Users (AUCU) reflects the price per service unit that is charged in fine to users for the services provided in the year. It corresponds to the sum of the DUC for the year and of the different adjustments stemming from that year. 
+
+The monitoring of the AUCU is carried out in EURO nominal terms.
+
+Starting from the DUC (EURO nominal terms), the analysis presents all the adjustments required to compute the AUCU, i.e. the unit cost that airspace users genuinely incur in respect of the activities performed in the reference year:
+
+- 	Inflation adjustment;
+- 	Costs reported by the Member State as being exempted from cost-sharing in accordance with Art. 28(3) to 28(6) of Regulation (EU) 2019/317 (i.e. costs exempt from cost-sharing);
+- 	Traffic risk sharing adjustment;
+- 	Traffic adjustment (for costs not subject to traffic risk sharing);
+- 	Financial incentives relating to achievement (or failure to achieve) capacity performance targets in accordance with Article 11 of Regulation (EU) 2019/317 (under review by the European Commission);
+- 	Modulation of charges;
+- 	Cross-financing between en route charging zones, or between terminal charging zones, in accordance with point (e) of Article 15(2) of Regulation (EC) No 550/2004;
+- 	Other revenues; and
+- 	Application of a lower unit rate as Art. 29(6) of (EU) 2019/317.
+
+Additionally, details on the amounts related to the costs reported by the Member State as being exempted from cost-sharing are presented for each reference year and as broken down across the different categories defined in Art. 28(3) to 28(6) of Implementing Regulation 2019/317.
+
+This analysis is repeated for all the en route and terminal charging zones within the scope of Implementing Regulation 2019/317. 
+
+## Cost-efficiency - Regulatory result (RR)
+
+The Regulatory Result (RR) corresponds to the revenues generated by the activities of the year, that exceed the direct and indirect operating costs of an ANSP, and so provide for a reasonable return on assets to contribute towards necessary capital improvements. The notion of RR focuses on the ANSP results entitled to the ANS activity in the year. It is therefore different from the net accounting profit disclosed in ANSPs financial statements. Also, it does not take into account any opportunity cost.
+
+The RR, when expressed in percentage of the revenues, can be associated to a “margin” generated by the ANSP with respect to the activity of the year, but it is not comparable to the margin that would be calculated straight from ANSPs financial statements.
+
+-  Ex-ante, the RR is equal to the RoE (in value) included in the determined cost of capital.
+-  Ex-post, the RR is the sum of the RoE (in value) in the actual cost of capital and the net gain/loss resulting from risk sharing and incentives generated from that year.
+
+The net gain/loss calculated in box 11 results from the combination of three distinct items: 
+a)	the outcome of the cost-sharing mechanism to be retained by the ANSP (including the impact of costs exempted from cost-sharing and of the inflation adjustment); 
+b)	the outcome of the traffic risk sharing mechanism; and 
+c)	the outcome of the financial incentive mechanism for capacity and environment targets. 
+
+The monitoring of the RR is carried out in EURO nominal terms.
+
+This analysis is repeated for all the en route and terminal charging zones within the scope of Implementing Regulation 2019/317. 
+
+## Investments 
+
+As provided in Article 3(j) of the Commission Implementing Regulation (EU) 2019/317, investments and capital expenditures are an integral part of the PRB annual performance monitoring tasks.
+
+The Investment page of this dashboard presents information relating to the en route and terminal investments, and the associated costs, at Union-wide level and at the level of the individual service providers.
+
+The purpose of this page is to: 
+
+i) Present the new major, other new, and existing investments implemented in the SES areas during RP3,
+ii) Monitor the evolution of the actual costs related to these investments to identify potential under- or overspending against the determined costs included in the performance plans; 
+iii) Disclose data relating to the funding of investments resulting from the SES air traffic management (ATM) research and development (SESAR) framework. 
+
+The analysis is presented at aggregated Union-wide level, encompassing all ANSPs reporting relevant capital-related costs, as well at State level (where the analysis is limited to data reported by the main air traffic service providers). The main data sources of this page are the “2024 monitoring reports”, the June 2025 “reporting tables” submitted by Member States, and the data on funding provided by the SESAR Deployment Manager (SDM).
+
+At both the SES and the State level, the investment page is structured into the following sections: 
+
+1. Value of the assets for new investments included in the performance plan: this section presents the total RP3 determined capital expenditure (CAPEX) as included in the adopted performance plans. The data is broken down by investment size (major vs. other, based on the 5 million EUR threshold), en route/terminal allocation, and investment type (ATM, CNS, Infrastructure, Other). At the individual State level, this section also includes a comparison with the Union-wide median.
+
+2. Costs related to investments included in the performance plan: This section compares the determined and actual costs of investments over the RP3 period. The comparison is presented across several dimensions:
+    - New major, other new and existing investments.
+    - Depreciation cost of capital and leasing costs, for en route and terminal services.
+    - For each new major investment as reported in the RP3 performance plan.
+
+3. Expected benefit and impact per new major investment: This section assesses the expected benefits across the four KPAs and the anticipated impact on performance at both network and local levels, resulting from the implementation of specific investments. It also indicates whether each investment aligns with the priorities outlined in the SESAR Master Plan. For State-level analysis, a comparison with the Union-wide median is also provided.
+
+4. Public funding granted for total CAPEX (CEF/TEN-T): This section provides an overview of European funding received by each service provider for the implementation of projects linked to the CP1 regulation (Commission Implementing Regulation (EU) 2021/116 on the establishment of the Common Project One), as reported by the entities themselves and by the SDM.
+
+Unlike the other sections of this dashboard, the investment analysis covers the entire reference period 2020–2024.
+

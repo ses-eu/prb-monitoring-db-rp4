@@ -1,0 +1,65 @@
+% toc.tex (minimal: TOC entry font/style + black links + denser dots + page=1)
+
+\renewcommand{\contentsname}{Contents}
+
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\begingroup
+\makeatletter
+
+% Make TOC title sit like your chapter titles (less vertical space)
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{2pt}
+
+% Keep TOC links black
+\@ifpackageloaded{hyperref}{\hypersetup{linkcolor=black}}{}
+
+% Denser dot leaders
+\renewcommand*\@dotsep{1}
+
+% Chapter entries: Aptos 11, black, bold, upright
+\let\TOCold@l@chapter\l@chapter
+\renewcommand*\l@chapter[2]{%
+  \TOCold@l@chapter{%
+    \aptos\bfseries\upshape\fontsize{11pt}{13pt}\selectfont\color{black}#1%
+  }{%
+    \aptos\bfseries\upshape\fontsize{11pt}{13pt}\selectfont\color{black}#2%
+  }%
+}
+
+% Section entries: Aptos 11, black, italic, not bold
+\let\TOCold@l@section\l@section
+\renewcommand*\l@section[2]{%
+  \TOCold@l@section{%
+    \aptos\mdseries\itshape\fontsize{11pt}{13pt}\selectfont\color{black}#1%
+  }{%
+    \aptos\mdseries\upshape\fontsize{11pt}{13pt}\selectfont\color{black}#2%
+  }%
+}
+
+% % Subsection entries: Aptos 11, black, NOT italic, not bold
+% \let\TOCold@l@subsection\l@subsection
+% \renewcommand*\l@subsection[2]{%
+%   \TOCold@l@subsection{%
+%     \aptos\mdseries\upshape\fontsize{11pt}{13pt}\selectfont\color{black}#1%
+%   }{%
+%     \aptos\mdseries\upshape\fontsize{11pt}{13pt}\selectfont\color{black}#2%
+%   }%
+% }
+% 
+% % Footer logo on TOC page (same position/size as the rest of the document)
+% \AddToShipoutPictureFG*{%
+%   \AtPageLowerLeft{%
+%     \hspace*{\dimexpr\paperwidth-1.41cm-6mm\relax}%
+%     \raisebox{5mm}{\includegraphics[width=1.41cm,height=1.05cm]{images/logo_footer.png}}%
+%   }%
+% }%
+
+\tableofcontents
+
+\makeatother
+\endgroup
+
+\cleardoublepage

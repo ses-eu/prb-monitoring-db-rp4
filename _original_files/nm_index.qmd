@@ -1,0 +1,130 @@
+::: {.grid .align-items-center}
+:::: {.g-col-9}
+[Annual Monitoring Report `r toupper(params$year_folder)` - Network Manager]{.fakeh1}
+::::
+
+:::: {.g-col-3}
+<span class="no-external-icon">[<i class="fa fa-download"></i> Download Report](`r params$home_address`/download/{{< var doc.year_report >}}/PRB-Annual-Monitoring-Report_{{< var doc.country >}}_{{< var doc.year_report >}}.pdf){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+::::
+:::
+
+*`r pp_version`*
+
+## Safety (Network Manager - SES RP3 area)
+
+::: {#container-saf1}
+:::: {#chart-eosm class="mychart"}
+```{r chart-eosm}
+#| file: R/chart_level1_saf_nm.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-eosm}
+```{r concl-eosm}
+saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_findings_EoSM")
+```
+
+`r saf_conc1`
+::::
+:::
+
+::: {#container-saf2 style="clear: both"}
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+:::: {#chart-deliveries class="mychart"}
+```{r chart-deliveries}
+#| file: R/chart_level1_saf_deliveries_nm.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-deliveries}
+```{r concl-deliveries}
+saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_findings_over")
+```
+
+`r saf_conc2`
+::::
+:::
+
+::: {#container-env style="clear: both"}
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+## Environment (Network Manager - SES RP3 area)
+
+:::: {#chart-env class="mychart"}
+```{r chart-env-kea, options = (doclevel=c("level1"))}
+#| file: R/chart_level1_kea.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-env}
+```{r concl-env}
+env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_findings_KEP")
+```
+
+`r env_conc1`
+::::
+:::
+
+::: {#container-cap style="clear: both"}
+
+## Capacity (Network Manager - SES RP3 area)
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+:::: {#chart-cap class="mychart"}
+```{r chart-cap-er}
+#| file: R/chart_level1_cap_er_nm.R
+#| out.width: "100%"
+```
+
+<br>
+
+```{r chart-cap-trm}
+#| file: R/chart_level1_cap_trm_nm.R
+#| out.width: "100%"
+```
+
+<br>
+
+```{r chart-cap-15m}
+#| file: R/chart_level1_cap_15m_nm.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-cap}
+```{r concl-cap}
+cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_findings_CAP")
+```
+
+`r cap_er_conc1`
+::::
+:::
+
+::: {#container-cef style="clear: both"}
+<!-- empty line to ensure next heading leaves enough space -->
+<div style="height: 1px"></div>
+
+## Cost-efficiency (Network Manager - SES RP3 area)
+
+:::: {#chart-cef class="mychart"}
+```{r chart-cef}
+#| file: R/chart_level1_cef_nm.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-cef}
+```{r concl-cef}
+cef_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CEFF", "NM_findings_CEFF")
+```
+
+`r cef_conc1`
+::::
+:::

@@ -1,0 +1,338 @@
+project:
+  type: website
+  execute-dir: project
+  
+website:
+  title: "PRB Annual Monitoring Report"
+  google-analytics: "G-YYRL9J8JZ1"
+  search: false 
+  favicon: "images/prb_logo_smaller.png"
+  page-navigation: false
+  navbar:
+    title: false
+    background: "#f8f9fa"
+    logo: "images/prb_logo.png"
+    left: 
+      - href: 'home_address'
+        text: Home
+      - href: destination-dir/ses-rp3/
+        text: SES view
+      - text: "State view"
+        menu:
+          - text: "Austria"
+            href: 'destination-dir/austria/'
+          - text: "Belgium"
+            href: 'destination-dir/belgium/'
+          - text: "Bulgaria"
+            href: 'destination-dir/bulgaria/'
+          - text: "Croatia"
+            href: 'destination-dir/croatia/'
+          - text: "Cyprus"
+            href: 'destination-dir/cyprus/'
+          - text: "Czech Republic"
+            href: 'destination-dir/czech-republic/'
+          - text: "Denmark"
+            href: 'destination-dir/denmark/'
+          - text: "Estonia"
+            href: 'destination-dir/estonia/'
+          - text: "Finland"
+            href: 'destination-dir/finland/'
+          - text: "France"
+            href: 'destination-dir/france/'
+          - text: "Germany"
+            href: 'destination-dir/germany/'
+          - text: "Greece"
+            href: 'destination-dir/greece/'
+          - text: "Hungary"
+            href: 'destination-dir/hungary/'
+          - text: "Ireland"
+            href: 'destination-dir/ireland/'
+          - text: "Italy"
+            href: 'destination-dir/italy/'
+          - text: "Latvia"
+            href: 'destination-dir/latvia/'
+          - text: "Lithuania"
+            href: 'destination-dir/lithuania/'
+          - text: "Luxembourg"
+            href: 'destination-dir/luxembourg/'
+          - text: "Malta"
+            href: 'destination-dir/malta/'
+          - text: "MUAC"
+            href: 'destination-dir/muac/'
+          - text: "Netherlands"
+            href: 'destination-dir/netherlands/'
+          - text: "Norway"
+            href: 'destination-dir/norway/'
+          - text: "Poland"
+            href: 'destination-dir/poland/'
+          - text: "Portugal"
+            href: 'destination-dir/portugal/'
+          - text: "Romania"
+            href: 'destination-dir/romania/'
+          - text: "Slovakia"
+            href: 'destination-dir/slovakia/'
+          - text: "Slovenia"
+            href: 'destination-dir/slovenia/'
+          - text: "Spain"
+            href: 'destination-dir/spain/'
+          - text: "Sweden"
+            href: 'destination-dir/sweden/'
+          - text: "Switzerland"
+            href: 'destination-dir/switzerland/'
+            # ---
+      - href: destination-dir/network-manager/
+        text: NM View
+      - text: "Investments"
+        menu:
+          - text: "SES RP3"
+            href: home_address/investments/rp3/ses-rp3
+          - text: "---"
+          - text: "Austria"
+            href: home_address/investments/rp3/austria
+          - text: "Belgium"
+            href: home_address/investments/rp3/belgium
+          - text: "Bulgaria"
+            href: home_address/investments/rp3/bulgaria
+          - text: "Croatia"
+            href: home_address/investments/rp3/croatia
+          - text: "Cyprus"
+            href: home_address/investments/rp3/cyprus
+          - text: "Czech Republic"
+            href: home_address/investments/rp3/czech-republic
+          - text: "Denmark"
+            href: home_address/investments/rp3/denmark
+          - text: "Estonia"
+            href: home_address/investments/rp3/estonia
+          - text: "Finland"
+            href: home_address/investments/rp3/finland
+          - text: "France"
+            href: home_address/investments/rp3/france
+          - text: "Germany"
+            href: home_address/investments/rp3/germany
+          - text: "Greece"
+            href: home_address/investments/rp3/greece
+          - text: "Hungary"
+            href: home_address/investments/rp3/hungary
+          - text: "Ireland"
+            href: home_address/investments/rp3/ireland
+          - text: "Italy"
+            href: home_address/investments/rp3/italy
+          - text: "Latvia"
+            href: home_address/investments/rp3/latvia
+          - text: "Lithuania"
+            href: home_address/investments/rp3/lithuania
+          - text: "Luxembourg"
+            href: home_address/investments/rp3/luxembourg
+          - text: "Malta"
+            href: home_address/investments/rp3/malta
+          - text: "MUAC"
+            href: home_address/investments/rp3/muac
+          - text: "Netherlands"
+            href: home_address/investments/rp3/netherlands
+          - text: "Norway"
+            href: home_address/investments/rp3/norway
+          - text: "Poland"
+            href: home_address/investments/rp3/poland
+          - text: "Portugal"
+            href: home_address/investments/rp3/portugal
+          - text: "Romania"
+            href: home_address/investments/rp3/romania
+          - text: "Slovakia"
+            href: home_address/investments/rp3/slovakia
+          - text: "Slovenia"
+            href: home_address/investments/rp3/slovenia
+          - text: "Spain"
+            href: home_address/investments/rp3/spain
+          - text: "Sweden"
+            href: home_address/investments/rp3/sweden
+          - text: "Switzerland"
+            href: home_address/investments/rp3/switzerland
+            # ---
+      - href: home_address/about.html
+        text: About
+      - href: home_address/download.html
+        text: Download
+      - href: home_address/dataportal/
+        text: Data Portal 
+      # - href: https://www.eurocontrol.int/prudata/dashboard/
+      #   text: Data Portal {{< fa external-link-alt >}}
+      - href: https://eu-single-sky.transport.ec.europa.eu/index_en
+        text: Publications {{< fa external-link-alt >}}
+        target: "_blank"
+
+  sidebar:
+    collapse-level: 3
+    contents:
+      - section: '<b style= "font-size: 1.2rem">Year report</b>'
+        contents:
+          - text: "RP3"
+            href: 'home_address/rp3/country_lower/index.html#main'
+          - text: "2024"
+            href: 'home_address/2024/country_lower/index.html#main'
+          - text: "2023"
+            href: 'home_address/2023/country_lower/index.html#main'
+          - text: "2022"
+            href: 'home_address/2022/country_lower/index.html#main'
+          - text: "2021"
+            href: 'home_address/2021/country_lower/index.html#main'
+          - text: "2020"
+            href: 'home_address/2020/country_lower/index.html#main'
+      - text: "---"
+      - text: '<b style= "font-size: 1.2rem">country placeholder</b>'
+        href: index.html
+      - text: "<b>Overview</b>"
+        href: index.html
+        contents:
+# block level1 state beginning
+          - text: "Contextual information"
+            href: index.html#contextual-information
+          - text: "Traffic"
+            href: index.html#traffic-en-route-traffic-zone
+          - text: "Safety"
+            href: index.html#safety-main-ansp #tag
+          - text: "Environment"
+            href: index.html#environment-member-state #tag
+          - text: "Capacity"
+            href: index.html#capacity-member-state #tag
+          - text: "Cost-efficiency"
+            href: index.html#cost-efficiency-en-routeterminal-charging-zones #tag
+      - text: "---"
+# block level1 state end
+# block level1 ses beginning
+          - text: "Contextual information"
+            href: index.html#contextual-information
+          - text: "Main PRB findings"
+            href: index.html#main-prb-findings--
+          - text: "Traffic"
+            href: index.html#traffic-ses-rp3-area
+          - text: "Safety"
+            href: index.html#safety-ses-rp3-area
+          - text: "Environment"
+            href: index.html#environment-ses-rp3-area
+          - text: "Capacity"
+            href: index.html#capacity-ses-rp3-area
+          - text: "Cost-efficiency"
+            href: index.html#cost-efficiency-ses-rp3-area
+      - text: "---"
+# block level1 ses end
+# block level1 nm beginning
+          - text: "Safety"
+            href: index.html#safety-network-manager---ses-rp3-area
+          - text: "Environment"
+            href: index.html#environment-network-manager---ses-rp3-area
+          - text: "Capacity"
+            href: index.html#capacity-network-manager---ses-rp3-area
+          - text: "Cost-efficiency"
+            href: index.html#cost-efficiency-network-manager---ses-rp3-area
+      - text: "---"
+# block level1 nm end
+# rp3 marker beg 
+# block level2 beginning
+      - section: "<b>Safety</b>"
+        href: safety.html
+        contents:
+          - text: "<b>PRB monitoring</b>"
+            href: safety.html#prb-monitoring
+          - text: "<b>EoSM</b>"
+            href: safety.html#effectiveness-of-safety-management-eosm-kpi1
+          - text: "<b>Safety occurrences</b>"
+            href: safety.html#safety-occurrences
+            contents: #safety-occurrences
+# block muac beginning
+            - text: "Runway incursions"
+              href: safety.html#rate-of-runway-incursions-ris-pi1
+# block muac end
+            - text: "Separation minima infringements"
+              href: safety.html#rate-of-separation-minima-infringements-smis-pi2
+            - text: "Occurrences reporting"
+              href: safety.html#quality-of-occurences-reporting
+          - text: "<b>ASDRS</b>"
+            href: safety.html#use-of-automated-safety-data-recording-system-asdrs-pi3
+      - text: "---"
+# environment level2 beginning
+      - section: "<b>Environment</b>"
+        href: environment.html
+        contents:
+          - text: "<b>PRB monitoring</b>"
+            href: environment.html#prb-monitoring
+          - section: "<b>En route performance</b>" #environment
+            href: environment.html#en-route-performance
+            contents: #environment
+            - text: "Horizontal flight efficiency"
+              href: environment.html#horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-scr-pi2
+# include env_terminal block
+          - text: "<b>CIV-MIL</b>"
+            href: environment.html#civil-military-dimension
+      - text: "---"
+# environment level2 end
+      - section: "<b>Capacity</b>"
+        href: capacity.html
+        contents:
+          - text: "<b>PRB monitoring</b>"
+            href: capacity.html#prb-monitoring
+          - section: "<b>En route performance</b>" #capacity
+            href: capacity.html#en-route-performance
+            contents: #capacity
+            - text: "En route ATFM delay"
+              href: capacity.html#en-route-atfm-delay-kpi1
+            - text: "Other indicators"
+              href: capacity.html#other-indicators
+# include cap_terminal block
+      - text: "---"
+# cost-efficiency level2 beginning
+      - section: "<b>Cost-efficiency</b>"
+        href: cost-efficiency-er1-1.html
+        contents:
+          - text: "<b>PRB monitoring</b>"
+            href: cost-efficiency-er1-1.html#prb-monitoring
+          - section: "<b>En route CZ</b>"
+            href: cost-efficiency-er1-1.html#en-route-charging-zone
+            contents:
+            - text: "Unit cost"
+              href: cost-efficiency-er1-1.html#unit-cost-kpi1
+            - text: "AUCU"
+              href: cost-efficiency-er1-1.html#actual-unit-cost-incurred-by-the-users-aucu-pi1
+            - text: "Regulatory Result"
+              href: cost-efficiency-er1-1.html#regulatory-result-rr
+# include ECZ2 block              
+# include TCZ block              
+# block level2 end
+# rp3 marker end 
+# 
+  # site-url: "https://eurocontrol.int/"
+
+  page-footer: 
+    # left: |
+    #   Proudly supported by
+    #   [![](images/euctrl-logo-wide-poweredby.svg){fig-alt="EUROCONTROL" width=95px}](https://eurocontrol.int)
+    center: 
+      - href: '/'
+        text: '<span style= "font-size: 0.825rem">© European Union, 2025</span>'
+      - href: home_address/disclaimer.html
+        text: '<span style= "font-size: 0.825rem">{{< fa triangle-exclamation >}} Disclaimer</span>'
+      # - href: mailto:prb-office@prb.eusinglesky.eu
+      #   text: '<span style= "font-size: 0.825rem">{{< fa envelope color="#ffffff">}} prb-office@prb.eusinglesky.eu</span>'
+      - text: '<span style= "font-size: 0.825rem">Website published by EUROCONTROL for the European Commission</span>'
+        href: 'https://www.eurocontrol.int/'
+
+format:
+  html:
+    theme: cosmo
+    toc: false
+    toc-depth: 3
+    number-sections: false
+    number-depth: 2
+    page-layout: full
+    css: styles.css
+    link-external-newwindow: true
+    link-external-icon: true
+    callout-appearance: minimal
+    # link-external-filter: '^(?:http:|https:)\/\/ansperformance\.eu\/|^(?:http:|https:)\/\/.*ace-handbook\.netlify\.app\/'
+    grid:
+      sidebar-width: 200px
+      margin-width: 200px
+    
+execute:
+  echo: false
+  warning: false
+  

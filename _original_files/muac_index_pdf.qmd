@@ -1,0 +1,340 @@
+```{r context-data, eval=TRUE}
+cztype = "enroute"
+cz = c("1", "enroute")
+
+data_muac  <-  read_xlsx(
+  paste0(data_folder, "CEFF dataset master.xlsx"),
+  sheet = "Enroute_T1",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() |> 
+  filter(grepl("MUAC", entity_code), status == "A", year == year_report) |> 
+  mutate(
+    entity_code = str_replace_all(entity_code, "_EB", ""),
+    entity_code = str_replace_all(entity_code, "_EL", "")
+    ) |> 
+  group_by(year, entity_code) |> 
+  summarise(x5_3_cost_nc2017 = sum(x5_3_cost_nc2017, na.rm = TRUE)) |> 
+  ungroup()
+
+total_muac_costs <- sum(data_muac$x5_3_cost_nc2017, na.rm = TRUE)
+
+share_EBEL <- paste0(round(pull(select(filter(data_muac, entity_code == "EBEL_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
+share_ED <- paste0(round(pull(select(filter(data_muac, entity_code == "ED_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
+share_EH <- paste0(round(pull(select(filter(data_muac, entity_code == "EH_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
+
+```
+
+<!-- ## Cost-efficiency -->
+<!-- Level2 -->
+<!-- ## Safety L2-->
+<!-- ### Rate of separation minima infringements (SMIs) (PI#2) -->
+
+```{r chart_saf_smi, include=FALSE}
+#| file: R/chart_level2_saf_smi.R
+#| out.width: "100%"
+```
+
+```{r chart_level2_saf_smi_year_report, options = (safindicator=c("smi")), include=FALSE}
+#| file: R/chart_level2_saf_ri_smi_year_report.R
+#| out.width: "100%"
+```
+
+<!-- ### Use of automated safety data recording system (ASDRS) (PI#3) -->
+
+
+<!-- ## Capacity L2-->
+<!-- ### En route performance -->
+```{r chart_cap_er_l2, options = (cztype=c("enroute")), include=FALSE}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+
+```{r chart_cap_er_month, options = (cztype=c("enroute")), include=FALSE}
+#| file: R/chart_level2_cap_month.R
+#| out.width: "100%"
+```
+
+<!-- #### Other indicators -->
+```{r chart_cap_atco, include=FALSE}
+#| file: R/chart_level2_cap_atco.R
+#| out.width: "100%"
+```
+
+```{r chart_cap_atco_acc, include=FALSE}
+#| file: R/chart_level2_cap_atco_acc.R
+#| out.width: "100%"
+```
+
+<!-- ## Cost-efficiency -->
+
+<!-- END OF CHARTS AND TABLES -->
+
+
+```{=tex}
+\setlength{\fboxrule}{0pt} % Set the border width to 0pt (no border)
+\setlength{\fboxsep}{0pt} % Remove padding
+```
+
+# OVERVIEW
+
+## Contextual information
+
+```{=latex}
+\begin{figure}
+
+\small
+
+\begin{minipage}[t]{0.35\linewidth}
+
+\textbf{Provision of ATC services in the upper}  \\
+\textbf{airspace across four States}
+\\
+\\
+
+\textbf{ACC}\hspace*{1cm} Maastricht UAC
+
+\end{minipage}%
+\begin{minipage}[t]{0.25\linewidth}
+
+Belgium/Luxembourg  \\
+Germany  \\
+Netherlands
+
+\end{minipage}%
+\begin{minipage}[t]{0.40\linewidth}
+
+\textbf{Allocation of actual en route costs} \\
+
+\begin{minipage}[t]{0.70\linewidth}
+
+• Belgium/Luxembourg  \\
+• Germany  \\
+• Netherlands
+
+\end{minipage}%
+\begin{minipage}[t]{0.30\linewidth}
+```
+
+`r share_EBEL`  
+`r share_ED`  
+`r share_EH`
+
+```{=latex}
+\end{minipage}%
+
+\end{minipage}%
+
+\end{figure}
+```
+
+## Safety
+
+```{r concl-eosm}
+saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+```
+
+```{r chart_eosm, options = (doclevel=c("level1"))}
+#| file: R/chart_level1_saf.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+`r saf_conc1`
+
+## Capacity
+
+```{r concl-cap}
+cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+```
+
+```{r chart_cap_er}
+#| file: R/chart_level1_cap.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+`r cap_er_conc1`
+
+## Cost-efficiency
+
+```{r concl-cef}
+cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+```
+
+```{r chart_cef}
+#| file: R/chart_level2_cef_cost.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+`r cef_conc1`
+
+\needspace{3\baselineskip}
+
+`r if (year_folder == 'rp3') "::: {.content-hidden}"`
+
+# SAFETY - `r toupper(params$country)`
+
+## PRB monitoring
+
+`r saf_conc1`
+
+\needspace{2\baselineskip}
+
+## Effectiveness of Safety Management (EoSM) (KPI#1)
+
+```{r chart_saf_eosm, options = (doclevel=c("level2")), eval=(year_folder != 'rp3')}
+#| file: R/chart_level1_saf.R
+#| out.width: "62%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+\needspace{3\baselineskip}
+
+`\biggertext{Focus on EoSM}`{=latex}
+
+`r latex_linebreaks(saf_eosm_text)`
+
+\needspace{2\baselineskip}
+
+## Safety occurrences
+
+### Rate of separation minima infringements (SMIs) (PI#2)
+
+`r layout_2fig("chart_saf_smi", "chart_level2_saf_smi_year_report")`
+
+```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != 'rp3')}
+#| file: R/table_level2_saf_smi_ansp_pdf1.R
+#| include: false
+```
+
+
+``` {r, eval=(year_folder != 'rp3')}
+#| echo: false
+#| results: asis
+ 
+cat(make_quarto_latex_table_2level(
+  title = paste0("Rate of SMI with ANS contribution per 100,000 flight hours"),
+  df = data_prep,
+  col_align = "llrrrrrrrrrr",
+  col_widths = c(3,12,rep(8.5,10)),
+  body_fontsize = c(8, 10),
+  cell_pad_em = 0.3,
+  wrap_raw_block = FALSE,
+  header_row_height_ex = 2.4,
+  row_extrarowheight_pt = 2 
+))
+```
+
+\vspace{-20pt}
+
+```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != 'rp3')}
+#| file: R/table_level2_saf_smi_ansp_pdf2.R
+#| include: false
+```
+
+``` {r, eval=(year_folder != 'rp3')}
+#| echo: false
+#| results: asis
+ 
+cat(make_quarto_latex_table_2level(
+  title = NA,
+  df = data_prep,
+  col_align = "llrrrrrrrrrr",
+  col_widths = c(3,12,rep(8.5,10)),
+  body_fontsize = c(8, 10),
+  cell_pad_em = 0.3,
+  wrap_raw_block = FALSE,
+  header_row_height_ex = 2.4,
+  row_extrarowheight_pt = 2 
+))
+```
+
+\needspace{3\baselineskip}
+
+
+\biggertext{Focus on separation minima}
+
+`r latex_linebreaks(saf_smi_text)`
+
+
+\needspace{2\baselineskip}
+
+### Quality of occurences reporting 
+
+`r latex_linebreaks(saf_qr_text)`
+
+\needspace{2\baselineskip}
+
+
+# CAPACITY - `r toupper(params$country)`
+
+## PRB monitoring
+
+`r cap_er_conc1`
+
+\needspace{3\baselineskip}
+
+## En route performance
+
+### En route ATFM delay (KPI#1)
+
+`r layout_2fig("chart_cap_er_l2", "chart_cap_er_month")`
+
+\needspace{3\baselineskip}
+
+### Other indicators
+
+`r layout_2fig("chart_cap_atco", "chart_cap_atco_acc")`
+
+```{r chart_cap_sector_opening, eval=(year_folder != 'rp3')}
+#| file: R/chart_level2_cap_sector_opening.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+\needspace{3\baselineskip}
+
+# COST-EFFIENCY - `r toupper(params$country)`
+
+## PRB monitoring
+
+`r cef_conc1`
+
+\needspace{3\baselineskip}
+
+## Total costs
+
+
+```{r chart_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+#| file: R/chart_level2_cef_cost.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+```{r table_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+#| file: R/table_level2_cef_cost.R
+#| include: false
+```
+
+``` {r, eval=(year_folder != 'rp3')}
+#| echo: false
+#| results: asis
+ 
+cat(make_quarto_latex_table(
+  title = paste0("Actual and determined data"),
+  col_labels = c("Total costs - nominal (M€)", "2020‑2021", '2022', '2023', '2024'),
+  df = data_prep_pdf,
+  col_align = "lrrrr",
+  col_widths = c(35, rep(65/4, 4))
+))
+```
+
+`r if (year_folder == 'rp3') ":::"`

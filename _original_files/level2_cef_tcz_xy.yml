@@ -1,0 +1,10 @@
+          - section: "<b>Terminal CZ@@cz_name@@</b>"
+            href: cost-efficiency-tz@@cz_index@@-1.html#terminal-charging-zone
+            contents:
+            - text: "Unit cost"
+              href: cost-efficiency-tz@@cz_index@@-1.html#unit-cost-kpi1
+            - text: "AUCU"
+              href: cost-efficiency-tz@@cz_index@@-1.html#actual-unit-cost-incurred-by-the-users-aucu-pi1
+            - text: "Regulatory Result"
+              href: cost-efficiency-tz@@cz_index@@-1.html#regulatory-result-rr
+              
