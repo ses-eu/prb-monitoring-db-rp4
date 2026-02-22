@@ -1,3 +1,4 @@
+############### state level adapted to RP4, not NM or SES
 
 if (!exists("doclevel")) {doclevel = "level1"}
  
@@ -32,10 +33,8 @@ if (country == "Network Manager") {
     mutate(myothermetric = round(nm_target * 100, 2),
            type = "Target")
   
-} else {
-  if (country == "SES RP3") {
+} else if (country == "SES RP4") {
   # SES case ----
-  ## import data  ----
   data_raw_target  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
     # here("data","hlsr2021_data.xlsx"),
@@ -52,137 +51,115 @@ if (country == "Network Manager") {
     range = cell_limits(c(1, 1), c(NA, NA))) %>%
     as_tibble() %>% 
     clean_names() |> 
-    mutate(entity_name = "SES RP3")
+    mutate(entity_name = "SES RP4")
   
-  } else  {
+} else  {
   # State case ----
-  ## import data  ----
-  data_raw_target  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEA Targets",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  data_raw_actual  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_HFE",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  if (!exists("kea_target")) {
+    source("R/get_data.R")
   }
   
-  ## prepare data ----
-  data_prep_target <- data_raw_target %>% 
-    filter(
-      entity_name == .env$country
-    ) %>% 
-    mutate(
-      # type = 'Target',
-      target = round(kea_reference_value_percent, 2)
-    ) %>% 
-    select(
-      year,
-      target
-    ) %>% 
-    mutate(
-      xlabel = year,
-      myothermetric = target,
-      type = "Target"
-    ) 
+  data_raw_target <- kea_target
+  data_raw_actual <- kea_actual
+}
   
-  data_prep_actual <- data_raw_actual %>% 
-    filter(
-      entity_name == country,
-      year <= year_report) %>% 
-    mutate (actual = hfe_kpi_percent) %>% 
-    select(
-      year,
-      actual
-    ) %>% 
-    mutate(
-      xlabel = year,
-      mymetric = actual,
-      type = "Actual"
-    ) 
-  
-  # data_prep <- merge(x = data_prep_target, y = data_prep_actual, by="year", all.x = TRUE)
-    
-  
-    }
+## prepare data ----
+data_prep_target <- data_raw_target %>% 
+  filter(
+    state == .env$country
+  ) %>% 
+  mutate(
+    xlabel = year,
+    myothermetric = round(kea_target *100, 2),
+    type = "Target"
+  ) %>% 
+  select(
+    xlabel,
+    myothermetric,
+    type
+  )
+
+data_prep_actual <- data_raw_actual %>% 
+  filter(
+    state == country,
+    year <= year_report) %>% 
+  mutate (actual = value) %>% 
+  select(
+    year,
+    actual
+  ) %>% 
+  mutate(
+    xlabel = year,
+    mymetric = round(actual * 100,2),
+    type = "Actual"
+  ) %>% 
+  select (
+    xlabel,
+    mymetric,
+    type
+  )
 
 ## chart parameters ----
-mysuffix <- "%"
-mydecimals <- 2
+c_suffix <- "%"
+c_decimals <- 2
 
-### trace parameters
-mycolors = c( '#FFC000')
-###set up order of traces
-myfactor <- "Actual"
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
+c_colors <- PRBActualColor
+c_factor <- c("Actual")
 
-mytextangle <- 0
-mytextposition <- "inside"
-myinsidetextanchor <- 'middle'
-mytextfont_color <- 'black'
-
-### layout parameters
-mybargap <- 0.25
-mybarmode <- 'group'
+### hover
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
 #### title
 if (knitr::is_latex_output()) {
-  mylevel1_title <- "Average horizontal flight efficiency\nof the actual trajectory (KEA)"
-  mytitle_y <- 0.95
-  mylocalmargin <- list(t = 50)
+  c_level1_title <- "Average horizontal flight efficiency\nof the actual trajectory (KEA)"
+  c_title_y <- 0.95
+  c_margin <- list(t = 50)
   
 } else {
-  mylevel1_title <- "Average horizontal flight efficiency of the actual trajectory (KEA)"
-  mytitle_y <- 0.99
-  mylocalmargin <- mymargin
+  c_level1_title <- "Average horizontal flight efficiency of the actual trajectory (KEA)"
+  c_title_y <- 0.99
+  c_margin <- mymargin
   
 }
 
-mytitle_text <- paste0(if_else(country == "Network Manager", 
+c_title_text <- paste0(if_else(country == "Network Manager", 
                                "KEP", 
                                if_else(doclevel == "level1",
-                                       mylevel1_title,
+                                       c_level1_title,
                                        "KEA")))
 
-#### xaxis
-
 #### yaxis
-myyaxis_title <- paste0(if_else(country == "Network Manager", "KEP", "KEA"), " (%)")
-myyaxis_ticksuffix <- "%"
-myyaxis_tickformat <- ".2f"
+c_yaxis_title <- paste0(if_else(country == "Network Manager", "KEP", "KEA"), " (%)")
+c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 
-#### legend
-mylegend_x <- 0.5
-mylocallegend_y <- mylegend_y
-mylegend_xanchor <- 'center'
-
-#____additional trace parameters
-myat_name <- "Target"
-myat_mode <- "line+markers"
-myat_yaxis <- "y1"
-myat_symbol <- NA
-myat_marker_color <- '#FF0000'
-myat_line_color <- '#FF0000'
-myat_line_width <- mylinewidth
-myat_showlegend <- T
-
-myat_textbold <- FALSE
-myat_textangle <- 0
-myat_textposition <- 'top'
-myat_textfont_color <- '#FF0000'
-myat_textfont_size <- myfont
-
+#### text
+c_textangle <- mytextangle
+c_textposition <- "inside"
+c_insidetextanchor <- 'middle'
 
 # plot chart ----
-## function moved to utils  
-mybarchart(data_prep_actual, mywidth, myheight+30, myfont, mylocalmargin, mydecimals) %>% 
-  add_line_trace(., data_prep_target)
+myplot <- mybarchart2(data_prep_actual, 
+                      height = myheight+30,
+                      colors = c_colors,
+                      local_factor = c_factor,
+                      
+                      textangle = c_textangle,
+                      textposition = c_textposition,
+                      insidetextanchor = c_insidetextanchor,
+                      
+                      title_text = c_title_text,
+                      
+                      yaxis_title = c_yaxis_title,
+                      yaxis_ticksuffix = c_suffix,
+                      yaxis_tickformat = c_yaxis_tickformat,
+                      
+                      legend_x = 0.5,
+                      legend_xanchor = 'center'
+)
 
 
+myplot %>% 
+  add_line_trace2(., data_prep_target,
+                  textdecimals = c_decimals,
+                  textsuffix = c_suffix
+  )

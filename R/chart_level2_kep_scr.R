@@ -1,5 +1,7 @@
+############### state level adapted to RP4, not NM or SES
+
 # import data  ----
-if (country == "SES RP3"){
+if (country == "SES RP4"){
   ## SES case ----
   data_raw_kep  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
@@ -23,54 +25,43 @@ if (country == "SES RP3"){
     
 } else  {
   ## State case ----
-  data_raw_kep  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEP",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  if (!exists("kep_actual")) {
+    source("R/get_data.R")
+  }
   
-  data_raw_scr  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_SCR",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
- 
+  data_raw_kep <- kep_actual
+  data_raw_scr <- scr_actual
 }
 
 # prepare data ----
 ## create sequence of years to ensure full series
-rp3_years <- 2020:2024
-rp3_years <- data.frame(rp3_years) %>% rename(xlabel = rp3_years)
+rp_years_df <- data.frame(rp_years) %>% rename(xlabel = rp_years)
 
 data_prep_kep <- data_raw_kep %>% 
   mutate(type = indicator_type,
-         mymetric = round(kep_value_percent,2),
+         mymetric = round(value * 100,2),
          xlabel = year) %>% 
   filter(
-    entity_name == country,
+    state == country,
     year <= year_report
   ) %>% 
   select(xlabel, type, mymetric)
 
 data_prep_kep_full <- data_prep_kep %>% 
-  right_join(rp3_years, by = 'xlabel') 
+  right_join(rp_years_df, by = 'xlabel') 
 
 data_prep_scr <- data_raw_scr %>% 
   mutate(type = indicator_type,
-         mymetric = round(scr_value*100,2),
+         mymetric = round(value*100,2),
          xlabel = year) %>% 
   filter(
-    entity_name == country,
+    state == country,
     year <= year_report
   ) %>% 
   select(xlabel, type, mymetric)
 
 data_prep_scr_full <- data_prep_scr %>% 
-  right_join(rp3_years, by = 'xlabel') 
+  right_join(rp_years_df, by = 'xlabel') 
 
 
 data_prep <- data_prep_kep_full %>% 
@@ -78,43 +69,43 @@ data_prep <- data_prep_kep_full %>%
 
 
 # chart parameters ----
-mysuffix <- "%"
-mydecimals <- 2
+c_suffix <- "%"
+c_decimals <- 2
 
 ### trace parameters
-mycolors = c('#FFC000', '#5B9BD5' )
+c_colors = c(PRBActualColor, PRBPlannedColor )
+
 ###set up order of traces
-myfactor <- c("KEP", "SCR")
+c_factor <- c("KEP", "SCR")
 
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-mytextangle <- -90
-mytextposition <- "inside"
-myinsidetextanchor <- 'middle'
-mytextfont_color <- 'black'
-
-### layout 
-mybargap <- 0.25
-mybarmode <- 'group'
+c_textangle <- -90
+c_textposition <- "inside"
+c_insidetextanchor <- 'middle'
 
 #### title
-mytitle_text <-  paste0("KEP & SCR")
-mytitle_y <- 0.99
-
-#### xaxis
+c_title_text <-  paste0("KEP & SCR")
 
 #### yaxis
-myyaxis_title <- "KEP & SCR (%)"
-myyaxis_ticksuffix <- "%"
-myyaxis_tickformat <- ".2f"
-
-#### legend
-mylegend_x <- 0.5
-mylegend_xanchor <- 'center'
-
-#### margin
-mylocalmargin <- mymargin
+c_yaxis_title <- "KEP & SCR (%)"
+c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 
 # plot chart ----
-mybarchart(data_prep, mywidth, myheight+30, myfont, mylocalmargin, mydecimals) %>% 
-  add_empty_trace(., data_prep) 
+myplot <- mybarchart2(data_prep, 
+                      height = myheight+30,
+                      colors = c_colors,
+                      local_factor = c_factor,
+                      
+                      textangle = c_textangle,
+                      textposition = c_textposition,
+                      insidetextanchor = c_insidetextanchor,
+                      
+                      title_text = c_title_text,
+
+                      yaxis_title = c_yaxis_title,
+                      yaxis_ticksuffix = c_suffix,
+                      yaxis_tickformat = c_yaxis_tickformat
+)
+
+myplot %>% add_empty_trace(data_prep)

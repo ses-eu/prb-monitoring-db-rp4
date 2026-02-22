@@ -1,33 +1,19 @@
+############### adapted to RP4
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "STATFOR_forecast_en-route_MVT.xlsx"),
-  sheet = "data",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() |> 
-  arrange(desc(forecast_id))
+if (!exists("statfor_mvt")) {
+  source("R/get_data.R")
+} 
 
-# 
-# test <- data_raw |> 
-#   filter(forecast_id == 6)
-
-data_raw_planned  <-  read_xlsx(
-  paste0(data_folder, "targets.xlsx"),
-  sheet = "IFR_MVTS",
-  range = cell_limits(c(3, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw <- statfor_mvt
+data_raw_planned <- traffic_target
 
 # prepare data ----
 max_actual_year <- as.numeric(substrRight(forecast, 4))-1
 
 data_prep <- data_raw %>% 
   filter(
-    tz == statfor_zone, 
-    daio == "T",
-    yr < 2025,
-    yr >= 2019
+    tz == statfor_zone
   ) %>% 
   mutate(rank = paste0(rank, ' forecast'))
 
@@ -36,7 +22,7 @@ data_prep_forecast <-  data_prep %>%
     forecast_id == .env$forecast_id
   ) %>%
   mutate(mvts = case_when (
-    yr > max_actual_year ~ mvts,
+    year > max_actual_year ~ mvts,
     TRUE ~ NA
   )
   )
@@ -50,14 +36,14 @@ data_prep_actual <-  data_prep %>%
     forecast_id = .env$forecast_id,
     rank = 'Actual',
     mvts = case_when (
-      yr <= year_report ~ mvts,
+      year <= year_report ~ mvts,
       TRUE ~ NA
     )
   )
 
 data_prep_planned <- data_raw_planned %>% 
   filter(state == .env$country,
-         year > 2020) %>% 
+         year >= rp_min_year) %>% 
   select(state, year, x121_ecz_ifr_mvt, x121_ecz_name) %>%
   rename(mvts = x121_ecz_ifr_mvt) %>% 
   mutate(rank = 'Planned')
@@ -69,40 +55,45 @@ if (country == "Spain") {
 
 # chart ----
 ## set parameters for chart ----
-mycolors <-  c('#1969B4','#044598', '#229FDD')
+c_colors <-  c('#1969B4','#044598', '#229FDD')
 
 if (knitr::is_latex_output()) {
-  mytitle <- paste0("IFR movements - ", forecast, " -\n",
+  c_title <- paste0("IFR movements - ", forecast, " -\n",
                     if_else(country == "Spain",
                             country, ecz_list$ecz_name[1]))
-  mytitle_y <- 0.95
-  mylocalmargin = list (t = 40, l = 0)
-  mylegend_x <- -0.1
+  c_title_y <- 0.95
+  c_legend_x <- -0.1
   
 } else {
-  mytitle <- paste0("IFR movements - ", forecast, " - ", 
+  c_title <- paste0("IFR movements - ", forecast, " - ", 
                     if_else(country == "Spain", 
                             country, ecz_list$ecz_name[1]))
-  mytitle_y <- 0.99
-  mylegend_x <- 0
+  c_title_y <- 0.99
+  c_legend_x <- 0
 }
 
 ## define chart function ----
-myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
+myc <- function (width = mywidth, 
+                 height = myheight,
+                 fontsize = myfont,
+                 linewidth = mylinewidth, 
+                 margin = mymargin
+                 )
+{
   plot_ly(
-    width = mywidth,
-    height = myheight,
+    width = width,
+    height = height,
     data = data_prep_forecast,
-    x = ~ yr,
+    x = ~ year,
     y = ~ round(mvts/1000,0),
     yaxis = "y1",
     cliponaxis = FALSE,
     yaxis = "y1",
     type = 'scatter',  mode = 'lines+markers',
-    line = list(width = mylinewidth, dash = 'dash'),
-    marker = list(size = mylinewidth * 3),
+    line = list(width = linewidth, dash = 'dash'),
+    marker = list(size = linewidth * 3),
     color = ~ rank,
-    colors = mycolors,
+    colors = c_colors,
     opacity = 1,
     # hovertemplate = paste('Target: %{y:.2f}%<extra></extra>'),
     # hoverinfo = "none",
@@ -117,8 +108,8 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
       cliponaxis = FALSE,
       yaxis = "y1",
       type = 'scatter',  mode = 'lines+markers',
-      line = list(width = mylinewidth, dash = 'solid', color = '#5B9BD5'),
-      marker = list(size = mylinewidth * 3, color = '#5B9BD5'),
+      line = list(width = linewidth, dash = 'solid', color = PRBPlannedColor),
+      marker = list(size = linewidth * 3, color = PRBPlannedColor),
       color = ~ rank,
       opacity = 1,
       showlegend = T
@@ -126,14 +117,14 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
     add_trace(
       data = data_prep_actual,
       inherit = FALSE,
-      x = ~ yr,
+      x = ~ year,
       y = ~ round(mvts/1000,0),
       yaxis = "y1",
       cliponaxis = FALSE,
       yaxis = "y1",
       type = 'scatter',  mode = 'lines+markers',
-      line = list(width = mylinewidth, dash = 'solid', color = '#FFC000'),
-      marker = list(size = mylinewidth * 3, color = '#FFC000'),
+      line = list(width = linewidth, dash = 'solid', color = PRBActualColor),
+      marker = list(size = linewidth * 3, color = PRBActualColor),
       color = ~ rank,
       opacity = 1,
       # hovertemplate = paste('Target: %{y:.2f}%<extra></extra>'),
@@ -147,8 +138,8 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
     ) %>% 
     layout(
       font = list(family = "Roboto"),
-      title = list(text = mytitle,
-                   y = mytitle_y, 
+      title = list(text = c_title,
+                   y = c_title_y, 
                    x = mytitle_x, 
                    xanchor = mytitle_xanchor, 
                    yanchor = mytitle_yanchor,
@@ -166,7 +157,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
                    # tickcolor = 'rgb(127,127,127)',
                    # ticks = 'outside',
                    zeroline = TRUE,
-                   tickfont = list(size = myfont)
+                   tickfont = list(size = fontsize)
       ),
       yaxis = list(title = "IFR movements ('000)",
                    # gridcolor = 'rgb(255,255,255)',
@@ -179,15 +170,16 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
                    # ticks = 'outside',
                    zeroline = TRUE,
                    zerolinecolor = 'rgb(240,240,240)',
-                   titlefont = list(size = myfont), tickfont = list(size = myfont)
+                   titlefont = list(size = fontsize), 
+                   tickfont = list(size = fontsize)
       ),
       # showlegend = FALSE
       legend = list(
         orientation = 'h', 
         xanchor = "left",
-        x = mylegend_x, 
+        x = c_legend_x, 
         y =-0.1,
-        font = list(size = myfont)
+        font = list(size = fontsize)
       ),
       margin = mymargin
       
@@ -195,6 +187,6 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
 }
 
 ## plot chart ----
-p <- myc(mywidth, myheight, myfont, mylinewidth, mymargin)
+p <- myc()
 
 p

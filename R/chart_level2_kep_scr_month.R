@@ -1,7 +1,9 @@
+############### state level adapted to RP4, not NM or SES
+
 if (!exists("country") | is.na(country)) {country = "SES RP3"}
 
 # import data  ---- 
-if (country == "SES RP3"){
+if (country == "SES RP4"){
   ## SES case ----
   data_raw_kep  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
@@ -11,7 +13,7 @@ if (country == "SES RP3"){
     as_tibble() %>% 
     clean_names() |> 
     #so it has the same structure as the state case
-    mutate(entity_name = "SES RP3") 
+    mutate(entity_name = "SES RP4") 
   
   data_raw_scr  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
@@ -21,7 +23,7 @@ if (country == "SES RP3"){
     as_tibble() %>% 
     clean_names() |> 
     #so it has the same structure as the state case
-    mutate(entity_name = "SES RP3") 
+    mutate(entity_name = "SES RP4") 
   
   data_raw_kea  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
@@ -35,50 +37,34 @@ if (country == "SES RP3"){
 
 } else  {
   ## State case ----
-  data_raw_kep  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEP MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  data_raw_scr  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_SCR MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  data_raw_kea  <-  read_xlsx(
-    paste0(data_folder, "ENV dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_HFE MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  if (!exists("kep_actual_mm")) {
+    source("R/get_data.R")
   }
+  
+  data_raw_kea <- kea_actual_mm
+  data_raw_kep <- kep_actual_mm
+  data_raw_scr <- scr_actual_mm
+}
 
 # prepare data ----
 data_raw_kep_p <- data_raw_kep %>% 
   rename(type = indicator_type,
-         mymetric = kep_value_percent,
+         mymetric = value,
          xlabel = month) %>% 
-  mutate(mymetric = round(mymetric, 2)) %>% 
+  mutate(mymetric = round(mymetric*100, 2)) %>% 
   filter(
-    entity_name == country,
+    state == country,
     lubridate::year(xlabel) == year_report
   ) %>% 
   select(xlabel, type, mymetric)
 
 data_raw_scr_p <- data_raw_scr %>% 
   rename(type = indicator_type,
-         mymetric = scr_value,
+         mymetric = value,
          xlabel = month) %>% 
   mutate(mymetric = round(mymetric * 100, 2)) %>% 
   filter(
-    entity_name == country,
+    state == country,
     lubridate::year(xlabel) == year_report
   )  %>% 
   select(xlabel, type, mymetric)
@@ -91,9 +77,9 @@ data_prep <- data_raw_kep_p %>%
 
 data_prep_kea <- data_raw_kea %>% 
   filter(
-    entity_name == country,
+    state == country,
     lubridate::year(month) == year_report) %>% 
-  mutate (myothermetric = hfe_kpi_percent,
+  mutate (myothermetric = round(value*100, 2),
           type = indicator_type,
           xlabel = lubridate::floor_date(month, unit = 'month' )) %>% 
   select(
@@ -102,56 +88,45 @@ data_prep_kea <- data_raw_kea %>%
     myothermetric
   ) 
 
-# chart parameters ----
-mysuffix <- "%"
-mydecimals <- 2
+c_suffix <- "%"
+c_decimals <- 2
 
 ### trace parameters
-mycolors = c('#FFC000', '#5B9BD5')
+c_colors = c(PRBActualColor, PRBPlannedColor )
+
 ###set up order of traces
-myfactor <- c("KEP", "SCR")
+c_factor <- c("KEP", "SCR")
 
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-mytextangle <- -90
-mytextposition <- "inside"
-myinsidetextanchor <- 'middle'
-mytextfont_color <- 'black'
-
-### layout parameters
-mybargap <- 0.25
-mybarmode <- 'group'
+c_textangle <- -90
+c_textposition <- "inside"
+c_insidetextanchor <- 'middle'
 
 #### title
-mytitle_text <- paste0("KEP & SCR (monthly, compared to KEA)")
-mytitle_y <- 0.99
+c_title_text <- paste0("KEP & SCR (monthly, compared to KEA)")
 
 #### xaxis
-myxaxis_dtick <- 'M1'
-myxaxis_tickformat <- "%b"
+c_xaxis_dtick <- 'M1'
+c_xaxis_tickformat <- "%b"
 
 #### yaxis
-myyaxis_title <- "KEA, KEP and SCR (%)"
-myyaxis_ticksuffix <- "%"
-myyaxis_tickformat <- ".2f"
+c_yaxis_title <- "KEA, KEP and SCR (%)"
+c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 
 #### legend
-mylegend_x <- 0.5
-mylegend_xanchor <- 'center'
-
 if (knitr::is_latex_output()) {
-  mytextfont_size <- myfont * 0.8
-  mylocallegend_y <- -0.18
-  
+  c_textfont_size <- myfont * 0.8
+  c_locallegend_y <- -0.18
+  c_bargap <- 0.05
+  c_xaxis_tickangle <- -90
   
 } else {
-  mylocallegend_y <- mylegend_y
-  mytextfont_size <- myfont * 0.9
-  
+  c_locallegend_y <- mylegend_y
+  c_textfont_size <- myfont * 0.9
+  c_bargap <- mybargap
+  c_xaxis_tickangle <- 0
 }
-
-#### margin
-mylocalmargin = mymargin
 
 #____additional trace parameters
 myat_name <- "KEA"
@@ -171,21 +146,35 @@ myat_textfont_size <- myfont
 
 # plot chart ----
 ## function moved to utils  
-p1 <- mybarchart(data_prep, mywidth, myheight+30, myfont, mylocalmargin, 
-           mydecimals, mylocallegend_y) %>% 
-  add_line_trace(., data_prep_kea)
+# p1 <- mybarchart(data_prep, mywidth, myheight+30, myfont, mylocalmargin, 
+#            mydecimals, mylocallegend_y) %>% 
+#   add_line_trace(., data_prep_kea)
 
 
 
-if (knitr::is_latex_output()) {
-  p1 <- p1 %>% layout(bargap = 0.05,
-                      xaxis = list(
-                        tickangle = -90  # Rotate x-axis tick labels to -90 degrees
-                      ))  
-  p1
-  
-} else {
-  # p1 <- p1 %>% layout(bargap = 0.05) 
-  p1
-  
-}
+myplot <- mybarchart2(data_prep, 
+                      height = myheight+30,
+                      colors = c_colors,
+                      local_factor = c_factor,
+                      
+                      textangle = c_textangle,
+                      textposition = c_textposition,
+                      insidetextanchor = c_insidetextanchor,
+                      
+                      title_text = c_title_text,
+                      
+                      xaxis_dtick = c_xaxis_dtick,
+                      xaxis_tickformat = c_xaxis_tickformat,
+                      xaxis_tickangle = c_xaxis_tickangle,
+                      
+                      yaxis_title = c_yaxis_title,
+                      yaxis_ticksuffix = c_suffix,
+                      yaxis_tickformat = c_yaxis_tickformat
+)
+
+myplot %>% 
+  add_line_trace2(., data_prep_kea,
+                  name = "KEA",
+                  textfontcolor = "rgba(0,0,0,0)",
+                  linecolor = "rgba(0,0,0,0)",
+  ) 
