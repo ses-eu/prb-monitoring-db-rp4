@@ -1,3 +1,16 @@
+# get some stuff only once ----
+
+## functions ----
+source("R/project_parameters.R")
+
+## functions ----
+source("R/utils.R")
+
+## data ----
+source("R/get_data.R")
+
+
+
 for (i in 2024) {  # set your year(s) report here
 ###NOTES ----
 # for the pdf output you need to install TinyTex in your machine
@@ -17,10 +30,10 @@ for (i in 2024) {  # set your year(s) report here
   rm(list = setdiff(ls(), "i"))
   # i<- 2021
   # rm(list = ls())
-  if (i == 'rp3') {year_report <- 2024} else {year_report <- i}
+  if (i == 'rp4') {year_report <- 2029} else {year_report <- i}
   year_folder <- i 
   out_format <- 'web' # set your output format here: 'pdf' or 'web'
-  data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/data_for_web/RP3/'
+  data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/'
   data_folder_a2 <- paste0(data_folder, "monitoring_files/", year_report, "/")
  
   # set to true for generating the investments page - do only if last year of rp (i.e. 2024 for rp3)
@@ -32,12 +45,6 @@ for (i in 2024) {  # set your year(s) report here
   
   ## set all_states to FALSE to build only one state site, TRUE for all
   all_states <- FALSE
-  
-# get functions ----
-  source("R/utils.R")
-  
-# get context data ----
-  source("R/get_context_data.R")
   
   ## modify state list as required
   state_list_prod <- state_list
