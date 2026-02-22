@@ -27,7 +27,7 @@ c_suffix <- ""
 c_decimals <- 2
 
 ### trace parameters
-c_colors = c('#0070C0')
+c_colors = PRBSecondBlue
 
 ###set up order of traces
 c_factor <- data_prep %>% select(type) %>% unique() 
@@ -51,6 +51,8 @@ myplot <- mybarchart2(data_prep,
                       local_factor = c_factor,
                       suffix = c_suffix,
                       decimals = c_decimals,
+                      
+                      hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
                       textposition = c_textposition,

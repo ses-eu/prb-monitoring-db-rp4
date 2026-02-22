@@ -1,52 +1,56 @@
 ## import data  ----
-if (!exists("asma_actual_apt")) {
+if (!exists("cdo_actual_ms")) {
   source("R/get_data.R")
 }
 
-data_raw <- asma_actual_apt
+data_raw <- cdo_actual_ms
 
 ## prepare data ----
 data_prep <- data_raw %>% 
   filter(
-    state == .env$country,
-    year == .env$year_report,
-    airport_code %in% airports_table$apt_code) %>%
-  left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
+    state == .env$country
+    ) %>% 
   mutate(
-    xlabel = apt_name,
+    xlabel = year,
     type = indicator_type,
-    mymetric = value
+    mymetric = case_when(
+      year <= year_report ~ round(value * 100, 0),
+      .default = NA),
+    textposition = 'top',
+    linedash = 'solid'
   ) %>%  
   select(
     xlabel,
     type,
-    mymetric)
+    mymetric,
+    textposition,
+    linedash
+    )
 
 ## chart parameters ----
-c_suffix <- ""
-c_decimals <- 2
+c_suffix <- "%"
+c_decimals <- 0
+
 
 ### trace parameters
-c_colors = PRBActualColor
+c_colors = PRBSecondBlue
 
 ###set up order of traces
 c_factor <- data_prep %>% select(type) %>% unique() 
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-c_textposition <- "outside"
-c_insidetextanchor <- NA
-c_textfont_color <- 'black'
-
 #### title
-c_title_text <- paste0("ASMA, main airport(s) - ", year_report)
+c_title_text <- paste0("CDOs")
 
 #### yaxis
-c_yaxis_title <- "ASMA (min/flight)"
+c_yaxis_title <- "CDOs (%)"
 c_yaxis_tickformat <- paste0(".",c_decimals, "f")
+c_yaxis_rangemode <- NA
+c_yaxis_range <- c((floor(min(data_prep$mymetric, na.rm = TRUE)/5)*5)-5, (ceiling(max(data_prep$mymetric, na.rm = TRUE)/5)*5)+5)
 
-## plot chart  ----
-myplot <- mybarchart2(data_prep, 
+## define chart function ----
+myplot <- mylinechart2(data_prep, 
                       colors = c_colors,
                       local_factor = c_factor,
                       suffix = c_suffix,
@@ -55,9 +59,7 @@ myplot <- mybarchart2(data_prep,
                       hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
-                      textposition = c_textposition,
-                      insidetextanchor = c_insidetextanchor,
-                      
+
                       title_text = c_title_text,
                       
                       yaxis_title = c_yaxis_title,
@@ -65,5 +67,5 @@ myplot <- mybarchart2(data_prep,
                       yaxis_tickformat = c_yaxis_tickformat
 )
 
-myplot 
+myplot %>% add_empty_trace(data_prep)
 

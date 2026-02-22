@@ -99,6 +99,8 @@ myplot <- mybarchart2(data_prep,
                       suffix = c_suffix,
                       decimals = c_decimals,
                       
+                      hovertemplate = c_hovertemplate,
+                      
                       textangle = c_textangle,
                       textposition = c_textposition,
                       insidetextanchor = c_insidetextanchor,

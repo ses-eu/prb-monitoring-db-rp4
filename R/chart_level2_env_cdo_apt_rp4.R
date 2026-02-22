@@ -1,21 +1,36 @@
 ## import data  ----
-if (!exists("asma_actual_apt")) {
+if (!exists("cdo_actual_apt")) {
   source("R/get_data.R")
 }
 
-data_raw <- asma_actual_apt
+data_raw <- cdo_actual_apt
 
 ## prepare data ----
-data_prep <- data_raw %>% 
+airports_country <- airports_table %>% 
+  filter(country_name == .env$country) 
+
+### filter CDO table on country and year_report
+data_filtered <- data_raw %>% 
   filter(
     state == .env$country,
-    year == .env$year_report,
-    airport_code %in% airports_table$apt_code) %>%
+    year == .env$year_report
+    )
+
+### We take the top 15 airports for France
+if (country == "France") {
+  data_filtered <- data_filtered |> 
+    filter(is.na(arrivals) == FALSE) |> 
+    arrange(desc(arrivals)) |> 
+    slice_head(n = 15)
+}
+
+data_prep <- data_filtered %>% 
+  filter(airport_code %in% airports_table$apt_code) %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
   mutate(
     xlabel = apt_name,
     type = indicator_type,
-    mymetric = value
+    mymetric = round(value * 100, 0)
   ) %>%  
   select(
     xlabel,
@@ -23,11 +38,11 @@ data_prep <- data_raw %>%
     mymetric)
 
 ## chart parameters ----
-c_suffix <- ""
-c_decimals <- 2
+c_suffix <- "%"
+c_decimals <- 0
 
 ### trace parameters
-c_colors = PRBActualColor
+c_colors = PRBSecondBlue
 
 ###set up order of traces
 c_factor <- data_prep %>% select(type) %>% unique() 
@@ -39,10 +54,10 @@ c_insidetextanchor <- NA
 c_textfont_color <- 'black'
 
 #### title
-c_title_text <- paste0("ASMA, main airport(s) - ", year_report)
+c_title_text <- paste0("CDOs, main airport(s) - ", year_report)
 
 #### yaxis
-c_yaxis_title <- "ASMA (min/flight)"
+c_yaxis_title <- "CDOs (%)"
 c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 
 ## plot chart  ----
@@ -51,8 +66,6 @@ myplot <- mybarchart2(data_prep,
                       local_factor = c_factor,
                       suffix = c_suffix,
                       decimals = c_decimals,
-                      
-                      hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
                       textposition = c_textposition,

@@ -128,22 +128,6 @@ if (knitr::is_latex_output()) {
   c_xaxis_tickangle <- 0
 }
 
-#____additional trace parameters
-myat_name <- "KEA"
-myat_mode <- "markers"
-myat_yaxis <- "y1"
-myat_symbol <- NA
-myat_marker_color <- '#FF0000'
-myat_line_color <- 'transparent'
-myat_line_width <- mylinewidth
-myat_showlegend <- T
-
-myat_textbold <- TRUE
-myat_textangle <- 0
-myat_textposition <- 'top'
-myat_textfont_color <- 'transparent'
-myat_textfont_size <- myfont
-
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = myheight+30,
@@ -151,6 +135,8 @@ myplot <- mybarchart2(data_prep,
                       local_factor = c_factor,
                       suffix = c_suffix,
                       decimals = c_decimals,
+                      
+                      hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
                       textposition = c_textposition,

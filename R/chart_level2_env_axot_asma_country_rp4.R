@@ -169,6 +169,8 @@ if (year_report == rp_min_year) {
                         suffix = c_suffix,
                         barmode = "stack",
                         
+                        hovertemplate = c_hovertemplate,
+                        
                         textangle = c_textangle,
                         textposition = c_textposition,
                         insidetextanchor = c_insidetextanchor,
