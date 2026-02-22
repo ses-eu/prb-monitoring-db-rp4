@@ -165,6 +165,8 @@ if (year_report == rp_min_year) {
                         height = myheight,
                         colors = c("#AFD2EB", "#FFEBAB"),
                         local_factor = c_factor,
+                        decimals = c_decimals,
+                        suffix = c_suffix,
                         barmode = "stack",
                         
                         textangle = c_textangle,

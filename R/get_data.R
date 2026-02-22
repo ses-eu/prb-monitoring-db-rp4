@@ -30,6 +30,8 @@ other_orgs_table <- read_mytable("lists.xlsx", "lists", "Table_PP_other_ANSPs") 
 
 saf_ansp_table <- read_mytable("lists.xlsx", "lists", "Table_SAF_ANSP") %>% clean_names()
 
+airports_table <- read_mytable("lists.xlsx", "lists", "Table_tcz_apt") %>%  clean_names()
+
 # traffic ----
 ## forecast & actuals ----
 statfor_mvt  <-  read_xlsx(
@@ -137,9 +139,24 @@ axot_actual_ms  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+axot_actual_apt  <-  read_xlsx(
+  here(data_folder, "env_actuals.xlsx"),
+  sheet = "axot_apt",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+### ASMA ----
 asma_actual_ms  <-  read_xlsx(
   here(data_folder, "env_actuals.xlsx"),
   sheet = "asma_ms",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+asma_actual_apt  <-  read_xlsx(
+  here(data_folder, "env_actuals.xlsx"),
+  sheet = "asma_apt",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 

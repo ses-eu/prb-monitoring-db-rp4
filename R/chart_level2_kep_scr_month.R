@@ -145,17 +145,12 @@ myat_textfont_color <- 'transparent'
 myat_textfont_size <- myfont
 
 # plot chart ----
-## function moved to utils  
-# p1 <- mybarchart(data_prep, mywidth, myheight+30, myfont, mylocalmargin, 
-#            mydecimals, mylocallegend_y) %>% 
-#   add_line_trace(., data_prep_kea)
-
-
-
 myplot <- mybarchart2(data_prep, 
                       height = myheight+30,
                       colors = c_colors,
                       local_factor = c_factor,
+                      suffix = c_suffix,
+                      decimals = c_decimals,
                       
                       textangle = c_textangle,
                       textposition = c_textposition,

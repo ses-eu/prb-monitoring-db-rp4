@@ -1,5 +1,3 @@
-############### adapted to RP4
-
 # import data  ----
 if (!exists("statfor_mvt")) {
   source("R/get_data.R")
