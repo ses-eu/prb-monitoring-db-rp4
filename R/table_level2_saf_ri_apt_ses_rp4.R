@@ -1,6 +1,7 @@
 if (!exists("country") | is.na(country)) {country <- rp_full
 source("R/parameters.R")
 }
+
 if (!data_loaded) {
   source("R/get_data.R")
 }

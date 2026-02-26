@@ -1,11 +1,9 @@
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw <- read_xlsx(
-  paste0(data_folder, "NM_data.xlsx"),
-  sheet = "EoSM",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names()
+data_raw <- saf_eosm_nm
 
 ## prepare data ----
 data_prep_maturity <- data_raw %>% 
@@ -71,7 +69,7 @@ myc <-  function(mywidth, myheight, myfont, mymargin) {
       type = 'scatter',
       mode = "line",
       name = "Target other MOs",
-      line = list (color = '#FF0000', width = 3, dash = 'solid'),
+      line = list (color = PRBTargetColor, width = 3, dash = 'solid'),
       hoverinfo = 'none',
       showlegend = F
     ) %>%
@@ -84,7 +82,7 @@ myc <-  function(mywidth, myheight, myfont, mymargin) {
       type = 'scatter',
       mode = "line",
       name = "Target risk mgt",
-      line = list (color = '#FF0000', width = 3, dash = 'solid'),
+      line = list (color = PRBTargetColor, width = 3, dash = 'solid'),
       # hovertemplate = paste0('%{x}'),
       hoverinfo = 'none',
       showlegend = F
@@ -127,7 +125,7 @@ myc <-  function(mywidth, myheight, myfont, mymargin) {
                      xanchor = "right",
                      align = "right",
                      # textangle = -90,
-                     font = list(color = '#FF0000', size = myfont)
+                     font = list(color = PRBTargetColor, size = myfont)
     ) %>% 
     config( responsive = TRUE,
             displaylogo = FALSE,

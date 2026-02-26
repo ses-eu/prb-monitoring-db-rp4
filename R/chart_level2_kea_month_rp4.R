@@ -1,30 +1,10 @@
-############### state level adapted to RP4, not NM
 
 if (!exists("country") | is.na(country)) {country = rp_full}
 if (!data_loaded) {
   source("R/get_data.R")
 }
 
-if (country == "Network Manager") {
-  # NM case ----
-  ## import data  ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "NM_data.xlsx"),
-    sheet = "Environment",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  ## prepare data ----
-  data_for_chart <- data_raw %>% 
-    filter(year_report == .env$year_report) %>% 
-    mutate(
-      target = round(nm_target * 100, 2),
-      actual = round(actual * 100, 2)
-    ) %>% 
-    select(year, target, actual)
-  
-} else if (country == rp_full) {
+if (country == rp_full) {
   # SES case ----
   ## import data  ----
   data_raw_target  <-  kea_target_ses %>% 

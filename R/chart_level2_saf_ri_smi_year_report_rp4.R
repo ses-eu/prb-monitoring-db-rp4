@@ -1,7 +1,9 @@
-############### state level adapted to RP4, not SES
-
 if (!exists("country") | is.na(country)) {country <- "Poland"
 source("R/parameters.R")
+}
+
+if (!data_loaded) {
+  source("R/get_data.R")
 }
 
 if (!exists("safindicator")) {safindicator <- "ri"}
@@ -13,10 +15,6 @@ if (safindicator == "ri") {
   if (country != rp_full){
     ## state ----
     
-    if (!data_loaded) {
-      source("R/get_data.R")
-    }
-    
     data_raw  <-  saf_ri_actual %>% 
       mutate(
         main_indicator = number_of_ri,
@@ -25,17 +23,7 @@ if (safindicator == "ri") {
     
   } else {
     ## ses ----
-    data_raw  <-  read_xlsx(
-      paste0(data_folder, "SES file.xlsx"),
-      # here("data","hlsr2021_data.xlsx"),
-      sheet = "RI SES variation",
-      range = cell_limits(c(1, 1), c(NA, NA))) %>%
-      as_tibble() %>% 
-      clean_names() %>% 
-      mutate(
-        field = str_remove_all(field, " RI")
-          )
-        
+    data_raw  <-  saf_ri_var_ses        
   }
   
 } else if (safindicator == "smi") {
@@ -49,17 +37,8 @@ if (safindicator == "ri") {
         )
     
   } else {
+    data_raw  <-  saf_smi_var_ses
     
-    data_raw  <-  read_xlsx(
-      paste0(data_folder, "SES file.xlsx"),
-      # here("data","hlsr2021_data.xlsx"),
-      sheet = "RI SES variation",
-      range = cell_limits(c(1, 1), c(NA, NA))) %>%
-      as_tibble() %>% 
-      clean_names() %>% 
-      mutate(
-        field = str_remove_all(field, " RI")
-      )
   }
 }
 

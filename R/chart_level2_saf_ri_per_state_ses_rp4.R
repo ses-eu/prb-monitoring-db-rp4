@@ -1,25 +1,21 @@
 if (!exists("doclevel")) {doclevel = "level1"}
 
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "SMI - occurrences",
-  range = cell_limits(c(1, 1), c(NA, 6))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
-
+data_raw  <-  saf_ri_actual
 
 # prepare data ----
 data_prep <- data_raw %>% 
   filter(
-    type == "SMI",
+    type == "RI",
     year == year_report
   ) %>% 
   mutate(
     rate_per_100_000 = if_else(is.na(rate_per_100_000), 0, rate_per_100_000),
-    type = "Rate of SMI with safety impact by State"
+    type = "Rate of RI with safety impact by State"
     ) %>% 
   arrange (desc(rate_per_100_000)) %>% 
   mutate(xlabel = factor(state, levels = state)) %>% 
@@ -27,7 +23,7 @@ data_prep <- data_raw %>%
     -year, - reference_period,
     xlabel,
     mymetric = rate_per_100_000,
-    myothermetric = eu_wide_average_per_100_000
+    myothermetric = eu_wide_average
   ) 
 
 eu_average <- data_prep$myothermetric[1]
@@ -67,8 +63,8 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = local_height,
-                      colors = c('#FFC000'),
-                      local_factor = c("Rate of SMI with safety impact by State",
+                      colors = c('#00B0F0'),
+                      local_factor = c("Rate of RI with safety impact by State",
                                        NULL),
                       
                       suffix = local_suffix,
@@ -93,7 +89,7 @@ myplot <- mybarchart2(data_prep,
                       xaxis_tickangle =  -90,
                       xaxis_tickfont_size = local_fontsize,
                       
-                      yaxis_title = "Rate of SMIs per 100,000 flight hours",
+                      yaxis_title = "Rate of RIs per 100,000 airport movements",
                       yaxis_titlefont_size = local_fontsize,
                       yaxis_tickfont_size = local_fontsize,
                       yaxis_ticksuffix = local_suffix,
@@ -112,7 +108,7 @@ myplot <- mybarchart2(data_prep,
     type = 'scatter',
     mode = "line",
     name = paste0("Union-wide average: ", eu_average),
-    line = list (color = '#FFC000', width = 2, dash = 'dot'),
+    line = list (color = '#00B0F0', width = 2, dash = 'dot'),
     hoverinfo = 'none',
     opacity = 0.6,
     showlegend = T

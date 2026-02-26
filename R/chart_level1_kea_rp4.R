@@ -1,5 +1,3 @@
-############### state level adapted to RP4, also SES , not NM
-
 if (!exists("doclevel")) {doclevel = "level1"}
 if (!data_loaded) {
   source("R/get_data.R")
@@ -8,34 +6,20 @@ if (!data_loaded) {
 if (country == "Network Manager") {
   # NM case ----
   ## import data  ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "NM_data.xlsx"),
-    sheet = "Environment",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  data_raw  <-  kep_nm 
   
   ## prepare data ----
-  data_prep <- data_raw %>% 
-    filter(year_report == .env$year_report) %>% 
+  data_raw_target <- data_raw %>% 
     mutate(
-      xlabel = year
-      # target = round(nm_target * 100, 2),
-      # actual = round(actual * 100, 2)
+      xlabel = year,
+      state = "Network Manager",
+      # for NM it's kep but we name it kea so it has the same structure as others
+      kea_target = nm_target,
+      value = actual
     ) 
   
-  data_prep_actual <- data_prep %>% 
-    mutate(mymetric = case_when(
-           year > year_report ~ NA,
-           .default = round(actual * 100, 2)),
-           type = "Actual"
-           ) %>% 
-    select(xlabel, mymetric, type)
-  
-  data_prep_target <- data_prep %>% 
-    mutate(myothermetric = round(nm_target * 100, 2),
-           type = "Target")
-  
+  data_raw_actual <- data_raw_target
+
 } else if (country == rp_full) {
   # SES case ----
   data_raw_target  <-  kea_target_ses %>% 
@@ -144,10 +128,7 @@ myplot <- mybarchart2(data_prep_actual,
                       
                       yaxis_title = c_yaxis_title,
                       yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat,
-                      
-                      legend_x = 0.5,
-                      legend_xanchor = 'center'
+                      yaxis_tickformat = c_yaxis_tickformat
 )
 
 

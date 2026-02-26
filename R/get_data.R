@@ -136,6 +136,61 @@ saf_eosm_interdep_ses  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+### RI & SMI ----
+saf_ri_actual_ses <- read_xlsx(
+  here(data_folder, "ses_file.xlsx"),
+  sheet = "RI - occurrences",
+  range = cell_limits(c(1, 1), c(NA, 5))) %>%
+  as_tibble() %>% 
+  clean_names() |> 
+  mutate(state = rp_full)
+
+saf_smi_actual_ses <- read_xlsx(
+  here(data_folder, "ses_file.xlsx"),
+  sheet = "SMI - occurrences",
+  range = cell_limits(c(1, 1), c(NA, 5))) %>%
+  as_tibble() %>% 
+  clean_names() |> 
+  mutate(state = rp_full)
+
+saf_ri_var_ses <- read_xlsx(
+  here(data_folder, "ses_file.xlsx"),
+  sheet = "RI SES variation",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() %>% 
+  mutate(
+    field = str_remove_all(field, " RI")
+  )
+
+saf_smi_var_ses <- read_xlsx(
+  here(data_folder, "ses_file.xlsx"),
+  sheet = "SMI SES variation",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() %>% 
+  mutate(
+    field = str_remove_all(field, " SMI")
+  )
+
+
+## NM ----
+### EoSM ----
+saf_eosm_nm <- read_xlsx(
+  here(data_folder, "nm_file.xlsx"),
+  sheet = "EoSM",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names()
+
+### OVERDELIVERIES ----
+saf_overd_nm  <-  read_xlsx(
+  here(data_folder, "nm_file.xlsx"),
+  sheet = "PI_overdeliveries",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
 # ENV ----
 ## targets ----
 ### State ----
@@ -322,8 +377,40 @@ scr_actual_mm_ses  <-  read_xlsx(
   as_tibble() %>% 
   clean_names()
 
+### NM ----
+kep_nm <- read_xlsx(
+  paste0(data_folder, "nm_file.xlsx"),
+  sheet = "Environment",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names()
+
 # CAP ----
+## NM ----
+
 ## Targets ----
+cap_ert_nm  <-  read_xlsx(
+  here(data_folder, "nm_file.xlsx"),
+  sheet = "Capacity_En route",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+cap_trm_nm <- read_xlsx(
+  here(data_folder, "nm_file.xlsx"),
+  sheet = "Capacity_Terminal",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+
+cap_pis_nm  <- read_xlsx(
+  paste0(data_folder, "nm_file.xlsx"),
+  sheet = "Capacity_PIs",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names()
+
 ### State ----
 #### ATFM DELAY ----
 cap_ert_target  <-  read_xlsx(

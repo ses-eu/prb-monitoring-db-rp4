@@ -1,23 +1,14 @@
-############### state level adapted to RP4, not SES
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
 if (country == rp_full){
   ## SES case ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "SMI - occurrences",
-    range = cell_limits(c(1, 1), c(NA, 5))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    mutate(state = rp_full)
-    
+  data_raw  <-  saf_smi_actual_ses
+  
 } else  {
   ## State case ----
-  if (!data_loaded) {
-    source("R/get_data.R")
-  }
-  
   data_raw  <-  saf_smi_actual
 }
 

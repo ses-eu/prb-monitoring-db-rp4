@@ -574,95 +574,95 @@ read_mytable <- function(file, sheet, table){
 #     invisible(image_write(cropped, paste0(fig_dir, fig_name)))
 #   }
 #   
-# ## universal donut chart  ----
-# mydonutchart <-  function(df, 
-#                           width = mywidth, 
-#                           height = myheight, 
-#                           font = myfont,
-#                           margin = mymargin, 
-#                           decimals = mydecimals,
-#                           hole = 0.6,
-#                           textinfo = "percent",
-#                           insidetextorientation = "horizontal",
-#                           colors = mycolors,
-#                           shape = c(''),
-#                           hovertemplate = myhovertemplate,
-#                           sort = TRUE,
-#                           direction = "clockwise",
-#                           rotation = 0,
-#                           
-#                           minsize = myminsize,
-#                           font_family = myfont_family,
-#                           title_text = "Chart title",
-#                           title_x = mytitle_x,
-#                           title_xanchor = mytitle_xanchor,
-#                           title_y = mytitle_y,
-#                           title_yanchor = mytitle_yanchor,
-#                           title_font_size = mytitle_font_size,
-#                           textfont_size = mytextfont_size,
-#                           hovermode = myhovermode,
-#                           hoverlabel_bgcolor = myhoverlabel_bgcolor,
-#                           legend_traceorder = mylegend_traceorder,
-#                           legend_orientation = mylegend_orientation,
-#                           legend_x = mylegend_x,
-#                           legend_xanchor = mylegend_xanchor,
-#                           legend_y = mylegend_y,
-#                           legend_yanchor = mylegend_xanchor,
-#                           legend_font_size = mylegend_font_size
-#                           ) {
-#     plot_ly(
-#       data = df,
-#       width = width,
-#       height = height,
-#       labels = ~ type,
-#       values = ~ mymetric,
-#       texttemplate = "%{customdata}",
-#       customdata = ~textlabel,
-#       insidetextorientation = insidetextorientation,
-#       type = "pie",
-#       hole = hole,
-#       hovertemplate = hovertemplate,
-#       sort = sort,
-#       rotation = rotation,
-#       
-#       textinfo = textinfo,
-#       textfont = list(size =  textfont_size),
-#       textposition = ~ textposition,
-#       marker = list(colors = colors, pattern = list(shape = shape))
-#       ) %>% 
-#     config( responsive = TRUE,
-#             displaylogo = FALSE,
-#             displayModeBar = F
-#             # modeBarButtons = list(list("toImage")),
-#     ) %>% 
-#     layout(
-#       uniformtext=list(minsize = minsize, mode='show'),
-#       font = list(family = font_family),
-#       title = list(text = title_text,
-#                    x = title_x, 
-#                    y = title_y, 
-#                    xanchor = title_xanchor, 
-#                    yanchor = title_yanchor,
-#                    font = list(size = title_font_size)
-#       ),
-#       dragmode = FALSE,
-#       hovermode = hovermode,
-#       hoverlabel = list(bgcolor = hoverlabel_bgcolor),
-#       
-#       legend = list(
-#         traceorder= legend_traceorder,
-#         orientation = legend_orientation, 
-#         xanchor = legend_xanchor,
-#         yanchor = legend_yanchor,
-#         x = legend_x,  
-#         y = legend_y, 
-#         font = list(size = legend_font_size),
-#         orientation = legend_orientation
-#       ),
-#       margin = margin
-#     )
-#     
-# }
+# universal donut chart  ----
+mydonutchart <-  function(df,
+                          width = mywidth,
+                          height = myheight,
+                          font = myfont,
+                          margin = mymargin,
+                          decimals = mydecimals,
+                          hole = 0.6,
+                          textinfo = "percent",
+                          insidetextorientation = "horizontal",
+                          colors = mycolors,
+                          shape = c(''),
+                          hovertemplate = myhovertemplate,
+                          sort = TRUE,
+                          direction = "clockwise",
+                          rotation = 0,
+
+                          minsize = myminsize,
+                          font_family = myfont_family,
+                          title_text = "Chart title",
+                          title_x = mytitle_x,
+                          title_xanchor = mytitle_xanchor,
+                          title_y = mytitle_y,
+                          title_yanchor = mytitle_yanchor,
+                          title_font_size = mytitle_font_size,
+                          textfont_size = mytextfont_size,
+                          hovermode = myhovermode,
+                          hoverlabel_bgcolor = myhoverlabel_bgcolor,
+                          legend_traceorder = mylegend_traceorder,
+                          legend_orientation = mylegend_orientation,
+                          legend_x = mylegend_x,
+                          legend_xanchor = mylegend_xanchor,
+                          legend_y = mylegend_y,
+                          legend_yanchor = mylegend_xanchor,
+                          legend_font_size = mylegend_font_size
+                          ) {
+    plot_ly(
+      data = df,
+      width = width,
+      height = height,
+      labels = ~ type,
+      values = ~ mymetric,
+      texttemplate = "%{customdata}",
+      customdata = ~textlabel,
+      insidetextorientation = insidetextorientation,
+      type = "pie",
+      hole = hole,
+      hovertemplate = hovertemplate,
+      sort = sort,
+      rotation = rotation,
+
+      textinfo = textinfo,
+      textfont = list(size =  textfont_size),
+      textposition = ~ textposition,
+      marker = list(colors = colors, pattern = list(shape = shape))
+      ) %>%
+    config( responsive = TRUE,
+            displaylogo = FALSE,
+            displayModeBar = F
+            # modeBarButtons = list(list("toImage")),
+    ) %>%
+    layout(
+      uniformtext=list(minsize = minsize, mode='show'),
+      font = list(family = font_family),
+      title = list(text = title_text,
+                   x = title_x,
+                   y = title_y,
+                   xanchor = title_xanchor,
+                   yanchor = title_yanchor,
+                   font = list(size = title_font_size)
+      ),
+      dragmode = FALSE,
+      hovermode = hovermode,
+      hoverlabel = list(bgcolor = hoverlabel_bgcolor),
+
+      legend = list(
+        traceorder= legend_traceorder,
+        orientation = legend_orientation,
+        xanchor = legend_xanchor,
+        yanchor = legend_yanchor,
+        x = legend_x,
+        y = legend_y,
+        font = list(size = legend_font_size),
+        orientation = legend_orientation
+      ),
+      margin = margin
+    )
+
+}
  
  
 # ## universal linechart  ----
