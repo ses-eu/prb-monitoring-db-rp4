@@ -603,12 +603,103 @@ cap_sector_hours_actual_ses  <-  read_xlsx(
 
 # CEFF ----
 ## En-route ----
-ceff_t1_ert_ecz  <-  read_xlsx(
-  paste0(data_folder, "ceff.xlsx"),
-  sheet = "ERT_T1_ECZ",
-  range = cell_limits(c(6, 1), c(NA, NA))) %>%
+ceff_t1_ert  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Enroute_T1",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>%
   clean_names()
+
+ceff_t2_ert  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Enroute_T2",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+ceff_t3_ert  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Enroute_T3",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+## Terminal ----
+ceff_t1_trm  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Terminal_T1",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+ceff_t2_trm  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Terminal_T2",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+ceff_t3_trm  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "Terminal_T3",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+## Yearly xrates ----
+xrate_ert  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet =  "xrate_ert",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names() %>% 
+  mutate(cztype = "enroute",
+         cz_code = paste0(country_zone_code, "_ECZ")) %>% 
+  select(cz_code, cztype, year, currency,
+         xrate = exchange_rate,
+         xrate_ref = exchange_rate_ref2022)
+
+xrate_trm  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet =  "xrate_trm",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names() %>% 
+  mutate(cztype = "terminal",
+         cz_code = paste0(country_zone_code, "_TCZ")) %>% 
+  select(cz_code, cztype, year, currency,
+         xrate = exchange_rate,
+         xrate_ref = exchange_rate_ref2022)
+
+
+xrate_year <- xrate_ert %>% rbind(xrate_trm)
+
+## Forecast SU for Temp ur ----
+cef_temp_su_t2  <-  read_xlsx(
+  here(data_folder, "ceff.xlsx"),
+  sheet = "forecast_su_ert",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+
+#   get_xrates <- function(cztype, mycz) {
+#     
+#     yearly_xrates <- data_raw_xrates %>% 
+#       filter(
+#         entity_code %in% mycz == TRUE
+#       ) %>% 
+#       select(entity_code, contains('pp_exchangerate_' )) %>% 
+#       pivot_longer(cols = starts_with("pp_exchangerate_"),
+#                    names_to = "year",
+#                    values_to = 'pp_exchangerate') %>% 
+#       mutate(year = str_replace_all(year, 'pp_exchangerate_', ''),
+#              year = as.numeric(year),
+#              pp_exchangerate = if_else(pp_exchangerate == 0, NA, pp_exchangerate),
+#       )
+#     return(yearly_xrates)
+#   }
+
 
 # ceff_t1_ert_ecz_ses <- ceff_t1_ert_ecz %>% 
 #   group_by(year, status) %>%

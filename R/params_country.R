@@ -151,7 +151,7 @@ if (year_folder == "rp4") {
   ert_trm_share <- context_data$ert_trm_share
 } 
   
-  xrate2017 <- context_data$xrate2017
+  xrate_ref <- context_data[[paste0("xrate", cef_ref_year)]]
   
   no_apt_big <- context_data$no_apts_big
   no_apt_small <- context_data$no_apts_small

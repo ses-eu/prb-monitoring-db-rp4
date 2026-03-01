@@ -154,7 +154,7 @@ if (knitr::is_latex_output()) {
   mystandoff <- 0
   mytitle1 <- '% difference\nservice units'
   mytitle2 <- '% difference total\ncosts nominal €'
-  mytitle3 <- '% difference total\ncosts €<sub>2017</sub>'
+  mytitle3 <- paste0("% difference total\ncosts €<sub>",cef_ref_year,"</sub>")
   mytitle4 <- '% difference\nAUC/DUC'
 }else{
   mytickfontsize <- myfont*0.93
@@ -162,7 +162,7 @@ if (knitr::is_latex_output()) {
   mystandoff <- NULL
   mytitle1<- '% difference service units'
   mytitle2 <- '% difference total costs nominal €'
-  mytitle3 <- '% difference total costs €<sub>2017</sub>'
+  mytitle3 <- paste0("% difference total costs €<sub>",cef_ref_year,"</sub>")
   mytitle4 <- '% difference AUC/DUC'
 }
 

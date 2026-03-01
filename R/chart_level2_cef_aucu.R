@@ -1,7 +1,10 @@
+# to be tested with real data and RP4 to be adapted
 
-# fix ez if script not executed from qmd file ----
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
+
 if (exists("cz") == FALSE) {cz = c("1", "enroute")}
-# ez=1
 
 # define cz ----
 ez <- as.numeric(cz[[1]])
@@ -26,11 +29,9 @@ if (country == rp_full) {
   
   data_pre_prep <- data_raw %>% 
     filter(status == "A",
-           year >= 2021) |> 
-    mutate(year_text = if_else(year == 2021, "2020-2021", as.character(year))) |> 
+           year <= rp_min_year) |> 
     select(
       year,
-      year_text,
       new_duc = new_duc_eur_combined,
       total_adjustments_aucu = total_adjustments_su_combined,
       aucu = aucu_combined
@@ -39,36 +40,30 @@ if (country == rp_full) {
 } else {
   # State  ----
   ## import data ----
-  data_calc <- aucu(cztype, mycz)
-    
-  ## pre-prep data ----
-  data_pre_prep <- data_calc %>% 
-    mutate(year = as.numeric(str_replace_all(year_text, '2020-', ''))) |> 
+  data_pre_prep <- aucu(cztype, mycz) %>% 
     arrange(year) 
 }
   
 data_prep <- data_pre_prep |> 
   select(
     year,
-    year_text,
     new_duc,
     total_adjustments_aucu,
     aucu
   ) |> 
-  mutate_at(c(3:5), ~if_else(year > max(2021, year_report), NA, .)) |> 
-  select(-year)
-
+  mutate(across(.cols = -year, .fns = ~ if_else(year > year_report, NA, .x)))
 
 # chart parameters ----
-mychart_title <- paste0("AUCU")
-myaxis_title <- "AUCU (€/SU)"
-mybarcolor <- c( '#5B9BD5', 'transparent', '#BFBFBF', '#9DC3E6')
-mytextcolor <- 'black'
-mylegend_y_position <- -0.28
-mylocalmargin = list (t = 60, b = 80)
+c_chart_title <- paste0("AUCU")
+c_axis_title <- "AUCU (€/SU)"
+c_barcolor <- c( '#5B9BD5', 'transparent', '#BFBFBF', '#9DC3E6')
+c_textcolor <- 'black'
+c_legend_y_position <- -0.28
+c_margin = list (t = 60, b = 80)
   
 # define chart function ---
-mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
+mybarc_aucu <-  function(width = mywidth, height = myheight, 
+                         font = myfont, margin = mymargin) {
   mychart <- list()
   data_prep_filtered <- list()
   
@@ -78,7 +73,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
     ### prepare data for chart ----
     data_prep_filtered[[i]] <- data_prep %>% 
       slice(i:i) %>% 
-      pivot_longer(-c(year_text), names_to = 'type', values_to = 'metric')  %>% 
+      pivot_longer(-c(year), names_to = 'type', values_to = 'metric')  %>% 
       mutate(
         mydatalabel = case_when(
           type == 'total_adjustments_aucu' ~ if_else(is.na(metric) == TRUE, 
@@ -103,7 +98,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         ) %>% 
       relocate(fake_series, .after = new_duc) %>% 
       select(-metric) %>% 
-      pivot_longer(-c(year_text, type, mydatalabel), names_to ='subtype', values_to = 'metric') %>% 
+      pivot_longer(-c(year, type, mydatalabel), names_to ='subtype', values_to = 'metric') %>% 
       mutate(mydatalabel = case_when(
         subtype == 'fake_series' ~ NA,
         .default = mydatalabel
@@ -112,8 +107,8 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
     ### plot indivicual year charts ----
     mychart[[i]] <- data_prep_filtered[[i]] %>% 
     plot_ly(
-      width = mywidth,
-      height = myheight,
+      width = width,
+      height = height,
       y = ~ round(metric, 2),
       x = ~ factor(type, levels = c('new_duc', 'total_adjustments_aucu',
                                     'aucu')),
@@ -122,40 +117,18 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
       color = ~ factor(subtype, levels = c('new_duc', 'fake_series',
                                                      'total_adjustments_aucu',
                                                      'aucu')),
-      colors = mybarcolor,
+      colors = c_barcolor,
       text = ~ mydatalabel,
       textangle = -90,
       textposition = "outside", 
       cliponaxis = FALSE,
       # insidetextanchor =  "middle",
       # name = mymetric,
-      textfont = list(color = mytextcolor, size = myfont * 0.8),
+      textfont = list(color = c_textcolor, size = font * 0.8),
       # hovertemplate = paste0('%{y} (A-D): %{x:+0,}<extra></extra>'),
       hoverinfo = "none",
       showlegend = FALSE
     ) %>% 
-    # add_trace(
-    #   # data = filter(data_prep_filtered[[i]], subtype != 'fake_series'),
-    #   y = 0,
-    #   x = 'total_adjustments_aucu',
-    #   yaxis = "y1",
-    #   type = 'scatter',  mode = 'markers',
-    #   marker = list(size = mylinewidth, color = 'transparent'),
-    #   # color = ~ factor(subtype, levels = c('new_duc', 'fake_series',
-    #   #                                      'total_adjustments_aucu',
-    #   #                                      'aucu')),
-    #   # text = ~ mylabel,
-    #   # text = ~ as.character(format(round(VALUE,0), big.mark = " ")),
-    #   # textangle = -90,
-    #   textposition = "none",
-    #   cliponaxis = FALSE,
-    #   # insidetextanchor =  "middle",
-    #   # name = mymetric,
-    #   textfont = list(color = 'transparent'),
-    #   hovertemplate = paste0('%{x}: %{y}<extra></extra>'),
-    #   # hoverinfo = "none",
-    #   showlegend = F
-    # ) %>%
     layout(
       showlegend = F,  
       barmode = "stack",
@@ -177,7 +150,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
   }
 
   ### group year charts ----
-  subplot(mychart[[1]], mychart[[2]], mychart[[3]], mychart[[4]],
+  subplot(mychart[[1]], mychart[[2]], mychart[[3]], mychart[[4]], mychart[[5]],
           titleX = TRUE, shareY = T) %>% 
     config( responsive = TRUE,
             displaylogo = FALSE,
@@ -186,7 +159,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
     ) %>% 
     layout(
       font = list(family = "Roboto"),
-      title = list(text = mychart_title,
+      title = list(text = c_chart_title,
                    y = mytitle_y, 
                    x = mytitle_x, 
                    xanchor = mytitle_xanchor, 
@@ -197,7 +170,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
       hovermode = "x",
       hoverlabel=list(bgcolor="rgba(255,255,255,0.88)"),
       # uniformtext = list(minsize = myfont, mode='show'),
-      yaxis = list(title = myaxis_title,
+      yaxis = list(title = c_axis_title,
                    # gridcolor = 'rgb(255,255,255)',
                    showgrid = TRUE,
                    showline = FALSE,
@@ -210,7 +183,7 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
                    # ticks = 'outside',
                    zeroline = TRUE,
                    zerolinecolor = 'rgb(240,240,240)',
-                   titlefont = list(size = myfont), tickfont = list(size = myfont)
+                   titlefont = list(size = font), tickfont = list(size = font)
       ),
       # legend = list(
       #   orientation = 'h', 
@@ -223,10 +196,10 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
       annotations = list(
         list (
           xanchor = "center",
-          x = 0.125,
+          x = 0.1,
           y = -0.15,
-          text = '2020-2021',
-          font = list(size = myfont),
+          text = rp_min_year,
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -236,10 +209,10 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         ),
         list (
           xanchor = "center",
-          x = 0.375,
+          x = 0.1+0.2,
           y = -0.15,
-          text = '2022',
-          font = list(size = myfont),
+          text = rp_min_year+1,
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -249,10 +222,10 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         ), 
         list (
           xanchor = "center",
-          x = 0.625,
+          x = 0.50,
           y = -0.15,
-          text = '2023',
-          font = list(size = myfont),
+          text = rp_min_year+2,
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -262,10 +235,23 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         ), 
         list (
           xanchor = "center",
-          x = 0.875,
+          x = 0.92-0.21,
           y = -0.15,
-          text = '2024',
-          font = list(size = myfont),
+          text = rp_min_year+3,
+          font = list(size = font),
+          xref = "paper",
+          yref = "paper",
+          showarrow = FALSE,
+          # arrowhead = 7,
+          ax = 0,
+          ay = 0
+        ), 
+        list (
+          xanchor = "center",
+          x = 0.92,
+          y = -0.15,
+          text = rp_min_year+4,
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -276,9 +262,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.22,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = '■',
-          font = list(size = myfont * 1.2, color = '#5B9BD5'),
+          font = list(size = font * 1.2, color = '#5B9BD5'),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -289,9 +275,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.26,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = 'DUC',
-          font = list(size = myfont),
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -302,9 +288,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.35,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = '■',
-          font = list(size = myfont * 1.2, color = '#9DC3E6'),
+          font = list(size = font * 1.2, color = '#9DC3E6'),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -315,9 +301,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.39,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = 'AUCU',
-          font = list(size = myfont),
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -328,9 +314,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.50,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = '■',
-          font = list(size = myfont * 1.2, color = '#BFBFBF'),
+          font = list(size = font * 1.2, color = '#BFBFBF'),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -341,9 +327,9 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         list (
           xanchor = "left",
           x = 0.54,
-          y = mylegend_y_position,
+          y = c_legend_y_position,
           text = 'Total adjustments',
-          font = list(size = myfont),
+          font = list(size = font),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
@@ -353,10 +339,10 @@ mybarc_aucu <-  function(mywidth, myheight, myfont, mymargin) {
         )
         ),
       
-      margin = mymargin
+      margin = margin
       
     )
 }
   
 # plot chart  ----
-mybarc_aucu(mywidth, myheight+40, myfont, mylocalmargin)
+mybarc_aucu(mywidth, myheight+40, myfont, c_margin)

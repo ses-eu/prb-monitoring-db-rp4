@@ -1,5 +1,5 @@
 if (!exists("country") | is.na(country)) {country <- "Poland"
-source("R/parameters.R")
+source("R/params_country.R")
 }
 
 

@@ -78,7 +78,7 @@ mytitle_y <- 0.99
 #### xaxis
 
 #### yaxis
-myyaxis_title <- "En route unit costs (€2017)"
+myyaxis_title <- paste0("En route unit costs (€",cef_ref_year,")")
 myyaxis_ticksuffix <- ""
 myyaxis_tickformat <- ".0f"
 

@@ -1,6 +1,5 @@
-if (exists("country") == FALSE) {country <- "Belgium"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- "Belgium"
+source("R/params_country.R")}
 
 # import data  ----
 if (!exists("data_new_major")) {
@@ -51,7 +50,7 @@ table1 <- mygtable(data_prep_d, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    field = html("Determined costs (M€<sub>2017</sub>)")
+    field = html(paste0("Determined costs (M€<sub>",cef_ref_year,"</sub>)"))
   ) %>% 
   tab_style(
     style = list(
@@ -85,7 +84,7 @@ table2 <- mygtable(data_prep_a, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    field = html("Actual costs (M€<sub>2017</sub>)")
+    field = html(paste0("Actual costs (M€<sub>",cef_ref_year,"</sub>)"))
   ) %>% 
   tab_style(
     style = list(

@@ -1,7 +1,5 @@
 if (exists("country") == FALSE) {country <- "Bulgaria"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_cost_inv")) {
   source("R/get_investment_data.R")
@@ -84,7 +82,7 @@ myplot <- mybarchart2(data_prep,
                       title_text = "Total costs of investments",
                       title_y = 0.99,
                       
-                      yaxis_title = "Total costs of investments (M€<sub>2017</sub>)",
+                      yaxis_title = paste0("Total costs of investments (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ",.0f",
                       

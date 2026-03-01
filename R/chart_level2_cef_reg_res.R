@@ -1,7 +1,9 @@
+# to be tested with real data and RP4 to be adapted
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
 
-# fix ez if script not executed from qmd file ----
 if (exists("cz") == FALSE) {cz = c("1", "enroute")}
-# ez=1
 
 # define cz ----
 ez <- as.numeric(cz[[1]])
@@ -81,54 +83,62 @@ if (country == rp_full) {
   data_prep <- regulatory_result(cztype, mycz)
   data_prep <- data_prep %>% 
     mutate(mymetric = regulatory_result / 1000) %>% 
-    mutate_if(is.numeric, 
-              ~ ifelse(as.numeric(str_replace(year_text,"-", "")) > year_report & year_text != "2020-2021", 
-                       NA,
-                       .)
+    mutate(across(.cols = -c(year, type), ~if_else(year>year_report, NA, .x))
     ) |> 
-    rename(xlabel = year_text) 
+    rename(xlabel = year) 
 
 }
     
 # chart parameters ----
-mysuffix <- ""
-mydecimals <- 1
+c_suffix <- ""
+c_decimals <- 1
 
 ### trace parameters
-mycolors = c( '#5B9BD5', '#FFC000', '#BFBFBF')
+c_colors = c( PRBPlannedColor, PRBActualColor, '#BFBFBF')
 ###set up order of traces
-myfactor <- c("Main ANSP",
+c_factor <- c("Main ANSP",
               "Other ANSP",
               "MET")
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-mytextangle <- -90
-mytextposition <- "inside"
-myinsidetextanchor <- "middle"
-mytextfont_color <- 'transparent'
+c_textangle <- -90
+c_textposition <- "inside"
+c_insidetextanchor <- "middle"
+c_textfont_color <- 'transparent'
 
 ### layout parameters
-mybargap <- 0.25
-mybarmode <- 'group'
+c_barmode <- 'group'
 
 #### title
-mytitle_text <- paste0("RR by entity group")
-mytitle_y <- 0.99
-
-#### xaxis
+c_title_text <- paste0("RR by entity group")
 
 #### yaxis
-myyaxis_title <- "RR (M€)"
-myyaxis_ticksuffix <- ""
-myyaxis_tickformat <- ",.1f"
+c_yaxis_title <- "RR (M€)"
+c_yaxis_tickformat <- ",.1f"
 
-#### legend
-mylegend_x <- 0.5
-mylegend_xanchor <- 'center'
-
-#### margin
-mylocalmargin = mymargin
 
 # plot chart  ----
-mybarchart(data_prep, mywidth, myheight+10, myfont, mylocalmargin, mydecimals) %>% 
+p1 <- mybarchart2(data_prep, 
+                  height = myheight+10,
+                  colors = c_colors,
+                  local_factor = c_factor,
+                  suffix = c_suffix,
+                  decimals = c_decimals,
+                  barmode = c_barmode,
+                  
+                  hovertemplate = c_hovertemplate,
+                  
+                  textangle = c_textangle,
+                  textposition = c_textposition, 
+                  textfont_color = c_textfont_color,
+                  insidetextanchor = c_insidetextanchor,
+                  
+                  title_text = c_title_text,
+                  
+                  yaxis_title = c_yaxis_title,
+                  yaxis_ticksuffix = c_suffix,
+                  yaxis_tickformat = c_yaxis_tickformat
+) 
+
+p1 %>% 
   add_empty_trace(., data_prep)  

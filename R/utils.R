@@ -42,527 +42,412 @@ read_mytable <- function(file, sheet, table){
 #     return(df)
 #   }
 # 
-# ## get yearly exchange rates ----
-#   get_xrates <- function(cztype, mycz) {
-#     data_raw_xrates  <-  read_xlsx(
-#       paste0(data_folder, "CEFF dataset master.xlsx"),
-#       # here("data","hlsr2021_data.xlsx"),
-#       sheet = if_else(cztype == "terminal", "TRM_XRATE2017", "ERT_XRATE2017"),
-#       range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#       as_tibble() %>% 
-#       clean_names()  
-#     
-#     yearly_xrates <- data_raw_xrates %>% 
-#       filter(
-#         entity_code %in% mycz == TRUE
-#       ) %>% 
-#       select(entity_code, contains('pp_exchangerate_' )) %>% 
-#       pivot_longer(cols = starts_with("pp_exchangerate_"),
-#                    names_to = "year",
-#                    values_to = 'pp_exchangerate') %>% 
-#       mutate(year = str_replace_all(year, 'pp_exchangerate_', ''),
-#              year = as.numeric(year),
-#              pp_exchangerate = if_else(pp_exchangerate == 0, NA, pp_exchangerate),
-#       )
-#     return(yearly_xrates)
-#   }
 # 
-# ## aucu calculations ----
-#   
-# aucu <- function(cztype, mycz) {
-# ## import data  ----
-#   data_raw_t1  <-  read_xlsx(
-#     paste0(data_folder, "CEFF dataset master.xlsx"),
-#     sheet = if_else(cztype == "terminal", "Terminal_T1", "Enroute_T1"),
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   data_raw_t2  <-  read_xlsx(
-#     paste0(data_folder, "CEFF dataset master.xlsx"),
-#     sheet = if_else(cztype == "terminal", "Terminal_T2", "Enroute_T2"),
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   data_raw_t3  <-  read_xlsx(
-#     paste0(data_folder, "CEFF dataset master.xlsx"),
-#     sheet = if_else(cztype == "terminal", "Terminal_T3", "Enroute_T3"),
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   # temporary fields that are not yet in Muriel's database
-#   data_raw_temp_ur_t2_trm <-  read_xlsx(
-#     paste0(data_folder, "Temporary data en route and terminal for dashbaord.xlsx"),
-#     sheet = 'Terminal_T2UR',
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#     data_raw_temp_su_t2_er <-  read_xlsx(
-#     paste0(data_folder, "Temporary data en route and terminal for dashbaord.xlsx"),
-#     sheet = 'Forecasted SU 2223_ERT',
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   ## prepare data ----
-#   
-#   # filter raw tables on cz
-#   ## t1
-#   data_prep_t1_a <- data_raw_t1 %>% 
-#     filter(
-#       entity_code == mycz,
-#       status == 'A'
-#     ) 
-#     
-#   colnames(data_prep_t1_a) <- paste('a', colnames(data_prep_t1_a), sep = '_')
-#   
-#   data_prep_t1_d <- data_raw_t1 %>% 
-#       filter(
-#         entity_code == mycz,
-#         status == 'D'
-#       ) 
-#   colnames(data_prep_t1_d) <- paste('d', colnames(data_prep_t1_d), sep = '_')
-#   
-#   data_prep_t1 <- cbind(data_prep_t1_a, data_prep_t1_d) |> rename(year = a_year)
-#   
-#   ## t2
-#   data_prep_t2_ini <- data_raw_t2 %>% 
-#     filter(
-#       entity_code == mycz
-#     ) 
-#   
-#   if (cztype == "terminal") {
-#     data_prep_t2_ini <- data_prep_t2_ini |> 
-#       mutate(x8_1_temp_unit_rate = x8_1_temp_unit_rate/1000)
-#   
-#   }
-#   
-#   #temp table with values for 2020 and 2021 separated that I'll need later for aucu calculations
-#   #first I need the 10.5 and 4.7 value separated also for the calculations 
-#   
-#   other_rev_20202021 <- data_prep_t2_ini %>% filter(year == 20202021) %>% select(x10_5_other_revenue) %>% pull()
-#   total_su_t2_20202021<- data_prep_t2_ini %>% filter(year == 20202021) %>% select(x4_7_total_su) %>% pull()
-#   
-#   data_temp_t2 <- data_prep_t2_ini %>%  
-#     filter(year == 20202021) %>% 
-#     mutate_all(~ if_else(is.numeric(.x),NA,.x)) %>% 
-#     mutate(year = 2020,
-#            x10_5_other_revenue = other_rev_20202021,
-#            x4_7_total_su= total_su_t2_20202021
-#     ) %>% 
-#     rbind(filter(data_prep_t2_ini, year == 20202021)) %>% 
-#     mutate(year = if_else(year == 20202021, 2021, year))
-#   
-#   data_prep_t2 <- data_prep_t2_ini %>% rbind(data_temp_t2)
-#   
-#   ## t2 terminal temp ur / forecast su 
-#   data_raw_temp_ur_prep_t2_trm <- data_raw_temp_ur_t2_trm %>% 
-#     filter(
-#       entity_code == mycz
-#     ) 
-# 
-#   ## t2 er forecast su 
-#   data_raw_temp_su_prep_t2_er <- data_raw_temp_su_t2_er |> 
-#     filter(
-#       entity_code == mycz
-#     ) 
-#   
-#   # complete t2 terminal table with temporary values that are not yet in the DB
-#   if (cztype == 'terminal') {
-#     data_prep_t2 <- data_prep_t2 |> 
-#       left_join(data_raw_temp_ur_prep_t2_trm, by = "entity_code") 
-#   }else{
-#     data_prep_t2 <- data_prep_t2 |> 
-#       left_join(data_raw_temp_su_prep_t2_er, by = "entity_code") 
-#   }
-#   
-#     ## t3
-#   data_prep_t3 <- data_raw_t3 %>% 
-#     filter(
-#       entity_code == mycz,
-#       year != 'After RP' & year != 'Amounts'
-#     ) %>% 
-#     mutate(year = as.numeric(year))
-#   
-#   ## t exchange rates
-#   yearly_xrates <- get_xrates(cztype, mycz)
-#   
-#   data_prep_xrates <- yearly_xrates %>% 
-#     filter(
-#       entity_code == mycz
-#     ) %>% 
-#     select(-entity_code)
-#   
-#   #join all tables
-#   data_prep_all <- data_prep_t1 %>% 
-#     left_join(data_prep_t2, by = 'year', suffix = c(".t1", ".t2")) %>% 
-#     left_join(data_prep_t3, by = 'year', suffix = c("", ".t3")) %>% 
-#     left_join(data_prep_xrates, by = 'year')
-#   
-#   
-#   # get some parameters for 2020 and 2021. Needed later for calcs
-#   initial_duc_2020 <- data_prep_t2 %>% 
-#     filter(year == 20202021) %>% 
-#     select(x15_unit_rate_temp_2020) %>% pull()
-#   
-#   initial_duc_2021 <- data_prep_t2 %>% 
-#     filter(year == 20202021) %>% 
-#     select(x15_unit_rate_temp_2021) %>% pull()
-#   
-#   tsu_2020 <- data_prep_t1 %>% 
-#     filter(year == 2020) %>% 
-#     select(a_x5_4_total_su) %>% pull()
-#   
-#   tsu_2021 <- data_prep_t1 %>% 
-#     filter(year == 2021) %>% 
-#     select(a_x5_4_total_su) %>% pull()  
-#   
-#   tsu_20202021_a <- data_prep_t1 %>% 
-#     filter(year == 20202021) %>% 
-#     select(a_x5_4_total_su) %>% pull() 
-#   
-#   tsu_20202021_d <- data_prep_t1 %>% 
-#     filter(year == 20202021) %>% 
-#     select(d_x5_4_total_su) %>% pull() 
-#   
-#   # create table with forecast sus and format it so it can be used in calcs
-#   data_prep_forecast_su <- data_prep_all %>% 
-#     add_cols(., c('x15_forecast_su_temp_2022',       # add missing columns
-#                   'x15_forecast_su_temp_2023',
-#                   'x15_forecast_su_temp_2024')
-#     ) %>%                               
-#     select(contains('x15_forecast_su_temp_' )) %>% 
-#     pivot_longer(cols = starts_with("x15_forecast_su_temp_"),
-#                  names_to = "year",
-#                  values_to = 'x15_forecast_su_temp') %>% 
-#     mutate(year = str_replace_all(year, 'x15_forecast_su_temp_', ''),
-#            year = as.numeric(year),
-#            x15_forecast_su_temp = if_else(x15_forecast_su_temp == 0, NA, x15_forecast_su_temp),
-#     ) %>% 
-#     group_by(year) %>% 
-#     summarise(x15_forecast_su_temp = min(x15_forecast_su_temp, na.rm = TRUE)) %>% 
-#     mutate(x15_forecast_su_temp = if_else(x15_forecast_su_temp == Inf, NA, x15_forecast_su_temp),
-#     ) 
-#   
-#   # add new forecast sus to full table
-#   data_prep_all <- data_prep_all %>%
-#     left_join(data_prep_forecast_su, by = 'year')
-#   
-#   # calcs
-#   ## calculate all values for individual years following the indications in the CEFF computations file
-#   data_prep_years_split <- data_prep_all %>% 
-#     filter(year != 20202021) %>%
-#     mutate_all(~ ifelse(is.na(.), 0, .)) %>% 
-#     mutate(
-#       initial_duc = case_when(
-#         year == 2020 ~ (initial_duc_2020 - (total_adjustment/x15_forecast_su_temp)) * tsu_2020/(tsu_2020 + tsu_2021),
-#         year == 2021 ~ (initial_duc_2021 - (total_adjustment/x15_forecast_su_temp)) * tsu_2021/(tsu_2020 + tsu_2021),
-#         .default = if_else(x8_1_temp_unit_rate >0,  
-#                            x8_1_temp_unit_rate - (total_adjustment/x15_forecast_su_temp),
-#                            d_x4_2_cost_excl_vfr/d_x5_4_total_su)
-#       ),
-#       initial_duc = initial_duc / pp_exchangerate,
-#       new_duc = case_when(
-#         year == 2020 | year == 2021 ~ d_x4_2_cost_excl_vfr / tsu_20202021_d / pp_exchangerate,
-#         .default = d_x4_2_cost_excl_vfr / d_x5_4_total_su / pp_exchangerate
-#       ),
-#       retro_ur = new_duc - initial_duc,
-#       
-#       infl_adj = x2_5_adjust_inflation / x4_7_total_su / pp_exchangerate,
-#       dif_a_d_costs = x3_8_diff_det_cost_actual_cost / x4_7_total_su / pp_exchangerate,
-#       trs_adj = x4_9_adjust_traffic_risk_art_27_2 / x4_7_total_su / pp_exchangerate,
-#       dc_notrs = x5_1_det_cost_no_traffic_risk / x4_7_total_su / pp_exchangerate,
-#       fin_inc = x6_4_financial_incentive / x4_7_total_su / pp_exchangerate,
-#       rev_c_mod = x7_1_adj_revenue_charge_modulation / x4_7_total_su / pp_exchangerate,
-#       cross_fin = x9_1_cross_financing_other / x4_7_total_su / pp_exchangerate,
-#       other_rev = case_when(
-#         year == 2020 | year == 2021 ~ x10_5_other_revenue * d_x5_4_total_su / tsu_20202021_d / x4_7_total_su / pp_exchangerate,
-#         .default = x10_5_other_revenue / x4_7_total_su / pp_exchangerate
-#       ),
-#       loss_rev = x11_1_loss_revenue_lower_unit_rate / x4_7_total_su / pp_exchangerate,
-#       
-#       total_adjustments_aucu = infl_adj + dif_a_d_costs + trs_adj + dc_notrs + fin_inc + rev_c_mod + cross_fin + other_rev + loss_rev,
-#       aucu = new_duc + total_adjustments_aucu,
-#       
-#       aucu_excluding_or = aucu - other_rev,
-#       
-#       check_adj = (x12_total_adjust - x8_2_diff_revenue_temp_unit_rate - x5_2_unit_rate_no_traffic_risk) / x4_7_total_su / pp_exchangerate,
-#       
-#       year_text = as.character(year)
-#       
-#     ) %>% 
-#     select(
-#       year_text,
-#       x4_7_total_su,
-#       d_x5_4_total_su,
-#       
-#       x8_1_temp_unit_rate,
-#       x15_forecast_su_temp,
-#       total_adjustment,
-#       initial_duc,
-#       retro_ur,
-#       new_duc,
-#       retro_ur,
-#       infl_adj,
-#       dif_a_d_costs,
-#       trs_adj,
-#       dc_notrs,
-#       fin_inc,
-#       rev_c_mod,
-#       cross_fin,
-#       other_rev,
-#       loss_rev,
-#       total_adjustments_aucu,
-#       check_adj,
-#       aucu,
-#       aucu_excluding_or
-#     ) %>% 
-#     arrange(year_text)
-#   
-#   ## calculate values 2020-2021 as a sum of the individual years
-#   data_prep_20202021 <- data_prep_years_split %>% 
-#     filter(year_text == '2020' | year_text == '2021') %>%
-#     bind_rows(summarise(., across(where(is.numeric), sum),
-#                         across(where(is.character), ~'2020-2021'))) %>% 
-#     filter(year_text == '2020-2021') %>% 
-#     mutate(x4_7_total_su = x4_7_total_su/2)  # I didn't want to sum this one
-#   
-#   ## join prep tables with the relevant years
-#   aucu_data <- data_prep_20202021 %>% 
-#     rbind(filter(data_prep_years_split, year_text != '2020' & year_text != '2021'))
-#   
-#   return(aucu_data)
-#   }
-#   
-# ## regulatory result calculations ----
-#   
-# regulatory_result <- function(cztype, mycz) {
-#   ## import data  ----
-#   data_raw_t1  <-  read_xlsx(
-#     paste0(data_folder, "CEFF dataset master.xlsx"),
-#     # here("data","hlsr2021_data.xlsx"),
-#     sheet = if_else(cztype == "terminal", "Terminal_T1", "Enroute_T1"),
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   data_raw_t2  <-  read_xlsx(
-#     paste0(data_folder, "CEFF dataset master.xlsx"),
-#     # here("data","hlsr2021_data.xlsx"),
-#     sheet = if_else(cztype == "terminal", "Terminal_T2", "Enroute_T2"),
-#     range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#     as_tibble() %>% 
-#     clean_names() 
-#   
-#   ## prepare data ----
-#   data_filtered_t1 <- data_raw_t1 %>% 
-#     filter(
-#       #we filter on the cz_code instead of entity_code to get all entities
-#       charging_zone_code == mycz,    
-#       #we keep only ANSPs
-#       entity_type %in% c('ANSP', 'MET', 'MUAC'),    
-#       #the fields we need are on a per/year basis - there are no values for 20-21 combined
-#       year != 20202021
-#     ) 
-#   
-#   #subtable for the ex post roe calc
-#   data_prep_t1_1 <- data_filtered_t1 %>% 
-#     select(year,
-#            status,
-#            entity_type,
-#            charging_zone_code,
-#            entity_type_id,
-#            entity_name,
-#            entity_code,
-#            x3_4_total_assets,
-#            x3_8_share_of_equity_perc,
-#            x3_6_return_on_equity_perc) %>% 
-#     mutate(
-#       roe = x3_4_total_assets * x3_8_share_of_equity_perc * x3_6_return_on_equity_perc,
-#     ) %>% 
-#     select(-c(x3_4_total_assets, x3_8_share_of_equity_perc, x3_6_return_on_equity_perc)) %>% 
-#     pivot_wider(names_from = 'status',
-#                 values_from = 'roe') %>% 
-#     rename(ex_ante_roe_nc = D,
-#            ex_post_roe_nc = A)
-#   
-#   #subtable for the calc of Difference in costs: gain (+)/Loss (-) retained/borne by the ATSP
-#   data_prep_t1_2 <- data_filtered_t1 %>% 
-#     select(year,
-#            entity_code,
-#            status,
-#            x4_2_cost_excl_vfr
-#     ) %>% 
-#     mutate(
-#       dif_cost_gain_loss = case_when(
-#         # we are calculating D-A costs for years<= year_report
-#         status == 'A' ~ (-1)*x4_2_cost_excl_vfr,
-#         .default = x4_2_cost_excl_vfr),
-#       
-#       x4_2_cost_excl_vfr_d = case_when(
-#         # we are calculating D-A costs for years<= year_report
-#         status == 'D' ~ x4_2_cost_excl_vfr,
-#         .default = 0)
-#     ) %>% 
-#     group_by(year, entity_code) %>% 
-#     summarise(
-#       dif_cost_gain_loss = sum(dif_cost_gain_loss),
-#       x4_2_cost_excl_vfr_d = sum(x4_2_cost_excl_vfr_d)
-#     )
-# 
-#   
-#   #subtable for the calc actual revenues
-#   data_prep_t1_3 <- data_filtered_t1 %>% 
-#     filter(status == 'A') %>% 
-#     select(year,
-#            entity_code,
-#            status,
-#            x4_2_cost_excl_vfr
-#            )
-#   
-#   # join the t1 subtables
-#   data_prep_t1 <- data_prep_t1_1 %>% 
-#     left_join(data_prep_t1_2, by = c("year", "entity_code")) %>% 
-#     left_join(data_prep_t1_3, by = c("year", "entity_code"))
-#   
-#   # extract data from t2
-#   data_prep_t2 <- data_raw_t2 %>% 
-#     filter(
-#       #we filter on the cz_code instead of entity_code to get all entities
-#       charging_zone_code == mycz,    
-#       #we keep only ANSPs
-#       entity_type %in% c('ANSP', 'MET', 'MUAC'),    
-#       #we need actuals
-#       status == 'A',
-#     ) %>% 
-#     # the values for the combined year are 2021
-#     mutate(
-#       year = if_else(year == 20202021, 2021, year),
-#       trs = (x4_7_total_su / x4_6_total_su_forecast -1) * x4_1_det_cost_traffic_risk + x4_9_adjust_traffic_risk_art_27_2
-#       ) %>% 
-#     select(year,
-#            entity_code,
-#            x2_5_adjust_inflation,
-#            x3_8_diff_det_cost_actual_cost,
-#            trs,
-#            x6_4_financial_incentive)
-#   
-#   # join t1 and t2 for joint calculations
-#   data_prep_years_split <- data_prep_t1 %>% 
-#     left_join(data_prep_t2, by = c("year", "entity_code")) %>% 
-#     rowwise() %>% 
-#     mutate(
-#       atsp_gain_loss_cost_sharing = sum(dif_cost_gain_loss, x2_5_adjust_inflation, x3_8_diff_det_cost_actual_cost, na.rm = TRUE),
-#       total_net_gain_loss = sum(atsp_gain_loss_cost_sharing, trs, x6_4_financial_incentive, na.rm = TRUE),
-#       regulatory_result_nc = sum(total_net_gain_loss, ex_post_roe_nc, na.rm = TRUE),
-#       actual_revenues_nc = sum(x4_2_cost_excl_vfr, total_net_gain_loss, na.rm = TRUE)
-#     ) %>% 
-#     select(-entity_type, -charging_zone_code, -entity_name, -entity_code) %>% 
-#     mutate(type = case_when(
-#       entity_type_id == 'ANSP1'  ~ 'Main ANSP',
-#       entity_type_id %like% 'MET'  ~ 'MET',
-#       .default = 'Other ANSP'
-#     )) %>% 
-#     group_by(year, type) %>% 
-#     # the plot function already divides by 1000
-#     summarise(
-#       atsp_gain_loss_cost_sharing_nc = sum(atsp_gain_loss_cost_sharing)/10^3,
-#       trs_nc = sum(trs) /10^3,
-#       financial_incentive_nc = sum(x6_4_financial_incentive)/10^3,
-#       regulatory_result_nc = sum(regulatory_result_nc)/10^3,
-#       ex_ante_roe_nc = sum(ex_ante_roe_nc)/10^3,
-#       ex_post_roe_nc = sum(ex_post_roe_nc)/10^3,
-#       actual_revenues_nc = sum(actual_revenues_nc)/10^3,
-#       x4_2_cost_excl_vfr_d_nc = sum(x4_2_cost_excl_vfr_d)/10^3
-#               ) %>%
-#     ungroup() %>% 
-#     mutate(year_text = as.character(year)
-#     ) %>% 
-#     select(year_text,
-#            type, 
-#            regulatory_result_nc, 
-#            ex_ante_roe_nc, 
-#            ex_post_roe_nc,
-#            actual_revenues_nc,
-#            atsp_gain_loss_cost_sharing_nc,
-#            trs_nc,
-#            financial_incentive_nc,
-#            x4_2_cost_excl_vfr_d_nc
-#            )
-#   
-#   # get exchange rates
-#   yearly_xrates <- get_xrates(cztype, mycz)
-#   
-#   data_prep_xrates <- yearly_xrates %>% 
-#     select(-entity_code) %>% 
-#     # filter(year > 2020) %>% 
-#     mutate(year_text = as.character(year)
-#            # , year_text = if_else(year_text == '2021', '2020-2021', year_text)
-#     ) %>% select(-year)
-#   
-#   # get tsus 
-#   tsus <- data_raw_t1 %>% 
-#     filter(entity_code == if_else(cztype == "enroute", ecz_list$ecz_id[ez], tcz_list$tcz_id[ez]),
-#            status == 'A',
-#            year > 2021) %>% 
-#     select(year, x5_4_total_su)  |> 
-#     mutate(year_text = as.character(year)
-#            , year_text = if_else(year_text == '20202021', '2020-2021', year_text)
-#     ) %>% select(-year)
-# 
-#   regulatory_result_euro_split <- data_prep_years_split %>% 
-#     left_join(data_prep_xrates, by = "year_text") %>% 
-#     mutate(regulatory_result = regulatory_result_nc / pp_exchangerate,
-#            ex_ante_roe = ex_ante_roe_nc / pp_exchangerate,
-#            ex_post_roe = ex_post_roe_nc / pp_exchangerate,
-#            actual_revenues = actual_revenues_nc / pp_exchangerate,
-#            
-#            atsp_gain_loss_cost_sharing = atsp_gain_loss_cost_sharing_nc / pp_exchangerate,
-#            trs = trs_nc / pp_exchangerate,
-#            financial_incentive = financial_incentive_nc / pp_exchangerate,
-#            x4_2_cost_excl_vfr_d = x4_2_cost_excl_vfr_d_nc / pp_exchangerate
-#            
-#     ) %>% 
-#     select(-pp_exchangerate, 
-#            -regulatory_result_nc, 
-#            -ex_ante_roe_nc, 
-#            -ex_post_roe_nc, 
-#            -actual_revenues_nc,
-#            -atsp_gain_loss_cost_sharing_nc, 
-#            -trs_nc, 
-#            -financial_incentive_nc,
-#            -x4_2_cost_excl_vfr_d_nc) 
-#       
-#   ## sum 2020-2021 together
-#   regulatory_result_euro_202021 <- regulatory_result_euro_split %>% 
-#     filter(year_text == '2020' | year_text == '2021') |> 
-#     group_by(type) %>% 
-#     summarise(regulatory_result = sum(regulatory_result, na.rm = TRUE),
-#               ex_ante_roe = sum(ex_ante_roe, na.rm = TRUE),
-#               ex_post_roe = sum(ex_post_roe, na.rm = TRUE),
-#               actual_revenues = sum(actual_revenues, na.rm = TRUE),
-#               
-#               atsp_gain_loss_cost_sharing = sum(atsp_gain_loss_cost_sharing, na.rm = TRUE),
-#               trs = sum(trs, na.rm = TRUE),
-#               financial_incentive = sum(financial_incentive, na.rm = TRUE),
-#               x4_2_cost_excl_vfr_d = sum(x4_2_cost_excl_vfr_d, na.rm = TRUE)
-#               ) %>% 
-#     mutate(year_text = '2020-2021') %>% 
-#     relocate(year_text, .before = type)
-#   
-#   regulatory_result <- regulatory_result_euro_202021 %>% 
-#     rbind(regulatory_result_euro_split) %>% 
-#     filter(year_text != '2020' & year_text != '2021') %>% 
-#     left_join(tsus, by = "year_text") 
-#   
-# 
-#   return(regulatory_result)
-# }
-#     
-#   
+## aucu calculations ----
+aucu <- function(cztype, mycz) {
+## import data  ----
+  if(cztype == "enroute") {
+    data_raw_t1  <- ceff_t1_ert %>% filter(entity_type == "ECZ")
+    data_raw_t2  <- ceff_t2_ert %>% filter(entity_type == "ECZ")
+    data_raw_t3  <- ceff_t3_ert %>% filter(entity_type == "ECZ")
+  } else {
+    data_raw_t1  <- ceff_t1_trm %>% filter(entity_type == "TCZ")
+    data_raw_t2  <- ceff_t2_trm %>% filter(entity_type == "TCZ")
+    data_raw_t3  <- ceff_t3_trm %>% filter(entity_type == "TCZ")
+  }
+
+  ## prepare data ----
+  # filter raw tables on cz
+  ## t1
+  data_prep_t1_a <- data_raw_t1 %>%
+    filter(
+      entity_code == mycz,
+      status == 'A'
+    )
+
+  colnames(data_prep_t1_a) <- paste('a', colnames(data_prep_t1_a), sep = '_')
+
+  data_prep_t1_d <- data_raw_t1 %>%
+      filter(
+        entity_code == mycz,
+        status == 'D'
+      )
+  colnames(data_prep_t1_d) <- paste('d', colnames(data_prep_t1_d), sep = '_')
+
+  data_prep_t1 <- cbind(data_prep_t1_a, data_prep_t1_d) |> rename(year = a_year)
+
+  ## t2
+  data_prep_t2 <- data_raw_t2 %>%
+    filter(
+      entity_code == mycz
+    )
+
+  if (cztype == "terminal") {
+    data_prep_t2 <- data_prep_t2 |>
+      mutate(x8_1_temp_unit_rate = x8_1_temp_unit_rate/1000)
+
+  }
+  
+#   NOTE -----
+  #temp table with values for 2020 and 2021 separated that I'll need later for aucu calculations
+  #first I need the 10.5 and 4.7 value separated also for the calculations
+
+  # other_rev_20202021 <- data_prep_t2_ini %>% filter(year == 20202021) %>% select(x10_5_other_revenue) %>% pull()
+  # total_su_t2_20202021<- data_prep_t2_ini %>% filter(year == 20202021) %>% select(x4_7_total_su) %>% pull()
+  # 
+  # data_temp_t2 <- data_prep_t2_ini %>%
+  #   filter(year == 20202021) %>%
+  #   mutate_all(~ if_else(is.numeric(.x),NA,.x)) %>%
+  #   mutate(year = 2020,
+  #          x10_5_other_revenue = other_rev_20202021,
+  #          x4_7_total_su= total_su_t2_20202021
+  #   ) %>%
+  #   rbind(filter(data_prep_t2_ini, year == 20202021)) %>%
+  #   mutate(year = if_else(year == 20202021, 2021, year))
+  # 
+  # data_prep_t2 <- data_prep_t2_ini %>% rbind(data_temp_t2)
+
+  ## t2 terminal temp ur / forecast su
+  data_raw_temp_ur_prep_t2 <- cef_temp_su_t2 %>%
+    filter(
+      entity_code == mycz
+    )
+
+  # complete t2 terminal table with temporary values that are not yet in the DB
+  data_prep_t2 <- data_prep_t2 |>
+    left_join(data_raw_temp_ur_prep_t2, by = c("entity_code", "year"))
+
+    ## t3
+  data_prep_t3 <- data_raw_t3 %>%
+    filter(
+      entity_code == mycz,
+      year != 'After RP' & year != 'Amounts'
+    ) %>%
+    mutate(year = as.numeric(year))
+
+  ## t exchange rates
+  data_prep_xrates <- xrate_year %>%
+    filter(
+      cz_code == mycz
+    ) %>% 
+    select(year, xrate)
+
+  #join all tables
+  data_prep_all <- data_prep_t1 %>%
+    left_join(data_prep_t2, by = 'year', suffix = c(".t1", ".t2")) %>%
+    left_join(data_prep_t3, by = 'year', suffix = c("", ".t3")) %>%
+    left_join(data_prep_xrates, by = 'year') %>% as_tibble()
+
+
+  # get some parameters for 2020 and 2021. Needed later for calcs
+  # initial_duc_2020 <- data_prep_t2 %>%
+  #   filter(year == 20202021) %>%
+  #   select(x15_unit_rate_temp_2020) %>% pull()
+  # 
+  # initial_duc_2021 <- data_prep_t2 %>%
+  #   filter(year == 20202021) %>%
+  #   select(x15_unit_rate_temp_2021) %>% pull()
+  # 
+  # tsu_2020 <- data_prep_t1 %>%
+  #   filter(year == 2020) %>%
+  #   select(a_x5_4_total_su) %>% pull()
+
+  # tsu_2021 <- data_prep_t1 %>%
+  #   filter(year == 2021) %>%
+  #   select(a_x5_4_total_su) %>% pull()
+  # 
+  # tsu_20202021_a <- data_prep_t1 %>%
+  #   filter(year == 20202021) %>%
+  #   select(a_x5_4_total_su) %>% pull()
+  # 
+  # tsu_20202021_d <- data_prep_t1 %>%
+  #   filter(year == 20202021) %>%
+  #   select(d_x5_4_total_su) %>% pull()
+
+  # create table with forecast sus and format it so it can be used in calcs
+  # data_prep_forecast_su <- data_prep_all %>%
+  #   add_cols(., c('x15_forecast_su_temp_2022',       # add missing columns
+  #                 'x15_forecast_su_temp_2023',
+  #                 'x15_forecast_su_temp_2024')
+  #   ) %>%
+  #   select(contains('x15_forecast_su_temp_' )) %>%
+  #   pivot_longer(cols = starts_with("x15_forecast_su_temp_"),
+  #                names_to = "year",
+  #                values_to = 'x15_forecast_su_temp') %>%
+  #   mutate(year = str_replace_all(year, 'x15_forecast_su_temp_', ''),
+  #          year = as.numeric(year),
+  #          x15_forecast_su_temp = if_else(x15_forecast_su_temp == 0, NA, x15_forecast_su_temp),
+  #   ) %>%
+  #   group_by(year) %>%
+  #   summarise(x15_forecast_su_temp = min(x15_forecast_su_temp, na.rm = TRUE)) %>%
+  #   mutate(x15_forecast_su_temp = if_else(x15_forecast_su_temp == Inf, NA, x15_forecast_su_temp),
+  #   )
+
+  # add new forecast sus to full table
+  data_prep_all <- data_prep_all 
+  # %>%
+  #   left_join(data_prep_forecast_su, by = 'year')
+
+  # calcs
+  ## calculate all values for individual years following the indications in the CEFF computations file
+  data_prep_years_split <- data_prep_all %>%
+    mutate_all(~ ifelse(is.na(.), 0, .)) %>%
+    mutate(
+      initial_duc = if_else(x8_1_temp_unit_rate >0,
+                           x8_1_temp_unit_rate - (total_adjustment/x15_forecast_su_temp),
+                           d_x4_2_cost_excl_vfr/d_x5_4_total_su
+                           ),
+      initial_duc = initial_duc / xrate,
+      new_duc = d_x4_2_cost_excl_vfr / d_x5_4_total_su / xrate,
+      retro_ur = new_duc - initial_duc,
+
+      infl_adj = x2_5_adjust_inflation / x4_7_total_su / xrate,
+      dif_a_d_costs = x3_8_diff_det_cost_actual_cost / x4_7_total_su / xrate,
+      trs_adj = x4_9_adjust_traffic_risk_art_27_2 / x4_7_total_su / xrate,
+      dc_notrs = x5_1_det_cost_no_traffic_risk / x4_7_total_su / xrate,
+      fin_inc = x6_4_financial_incentive / x4_7_total_su / xrate,
+      rev_c_mod = x7_1_adj_revenue_charge_modulation / x4_7_total_su / xrate,
+      cross_fin = x9_1_cross_financing_other / x4_7_total_su / xrate,
+      other_rev = x10_5_other_revenue / x4_7_total_su / xrate,
+      loss_rev = x11_1_loss_revenue_lower_unit_rate / x4_7_total_su / xrate,
+
+      total_adjustments_aucu = infl_adj + dif_a_d_costs + trs_adj + dc_notrs + fin_inc + rev_c_mod + cross_fin + other_rev + loss_rev,
+      aucu = new_duc + total_adjustments_aucu,
+
+      aucu_excluding_or = aucu - other_rev,
+
+      check_adj = (x12_total_adjust - x8_2_diff_revenue_temp_unit_rate - x5_2_unit_rate_no_traffic_risk) / x4_7_total_su / xrate
+
+    ) %>%
+    select(
+      year,
+      x4_7_total_su,
+      d_x5_4_total_su,
+
+      x8_1_temp_unit_rate,
+      x15_forecast_su_temp,
+      total_adjustment,
+      initial_duc,
+      retro_ur,
+      new_duc,
+      retro_ur,
+      infl_adj,
+      dif_a_d_costs,
+      trs_adj,
+      dc_notrs,
+      fin_inc,
+      rev_c_mod,
+      cross_fin,
+      other_rev,
+      loss_rev,
+      total_adjustments_aucu,
+      check_adj,
+      aucu,
+      aucu_excluding_or
+    ) %>%
+    arrange(year)
+
+  ## calculate values 2020-2021 as a sum of the individual years
+  # data_prep_20202021 <- data_prep_years_split %>%
+  #   filter(year_text == '2020' | year_text == '2021') %>%
+  #   bind_rows(summarise(., across(where(is.numeric), sum),
+  #                       across(where(is.character), ~'2020-2021'))) %>%
+  #   filter(year_text == '2020-2021') %>%
+  #   mutate(x4_7_total_su = x4_7_total_su/2)  # I didn't want to sum this one
+
+  ## join prep tables with the relevant years
+  aucu_data <- data_prep_years_split
+
+  return(aucu_data)
+  }
+
+## regulatory result calculations ----
+regulatory_result <- function(cztype, mycz) {
+  ## import data  ----
+  if(cztype == "enroute") {
+    data_raw_t1  <- ceff_t1_ert
+    data_raw_t2  <- ceff_t2_ert
+  } else {
+    data_raw_t1  <- ceff_t1_trm
+    data_raw_t2  <- ceff_t2_trm
+  }
+  
+  ## prepare data ----
+  data_filtered_t1 <- data_raw_t1 %>%
+    filter(
+      #we filter on the cz_code instead of entity_code to get all entities
+      charging_zone_code == mycz,
+      #we keep only ANSPs
+      entity_type %in% c('ANSP', 'MET', 'MUAC')
+    )
+
+  #subtable for the ex post roe calc
+  data_prep_t1_1 <- data_filtered_t1 %>%
+    select(year,
+           status,
+           entity_type,
+           charging_zone_code,
+           entity_type_id,
+           entity_name,
+           entity_code,
+           x3_4_total_assets,
+           x3_8_share_of_equity_perc,
+           x3_6_return_on_equity_perc) %>%
+    mutate(
+      roe = x3_4_total_assets * x3_8_share_of_equity_perc * x3_6_return_on_equity_perc,
+    ) %>%
+    select(-c(x3_4_total_assets, x3_8_share_of_equity_perc, x3_6_return_on_equity_perc)) %>%
+    pivot_wider(names_from = 'status',
+                values_from = 'roe') %>%
+    rename(ex_ante_roe_nc = D,
+           ex_post_roe_nc = A)
+
+  #subtable for the calc of Difference in costs: gain (+)/Loss (-) retained/borne by the ATSP
+  data_prep_t1_2 <- data_filtered_t1 %>%
+    select(year,
+           entity_code,
+           status,
+           x4_2_cost_excl_vfr
+    ) %>%
+    mutate(
+      dif_cost_gain_loss = case_when(
+        # we are calculating D-A costs for years<= year_report
+        status == 'A' ~ (-1)*x4_2_cost_excl_vfr,
+        .default = x4_2_cost_excl_vfr),
+
+      x4_2_cost_excl_vfr_d = case_when(
+        # we are calculating D-A costs for years<= year_report
+        status == 'D' ~ x4_2_cost_excl_vfr,
+        .default = 0)
+    ) %>%
+    group_by(year, entity_code) %>%
+    summarise(
+      dif_cost_gain_loss = sum(dif_cost_gain_loss),
+      x4_2_cost_excl_vfr_d = sum(x4_2_cost_excl_vfr_d),
+      .groups = "drop"
+    )
+
+
+  #subtable for the calc actual revenues
+  data_prep_t1_3 <- data_filtered_t1 %>%
+    filter(status == 'A') %>%
+    select(year,
+           entity_code,
+           status,
+           x4_2_cost_excl_vfr
+           )
+
+  # join the t1 subtables
+  data_prep_t1 <- data_prep_t1_1 %>%
+    left_join(data_prep_t1_2, by = c("year", "entity_code")) %>%
+    left_join(data_prep_t1_3, by = c("year", "entity_code"))
+
+  # extract data from t2
+  data_prep_t2 <- data_raw_t2 %>%
+    filter(
+      #we filter on the cz_code instead of entity_code to get all entities
+      charging_zone_code == mycz,
+      #we keep only ANSPs
+      entity_type %in% c('ANSP', 'MET', 'MUAC'),
+      #we need actuals
+      status == 'A',
+    ) %>%
+    # the values for the combined year are 2021
+    mutate(
+      trs = (x4_7_total_su / x4_6_total_su_forecast -1) * x4_1_det_cost_traffic_risk + x4_9_adjust_traffic_risk_art_27_2
+      ) %>%
+    select(year,
+           entity_code,
+           x2_5_adjust_inflation,
+           x3_8_diff_det_cost_actual_cost,
+           trs,
+           x6_4_financial_incentive)
+
+  # join t1 and t2 for joint calculations
+  data_prep_years_split <- data_prep_t1 %>%
+    left_join(data_prep_t2, by = c("year", "entity_code")) %>%
+    rowwise() %>%
+    mutate(
+      atsp_gain_loss_cost_sharing = sum(dif_cost_gain_loss, x2_5_adjust_inflation, x3_8_diff_det_cost_actual_cost, na.rm = TRUE),
+      total_net_gain_loss = sum(atsp_gain_loss_cost_sharing, trs, x6_4_financial_incentive, na.rm = TRUE),
+      regulatory_result_nc = sum(total_net_gain_loss, ex_post_roe_nc, na.rm = TRUE),
+      actual_revenues_nc = sum(x4_2_cost_excl_vfr, total_net_gain_loss, na.rm = TRUE)
+    ) %>%
+    select(-entity_type, -charging_zone_code, -entity_name, -entity_code) %>%
+    mutate(type = case_when(
+      entity_type_id == 'ANSP1'  ~ 'Main ANSP',
+      stringr::str_detect(entity_type_id, 'MET')  ~ 'MET',
+      .default = 'Other ANSP'
+    )) %>%
+    group_by(year, type) %>%
+    # the plot function already divides by 1000
+    summarise(
+      atsp_gain_loss_cost_sharing_nc = sum(atsp_gain_loss_cost_sharing)/10^3,
+      trs_nc = sum(trs) /10^3,
+      financial_incentive_nc = sum(x6_4_financial_incentive)/10^3,
+      regulatory_result_nc = sum(regulatory_result_nc)/10^3,
+      ex_ante_roe_nc = sum(ex_ante_roe_nc)/10^3,
+      ex_post_roe_nc = sum(ex_post_roe_nc)/10^3,
+      actual_revenues_nc = sum(actual_revenues_nc)/10^3,
+      x4_2_cost_excl_vfr_d_nc = sum(x4_2_cost_excl_vfr_d)/10^3,
+      .groups = "drop"
+              ) %>%
+    select(year,
+           type,
+           regulatory_result_nc,
+           ex_ante_roe_nc,
+           ex_post_roe_nc,
+           actual_revenues_nc,
+           atsp_gain_loss_cost_sharing_nc,
+           trs_nc,
+           financial_incentive_nc,
+           x4_2_cost_excl_vfr_d_nc
+           )
+
+  # get exchange rates
+  data_prep_xrates <- xrate_year %>%
+    filter(
+      cz_code == mycz
+    ) %>% 
+    select(year, xrate)
+
+  # get tsus
+  tsus <- data_raw_t1 %>%
+    filter(entity_code == if_else(cztype == "enroute", ecz_list$ecz_id[ez], tcz_list$tcz_id[ez]),
+           status == 'A') %>%
+    select(year, x5_4_total_su)
+
+  regulatory_result_euro_split <- data_prep_years_split %>%
+    left_join(data_prep_xrates, by = "year") %>%
+    mutate(regulatory_result = regulatory_result_nc / xrate,
+           ex_ante_roe = ex_ante_roe_nc / xrate,
+           ex_post_roe = ex_post_roe_nc / xrate,
+           actual_revenues = actual_revenues_nc / xrate,
+
+           atsp_gain_loss_cost_sharing = atsp_gain_loss_cost_sharing_nc / xrate,
+           trs = trs_nc / xrate,
+           financial_incentive = financial_incentive_nc / xrate,
+           x4_2_cost_excl_vfr_d = x4_2_cost_excl_vfr_d_nc / xrate
+
+    ) %>%
+    select(-xrate,
+           -regulatory_result_nc,
+           -ex_ante_roe_nc,
+           -ex_post_roe_nc,
+           -actual_revenues_nc,
+           -atsp_gain_loss_cost_sharing_nc,
+           -trs_nc,
+           -financial_incentive_nc,
+           -x4_2_cost_excl_vfr_d_nc)
+
+  regulatory_result <- regulatory_result_euro_split %>%
+    left_join(tsus, by = "year")
+
+
+  return(regulatory_result)
+}
+
+
 # ## export figure function ----
 #   # the export function needs webshot and PhantomJS. Install PhantomJS with 'webshot::install_phantomjs()' and then cut the folder from wherever is installed and paste it in C:\Users\[username]\dev\r\win-library\4.2\webshot\PhantomJS
 # 

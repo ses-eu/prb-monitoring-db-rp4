@@ -1,8 +1,6 @@
 if (!exists("country")) {country <- "Spain"}
 if (!exists("cost_type")) {cost_type <- "en route"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_cost_inv")) {
   source("R/get_investment_data.R")

@@ -1,6 +1,5 @@
-if (exists("country") == FALSE) {country <- "Belgium"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- "Belgium"
+source("R/params_country.R")}
 
 # import data  ----
 if (!exists("data_new_major")) {
@@ -57,7 +56,7 @@ data_prep <- rbind(data_calc, data_calc_summary) %>%
 
 data_prep1 <- data_prep %>% filter(type == "Determined") %>% 
       summarise(across(-c(category, type), ~sum(.x, na.rm = FALSE))) %>%
-      mutate(category = "Total costs of new and existing investments (M€<sub>2017</sub>)") %>%
+      mutate(category = paste0("Total costs of new and existing investments (M€<sub>",cef_ref_year,"</sub>)")) %>%
       select(colnames(select(data_prep, -type))) %>%  
   bind_rows(
     data_prep %>% filter(type == "Determined") 
@@ -67,7 +66,7 @@ data_prep1 <- data_prep %>% filter(type == "Determined") %>%
 
 data_prep2 <- data_prep %>% filter(type == "Actual") %>% 
   summarise(across(-c(category, type), ~sum(.x, na.rm = FALSE))) %>%
-  mutate(category = "Total costs of new and existing investments (M€<sub>2017</sub>)") %>%
+  mutate(category = paste0("Total costs of new and existing investments (M€<sub>",cef_ref_year,"</sub>)")) %>%
   select(colnames(data_prep1)) %>%  
   bind_rows(
     data_prep %>% filter(type == "Actual") 
@@ -77,7 +76,7 @@ data_prep2 <- data_prep %>% filter(type == "Actual") %>%
 
 data_prep3 <- data_prep %>% filter(type == "Difference") %>% 
   summarise(across(-c(category, type), ~sum(.x, na.rm = FALSE))) %>%
-  mutate(category = "Total difference (M€<sub>2017</sub>)") %>%
+  mutate(category = paste0("Total difference (M€<sub>",cef_ref_year,"</sub>)")) %>%
   select(colnames(data_prep1)) %>%  
   bind_rows(
     data_prep %>% filter(str_detect(type,"Difference")) 

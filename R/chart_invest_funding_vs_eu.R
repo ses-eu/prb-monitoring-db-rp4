@@ -1,8 +1,6 @@
 
 if (exists("country") == FALSE) {country <- "Belgium"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_capex")) {
   source("R/get_investment_data.R")
@@ -50,7 +48,7 @@ mydonutchart(data_prep,
              colors = c('#22A0E7', '#58595B'),
              shape = c("/", ""), # not supported by plotly on donut charts
              hovertemplate = "%{label}: %{value:.0f}%<extra></extra>",
-             title_text = "Share of declared funding in RP3 (M€<sub>2017</sub>)",
+             title_text = paste0("Share of declared funding in RP3 (M€<sub>",cef_ref_year,"</sub>)"),
              minsize = 14,
              legend_x = local_legend_x,
              legend_y = local_legend_y,

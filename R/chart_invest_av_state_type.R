@@ -1,7 +1,5 @@
 if (exists("country") == FALSE) {country <- "Bulgaria"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_cost_inv")) {
   source("R/get_investment_data.R")
@@ -84,7 +82,7 @@ myplot <- mybarchart2(data_prep,
                       
                       xaxis_tickangle = -90,
                       
-                      yaxis_title = "CAPEX per Member State (M€<sub>2017</sub>)",
+                      yaxis_title = paste0("CAPEX per Member State (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ",.0f",
                       

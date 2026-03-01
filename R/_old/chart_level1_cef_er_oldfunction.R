@@ -22,7 +22,7 @@ data_prep <- data_raw %>%
   filter(
     entity_code == ecz_list$ecz_id[ez]) %>% 
   mutate(
-    mymetric = round(x5_5_unit_cost_nc2017/xrate2017, 2)
+    mymetric = round(x5_5_unit_cost_nc2017/xrate_ref, 2)
   ) %>%  
   select(
     year,

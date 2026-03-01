@@ -1,7 +1,5 @@
 if (exists("country") == FALSE) {country <- "Bulgaria"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_category")) {
   source("R/get_investment_data.R")

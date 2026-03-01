@@ -1,5 +1,5 @@
 if (!exists("country") | is.na(country)) {country <- rp_full
-source("R/parameters.R")
+source("R/params_country.R")
 }
 
 # fix ez if script not executed from qmd file ----

@@ -1,6 +1,5 @@
-if (exists("country") == FALSE) {country <- "Belgium"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- "Belgium"
+source("R/params_country.R")}
 
 # import data  ----
 if (!exists("data_new_major")) {

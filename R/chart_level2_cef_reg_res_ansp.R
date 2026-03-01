@@ -1,7 +1,9 @@
+# to be tested with real data and RP4 to be adapted
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
 
-# fix ez if script not executed from qmd file ----
 if (exists("cz") == FALSE) {cz = c("1", "enroute")}
-# ez=1
 
 # define cz ----
 ez <- as.numeric(cz[[1]])
@@ -99,7 +101,7 @@ if (country == rp_full) {
       share_rr_act_rev_expost = regulatory_result/actual_revenues * 100,
       share_rr_act_rev_exante = ex_ante_roe/x4_2_cost_excl_vfr_d * 100
       ) %>% 
-    select(year_text,regulatory_result, ex_ante_roe, share_rr_act_rev_expost, share_rr_act_rev_exante)
+    select(year,regulatory_result, ex_ante_roe, share_rr_act_rev_expost, share_rr_act_rev_exante)
 }
 
 # prep data ----
@@ -107,70 +109,64 @@ if (country == rp_full) {
 ## separate in two tables for pivoting 
 data_for_chart_value <- data_for_chart_wide %>% 
   select(-c(share_rr_act_rev_expost, share_rr_act_rev_exante)) %>% 
-  pivot_longer(-year_text, names_to = "xlabel", values_to = 'mymetric') %>% 
+  pivot_longer(-year, names_to = "xlabel", values_to = 'mymetric') %>% 
   mutate(xlabel = case_when(
     xlabel == 'regulatory_result'  ~ 'Ex-post',
     xlabel == 'ex_ante_roe'  ~ 'Ex-ante')
-    , mymetric = if_else(xlabel == "Ex-post" & as.numeric(str_sub(year_text, 1,4)) > max (2021, year_report), NA, mymetric/1000)
+    , mymetric = if_else(xlabel == "Ex-post" & year > year_report, NA, mymetric/1000)
   )
 
 data_for_chart_share <- data_for_chart_wide %>% 
   select(-c(regulatory_result, ex_ante_roe)) %>% 
-  pivot_longer(-year_text, names_to = "xlabel", values_to = 'share') %>% 
+  pivot_longer(-year, names_to = "xlabel", values_to = 'share') %>% 
   mutate(xlabel = case_when(
     xlabel == 'share_rr_act_rev_expost'  ~ 'Ex-post',
     xlabel == 'share_rr_act_rev_exante'  ~ 'Ex-ante'),
-    share = if_else(xlabel == "Ex-post" & as.numeric(str_sub(year_text, 1,4)) > max (2021, year_report), NA, share)
+    share = if_else(xlabel == "Ex-post" & year > year_report, NA, share)
   )
 
 data_prep <- data_for_chart_value %>% 
-  left_join(data_for_chart_share, by = c('year_text', 'xlabel')) %>% 
+  left_join(data_for_chart_share, by = c('year', 'xlabel')) %>% 
   mutate(type = xlabel,
-         xlabel = year_text
+         xlabel = year
   )
   
 # chart parameters ----
-mysuffix <- ""
-mydecimals <- 1
+c_suffix <- ""
+c_decimals <- 1
 
 ### trace parameters
-mycolors = c( '#CEE0EA', '#4B8DB1')
+c_colors = c( '#CEE0EA', '#4B8DB1')
 ###set up order of traces
-myfactor <- c("Ex-ante",
+c_factor <- c("Ex-ante",
               "Ex-post")
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-mytextangle <- -90
-mytextposition <- "inside"
-myinsidetextanchor <- "middle"
-mytextfont_color <- 'transparent'
+c_textangle <- -90
+c_textposition <- "inside"
+c_insidetextanchor <- "middle"
+c_textfont_color <- 'transparent'
 
-mytrace_showlegend <- F
+c_trace_showlegend <- F
 
 ### layout parameters
-mybargap <- 0.25
-mybarmode <- 'group'
+c_barmode <- 'group'
 
 #### title
-mytitle_text <- if_else(country == rp_full, 
+c_title_text <- if_else(country == rp_full, 
                         "RR - Main ANSPs",
                         paste0("RR - ", main_ansp)
                         )
 
-mytitle_y <- 0.99
-
-#### xaxis
-
 #### yaxis
-myyaxis_title <- "RR"
-myyaxis_ticksuffix <- ""
-myyaxis_tickformat <- ".1f"
+c_yaxis_title <- "RR"
+c_yaxis_tickformat <- ".1f"
 
 #### legend
-mylegend_y <- -0.24
+c_legend_y <- -0.24
 
 #### margin
-mylocalmargin = list(t = 60, b = 80, l = 40, r = 60)
+c_margin = list(t = 60, b = 80, l = 40, r = 60)
 
 # setup ranges to ensure zero line at same height
 # https://stackoverflow.com/questions/76289470/plotly-barplot-with-two-y-axis-aligned-at-zero
@@ -200,8 +196,31 @@ y2_padding_upper <- (1 - y1_relative_zero) * y2_total_range
 y2_range <- c(0 - y2_padding_lower, 0 + y2_padding_upper)
 
 # plot chart  ----
-myplot<- mybarchart(data_prep, mywidth, myheight + 30, myfont, mylocalmargin, mydecimals) %>%  
-add_trace(
+mybarchart2(data_prep, 
+                  height = myheight+30,
+                  colors = c_colors,
+                  local_factor = c_factor,
+                  suffix = c_suffix,
+                  decimals = c_decimals,
+                  barmode = c_barmode,
+                  
+                  hovertemplate = c_hovertemplate,
+                  
+                  textangle = c_textangle,
+                  textposition = c_textposition, 
+                  textfont_color = c_textfont_color,
+                  insidetextanchor = c_insidetextanchor,
+                  
+                  title_text = c_title_text,
+                  
+                  yaxis_title = c_yaxis_title,
+                  yaxis_ticksuffix = c_suffix,
+                  yaxis_tickformat = c_yaxis_tickformat,
+                  
+                  legend_y = c_legend_y,
+                  
+                  margin = c_margin
+) %>% add_trace(
   inherit = FALSE,
   data = data_prep,
   x = ~xlabel ,
@@ -210,7 +229,7 @@ add_trace(
   yaxis = "y2",
   # mode = "markers",
   type = 'box',
-  color = ~ factor(type, levels = myfactor),
+  color = ~ factor(type, levels = c_factor),
   line = list(color = '#E46C0A', width = mylinewidth), fillcolor = '#E46C0A',
   # marker = list(size = mylinewidth * 3, color = '#E46C0A'),
   hoverinfo = 'none',
@@ -271,9 +290,9 @@ add_trace(
       list (
       xanchor = "left",
       x = 0.0,
-      y = mylegend_y,
+      y = c_legend_y,
       text = '■',
-      font = list(size = myfont * 1.2, color = mycolors[[1]]),
+      font = list(size = myfont * 1.2, color = c_colors[[1]]),
       xref = "paper",
       yref = "paper",
       showarrow = FALSE,
@@ -283,7 +302,7 @@ add_trace(
       list (
         xanchor = "left",
         x = 0.07,
-        y = mylegend_y,
+        y = c_legend_y,
         text = 'Ex-ante RR (in value)',
         font = list(size = myfont*0.9, color = "black"),
         xref = "paper",
@@ -295,9 +314,9 @@ add_trace(
       list (
         xanchor = "left",
         x = 0.6,
-        y = mylegend_y,
+        y = c_legend_y,
         text = '■',
-        font = list(size = myfont * 1.2, color = mycolors[[2]]),
+        font = list(size = myfont * 1.2, color = c_colors[[2]]),
         xref = "paper",
         yref = "paper",
         showarrow = FALSE,
@@ -307,7 +326,7 @@ add_trace(
       list (
         xanchor = "left",
         x = 0.67,
-        y = mylegend_y,
+        y = c_legend_y,
         text = 'Ex-post RR (in value)',
         font = list(size = myfont*0.9, color = "black"),
         xref = "paper",
@@ -319,7 +338,7 @@ add_trace(
       list (
         xanchor = "left",
         x = 0.0,
-        y = mylegend_y-0.1,
+        y = c_legend_y-0.1,
         text = '<b>―</b>',
         font = list(size = myfont * 1.2, color = '#E46C0A'),
         xref = "paper",
@@ -331,7 +350,7 @@ add_trace(
       list (
         xanchor = "left",
         x = 0.07,
-        y = mylegend_y-0.1,
+        y = c_legend_y-0.1,
         text = 'RR in percent of en route revenues',
         font = list(size = myfont*0.9, color = "black"),
         xref = "paper",
@@ -344,6 +363,4 @@ add_trace(
   ) %>% 
   add_empty_trace(data_prep)
   
-
-myplot
 

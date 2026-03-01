@@ -57,7 +57,7 @@ mytitle_y <- 0.99
 #### xaxis
 
 #### yaxis
-myyaxis_title <- "Costs per service unit (€2017)"
+myyaxis_title <- paste0("Costs per service unit (€",cef_ref_year,")")
 myyaxis_ticksuffix <- ""
 myyaxis_tickformat <- ".0f"
 
@@ -106,7 +106,7 @@ myat_textfont_size <- myfont
 
 
 myplot_trace1 %>% add_line_trace(., filter(data_prep_costs, type == "Actual costs")) %>% 
-  layout(yaxis2 = list(title = "Total costs ('000 €2017)",
+  layout(yaxis2 = list(title = paste0("Total costs ('000 €",cef_ref_year,")"),
                      overlaying = "y",
                      side = "right",
                      showgrid = FALSE,

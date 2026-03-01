@@ -654,7 +654,7 @@ no_apt_big <- params$no_apt_big
 no_apt_small <- params$no_apt_small
 
 nat_curr <- params$nat_curr
-xrate2017 <- params$xrate2017
+xrate_ref <- params$xrate_ref
 tsu_share <- params$tsu_share
 ert_cost_share <- params$ert_cost_share
 ert_trm_share <- params$ert_trm_share
@@ -712,7 +712,7 @@ xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 ```
 
 **Exchange rate (1 EUR=)**  
-\hspace*{2em} `r paste0("2017: ", xrate2017, " ", nat_curr, "  ")` 
+\hspace*{2em} `r paste0(cef_ref_year, ": ", xrate_ref, " ", nat_curr, "  ")` 
 \hspace*{2em} `r paste0(year_report, ": ", xrate_year_report, " ", nat_curr, "  ")`
 
 \vspace*{0.5em}**Share of Union-wide:**  

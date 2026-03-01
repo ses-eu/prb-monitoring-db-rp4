@@ -1,13 +1,27 @@
+# output flags ----
+# set to true for generating the investments page - do only if last year of rp (i.e. 2024 for rp3)
+investments <- FALSE
+
+# set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
+# set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
+test_check <- FALSE       
+
 # get some stuff only once ----
 
-## functions ----
-source("R/project_parameters.R")
+## parameters ----
+source("R/params_project.R")
 
 ## functions ----
 source("R/utils.R")
 
 ## data ----
-source("R/get_data.R")
+if (investments) {
+  source("R/get_investment_data.R")
+  
+} else {
+  source("R/get_data.R")
+  
+}
 
 
 
@@ -33,14 +47,7 @@ for (i in 2024) {  # set your year(s) report here
   if (i == 'rp4') {year_report <- 2029} else {year_report <- i}
   year_folder <- i 
   out_format <- 'web' # set your output format here: 'pdf' or 'web'
- 
-  # set to true for generating the investments page - do only if last year of rp (i.e. 2024 for rp3)
-  investments <- FALSE
-    
-  # set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
-  # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
-  test_check <- FALSE       
-  
+
   ## set all_states to FALSE to build only one state site, TRUE for all
   all_states <- FALSE
   
@@ -68,7 +75,7 @@ for (i in 2024) {  # set your year(s) report here
   for (i in 1:length(state_list_prod)) {
     country <- state_list_prod[i]
     # country <- state_list_prod
-    source("R/parameters.R")
+    source("R/params_country.R")
     source("R/create_pages.R")
 
   ## copy site to network folder ----

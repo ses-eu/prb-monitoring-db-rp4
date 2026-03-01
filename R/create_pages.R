@@ -464,7 +464,7 @@ if (out_format == 'web') {
                                               tcz_list = tcz_list,
                                               no_tcz = no_tcz,
                                               nat_curr = nat_curr,
-                                              xrate2017 = xrate2017,
+                                              xrate_ref = xrate_ref,
                                               pp_version = pp_version,
                                               acc_no = acc_no,
                                               acc_list = acc_list,

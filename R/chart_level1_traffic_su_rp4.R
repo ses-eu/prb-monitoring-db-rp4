@@ -5,7 +5,7 @@ if (!data_loaded) {
 
 data_raw <- statfor_tsu
 data_raw_planned <- traffic_target
-data_raw_rts <- ceff_t1_ert_ecz
+data_raw_rts <- ceff_t1_ert
 
 # prepare data ----
 

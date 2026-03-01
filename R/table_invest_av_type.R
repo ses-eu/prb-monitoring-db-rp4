@@ -1,6 +1,5 @@
-if (exists("country") == FALSE) {country <- "Belgium"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- "Belgium"
+source("R/params_country.R")}
 
 # import data  ----
 if (!exists("data_new_major")) {
@@ -67,7 +66,7 @@ table1 <- mygtable(data_prep, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    type = html("Total value of the asset for new investments (M€<sub>2017</sub>)"),
+    type = html(paste0("Total value of the asset for new investments (M€<sub>",cef_ref_year,"</sub>)")),
     value = total_value,
     share = "% of total"
   ) %>% 

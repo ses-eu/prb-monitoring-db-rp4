@@ -1,8 +1,6 @@
 if (!exists("country")) {country <- "Bulgaria"}
 if (!exists("cost_type")) {cost_type <- "terminal"}
 
-# source("R/parameters.R")
-
 # import data  ----
 if (!exists("data_cost_inv")) {
   source("R/get_investment_data.R")
@@ -98,7 +96,7 @@ myplot <- mybarchart2(data_prep,
                       
                       yaxis_title = paste0("Difference between ", 
                                            cost_type,
-                                           " actual and\ndetermined investment costs (M€<sub>2017</sub>)"),
+                                           " actual and\ndetermined investment costs (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_titlefont_size = myfont-1,
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",

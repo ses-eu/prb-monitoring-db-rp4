@@ -5,7 +5,8 @@ rp_summary_year <- paste0('rp', rp)
 rp_years <- c(2025, 2026, 2027, 2028, 2029)
 rp_min_year <- min(rp_years)
 rp_max_year <- max(rp_years)
-
+cef_ref_year <- 2022
+  
 # source data folders ----
 data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/'
 data_folder_a2 <- paste0(data_folder, "monitoring_files/", year_report, "/")

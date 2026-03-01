@@ -58,7 +58,7 @@ xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 `r if (params$year_folder == "rp3") "::::"`
 
 :::::: {.column width="50%"}
-`r paste0("2017: ", xrate2017, " ", nat_curr)`\
+`r paste0(cef_ref_year, ": ", xrate_ref, " ", nat_curr)`\
 `r paste0(year_report, ": ", xrate_year_report, " ", nat_curr)`
 ::::::
 :::::

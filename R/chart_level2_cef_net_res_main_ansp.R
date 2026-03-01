@@ -1,10 +1,13 @@
+# to be tested with real data and RP4 to be adapted
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
+
 if (!exists("country") | is.na(country)) {country <- rp_full
-source("R/parameters.R")
+source("R/params_country.R")
 }
 
-# fix ez if script not executed from qmd file ----
 if (exists("cz") == FALSE) {cz = c("1", "enroute")}
-# ez=1
 
 # define cz ----
 ez <- as.numeric(cz[[1]])
@@ -62,15 +65,14 @@ if (country == rp_full) {
   
   ## pre-prepare data ----
   data_pre_prep <- data_raw %>% 
-    filter(type == "Main ANSP",
-           year_text == if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))
+    filter(type == "Main ANSP"
            )  %>% 
-    select(year_text, atsp_gain_loss_cost_sharing, trs, financial_incentive, ex_post_roe) 
+    select(year, atsp_gain_loss_cost_sharing, trs, financial_incentive, ex_post_roe) 
 }
 
 # pre-prepare data ----
 data_prep <- data_pre_prep |> 
-  pivot_longer(-year_text, names_to = "status", values_to = "mymetric") %>% 
+  pivot_longer(-year, names_to = "status", values_to = "mymetric") %>% 
   mutate (
     mymetric = mymetric/1000,
     ylabel = case_when (
@@ -84,34 +86,33 @@ data_prep <- data_pre_prep |>
 
 # chart parameters ----
 if (knitr::is_latex_output()) {
-  mylocalheight <- myheight
+  c_height <- myheight
   
 }else{
-  mylocalheight <- myheight+30
+  c_height <- myheight+30
 }
 
-mychart_title <- paste0("Net result from ", 
+c_title_text <- paste0("Net result from ", 
                         if_else(cztype == 'terminal', 'terminal', 'en route'),
                         " activity - ", 
                         if_else(country == rp_full, "Main ANSPs ", paste0(main_ansp," ")),
-                        if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))
-                        )
-mytitle_y <- 0.99
-myaxis_title <- ""
-mybarcolor_pos <- '#9ECF8D'
-mybarcolor_neg <- '#F87474'
-mytextcolor <- 'black'
-myhovertemplate <- paste0('%{x:,.1f}<extra></extra>')
-myxaxis_tickformat <- "0,.1f"
+                        year_report)
+                        
+c_xaxis_title <- ""
+c_barcolor_pos <- '#9ECF8D'
+c_barcolor_neg <- '#F87474'
+c_textcolor <- 'black'
+c_hovertemplate <- paste0('%{x:,.1f}<extra></extra>')
+c_xaxis_tickformat <- "0,.1f"
 
 ###set up order of traces
-myfactor <- c("Actual RoE in value",
+c_factor <- c("Actual RoE in value",
               "Incentives",
               "Traffic risk sharing",
               "Cost sharing")
 
-mylocalmargin <- list (t = 30, b = 70)
-mydecimals <- 1
+c_margin <- list (t = 30, b = 70)
+c_decimals <- 1
 
 # plot chart  ----
 
@@ -122,7 +123,27 @@ range_min <- if_else(range_min >0, 0, range_min)
 range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE)/10^myroundup) * 10^myroundup + 10^myroundup/2
 
 ### plot chart and add annotations
-myplot <- myhbarc(mywidth, mylocalheight, myfont, mylocalmargin) %>% 
+myhbarc2(data_prep,
+         height = c_height,
+         decimals = c_decimals,
+         suffix = c_suffix,
+         local_factor = c_factor,
+         
+         mybarcolor_pos = c_barcolor_pos,
+         mybarcolor_neg = c_barcolor_neg,
+         
+         hovertemplate = c_hovertemplate,
+         
+         title_text = c_title_text,
+         title_y = 0.5,
+         title_x = 0.99,
+         
+         xaxis_title = c_xaxis_title,
+         xaxis_tickformat = c_xaxis_tickformat,
+         
+         margin = c_margin
+         
+) %>%  
   layout(
     uniformtext=list(minsize = 14, mode='show'),
     xaxis = list(
@@ -201,5 +222,5 @@ myplot <- myhbarc(mywidth, mylocalheight, myfont, mylocalmargin) %>%
     )
   )
 
-myplot
+
 
