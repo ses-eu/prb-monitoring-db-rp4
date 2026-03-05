@@ -57,7 +57,7 @@ aucu <- function(cztype, mycz) {
   }
 
   ## prepare data ----
-  # filter raw tables on cz
+  # filter raw tables 
   ## t1
   data_prep_t1_a <- data_raw_t1 %>%
     filter(
@@ -69,7 +69,6 @@ aucu <- function(cztype, mycz) {
 
   data_prep_t1_d <- data_raw_t1 %>%
       filter(
-        # entity_code == mycz,
         status == 'D'
       )
   colnames(data_prep_t1_d) <- paste('d', colnames(data_prep_t1_d), sep = '_')
@@ -224,7 +223,7 @@ aucu <- function(cztype, mycz) {
     )
   
   # transform to euros so we can sum for SES
-  data_prep_euro <- data_prep_selected %>% 
+  data_prep_euro_ses <- data_prep_selected %>% 
     mutate(
       total_adjustment = total_adjustment / xrate,
       d_x4_2_cost_excl_vfr = d_x4_2_cost_excl_vfr / xrate,
@@ -271,13 +270,40 @@ aucu <- function(cztype, mycz) {
       entity_code = "SES",
       year,
       xrate = 1,
-      x8_1_temp_unit_rate, 
+      x8_1_temp_unit_rate = 0, 
+    ) %>% 
+    select(
+      entity_code,
+      year,
+      xrate,
+      x8_1_temp_unit_rate,
+      total_adjustment,
+      x15_forecast_su_temp,
+      d_x4_2_cost_excl_vfr,
+      d_x5_4_total_su,
+      
+      x4_7_total_su,
+      x2_5_adjust_inflation,
+      x3_8_diff_det_cost_actual_cost,
+      x4_9_adjust_traffic_risk_art_27_2,
+      x5_1_det_cost_no_traffic_risk,
+      x6_4_financial_incentive,
+      x7_1_adj_revenue_charge_modulation,
+      x9_1_cross_financing_other,
+      x10_5_other_revenue,
+      x11_1_loss_revenue_lower_unit_rate,
+      
+      x12_total_adjust,
+      x8_2_diff_revenue_temp_unit_rate,
+      x5_2_unit_rate_no_traffic_risk
     )
     
+  # join SES with the rest of the table
+  data_prep_selected_ses <- data_prep_selected %>% rbind(data_prep_euro_ses)
   
   # calcs
   ## calculate all values for individual years following the indications in the CEFF computations file
-  data_prep_years_split <- data_prep_selected %>%
+  data_prep <- data_prep_selected %>%
     mutate_all(~ ifelse(is.na(.), 0, .)) %>%
     mutate(
       initial_duc = if_else(x8_1_temp_unit_rate >0,
@@ -307,6 +333,7 @@ aucu <- function(cztype, mycz) {
 
     ) %>%
     select(
+      entity_code,
       year,
       x4_7_total_su,
       d_x5_4_total_su,
@@ -343,7 +370,10 @@ aucu <- function(cztype, mycz) {
   #   mutate(x4_7_total_su = x4_7_total_su/2)  # I didn't want to sum this one
 
   ## join prep tables with the relevant years
-  aucu_data <- data_prep_years_split
+  aucu_data <- data_prep %>% 
+    filter(
+      entity_code == mycz,
+    )
 
   return(aucu_data)
   }
