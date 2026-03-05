@@ -653,6 +653,7 @@ xrate_ert  <-  read_xlsx(
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>%
   clean_names() %>% 
+  filter(status == "A") %>% 
   mutate(cztype = "enroute",
          cz_code = paste0(country_zone_code, "_ECZ")) %>% 
   select(cz_code, cztype, year, currency,
@@ -665,6 +666,7 @@ xrate_trm  <-  read_xlsx(
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>%
   clean_names() %>% 
+  filter(status == "A") %>% 
   mutate(cztype = "terminal",
          cz_code = paste0(country_zone_code, "_TCZ")) %>% 
   select(cz_code, cztype, year, currency,
@@ -672,7 +674,19 @@ xrate_trm  <-  read_xlsx(
          xrate_ref = exchange_rate_ref2022)
 
 
-xrate_year <- xrate_ert %>% rbind(xrate_trm)
+xrate_year_states <- xrate_ert %>% rbind(xrate_trm)
+
+xrate_ses <- xrate_year_states %>%
+  distinct(year, cztype) %>%            
+  mutate(
+    cz_code   = "SES",
+    currency  = "EUR",
+    xrate     = 1,
+    xrate_ref = 1
+  ) %>%  select (cz_code, cztype, year, currency, xrate, xrate_ref)
+
+
+xrate_year <- xrate_year_states %>% rbind(xrate_ses)
 
 ## Forecast SU for Temp ur ----
 cef_temp_su_t2  <-  read_xlsx(

@@ -2,9 +2,11 @@ if (!exists("country") | is.na(country)) {country <- rp_full
 source("R/params_country.R")
 }
 
-# fix ez if script not executed from qmd file ----
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
+
 if (exists("cz") == FALSE) {cz = c("1", "enroute")}
-# ez=1
 
 # define cz ----
 ez <- as.numeric(cz[[1]])
@@ -106,7 +108,7 @@ if (country == rp_full) {
   
   ## prep data ----
   data_prep <- data_calc %>% 
-    filter(year_text == if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))) %>% 
+    filter(year == year_report) %>% 
     select(
       # initial_duc,
       # retro_ur,
@@ -158,8 +160,7 @@ data_prep_pdf <- data_prep %>%
 
 # plot table  ----
 table1 <- mygtable(data_prep_pdf, myfont*0.95) %>% 
-  cols_label(type = paste0("Components of the AUCU in ", 
-                           if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))), 
+  cols_label(type = paste0("Components of the AUCU in ", year_report), 
              value = "€/SU") %>% 
   tab_options(column_labels.background.color = "#F2F2F2",
               column_labels.font.weight = 'bold',
@@ -173,8 +174,7 @@ table1 <- mygtable(data_prep_pdf, myfont*0.95) %>%
     )
   ) %>% 
   tab_header(
-    title = md(paste0("**AUCU components (€/SU) – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report)), "**"))
+    title = md(paste0("**AUCU components (€/SU) – ", year_report, "**"))
   )
   
 if (!knitr::is_latex_output()) {

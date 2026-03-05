@@ -61,7 +61,7 @@ aucu <- function(cztype, mycz) {
   ## t1
   data_prep_t1_a <- data_raw_t1 %>%
     filter(
-      entity_code == mycz,
+      # entity_code == mycz,
       status == 'A'
     )
 
@@ -69,18 +69,24 @@ aucu <- function(cztype, mycz) {
 
   data_prep_t1_d <- data_raw_t1 %>%
       filter(
-        entity_code == mycz,
+        # entity_code == mycz,
         status == 'D'
       )
   colnames(data_prep_t1_d) <- paste('d', colnames(data_prep_t1_d), sep = '_')
 
-  data_prep_t1 <- cbind(data_prep_t1_a, data_prep_t1_d) |> rename(year = a_year)
+  # data_prep_t1 <- cbind(data_prep_t1_a, data_prep_t1_d) |> rename(year = a_year)
+  
+  data_prep_t1 <- data_prep_t1_d %>% 
+    left_join(data_prep_t1_a, by = c("d_year" = "a_year", "d_entity_code"= "a_entity_code")) %>%
+    rename(entity_code = d_entity_code, year = d_year)
+
 
   ## t2
-  data_prep_t2 <- data_raw_t2 %>%
-    filter(
-      entity_code == mycz
-    )
+  data_prep_t2 <- data_raw_t2 
+  # %>%
+  #   filter(
+  #     entity_code == mycz
+  #   )
 
   if (cztype == "terminal") {
     data_prep_t2 <- data_prep_t2 |>
@@ -108,10 +114,11 @@ aucu <- function(cztype, mycz) {
   # data_prep_t2 <- data_prep_t2_ini %>% rbind(data_temp_t2)
 
   ## t2 terminal temp ur / forecast su
-  data_raw_temp_ur_prep_t2 <- cef_temp_su_t2 %>%
-    filter(
-      entity_code == mycz
-    )
+  data_raw_temp_ur_prep_t2 <- cef_temp_su_t2 
+  # %>%
+  #   filter(
+  #     entity_code == mycz
+  #   )
 
   # complete t2 terminal table with temporary values that are not yet in the DB
   data_prep_t2 <- data_prep_t2 |>
@@ -120,23 +127,23 @@ aucu <- function(cztype, mycz) {
     ## t3
   data_prep_t3 <- data_raw_t3 %>%
     filter(
-      entity_code == mycz,
+      # entity_code == mycz,
       year != 'After RP' & year != 'Amounts'
     ) %>%
     mutate(year = as.numeric(year))
 
   ## t exchange rates
   data_prep_xrates <- xrate_year %>%
-    filter(
-      cz_code == mycz
-    ) %>% 
-    select(year, xrate)
+    # filter(
+    #   cz_code == mycz
+    # ) %>% 
+    select(year, xrate, entity_code = cz_code)
 
   #join all tables
   data_prep_all <- data_prep_t1 %>%
-    left_join(data_prep_t2, by = 'year', suffix = c(".t1", ".t2")) %>%
-    left_join(data_prep_t3, by = 'year', suffix = c("", ".t3")) %>%
-    left_join(data_prep_xrates, by = 'year') %>% as_tibble()
+    left_join(data_prep_t2, by = c('year', 'entity_code'), suffix = c(".t1", ".t2")) %>%
+    left_join(data_prep_t3, by = c('year', 'entity_code'), suffix = c("", ".t3")) %>%
+    left_join(data_prep_xrates, by = c('year', 'entity_code')) %>% as_tibble()
 
 
   # get some parameters for 2020 and 2021. Needed later for calcs
@@ -184,13 +191,93 @@ aucu <- function(cztype, mycz) {
   #   )
 
   # add new forecast sus to full table
-  data_prep_all <- data_prep_all 
+  # data_prep_all <- data_prep_all 
   # %>%
   #   left_join(data_prep_forecast_su, by = 'year')
-
+  
+  # select relevant columns to prepare for SES calcs
+  data_prep_selected <- data_prep_all %>% 
+    select(
+      entity_code,
+      year,
+      xrate,
+      x8_1_temp_unit_rate,
+      total_adjustment,
+      x15_forecast_su_temp,
+      d_x4_2_cost_excl_vfr,
+      d_x5_4_total_su,
+      
+      x4_7_total_su,
+      x2_5_adjust_inflation,
+      x3_8_diff_det_cost_actual_cost,
+      x4_9_adjust_traffic_risk_art_27_2,
+      x5_1_det_cost_no_traffic_risk,
+      x6_4_financial_incentive,
+      x7_1_adj_revenue_charge_modulation,
+      x9_1_cross_financing_other,
+      x10_5_other_revenue,
+      x11_1_loss_revenue_lower_unit_rate,
+      
+      x12_total_adjust,
+      x8_2_diff_revenue_temp_unit_rate,
+      x5_2_unit_rate_no_traffic_risk
+    )
+  
+  # transform to euros so we can sum for SES
+  data_prep_euro <- data_prep_selected %>% 
+    mutate(
+      total_adjustment = total_adjustment / xrate,
+      d_x4_2_cost_excl_vfr = d_x4_2_cost_excl_vfr / xrate,
+      
+      x2_5_adjust_inflation = x2_5_adjust_inflation / xrate,
+      x3_8_diff_det_cost_actual_cost = x3_8_diff_det_cost_actual_cost / xrate,
+      x4_9_adjust_traffic_risk_art_27_2 = x4_9_adjust_traffic_risk_art_27_2 / xrate,
+      x5_1_det_cost_no_traffic_risk = x5_1_det_cost_no_traffic_risk / xrate,
+      x6_4_financial_incentive = x6_4_financial_incentive / xrate,
+      x7_1_adj_revenue_charge_modulation = x7_1_adj_revenue_charge_modulation / xrate,
+      x9_1_cross_financing_other = x9_1_cross_financing_other / xrate,
+      x10_5_other_revenue = x10_5_other_revenue / xrate,
+      x11_1_loss_revenue_lower_unit_rate = x11_1_loss_revenue_lower_unit_rate / xrate,
+      
+      x12_total_adjust = x12_total_adjust / xrate,
+      x8_2_diff_revenue_temp_unit_rate = x8_2_diff_revenue_temp_unit_rate / xrate,
+      x5_2_unit_rate_no_traffic_risk = x5_2_unit_rate_no_traffic_risk / xrate
+    ) %>% 
+    group_by(year) %>% 
+    summarise(
+      # x8_1_temp_unit_rate,
+      total_adjustment = sum(total_adjustment, na.rm = TRUE),
+      x15_forecast_su_temp = sum(x15_forecast_su_temp, na.rm = TRUE),
+      d_x4_2_cost_excl_vfr = sum(d_x4_2_cost_excl_vfr, na.rm = TRUE),
+      d_x5_4_total_su = sum(d_x5_4_total_su, na.rm = TRUE),
+      
+      x4_7_total_su = sum(x4_7_total_su, na.rm = TRUE),
+      x2_5_adjust_inflation = sum(x2_5_adjust_inflation, na.rm = TRUE),
+      x3_8_diff_det_cost_actual_cost = sum(x3_8_diff_det_cost_actual_cost, na.rm = TRUE),
+      x4_9_adjust_traffic_risk_art_27_2 = sum(x4_9_adjust_traffic_risk_art_27_2, na.rm = TRUE),
+      x5_1_det_cost_no_traffic_risk = sum(x5_1_det_cost_no_traffic_risk, na.rm = TRUE),
+      x6_4_financial_incentive = sum(x6_4_financial_incentive, na.rm = TRUE),
+      x7_1_adj_revenue_charge_modulation = sum(x7_1_adj_revenue_charge_modulation, na.rm = TRUE),
+      x9_1_cross_financing_other = sum(x9_1_cross_financing_other, na.rm = TRUE),
+      x10_5_other_revenue = sum(x10_5_other_revenue, na.rm = TRUE),
+      x11_1_loss_revenue_lower_unit_rate = sum(x11_1_loss_revenue_lower_unit_rate, na.rm = TRUE),
+      
+      x12_total_adjust = sum(x12_total_adjust, na.rm = TRUE),
+      x8_2_diff_revenue_temp_unit_rate = sum(x8_2_diff_revenue_temp_unit_rate, na.rm = TRUE),
+      x5_2_unit_rate_no_traffic_risk = sum(x5_2_unit_rate_no_traffic_risk, na.rm = TRUE),
+      .groups = "drop"
+    ) %>% 
+    mutate(
+      entity_code = "SES",
+      year,
+      xrate = 1,
+      x8_1_temp_unit_rate,
+    )
+    
+  
   # calcs
   ## calculate all values for individual years following the indications in the CEFF computations file
-  data_prep_years_split <- data_prep_all %>%
+  data_prep_years_split <- data_prep_selected %>%
     mutate_all(~ ifelse(is.na(.), 0, .)) %>%
     mutate(
       initial_duc = if_else(x8_1_temp_unit_rate >0,
