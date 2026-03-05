@@ -271,7 +271,7 @@ aucu <- function(cztype, mycz) {
       entity_code = "SES",
       year,
       xrate = 1,
-      x8_1_temp_unit_rate,
+      x8_1_temp_unit_rate, 
     )
     
   
