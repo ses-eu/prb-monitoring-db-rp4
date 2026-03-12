@@ -1,4 +1,3 @@
-# to be tested with real data and RP4 to be adapted
 if (!data_loaded) {
   source("R/get_data.R")
 } 
@@ -16,93 +15,18 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == rp_full) {
-  # SES  ----
-  ## import data  ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SES CEFF.xlsx"),
-    sheet = if_else(cztype == "terminal", "SES_TRM_all", "SES_ERT_all"),
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  ## pre-prep data ----
-  data_pre_prep <- data_raw |> 
-    mutate(
-      regulatory_result = ro_e_ansp1 + net_result_ansp1,
-      revenues_ansp = revenues_ansp1 + net_result_ansp1
-      ) |> 
-    select(
-      year,
-      status,
-      regulatory_result,
-      revenues_ansp
-    ) |> 
-    pivot_wider( names_sep = "_", names_from = "status", values_from = c(3:4))  
-    # select(-revenues_ansp_D) 
-  
-  data_for_chart_wide <- data_pre_prep |> 
-    mutate(
-      regulatory_result = case_when(
-        year == 2021 ~ regulatory_result_A + pull(select(filter(data_pre_prep, year == 2020), regulatory_result_A)),
-        .default = regulatory_result_A),
-      
-      ex_ante_roe = case_when(
-        year == 2021 ~ regulatory_result_D + pull(select(filter(data_pre_prep, year == 2020), regulatory_result_D)),
-        .default = regulatory_result_D),
-      
-      actual_revenues = case_when(
-        year == 2021 ~ revenues_ansp_A + pull(select(filter(data_pre_prep, year == 2020), revenues_ansp_A)),
-        .default = revenues_ansp_A),
-      
-      determined_revenues = case_when(
-        year == 2021 ~ revenues_ansp_D + pull(select(filter(data_pre_prep, year == 2020), revenues_ansp_D)),
-        .default = revenues_ansp_D),
-
-      share_rr_act_rev_expost = regulatory_result/actual_revenues * 100,
-      share_rr_act_rev_exante = ex_ante_roe/determined_revenues * 100,
-      
-      year_text = if_else(year == 2021, "2020-2021", as.character(year))
-    ) |>  
-    filter(year>2020) |> 
-    select(year_text, regulatory_result, ex_ante_roe, share_rr_act_rev_expost, share_rr_act_rev_exante) |> 
-    mutate(
-      regulatory_result = case_when(
-        as.numeric(str_replace(year_text, "-", "")) > year_report & year_text != '2020-2021' ~ NA,
-        .default = regulatory_result/1000
-      ),
-      
-      share_rr_act_rev_expost = case_when(
-        as.numeric(str_replace(year_text, "-", "")) > year_report & year_text != '2020-2021' ~ NA,
-        .default = share_rr_act_rev_expost
-      ),
-      
-      share_rr_act_rev_exante = case_when(
-        as.numeric(str_replace(year_text, "-", "")) > year_report & year_text != '2020-2021' ~ NA,
-        .default = share_rr_act_rev_exante
-      ),
-      
-      ex_ante_roe = case_when(
-        as.numeric(str_replace(year_text, "-", "")) > year_report & year_text != '2020-2021' ~ NA,
-        .default = ex_ante_roe/1000
-      )
-      
-    )
-  
-} else {
-  # State  ----
-  ## import data ----
+# import data ----
   data_reg_res <- regulatory_result(cztype, mycz)
     
-  ## pre-prep data ----
-  data_for_chart_wide <- data_reg_res %>% 
-    filter(type == 'Main ANSP') %>% 
-    mutate(
-      share_rr_act_rev_expost = regulatory_result/actual_revenues * 100,
-      share_rr_act_rev_exante = ex_ante_roe/x4_2_cost_excl_vfr_d * 100
-      ) %>% 
-    select(year,regulatory_result, ex_ante_roe, share_rr_act_rev_expost, share_rr_act_rev_exante)
-}
+# pre-prep data ----
+data_for_chart_wide <- data_reg_res %>% 
+  filter(type == 'Main ANSP') %>% 
+  mutate(
+    share_rr_act_rev_expost = regulatory_result/actual_revenues * 100,
+    share_rr_act_rev_exante = ex_ante_roe/x4_2_cost_excl_vfr_d * 100
+    ) %>% 
+  select(year,regulatory_result, ex_ante_roe, share_rr_act_rev_expost, share_rr_act_rev_exante) %>% 
+  mutate(across(-year, ~if_else(year>year_report, NA, .x)))
 
 # prep data ----
 

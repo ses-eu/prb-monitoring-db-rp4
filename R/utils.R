@@ -303,7 +303,7 @@ aucu <- function(cztype, mycz) {
   
   # calcs
   ## calculate all values for individual years following the indications in the CEFF computations file
-  data_prep <- data_prep_selected %>%
+  data_prep <- data_prep_selected_ses %>%
     mutate_all(~ ifelse(is.na(.), 0, .)) %>%
     mutate(
       initial_duc = if_else(x8_1_temp_unit_rate >0,
@@ -378,34 +378,40 @@ aucu <- function(cztype, mycz) {
   return(aucu_data)
   }
 
-## regulatory result calculations ----
+# regulatory result calculations ----
 regulatory_result <- function(cztype, mycz) {
   ## import data  ----
   if(cztype == "enroute") {
     data_raw_t1  <- ceff_t1_ert
     data_raw_t2  <- ceff_t2_ert
     
-    tsus <- data_raw_t1 %>%
+    tsus_state <- data_raw_t1 %>%
       filter(entity_type == "ECZ",
-             # entity_code == if_else(cztype == "enroute", ecz_list$ecz_id[ez], tcz_list$tcz_id[ez]),
              status == 'A') %>%
-      select(year, charging_zone_code, x5_4_total_su)
+      select(year, charging_zone_code, x5_4_total_su) 
     
   } else {
     data_raw_t1  <- ceff_t1_trm
     data_raw_t2  <- ceff_t2_trm
     
-    tsus <- data_raw_t1 %>%
+    tsus_state <- data_raw_t1 %>%
       filter(entity_type == "TCZ",
-        # entity_code == if_else(cztype == "enroute", ecz_list$ecz_id[ez], tcz_list$tcz_id[ez]),
              status == 'A') %>%
       select(year, charging_zone_code, x5_4_total_su)
   }
   
+  # tsus ses
+  tsus_ses <- tsus_state %>% 
+    group_by(year) %>% summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE), .groups = "drop") %>% 
+    mutate(charging_zone_code = "SES") %>% 
+    select(year, charging_zone_code, x5_4_total_su)
+  
+  tsus <- tsus_state %>% rbind(tsus_ses)
+  
   # get exchange rates
   data_prep_xrates <- xrate_year %>%
     filter(
-      # cz_code == mycz
+      cztype == cztype
     ) %>% 
     select(year, xrate, charging_zone_code = cz_code)
   
@@ -432,55 +438,21 @@ regulatory_result <- function(cztype, mycz) {
            x3_6_return_on_equity_perc,
            x4_2_cost_excl_vfr)
   
-  data_prep_t1_ses <- data_prep_t1_selected %>% 
-    left_join(data_prep_xrates, by = c("charging_zone_code", "year")) %>% 
-    group_by(year, status, xrate) %>% 
-    summarise(
-      x3_4_total_assets = sum(x3_4_total_assets, na.rm = TRUE),
-      x3_8_share_of_equity_perc = sum(x3_8_share_of_equity_perc, na.rm = TRUE),
-      x3_6_return_on_equity_perc = sum(x3_6_return_on_equity_perc, na.rm = TRUE),
-      x4_2_cost_excl_vfr = sum(x4_2_cost_excl_vfr, na.rm = TRUE),
-      .groups = "drop"
-      ) %>% 
-    mutate(
-      entity_type = if_else(cztype == "enroute", "ECZ", "TCZ"),
-      charging_zone_code = "SES",
-      entity_type_id = "SES",
-      entity_name = rp_full,
-      entity_code = "SES",
-      x3_4_total_assets = x3_4_total_assets/xrate,
-      x3_8_share_of_equity_perc = x3_8_share_of_equity_perc/xrate,
-      x3_6_return_on_equity_perc = x3_6_return_on_equity_perc/xrate,
-      x4_2_cost_excl_vfr = x4_2_cost_excl_vfr / xrate
-    ) %>% 
-    select(
-      year,
-      status,
-      entity_type,
-      charging_zone_code,
-      entity_type_id,
-      entity_name,
-      entity_code,
-      x3_4_total_assets,
-      x3_8_share_of_equity_perc,
-      x3_6_return_on_equity_perc,
-      x4_2_cost_excl_vfr
-    )
-  
-  data_prep_t1_selected_ses <- data_prep_t1_selected %>% rbind(data_prep_t1_ses)
-  
-  data_prep_t1_1  <- data_prep_t1_selected_ses %>% 
+   data_prep_t1_1  <- data_prep_t1_selected %>% 
+    select (-x4_2_cost_excl_vfr) %>% 
     mutate(
       roe = x3_4_total_assets * x3_8_share_of_equity_perc * x3_6_return_on_equity_perc,
     ) %>%
     select(-c(x3_4_total_assets, x3_8_share_of_equity_perc, x3_6_return_on_equity_perc)) %>%
-    pivot_wider(names_from = 'status',
+    pivot_wider(
+      # -c(charging_zone_code),
+      names_from = 'status',
                 values_from = 'roe') %>%
     rename(ex_ante_roe_nc = D,
            ex_post_roe_nc = A)
 
   #subtable for the calc of Difference in costs: gain (+)/Loss (-) retained/borne by the ATSP
-  data_prep_t1_2 <- data_prep_t1_selected_ses %>%
+  data_prep_t1_2 <- data_prep_t1_selected %>%
     select(year,
            entity_code,
            status,
@@ -506,7 +478,7 @@ regulatory_result <- function(cztype, mycz) {
 
 
   #subtable for the calc actual revenues
-  data_prep_t1_3 <- data_prep_t1_selected_ses %>%
+  data_prep_t1_3 <- data_prep_t1_selected %>%
     filter(status == 'A') %>%
     select(year,
            entity_code,
@@ -533,6 +505,7 @@ regulatory_result <- function(cztype, mycz) {
       year, 
       charging_zone_code,
       entity_code,
+      entity_type_id,
       x4_1_det_cost_traffic_risk,
       x4_6_total_su_forecast,
       x4_7_total_su,
@@ -543,59 +516,21 @@ regulatory_result <- function(cztype, mycz) {
       x6_4_financial_incentive
     )
   
-  data_prep_t2_ses <- data_prep_t2_all %>% 
-    left_join(data_prep_xrates, by = c("charging_zone_code", "year")) %>% 
-    group_by(year, xrate) %>% 
-    summarise(
-      x4_1_det_cost_traffic_risk = sum(x4_1_det_cost_traffic_risk, na.rm = TRUE),
-      x4_6_total_su_forecast = sum(x4_6_total_su_forecast, na.rm = TRUE),
-      x4_7_total_su = sum(x4_7_total_su, na.rm = TRUE),
-      x4_9_adjust_traffic_risk_art_27_2 =  sum(x4_9_adjust_traffic_risk_art_27_2, na.rm = TRUE),
-      
-      x2_5_adjust_inflation = sum(x2_5_adjust_inflation, na.rm = TRUE),
-      x3_8_diff_det_cost_actual_cost = sum(x3_8_diff_det_cost_actual_cost, na.rm = TRUE),
-      x6_4_financial_incentive = sum(x6_4_financial_incentive, na.rm = TRUE),
-      .groups = "drop"
-    ) %>% 
-    mutate(
-      charging_zone_code = "SES",
-      entity_code = "SES",
-      x4_1_det_cost_traffic_risk = x4_1_det_cost_traffic_risk / xrate,
-      x4_9_adjust_traffic_risk_art_27_2 = x4_9_adjust_traffic_risk_art_27_2 / xrate,
-      x2_5_adjust_inflation = x2_5_adjust_inflation / xrate,
-      x3_8_diff_det_cost_actual_cost = x3_8_diff_det_cost_actual_cost / xrate,
-      x6_4_financial_incentive = x6_4_financial_incentive / xrate,
-    ) %>% 
-    select(
-      year, 
-      charging_zone_code,
-      entity_code,
-      x4_1_det_cost_traffic_risk,
-      x4_6_total_su_forecast,
-      x4_7_total_su,
-      x4_9_adjust_traffic_risk_art_27_2,
-      
-      x2_5_adjust_inflation,
-      x3_8_diff_det_cost_actual_cost,
-      x6_4_financial_incentive
-    )
-      
-  data_prep_t2_all_ses <- data_prep_t2_all %>% rbind(data_prep_t2_ses)
-  
-  data_prep_t2 <- data_prep_t2_all_ses %>% 
+  data_prep_t2 <- data_prep_t2_all %>% 
     mutate(
       trs = (x4_7_total_su / x4_6_total_su_forecast -1) * x4_1_det_cost_traffic_risk + x4_9_adjust_traffic_risk_art_27_2
       ) %>%
     select(year,
            entity_code,
+           entity_type_id,
            x2_5_adjust_inflation,
            x3_8_diff_det_cost_actual_cost,
            trs,
            x6_4_financial_incentive)
 
   # join t1 and t2 for joint calculations
-  data_prep_years_split <- data_prep_t1 %>%
-    left_join(data_prep_t2, by = c("year", "entity_code")) %>%
+  data_prep_joint <- data_prep_t1 %>%
+    left_join(data_prep_t2, by = c("year", "entity_code", "entity_type_id")) %>%
     rowwise() %>%
     mutate(
       atsp_gain_loss_cost_sharing = sum(dif_cost_gain_loss, x2_5_adjust_inflation, x3_8_diff_det_cost_actual_cost, na.rm = TRUE),
@@ -603,13 +538,13 @@ regulatory_result <- function(cztype, mycz) {
       regulatory_result_nc = sum(total_net_gain_loss, ex_post_roe_nc, na.rm = TRUE),
       actual_revenues_nc = sum(x4_2_cost_excl_vfr, total_net_gain_loss, na.rm = TRUE)
     ) %>%
-    select(-entity_type, -charging_zone_code, -entity_name, -entity_code) %>%
+    select(-entity_type, -entity_name, -entity_code) %>%
     mutate(type = case_when(
       entity_type_id == 'ANSP1'  ~ 'Main ANSP',
       stringr::str_detect(entity_type_id, 'MET')  ~ 'MET',
       .default = 'Other ANSP'
     )) %>%
-    group_by(year, type) %>%
+    group_by(year, type, charging_zone_code) %>%
     # the plot function already divides by 1000
     summarise(
       atsp_gain_loss_cost_sharing_nc = sum(atsp_gain_loss_cost_sharing)/10^3,
@@ -623,6 +558,7 @@ regulatory_result <- function(cztype, mycz) {
       .groups = "drop"
               ) %>%
     select(year,
+           charging_zone_code,
            type,
            regulatory_result_nc,
            ex_ante_roe_nc,
@@ -635,8 +571,8 @@ regulatory_result <- function(cztype, mycz) {
            )
 
 
-  regulatory_result_euro_split <- data_prep_years_split %>%
-    left_join(data_prep_xrates, by = "year") %>%
+  regulatory_result_euro <- data_prep_joint %>%
+    left_join(data_prep_xrates, by = c("year", "charging_zone_code")) %>% 
     mutate(regulatory_result = regulatory_result_nc / xrate,
            ex_ante_roe = ex_ante_roe_nc / xrate,
            ex_post_roe = ex_post_roe_nc / xrate,
@@ -658,25 +594,35 @@ regulatory_result <- function(cztype, mycz) {
            -financial_incentive_nc,
            -x4_2_cost_excl_vfr_d_nc)
 
-  regulatory_result <- regulatory_result_euro_split %>%
-    left_join(tsus, by = "year")
+  if (mycz == "SES") {
+    regulatory_result <- regulatory_result_euro %>%
+      group_by(year, type) %>% 
+      summarise(
+        regulatory_result = sum(regulatory_result, na.rm = TRUE),
+        ex_ante_roe = sum(ex_ante_roe, na.rm = TRUE),
+        ex_post_roe = sum(ex_post_roe, na.rm = TRUE),
+        actual_revenues = sum(actual_revenues, na.rm = TRUE),
+        atsp_gain_loss_cost_sharing = sum(atsp_gain_loss_cost_sharing, na.rm = TRUE),
+        trs = sum(trs, na.rm = TRUE),
+        financial_incentive = sum(financial_incentive, na.rm = TRUE),
+        x4_2_cost_excl_vfr_d = sum(x4_2_cost_excl_vfr_d, na.rm = TRUE),
+        .groups = "drop"
+      ) %>% 
+      mutate(charging_zone_code = "SES") %>% 
+      left_join(tsus, by = c("year", "charging_zone_code"))
+      
+  } else {
+    regulatory_result <- regulatory_result_euro %>%
+      left_join(tsus, by = c("year", "charging_zone_code")) %>% 
+      filter(charging_zone_code == mycz)
+  }
 
 
   return(regulatory_result)
 }
 
 
-# ## export figure function ----
-#   # the export function needs webshot and PhantomJS. Install PhantomJS with 'webshot::install_phantomjs()' and then cut the folder from wherever is installed and paste it in C:\Users\[username]\dev\r\win-library\4.2\webshot\PhantomJS
-# 
-#   export_fig <- function (fig, fig_name, width, height) {
-#     fig_dir <- paste0('images/', year_report, '/', country,'/')
-#     invisible(export(fig, paste0(fig_dir, fig_name)))
-#     invisible(figure <- image_read(paste0(fig_dir,fig_name)))
-#     invisible(cropped <- image_crop(figure, paste0(width, "x", height)))
-#     invisible(image_write(cropped, paste0(fig_dir, fig_name)))
-#   }
-#   
+
 # universal donut chart  ----
 mydonutchart <-  function(df,
                           width = mywidth,

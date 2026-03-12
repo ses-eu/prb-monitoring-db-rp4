@@ -12,6 +12,27 @@ data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/'
 data_folder_a2 <- paste0(data_folder, "monitoring_files/", year_report, "/")
 
 
+# source data files ----
+context_data_file <- "context_data.xlsx"
+lists_data_file <- "lists.xlsx"
+
+ceff_data_file <- "ceff.xlsx"
+cap_data_file <- "cap_actuals.xlsx"
+env_data_file <- "env_actuals.xlsx"
+saf_data_file <- "saf.xlsx"
+
+nm_data_file <- "nm_file.xlsx"
+ses_data_file <- "ses_file.xlsx"
+
+statfor_mvt_data_file <- "statfor_forecast_en_route_mvt.xlsx"
+statfor_tsu_data_file <- "statfor_forecast_en_route_tsu.xlsx"
+
+targets_data_file <- "targets.xlsx"
+
+
+
+
+
 # set site parameters ----
 site_dir <- here("_site")
 root_dir <- if_else(test_check == TRUE, 
@@ -34,10 +55,6 @@ external_address <- if_else(test_check == TRUE,
 
 destination_dir_investments <- paste0(root_dir, "investments/", "rp4/" )
   
-# set data files ----
-statfor_mvt_file <- "statfor_forecast_en_route_mvt.xlsx"
-statfor_tsu_file <- "statfor_forecast_en_route_tsu.xlsx"
-
 # set graphs parameters ----
 ## web
 mywidth = NULL

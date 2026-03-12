@@ -1,4 +1,3 @@
-# to be tested with real data and RP4 to be adapted
 if (!data_loaded) {
   source("R/get_data.R")
 } 
@@ -20,55 +19,15 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == rp_full) {
-  # SES  ----
-  ## import data & prep ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SES CEFF.xlsx"),
-    sheet = if_else(cztype == "terminal", "SES_TRM_all", "SES_ERT_all"),
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+# import data  ----
+data_raw  <-  regulatory_result(cztype, mycz)
   
-  data_pre_prep <- data_raw |> 
-    filter(status == "A") |> 
-    select(
-      year_text = year,
-      cost_sharing_ansp1,
-      inflation_adjustment_ansp1,
-      cost_exempt_ansp1,
-      trs = trs_ansp1,
-      financial_incentive = incentives_ansp1,
-      ex_post_roe = ro_e_ansp1
-    ) |> 
-    mutate(
-      year_text = case_when(
-        year_text == 2021 | year_text == 2020 ~ "2020-2021",
-        .default = as.character(year_text)
-        )
-    ) |> 
-    group_by(year_text) |> 
-    summarise(
-      atsp_gain_loss_cost_sharing = sum(cost_sharing_ansp1, cost_exempt_ansp1, inflation_adjustment_ansp1, na.rm = TRUE)/1000,
-      trs = sum(trs, na.rm = TRUE)/1000,
-      financial_incentive = sum(financial_incentive, na.rm = TRUE)/1000,
-      ex_post_roe = sum(ex_post_roe, na.rm = TRUE)/1000
-    ) |> 
-    filter(
-      year_text == if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))
-    )
-  
-} else {
-  # State ----
-  ## import data  ----
-  data_raw  <-  regulatory_result(cztype, mycz)
-  
-  ## pre-prepare data ----
-  data_pre_prep <- data_raw %>% 
-    filter(type == "Main ANSP"
-           )  %>% 
-    select(year, atsp_gain_loss_cost_sharing, trs, financial_incentive, ex_post_roe) 
-}
+# pre-prepare data ----
+data_pre_prep <- data_raw %>% 
+  filter(type == "Main ANSP",
+         year == year_report
+         )  %>% 
+  select(year, atsp_gain_loss_cost_sharing, trs, financial_incentive, ex_post_roe) 
 
 # pre-prepare data ----
 data_prep <- data_pre_prep |> 
@@ -137,6 +96,9 @@ myhbarc2(data_prep,
          title_text = c_title_text,
          title_y = 0.5,
          title_x = 0.99,
+         
+         textangle = 0,
+         textfont_color = "black",
          
          xaxis_title = c_xaxis_title,
          xaxis_tickformat = c_xaxis_tickformat,

@@ -66,7 +66,7 @@ c_yaxis_tickformat <- ".1f"
 ##I had to do it this way because when there are NA values the dash doesn't work
 data_prep_s1 <- data_prep |> filter(type == "EU Wide Average")
 data_prep_s2 <- data_prep |> filter(type == "Rate of RI") |> 
-  mutate(myothermetric = round(mymetric, mydecimals))
+  mutate(myothermetric = round(mymetric, c_decimals))
 
 p1 <- mylinechart2(data_prep_s1, 
                       height = myheight,

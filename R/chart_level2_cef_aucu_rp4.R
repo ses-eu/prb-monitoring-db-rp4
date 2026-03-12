@@ -1,5 +1,3 @@
-# to be tested with real data and RP4 to be adapted
-
 if (!data_loaded) {
   source("R/get_data.R")
 } 
@@ -17,33 +15,10 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == rp_full) {
-  # SES  ----
-  ## import data  ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SES CEFF.xlsx"),
-    sheet = if_else(cztype == "terminal", "SES_TRM_all", "SES_ERT_all"),
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
-  
-  data_pre_prep <- data_raw %>% 
-    filter(status == "A",
-           year <= rp_min_year) |> 
-    select(
-      year,
-      new_duc = new_duc_eur_combined,
-      total_adjustments_aucu = total_adjustments_su_combined,
-      aucu = aucu_combined
-    )
-  
-} else {
-  # State  ----
-  ## import data ----
-  data_pre_prep <- aucu(cztype, mycz) %>% 
-    arrange(year) 
-}
-  
+# import data ----
+data_pre_prep <- aucu(cztype, mycz) %>% 
+  arrange(year) 
+
 data_prep <- data_pre_prep |> 
   select(
     year,
@@ -264,7 +239,7 @@ mybarc_aucu <-  function(width = mywidth, height = myheight,
           x = 0.22,
           y = c_legend_y_position,
           text = '■',
-          font = list(size = font * 1.2, color = '#5B9BD5'),
+          font = list(size = font * 1.2, color = PRBPlannedColor),
           xref = "paper",
           yref = "paper",
           showarrow = FALSE,
