@@ -625,7 +625,14 @@ ceff_t3_ert  <-  read_xlsx(
 ### SES ----
 ceff_ses_duc_ert <- read_xlsx(
   here(data_folder, ceff_data_file),
-  sheet = "ses_duc",
+  sheet = "ses_duc_ert",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>%
+  clean_names()
+
+ceff_ses_duc_trm <- read_xlsx(
+  here(data_folder, ceff_data_file),
+  sheet = "ses_duc_trm",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>%
   clean_names()
