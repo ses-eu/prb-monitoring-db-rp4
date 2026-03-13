@@ -14,7 +14,7 @@ data_prep <- data_benefit_ses %>%
   select(-state, -status) %>% 
   pivot_wider(names_from = "year", values_from = "value") %>% 
   mutate(
-    RP3 = `2020` + `2021` + `2022` + `2023` + `2024`
+    !!paste0("RP", rp) := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
   )
 
 
@@ -41,7 +41,7 @@ table1 <- mygtable(data_prep, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>% 
   fmt_number(

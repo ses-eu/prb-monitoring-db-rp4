@@ -29,9 +29,7 @@ statfor_tsu_data_file <- "statfor_forecast_en_route_tsu.xlsx"
 
 targets_data_file <- "targets.xlsx"
 
-
-
-
+investments_data_file <- "INVESTMNENTS DATA_master.xlsx"
 
 # set site parameters ----
 site_dir <- here("_site")

@@ -7,55 +7,57 @@ if (!exists("data_cost_inv")) {
 }
 
 # process data  ----
-if (cost_type == "en route") {
-  data_filtered <- data_cost_inv_rt %>% 
-    filter(member_state == .env$country) %>% 
-    select(member_state,
-           d_2020 = d_enr_2020,
-           d_2021 = d_enr_2021,
-           d_2022 = d_enr_2022,
-           d_2023 = d_enr_2023,
-           d_2024 = d_enr_2024,
+rp_years <- as.integer(rp_years)
 
-           a_2020 = a_enr_2020,
-           a_2021 = a_enr_2021,
-           a_2022 = a_enr_2022,
-           a_2023 = a_enr_2023,
-           a_2024 = a_enr_2024
-    )
+
+if (cost_type == "en route") {
+  c_prefixes1 <- c("d_enr", "a_enr")
+
 } else {
-  data_filtered <- data_cost_inv_rt %>% 
-    filter(member_state == .env$country) %>% 
-    select(member_state,
-           d_2020 = d_ter_2020,
-           d_2021 = d_ter_2021,
-           d_2022 = d_ter_2022,
-           d_2023 = d_ter_2023,
-           d_2024 = d_ter_2024,
-           
-           a_2020 = a_ter_2020,
-           a_2021 = a_ter_2021,
-           a_2022 = a_ter_2022,
-           a_2023 = a_ter_2023,
-           a_2024 = a_ter_2024
-    )
+  c_prefixes1 <- c("d_ter", "a_ter")
+  
 }
+
+
+cols1 <- c(
+  as.vector(outer(c_prefixes1, rp_years, paste, sep = "_"))
+)
+
+cols2 <- cols1 %>% stringr::str_remove_all(., "ter_") %>% stringr::str_remove_all(., "enr_")
+
+# ---- rename mapping: d_enr_2025 -> d_year1, a_enr_2025 -> a_year1, etc.
+# keep only "d_" / "a_" and replace year with year1, year2...
+prefix_letter <- sub("_.*$", "", c_prefixes1)  # "d" / "a"
+new_names <- as.vector(outer(
+  paste0(prefix_letter, "_"),
+  paste0("year", seq_along(rp_years)),
+  paste0
+))
+
+rename_map <- setNames(cols1, new_names)  
+rename_map_inv <- setNames(new_names, cols2)  
+
+data_filtered <- data_cost_inv_rt %>%
+  filter(member_state == .env$country) %>%
+  select(member_state, all_of(cols1)) %>%
+  rename(!!!rename_map)
 
 data_prep_year <- data_filtered %>% 
   group_by(member_state) %>% 
   summarise(
-    d_2020 = sum(d_2020, na.rm = TRUE),
-    d_2021 = sum(d_2021, na.rm = TRUE),
-    d_2022 = sum(d_2022, na.rm = TRUE),
-    d_2023 = sum(d_2023, na.rm = TRUE),
-    d_2024 = sum(d_2024, na.rm = TRUE),
+    d_year1 = sum(d_year1, na.rm = TRUE),
+    d_year2 = sum(d_year2, na.rm = TRUE),
+    d_year3 = sum(d_year3, na.rm = TRUE),
+    d_year4 = sum(d_year4, na.rm = TRUE),
+    d_year5 = sum(d_year5, na.rm = TRUE),
 
-    a_2020 = sum(a_2020, na.rm = TRUE),
-    a_2021 = sum(a_2021, na.rm = TRUE),
-    a_2022 = sum(a_2022, na.rm = TRUE),
-    a_2023 = sum(a_2023, na.rm = TRUE),
-    a_2024 = sum(a_2024, na.rm = TRUE)
+    a_year1 = sum(a_year1, na.rm = TRUE),
+    a_year2 = sum(a_year2, na.rm = TRUE),
+    a_year3 = sum(a_year3, na.rm = TRUE),
+    a_year4 = sum(a_year4, na.rm = TRUE),
+    a_year5 = sum(a_year5, na.rm = TRUE)
   )%>% 
+  rename(!!!rename_map_inv) %>% 
   select(-member_state) %>% 
   pivot_longer(
     cols = everything(),  # Pivot all columns
@@ -69,7 +71,7 @@ data_prep_total <- data_prep_year %>%
   group_by(type) %>% 
   summarise(value = sum(if_else(as.numeric(year) > year_report, 0, value), na.rm = TRUE), .groups = "drop") %>% 
   ungroup() %>% 
-  mutate(year = "RP3") %>% select(type, year, value)
+  mutate(year = paste0("RP",rp)) %>% select(type, year, value)
 
 data_prep <- rbind(data_prep_year, data_prep_total) %>%
   pivot_wider( names_from = "type", values_from = "value" ) %>% 

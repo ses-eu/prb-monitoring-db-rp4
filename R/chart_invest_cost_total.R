@@ -7,16 +7,19 @@ if (!exists("data_cost_inv")) {
 
 
 # process data  ----
+rp_years <- as.integer(rp_years)
+
+c_prefixes <- c("nm", "on", "e")
+
+cols <- c(
+  as.vector(outer(paste0(c_prefixes, "_d"), rp_years, paste, sep = "_")),
+  as.vector(outer(paste0(c_prefixes, "_a"), rp_years, paste, sep = "_"))
+)
+
+
 data_prep <- data_cost_inv %>% 
   filter(member_state == .env$country) %>% 
-  select(nm_d_2020, nm_d_2021, nm_d_2022, nm_d_2023, nm_d_2024,
-         on_d_2020, on_d_2021, on_d_2022, on_d_2023, on_d_2024,
-         e_d_2020, e_d_2021, e_d_2022, e_d_2023, e_d_2024,
-
-         nm_a_2020, nm_a_2021, nm_a_2022, nm_a_2023, nm_a_2024,
-         on_a_2020, on_a_2021, on_a_2022, on_a_2023, on_a_2024,
-         e_a_2020, e_a_2021, e_a_2022, e_a_2023, e_a_2024,
-         ) %>% 
+  select(all_of(cols)) %>% 
   pivot_longer(
     cols = everything(),  # Pivot all columns
     names_to = c("type", "year"),  # Create "type" and "year" columns
@@ -59,7 +62,7 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = myheight,
-                      colors = c('#5B9BD5', '#FFC000'),
+                      colors = c(PRBPlannedColor, PRBActualColor),
                       local_factor = c("Determined",
                                        "Actual",
                                         NULL),

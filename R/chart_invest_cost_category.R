@@ -7,16 +7,18 @@ if (!exists("data_cost_inv")) {
 
 
 # process data  ----
+c_prefixes <- c("nm", "on", "e")
+c_suffixes <- c("d", "a")
+
+cols <- as.vector(outer(
+  paste(c_prefixes, c_suffixes, sep = "_"),
+  rp_years,
+  FUN = function(ps, y) paste0(ps, "_", y)
+))
+
 data_prep <- data_cost_inv %>% 
   filter(member_state == .env$country) %>% 
-  select(nm_d_2020, nm_d_2021, nm_d_2022, nm_d_2023, nm_d_2024,
-         on_d_2020, on_d_2021, on_d_2022, on_d_2023, on_d_2024,
-         e_d_2020, e_d_2021, e_d_2022, e_d_2023, e_d_2024,
-         
-         nm_a_2020, nm_a_2021, nm_a_2022, nm_a_2023, nm_a_2024,
-         on_a_2020, on_a_2021, on_a_2022, on_a_2023, on_a_2024,
-         e_a_2020, e_a_2021, e_a_2022, e_a_2023, e_a_2024,
-  ) %>% 
+  select(all_of(cols)) %>% 
   pivot_longer(
     cols = everything(),  # Pivot all columns
     names_to = c("xlabel", "year"),  # Create "type" and "year" columns
@@ -86,10 +88,10 @@ myplot <- mybarchart2(data_prep,
                       bargap = 0.25,
                       barmode = 'group',
                       
-                      title_text = "Total costs of investments by category - RP3",
+                      title_text =paste0("Total costs of investments by category - RP", rp),
                       title_y = 0.99,
                       
-                      yaxis_title = paste0("Total costs of investments in RP3 (M€<sub>",cef_ref_year,"</sub>)"),
+                      yaxis_title = paste0("Total costs of investments in RP",rp ," (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",
                       yaxis_titlefont_size = myyaxis_titlefont_size -1,

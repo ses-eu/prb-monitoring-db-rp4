@@ -127,7 +127,7 @@ myplot <- mybarchart2(data_prep,
     yaxis = "y2",
     marker = list(
       size = 5,
-      color = '#FFC000'
+      color = PRBActualColor
     ),
     inherit = FALSE
   ) %>% 

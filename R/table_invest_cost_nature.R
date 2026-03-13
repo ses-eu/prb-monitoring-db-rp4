@@ -10,36 +10,25 @@ if (!exists("data_new_major")) {
 
 # process data  ----
 if (cost_type == "en route") {
-  data_filtered <- data_cost_inv_rt %>% 
-    select(member_state, cost_type,
-           d_2020 = d_enr_2020,
-           d_2021 = d_enr_2021,
-           d_2022 = d_enr_2022,
-           d_2023 = d_enr_2023,
-           d_2024 = d_enr_2024,
-           
-           a_2020 = a_enr_2020,
-           a_2021 = a_enr_2021,
-           a_2022 = a_enr_2022,
-           a_2023 = a_enr_2023,
-           a_2024 = a_enr_2024
-    )
+    c_prefixes1 <- c("d_enr", "a_enr")
+    
 } else {
-  data_filtered <- data_cost_inv_rt %>% 
-    select(member_state, cost_type,
-           d_2020 = d_ter_2020,
-           d_2021 = d_ter_2021,
-           d_2022 = d_ter_2022,
-           d_2023 = d_ter_2023,
-           d_2024 = d_ter_2024,
-           
-           a_2020 = a_ter_2020,
-           a_2021 = a_ter_2021,
-           a_2022 = a_ter_2022,
-           a_2023 = a_ter_2023,
-           a_2024 = a_ter_2024
-    )
-}
+    c_prefixes1 <- c("d_ter", "a_ter")
+    
+  }
+  
+cols1 <- c(
+  as.vector(outer(c_prefixes1, rp_years, paste, sep = "_"))
+)
+new_names <- cols1 %>% stringr::str_remove_all(., "ter_") %>% 
+  stringr::str_remove_all(., "enr_") %>%
+  sub("^([da])_(\\d{4})$", "\\2\\U\\1", ., perl = TRUE)
+  
+rename_map <- setNames(cols1, new_names)  
+
+data_filtered <- data_cost_inv_rt %>% 
+  select(member_state, cost_type, all_of(cols1)) %>%
+  rename(!!!rename_map)
 
 data_filtered <- data_filtered %>% 
     filter(member_state == .env$country)
@@ -48,17 +37,19 @@ data_calc <- data_filtered %>%
   select(-member_state) %>% 
   pivot_longer(
     cols = -cost_type,  
-    names_to = c("type", "year"),  # Create "type" and "year" columns
-    names_pattern = "(.+?)_(\\d{4})",  # Regex: Extract "type" + 4-digit year
+    names_to = c("year", "type"),  # Create "type" and "year" columns
+    names_pattern = "(\\d{4})(.+?)",  # Regex: Extract "type" + 4-digit year
     values_to = "value"  # Store values in "value" column
   ) %>% 
   mutate(
     value = value/10^3,
-    type = if_else(type == "d", "Determined", "Actual")
+    type = if_else(type == "D", "Determined", "Actual")
   ) %>% 
   group_by(cost_type, type, year) %>% 
   summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>% 
-  mutate(value = if_else(type == "Actual" & as.numeric(year) > year_report, NA, value)) %>% 
+  mutate(
+    value = if_else(type == "Actual" & as.numeric(year) > year_report, NA, value)
+    ) %>% 
   rename(category = cost_type) %>% 
   pivot_wider(id_cols = c(category, year), names_from ="type", values_from = "value") %>% 
   mutate (
@@ -71,7 +62,7 @@ data_calc_summary <- data_calc %>%
   group_by(category, type) %>% 
   summarise(value = sum(value, na.rm = TRUE)) %>% 
   ungroup() %>% 
-  mutate(year = "RP3") %>% 
+  mutate(year = paste0("RP",rp)) %>% 
   select(category, year, type, value) 
 
 data_prep <- rbind(data_calc, data_calc_summary) %>% 
@@ -130,12 +121,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Determined costs",
-    "2020" = "2020D",
-    "2021" = "2021D",
-    "2022" = "2022D",
-    "2023" = "2023D",
-    "2024" = "2024D",
+    category = "Determined costs"
   ) %>%
   fmt_number(
     columns = 2:7,   
@@ -174,7 +160,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   ) %>%
   tab_style(
@@ -184,7 +170,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   )%>% 
   cols_width(
@@ -200,13 +186,8 @@ table2 <- mygtable(data_prep2, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Actual costs",
-    "2020" = "2020A",
-    "2021" = "2021A",
-    "2022" = "2022A",
-    "2023" = "2023A",
-    "2024" = "2024A",
-  ) %>%
+    category = "Actual costs"
+   ) %>%
   fmt_number(
     columns = 2:7,   
     decimals = if_else(country == rp_full, 1, 2),
@@ -244,7 +225,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   ) %>%
   tab_style(
@@ -254,7 +235,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   )%>% 
   cols_width(
@@ -298,7 +279,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   ) %>%
   tab_style(
@@ -308,7 +289,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   )%>% 
   cols_width(

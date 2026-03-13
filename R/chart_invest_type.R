@@ -7,25 +7,24 @@ if (!exists("data_cost_inv")) {
 
 
 # process data  ----
+cols <- paste0(
+  c("ses", "par", "cpmp", "sesdet", "pardet", "cpmpdet"),
+  "_rp",
+  rp
+)
+
 data_prep <- data_impact %>% 
   filter(state == .env$country) %>%
-  select(
-    ses_rp3,
-    par_rp3,
-    cpmp_rp3,
-    sesdet_rp3,
-    pardet_rp3,
-    cpmpdet_rp3
-  ) %>% 
+  select(all_of(cols)) %>%
   pivot_longer(everything(), names_to = "xlabel", values_to = "mymetric") %>% 
   mutate(
     mymetric = mymetric / 10^6,
     type = if_else(str_detect(xlabel, "det"), "Determined", "Actual"),
     xlabel = str_replace_all(xlabel, "det", ""),
     xlabel = case_when(
-      xlabel == "ses_rp3" ~ "SES mandated",
-      xlabel == "par_rp3" ~ "Partnership",
-      xlabel == "cpmp_rp3" ~ "CP/MP investments"
+      xlabel == paste0("ses_rp", rp) ~ "SES mandated",
+      xlabel == paste0("par_rp", rp) ~ "Partnership",
+      xlabel == paste0("cpmp_rp", rp) ~ "CP/MP investments"
     ),
     xlabel = factor(xlabel, levels = c("SES mandated", "Partnership", "CP/MP investments"))
   )
@@ -57,7 +56,7 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = myheight,
-                      colors = c('#22A0E7', '#FFC000'),
+                      colors = c(PRBPlannedColor, PRBActualColor),
                       local_factor = c("Determined",
                                        "Actual",
                                         NULL),
@@ -80,7 +79,7 @@ myplot <- mybarchart2(data_prep,
                       title_text = "Costs by type of investments - actual and determined",
                       title_y = 0.99,
                       
-                      yaxis_title = paste0("RP3 determined versus actual\ncost of investments (M€<sub>",cef_ref_year,"</sub>)"),
+                      yaxis_title = paste0("RP",rp," determined versus actual\ncost of investments (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_titlefont_size = myfont,
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",

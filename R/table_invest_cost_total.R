@@ -7,15 +7,17 @@ if (!exists("data_new_major")) {
 }
 
 # process data  ----
+c_prefixes <- c("nm", "on", "e")
+c_suffixes <- c("d", "a")
+
+cols <- c(
+  as.vector(outer(paste0(c_prefixes, "_d"), rp_years, paste, sep = "_")),
+  as.vector(outer(paste0(c_prefixes, "_a"), rp_years, paste, sep = "_"))
+)
+
 data_calc <- data_cost_inv %>% 
   filter(member_state == .env$country) %>% 
-  select(nm_d_2020, nm_d_2021, nm_d_2022, nm_d_2023, nm_d_2024,
-         on_d_2020, on_d_2021, on_d_2022, on_d_2023, on_d_2024,
-         e_d_2020, e_d_2021, e_d_2022, e_d_2023, e_d_2024,
-         
-         nm_a_2020, nm_a_2021, nm_a_2022, nm_a_2023, nm_a_2024,
-         on_a_2020, on_a_2021, on_a_2022, on_a_2023, on_a_2024,
-         e_a_2020, e_a_2021, e_a_2022, e_a_2023, e_a_2024,
+  select(all_of(cols)
   ) %>% 
   pivot_longer(
     cols = everything(),  # Pivot all columns
@@ -44,7 +46,7 @@ data_calc_summary <- data_calc %>%
   group_by(category, type) %>% 
   summarise(value = sum(value, na.rm = TRUE)) %>% 
   ungroup() %>% 
-  mutate(year = "RP3") %>% 
+  mutate(year = paste0("RP", rp)) %>% 
   select(category, year, type, value) 
 
 data_prep <- rbind(data_calc, data_calc_summary) %>% 
@@ -59,22 +61,31 @@ data_prep1 <- data_prep %>% filter(type == "Determined") %>%
     data_prep %>% filter(type == "Determined") 
   ) %>% 
   select(-type) %>% 
-  mutate(category = purrr::map(category, gt::html))
+  rename_with(
+    ~ paste0(.x, "D"),
+    .cols = all_of(as.character(rp_years))
+  ) %>% 
+  mutate(category = purrr::map(category, gt::html)) %>% 
+  relocate(category, .before = everything()) 
+
 
 data_prep2 <- data_prep %>% filter(type == "Actual") %>% 
   summarise(across(-c(category, type), ~sum(.x, na.rm = FALSE))) %>%
   mutate(category = paste0("Total costs of new and existing investments (M€<sub>",cef_ref_year,"</sub>)")) %>%
-  select(colnames(data_prep1)) %>%  
   bind_rows(
     data_prep %>% filter(type == "Actual") 
   ) %>% 
   select(-type) %>% 
-  mutate(category = purrr::map(category, gt::html))
+  rename_with(
+    ~ paste0(.x, "A"),
+    .cols = all_of(as.character(rp_years))
+  ) %>% 
+  mutate(category = purrr::map(category, gt::html)) %>% 
+  relocate(category, .before = everything()) 
 
 data_prep3 <- data_prep %>% filter(type == "Difference") %>% 
   summarise(across(-c(category, type), ~sum(.x, na.rm = FALSE))) %>%
   mutate(category = paste0("Total difference (M€<sub>",cef_ref_year,"</sub>)")) %>%
-  select(colnames(data_prep1)) %>%  
   bind_rows(
     data_prep %>% filter(str_detect(type,"Difference")) 
   ) %>% 
@@ -83,15 +94,16 @@ data_prep3 <- data_prep %>% filter(type == "Difference") %>%
                        "% change of actual with respect to determined", category)
   ) %>% 
   rowwise() %>%
-  mutate(across(2:7, ~ if_else(
+  mutate(across(1:6, ~ if_else(
     type == "Difference_perc" & !is.na(type),
     paste0(if_else(.x >0, "+", ""), round(.x, 0), "%"),
     format_parens(.x)
   ))) %>%
   ungroup() %>% 
   select(-type) %>% 
-  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) %>% 
-  mutate(category = purrr::map(category, gt::html))
+  mutate(category = purrr::map(category, gt::html)) %>% 
+  relocate(category, .before = everything()) %>% 
+  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x)))  
 
 
 # render tables ----
@@ -104,12 +116,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Determined costs",
-    "2020" = "2020D",
-    "2021" = "2021D",
-    "2022" = "2022D",
-    "2023" = "2023D",
-    "2024" = "2024D",
+    category = "Determined costs"
   ) %>%
   fmt_number(
     columns = 2:7,   
@@ -148,7 +155,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -158,7 +165,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   )%>% 
   cols_width(
@@ -174,12 +181,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Actual costs",
-    "2020" = "2020A",
-    "2021" = "2021A",
-    "2022" = "2022A",
-    "2023" = "2023A",
-    "2024" = "2024A",
+    category = "Actual costs"
   ) %>%
   fmt_number(
     columns = 2:7,   
@@ -218,7 +220,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -228,7 +230,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   )%>% 
   cols_width(
@@ -276,7 +278,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -286,7 +288,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>% 
   cols_width(

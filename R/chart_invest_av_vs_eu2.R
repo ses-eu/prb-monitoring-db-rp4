@@ -8,12 +8,12 @@ if (!exists("data_capex")) {
 
 # process data  ----
 data_prep <- data_capex %>% 
-  filter(member_state == .env$country | member_state == "SES RP3") %>% 
+  filter(member_state == .env$country | member_state == rp_full) %>% 
   select(member_state, total) %>% 
   mutate(
     type = case_when(
       member_state == .env$country ~ "ANSP",
-      member_state == "SES RP3" ~ "Union-wide"),
+      member_state == rp_full ~ "Union-wide"),
     mymetric = total / lead(total, 1)*100,
     mymetric = case_when(
       type == "Union-wide" ~ 100-lag(mymetric,1),
@@ -44,7 +44,7 @@ mydonutchart(data_prep,
              colors = c('#FFF000', '#22A0DD'),
              shape = c("/", ""), # not supported by plotly on donut charts
              hovertemplate = "%{label}: %{value:.0f}%<extra></extra>",
-             title_text = "Asset value of new investments RP3 (%)",
+             title_text = paste0("Asset value of new investments RP", rp, " (%)"),
              minsize = 14,
              legend_x = local_legend_x,
              legend_y = local_legend_y,

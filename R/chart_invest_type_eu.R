@@ -7,7 +7,7 @@ if (!exists("data_cost_inv")) {
 
 
 # process data  ----
-if (country == "SES RP3") {
+if (country == rp_full) {
   data_prep <- data_benefit_ses_forchart %>% 
     filter(union_wide_median == 'Union-wide ave') %>% 
     filter(variable %in% c('SES mandated', 'Partnership', 'CP/MP investment')) %>% 
@@ -28,17 +28,28 @@ if (country == "SES RP3") {
            mymetric)%>% 
     filter(type == "Union-wide median")
       
-  data_prep_ansp <- data_impact %>% 
-    filter(state == .env$country) %>% 
-    filter(state != "SES RP3") %>% 
+  denom <- paste0("nmajor_rp", rp)
+  
+  data_prep_ansp <- data_impact %>%
+    filter(state == .env$country) %>%
+    filter(state != rp_full) %>%
     mutate(
       type = "ANSP",
-      "SES mandated" = if_else(nmajor_rp3 == 0, 0, ses_rp3/nmajor_rp3)*100,
-      "Partnership" = if_else(nmajor_rp3 == 0, 0, par_rp3/nmajor_rp3)*100,
-      "CP/MP investment" = if_else(nmajor_rp3 == 0, 0, cpmp_rp3/nmajor_rp3)*100
-      ) %>% 
-    select(type, "SES mandated", "Partnership", "CP/MP investment") %>% 
-    pivot_longer(-c(type), names_to = "xlabel", values_to = "mymetric")
+      `SES mandated` = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("ses_rp", rp)]] / .data[[denom]]
+      ) * 100,
+      Partnership = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("par_rp", rp)]] / .data[[denom]]
+      ) * 100,
+      `CP/MP investment` = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("cpmp_rp", rp)]] / .data[[denom]]
+      ) * 100
+    ) %>%
+    select(type, `SES mandated`, Partnership, `CP/MP investment`) %>%
+    pivot_longer(-type, names_to = "xlabel", values_to = "mymetric")
   
   data_prep <- rbind(data_prep_uw, data_prep_ansp) %>% 
     mutate(xlabel = factor(xlabel, levels = c("SES mandated", "Partnership", "CP/MP investment")))
@@ -67,8 +78,8 @@ if (knitr::is_latex_output()) {
   
 }
 
-mylocalfactor <- if (country == 'SES RP3') c("Union-wide average") else c("ANSP", "Union-wide median", NULL)
-mylocalcolors <- if (country == 'SES RP3') c('#58595B')else c('#FFC000', '#58595B')
+mylocalfactor <- if (country == rp_full) c("Union-wide average") else c("ANSP", "Union-wide median", NULL)
+mylocalcolors <- if (country == rp_full) c('#58595B')else c(PRBActualColor, '#58595B')
 
 
 # plot chart ----
@@ -95,7 +106,7 @@ myplot <- mybarchart2(data_prep,
                       title_text = "Costs by type of investments - impact",
                       title_y = 0.99,
                       
-                      yaxis_title = "% of RP3 actual costs of new\ninvestments by type of investment",
+                      yaxis_title = paste0("% of RP", rp," actual costs of new\ninvestments by type of investment"),
                       yaxis_titlefont_size = myfont,
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",

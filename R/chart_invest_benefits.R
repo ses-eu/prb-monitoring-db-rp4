@@ -7,7 +7,7 @@ if (!exists("data_cost_inv")) {
 
 
 # process data  ----
-if (country == "SES RP3") {
+if (country == rp_full) {
   data_prep <- data_benefit_ses_forchart %>% 
     filter(union_wide_median == 'Union-wide ave') %>% 
     filter(variable %in% c('Network', 'Local', 'Non-performance')) %>% 
@@ -27,15 +27,26 @@ if (country == "SES RP3") {
            mymetric)%>% 
     filter(type == "Union-wide median")
       
+  denom <- paste0("nmajor_rp", rp)
+  
   data_prep_ansp <- data_impact %>% 
     filter(state == .env$country) %>% 
-    filter(state != "SES RP3") %>% 
+    filter(state != rp_full) %>% 
     mutate(
       type = "ANSP",
-      Network = if_else(nmajor_rp3 == 0, 0, nw_rp3/nmajor_rp3)*100,
-      Local = if_else(nmajor_rp3 == 0, 0, local_rp3/nmajor_rp3)*100,
-      "Non-performance" = if_else(nmajor_rp3 == 0, 0, np_rp3/nmajor_rp3)*100
-      ) %>% 
+      Network = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("nw_rp", rp)]] / .data[[denom]]
+      ) * 100,
+      Local = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("local_rp", rp)]] / .data[[denom]]
+      ) * 100,
+      `Non-performance` = if_else(
+        .data[[denom]] == 0, 0,
+        .data[[paste0("np_rp", rp)]] / .data[[denom]]
+      ) * 100
+    ) %>%
     select(type, Network, Local, "Non-performance") %>% 
     pivot_longer(-c(type), names_to = "xlabel", values_to = "mymetric")
   
@@ -66,8 +77,8 @@ if (knitr::is_latex_output()) {
   
 }
 
-mylocalfactor <- if (country == 'SES RP3') c("Union-wide average") else c("ANSP", "Union-wide median", NULL)
-mylocalcolors <- if (country == 'SES RP3') c('#58595B')else c('#FFC000', '#58595B')
+mylocalfactor <- if (country == rp_full) c("Union-wide average") else c("ANSP", "Union-wide median", NULL)
+mylocalcolors <- if (country == rp_full) c('#58595B')else c('#FFC000', '#58595B')
 
 
 # plot chart ----
@@ -91,10 +102,10 @@ myplot <- mybarchart2(data_prep,
                       bargap = 0.25,
                       barmode = 'group',
                       
-                      title_text = "Expected benefits of investments - RP3",
+                      title_text = paste0("Expected benefits of investments - RP", rp),
                       title_y = 0.99,
                       
-                      yaxis_title = "% of RP3 actual costs of investments\nwith expected impact",
+                      yaxis_title = paste0("% of RP",rp," actual costs of investments\nwith expected impact"),
                       yaxis_titlefont_size = myfont,
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",

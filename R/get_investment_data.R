@@ -4,7 +4,7 @@ source("R/params_country.R")}
 # import data  ----
 ## State case ----
 data_new_major <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "New Major Inv pivot",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
@@ -13,7 +13,7 @@ data_new_major <-  read_xlsx(
   mutate(across(-member_state, .fns = ~ if_else(is.na(.), 0, .)))
 
 data_new_major_detail <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "New Major Investments",
   range = cell_limits(c(4, 1), c(NA, NA))) %>%
   as_tibble() %>% 
@@ -21,56 +21,56 @@ data_new_major_detail <-  read_xlsx(
 
 
 data_capex <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "CAPEX per Main ANSP",
   range = cell_limits(c(2, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_category <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Benefits | Investment category",
   range = cell_limits(c(2, NA), c(180, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_union_wide <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Union-wide median",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_investments_type_state <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Union-wide chart",
   range = cell_limits(c(1, 30), c(NA, 32))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_cost_inv <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Costs of inv main ANSP (MR)",
   range = cell_limits(c(3, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_cost_inv_rt <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Costs of inv. (RT)-ANSP",
   range = cell_limits(c(3, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_impact <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "IMPACT ANSP",
   range = cell_limits(c(2, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_funding_enr <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Funding (2)",
   range = cell_limits(c(3, 1), c(NA, 7))) %>%
   as_tibble() %>% 
@@ -78,7 +78,7 @@ data_funding_enr <-  read_xlsx(
   mutate(type = "enroute")
 
 data_funding_ter <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Funding (2)",
   range = cell_limits(c(3, 9), c(NA, 15))) %>%
   as_tibble() %>% 
@@ -99,7 +99,7 @@ data_funding_self <- rbind(data_funding_ter, data_funding_enr) %>%
   
 
 data_funding_sdm <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Funding (2)",
   range = cell_limits(c(3, 17), c(NA, 23))) %>%
   as_tibble() %>% 
@@ -113,25 +113,25 @@ data_funding_sdm <-  read_xlsx(
          type = "SDM data")
 
 data_funding <- rbind(data_funding_self, data_funding_sdm) %>% 
-  mutate(year = if_else(year == "total_rp3_to_date", "RP3", year))
+  mutate(year = if_else(year == paste0("total_rp", rp,"_to_date"), paste0("RP",rp), year))
   
 ## SES case ----
 data_cost_ses <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Union-wide chart",
   range = cell_limits(c(1, 30), c(NA, 40))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_benefit_ses <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Union-wide chart",
   range = cell_limits(c(1, 19), c(NA, 23))) %>%
   as_tibble() %>% 
   clean_names() 
 
 data_benefit_ses_forchart <-  read_xlsx(
-  here(data_folder, "INVESTMNENTS DATA_master.xlsx"),
+  here(data_folder, investments_data_file),
   sheet = "Union-wide median",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 

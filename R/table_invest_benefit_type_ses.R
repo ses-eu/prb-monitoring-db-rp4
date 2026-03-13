@@ -14,14 +14,11 @@ data_prep_a <- data_benefit_ses %>%
   select(-state, -status) %>% 
   pivot_wider(names_from = "year", values_from = "value") %>% 
   mutate(
-    RP3 = `2020` + `2021` + `2022` + `2023` + `2024`
+    !!paste0("RP", rp) := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
   ) %>% 
-  rename(
-    `2020A` = `2020`,
-    `2021A` = `2021`,
-    `2022A` = `2022`,
-    `2023A` = `2023`,
-    `2024A` = `2024`
+  rename_with(
+    ~ paste0(.x, "A"),
+    .cols = all_of(as.character(rp_years))
   )
 
 data_prep_d <- data_benefit_ses %>% 
@@ -31,14 +28,11 @@ data_prep_d <- data_benefit_ses %>%
   select(-state, -status) %>% 
   pivot_wider(names_from = "year", values_from = "value") %>% 
   mutate(
-    RP3 = `2020` + `2021` + `2022` + `2023` + `2024`
+    !!paste0("RP", rp) := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
   ) %>% 
-  rename(
-    `2020D` = `2020`,
-    `2021D` = `2021`,
-    `2022D` = `2022`,
-    `2023D` = `2023`,
-    `2024D` = `2024`
+  rename_with(
+    ~ paste0(.x, "D"),
+    .cols = all_of(as.character(rp_years))
   )
 
 
@@ -66,7 +60,7 @@ table1 <- mygtable(data_prep_d, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP",rp)
     )
   ) %>% 
   fmt_number(
@@ -100,7 +94,7 @@ table2 <- mygtable(data_prep_a, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>% 
   fmt_number(

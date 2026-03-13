@@ -1692,36 +1692,36 @@ replace_links <- function(filename) {
 #   return((list(text1 = level1_text1, text2 =level1_text2)))
 #   
 # }
-# 
-# ## Custom formatting function ----
-# format_parens <- function(x) {
-#   ifelse(x < 0,
-#          paste0("(", format(abs(round(x, 2)), nsmall = 2), ")"),
-#          format(round(x, 2), nsmall = 2))
-# }
-# 
-# ## wrap long labels -----
-# wrap_label <- function(label, width = 30) {
-#   if (is.na(label)) return(NA_character_)
-#   
-#   words <- strsplit(label, " ")[[1]]
-#   lines <- c()
-#   current_line <- ""
-#   
-#   for (word in words) {
-#     if (nchar(current_line) + nchar(word) + 1 > width) {
-#       lines <- c(lines, current_line)
-#       current_line <- word
-#     } else {
-#       current_line <- paste(current_line, word)
-#       current_line <- trimws(current_line)
-#     }
-#   }
-#   
-#   lines <- c(lines, current_line)
-#   paste(lines, collapse = "<br>")
-# }
-# 
+ 
+# Custom formatting function ----
+format_parens <- function(x) {
+  ifelse(x < 0,
+         paste0("(", format(abs(round(x, 2)), nsmall = 2), ")"),
+         format(round(x, 2), nsmall = 2))
+}
+ 
+# wrap long labels -----
+wrap_label <- function(label, width = 30) {
+  if (is.na(label)) return(NA_character_)
+
+  words <- strsplit(label, " ")[[1]]
+  lines <- c()
+  current_line <- ""
+
+  for (word in words) {
+    if (nchar(current_line) + nchar(word) + 1 > width) {
+      lines <- c(lines, current_line)
+      current_line <- word
+    } else {
+      current_line <- paste(current_line, word)
+      current_line <- trimws(current_line)
+    }
+  }
+
+  lines <- c(lines, current_line)
+  paste(lines, collapse = "<br>")
+}
+
 ## latex tables -----
 make_quarto_latex_table <- function(
     title,

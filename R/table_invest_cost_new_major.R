@@ -7,20 +7,24 @@ if (!exists("data_new_major")) {
 }
 
 # process data  ----
+rp_years <- as.integer(rp_years)
+
+d_idx <- 13:(13 + length(rp_years) - 1)
+a_idx <- 19:(19 + length(rp_years) - 1)
+
+d_old <- paste0("x", rp_years, "_", d_idx)
+a_old <- paste0("x", rp_years, "_", a_idx)
+
+# Final names: 2025A, 2025D, 2026A, 2026D, ...
+old_cols <- as.vector(rbind(a_old, d_old))                 # A then D per year
+new_cols <- as.vector(rbind(paste0(rp_years, "A"),
+                            paste0(rp_years, "D")))
+
+
 data_calc <- data_new_major_detail %>% 
   select(member_state,
          category = investment_name,
-         d_2020 = x2020_13,
-         d_2021 = x2021_14,
-         d_2022 = x2022_15,
-         d_2023 = x2023_16,
-         d_2024 = x2024_17,
-         
-         a_2020 = x2020_19,
-         a_2021 = x2021_20,
-         a_2022 = x2022_21,
-         a_2023 = x2023_22,
-         a_2024 = x2024_23
+         !!!rlang::set_names(rlang::syms(old_cols), new_cols)
   ) %>% 
   right_join(as_tibble(state_list), by = c("member_state" ="value")) %>% 
   mutate(across(-c(member_state, category), .fns = ~ if_else(is.na(.), 0, .))) %>% 
@@ -28,12 +32,12 @@ data_calc <- data_new_major_detail %>%
   select(-member_state) %>% 
   pivot_longer(
     cols = -category,  # Pivot all columns
-    names_to = c("type", "year"),  # Create "type" and "year" columns
-    names_pattern = "(.+?)_(\\d{4})",  # Regex: Extract "type" + 4-digit year
+    names_to = c("year", "type"),  # Create "type" and "year" columns
+    names_pattern = "(\\d{4})(.+?)",  # Regex: Extract "type" + 4-digit year
     values_to = "value"  # Store values in "value" column
   ) %>% 
   mutate(
-    type = if_else(type == "d", "Determined", "Actual"),
+    type = if_else(type == "D", "Determined", "Actual"),
     value = if_else(type == "Actual" & as.numeric(year) > year_report, NA, value/10^6)
   ) %>% 
   pivot_wider(id_cols = c(category, year), names_from ="type", values_from = "value") %>% 
@@ -47,7 +51,7 @@ data_calc_summary <- data_calc %>%
   group_by(category, type) %>% 
   summarise(value = sum(value, na.rm = TRUE)) %>% 
   ungroup() %>% 
-  mutate(year = "RP3") %>% 
+  mutate(year = paste0("RP", rp)) %>% 
   select(category, year, type, value) 
 
 data_prep <- rbind(data_calc, data_calc_summary) %>% 
@@ -107,12 +111,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Determined costs",
-    "2020" = "2020D",
-    "2021" = "2021D",
-    "2022" = "2022D",
-    "2023" = "2023D",
-    "2024" = "2024D",
+    category = "Determined costs"
   ) %>%
   fmt_number(
     columns = 2:7,   
@@ -151,7 +150,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -161,7 +160,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   )%>% 
   cols_width(
@@ -177,12 +176,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
               container.padding.y = 0) %>% 
   cols_align(columns = 1, align = "left") %>%
   cols_label(
-    category = "Actual costs",
-    "2020" = "2020A",
-    "2021" = "2021A",
-    "2022" = "2022A",
-    "2023" = "2023A",
-    "2024" = "2024A",
+    category = "Actual costs"
   ) %>%
   fmt_number(
     columns = 2:7,   
@@ -221,7 +215,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -231,7 +225,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   )%>% 
   cols_width(
@@ -275,7 +269,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>%
   tab_style(
@@ -285,7 +279,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = "RP3"
+      columns = paste0("RP", rp)
     )
   ) %>% 
   cols_width(

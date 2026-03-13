@@ -113,7 +113,7 @@ myplot <- mybarchart2(data_prep,
                       title_text = "",
                       title_y = 0.99,
                       
-                      yaxis_title = "Asset value for new investments for RP3 (%)",
+                      yaxis_title = paste0("Asset value for new investments for RP", rp, " (%)"),
                       yaxis_ticksuffix = "%",
                       yaxis_tickformat = ".0f",
                       yaxis_titlefont_size = myfont-1,

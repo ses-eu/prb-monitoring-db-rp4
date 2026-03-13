@@ -8,11 +8,12 @@ if (!exists("data_cost_inv")) {
 
 # process data  ----
 data_prep <- data_new_major_detail %>% 
-  select(member_state,
-         investment_name,
-         determined = total_rp3_18,
-         actual = total_rp3_24
-  ) %>% 
+  select(
+    member_state,
+    investment_name,
+    determined := all_of(paste0("total_rp", rp, "_18")),
+    actual     := all_of(paste0("total_rp", rp, "_24"))
+  ) %>%
   right_join(as_tibble(state_list), by = c("member_state" ="value")) %>% 
   mutate(across(-c(member_state, investment_name), .fns = ~ if_else(is.na(.), 0, .))) %>% 
   filter(member_state == .env$country) %>% 
@@ -63,7 +64,7 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = myheight+100,
-                      colors = c('#5B9BD5', '#FFC000'),
+                      colors = c(PRBPlannedColor, PRBActualColor),
                       local_factor = c("Determined",
                                        "Actual",
                                        NULL),
@@ -83,14 +84,14 @@ myplot <- mybarchart2(data_prep,
                       bargap = 0.25,
                       barmode = 'group',
                       
-                      title_text = "Total costs of major investments - RP3",
+                      title_text = paste0("Total costs of major investments - RP",rp),
                       title_y = 0.99,
                       
                       textfont_size = myfont-2,
                       xaxis_tickfont_size = myfont -2,
                       xaxis_tickangle = -90,
                       
-                      yaxis_title = paste0("Total costs of investments\nin RP3 (M€<sub>",cef_ref_year,"</sub>)"),
+                      yaxis_title = paste0("Total costs of investments\nin RP",rp," (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",
                       yaxis_titlefont_size = myyaxis_titlefont_size -1,

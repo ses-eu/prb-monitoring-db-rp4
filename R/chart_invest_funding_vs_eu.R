@@ -8,13 +8,13 @@ if (!exists("data_capex")) {
 
 # process data  ----
 data_prep <- data_funding %>% 
-  filter(member_state == .env$country | member_state == "SES RP3") %>% 
-  filter(type != "SDM data" & year == "RP3") %>% 
+  filter(member_state == .env$country | member_state == rp_full) %>% 
+  filter(type != "SDM data" & year == paste0("RP",rp)) %>% 
   select(member_state, value) %>% 
   mutate(
     type = case_when(
       member_state == .env$country ~ "ANSP",
-      member_state == "SES RP3" ~ "Union-wide")
+      member_state == rp_full ~ "Union-wide")
     ) %>% 
   arrange(type) %>% 
   mutate(
@@ -48,7 +48,7 @@ mydonutchart(data_prep,
              colors = c('#22A0E7', '#58595B'),
              shape = c("/", ""), # not supported by plotly on donut charts
              hovertemplate = "%{label}: %{value:.0f}%<extra></extra>",
-             title_text = paste0("Share of declared funding in RP3 (M€<sub>",cef_ref_year,"</sub>)"),
+             title_text = paste0("Share of declared funding in RP", rp," (M€<sub>",cef_ref_year,"</sub>)"),
              minsize = 14,
              legend_x = local_legend_x,
              legend_y = local_legend_y,
