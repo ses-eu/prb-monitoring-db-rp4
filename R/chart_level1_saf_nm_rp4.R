@@ -53,7 +53,7 @@ myc <-  function(mywidth, myheight, myfont, mymargin) {
                                         "Promotion",
                                         "Culture")
                        ),
-      colors = c('#0070C0', '#44546A', '#DAE3F3', '#00B0F0', '#002060'),
+      colors = c(PRBSecondBlue, '#44546A', '#DAE3F3', '#00B0F0', '#002060'),
       text = ~ paste0(type, ': ', score_text),
       textfont = list(color = 'transparent'),
       hovertemplate = paste0('%{text}<extra></extra>'),

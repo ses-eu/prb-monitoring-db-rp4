@@ -53,7 +53,7 @@ myc <-  function(local_width, local_height, local_font, local_margin) {
       color = ~ factor(group, levels = c("Safety risk management",
                                          "All other components")
       ),
-      colors = c('#FFC000', '#196AB4'),
+      colors = c(PRBActualColor, '#196AB4'),
       text = ~ paste0(group, ': ', score_text),
       textfont = list(color = 'transparent'),
       hovertemplate = paste0('%{text}<extra></extra>'),
@@ -85,8 +85,8 @@ myc <-  function(local_width, local_height, local_font, local_margin) {
       yaxis = "y1",
       type = 'scatter',
       mode = "line",
-      name = "2024 Target all other components",
-      line = list (color = '#FF0000', 
+      name = paste0(rp_max_year, " Target all other components"),
+      line = list (color = PRBTargetColor, 
                    width = if_else(knitr::is_latex_output(), 1, 2), 
                    dash = 'dash'
       ),
@@ -101,8 +101,8 @@ myc <-  function(local_width, local_height, local_font, local_margin) {
       yaxis = "y1",
       type = 'scatter',
       mode = "line",
-      name = "2024 Target safety risk management",
-      line = list (color = '#FF0000', 
+      name = paste0(rp_max_year, " Target safety risk management"),
+      line = list (color = PRBTargetColor, 
                    width = if_else(knitr::is_latex_output(), 1, 2), 
                    dash = 'solid'
                    ),
@@ -110,70 +110,6 @@ myc <-  function(local_width, local_height, local_font, local_margin) {
       hoverinfo = 'none',
       showlegend = T
     ) %>%
-    # add_trace (
-    #            inherit = FALSE,
-    #            # data = data_prep_eosm,
-    #            x = 2024.3,
-    #            y = 60,
-    #            yaxis = "y1",
-    #            type = 'scatter',
-    #            mode = "marker",
-    #            name = "fake series",
-    #            marker = list (color = 'transparent'),
-    #            # hovertemplate = paste0('%{x}'),
-    #            hoverinfo = 'none',
-    #            showlegend = F
-    # ) %>%
-    # add_trace (
-    #   inherit = FALSE,
-    #   data = data_prep_eosm,
-    #   x =  ~ year,
-    #   y = 60,
-    #   yaxis = "y1",
-    #   type = 'scatter',
-    #   mode = "marker",
-    #   name = "",
-    #   marker = list (color = 'transparent'),
-    #   hovertemplate = paste0('-'),
-    #   # hoverinfo = 'none',
-    #   showlegend = F
-    # ) %>%
-    # add_annotations (text = c('2024 Risk\nmanagement target'),
-    #                  x = c(0.02),
-    #                  y = c(80),
-    #                  showarrow = T,
-    #                  ax = c(-100),
-    #                  ay = c(-45),
-    #                  xref = "paper",
-    #                  yref = "y",
-    #                  yanchor = "center",
-    #                  xanchor = "left",
-    #                  align = "left",
-    #                  # textangle = -90,
-    #                  font = list(color = '#FF0000', size = local_font-1),
-    #                  arrowhead = 2,
-    #                  arrowcolor = '#FF0000',
-    #                  arrowsize = 3,
-    #                  arrowwidth = 0.5 
-    # ) %>%
-    # add_annotations (text = c('2024 Other\ncomponents target'),
-    #                  x = c(0.02),
-    #                  y = c(60),
-    #                  showarrow = T,
-    #                  ax = c(-100),
-    #                  ay = c(45),
-    #                  xref = "paper",
-    #                  yref = "y",
-    #                  yanchor = "center",
-    #                  xanchor = "left",
-    #                  align = "left",
-    #                  # textangle = -90,
-    #                  font = list(color = '#FF0000', size = local_font-1),
-    #                  arrowhead = 2,
-    #                  arrowcolor = '#FF0000',
-    #                  arrowsize = 3,
-    #                  arrowwidth = 0.5 
-    # ) %>%
     config( responsive = TRUE,
             displaylogo = FALSE,
             displayModeBar = F

@@ -62,7 +62,7 @@ rotation_angle <- valueofd/total * 360
 # plot chart ----
 mydonutchart(data_prep, 
              height = local_height,
-             colors = c('#196AB4', '#00B0F0', '#FFC000', '#585858' ),
+             colors = c('#196AB4', '#00B0F0', PRBActualColor, '#585858' ),
              hovertemplate = "%{label}: %{value}",
              title_text = local_title_text,
              title_font_size = local_title_font_size,

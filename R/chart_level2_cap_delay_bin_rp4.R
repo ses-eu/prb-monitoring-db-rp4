@@ -57,7 +57,7 @@ c_suffix <- "%"
 c_decimals <- 0
 
 ### trace parameters
-c_colors = c('#4472C4', '#EF7D22', '#A0A0A0', '#FDB014', '#5B9BD5')
+c_colors = c('#4472C4', '#EF7D22', '#A0A0A0', '#FDB014', PRBPlannedColor)
 ###set up order of traces
 c_factor <- c('<5 min',
               '5 - 15 min',

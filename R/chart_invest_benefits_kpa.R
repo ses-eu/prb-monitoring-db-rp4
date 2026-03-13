@@ -75,7 +75,7 @@ if (knitr::is_latex_output()) {
 }
 
 mylocalfactor <- if (country == rp_full) c("Union-wide average") else c("ANSP", "Union-wide median", NULL)
-mylocalcolors <- if (country == rp_full) c('#58595B')else c('#FFC000', '#58595B')
+mylocalcolors <- if (country == rp_full) c('#58595B')else c(PRBActualColor, '#58595B')
 
 # plot chart ----
 myplot <- mybarchart2(data_prep, 

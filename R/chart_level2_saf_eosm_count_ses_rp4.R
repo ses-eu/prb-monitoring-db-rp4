@@ -187,10 +187,6 @@ myplot <- mybarchart2(data_prep,
     inherit = FALSE
   )
 
-# colors = c('#585858',  '#FFC000', '#00B0F0', '#196AB4'),
-
-
-
 myplot
 
 

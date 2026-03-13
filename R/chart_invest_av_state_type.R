@@ -57,7 +57,7 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = myheight+40,
-                      colors = c('#5B9BD5','#FFC000'),
+                      colors = c(PRBPlannedColor, PRBActualColor),
                       local_factor = c("New and additional major investments",
                                        "Other new investments",
                                        NULL),

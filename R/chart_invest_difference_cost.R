@@ -244,7 +244,7 @@ myplot <- mybarchart2(data_prep,
     name = "Threshold",                  
     hoverinfo = "skip",
     line = list(
-      color = '#FF0000',
+      color = PRBTargetColor,
       width = 2,
       dash = "dash"
     ),

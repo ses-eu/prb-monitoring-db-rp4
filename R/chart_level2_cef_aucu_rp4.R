@@ -31,7 +31,7 @@ data_prep <- data_pre_prep |>
 # chart parameters ----
 c_chart_title <- paste0("AUCU")
 c_axis_title <- "AUCU (€/SU)"
-c_barcolor <- c( '#5B9BD5', 'transparent', '#BFBFBF', '#9DC3E6')
+c_barcolor <- c( PRBPlannedColor, 'transparent', '#BFBFBF', '#9DC3E6')
 c_textcolor <- 'black'
 c_legend_y_position <- -0.28
 c_margin = list (t = 60, b = 80)
