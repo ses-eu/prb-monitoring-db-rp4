@@ -152,6 +152,14 @@ for (i in 1:length(level2_files)) {
     ecz2: '", ecz_list$ecz_name[2], "'
     tcz1: '", tcz_list$tcz_name[1], "'
     tcz2: '", tcz_list$tcz_name[2], "'
+    
+    rp_short: '", rp_short, "'
+    rp_year_summary: '", rp_year_summary, "'
+    rp_year1: '", rp_years[1], "'
+    rp_year2: '", rp_years[2], "'
+    rp_year3: '", rp_years[3], "'
+    rp_year4: '", rp_years[4], "'
+    rp_year5: '", rp_years[5], "'
   "
   )
   
@@ -166,7 +174,7 @@ if (out_format == 'web') {
   tx <- str_replace(tx, 'destination-dir/', external_address)
   ## set home address for other year reports
   tx <- str_replace(tx, 'home_address', home_address)
-  tx <- str_replace(tx, 'country_lower', country_lower)  
+  # tx <- str_replace(tx, 'country_lower', country_lower)  
   ## add check box to year report
   tx <- str_replace(tx, paste0('text: "', toupper(year_folder), '"'),
                         paste0('text: "<span style= \'color: #2151bf\'>', toupper(year_folder), ' &#10003</span>"'))

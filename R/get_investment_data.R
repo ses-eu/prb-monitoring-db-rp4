@@ -113,7 +113,7 @@ data_funding_sdm <-  read_xlsx(
          type = "SDM data")
 
 data_funding <- rbind(data_funding_self, data_funding_sdm) %>% 
-  mutate(year = if_else(year == paste0("total_rp", rp,"_to_date"), paste0("RP",rp), year))
+  mutate(year = if_else(year == paste0("total_rp", rp,"_to_date"), rp_short, year))
   
 ## SES case ----
 data_cost_ses <-  read_xlsx(

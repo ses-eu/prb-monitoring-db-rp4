@@ -10,7 +10,7 @@ if (!exists("data_new_major")) {
 data_prep <- data_funding %>% 
   filter(member_state == .env$country) %>% 
   mutate(
-    value = if_else(as.numeric(year) > year_report & year != paste0("RP",rp), NA, value/10^6)
+    value = if_else(as.numeric(year) > year_report & year != rp_short, NA, value/10^6)
   ) %>% 
   pivot_wider(id_cols = c(year), names_from ="type", values_from = "value") %>% 
  mutate (
@@ -78,7 +78,7 @@ table1 <- mygtable(data_prep, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>%
   tab_style(
@@ -88,7 +88,7 @@ table1 <- mygtable(data_prep, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   )
 

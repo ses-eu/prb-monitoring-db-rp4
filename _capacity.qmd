@@ -339,13 +339,9 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `r if_else(length(cap_heading_ukraine) == 0, "", paste0("**Additional Information Related to Russia's War of Aggression Against Ukraine**<br><br>", cap_er_nsa_7))`
 
-`r if (params$year_report <= 2022) ":::: {.content-hidden}"`
-
 **En route Capacity Incentive Scheme**														
 
 `r cap_er_nsa_incentive`
-
-`r if (params$year_report <= 2022) "::::"`
 
 :::
 `r if (params$country == rp_full | params$country == "MUAC") ":::"`

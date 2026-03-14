@@ -9,8 +9,8 @@ if (!exists("data_cost_inv")) {
 # process data  ----
 data_prep1 <- data_funding %>% 
   filter(member_state == .env$country) %>% 
-  mutate(mymetric = if_else(as.numeric(year) > year_report & year != paste0("RP",rp), NA, value/10^6),
-         year = if_else(year == paste0("RP",rp), rp_full, year)) %>% 
+  mutate(mymetric = if_else(as.numeric(year) > year_report & year != rp_short, NA, value/10^6),
+         year = if_else(year == rp_short, rp_full, year)) %>% 
   arrange(year) %>% 
   select(
     xlabel = year,

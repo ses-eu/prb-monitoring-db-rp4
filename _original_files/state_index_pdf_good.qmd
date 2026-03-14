@@ -929,13 +929,13 @@ if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt
 if (exists("env_apt_4") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_4))}
 ```
 
-```{r table_level2_env_apt_pis, eval=(params$no_tcz != 0)}
+```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == rp_full)}
 #| file: R/table_level2_env_apt_pis.R
 #| include: false
 ```
 
 
-``` {r, eval=(params$no_tcz != 0), include=(params$no_tcz != 0)}
+``` {r, eval=!(params$no_tcz == 0 | params$country == rp_full), include=(!(params$no_tcz == 0 | params$country == rp_full)}
 #| echo: false
 #| results: asis
  
@@ -979,21 +979,9 @@ cat(make_quarto_latex_table_2level(
 cat(ifelse(env_mil_1 == '', 'n/a', quarto_paragraph_breaks(env_mil_1)))
 ```
 
-`r if (params$year_report != 2020) ":::: {.content-hidden}"`
-
-\needspace{2\baselineskip}
-
-**Military - related measures implemented or planned to improve environment and capacity**
-
-`r if (params$year_report != 2020) "::::"`
-
-`r if (params$year_report == 2020) ":::: {.content-hidden}"`
-
 \needspace{2\baselineskip}
 
 **Military - related measures implemented or planned to improve capacity**
-
-`r if (params$year_report == 2020) "::::"`
 
 ```{r env_mil_2, results = "asis"}
 cat(ifelse(env_mil_2 == '', 'n/a', quarto_paragraph_breaks(env_mil_2)))
@@ -1039,7 +1027,7 @@ if (params$country == "Luxembourg") {
 
 `r cap_er_conc1`
 
-`r if (params$no_tcz == 0 | params$year_report <= 2023) "::: {.content-hidden}"`
+`r if (params$no_tcz == 0) "::: {.content-hidden}"`
 
 ```{r cap-trm-prb}
 cap_trm_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "TRM_capacity", "Table_Findings_TRM_capacity")
@@ -1049,7 +1037,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `r cap_trm_conc1`
 
-`r if (params$no_tcz == 0 | params$year_report <= 2023) ":::"`
+`r if (params$no_tcz == 0) ":::"`
 
 
 
@@ -1117,8 +1105,6 @@ cat(quarto_paragraph_breaks(cap_er_nsa_6))
 cat(if_else(length(cap_heading_ukraine) == 0, "", paste0("**Additional Information Related to Russia's War of Aggression Against Ukraine**\n\n", quarto_paragraph_breaks(cap_er_nsa_7))))
 ```
 
-`r if (params$year_report <= 2022) "::::: {.content-hidden}"`
-
 \needspace{2\baselineskip}
 
 **En route Capacity Incentive Scheme**														
@@ -1126,8 +1112,6 @@ cat(if_else(length(cap_heading_ukraine) == 0, "", paste0("**Additional Informati
 ```{r cap_er_nsa_incentive, results = "asis"}
 cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
 ```
-
-`r if (params$year_report <= 2022) ":::::"`
 
 
 ### Other indicators
@@ -1330,10 +1314,10 @@ cef_level2_text <- get_cef_level2_text(czindex, cztype)
  
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
-  col_labels = c("Total costs - nominal (M€)", "2020‑2021", '2022', '2023', '2024'),
+  col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
   col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -1407,11 +1391,9 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("AUCU components (€/SU) – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("AUCU components (€/SU) – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Components of the AUCU in ", 
-                           if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))), 
+  col_labels = c(paste0("Components of the AUCU in ", as.character(year_report)), 
              "€/SU"
              ),
   col_align = "lr",
@@ -1439,11 +1421,9 @@ cat(make_quarto_latex_table(
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("Cost exempt from cost sharing – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("Cost exempt from cost sharing – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Cost exempt from cost sharing by item - ", 
-                             if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  col_labels = c(paste0("Cost exempt from cost sharing by item - ", as.character(year_report)),
                          "€'000",
                         "€/SU"
   ),
@@ -1560,12 +1540,12 @@ cat(make_quarto_latex_table(
 
 \vspace{-20pt}
 
-```{r table_level2_cef_cost_infl_enroute2, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+```{r table_level2_cef_cost_infl_enroute2, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex) }
 #| file: R/table_level2_cef_cost_infl.R
 #| include: false
 ```
 
-``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex)}
+``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex) }
 #| echo: false
 #| results: asis
  
@@ -1630,11 +1610,9 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("AUCU components (€/SU) – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("AUCU components (€/SU) – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Components of the AUCU in ", 
-                           if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))), 
+  col_labels = c(paste0("Components of the AUCU in ", as.character(year_report)), 
              "€/SU"
              ),
   col_align = "lr",
@@ -1662,11 +1640,10 @@ cat(make_quarto_latex_table(
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("Cost exempt from cost sharing – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("Cost exempt from cost sharing – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Cost exempt from cost sharing by item - ", 
-                             if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  col_labels = c(paste0("Cost exempt from cost sharing by item - ",
+                        as.character(year_report)),
                          "€'000",
                         "€/SU"
   ),
@@ -1779,16 +1756,16 @@ cef_level2_text <- get_cef_level2_text(czindex, cztype)
  
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
-  col_labels = c("Total costs - nominal (M€)", "2020‑2021", '2022', '2023', '2024'),
+  col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
   col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
 \vspace{-20pt}
 
-```{r table_level2_cef_cost_infl_terminal1, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+```{r table_level2_cef_cost_infl_terminal1, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex) }
 #| file: R/table_level2_cef_cost_infl.R
 #| include: false
 ```
@@ -1861,11 +1838,9 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("AUCU components (€/SU) – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("AUCU components (€/SU) – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Components of the AUCU in ", 
-                           if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))), 
+  col_labels = c(paste0("Components of the AUCU in ", as.character(year_report)),
              "€/SU"
              ),
   col_align = "lr",
@@ -1892,11 +1867,10 @@ cat(make_quarto_latex_table(
 #| echo: false
 #| results: asis
 cat(make_quarto_latex_table(
-  title = paste0("Cost exempt from cost sharing – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("Cost exempt from cost sharing – ",as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Cost exempt from cost sharing by item - ", 
-                             if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  col_labels = c(paste0("Cost exempt from cost sharing by item - ",
+                        as.character(year_report)),
                          "€'000",
                         "€/SU"
   ),
@@ -2008,10 +1982,10 @@ cef_level2_text <- get_cef_level2_text(czindex, cztype)
  
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
-  col_labels = c("Total costs - nominal (M€)", "2020‑2021", '2022', '2023', '2024'),
+  col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
   col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -2089,11 +2063,9 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("AUCU components (€/SU) – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("AUCU components (€/SU) – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Components of the AUCU in ", 
-                           if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))), 
+  col_labels = c(paste0("Components of the AUCU in ", as.character(year_report)), 
              "€/SU"
              ),
   col_align = "lr",
@@ -2121,11 +2093,10 @@ cat(make_quarto_latex_table(
 #| results: asis
  
 cat(make_quarto_latex_table(
-  title = paste0("Cost exempt from cost sharing – ",
-                      if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  title = paste0("Cost exempt from cost sharing – ", as.character(year_report)),
   df = data_prep_pdf,
-  col_labels = c(paste0("Cost exempt from cost sharing by item - ", 
-                             if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  col_labels = c(paste0("Cost exempt from cost sharing by item - ",
+                        as.character(year_report)),
                          "€'000",
                         "€/SU"
   ),

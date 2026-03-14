@@ -14,7 +14,7 @@ data_prep_a <- data_benefit_ses %>%
   select(-state, -status) %>% 
   pivot_wider(names_from = "year", values_from = "value") %>% 
   mutate(
-    !!paste0("RP", rp) := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
+    !!rp_short := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
   ) %>% 
   rename_with(
     ~ paste0(.x, "A"),
@@ -28,7 +28,7 @@ data_prep_d <- data_benefit_ses %>%
   select(-state, -status) %>% 
   pivot_wider(names_from = "year", values_from = "value") %>% 
   mutate(
-    !!paste0("RP", rp) := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
+    !!rp_short := rowSums(across(all_of(as.character(rp_years))), na.rm = TRUE)
   ) %>% 
   rename_with(
     ~ paste0(.x, "D"),
@@ -60,7 +60,7 @@ table1 <- mygtable(data_prep_d, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP",rp)
+      columns = rp_short
     )
   ) %>% 
   fmt_number(
@@ -94,7 +94,7 @@ table2 <- mygtable(data_prep_a, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>% 
   fmt_number(

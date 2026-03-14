@@ -46,7 +46,7 @@ data_calc_summary <- data_calc %>%
   group_by(category, type) %>% 
   summarise(value = sum(value, na.rm = TRUE)) %>% 
   ungroup() %>% 
-  mutate(year = paste0("RP", rp)) %>% 
+  mutate(year = rp_short) %>% 
   select(category, year, type, value) 
 
 data_prep <- rbind(data_calc, data_calc_summary) %>% 
@@ -155,7 +155,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>%
   tab_style(
@@ -165,7 +165,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   )%>% 
   cols_width(
@@ -220,7 +220,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>%
   tab_style(
@@ -230,7 +230,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   )%>% 
   cols_width(
@@ -278,7 +278,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_body(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>%
   tab_style(
@@ -288,7 +288,7 @@ table3 <- mygtable(data_prep3, myfont) %>%
       weight = px(2)
     ),
     locations = cells_column_labels(
-      columns = paste0("RP", rp)
+      columns = rp_short
     )
   ) %>% 
   cols_width(

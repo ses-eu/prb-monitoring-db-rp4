@@ -165,18 +165,18 @@ website:
     contents:
       - section: '<b style= "font-size: 1.2rem">Year report</b>'
         contents:
-          - text: "RP3"
-            href: 'home_address/rp3/country_lower/index.html#main'
-          - text: "2024"
-            href: 'home_address/2024/country_lower/index.html#main'
-          - text: "2023"
-            href: 'home_address/2023/country_lower/index.html#main'
-          - text: "2022"
-            href: 'home_address/2022/country_lower/index.html#main'
-          - text: "2021"
-            href: 'home_address/2021/country_lower/index.html#main'
-          - text: "2020"
-            href: 'home_address/2020/country_lower/index.html#main'
+          - text: "{{< var rp_short >}}"
+            href: 'home_address/{{< var rp_year_summary >}}/{{< var country_lower >}}/index.html#main'
+          - text: "{{< var rp_year5 >}}"
+            href: 'home_address/{{< var rp_year5 >}}/{{< var country_lower >}}/index.html#main'
+          - text: "{{< var rp_year4 >}}"
+            href: 'home_address/{{< var rp_year4 >}}/{{< var country_lower >}}/index.html#main'
+          - text: "{{< var rp_year3 >}}"
+            href: 'home_address/{{< var rp_year3 >}}/{{< var country_lower >}}/index.html#main'
+          - text: "{{< var rp_year2 >}}"
+            href: 'home_address/{{< var rp_year2 >}}/{{< var country_lower >}}/index.html#main'
+          - text: "{{< var rp_year1 >}}"
+            href: 'home_address/{{< var rp_year1 >}}/{{< var country_lower >}}/index.html#main'
       - text: "---"
       - text: '<b style= "font-size: 1.2rem">country placeholder</b>'
         href: index.html

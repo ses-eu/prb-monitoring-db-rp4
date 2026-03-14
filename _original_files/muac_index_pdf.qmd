@@ -330,10 +330,10 @@ cat(make_quarto_latex_table_2level(
  
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
-  col_labels = c("Total costs - nominal (M€)", "2020‑2021", '2022', '2023', '2024'),
+  col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
   col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 

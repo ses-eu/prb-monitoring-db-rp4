@@ -9,7 +9,7 @@ if (!exists("data_capex")) {
 # process data  ----
 data_prep <- data_funding %>% 
   filter(member_state == .env$country | member_state == rp_full) %>% 
-  filter(type != "SDM data" & year == paste0("RP",rp)) %>% 
+  filter(type != "SDM data" & year == rp_short) %>% 
   select(member_state, value) %>% 
   mutate(
     type = case_when(

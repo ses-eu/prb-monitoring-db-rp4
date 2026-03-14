@@ -79,7 +79,7 @@ myplot <- mybarchart2(data_prep,
                       title_text = "Costs by type of investments - actual and determined",
                       title_y = 0.99,
                       
-                      yaxis_title = paste0("RP",rp," determined versus actual\ncost of investments (M€<sub>",cef_ref_year,"</sub>)"),
+                      yaxis_title = paste0(rp_short," determined versus actual\ncost of investments (M€<sub>",cef_ref_year,"</sub>)"),
                       yaxis_titlefont_size = myfont,
                       yaxis_ticksuffix = local_suffix,
                       yaxis_tickformat = ".0f",

@@ -71,7 +71,7 @@ data_prep_total <- data_prep_year %>%
   group_by(type) %>% 
   summarise(value = sum(if_else(as.numeric(year) > year_report, 0, value), na.rm = TRUE), .groups = "drop") %>% 
   ungroup() %>% 
-  mutate(year = paste0("RP",rp)) %>% select(type, year, value)
+  mutate(year = rp_short) %>% select(type, year, value)
 
 data_prep <- rbind(data_prep_year, data_prep_total) %>%
   pivot_wider( names_from = "type", values_from = "value" ) %>% 
