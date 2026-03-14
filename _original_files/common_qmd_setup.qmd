@@ -2,6 +2,10 @@
 params:
   home_address:   $home_address
   state_list:     $state_list
+  rp_years:       $rp_years
+  rp_min_year:    $rp_min_year 
+  rp_max_year:    $rp_max_year
+  rp_short:       $rp_short
   country:        $country
   year_report:    $year_report
   year_folder:    $year_folder
@@ -126,6 +130,10 @@ data_folder <- params$data_folder
 year_report <- params$year_report
 year_folder <- params$year_folder
 state_list <- params$state_list
+rp_years <- params$rp_years,
+rp_min_year <- params$rp_min_year,
+rp_max_year <- params$rp_max_year,
+rp_short <- params$rp_short,
 country <- params$country
 forecast <- params$forecast
 forecast_id <- params$forecast_id

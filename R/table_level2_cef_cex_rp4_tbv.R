@@ -118,8 +118,7 @@ data_prep_pdf <- data_prep %>%
 
 # plot table ----
 table1 <- mygtable(data_prep_pdf, myfont) %>% 
-  cols_label(xlabel = paste0("Cost exempt from cost sharing by item - ", 
-                             if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))),
+  cols_label(xlabel = paste0("Cost exempt from cost sharing by item - ",as.character(year_report)),
              mymetric = "€'000",
              myothermetric = "€/SU") %>% 
   tab_options(column_labels.background.color = "#F2F2F2",

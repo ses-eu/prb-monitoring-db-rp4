@@ -451,6 +451,11 @@ if (out_format == 'web') {
 # render site ----
   quarto::quarto_render(as_job = FALSE,
                         execute_params = list(home_address = home_address,
+                                              rp_years = rp_years,
+                                              rp_min_year = rp_min_year,
+                                              rp_max_year = rp_max_year,
+                                              rp_short = rp_short,
+                                              
                                               state_list = state_list, 
                                               country = country, 
                                               year_report = year_report,

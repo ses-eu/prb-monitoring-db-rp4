@@ -1,6 +1,7 @@
 # rp parameters ----
 rp <- 4
 rp_full <- paste0("SES RP", rp)
+rp_short <- paste0('RP', rp)
 rp_summary_year <- paste0('rp', rp)
 rp_years <- c(2025, 2026, 2027, 2028, 2029)
 rp_min_year <- min(rp_years)
