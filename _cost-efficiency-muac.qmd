@@ -12,7 +12,7 @@ cztype <- cz[[2]]
 ## PRB monitoring
 
 ```{r concl-cef-duc}
-cef_conc <- read_mytable("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF") %>%
+cef_conc <- read_mytable(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF") %>%
   filter(Year_Report == params$year_report, State == params$country) %>%
   select(Conclusion) %>% toString() %>% paste0(., "@")
 

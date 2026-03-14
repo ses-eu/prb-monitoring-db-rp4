@@ -188,6 +188,7 @@ mybarchart2(data_prep,
     showlegend = F
   )  %>%     
   layout(
+    xaxis=(list(range = c(rp_min_year-0.5, rp_max_year+0.5))),
     yaxis = list(
       # rangemode = "tozero",
       range = y1_range,
@@ -284,7 +285,5 @@ mybarchart2(data_prep,
         ay = 0
       ) 
       )
-  ) %>% 
-  add_empty_trace(data_prep)
-  
+  ) 
 

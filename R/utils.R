@@ -1,12 +1,3 @@
-# libraries ----
-# library(webshot)
-# library(data.table)
-# library(here)
-# library(fs)
-# library(purrr)
-# library(plotly)
-# library(gt)
-
 # functions ----
 ## right x characters function ----
   substrRight <- function(x, n){
@@ -1306,46 +1297,60 @@ replace_links <- function(filename) {
 }
 
 
-# ## get PRB conclusions  ----
-# as_markdown_bullets <- function(x) {
-#   # Split on 2+ newlines (blank-line separated paragraphs)
-#   items <- strsplit(x, "\\n{2,}", perl = TRUE)[[1]]
-#   items <- trimws(items)
-#   items <- items[nzchar(items)]
-#   
-#   # Remove leading unicode bullet if present
-#   items <- sub("^\\s*[▪•·]\\s*", "", items)
-#   
-#   # Emit Markdown bullets with a blank line between items
-#   paste0("- ", items, collapse = "\n\n")
-# }
-# 
-# get_prb_conclusions <- function(filename, kpi, table) {
-#   
-#   if (country == 'Network Manager') {
-#     conc <- read_mytable(filename, kpi, table) %>%
-#       filter(tolower(as.character(Year_Report)) == as.character(year_folder)) %>%
-#       select(Conclusion)
-#   } else {
-#     conc <- read_mytable(filename, kpi, table) %>%
-#       filter(tolower(as.character(Year_Report)) == as.character(year_folder), State == country) %>%
-#       select(Conclusion)
-#   }
-#   
-#   conc_string <- conc %>% 
-#     toString() %>% paste0(., if_else(nrow(conc) == 1, "", "@"))
-#   
-#   prb_conc <- conc_string %>% str_replace_all(c('", ' = '\n\n', '\"' = '', '\n\n\n' = '\n\n')) %>% str_replace(fixed('c('), '') %>%  str_replace(fixed(')@'), '\n')
-#   
-#   if (knitr::is_latex_output()) {
-#     prb_conc <- prb_conc %>%
-#       # str_replace_all(c('▪' = '\\\\textbullet\\\\quad ', '%' = '\\\\%'))  # Escape `%` for LaTeX
-#       as_markdown_bullets
-#   }
-#   
-#   return(prb_conc)
-# }
-# 
+# get PRB conclusions  ----
+as_markdown_bullets <- function(x) {
+  # Split on 2+ newlines (blank-line separated paragraphs)
+  items <- strsplit(x, "\\n{2,}", perl = TRUE)[[1]]
+  items <- trimws(items)
+  items <- items[nzchar(items)]
+
+  # Remove leading unicode bullet if present
+  items <- sub("^\\s*[▪•·]\\s*", "", items)
+
+  # Emit Markdown bullets with a blank line between items
+  paste0("- ", items, collapse = "\n\n")
+}
+
+get_prb_conclusions <- function(filename, kpi, table) {
+  # filename <- prb_findings_file 
+  # kpi <- "investments"
+  # table <- "Table_Findings_investments"
+  
+  if (country == 'Network Manager') {
+    conc <- read_xlsx(
+      here(data_folder, filename),
+      sheet = kpi,
+      range = cell_limits(c(1, 1), c(NA, NA))) %>%
+      as_tibble() %>%
+      clean_names() %>%
+      filter(year_report == as.character(year_folder)) %>%
+      select(conclusion)
+    
+  } else {
+    conc <- read_xlsx(
+      here(data_folder, filename),
+      sheet = kpi,
+      range = cell_limits(c(1, 1), c(NA, NA))) %>%
+      as_tibble() %>%
+      clean_names() %>%
+      filter(year_report == as.character(year_folder), state == country) %>%
+      select(conclusion)
+  }
+
+  conc_string <- conc %>%
+    toString() %>% paste0(., if_else(nrow(conc) == 1, "", "@"))
+
+  prb_conc <- conc_string %>% str_replace_all(c('", ' = '\n\n', '\"' = '', '\n\n\n' = '\n\n')) %>% str_replace(fixed('c('), '') %>%  str_replace(fixed(')@'), '\n')
+
+  if (knitr::is_latex_output()) {
+    prb_conc <- prb_conc %>%
+      # str_replace_all(c('▪' = '\\\\textbullet\\\\quad ', '%' = '\\\\%'))  # Escape `%` for LaTeX
+      as_markdown_bullets
+  }
+
+  return(prb_conc)
+}
+ 
 # ## latex tables for pdf  ----
 # mylatex <- function(gttable, firstcolumn = 2.7) {
 #   # latex_string <- table_level2_cef_aucu

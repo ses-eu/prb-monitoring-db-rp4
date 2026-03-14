@@ -1,4 +1,4 @@
-## main state parameters  ----
+# main state parameters  ----
 country_lower <- country %>% str_to_lower() %>% str_replace_all(., " ","-")
 
 if (country_lower == 'home') {
@@ -181,95 +181,95 @@ if(nrow(other_met)>0) {
   }
 }
 
-# get level 2 data files (not needed for SES or NM) ----
-if (country != "Network Manager" & country != rp_full & country != "Home") {
-
-## get ceff file ----
-if (country != "MUAC") {
-  ceff_files <- list.files(paste0(data_folder_a2, 'ceff/'))
-  ceff_file_canarias <- ""
-  
-  for (i in 1:length(ceff_files)) {
-    if (grepl(country, ceff_files[i], fixed = TRUE) == TRUE) {
-      ceff_file <- ceff_files[i]
-    }
-    if (country == "Spain") {
-      if(grepl("Spain Continental", ceff_files[i], fixed = TRUE) == TRUE) {
-      ceff_file <- ceff_files[i]}
-      if(grepl("Spain Canarias", ceff_files[i], fixed = TRUE) == TRUE) {
-        ceff_file_canarias <- ceff_files[i]}
-      }
-  }
-  
-  file <-  paste0(data_folder_a2, "ceff/", ceff_file)
-  ceff_file <-  paste0(data_folder_a2, "ceff/", ceff_file)
-  ceff_file_canarias <-  paste0(data_folder_a2, "ceff/", ceff_file_canarias)
-}
-else {
-  ceff_file <- ""
-  ceff_file_canarias <- ""
-}
-
-# get er cap file ----
-cap_files <- list.files(paste0(data_folder_a2, 'cap/'))
-
-for (i in 1:length(cap_files)) {
-  if (grepl('RP3_monitoring_CAPACITY', cap_files[i], fixed = TRUE) == TRUE) {
-    cap_file <- cap_files[i]
-  }
-}
-
-cap_file <-  paste0(data_folder_a2, "cap/", cap_file)
-
-# get trm cap file ----
-for (i in 1:length(cap_files)) {
-  if (grepl('RP3_monitoring_CAP_ARP', cap_files[i], fixed = TRUE) == TRUE) {
-    cap_trm_file <- cap_files[i]
-  }
-}
-
-cap_trm_file <-  paste0(data_folder_a2, "cap/", cap_trm_file)
-
-# get env_kea file ----
-env_files <- list.files(paste0(data_folder_a2, 'env/'))
-
-for (i in 1:length(env_files)) {
-  if (grepl('RP3_monitoring_KEA_VOL2', env_files[i], fixed = TRUE) == TRUE) {
-    env_kea_file <- env_files[i]
-  }
-}
-
-env_kea_file <-  paste0(data_folder_a2, "env/", env_kea_file)
-
-# get env_apt file ----
-for (i in 1:length(env_files)) {
-  if (grepl('RP3_monitoring_ENV_ARP_VOL2', env_files[i], fixed = TRUE) == TRUE) {
-    env_apt_file <- env_files[i]
-  }
-}
-
-env_apt_file <-  paste0(data_folder_a2, "env/", env_apt_file)
-
-# get env_mil file
-for (i in 1:length(env_files)) {
-  if (grepl('RP3_monitoring_ENV_MIL_VOL2', env_files[i], fixed = TRUE) == TRUE) {
-    env_mil_file <- env_files[i]
-  }
-}
-
-env_mil_file <-  paste0(data_folder_a2, "env/", env_mil_file)
-
-# get saf file ----
-saf_files <- list.files(paste0(data_folder_a2, 'saf/'))
-
-for (i in 1:length(env_files)) {
-  if (grepl('_Safety', saf_files[i], fixed = TRUE) == TRUE) {
-    saf_eosm_file <- saf_files[i]
-  }
-}
-
-saf_eosm_file <-  paste0(data_folder_a2, "saf/", saf_eosm_file)
-} else {
+# # get level 2 data files (not needed for SES or NM) ----
+# if (country != "Network Manager" & country != rp_full & country != "Home") {
+# 
+# ## get ceff file ----
+# if (country != "MUAC") {
+#   ceff_files <- list.files(paste0(data_folder_a2, 'ceff/'))
+#   ceff_file_canarias <- ""
+#   
+#   for (i in 1:length(ceff_files)) {
+#     if (grepl(country, ceff_files[i], fixed = TRUE) == TRUE) {
+#       ceff_file <- ceff_files[i]
+#     }
+#     if (country == "Spain") {
+#       if(grepl("Spain Continental", ceff_files[i], fixed = TRUE) == TRUE) {
+#       ceff_file <- ceff_files[i]}
+#       if(grepl("Spain Canarias", ceff_files[i], fixed = TRUE) == TRUE) {
+#         ceff_file_canarias <- ceff_files[i]}
+#       }
+#   }
+#   
+#   file <-  paste0(data_folder_a2, "ceff/", ceff_file)
+#   ceff_file <-  paste0(data_folder_a2, "ceff/", ceff_file)
+#   ceff_file_canarias <-  paste0(data_folder_a2, "ceff/", ceff_file_canarias)
+# }
+# else {
+#   ceff_file <- ""
+#   ceff_file_canarias <- ""
+# }
+# 
+# # get er cap file ----
+# cap_files <- list.files(paste0(data_folder_a2, 'cap/'))
+# 
+# for (i in 1:length(cap_files)) {
+#   if (grepl('RP3_monitoring_CAPACITY', cap_files[i], fixed = TRUE) == TRUE) {
+#     cap_file <- cap_files[i]
+#   }
+# }
+# 
+# cap_file <-  paste0(data_folder_a2, "cap/", cap_file)
+# 
+# # get trm cap file ----
+# for (i in 1:length(cap_files)) {
+#   if (grepl('RP3_monitoring_CAP_ARP', cap_files[i], fixed = TRUE) == TRUE) {
+#     cap_trm_file <- cap_files[i]
+#   }
+# }
+# 
+# cap_trm_file <-  paste0(data_folder_a2, "cap/", cap_trm_file)
+# 
+# # get env_kea file ----
+# env_files <- list.files(paste0(data_folder_a2, 'env/'))
+# 
+# for (i in 1:length(env_files)) {
+#   if (grepl('RP3_monitoring_KEA_VOL2', env_files[i], fixed = TRUE) == TRUE) {
+#     env_kea_file <- env_files[i]
+#   }
+# }
+# 
+# env_kea_file <-  paste0(data_folder_a2, "env/", env_kea_file)
+# 
+# # get env_apt file ----
+# for (i in 1:length(env_files)) {
+#   if (grepl('RP3_monitoring_ENV_ARP_VOL2', env_files[i], fixed = TRUE) == TRUE) {
+#     env_apt_file <- env_files[i]
+#   }
+# }
+# 
+# env_apt_file <-  paste0(data_folder_a2, "env/", env_apt_file)
+# 
+# # get env_mil file
+# for (i in 1:length(env_files)) {
+#   if (grepl('RP3_monitoring_ENV_MIL_VOL2', env_files[i], fixed = TRUE) == TRUE) {
+#     env_mil_file <- env_files[i]
+#   }
+# }
+# 
+# env_mil_file <-  paste0(data_folder_a2, "env/", env_mil_file)
+# 
+# # get saf file ----
+# saf_files <- list.files(paste0(data_folder_a2, 'saf/'))
+# 
+# for (i in 1:length(env_files)) {
+#   if (grepl('_Safety', saf_files[i], fixed = TRUE) == TRUE) {
+#     saf_eosm_file <- saf_files[i]
+#   }
+# }
+# 
+# saf_eosm_file <-  paste0(data_folder_a2, "saf/", saf_eosm_file)
+# } else {
 cap_file <- ''
 cap_trm_file <- ''
 ceff_file <- ''
@@ -278,5 +278,5 @@ env_kea_file <- ''
 env_apt_file <- ''
 env_mil_file <- ''
 saf_eosm_file <- ''
-}
-
+# }
+# 

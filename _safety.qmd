@@ -1,191 +1,191 @@
 ```{r saf-level2-text}
 # define ranges and import data
-if (params$country == rp_full) {
-  saf_text_ses <- read_xlsx(
-    path = here::here(data_folder, "SAF_input_text.xlsx"),
-    sheet = "SAF_text",
-    range = cell_limits(c(1, 1), c(NA, NA))
-  ) %>%
-    as_tibble() %>%
-    janitor::clean_names()
-  
-## eosm
-  saf_eosm_text_df <- saf_text_ses %>% 
-    filter(topic == "EoSM" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(title, text)
+# if (params$country == rp_full) {
+#   saf_text_ses <- read_xlsx(
+#     path = here::here(data_folder, "SAF_input_text.xlsx"),
+#     sheet = "SAF_text",
+#     range = cell_limits(c(1, 1), c(NA, NA))
+#   ) %>%
+#     as_tibble() %>%
+#     janitor::clean_names()
+#   
+# ## eosm
+#   saf_eosm_text_df <- saf_text_ses %>% 
+#     filter(topic == "EoSM" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(title, text)
     
   saf_eosm_text <- '' 
   
-  for (i in 1:nrow(saf_eosm_text_df)) {
-    saf_eosm_text <- paste0(saf_eosm_text,
-                            saf_eosm_text_df$title[i],
-                            "<br><br>",
-                            saf_eosm_text_df$text[i],
-                            "<br><br>"
-    )
-  }
+  # for (i in 1:nrow(saf_eosm_text_df)) {
+  #   saf_eosm_text <- paste0(saf_eosm_text,
+  #                           saf_eosm_text_df$title[i],
+  #                           "<br><br>",
+  #                           saf_eosm_text_df$text[i],
+  #                           "<br><br>"
+  #   )
+  # }
 
 ## ri
-  saf_ri_text_df <- saf_text_ses %>% 
-    filter(topic == "RI" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(title, text)
+  # saf_ri_text_df <- saf_text_ses %>% 
+  #   filter(topic == "RI" & year == year_report) %>% 
+  #   arrange(numbering) %>% 
+  #   select(title, text)
     
   saf_ri_text <- '' 
   
-  for (i in 1:nrow(saf_ri_text_df)) {
-    saf_ri_text <- paste0(saf_ri_text,
-                            saf_ri_text_df$title[i],
-                            "<br><br>",
-                            saf_ri_text_df$text[i],
-                            "<br><br>"
-    )
-  }
+  # for (i in 1:nrow(saf_ri_text_df)) {
+  #   saf_ri_text <- paste0(saf_ri_text,
+  #                           saf_ri_text_df$title[i],
+  #                           "<br><br>",
+  #                           saf_ri_text_df$text[i],
+  #                           "<br><br>"
+  #   )
+  # }
   
 ## smi
-  saf_smi_text_df <- saf_text_ses %>% 
-    filter(topic == "SMI" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(title, text)
+  # saf_smi_text_df <- saf_text_ses %>% 
+  #   filter(topic == "SMI" & year == year_report) %>% 
+  #   arrange(numbering) %>% 
+  #   select(title, text)
     
   saf_smi_text <- '' 
   
-  for (i in 1:nrow(saf_smi_text_df)) {
-    saf_smi_text <- paste0(saf_smi_text,
-                            saf_smi_text_df$title[i],
-                            "<br><br>",
-                            saf_smi_text_df$text[i],
-                            "<br><br>"
-    )
-  }
+  # for (i in 1:nrow(saf_smi_text_df)) {
+  #   saf_smi_text <- paste0(saf_smi_text,
+  #                           saf_smi_text_df$title[i],
+  #                           "<br><br>",
+  #                           saf_smi_text_df$text[i],
+  #                           "<br><br>"
+  #   )
+  # }
   
 ## Quality reporting
-  saf_qr_text_df <- saf_text_ses %>% 
-    filter(topic == "Quality reporting" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(title, text)
+  # saf_qr_text_df <- saf_text_ses %>% 
+  #   filter(topic == "Quality reporting" & year == year_report) %>% 
+  #   arrange(numbering) %>% 
+  #   select(title, text)
     
   saf_qr_text <- '' 
   
-  for (i in 1:nrow(saf_qr_text_df)) {
-    saf_qr_text <- paste0(saf_qr_text,
-                            saf_qr_text_df$title[i],
-                            "<br><br>",
-                            saf_qr_text_df$text[i],
-                            "<br><br>"
-    )
-  }
+  # for (i in 1:nrow(saf_qr_text_df)) {
+  #   saf_qr_text <- paste0(saf_qr_text,
+  #                           saf_qr_text_df$title[i],
+  #                           "<br><br>",
+  #                           saf_qr_text_df$text[i],
+  #                           "<br><br>"
+  #   )
+  # }
   
   saf_asdr_text <- ''
     
-} else {
-  sheet <- country
-  
-  range <- "A15:G30"
-  saf_all <- read_range(saf_eosm_file, sheet, range) 
-  saf_all <- saf_all |> 
-      rename(a = 1) 
-  
-  # replace NAs by empty strings
-  saf_all[is.na(saf_all)] <- ""
-  
-  #define titles to lookup
-  saf_titles <- c("Observations",
-                  "**Observations**"
-  )
-  
-  saf_heading_positions <- which(saf_all$a %in% saf_titles)
-  
-  saf_eosm_text <- saf_all[(saf_heading_positions[1]+1):(saf_heading_positions[1]+1), 1]
-  
-  #additional saf text fro excel file
-   saf_text_country <- read_xlsx(
-    path = here::here(data_folder, "SAF_input_text.xlsx"),
-    sheet = "SAF_STATE_text",
-    range = cell_limits(c(1, 1), c(NA, NA))
-  ) %>%
-    as_tibble() %>%
-    janitor::clean_names() %>% 
-     filter(state == country)
-  
-## eosm
-  saf_eosm_text_df <- saf_text_country %>% 
-    filter(tolower(topic) == "eosm" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(text)
-    
-
-  for (i in 1:nrow(saf_eosm_text_df)) {
-    saf_eosm_text <- paste0(saf_eosm_text,
-                            if_else(i== 1, "<br><br>",""),
-                            saf_eosm_text_df$text[i],
-                            if_else(i== nrow(saf_eosm_text_df), "","<br><br>")
-    )
-  }
-
-## ri
-  saf_ri_text_df <- saf_text_country %>% 
-    filter(tolower(topic) == "ri" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(text)
-    
-  saf_ri_text <- '' 
-  
-  for (i in 1:nrow(saf_ri_text_df)) {
-    saf_ri_text <- paste0(saf_ri_text,
-                            saf_ri_text_df$text[i],
-                            if_else(i== nrow(saf_ri_text_df), "","<br><br>")
-    )
-  }
-  
-## smi
-  saf_smi_text_df <- saf_text_country %>% 
-    filter(tolower(topic) == "smis" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(text)
-    
-  saf_smi_text <- '' 
-  
-  for (i in 1:nrow(saf_smi_text_df)) {
-    saf_smi_text <- paste0(saf_smi_text,
-                            saf_smi_text_df$text[i],
-                            if_else(i== nrow(saf_smi_text_df), "","<br><br>")
-    )
-  }
-  
-## Quality reporting
-  saf_qr_text_df <- saf_text_country %>% 
-    filter(tolower(topic) == "quality reporting" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(text)
-    
-  saf_qr_text <- '' 
-  
-  for (i in 1:nrow(saf_qr_text_df)) {
-    saf_qr_text <- paste0(saf_qr_text,
-                            saf_qr_text_df$text[i],
-                            if_else(i== nrow(saf_qr_text_df), "","<br><br>")
-    )
-  }
-
-## asdr
-  saf_asdr_text_df <- saf_text_country %>% 
-    filter(tolower(topic) == "asdr" & year == year_report) %>% 
-    arrange(numbering) %>% 
-    select(text)
-    
-  saf_asdr_text <- '' 
-  
-  for (i in 1:nrow(saf_asdr_text_df)) {
-    saf_asdr_text <- paste0(saf_asdr_text,
-                            saf_asdr_text_df$text[i],
-                            if_else(i== nrow(saf_asdr_text_df), "","<br><br>")
-    )
-  }
-  
-  
-}
+# } else {
+#   sheet <- country
+#   
+#   range <- "A15:G30"
+#   saf_all <- read_range(saf_eosm_file, sheet, range) 
+#   saf_all <- saf_all |> 
+#       rename(a = 1) 
+#   
+#   # replace NAs by empty strings
+#   saf_all[is.na(saf_all)] <- ""
+#   
+#   #define titles to lookup
+#   saf_titles <- c("Observations",
+#                   "**Observations**"
+#   )
+#   
+#   saf_heading_positions <- which(saf_all$a %in% saf_titles)
+#   
+#   saf_eosm_text <- saf_all[(saf_heading_positions[1]+1):(saf_heading_positions[1]+1), 1]
+#   
+#   #additional saf text fro excel file
+#    saf_text_country <- read_xlsx(
+#     path = here::here(data_folder, "SAF_input_text.xlsx"),
+#     sheet = "SAF_STATE_text",
+#     range = cell_limits(c(1, 1), c(NA, NA))
+#   ) %>%
+#     as_tibble() %>%
+#     janitor::clean_names() %>% 
+#      filter(state == country)
+#   
+# ## eosm
+#   saf_eosm_text_df <- saf_text_country %>% 
+#     filter(tolower(topic) == "eosm" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(text)
+#     
+# 
+#   for (i in 1:nrow(saf_eosm_text_df)) {
+#     saf_eosm_text <- paste0(saf_eosm_text,
+#                             if_else(i== 1, "<br><br>",""),
+#                             saf_eosm_text_df$text[i],
+#                             if_else(i== nrow(saf_eosm_text_df), "","<br><br>")
+#     )
+#   }
+# 
+# ## ri
+#   saf_ri_text_df <- saf_text_country %>% 
+#     filter(tolower(topic) == "ri" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(text)
+#     
+  saf_ri_text <- ''
+#   
+#   for (i in 1:nrow(saf_ri_text_df)) {
+#     saf_ri_text <- paste0(saf_ri_text,
+#                             saf_ri_text_df$text[i],
+#                             if_else(i== nrow(saf_ri_text_df), "","<br><br>")
+#     )
+#   }
+#   
+# ## smi
+#   saf_smi_text_df <- saf_text_country %>% 
+#     filter(tolower(topic) == "smis" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(text)
+#     
+  saf_smi_text <- ''
+#   
+#   for (i in 1:nrow(saf_smi_text_df)) {
+#     saf_smi_text <- paste0(saf_smi_text,
+#                             saf_smi_text_df$text[i],
+#                             if_else(i== nrow(saf_smi_text_df), "","<br><br>")
+#     )
+#   }
+#   
+# ## Quality reporting
+#   saf_qr_text_df <- saf_text_country %>% 
+#     filter(tolower(topic) == "quality reporting" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(text)
+#     
+  saf_qr_text <- ''
+#   
+#   for (i in 1:nrow(saf_qr_text_df)) {
+#     saf_qr_text <- paste0(saf_qr_text,
+#                             saf_qr_text_df$text[i],
+#                             if_else(i== nrow(saf_qr_text_df), "","<br><br>")
+#     )
+#   }
+# 
+# ## asdr
+#   saf_asdr_text_df <- saf_text_country %>% 
+#     filter(tolower(topic) == "asdr" & year == year_report) %>% 
+#     arrange(numbering) %>% 
+#     select(text)
+#     
+  saf_asdr_text <- ''
+#   
+#   for (i in 1:nrow(saf_asdr_text_df)) {
+#     saf_asdr_text <- paste0(saf_asdr_text,
+#                             saf_asdr_text_df$text[i],
+#                             if_else(i== nrow(saf_asdr_text_df), "","<br><br>")
+#     )
+#   }
+#   
+#   
+# }
 
 ```
 ::: {.grid .align-items-center}
@@ -202,7 +202,7 @@ if (params$country == rp_full) {
 
 ## PRB monitoring
 ```{r concl-saf}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 `r saf_conc1`
@@ -211,7 +211,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 
 ## Effectiveness of Safety Management ([**EoSM**](`r params$home_address`/about.html#safety---effectiveness-of-safety-management-eosm-kpi1)) (KPI#1)
 
-```{r, eval = params$country != rp_full}
+```{r, eval = params$country != params$rp_full}
 #| label: chart_saf_eosm
 #| out.width: "100%"
 #| echo: false
@@ -227,7 +227,7 @@ source("R/chart_level1_saf.R")
 ::::::
 
 :::::: {.chart-container}  
-```{r, eval = params$country != rp_full}
+```{r, eval = params$country != params$rp_full}
 #| echo: false
 mycharts[[1]]
 ```
@@ -236,34 +236,34 @@ mycharts[[1]]
 `r if (params$no_saf_ansps >1) "::::"`
 
 
-`r if (params$country == rp_full | params$no_saf_ansps == 1) ":::: {.content-hidden}"`
+`r if (params$country == params$rp_full | params$no_saf_ansps == 1) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 
 :::::: {.chart-container}  
-```{r, eval = params$country != rp_full}
+```{r, eval = params$country != params$rp_full}
 #| echo: false
 mycharts[[1]]
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 1)}
+```{r, eval = (params$country != params$rp_full) & (params$no_saf_ansps > 1)}
 #| echo: false
 mycharts[[2]]
 ```
 :::::: 
 :::::
-`r if (params$country == rp_full | params$no_saf_ansps == 1) "::::"`
+`r if (params$country == params$rp_full | params$no_saf_ansps == 1) "::::"`
 
 
-`r if (params$country == rp_full | params$no_saf_ansps != 3) ":::: {.content-hidden}"`
+`r if (params$country == params$rp_full | params$no_saf_ansps != 3) ":::: {.content-hidden}"`
 ::::: {layout="[ 25, 50, 25 ]"}
 
 :::::: {#emptydiv}  
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 2)}
+```{r, eval = (params$country != params$rp_full) & (params$no_saf_ansps > 2)}
 #| echo: false
 mycharts[[3]]
 ```
@@ -272,47 +272,47 @@ mycharts[[3]]
 :::::: {#emptydiv}  
 :::::: 
 :::::
-`r if (params$country == rp_full | params$no_saf_ansps != 3) "::::"`
+`r if (params$country == params$rp_full | params$no_saf_ansps != 3) "::::"`
 
 
-`r if (params$country == rp_full | params$no_saf_ansps != 4) ":::: {.content-hidden}"`
+`r if (params$country == params$rp_full | params$no_saf_ansps != 4) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 2)}
+```{r, eval = (params$country != params$rp_full) & (params$no_saf_ansps > 2)}
 #| echo: false
 mycharts[[3]]
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 3)}
+```{r, eval = (params$country != params$rp_full) & (params$no_saf_ansps > 3)}
 #| echo: false
 mycharts[[4]]
 ```
 :::::: 
 :::::
-`r if (params$country == rp_full | params$no_saf_ansps != 4) "::::"`
+`r if (params$country == params$rp_full | params$no_saf_ansps != 4) "::::"`
 
 
-`r if (params$country != rp_full) ":::: {.content-hidden}"`
+`r if (params$country != params$rp_full) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 :::::: {.chart-container}  
-```{r chart_level2_saf_eosm_target_ses, eval = params$country == rp_full}
+```{r chart_level2_saf_eosm_target_ses, eval = params$country == params$rp_full}
 #| file: R/chart_level2_saf_eosm_target_ses.R
 #| out.width: "100%"
 ```
 ::::::
 
 :::::: {.chart-container}  
-```{r chart_saf_ansp_ses, eval = params$country == rp_full}
+```{r chart_saf_ansp_ses, eval = params$country == params$rp_full}
 #| file: R/chart_level1_saf_ses.R
 #| out.width: "100%"
 ```
 ::::::
 :::::
 
-```{r chart_level2_saf_eosm_ses_allstates, eval= params$country == rp_full}
+```{r chart_level2_saf_eosm_ses_allstates, eval= params$country == params$rp_full}
 #| file: R/chart_level2_saf_eosm_ses_allstates.R
 #| out.width: "100%"
 ```
@@ -320,21 +320,21 @@ mycharts[[4]]
 ::::: {layout="[ 55, 45 ]"}
 
 :::::: {.chart-container}  
-```{r chart_level2_saf_eosm_count_ses, eval= params$country == rp_full}
+```{r chart_level2_saf_eosm_count_ses, eval= params$country == params$rp_full}
 #| file: R/chart_level2_saf_eosm_count_ses.R
 #| out.width: "100%"
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r chart_level2_saf_maturity_count_ses, eval= params$country == rp_full}
+```{r chart_level2_saf_maturity_count_ses, eval= params$country == params$rp_full}
 #| file: R/chart_level2_saf_maturity_count_ses.R
 #| out.width: "100%"
 ```
 :::::: 
 :::::
 
-`r if (params$country != rp_full) "::::"`
+`r if (params$country != params$rp_full) "::::"`
 
 
 :::: {.callout-note collapse=true}
@@ -368,17 +368,17 @@ mycharts[[4]]
 :::::
 ::::
 
-`r if (params$country != rp_full) ":::: {.content-hidden}"`
-```{r chart_level2_saf_ri_per_state_ses, eval= (params$country == rp_full)}
+`r if (params$country != params$rp_full) ":::: {.content-hidden}"`
+```{r chart_level2_saf_ri_per_state_ses, eval= (params$country == params$rp_full)}
 #| file: R/chart_level2_saf_ri_per_state_ses.R
 #| out.width: "100%"
 ```
 
-```{r table_level2_saf_ri_apt_ses, eval= (params$country == rp_full)}
+```{r table_level2_saf_ri_apt_ses, eval= (params$country == params$rp_full)}
 #| file: R/table_level2_saf_ri_apt_ses.R
 #| out.width: "100%"
 ```
-`r if (params$country != rp_full) "::::"`
+`r if (params$country != params$rp_full) "::::"`
 
 
 :::: {layout="[ 20, 60, 20 ]"}
@@ -386,7 +386,7 @@ mycharts[[4]]
 :::::
 
 ::::: {.chart-container}  
-```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC") & (params$country != rp_full)}
+```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC") & (params$country != params$rp_full)}
 #| file: R/table_level2_saf_ri_apt.R
 #| out.width: "100%"
 ```
@@ -424,13 +424,13 @@ mycharts[[4]]
 :::::
 ::::
 
-`r if (params$country != rp_full) ":::: {.content-hidden}"`
-```{r chart_level2_saf_smi_per_state_ses, eval= (params$country == rp_full)}
+`r if (params$country != params$rp_full) ":::: {.content-hidden}"`
+```{r chart_level2_saf_smi_per_state_ses, eval= (params$country == params$rp_full)}
 #| file: R/chart_level2_saf_smi_per_state_ses.R
 #| out.width: "100%"
 ```
 
-`r if (params$country != rp_full) "::::"`
+`r if (params$country != params$rp_full) "::::"`
 
 ```{r table_level2_saf_smi_ansp}
 #| file: R/table_level2_saf_smi_ansp.R
@@ -450,7 +450,7 @@ mycharts[[4]]
 
 `r saf_qr_text`
 
-`r if (params$country == rp_full) ":::: {.content-hidden}"`
+`r if (params$country == params$rp_full) ":::: {.content-hidden}"`
 
 ## Use of automated safety data recording system (ASDRS) (PI#3)
 
@@ -459,7 +459,7 @@ mycharts[[4]]
 :::::
 
 ::::: {.chart-container}  
-```{r table_level2_saf_autotools, eval= (params$country != rp_full)}
+```{r table_level2_saf_autotools, eval= (params$country != params$rp_full)}
 #| file: R/table_level2_saf_autotools.R
 #| out.width: "100%"
 ```
@@ -485,7 +485,7 @@ mycharts[[4]]
 
 ::::
 
-`r if (params$country == rp_full) "::::"`
+`r if (params$country == params$rp_full) "::::"`
 
 :::
 

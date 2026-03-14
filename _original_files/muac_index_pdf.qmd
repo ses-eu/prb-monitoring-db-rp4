@@ -131,7 +131,7 @@ Netherlands
 ## Safety
 
 ```{r concl-eosm}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 ```{r chart_eosm, options = (doclevel=c("level1"))}
@@ -146,7 +146,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 ## Capacity
 
 ```{r concl-cap}
-cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
 ```
 
 ```{r chart_cap_er}
@@ -161,7 +161,7 @@ cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_F
 ## Cost-efficiency
 
 ```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 ```{r chart_cef}

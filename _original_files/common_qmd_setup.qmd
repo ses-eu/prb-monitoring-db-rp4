@@ -2,10 +2,15 @@
 params:
   home_address:   $home_address
   state_list:     $state_list
+  rp:             $rp
   rp_years:       $rp_years
   rp_min_year:    $rp_min_year 
   rp_max_year:    $rp_max_year
+  rp_full:        $rp_full
   rp_short:       $rp_short
+  rp_summary_year: $rp_summary_year
+  cef_ref_year:   $cef_ref_year
+  
   country:        $country
   year_report:    $year_report
   year_folder:    $year_folder
@@ -44,7 +49,6 @@ params:
   mywidth:        $mywidth
   myheight:       $myheight
   myfont:         $myfont
-  mymargin:       $mymargin
   mylinewidth:    $mylinewidth
 
   mywidth_pdf:    $mywidth_pdf
@@ -62,6 +66,11 @@ params:
   env_apt_file:   $env_apt_file
   env_mil_file:   $env_mil_file
   saf_eosm_file:  $saf_eosm_file
+  
+  PRBPlannedColor: $PRBPlannedColor
+  PRBTargetColor: $PRBTargetColor
+  PRBActualColor: $PRBActualColor
+  PRBSecondBlue:  $PRBSecondBlue
   
   mysuffix:       $mysuffix
   mydecimals:     $mydecimals
@@ -121,7 +130,28 @@ params:
   mylegend_y:         $mylegend_y
   mylegend_font_size: $mylegend_font_size
   
-  mylocalmargin:      $mylocalmargin
+  mymargin:      $mymargin
+  
+  investments:        $investments
+  
+  context_data_file:  $context_data_file
+  lists_data_file:    $lists_data_file
+
+  ceff_data_file:     $ceff_data_file
+  cap_data_file:      $cap_data_file
+  env_data_file:      $env_data_file
+  saf_data_file:      $saf_data_file
+
+  nm_data_file:       $nm_data_file
+  ses_data_file:      $ses_data_file
+
+  statfor_mvt_data_file: $statfor_mvt_data_file
+  statfor_tsu_data_file: $statfor_tsu_data_file
+
+  targets_data_file:  $targets_data_file
+
+  prb_findings_file:  $prb_findings_file
+  investments_data_file: $investments_data_file
 ---
 
 ```{r, eval=TRUE}
@@ -130,10 +160,15 @@ data_folder <- params$data_folder
 year_report <- params$year_report
 year_folder <- params$year_folder
 state_list <- params$state_list
-rp_years <- params$rp_years,
-rp_min_year <- params$rp_min_year,
-rp_max_year <- params$rp_max_year,
-rp_short <- params$rp_short,
+rp <- params$rp
+rp_years <- params$rp_years
+rp_min_year <- params$rp_min_year
+rp_max_year <- params$rp_max_year
+rp_full <- params$rp_full
+rp_short <- params$rp_short
+rp_summary_year <- params$rp_summary_year
+cef_ref_year <- params$cef_ref_year
+
 country <- params$country
 forecast <- params$forecast
 forecast_id <- params$forecast_id
@@ -176,11 +211,16 @@ env_apt_file <- params$env_apt_file
 env_mil_file <- params$env_mil_file
 saf_eosm_file <- params$saf_eosm_file
 
+## colors
+PRBPlannedColor <- params$PRBPlannedColor
+PRBTargetColor <- params$PRBTargetColor
+PRBActualColor <- params$PRBActualColor
+PRBSecondBlue <- params$PRBSecondBlue
+
 ## chart parameters
 myheight <- params$myheight
 mywidth <- params$mywidth
 myfont <- params$myfont
-mymargin <- params$mymargin
 mylinewidth <- params$mylinewidth
 
 mysuffix <- params$mysuffix
@@ -249,10 +289,49 @@ mylegend_y <- params$mylegend_y
 mylegend_font_size <- params$mylegend_font_size
 
 #### margin
-mylocalmargin <- params$mylocalmargin
+mymargin <- params$mymargin
+
+### investments toggle
+investments <- params$investments
+### data files
+context_data_file <- params$context_data_file
+lists_data_file <- params$lists_data_file
+
+ceff_data_file <- params$ceff_data_file
+cap_data_file <- params$cap_data_file
+env_data_file <- params$env_data_file
+saf_data_file <- params$saf_data_file
+
+nm_data_file <- params$nm_data_file
+ses_data_file <- params$ses_data_file
+
+statfor_mvt_data_file <- params$statfor_mvt_data_file
+statfor_tsu_data_file <- params$statfor_tsu_data_file
+
+targets_data_file <- params$targets_data_file
+prb_findings_file <- params$prb_findings_file
+investments_data_file <- params$investments_data_file
 
 source("R/libraries.R")
 source("R/utils.R")
+
+## context ----
+## it is in repeated in the get_lists file but I need it in the quarto env
+airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%  clean_names()
+
+## data ----
+if(investments) {
+  if(!exists("data_inv_loaded")){
+    source("R/get_investment_data.R")
+  }
+  
+} else {
+ if(!exists("data_loaded")) {
+     source("R/get_data.R")
+ }
+}
+
+
 ```
 
 {{< include ./file-placeholder >}}

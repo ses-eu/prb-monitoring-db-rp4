@@ -34,6 +34,7 @@ if(country == rp_full){
 
 # prepare data ----
 data_prep <- data_raw |> 
+  filter(entity_code == mycz) %>% 
   mutate(mymetric = round(total_su/1000, 0),
          status = str_replace(status, "A", "Actual SUs"),
          status = str_replace(status, "D", "Planned SUs")

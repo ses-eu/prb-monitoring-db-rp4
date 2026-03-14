@@ -126,6 +126,8 @@ if (country == rp_full) {
     c_title <- paste0("En route service units - ", forecast, " - ", 
                       if_else(country == "Spain", 
                               country, ecz_list$ecz_name[1]))
+    c_title_y <- mytitle_y
+    c_margin <- mymargin
     c_legend_x <- 0
   }
 

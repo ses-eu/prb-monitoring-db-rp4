@@ -76,5 +76,5 @@ p1 <- mybarchart2(data_prep,
                   yaxis_tickformat = c_yaxis_tickformat
 ) 
 
-p1 %>% 
-  add_empty_trace(., data_prep)  
+p1 %>% layout(xaxis=(list(range = c(rp_min_year-0.5, rp_max_year+0.5))))
+

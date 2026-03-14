@@ -15,7 +15,7 @@ website:
     left: 
       - href: 'home_address'
         text: Home
-      - href: destination-dir/ses-rp3/
+      - href: destination-dir/ses-rp_summary_year/
         text: SES view
       - text: "State view"
         menu:
@@ -84,69 +84,69 @@ website:
         text: NM View
       - text: "Investments"
         menu:
-          - text: "SES RP4"
-            href: home_address/investments/rp3/ses-rp3
+          - text: rp_full
+            href: home_address/investments/rp_summary_year/ses-rp_summary_year
           - text: "---"
           - text: "Austria"
-            href: home_address/investments/rp3/austria
+            href: home_address/investments/rp_summary_year/austria
           - text: "Belgium"
-            href: home_address/investments/rp3/belgium
+            href: home_address/investments/rp_summary_year/belgium
           - text: "Bulgaria"
-            href: home_address/investments/rp3/bulgaria
+            href: home_address/investments/rp_summary_year/bulgaria
           - text: "Croatia"
-            href: home_address/investments/rp3/croatia
+            href: home_address/investments/rp_summary_year/croatia
           - text: "Cyprus"
-            href: home_address/investments/rp3/cyprus
+            href: home_address/investments/rp_summary_year/cyprus
           - text: "Czech Republic"
-            href: home_address/investments/rp3/czech-republic
+            href: home_address/investments/rp_summary_year/czech-republic
           - text: "Denmark"
-            href: home_address/investments/rp3/denmark
+            href: home_address/investments/rp_summary_year/denmark
           - text: "Estonia"
-            href: home_address/investments/rp3/estonia
+            href: home_address/investments/rp_summary_year/estonia
           - text: "Finland"
-            href: home_address/investments/rp3/finland
+            href: home_address/investments/rp_summary_year/finland
           - text: "France"
-            href: home_address/investments/rp3/france
+            href: home_address/investments/rp_summary_year/france
           - text: "Germany"
-            href: home_address/investments/rp3/germany
+            href: home_address/investments/rp_summary_year/germany
           - text: "Greece"
-            href: home_address/investments/rp3/greece
+            href: home_address/investments/rp_summary_year/greece
           - text: "Hungary"
-            href: home_address/investments/rp3/hungary
+            href: home_address/investments/rp_summary_year/hungary
           - text: "Ireland"
-            href: home_address/investments/rp3/ireland
+            href: home_address/investments/rp_summary_year/ireland
           - text: "Italy"
-            href: home_address/investments/rp3/italy
+            href: home_address/investments/rp_summary_year/italy
           - text: "Latvia"
-            href: home_address/investments/rp3/latvia
+            href: home_address/investments/rp_summary_year/latvia
           - text: "Lithuania"
-            href: home_address/investments/rp3/lithuania
+            href: home_address/investments/rp_summary_year/lithuania
           - text: "Luxembourg"
-            href: home_address/investments/rp3/luxembourg
+            href: home_address/investments/rp_summary_year/luxembourg
           - text: "Malta"
-            href: home_address/investments/rp3/malta
+            href: home_address/investments/rp_summary_year/malta
           - text: "MUAC"
-            href: home_address/investments/rp3/muac
+            href: home_address/investments/rp_summary_year/muac
           - text: "Netherlands"
-            href: home_address/investments/rp3/netherlands
+            href: home_address/investments/rp_summary_year/netherlands
           - text: "Norway"
-            href: home_address/investments/rp3/norway
+            href: home_address/investments/rp_summary_year/norway
           - text: "Poland"
-            href: home_address/investments/rp3/poland
+            href: home_address/investments/rp_summary_year/poland
           - text: "Portugal"
-            href: home_address/investments/rp3/portugal
+            href: home_address/investments/rp_summary_year/portugal
           - text: "Romania"
-            href: home_address/investments/rp3/romania
+            href: home_address/investments/rp_summary_year/romania
           - text: "Slovakia"
-            href: home_address/investments/rp3/slovakia
+            href: home_address/investments/rp_summary_year/slovakia
           - text: "Slovenia"
-            href: home_address/investments/rp3/slovenia
+            href: home_address/investments/rp_summary_year/slovenia
           - text: "Spain"
-            href: home_address/investments/rp3/spain
+            href: home_address/investments/rp_summary_year/spain
           - text: "Sweden"
-            href: home_address/investments/rp3/sweden
+            href: home_address/investments/rp_summary_year/sweden
           - text: "Switzerland"
-            href: home_address/investments/rp3/switzerland
+            href: home_address/investments/rp_summary_year/switzerland
             # ---
       - href: home_address/about.html
         text: About
@@ -155,7 +155,7 @@ website:
       - href: home_address/dataportal/
         text: Data Portal 
       # - href: https://www.eurocontrol.int/prudata/dashboard/
-      #   text: Data Portal {{< fa external-link-alt >}}
+      #   text: Data Portal {{< fa external-link-alt
       - href: https://eu-single-sky.transport.ec.europa.eu/index_en
         text: Publications {{< fa external-link-alt >}}
         target: "_blank"
@@ -165,18 +165,18 @@ website:
     contents:
       - section: '<b style= "font-size: 1.2rem">Year report</b>'
         contents:
-          - text: "{{< var rp_short >}}"
-            href: 'home_address/{{< var rp_year_summary >}}/{{< var country_lower >}}/index.html#main'
-          - text: "{{< var rp_year5 >}}"
-            href: 'home_address/{{< var rp_year5 >}}/{{< var country_lower >}}/index.html#main'
-          - text: "{{< var rp_year4 >}}"
-            href: 'home_address/{{< var rp_year4 >}}/{{< var country_lower >}}/index.html#main'
-          - text: "{{< var rp_year3 >}}"
-            href: 'home_address/{{< var rp_year3 >}}/{{< var country_lower >}}/index.html#main'
-          - text: "{{< var rp_year2 >}}"
-            href: 'home_address/{{< var rp_year2 >}}/{{< var country_lower >}}/index.html#main'
-          - text: "{{< var rp_year1 >}}"
-            href: 'home_address/{{< var rp_year1 >}}/{{< var country_lower >}}/index.html#main'
+          # - text: "rp_short"
+          #   href: 'home_address/rp_summary_year/country_lower/index.html#main'
+          # - text: "rp_year5"
+          #   href: 'home_address/rp_year5/country_lower/index.html#main'
+          # - text: "rp_year4"
+          #   href: 'home_address/rp_year4/country_lower/index.html#main'
+          # - text: "rp_year3"
+          #   href: 'home_address/rp_year3/country_lower/index.html#main'
+          # - text: "rp_year2"
+          #   href: 'home_address/rp_year2/country_lower/index.html#main'
+          - text: "rp_year1"
+            href: 'home_address/rp_year1/country_lower/index.html#main'
       - text: "---"
       - text: '<b style= "font-size: 1.2rem">country placeholder</b>'
         href: index.html
@@ -204,29 +204,29 @@ website:
           - text: "Main PRB findings"
             href: index.html#main-prb-findings--
           - text: "Traffic"
-            href: index.html#traffic-ses-rp3-area
+            href: index.html#traffic-ses-rp_summary_year-area
           - text: "Safety"
-            href: index.html#safety-ses-rp3-area
+            href: index.html#safety-ses-rp_summary_year-area
           - text: "Environment"
-            href: index.html#environment-ses-rp3-area
+            href: index.html#environment-ses-rp_summary_year-area
           - text: "Capacity"
-            href: index.html#capacity-ses-rp3-area
+            href: index.html#capacity-ses-rp_summary_year-area
           - text: "Cost-efficiency"
-            href: index.html#cost-efficiency-ses-rp3-area
+            href: index.html#cost-efficiency-ses-rp_summary_year-area
       - text: "---"
 # block level1 ses end
 # block level1 nm beginning
           - text: "Safety"
-            href: index.html#safety-network-manager---ses-rp3-area
+            href: index.html#safety-network-manager---ses-rp_summary_year-area
           - text: "Environment"
-            href: index.html#environment-network-manager---ses-rp3-area
+            href: index.html#environment-network-manager---ses-rp_summary_year-area
           - text: "Capacity"
-            href: index.html#capacity-network-manager---ses-rp3-area
+            href: index.html#capacity-network-manager---ses-rp_summary_year-area
           - text: "Cost-efficiency"
-            href: index.html#cost-efficiency-network-manager---ses-rp3-area
+            href: index.html#cost-efficiency-network-manager---ses-rp_summary_year-area
       - text: "---"
 # block level1 nm end
-# rp3 marker beg 
+# rp marker beg 
 # block level2 beginning
       - section: "<b>Safety</b>"
         href: safety.html
@@ -297,7 +297,7 @@ website:
 # include ECZ2 block              
 # include TCZ block              
 # block level2 end
-# rp3 marker end 
+# rp marker end 
 # 
   # site-url: "https://eurocontrol.int/"
 
@@ -309,7 +309,7 @@ website:
       - href: '/'
         text: '<span style= "font-size: 0.825rem">© European Union, 2025</span>'
       - href: home_address/disclaimer.html
-        text: '<span style= "font-size: 0.825rem">{{< fa triangle-exclamation >}} Disclaimer</span>'
+        text: '<span style= "font-size: 0.825rem">{{< fa triangle-exclamation Disclaimer</span>'
       # - href: mailto:prb-office@prb.eusinglesky.eu
       #   text: '<span style= "font-size: 0.825rem">{{< fa envelope color="#ffffff">}} prb-office@prb.eusinglesky.eu</span>'
       - text: '<span style= "font-size: 0.825rem">Website published by EUROCONTROL for the European Commission</span>'

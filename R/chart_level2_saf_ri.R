@@ -22,7 +22,7 @@ data_prep <- data_raw %>%
   filter(
     state == country,
     year <= year_report) |> 
-  select(-state, -type, -reference_period) |> 
+  select(year, rate_per_100_000, eu_wide_average) |> 
   pivot_longer(-c(year), names_to = "type", values_to = "mymetric") |> 
   mutate(xlabel = year,
          type = if_else(type == "rate_per_100_000",

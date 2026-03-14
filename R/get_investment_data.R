@@ -1,6 +1,3 @@
-if (exists("country") == FALSE) {country <- "Belgium"
-source("R/params_country.R")}
-
 # import data  ----
 ## State case ----
 data_new_major <-  read_xlsx(
@@ -137,3 +134,5 @@ data_benefit_ses_forchart <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+data_inv_loaded <- TRUE
+print(data_inv_loaded)

@@ -84,9 +84,9 @@ invisible(as.list(c_factor$type))
 c_factor <- sort(c_factor$type, decreasing = TRUE)
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-c_textangle <- -90
-c_textposition <- "inside"
-c_insidetextanchor <- "middle"
+c_textangle <- 0
+c_textposition <- "outside"
+c_insidetextanchor <- NULL
 
 ### layout parameters
 c_barmode <- 'group'

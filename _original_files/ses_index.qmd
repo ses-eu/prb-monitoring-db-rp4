@@ -145,7 +145,7 @@ met_ansp <- data_context %>% select(met_providers) %>% pull()
 ## Main PRB findings - `r toupper(year_folder)`
 
 ```{r main-concl}
-main_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "main", "Table_Findings_main")
+main_conc1 <- get_prb_conclusions(prb_findings_file, "main", "Table_Findings_main")
 ```
 
 `r main_conc1`
@@ -162,7 +162,7 @@ main_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "main", "Table_Findings_m
 
 :::: {#concl-mvt}
 ```{r concl-mvt}
-mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Findings_traffic_IFR")
+mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
 ```
 
 `r mvt_conc1`
@@ -182,7 +182,7 @@ mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Find
 
 :::: {#concl-su}
 ```{r concl-su}
-tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Findings_traffic_TSU")
+tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
 ```
 
 `r tsu_conc1`
@@ -204,7 +204,7 @@ tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Find
 
 :::: {#concl-saf}
 ```{r concl-saf}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 `r saf_conc1`
@@ -227,7 +227,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 
 :::: {#concl-env}
 ```{r concl-env}
-env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Findings_environment")
+env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
 ```
 
 `r env_conc1`
@@ -256,7 +256,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 :::: {#concl-cap}
 ```{r concl-cap}
-cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
 ```
 
 `r cap_er_conc1`
@@ -286,7 +286,7 @@ cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_F
 
 :::: {#concl-cef}
 ```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 `r cef_conc1`

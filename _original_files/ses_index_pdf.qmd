@@ -221,7 +221,7 @@ met_ansp_context <- data_context %>% select(met_providers) %>% pull()
 ## Main PRB findings - `r year_folder`
 
 ```{r main-concl}
-main_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "main", "Table_Findings_main")
+main_conc1 <- get_prb_conclusions(prb_findings_file, "main", "Table_Findings_main")
 ```
 
 `r main_conc1`
@@ -234,7 +234,7 @@ main_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "main", "Table_Findings_m
 ```
 
 ```{r mvt_conc1}
-mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Findings_traffic_IFR")
+mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
 ```
 
 ```{r chart_level1_traffic_mvt}
@@ -247,7 +247,7 @@ mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Find
 `r mvt_conc1`
 
 ```{r su_conc1}
-tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Findings_traffic_TSU")
+tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
 ```
 
 ```{r chart_level1_traffic_su}
@@ -262,7 +262,7 @@ tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Find
 ## Safety (`r rp_full` area)
 
 ```{r saf_conc1}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 ```{r chart_level1_saf_ses}
@@ -277,7 +277,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 ## Environment (`r rp_full` area)
 
 ```{r env_conc1}
-env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Findings_environment")
+env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
 ```
 
 ```{r chart_env_kea, options = (doclevel=c("level1"))}
@@ -306,7 +306,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 ```
 
 ```{r cap_er_conc1}
-cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
 ```
 
 `r cap_er_conc1`
@@ -314,7 +314,7 @@ cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_F
 ## Cost-efficiency (`r rp_full` area)
 
 ```{r cef_conc_l1}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 ```{r chart_level1_cef_er_ses}
@@ -529,7 +529,7 @@ cat(make_quarto_latex_table(
 ## PRB monitoring
 
 ```{r cap_prb}
-  cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+  cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
 ```
 
 `r cap_er_conc1`
@@ -623,7 +623,7 @@ cat(make_quarto_latex_table(
 
 :::: {#concl-cef-duc}
 ```{r concl_cef_duc}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 ::::
 

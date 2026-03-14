@@ -533,7 +533,7 @@ other_met_str_1 <- reduce(other_met_list, ~ paste(.x, .y, sep = fixed('`\\\\`{=t
 ## Traffic (En route traffic zone)
 
 ```{r mvt_conc}
-mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Findings_traffic_IFR")
+mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
 
 mvt_text <- break_l1_text(mvt_conc1) 
 mvt_text1 <- mvt_text$text1
@@ -550,7 +550,7 @@ mvt_text2 <- mvt_text$text2
 `r mvt_conc1`
 
 ```{r su_conc1}
-tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Findings_traffic_TSU")
+tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
 
 tsu_text <- break_l1_text(tsu_conc1) 
 tsu_text1 <- tsu_text$text1
@@ -569,7 +569,7 @@ tsu_text2 <- tsu_text$text2
 ## Safety (Main ANSP)
 
 ```{r saf_conc1}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 ```{r chart_saf_l1, options = (saf_ansp_index = 1)}
@@ -587,7 +587,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 ## Environment (Member State)
 
 ```{r concl_env}
-env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Findings_environment")
+env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
 ```
 
 ```{r chart_env_kea_l1, options = (doclevel=c("level1"))}
@@ -604,8 +604,8 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 ## Capacity (Member State)
 
 ```{r concl_cap}
-cap_er_conc1 <-  get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
-cap_trm_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "TRM_capacity", "Table_Findings_TRM_capacity")
+cap_er_conc1 <-  get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
+cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
 
 cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_conc1, "\n\n")), if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1))
 ```
@@ -631,7 +631,7 @@ cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_c
 ## Cost-efficiency (En route/Terminal charging zone(s))
 
 ```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 `r if ((params$no_ecz + params$no_tcz) >1) ":::: {.content-hidden}"`
@@ -1021,7 +1021,7 @@ cat(ifelse(env_mil_8 == '', 'n/a', quarto_paragraph_breaks(env_mil_8)))
 if (params$country == "Luxembourg") {
   cap_er_conc1 <- ""
   } else {
-  cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity")
+  cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
 }
 ```
 
@@ -1030,7 +1030,7 @@ if (params$country == "Luxembourg") {
 `r if (params$no_tcz == 0) "::: {.content-hidden}"`
 
 ```{r cap-trm-prb}
-cap_trm_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "TRM_capacity", "Table_Findings_TRM_capacity")
+cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
 
 cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
 ```
@@ -1254,7 +1254,7 @@ if (!exists("cap_trm_nsa_6")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa
 ## PRB monitoring
 
 ```{r concl_cef_duc_e1}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 `r cef_conc1`

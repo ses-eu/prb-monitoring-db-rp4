@@ -1,9 +1,9 @@
 ```{r saf_level2_text}
 # get yearly xrates
 
-xrate <- get_xrates("enroute", ecz_list$ecz_id[1]) |> 
-  filter(year == year_report) |> 
-  select(pp_exchangerate)
+xrate <- xrate_ert %>% 
+  filter(year == year_report, cz_code == ecz_list$ecz_id[1] ) |> 
+  select(xrate)
 
 xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 
@@ -156,7 +156,7 @@ tcz_list_string <- if_else(no_tcz == 0, '',
 
 :::: {#concl-mvt}
 ```{r concl-mvt}
-mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Findings_traffic_IFR")
+mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
 ```
 
 `r mvt_conc1`
@@ -176,7 +176,7 @@ mvt_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_IFR", "Table_Find
 
 :::: {#concl-su}
 ```{r concl-su}
-tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Findings_traffic_TSU")
+tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
 ```
 
 `r tsu_conc1`
@@ -189,8 +189,7 @@ tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Find
 
 ## Safety (Main ANSP)
 
-```{r chart-saf-code}
-#| label: chart_saf_eosm
+```{r chart_saf_eosm}
 #| out.width: "100%"
 #| echo: false
 
@@ -206,7 +205,7 @@ mycharts[[1]]
 
 :::: {#concl-saf}
 ```{r concl-saf}
-saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_safety")
+saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
 `r saf_conc1`
@@ -230,7 +229,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 
 :::: {#concl-env}
 ```{r concl-env}
-env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Findings_environment")
+env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
 ```
 
 `r env_conc1`
@@ -269,9 +268,9 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 :::: {#concl-cap}
 ```{r concl-cap}
-cap_er_conc1 <-  if_else(country == "Luxembourg", "", get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_Findings_ER_capacity"))
+cap_er_conc1 <-  if_else(country == "Luxembourg", "", get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity"))
 
-cap_trm_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "TRM_capacity", "Table_Findings_TRM_capacity")
+cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
 
 cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
 
@@ -331,7 +330,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 :::: {#concl-cef}
 ```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_Findings_CEFF")
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
 ```
 
 `r cef_conc1`

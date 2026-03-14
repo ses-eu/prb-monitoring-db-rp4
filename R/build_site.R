@@ -1,31 +1,15 @@
 # output flags ----
-# set to true for generating the investments page - do only if last year of rp (i.e. 2024 for rp3)
+# set to true for generating the investments page - do only if last year of rp (i.e. 2029 for rp4)
 investments <- FALSE
 
 # set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
 # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
-test_check <- FALSE       
+test_check <- TRUE       
 
-# get some stuff only once ----
+## libraries ----
+source("R/libraries.R")
 
-## parameters ----
-source("R/params_project.R")
-
-## functions ----
-source("R/utils.R")
-
-## data ----
-if (investments) {
-  source("R/get_investment_data.R")
-  
-} else {
-  source("R/get_data.R")
-  
-}
-
-
-
-for (i in 2024) {  # set your year(s) report here
+for (i in 2025) {  # set your year(s) report here
 ###NOTES ----
 # for the pdf output you need to install TinyTex in your machine
 ## 0. you can follow the instructions @ https://github.com/euctrl-pru/howto/wiki/Tools-Installation-and-Setup-%28For-R%29#the-tinytex-and-texlatex
@@ -40,12 +24,33 @@ for (i in 2024) {  # set your year(s) report here
 # C:\Users\oaolive\dev\quarto-1.6.39\bin\tools
 
 
-# clean environment and set main parameters ----
-  rm(list = setdiff(ls(), "i"))
-  # i<- 2021
+# get some stuff only once ----
+
+## functions ----
+if(!exists("substrRight")) {
+  source("R/utils.R")
+}
+  
+## project parameters
+if(!exists("rp")) {
+  source("R/params_project.R")
+}
+  
+## context ----
+if(!exists("params_table")) {
+  source("R/get_lists.R")
+}
+
+# set main parameters ----
+  # rm(list = setdiff(ls(), "i"))
+  # i<- 2029
   # rm(list = ls())
   if (i == 'rp4') {year_report <- 2029} else {year_report <- i}
   year_folder <- i 
+  
+  ## set site parameters
+  source("R/params_site.R")
+  
   out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
   ## set all_states to FALSE to build only one state site, TRUE for all
@@ -67,7 +72,7 @@ for (i in 2024) {  # set your year(s) report here
   #                         'Network Manager')
   
   if (!all_states) {
-    state_list_prod <- 'Home' # set your one country/stakeholder here (Home for home page)
+    state_list_prod <- 'Denmark' # set your one country/stakeholder here (Home for home page)
   } 
   
 # build state pages ----

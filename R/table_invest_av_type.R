@@ -2,9 +2,9 @@ if (exists("country") == FALSE) {country <- "Belgium"
 source("R/params_country.R")}
 
 # import data  ----
-if (!exists("data_new_major")) {
-  source("R/get_investment_data.R")
-}
+# if (!exists("data_new_major")) {
+#   source("R/get_investment_data.R")
+# }
 
 # process data  ----
 data_prep <- data_capex %>% 

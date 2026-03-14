@@ -1,3 +1,18 @@
+# remove and regenerate variables ----
+file.remove('_variables.yml')
+newvariables <- paste0("doc:
+    year_report: ", year_report, "
+    year_folder: ", toupper(as.character(year_folder)), "
+    country: '", country, "'
+    country_lower: '", country_lower, "'
+    ecz1: '", ecz_list$ecz_name[1], "'
+    ecz2: '", ecz_list$ecz_name[2], "'
+    tcz1: '", tcz_list$tcz_name[1], "'
+    tcz2: '", tcz_list$tcz_name[2], "'
+  "
+)
+
+cat(newvariables, file = "_variables.yml")
 
 # replace index, quarto yaml and css files ----
 ## quarto yaml
@@ -88,7 +103,7 @@ if (investments) {
   
 # generate level 2 .qmd master files ----
 ## set list of level 2 files depending on case
-if (investments | country == "Home" | country == "Network Manager" | year_folder == "rp3") {
+if (investments | country == "Home" | country == "Network Manager" | year_folder == rp_summary_year) {
   level2_files <- ""
   
 } else if(country == "MUAC") {
@@ -141,33 +156,19 @@ for (i in 1:length(level2_files)) {
   writeLines(tmp_text, level2_files[i])
 }
   
-# remove and regenerate variables ----
-  file.remove('_variables.yml')
-  newvariables <- paste0("doc:
-    year_report: ", year_report, "
-    year_folder: ", toupper(as.character(year_folder)), "
-    country: '", country, "'
-    country_lower: '", country_lower, "'
-    ecz1: '", ecz_list$ecz_name[1], "'
-    ecz2: '", ecz_list$ecz_name[2], "'
-    tcz1: '", tcz_list$tcz_name[1], "'
-    tcz2: '", tcz_list$tcz_name[2], "'
-    
-    rp_short: '", rp_short, "'
-    rp_year_summary: '", rp_year_summary, "'
-    rp_year1: '", rp_years[1], "'
-    rp_year2: '", rp_years[2], "'
-    rp_year3: '", rp_years[3], "'
-    rp_year4: '", rp_years[4], "'
-    rp_year5: '", rp_years[5], "'
-  "
-  )
-  
-  cat(newvariables, file = "_variables.yml")
-
 # modify _quarto.yml ----
 if (out_format == 'web') {
   tx  <- readLines("_quarto.yml")
+  ## rp parameters
+  tx <- str_replace(tx, 'rp_full', rp_full)
+  tx <- str_replace(tx, 'rp_summary_year', rp_summary_year)
+  tx <- str_replace(tx, 'rp_short', rp_short)
+  tx <- str_replace(tx, 'rp_year1', as.character(rp_years[1]))
+  tx <- str_replace(tx, 'rp_year2', as.character(rp_years[2]))
+  tx <- str_replace(tx, 'rp_year3', as.character(rp_years[3]))
+  tx <- str_replace(tx, 'rp_year4', as.character(rp_years[4]))
+  tx <- str_replace(tx, 'rp_year5', as.character(rp_years[5]))
+  
   ## replace string by country name as {{< var doc.country >}} gives problems in small screens
   tx <- str_replace(tx, 'country placeholder', country)
   ## set destination directory
@@ -353,8 +354,8 @@ if (out_format == 'web') {
       
       tx <- tx[-c(block_l2_cef_beg:block_l2_cef_end)]
       
-      ### add specific muac ceff except for year rp3
-      if (year_folder != 'rp3') {
+      ### add specific muac ceff except for year rp
+      if (year_folder != rp_summary_year) {
         tx_cef_muac <- readLines("_original_files/level2_cef_muac.yml")
         tx <- append(tx, tx_cef_muac, block_l2_cef_beg)
       }
@@ -440,13 +441,13 @@ if (out_format == 'web') {
 
   }
   
-  ## year = rp3 case ----
-  if (year_folder == "rp3") {
+  ## year = rp case ----
+  if (year_folder == rp_summary_year) {
     ### level 2
     ### find beginning and end of level 2 block to remove
       for (i in 1:length(tx)) {
-        if (tx[i] %like% 'rp3 marker beg') {block_l2_beg = i}
-        if (tx[i] %like% 'rp3 marker end') {block_l2_end = i}
+        if (tx[i] %like% 'rp marker beg') {block_l2_beg = i}
+        if (tx[i] %like% 'rp marker end') {block_l2_end = i}
       }  
     
     tx <- tx[-c(block_l2_beg:block_l2_end)]
@@ -459,10 +460,14 @@ if (out_format == 'web') {
 # render site ----
   quarto::quarto_render(as_job = FALSE,
                         execute_params = list(home_address = home_address,
+                                              rp = rp,
                                               rp_years = rp_years,
                                               rp_min_year = rp_min_year,
                                               rp_max_year = rp_max_year,
+                                              rp_full = rp_full,
                                               rp_short = rp_short,
+                                              rp_summary_year = rp_summary_year,
+                                              cef_ref_year = cef_ref_year,
                                               
                                               state_list = state_list, 
                                               country = country, 
@@ -500,13 +505,17 @@ if (out_format == 'web') {
                                               main_safety_ansp = main_safety_ansp,
                                               saf_ansps = saf_ansps,
                                               
+                                              PRBPlannedColor = PRBPlannedColor,
+                                              PRBTargetColor = PRBTargetColor,
+                                              PRBActualColor = PRBActualColor,
+                                              PRBSecondBlue = PRBSecondBlue,
+                                              
                                               # yearly_xrates = yearly_xrates,
                                               
                                               # chart_layout = chart_layout, 
                                               mywidth = mywidth,
                                               myheight = myheight,
                                               myfont = myfont,
-                                              mymargin = mymargin,
                                               mylinewidth = mylinewidth,
                                               
                                               mysuffix =mysuffix,
@@ -574,7 +583,7 @@ if (out_format == 'web') {
                                               mylegend_font_size =mylegend_font_size,
                                               
                                               #### margin
-                                              mylocalmargin = mylocalmargin,
+                                              mymargin = mymargin,
                                               
                                               ## pdf
                                               mywidth_pdf = mywidth_pdf,
@@ -592,7 +601,28 @@ if (out_format == 'web') {
                                               env_kea_file = env_kea_file,
                                               env_apt_file = env_apt_file,
                                               env_mil_file = env_mil_file,
-                                              saf_eosm_file = saf_eosm_file
+                                              saf_eosm_file = saf_eosm_file,
+                                              
+                                              # investments toggle
+                                              investments = investments,
+                                              # data files
+                                              context_data_file = context_data_file,
+                                              lists_data_file = lists_data_file,
+                                              ceff_data_file = ceff_data_file,
+                                              cap_data_file = cap_data_file,
+                                              env_data_file = env_data_file,
+                                              saf_data_file = saf_data_file,
+                                              
+                                              nm_data_file = nm_data_file,
+                                              ses_data_file = ses_data_file,
+                                              
+                                              statfor_mvt_data_file = statfor_mvt_data_file,
+                                              statfor_tsu_data_file = statfor_tsu_data_file,
+                                              
+                                              targets_data_file = targets_data_file,
+                                              
+                                              prb_findings_file = prb_findings_file,
+                                              investments_data_file = investments_data_file
                                               )
                         )
 

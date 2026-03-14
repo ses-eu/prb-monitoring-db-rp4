@@ -164,6 +164,7 @@ p1 %>%
                   yaxis = "y2"
   ) %>% 
   layout(
+    xaxis=(list(range = c(rp_min_year-0.5, rp_max_year+0.5))),
     yaxis = list(
       range = y1_range
     ),   # to force the zeros to coincide
@@ -176,6 +177,5 @@ p1 %>%
       ticksuffix = '%',
       side = 'right',
       showgrid = FALSE
-    )) %>%
-  add_empty_trace(., data_prep)  
+    )) 
 

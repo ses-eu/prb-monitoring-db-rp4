@@ -1,5 +1,5 @@
 if (!exists("country") | is.na(country)) {country = rp_full}
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
 
@@ -107,7 +107,6 @@ myplot <- mybarchart2(data_prep,
                       
                       hovertemplate = c_hovertemplate,
                 
-                      textangle = c_textangle,
                       textposition = c_textposition,
                       insidetextanchor = c_insidetextanchor,
                       
@@ -118,9 +117,9 @@ myplot <- mybarchart2(data_prep,
                       yaxis_ticksuffix = c_suffix,
                       yaxis_tickformat = c_yaxis_tickformat,
                       
-                      legend_y <- c_legend_y,
-                      legend_x <- c_legend_x,
-                      legend_xanchor <- c_legend_xanchor,
+                      legend_y = c_legend_y,
+                      legend_x = c_legend_x,
+                      legend_xanchor = c_legend_xanchor,
                       
                       margin = c_margin
 ) %>% 

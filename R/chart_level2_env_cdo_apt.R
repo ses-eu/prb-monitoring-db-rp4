@@ -66,6 +66,7 @@ myplot <- mybarchart2(data_prep,
                       local_factor = c_factor,
                       suffix = c_suffix,
                       decimals = c_decimals,
+                      hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
                       textposition = c_textposition,
