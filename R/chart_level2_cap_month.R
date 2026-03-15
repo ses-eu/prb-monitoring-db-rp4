@@ -72,6 +72,13 @@ if (country == rp_full) {
   
   ## prepare data ----
   data_prep_target <- data_raw_target %>% 
+    mutate(
+      atc_capacity = atc_capacity / ifr_movements,
+      atc_disruptions = atc_disruptions / ifr_movements,
+      atc_staffing = atc_staffing / ifr_movements,
+      other_non_atc = other_non_atc / ifr_movements,
+      weather = weather / ifr_movements
+    ) %>% 
     filter(
       state == .env$country,
       year == .env$year_report

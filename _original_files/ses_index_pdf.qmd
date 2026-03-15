@@ -335,7 +335,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 \needspace{3\baselineskip}
 
-`r if (year_folder == 'rp3') "::: {.content-hidden}"`
+`r if (year_folder == rp_summary_year) "::: {.content-hidden}"`
 
 # SAFETY - `r rp_full`
 
@@ -347,7 +347,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r layout_2fig("chart_level1_saf_ses", "chart_level2_saf_eosm_target_ses")`
 
-```{r chart_level2_saf_eosm_ses_allstates, eval=(year_folder != 'rp3')}
+```{r chart_level2_saf_eosm_ses_allstates, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_saf_eosm_ses_allstates.R
 #| out.width: "100%"
 #| fig.align: "center"
@@ -360,7 +360,9 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 \biggertext{Focus on EoSM}
 
-`r latex_linebreaks(saf_eosm_text)`
+```{r results = "asis"}
+cat(quarto_paragraph_breaks(saf_eosm_text))
+```
 
 \needspace{2\baselineskip}
 
@@ -369,20 +371,20 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_ri_year_report")`
 
-```{r chart_level2_saf_ri_per_state_ses, eval=(year_folder != 'rp3')}
+```{r chart_level2_saf_ri_per_state_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_saf_ri_per_state_ses.R
 #| out.width: "100%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
-```{r table_level2_saf_ri_apt_ses, eval=(year_folder != 'rp3')}
+```{r table_level2_saf_ri_apt_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_saf_ri_apt_ses.R
 #| include: false
 ```
 
 
-``` {r table_level2_saf_ri_apt_ses_p, eval=(year_folder != 'rp3')}
+``` {r table_level2_saf_ri_apt_ses_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -414,20 +416,20 @@ cat(make_quarto_latex_table_2level(
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_smi_year_report")`
 
-```{r chart_level2_saf_smi_per_state_ses, eval=(year_folder != 'rp3')}
+```{r chart_level2_saf_smi_per_state_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_saf_smi_per_state_ses.R
 #| out.width: "100%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
-```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != 'rp3')}
+```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_saf_smi_ansp_pdf1.R
 #| include: false
 ```
 
 
-``` {r table_level2_saf_smi_ansp_pdf1_p, eval=(year_folder != 'rp3')}
+``` {r table_level2_saf_smi_ansp_pdf1_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -446,12 +448,12 @@ cat(make_quarto_latex_table_2level(
 
 \vspace{-20pt}
 
-```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != 'rp3')}
+```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_saf_smi_ansp_pdf2.R
 #| include: false
 ```
 
-``` {r table_level2_saf_smi_ansp_pdf2_p, eval=(year_folder != 'rp3')}
+``` {r table_level2_saf_smi_ansp_pdf2_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -503,12 +505,12 @@ cat(make_quarto_latex_table_2level(
 
 ### Summary of performance at local level
 
-```{r table_kea_summary, eval=(year_folder != 'rp3')}
+```{r table_kea_summary, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_env_kea_all_states.R
 #| include: false
 ```
 
-``` {r table_kea_summary_p, eval=(year_folder != 'rp3')}
+``` {r table_kea_summary_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
 cat(make_quarto_latex_table(
@@ -542,7 +544,7 @@ cat(make_quarto_latex_table(
 
 `r layout_2fig("chart_cap_er_l2", "chart_cap_er_month")`
 
-```{r chart_cap_delay_bin, eval=(year_folder != 'rp3')}
+```{r chart_cap_delay_bin, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_delay_bin.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -551,13 +553,13 @@ cat(make_quarto_latex_table(
 
 ### Summary of performance at local level
 
-```{r table_cap_erdelay_summary, eval=(year_folder != 'rp3')}
+```{r table_cap_erdelay_summary, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_cap_erdelay_all_states.R
 #| include: false
 ```
 
 
-``` {r table_cap_erdelay_summary_p, eval=(year_folder != 'rp3')}
+``` {r table_cap_erdelay_summary_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
 cat(make_quarto_latex_table(
@@ -586,13 +588,13 @@ cat(make_quarto_latex_table(
 
 ### Summary of performance at local level
 
-```{r table_cap_arrdelay_summary, eval=(year_folder != 'rp3')}
+```{r table_cap_arrdelay_summary, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_cap_arrdelay_all_states.R
 #| include: false
 ```
 
 
-``` {r table_cap_arrdelay_summary_p, eval=(year_folder != 'rp3')}
+``` {r table_cap_arrdelay_summary_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
 cat(make_quarto_latex_table(
@@ -608,7 +610,7 @@ cat(make_quarto_latex_table(
 
 ### Other terminal performance indicators (PI#1-3)
 
-```{r chart_cap_all_causes_delay_ses, eval=(year_folder != 'rp3')}
+```{r chart_cap_all_causes_delay_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_all_causes_delay.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -634,7 +636,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r layout_2fig("chart_cef_duc_er_ses", "chart_cef_su")`
 
-```{r chart_cef_cost, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r chart_cef_cost, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cef_cost.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -642,19 +644,19 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 ```
 
 
-```{r table_cef_cost, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r table_cef_cost, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_cef_cost.R
 #| include: false
 ```
 
-``` {r table_cef_cost_p, eval=(year_folder != 'rp3')}
+``` {r table_cef_cost_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
-  col_align = "lrrrr",
+  col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
 ```
@@ -663,7 +665,7 @@ cat(make_quarto_latex_table(
 ### Summary of performance at local level
 
 :::: {#table-cef-summary}
-```{r table_cef_summary, options = (cztype="enroute"), eval=(year_folder != 'rp3')}
+```{r table_cef_summary, options = (cztype="enroute"), eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_cef_summary.R
 #| out.width: "100%"
 #| fig-asp: 1
@@ -672,19 +674,19 @@ cat(make_quarto_latex_table(
 
 ### Actual unit cost incurred by the users (AUCU) (PI#1)
 
-```{r chart_cef_aucu_enroute, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r chart_cef_aucu_enroute, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cef_aucu.R
 #| out.width: "52%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```  
 
-```{r table_level2_cef_aucu_enroute, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r table_level2_cef_aucu_enroute, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_cef_aucu.R
 #| include: false
 ```
 
-``` {r table_level2_cef_aucu_enroute_p, eval=(year_folder != 'rp3')}
+``` {r table_level2_cef_aucu_enroute_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -702,7 +704,7 @@ cat(make_quarto_latex_table(
 ```
 
 
-```{r chart_cef_cex_enroute, R.options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r chart_cef_cex_enroute, R.options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cef_cex.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -710,12 +712,12 @@ cat(make_quarto_latex_table(
 ```  
 
 
-```{r table_level2_cef_cex_enroute, R.options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
-#| file: R/table_level2_cef_cex.R
+```{r table_level2_cef_cex_enroute, R.options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 
-``` {r table_level2_cef_cex_enroute_p, eval=(year_folder != 'rp3')}
+``` {r table_level2_cef_cex_enroute_p, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -739,4 +741,4 @@ cat(make_quarto_latex_table(
 
 `r layout_2fig("chart_cef_reg_res_ansp", "chart_cef_net_res_main_ansp")`
 
-`r if (year_folder == 'rp3') ":::"`
+`r if (year_folder == params$rp_summary_year) ":::"`

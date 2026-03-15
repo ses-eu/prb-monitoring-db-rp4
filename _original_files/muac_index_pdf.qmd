@@ -186,7 +186,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 \needspace{3\baselineskip}
 
-`r if (year_folder == 'rp3') "::: {.content-hidden}"`
+`r if (year_folder == params$rp_summary_year) "::: {.content-hidden}"`
 
 # SAFETY - `r toupper(params$country)`
 
@@ -198,7 +198,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 ## Effectiveness of Safety Management (EoSM) (KPI#1)
 
-```{r chart_saf_eosm, options = (doclevel=c("level2")), eval=(year_folder != 'rp3')}
+```{r chart_saf_eosm, options = (doclevel=c("level2")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level1_saf.R
 #| out.width: "62%"
 #| fig.align: "center"
@@ -209,7 +209,9 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `\biggertext{Focus on EoSM}`{=latex}
 
-`r latex_linebreaks(saf_eosm_text)`
+```{r results = "asis"}
+cat(quarto_paragraph_breaks(saf_eosm_text))
+```
 
 \needspace{2\baselineskip}
 
@@ -219,13 +221,13 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r layout_2fig("chart_saf_smi", "chart_level2_saf_smi_year_report")`
 
-```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != 'rp3')}
+```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_saf_smi_ansp_pdf1.R
 #| include: false
 ```
 
 
-``` {r, eval=(year_folder != 'rp3')}
+``` {r, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -244,12 +246,12 @@ cat(make_quarto_latex_table_2level(
 
 \vspace{-20pt}
 
-```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != 'rp3')}
+```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_saf_smi_ansp_pdf2.R
 #| include: false
 ```
 
-``` {r, eval=(year_folder != 'rp3')}
+``` {r, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -271,14 +273,17 @@ cat(make_quarto_latex_table_2level(
 
 \biggertext{Focus on separation minima}
 
-`r latex_linebreaks(saf_smi_text)`
-
+```{r results = "asis"}
+cat(quarto_paragraph_breaks(saf_smi_text))
+```
 
 \needspace{2\baselineskip}
 
 ### Quality of occurences reporting 
 
-`r latex_linebreaks(saf_qr_text)`
+```{r results = "asis"}
+cat(quarto_paragraph_breaks(saf_qr_text))
+```
 
 \needspace{2\baselineskip}
 
@@ -303,7 +308,7 @@ cat(make_quarto_latex_table_2level(
 
 `r layout_2fig("chart_cap_atco", "chart_cap_atco_acc")`
 
-```{r chart_cap_sector_opening, eval=(year_folder != 'rp3')}
+```{r chart_cap_sector_opening, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_sector_opening.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -323,19 +328,19 @@ cat(make_quarto_latex_table_2level(
 ## Total costs
 
 
-```{r chart_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r chart_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cef_cost.R
 #| out.width: "52%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
-```{r table_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != 'rp3')}
+```{r table_cef_cost_muac, options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
 #| file: R/table_level2_cef_cost.R
 #| include: false
 ```
 
-``` {r, eval=(year_folder != 'rp3')}
+``` {r, eval=(year_folder != params$rp_summary_year)}
 #| echo: false
 #| results: asis
  
@@ -343,9 +348,9 @@ cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
-  col_align = "lrrrr",
+  col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
-`r if (year_folder == 'rp3') ":::"`
+`r if (year_folder == params$rp_summary_year) ":::"`

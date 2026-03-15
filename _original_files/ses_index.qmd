@@ -17,7 +17,7 @@ data_context_raw <-read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
-if (year_folder == "rp3") {
+if (year_folder == rp_summary_year) {
   data_context <- data_context_raw %>% 
     filter(year_report == .env$year_report) %>% 
     summarise(

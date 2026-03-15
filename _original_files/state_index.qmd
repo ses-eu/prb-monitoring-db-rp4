@@ -50,12 +50,12 @@ xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 <!-- ******************* 2nd column -->
 :::: {.column width="38%"}
 
-`r if (params$year_folder == "rp3") ":::: {.content-hidden}"`
+`r if (params$year_folder == params$rp_summary_year) ":::: {.content-hidden}"`
 ::::: columns
 :::::: {.column width="50%"}
 **Exchange rate (1 EUR=) **
 ::::::
-`r if (params$year_folder == "rp3") "::::"`
+`r if (params$year_folder == params$rp_summary_year) "::::"`
 
 :::::: {.column width="50%"}
 `r paste0(cef_ref_year, ": ", xrate_ref, " ", nat_curr)`\

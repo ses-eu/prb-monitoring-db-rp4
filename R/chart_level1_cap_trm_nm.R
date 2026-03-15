@@ -27,8 +27,8 @@ c_colors = PRBActualColor
 c_factor <- "Actual"
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-mytextposition <- "inside"
-myinsidetextanchor <- 'middle'
+c_textposition <- "inside"
+c_insidetextanchor <- 'middle'
 
 ### layout parameters
 c_barmode <- 'group'
@@ -50,7 +50,6 @@ myplot <- mybarchart2(filter(data_prep, type == "Actual"),
                       
                       hovertemplate = c_hovertemplate,
                       
-                      textangle = c_textangle,
                       textposition = c_textposition,
                       insidetextanchor = c_insidetextanchor,
                       

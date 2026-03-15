@@ -1,19 +1,7 @@
-# output flags ----
-# set to true for generating the investments page - do only if last year of rp (i.e. 2029 for rp4)
-investments <- FALSE
-
-# set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
-# set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
-test_check <- TRUE       
-
-## libraries ----
-source("R/libraries.R")
-
-for (i in 2025) {  # set your year(s) report here
-###NOTES ----
+#NOTES ----
 # for the pdf output you need to install TinyTex in your machine
 ## 0. you can follow the instructions @ https://github.com/euctrl-pru/howto/wiki/Tools-Installation-and-Setup-%28For-R%29#the-tinytex-and-texlatex
-## 1. or follow these steps, run install.packages("tinitex") in your console
+## 1. or follow these steps, run install.packages("tinytex") in your console
 ## 2. This will install it in the wrong folder C:\Users\[username]\AppData\Roaming
 ## 3. Cut it from there and paste it in C:\Users\[username]\dev\
 ## 4. Add  C:\Users\[username]\dev\TinyTeX\bin\windows to your path
@@ -24,33 +12,51 @@ for (i in 2025) {  # set your year(s) report here
 # C:\Users\oaolive\dev\quarto-1.6.39\bin\tools
 
 
-# get some stuff only once ----
+# toggles ----
+# set to true for generating the investments page - do only if last year of rp (i.e. 2029 for rp4)
+investments <- FALSE
 
-## functions ----
+# set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
+# set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
+test_check <- TRUE       
+
+out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
+
+## set all_states to FALSE to build only one state site, TRUE for all
+all_states <- FALSE # go after lists below if you wanto to manipulate the list
+single_state <- 'SES RP4' # set your one country/stakeholder here (Home for home page)
+
+# The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
+update_data <- FALSE
+
+if (update_data) {
+  # delete cached files 
+  unlink("_cache", recursive = TRUE, force = TRUE)
+  
+}
+
+# libraries ----
+source("R/libraries.R")
+
+# functions ----
 if(!exists("substrRight")) {
   source("R/utils.R")
 }
   
-## project parameters
+# project parameters ----
 if(!exists("rp")) {
   source("R/params_project.R")
 }
-  
-# set main parameters ----
-  # rm(list = setdiff(ls(), "i"))
-  # i<- 2029
-  # rm(list = ls())
-  if (i == 'rp4') {year_report <- 2029} else {year_report <- i}
-  year_folder <- i 
-  
-  ## set site parameters
-  source("R/params_site.R")
-  
-  out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
-  ## set all_states to FALSE to build only one state site, TRUE for all
-  all_states <- FALSE
-  
+# lists ----
+if(!exists("params_table")) {
+  source("R/get_lists.R")  
+}
+
+# manipulate state list to produce when all_state is TRUE
+if (!all_states) {
+  state_list_prod <- single_state
+} else {
   ## modify state list as required
   state_list_prod <- state_list
   # state_list_prod <- c(state_list, "Home")  #add home to list
@@ -65,12 +71,23 @@ if(!exists("rp")) {
   #                         'Slovenia',
   #                         'MUAC',
   #                         'Network Manager')
+}
+
+
+# loop ----
+for (i in 2025) {  # set your year(s) report here
+## set year-dependent parameters ----
+  # rm(list = setdiff(ls(), "i"))
+  # i<- 2029
+  # rm(list = ls())
+  if (i == rp_full) {year_report <- 2029} else {year_report <- i}
+  year_folder <- i 
   
-  if (!all_states) {
-    state_list_prod <- 'SES RP4' # set your one country/stakeholder here (Home for home page)
-  } 
+  ## set site parameters
+  source("R/params_site.R")
   
-# build state pages ----
+  
+## build state pages ----
   ## build pages
   for (i in 1:length(state_list_prod)) {
     country <- state_list_prod[i]
@@ -97,7 +114,7 @@ if(!exists("rp")) {
       files_to_be_deleted <- list.files(root_dir) 
       files_to_be_deleted <- files_to_be_deleted[files_to_be_deleted %like% c("202") == FALSE]
       files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "download") == FALSE]
-      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "rp3") == FALSE]
+      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == rp_summary_year) == FALSE]
       files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "investments") == FALSE]
       files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "dataportal") == FALSE]
       
@@ -164,5 +181,3 @@ if(!exists("rp")) {
 
 }
 
-# delete cached files to make sure they don't persist
-unlink("_cache", recursive = TRUE, force = TRUE)

@@ -1229,6 +1229,7 @@ replace_links <- function(filename) {
 
   # strings I do not want to modify
   not_modify <- c(paste0(home_address, "/", year_report,"/ses-rp3/"),
+                  paste0(home_address, "/", year_report,"/ses-rp4/"),
                   paste0(home_address, "/", year_report,"/network-manager/"),
                   paste0(home_address, "/", year_report,"/muac/")
   )
@@ -1254,7 +1255,7 @@ replace_links <- function(filename) {
                    paste0("\\1", replacement_link),
                    tmp_text)
 
-  # simplify links to rp3 summary page
+  # simplify links to rp summary page
 
   # Escape home address for regex
   escaped_home <- gsub("\\.", "\\\\.", home_address)
@@ -1263,7 +1264,7 @@ replace_links <- function(filename) {
   country_slug <- tolower(gsub("\\s+", "-", country))  # "Czech Republic" -> "czech-republic"
 
   # ✅ Capture entire match, NOT just the prefix — group only the part you want to keep
-  pattern2 <- paste0("(", escaped_home, "/rp3/", country_slug, "/)", "[^\\s\"'>]*")
+  pattern2 <- paste0("(", escaped_home, "/", rp_summary_year, "/", country_slug, "/)", "[^\\s\"'>]*")
 
   # ✅ Use correct backreference
   replacement_link2 <- "\\1"
@@ -1283,7 +1284,7 @@ replace_links <- function(filename) {
   if (country == rp_full) {
    tmp_text <- str_replace_all(tmp_text,
                               fixed("#effectiveness-of-safety-management-eosm-kpi1"),
-                              fixed("#actual-versus-planned-number-of-ansps-achieving-the-level-of-the-eosm-targets-for-rp3-ahead-of-2024"))
+                              fixed(paste0("#actual-versus-planned-number-of-ansps-achieving-the-level-of-the-eosm-targets-for-", rp_summary_year, "-ahead-of-",rp_max_year)))
   }
 
   #restore strings I didn't want modified
@@ -1411,235 +1412,121 @@ get_prb_conclusions <- function(filename, kpi, table) {
 #   return(latex_string)
 # }
 # 
-# ## latex layout 2 figures side by side  ----
-# layout_2fig <- function(chart1, chart2, width1 = 0.48, width2 = 0.48) {
-#   
-#   layout_string <- paste0('
-# ```{=tex}
-# \\begin{figure}[H]
-# \\centering
-# \\begin{minipage}{', width1, '\\linewidth}
-#     \\centering
-#     \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/', chart1, '-1.pdf}
-# \\end{minipage}%
-# \\hspace{0.015\\linewidth} % Adds a small empty space (2% of linewidth)
-# \\begin{minipage}{', width2, '\\linewidth}
-#     \\centering
-#     \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/', chart2, '-1.pdf}
-# \\end{minipage}%
-# \\end{figure}
-# ```
-# ')
-#   return(layout_string)
-# }
-# 
-# ## setup gt latex output  ----
-# setup_latex_table <- function(table1) {
-#   # table1 <- table_level2_cef_cex
-#   # remove the table env incompatible with the minipage we need
-#   tablestring <- table1 %>% 
-#     stringr::str_replace_all("\\\\begin\\{table\\}\\[!t\\]\\n",
-#                              "") %>% 
-#     stringr::str_replace_all("\\\\ \n",
-#                              "\\\\\n") %>%
-#     stringr::str_replace_all("\\\\end\\{table\\}\n",
-#                              "") 
-#   
-#   # remove this line that quarto adds to gt latex output
-#   layout_string <- fixed(tablestring)%>% 
-#     str_replace_all(fixed("\\begin{table}\n"),"")
-# 
-#   return(layout_string)
-# }
-# 
-# ## latex layout figure table side by side----
-# layout_fig_table <- function(chart1, table1, vspace, table2 = NULL) {
-#   
-#   layout_string <-paste0(
-#     "```{=tex}\n\\begin{figure}[H]
-# \\begin{minipage}{0.50\\linewidth}
-# %
-# \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/",chart1,"-1.pdf}
-# %
-# \\end{minipage}%
-# %
-# \\begin{minipage}{0.02\\linewidth}
-# 
-# \\hspace*{0.2cm}
-# 
-# \\end{minipage}%
-# %
-# \\begin{minipage}{0.48\\linewidth}\n",
-# "\\vspace*{", vspace, "cm}\n",
-# table1,
-# if_else(is.null(table2), "",paste0("
-# 
-# ", table2)),
-# "%
-# \\end{minipage}%\n
-# \\end{figure}%\n```\n"
-#     )
-#   
-#   return(layout_string)
-# }
-# 
-# ## latex layout summary table----
-# layout_summary_table <- function(table1, hspace = 0.1, left_margin = 0, width = 1) {
-#   
-#   layout_string <-paste0(
-#     "```{=tex}\n\\begin{figure}[H]
-# \\hspace*{", left_margin, "cm}
-# \\begin{minipage}{", hspace, "\\linewidth}
-# 
-# \\end{minipage}%
-# %
-# \\begin{minipage}{", (1-2*hspace)*width , "\\linewidth}\n",
-# table1,
-#     "%
-# \\end{minipage}%
-# %
-# \\begin{minipage}{", hspace, "\\linewidth}
-# 
-# \\end{minipage}%
-# %
-# \\end{figure}%\n```\n"
-#   )
-#   
-#   return(layout_string)
-# }
-# 
-# ## latex wrap text around figure ----
-# layout_wrap_figure <- function(chart1, chart2 = NULL, text, vspace, chart3 = NULL, boxsize = 7) {
-#   
-#   layout_string <-paste0(
-#     "```{=tex}\n\\sbox{0}{\\parbox{1\\textwidth}{
-# 
-# \\begin{wrapfigure}[", vspace ,"]{l}{0.5\\linewidth}
-# \\vspace{-15pt}
-# 
-# \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/",chart1,"-1.pdf}
-# 
-# ", if_else(is.null(chart2), "", paste0("\\vspace{10pt} % vertical space between charts,
-# 
-# \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/",chart2,"-1.pdf}
-# 
-# ")),
-#     if_else(is.null(chart3), "", paste0("\\vspace{10pt} % vertical space between charts,
-# 
-# \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/",chart3,"-1.pdf}
-# 
-# ")),
-# "\\end{wrapfigure}
-# 
-# \\setlength\\parskip{1em plus 0.8em} % Space between paragraphs
-# 
-# ", text,"
-# 
-# }}
-# \\ifdim\\dimexpr\\ht0+\\dp0<",boxsize,"cm 
-# \\dp0\\dimexpr",boxsize,"cm-\\ht0\\fi
-# 
-# \\fbox{\\usebox{0}}
-# 
-# ```\n"
-#   )
-#   
-#   return(layout_string)
-# }
-# 
-# ## setup quarto line breaks ----
-# # R/quarto_paragraph_breaks.R
-# quarto_paragraph_breaks <- function(x) {
-#   fix_italics_across_paragraphs <- function(s) {
-#     s <- gsub("\r\n", "\n", s, fixed = TRUE)
-#     
-#     n <- nchar(s)
-#     if (n == 0) return("")
-#     
-#     out <- character(0)
-#     italics_open <- FALSE
-#     i <- 1L
-#     
-#     char_at <- function(idx) {
-#       if (idx < 1L || idx > n) return("")
-#       substr(s, idx, idx)
-#     }
-#     
-#     is_escaped_asterisk <- function(idx) {
-#       idx > 1L && char_at(idx - 1L) == "\\"
-#     }
-#     
-#     is_double_asterisk <- function(idx) {
-#       char_at(idx) == "*" && char_at(idx + 1L) == "*"
-#     }
-#     
-#     is_list_marker <- function(idx) {
-#       if (char_at(idx) != "*") return(FALSE)
-#       if (char_at(idx + 1L) != " ") return(FALSE)
-#       idx == 1L || char_at(idx - 1L) == "\n"
-#     }
-#     
-#     is_toggle_asterisk <- function(idx) {
-#       char_at(idx) == "*" &&
-#         !is_escaped_asterisk(idx) &&
-#         !is_double_asterisk(idx) &&
-#         !is_list_marker(idx)
-#     }
-#     
-#     while (i <= n) {
-#       # Paragraph break handling
-#       if (char_at(i) == "\n" && char_at(i + 1L) == "\n") {
-#         if (italics_open) {
-#           # close before + reopen after paragraph break
-#           out <- c(out, "*", "\n\n", "*")
-#         } else {
-#           out <- c(out, "\n\n")
-#         }
-#         i <- i + 2L
-#         next
-#       }
-#       
-#       # Italics toggle on valid single '*'
-#       if (is_toggle_asterisk(i)) {
-#         italics_open <- !italics_open
-#         out <- c(out, "*")
-#         i <- i + 1L
-#         next
-#       }
-#       
-#       # default: copy char
-#       out <- c(out, char_at(i))
-#       i <- i + 1L
-#     }
-#     
-#     paste0(out, collapse = "")
-#   }
-#   
-#   tryCatch({
-#     if (is.null(x) || length(x) == 0) return("")
-#     if (length(x) > 1) x <- paste(x, collapse = "")
-#     if (is.na(x)) return("")
-#     
-#     s <- trimws(as.character(x))
-#     
-#     # Remove leading whitespace before common list markers (-, *, +)
-#     s <- gsub("(?m)^\\s+([-*+]\\s+)", "\\1", s, perl = TRUE)
-#     
-#     # Split on <br>, <br/>, <br />
-#     parts <- stringr::str_split(s, "<br\\s*/?>")[[1]]
-#     parts <- parts[trimws(parts) != ""]
-#     if (length(parts) == 0) return("")
-#     
-#     # Join into Quarto paragraphs
-#     s_out <- paste(parts, collapse = "\n\n")
-#     
-#     # Fix italics spans that would cross paragraph breaks
-#     fix_italics_across_paragraphs(s_out)
-#   }, error = function(e) "")
-# }
-# 
-# 
-# 
+# latex layout 2 figures side by side  ----
+layout_2fig <- function(chart1, chart2, width1 = 0.48, width2 = 0.48) {
+
+  layout_string <- paste0('
+```{=tex}
+\\begin{figure}[H]
+\\centering
+\\begin{minipage}{', width1, '\\linewidth}
+    \\centering
+    \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/', chart1, '-1.pdf}
+\\end{minipage}%
+\\hspace{0.015\\linewidth} % Adds a small empty space (2% of linewidth)
+\\begin{minipage}{', width2, '\\linewidth}
+    \\centering
+    \\includegraphics[width=1\\linewidth,height=\\textheight,keepaspectratio]{index_files/figure-pdf/', chart2, '-1.pdf}
+\\end{minipage}%
+\\end{figure}
+```
+')
+  return(layout_string)
+}
+
+# setup quarto line breaks ----
+# R/quarto_paragraph_breaks.R
+quarto_paragraph_breaks <- function(x) {
+  fix_italics_across_paragraphs <- function(s) {
+    s <- gsub("\r\n", "\n", s, fixed = TRUE)
+
+    n <- nchar(s)
+    if (n == 0) return("")
+
+    out <- character(0)
+    italics_open <- FALSE
+    i <- 1L
+
+    char_at <- function(idx) {
+      if (idx < 1L || idx > n) return("")
+      substr(s, idx, idx)
+    }
+
+    is_escaped_asterisk <- function(idx) {
+      idx > 1L && char_at(idx - 1L) == "\\"
+    }
+
+    is_double_asterisk <- function(idx) {
+      char_at(idx) == "*" && char_at(idx + 1L) == "*"
+    }
+
+    is_list_marker <- function(idx) {
+      if (char_at(idx) != "*") return(FALSE)
+      if (char_at(idx + 1L) != " ") return(FALSE)
+      idx == 1L || char_at(idx - 1L) == "\n"
+    }
+
+    is_toggle_asterisk <- function(idx) {
+      char_at(idx) == "*" &&
+        !is_escaped_asterisk(idx) &&
+        !is_double_asterisk(idx) &&
+        !is_list_marker(idx)
+    }
+
+    while (i <= n) {
+      # Paragraph break handling
+      if (char_at(i) == "\n" && char_at(i + 1L) == "\n") {
+        if (italics_open) {
+          # close before + reopen after paragraph break
+          out <- c(out, "*", "\n\n", "*")
+        } else {
+          out <- c(out, "\n\n")
+        }
+        i <- i + 2L
+        next
+      }
+
+      # Italics toggle on valid single '*'
+      if (is_toggle_asterisk(i)) {
+        italics_open <- !italics_open
+        out <- c(out, "*")
+        i <- i + 1L
+        next
+      }
+
+      # default: copy char
+      out <- c(out, char_at(i))
+      i <- i + 1L
+    }
+
+    paste0(out, collapse = "")
+  }
+
+  tryCatch({
+    if (is.null(x) || length(x) == 0) return("")
+    if (length(x) > 1) x <- paste(x, collapse = "")
+    if (is.na(x)) return("")
+
+    s <- trimws(as.character(x))
+
+    # Remove leading whitespace before common list markers (-, *, +)
+    s <- gsub("(?m)^\\s+([-*+]\\s+)", "\\1", s, perl = TRUE)
+
+    # Split on <br>, <br/>, <br />
+    parts <- stringr::str_split(s, "<br\\s*/?>")[[1]]
+    parts <- parts[trimws(parts) != ""]
+    if (length(parts) == 0) return("")
+
+    # Join into Quarto paragraphs
+    s_out <- paste(parts, collapse = "\n\n")
+
+    # Fix italics spans that would cross paragraph breaks
+    fix_italics_across_paragraphs(s_out)
+  }, error = function(e) "")
+}
+
+
+
 # ## setup latex line breaks ----
 # latex_linebreaks <- function(mystring) {
 # 
@@ -1727,7 +1614,7 @@ wrap_label <- function(label, width = 30) {
   paste(lines, collapse = "<br>")
 }
 
-## latex tables -----
+# latex tables -----
 make_quarto_latex_table <- function(
     title,
     df,
