@@ -1,4 +1,4 @@
-if (exists("cztype") == FALSE) {cztype = "enroute"}
+if (exists("cztype") == FALSE) {cztype = "terminal"}
 if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
@@ -87,6 +87,13 @@ if (country == rp_full) {
     filter(
       state == .env$country,
       year <= .env$year_report) %>% 
+    mutate(
+      atc_capacity = atc_capacity / ifr_movements,
+      atc_disruptions = atc_disruptions / ifr_movements,
+      atc_staffing = atc_staffing / ifr_movements,
+      other_non_atc = other_non_atc / ifr_movements,
+      weather = weather / ifr_movements,
+      ) %>% 
     rename(xlabel = year) %>% 
     pivot_longer(
       cols = c(atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc),
@@ -113,7 +120,7 @@ if (country == rp_full) {
     summarise(myothermetric = sum(mymetric)) %>%
     mutate(myothermetric = case_when(
       is.na(myothermetric) == TRUE ~ "",
-      .default = format(round(myothermetric,2), digits = 2))
+      .default = format(round(myothermetric,2), nsmall = 2))
            ) %>% 
     mutate(type = "Total")
 }

@@ -501,19 +501,28 @@ cap_ert_atfm_actual  <-  cap_ert_atfm_actual_mm %>%
     
   )
 
-cap_trm_atfm_actual  <-  read_xlsx(
-  here(data_folder, cap_data_file),
-  sheet = "terminal_atfm_delay",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
 cap_trm_atfm_actual_mm  <-  read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "terminal_atfm_delay_mm",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
   clean_names() 
+
+cap_trm_atfm_actual  <-  cap_trm_atfm_actual_mm %>% 
+  group_by(state, year) %>% 
+  summarise(
+    ifr_movements = sum(arrivals, na.rm = TRUE),
+    atc_capacity = sum(atc_capacity, na.rm = TRUE),
+    atc_disruptions = sum(atc_disruptions, na.rm = TRUE),
+    atc_staffing = sum(atc_staffing, na.rm = TRUE),
+    other_non_atc = sum(other_non_atc, na.rm = TRUE),
+    weather = sum(weather, na.rm = TRUE),
+    total_delay = sum(total_arrival_delay, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    average_delay_per_flight = total_delay / ifr_movements
+  )
 
 #### DELAY TIME BIN ----
 cap_delay_bin_actual  <-  read_xlsx(
