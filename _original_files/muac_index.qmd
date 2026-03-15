@@ -13,14 +13,9 @@
 cztype = "enroute"
 cz = c("1", "enroute")
 
-data_muac_raw  <-  read_xlsx(
-  paste0(data_folder, "CEFF dataset master.xlsx"),
-  sheet = "Enroute_T1",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names()
+data_muac_raw  <-  ceff_t1_ert
 
-if (year_folder == "rp3") {
+if (year_folder == rp_summary_year) {
   data_muac <- data_muac_raw |> 
   filter(grepl("MUAC", entity_code), status == "A") |> 
   mutate(
@@ -28,7 +23,7 @@ if (year_folder == "rp3") {
     entity_code = str_replace_all(entity_code, "_EL", "")
     ) |> 
   group_by(entity_code) |> 
-  summarise(x5_3_cost_nc2017 = sum(x5_3_cost_nc2017, na.rm = TRUE)) |> 
+  summarise(total_cost_eur_ref = sum(total_cost_eur_ref, na.rm = TRUE)) |> 
   ungroup()
   
 } else {
@@ -39,16 +34,16 @@ data_muac <- data_muac_raw |>
     entity_code = str_replace_all(entity_code, "_EL", "")
     ) |> 
   group_by(year, entity_code) |> 
-  summarise(x5_3_cost_nc2017 = sum(x5_3_cost_nc2017, na.rm = TRUE)) |> 
+  summarise(total_cost_eur_ref = sum(total_cost_eur_ref, na.rm = TRUE)) |> 
   ungroup()
   
 }
 
-total_muac_costs <- sum(data_muac$x5_3_cost_nc2017, na.rm = TRUE)
+total_muac_costs <- sum(data_muac$total_cost_eur_ref, na.rm = TRUE)
 
-share_EBEL <- paste0(round(pull(select(filter(data_muac, entity_code == "EBEL_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
-share_ED <- paste0(round(pull(select(filter(data_muac, entity_code == "ED_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
-share_EH <- paste0(round(pull(select(filter(data_muac, entity_code == "EH_MUAC"), x5_3_cost_nc2017)) / total_muac_costs *100,0), "%")
+share_EBEL <- paste0(round(pull(select(filter(data_muac, entity_code == "EBEL_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
+share_ED <- paste0(round(pull(select(filter(data_muac, entity_code == "ED_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
+share_EH <- paste0(round(pull(select(filter(data_muac, entity_code == "EH_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
 
 ```
 

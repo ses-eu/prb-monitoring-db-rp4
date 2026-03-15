@@ -13,8 +13,8 @@ cztype <- cz[[2]]
 
 ```{r concl-cef-duc}
 cef_conc <- read_mytable(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF") %>%
-  filter(Year_Report == params$year_report, State == params$country) %>%
-  select(Conclusion) %>% toString() %>% paste0(., "@")
+  filter(year_report == params$year_report, state == params$country) %>%
+  select(conclusion) %>% toString() %>% paste0(., "@")
 
 cef_conc1 <- cef_conc %>% str_replace_all(c('", ' = '\n\n', '\"' = '', '\n\n\n' = '\n\n')) %>% str_replace(fixed('c('), '') %>%  str_replace(fixed(')@'), '\n')
 ```

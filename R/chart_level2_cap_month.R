@@ -1,6 +1,6 @@
 if (!exists("country") | is.na(country)) {country = "Spain"}
 if (exists("cztype") == FALSE) {cztype = "terminal"}
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 

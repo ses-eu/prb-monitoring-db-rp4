@@ -1,4 +1,4 @@
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
 # import data  ----

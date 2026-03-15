@@ -2,7 +2,7 @@ if (!exists("country") | is.na(country)) {country = "MUAC"
 source("R/params_country.R")
 }
 
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
 

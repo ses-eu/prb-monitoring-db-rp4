@@ -1,4 +1,4 @@
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
@@ -20,7 +20,7 @@ c_suffix <- "%"
 c_decimals <- 1
 
 ### trace parameters
-mycolors = PRBActualColor
+c_colors = PRBActualColor
 
 ###set up order of traces
 c_factor <- "Actual"
@@ -52,8 +52,7 @@ myplot <- mybarchart2(data_prep,
                       
                       textposition = c_textposition,
                       insidetextanchor = c_insidetextanchor,
-                      textfont_color = c_textfont_color,
-                      
+
                       title_text = c_title_text,
                       
                       yaxis_title = c_yaxis_title,

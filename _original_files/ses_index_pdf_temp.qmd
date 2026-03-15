@@ -143,7 +143,7 @@ source(here("R","get_level2_text.R"))
 ## Contextual information
 ```{r fetch-data-ses, eval=TRUE}
 data_context <-read_xlsx(
-  paste0(data_folder, "SES file.xlsx"),
+  paste0(data_folder, ses_data_file),
   sheet = "Context",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 

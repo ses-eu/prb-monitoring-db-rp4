@@ -36,11 +36,6 @@ if(!exists("rp")) {
   source("R/params_project.R")
 }
   
-## context ----
-if(!exists("params_table")) {
-  source("R/get_lists.R")
-}
-
 # set main parameters ----
   # rm(list = setdiff(ls(), "i"))
   # i<- 2029
@@ -59,7 +54,7 @@ if(!exists("params_table")) {
   ## modify state list as required
   state_list_prod <- state_list
   # state_list_prod <- c(state_list, "Home")  #add home to list
-  # state_list_prod <- setdiff(state_list_prod, "Network Manager")  #remove state
+  state_list_prod <- setdiff(state_list_prod, "Bulgaria")  #remove state
   # states_from <- c(1:10) # 1st number is the index of 1st state from which you want to generate
   # state_list_prod <- state_list_prod[states_from]
   # state_list_prod <- list('Bulgaria',
@@ -72,7 +67,7 @@ if(!exists("params_table")) {
   #                         'Network Manager')
   
   if (!all_states) {
-    state_list_prod <- 'Denmark' # set your one country/stakeholder here (Home for home page)
+    state_list_prod <- 'SES RP4' # set your one country/stakeholder here (Home for home page)
   } 
   
 # build state pages ----
@@ -168,3 +163,6 @@ if(!exists("params_table")) {
   }
 
 }
+
+# delete cached files to make sure they don't persist
+unlink("_cache", recursive = TRUE, force = TRUE)

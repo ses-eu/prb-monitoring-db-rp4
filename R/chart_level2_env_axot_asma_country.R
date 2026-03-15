@@ -1,8 +1,6 @@
-############### Adapted to RP4
-
 ## import data  ----
-  if (!data_loaded) {
-    source("R/get_data.R")
+if (!exists("data_loaded")) {
+  source("R/get_data.R")
   } 
   
 data_raw_axot <- axot_actual_ms

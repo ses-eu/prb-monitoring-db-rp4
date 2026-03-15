@@ -275,7 +275,7 @@ myyaxis_ticksuffix <- params$myyaxis_ticksuffix
 myyaxis_tickformat <- params$myyaxis_tickformat
 
 myyaxis_zeroline <- params$myyaxis_zeroline
-myyaxis_zerolinecolor <- params$myyaxis_zerolinecolorv
+myyaxis_zerolinecolor <- params$myyaxis_zerolinecolor
 myyaxis_titlefont_size <- params$myyaxis_titlefont_size
 myyaxis_tickfont_size <- params$myyaxis_tickfont_size
 
@@ -317,7 +317,9 @@ source("R/utils.R")
 
 ## context ----
 ## it is in repeated in the get_lists file but I need it in the quarto env
-airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%  clean_names()
+# if(!exists("airports_table")) {
+#   airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%  clean_names()
+# }
 
 ## data ----
 if(investments) {
@@ -326,9 +328,61 @@ if(investments) {
   }
   
 } else {
- if(!exists("data_loaded")) {
-     source("R/get_data.R")
- }
+  #chatgpt
+# --- run-once cache for get_data.R (cache ALL created objects), namespaced by inputs ---
+# Requires: install.packages("digest")
+library(digest)
+
+cache_dir <- "_cache"
+dir.create(cache_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Build a cache key from the actual data inputs get_data.R reads
+cache_key <- list(
+  data_folder = normalizePath(data_folder, winslash = "/", mustWork = FALSE),
+  rp_min_year = rp_min_year,
+  rp_max_year = rp_max_year,
+  statfor_mvt_data_file = statfor_mvt_data_file,
+  statfor_tsu_data_file = statfor_tsu_data_file,
+  targets_data_file = targets_data_file,
+  saf_data_file = saf_data_file,
+  env_data_file = env_data_file,
+  cap_data_file = cap_data_file,
+  ceff_data_file = ceff_data_file,
+  nm_data_file = nm_data_file,
+  ses_data_file = ses_data_file,
+  lists_data_file = lists_data_file,
+  context_data_file = context_data_file
+)
+
+cache_file <- file.path(cache_dir, paste0("get_data_cache__", digest(cache_key), ".rds"))
+
+load_or_run_get_data <- function(script_path, cache_file) {
+  if (file.exists(cache_file)) {
+    objs <- readRDS(cache_file)
+    list2env(objs, envir = .GlobalEnv)
+    message("Loaded cached get_data objects: ", length(objs))
+    return(invisible(TRUE))
+  }
+
+  before <- ls(envir = .GlobalEnv, all.names = TRUE)
+
+  source(script_path, local = .GlobalEnv)
+
+  after <- ls(envir = .GlobalEnv, all.names = TRUE)
+  created <- setdiff(after, before)
+
+  # Don't cache helper objects created by this block
+  created <- setdiff(created, c("cache_dir", "cache_key", "cache_file", "load_or_run_get_data"))
+
+  objs <- mget(created, envir = .GlobalEnv)
+  saveRDS(objs, cache_file)
+
+  message("Cached get_data objects: ", length(objs), " -> ", cache_file)
+  invisible(TRUE)
+}
+
+# use it
+load_or_run_get_data("R/get_data.R", cache_file)
 }
 
 

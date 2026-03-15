@@ -1,5 +1,5 @@
 # import data  ----
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
 
@@ -104,7 +104,7 @@ data_prep_planned <- data_raw_planned %>%
 
 if (country == rp_full) {
   data_prep_planned <- data_raw_planned %>% 
-    filter(status == 'D',
+    filter(
            year >= rp_min_year) %>% 
     select(state, year, x121_ecz_su)  %>% 
     group_by(year) %>% summarise (tsu = sum(x121_ecz_su, na.rm=TRUE)) %>% 

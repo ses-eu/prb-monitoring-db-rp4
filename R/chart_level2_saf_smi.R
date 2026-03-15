@@ -1,11 +1,15 @@
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
 # import data  ----
 if (country == rp_full){
   ## SES case ----
-  data_raw  <-  saf_smi_actual_ses
+  data_raw  <-  saf_smi_actual_ses %>% 
+    mutate(
+      rate_per_100_000=NA
+    ) 
+    
   
 } else  {
   ## State case ----

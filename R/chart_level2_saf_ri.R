@@ -2,14 +2,20 @@ if (!exists("country") | is.na(country)) {country = rp_full
 source("R/params_country.R")
 }
 
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
 # import data  ----
 if (country == rp_full){
   ## SES case ----
-  data_raw  <-  saf_ri_actual_ses
+  data_raw  <-  saf_ri_actual_ses %>% 
+    mutate(
+      rate_per_100_000=NA
+    ) %>% 
+    rename(
+      eu_wide_average = eu_wide_average_per_100_000
+    )
     
 } else  {
   ## State case ----

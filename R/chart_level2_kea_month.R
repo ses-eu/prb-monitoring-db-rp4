@@ -1,6 +1,6 @@
 
 if (!exists("country") | is.na(country)) {country = rp_full}
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 

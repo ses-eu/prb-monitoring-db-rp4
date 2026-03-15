@@ -1,14 +1,14 @@
-if (!data_loaded) {
+if (!exists("data_loaded")) {
   source("R/get_data.R")
 } 
 
-if (exists("cztype") == FALSE) {cztype = "enroute"}
+if (exists("cztype") == FALSE) {cztype = "terminal"}
 
 # import data  ----
 ## dimension table ----
 if(cztype == "terminal"){
   cz_table <- tcz_list_table
-  data_raw_cz  <-  ceff_t1_trm %>% filter(entity_type == "TRM")
+  data_raw_cz  <-  ceff_t1_trm %>% filter(entity_type == "TCZ")
 } else {
   cz_table <- ecz_list_table
   data_raw_cz  <-  ceff_t1_ert %>% filter(entity_type == "ECZ")
