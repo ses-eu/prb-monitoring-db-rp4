@@ -1352,66 +1352,7 @@ get_prb_conclusions <- function(filename, kpi, table) {
   return(prb_conc)
 }
  
-# ## latex tables for pdf  ----
-# mylatex <- function(gttable, firstcolumn = 2.7) {
-#   # latex_string <- table_level2_cef_aucu
-#   latex_string <- gttable|> as_latex() %>%
-#     stringr::str_replace_all(fixed("{20}{25}"), 
-#                              fixed("{11}{11}")) %>% 
-#     stringr::str_replace_all(fixed("{10.5pt}{12.6pt}"), 
-#                              fixed("{8pt}{9.6pt}")) %>% 
-#     ## the open bracket here for the shaded caption is closed in the second replacement
-#     stringr::str_replace_all(fixed("caption*"), 
-#                              fixed("caption*{\\captionbar")) %>% 
-#     stringr::str_replace_all(fixed("\\fontsize{10}{13}\\selectfont }"), 
-#                              fixed("}}\\vspace{-6pt}")) %>% 
-#     #shading for column title row
-#     stringr::str_replace_all(fixed("\\toprule\n"), 
-#                              fixed("\\toprule\n\\rowcolor{HeaderShade}")) %>% 
-#     # Replace with 9pt font size
-#     stringr::str_replace(
-#       "\\\\large",  # Match \large
-#       "\\\\fontsize{9pt}{10.8pt}\\\\selectfont"  
-#     ) %>% 
-#     stringr::str_replace_all(
-#       c("✓" = "\\\\tick", "✘" = "\\\\cross")
-#     )
-#   
-#   # ensure the table fontsize is 8 pt
-#   if (!str_detect(latex_string, fixed("{8pt}{9.6pt}"))) {
-#     latex_string <- latex_string %>% 
-#       str_replace(
-#         "(\\\\begin\\{tabular\\*\\}[\\s\\S]*?\\\\end\\{tabular\\*\\})",  # Match the entire tabular environment
-#         "\\\\fontsize{8pt}{9.6pt}\\\\selectfont\n\\1"  # Wrap with font size commands
-#       )
-#     
-#   #change border colours
-#   latex_string <- latex_string %>% 
-#     str_replace(
-#       "\\\\begin\\{tabular\\*",
-#       "\\\\arrayrulecolor{CHAPBLUE}\\\\begin{tabular*"
-#     )
-#   }
-# 
-#   if (!is.na(firstcolumn)) {
-#     latex_string <- latex_string %>% 
-#       str_replace(
-#         "\\\\begin\\{tabular\\*\\}\\{1\\\\linewidth\\}\\{@\\{\\\\extracolsep\\{\\\\fill\\}\\}lrrrr\\}",  # Match the original tabular definition
-#        paste0("\\\\begin{tabular*}{1\\\\linewidth}{@{\\\\extracolsep{\\\\fill\\}}P{",
-#               firstcolumn,
-#               "cm}rrrr}")   # Use P column type for the first column
-#     ) %>% 
-#     str_replace(
-#       "\\{@\\{\\\\extracolsep\\{\\\\fill\\}\\}lrr\\}",  # Match the column definition
-#       paste0("{@{\\\\extracolsep{\\\\fill}}P{",
-#         firstcolumn,
-#         "cm}rr}")        # Replace `l` with `P{2.5cm}`
-#       )
-#   }
-#   
-#   return(latex_string)
-# }
-# 
+
 # latex layout 2 figures side by side  ----
 layout_2fig <- function(chart1, chart2, width1 = 0.48, width2 = 0.48) {
 
@@ -1526,65 +1467,6 @@ quarto_paragraph_breaks <- function(x) {
 }
 
 
-
-# ## setup latex line breaks ----
-# latex_linebreaks <- function(mystring) {
-# 
-#   tryCatch({
-#     mystring_list <- str_split(mystring, "<br/>")[[1]] %>%
-#       discard(~ .x == "")
-#     
-#     latex_string <- reduce(mystring_list, ~ paste(.x, .y, sep = fixed('`\\\\`{=tex}')))
-#     
-#     return(latex_string)
-#   }, error = function(e) {
-#     return("")  # Return empty string on error
-#   }
-# )
-#     
-# }
-# 
-# ## break level 1 text  ----
-# break_l1_text <- function(mystring) {
-#   
-#   mylength <- nchar(mystring)
-#   no_bullets <- str_count(mystring, fixed("\n\n")) 
-#   pos_bullets <- str_locate_all(mystring, fixed("\n\n"))[[1]]
-#   mytotal_length <- mylength + no_bullets * 100
-# 
-#   if (mytotal_length < 900) {
-#     level1_text1 <- mystring
-#     level1_text2 <- ''
-#   } else {
-#     
-#     break_point_check <- numeric(no_bullets)
-#     
-#     for (i in 1:no_bullets) {
-#       if (i == 1) {
-#         # Handle first iteration separately (to avoid pos_bullets[i-1] issue)
-#         break_point_check[i] <- pos_bullets[i]
-#       } else {
-#         break_point_check[i] <- pos_bullets[i] + (i)*100
-#       }
-#     }
-#     
-#     break_point <- which(break_point_check > 900)[1] 
-#     
-#     if (is.na(break_point)) {
-#       level1_text1 <- mystring
-#       level1_text2 <- ''} 
-#     else {
-#       level1_text1 <- substr(mystring, 1, pos_bullets[break_point]+1)
-#       level1_text2 <- substr(mystring, pos_bullets[break_point]+2, mylength)        
-#       }
-#     
-#   }
-#   
-# 
-#   return((list(text1 = level1_text1, text2 =level1_text2)))
-#   
-# }
- 
 # Custom formatting function ----
 format_parens <- function(x) {
   ifelse(x < 0,
