@@ -138,7 +138,7 @@ if (investments | country == "Home" | country == "Network Manager" | year_folder
       level2_files <- append(level2_files, paste0("cost-efficiency-tz",i,"-1.qmd"))
       
       # generate level2 _cef enroute files from generic file
-      tmp_text <- readLines("_cost-efficiency-generic.qmd")
+      tmp_text <- readLines(if_else(out_format == "web", "_cost-efficiency-generic.qmd", "_cost-efficiency-generic_pdf.qmd"))
       tmp_text <- str_replace(tmp_text, "@@cz_index@@", as.character(i)) 
       tmp_text <- str_replace(tmp_text, "@@cz_type@@", "terminal") 
       tmp_text <- str_replace(tmp_text, "@@cz_type_proper@@", "Terminal") 

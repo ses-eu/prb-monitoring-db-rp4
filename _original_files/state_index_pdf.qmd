@@ -1257,16 +1257,20 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 #| echo: false
 #| results: asis
 
-n <- params$no_ecz
+myn <- params$no_ecz
+myn <- if (is.na(myn) || myn < 1) 0L else as.integer(myn)
 
-for (i in seq_len(n)) {
-  path <- sprintf("./_cost-efficiency-er%d-1.qmd", i)
-  if (file.exists(path)) {
-    cat(readLines(path, warn = FALSE), sep = "\n")
-    cat("\n\n")
-  } else {
-    cat(sprintf("\n\n**Missing include file:** `%s`\n\n", path))
+for (i in seq_len(myn)) {
+  f <- sprintf("_cost-efficiency-er%d-1.qmd", i)
+
+  if (!file.exists(f)) {
+    cat(sprintf("\n\n**Missing include file:** `%s`\n\n", f))
+    next
   }
+
+  # Execute the child document and inject its rendered output
+  cat(knitr::knit_child(f, quiet = TRUE), sep = "\n")
+  cat("\n\n")
 }
 ```
 
@@ -1274,22 +1278,19 @@ for (i in seq_len(n)) {
 #| echo: false
 #| results: asis
 
-n <- params$no_tcz
+myn <- params$no_tcz
+myn <- if (is.na(myn) || myn < 1) 0L else as.integer(myn)
 
-for (i in seq_len(n)) {
-  path <- sprintf("./_cost-efficiency-tz%d-1.qmd", i)
-  if (file.exists(path)) {
-    cat(readLines(path, warn = FALSE), sep = "\n")
-    cat("\n\n")
-  } else {
-    cat(sprintf("\n\n**Missing include file:** `%s`\n\n", path))
+for (i in seq_len(myn)) {
+  f <- sprintf("_cost-efficiency-tz%d-1.qmd", i)
+
+  if (!file.exists(f)) {
+    cat(sprintf("\n\n**Missing include file:** `%s`\n\n", f))
+    next
   }
+
+  # Execute the child document and inject its rendered output
+  cat(knitr::knit_child(f, quiet = TRUE), sep = "\n")
+  cat("\n\n")
 }
 ```
-
-
-<!-- {{< include ./_cost-efficiency-er1-1.qmd >}} -->
-<!-- {{< include ./_cost-efficiency-er2-1.qmd >}} -->
-
-<!-- {{< include ./_cost-efficiency-tz1-1.qmd >}} -->
-<!-- {{< include ./_cost-efficiency-tz2-1.qmd >}} -->
