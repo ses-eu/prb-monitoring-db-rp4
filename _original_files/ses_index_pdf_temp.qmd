@@ -335,7 +335,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 \needspace{3\baselineskip}
 
-`r if (year_folder == params$rp_summary_year) "::: {.content-hidden}"`
+`r if (year_folder == rp_summary_year) "::: {.content-hidden}"`
 
 # SAFETY - `r rp_full`
 
@@ -713,7 +713,7 @@ cat(make_quarto_latex_table(
 
 
 ```{r table_level2_cef_cex_enroute, R.options = (cz=c("1", "enroute")), eval=(year_folder != params$rp_summary_year)}
-#| file: R/table_level2_cef_cex.R
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 

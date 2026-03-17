@@ -23,8 +23,8 @@ test_check <- TRUE
 out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
-all_states <- FALSE # go after lists below if you wanto to manipulate the list
-single_state <- 'SES RP4' # set your one country/stakeholder here (Home for home page)
+all_states <- FALSE # go below after lists below if you want to to manipulate the state list
+single_state <- 'Romania' # set your one country/stakeholder here (Home for home page)
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE

@@ -506,18 +506,22 @@ cap_trm_atfm_actual_mm  <-  read_xlsx(
   sheet = "terminal_atfm_delay_mm",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
-  clean_names() 
+  clean_names() %>% 
+  rename(
+    ifr_movements = arrivals,
+    total_delay = total_arrival_delay
+  )
 
 cap_trm_atfm_actual  <-  cap_trm_atfm_actual_mm %>% 
   group_by(state, year) %>% 
   summarise(
-    ifr_movements = sum(arrivals, na.rm = TRUE),
+    ifr_movements = sum(ifr_movements, na.rm = TRUE),
     atc_capacity = sum(atc_capacity, na.rm = TRUE),
     atc_disruptions = sum(atc_disruptions, na.rm = TRUE),
     atc_staffing = sum(atc_staffing, na.rm = TRUE),
     other_non_atc = sum(other_non_atc, na.rm = TRUE),
     weather = sum(weather, na.rm = TRUE),
-    total_delay = sum(total_arrival_delay, na.rm = TRUE),
+    total_delay = sum(total_delay, na.rm = TRUE),
     .groups = "drop"
   ) %>% 
   mutate(

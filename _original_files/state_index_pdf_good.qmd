@@ -413,9 +413,9 @@ other_met_str <- params$other_met_str
 ```{r yearly_xrates}
 # get yearly xrates
 
-xrate <- get_xrates("enroute", ecz_list$ecz_id[1]) |> 
-  filter(year == year_report) |> 
-  select(pp_exchangerate)
+xrate <- xrate_ert |> 
+  filter(year == year_report & cz_code == ecz_list$ecz_id[1]) |> 
+  select(xrate)
 
 xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 
@@ -534,10 +534,6 @@ other_met_str_1 <- reduce(other_met_list, ~ paste(.x, .y, sep = fixed('`\\\\`{=t
 
 ```{r mvt_conc}
 mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
-
-mvt_text <- break_l1_text(mvt_conc1) 
-mvt_text1 <- mvt_text$text1
-mvt_text2 <- mvt_text$text2
 ```
 
 ```{r chart_level1_traffic_mvt}
@@ -552,9 +548,6 @@ mvt_text2 <- mvt_text$text2
 ```{r su_conc1}
 tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
 
-tsu_text <- break_l1_text(tsu_conc1) 
-tsu_text1 <- tsu_text$text1
-tsu_text2 <- tsu_text$text2
 ```
 
 ```{r chart_level1_traffic_su}
@@ -929,13 +922,13 @@ if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt
 if (exists("env_apt_4") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_4))}
 ```
 
-```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == rp_full)}
+```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
 #| file: R/table_level2_env_apt_pis.R
 #| include: false
 ```
 
 
-``` {r, eval=!(params$no_tcz == 0 | params$country == rp_full), include=(!(params$no_tcz == 0 | params$country == rp_full)}
+``` {r, eval=!(params$no_tcz == 0 | params$country == params$rp_full), include=(!(params$no_tcz == 0 | params$country == params$rp_full))}
 #| echo: false
 #| results: asis
  
@@ -1316,7 +1309,7 @@ cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
-  col_align = "lrrrr",
+  col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
 ```
@@ -1335,8 +1328,8 @@ cat(make_quarto_latex_table(
 cat(make_quarto_latex_table(
   title = NA,
   df = data_prep,
-  col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_align = "lrrrrr",
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -1349,26 +1342,20 @@ cat(make_quarto_latex_table(
 
 **AUC vs. DUC**
 
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[2,1]) == TRUE, cef_level2_text$cef_txt_1_4_duc, pull(cef_level2_text$cef_txt_1_4[2,1]))`
-
 \needspace{2\baselineskip}
 
 **`r cztype_proper` service units**
 
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]), cef_level2_text$cef_txt_1_4_su, pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]))`
-
 \needspace{2\baselineskip}
 
 **`r cztype_proper` costs by entity**
-
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]), cef_level2_text$cef_txt_1_4_cost_all, pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]))`
 
 \needspace{2\baselineskip}
 
 **`r cztype_proper` costs for the main ANSP at charging zone level**
 
 ```{r cef_txt_1_4_er1, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_main), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]))))
+
 ```
 
 ### Actual unit cost incurred by the users (AUCU) (PI#1)
@@ -1412,7 +1399,7 @@ cat(make_quarto_latex_table(
 
 
 ```{r table_level2_cef_cex_enroute1, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
-#| file: R/table_level2_cef_cex.R
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 
@@ -1443,27 +1430,6 @@ cat(make_quarto_latex_table(
 
 `\biggertext{Focus on regulatory result}`{=latex}
 
-`r if (params$year_report < 2022) "::: {.content-hidden}"`
-
-**`r cef_level2_text$cef_txt_1_13[1,1]`**
-
-`r cef_level2_text$cef_txt_1_13[2,1]`
-
-\needspace{2\baselineskip}
-
-**`r cef_level2_text$cef_txt_1_13[3,1]`**
-
-```{r cef_txt_1_13_4_er1, results = "asis"}
-cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_13[4,1]))
-```
-
-```{r cef_txt_1_10_er1, results = "asis"}
-cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_10_txt))
-```
-
-`r if (params$year_report < 2022) ":::"`
-
-`r if (params$year_report >= 2022) "::: {.content-hidden}"`
 
 ```{r cef_txt_1_13_er1, results = "asis"}
 cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_13[1,1]))
@@ -1472,8 +1438,6 @@ cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_13[1,1]))
 ```{r cef_txt_1_10_txt_22_er1, results = "asis"}
 cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_10_txt))
 ```
-
-`r if (params$year_report >= 2022) ":::"`
 
 
 `r if (params$no_ecz < 2) "::: {.content-hidden}"`
@@ -1533,8 +1497,8 @@ cef_level2_text <- get_cef_level2_text(czindex, cztype)
 cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   df = data_prep_pdf,
-  col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_align = "lrrrrr",
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -1552,8 +1516,8 @@ cat(make_quarto_latex_table(
 cat(make_quarto_latex_table(
   title = NA,
   df = data_prep,
-  col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_align = "lrrrrr",
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -1566,20 +1530,16 @@ cat(make_quarto_latex_table(
 
 **AUC vs. DUC**
 
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[2,1]) == TRUE, cef_level2_text$cef_txt_1_4_duc, pull(cef_level2_text$cef_txt_1_4[2,1]))`
-
 \needspace{2\baselineskip}
 
 **`r cztype_proper` service units**
-
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]), cef_level2_text$cef_txt_1_4_su, pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]))`
 
 \needspace{2\baselineskip}
 
 **`r cztype_proper` costs by entity**
 
 ```{r cef_txt_1_4_cost_all_er2, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_all), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]))))
+
 ```
 
 \needspace{2\baselineskip}
@@ -1587,7 +1547,7 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_e
 **`r cztype_proper` costs for the main ANSP at charging zone level**
 
 ```{r cef_txt_1_4_cost_main_er2, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_main), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]))))
+
 ```
 
 ### Actual unit cost incurred by the users (AUCU) (PI#1)
@@ -1631,7 +1591,7 @@ cat(make_quarto_latex_table(
 
 
 ```{r table_level2_cef_cex_enroute2, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
-#| file: R/table_level2_cef_cex.R
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 
@@ -1758,7 +1718,7 @@ cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
-  col_align = "lrrrr",
+  col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
 ```
@@ -1777,8 +1737,8 @@ cat(make_quarto_latex_table(
 cat(make_quarto_latex_table(
   title = NA,
   df = data_prep,
-  col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_align = "lrrrrr",
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -1791,22 +1751,16 @@ cat(make_quarto_latex_table(
 
 **AUC vs. DUC**
 
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[2,1]) == TRUE, cef_level2_text$cef_txt_1_4_duc, pull(cef_level2_text$cef_txt_1_4[2,1]))`
-
 \needspace{2\baselineskip}
 
 **`r cztype_proper` service units**
-
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]) == TRUE, cef_level2_text$cef_txt_1_4_su, pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]))`
 
 \needspace{2\baselineskip}
 
 **`r cztype_proper` costs by entity**
 
 ```{r cef_txt_1_4_cost_all_tz1, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]),
-        quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_all),
-        quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]))))
+
 ```
 
 \needspace{2\baselineskip}
@@ -1814,7 +1768,7 @@ cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_e
 **`r cztype_proper` costs for the main ANSP at charging zone level**
 
 ```{r cef_txt_1_4_cost_main_tz1, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_main), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]))))
+# cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_main), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]))))
 ```
 
 
@@ -1859,7 +1813,7 @@ cat(make_quarto_latex_table(
 
 
 ```{r table_level2_cef_cex_terminal1, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
-#| file: R/table_level2_cef_cex.R
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 
@@ -1984,7 +1938,7 @@ cat(make_quarto_latex_table(
   title = paste0("Actual and determined data"),
   col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
   df = data_prep_pdf,
-  col_align = "lrrrr",
+  col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
 ```
@@ -2003,8 +1957,8 @@ cat(make_quarto_latex_table(
 cat(make_quarto_latex_table(
   title = NA,
   df = data_prep,
-  col_align = "lrrrr",
-  col_widths = c(35, rep(65/4, 4))
+  col_align = "lrrrrr",
+  col_widths = c(35, rep(65/5, 5))
 ))
 ```
 
@@ -2017,21 +1971,16 @@ cat(make_quarto_latex_table(
 
 **AUC vs. DUC**
 
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[2,1]) == TRUE, cef_level2_text$cef_txt_1_4_duc, pull(cef_level2_text$cef_txt_1_4[2,1]))`
-
 \needspace{2\baselineskip}
 
 **`r cztype_proper` service units**
-
-`r if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]) == TRUE, cef_level2_text$cef_txt_1_4_su, pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_su,1]))`
 
 \needspace{2\baselineskip}
 
 **`r cztype_proper` costs by entity**
 
 ```{r cef_txt_1_4_cost_all_tz2, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_all), 
-quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_by_ent,1]))))
+
 ```
 
 \needspace{2\baselineskip}
@@ -2039,7 +1988,7 @@ quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_inde
 **`r cztype_proper` costs for the main ANSP at charging zone level**
 
 ```{r cef_txt_1_4_cost_main_tz2, results = "asis"}
-cat(if_else(is.na(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]), quarto_paragraph_breaks(cef_level2_text$cef_txt_1_4_cost_main), quarto_paragraph_breaks(pull(cef_level2_text$cef_txt_1_4[cef_level2_text$my_index_cost_main,1]))))
+
 ```
 
 
@@ -2083,8 +2032,8 @@ cat(make_quarto_latex_table(
 ```  
 
 
-```{r table_level2_cef_cex_terminal2, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
-#| file: R/table_level2_cef_cex.R
+```{r table_level2_cef_cex_tbv_terminal2, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+#| file: R/table_level2_cef_cex_tbv.R
 #| include: false
 ```
 
