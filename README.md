@@ -46,14 +46,14 @@ Each State/year combination is a fully independent quarto website, although it i
 
 The master files .qmd, .yml and .css files are stored in the folder `\_original_files`.
 
-The steps to which are laid out in the script `build_site.R`.
+The steps to which are laid out in the script `R\build_site.R`.
 
-The script `create_pages.R` sets up the different quarto framework files (.yml, .qmd, etc) depending on the type of State/stakeholder.
+The script `R\create_pages.R` sets up the different quarto framework files (.yml, .qmd, etc) depending on the type of State/stakeholder.
 
 # Source data/text
 The source data and text feeding this dashboard is provided by, and the responsibility of, PETSCO.
 
-The data and the text are stored in the folders defined in the `build_site.R` script:
+The data and the text are stored in the folders defined in the `r\params_project.R` and `r\params_site.R` scripts, respectively:
 1. `data_folder`: contains all data and the text for the PRB conclusions
 2. `data_folder_a2`: contains all the text for the NSA input boxes in the dashboard
 

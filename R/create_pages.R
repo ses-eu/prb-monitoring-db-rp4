@@ -9,7 +9,8 @@ newvariables <- paste0("doc:
     ecz2: '", ecz_list$ecz_name[2], "'
     tcz1: '", tcz_list$tcz_name[1], "'
     tcz2: '", tcz_list$tcz_name[2], "'
-  "
+    tcz3: '", tcz_list$tcz_name[3], "'
+"
 )
 
 cat(newvariables, file = "_variables.yml")
