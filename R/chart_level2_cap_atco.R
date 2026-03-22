@@ -1,25 +1,22 @@
 if (!exists("data_loaded")) {
+  source("R/params_country.R")
   source("R/get_data.R")
 }
 
 ## import data  ----
 if (country == rp_full) {
-  data_raw  <-  cap_atco_acc_ses |> 
-    #so it has the same columns as the State case
-    mutate(ansp = "ansp",
-           state = rp_full,
-           acc = "ZZZZ")
-    
+  data_raw_planned  <- cap_atco_planned_ses
+  data_raw_actual  <- cap_atco_actual_ses
+
 } else {
   data_raw_planned  <- cap_atco_acc_planned
   data_raw_actual  <- cap_atco_acc_actual
-  
-  data_raw <- data_raw_planned %>% 
-    left_join (data_raw_actual, by = c("state", "year", "acc"))
-  
+
 }
 
 ## prepare data ----
+data_raw <- data_raw_planned %>% 
+  left_join (data_raw_actual, by = c("state", "year", "acc"))
 
 data_prep_acc <- data_raw |> 
   filter(state == .env$country) |> 

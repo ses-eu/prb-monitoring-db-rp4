@@ -473,6 +473,17 @@ cap_ert_target_ses  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+#### ATCOs IN OPS ----
+cap_atco_planned_ses  <- cap_atco_acc_planned %>% 
+  group_by(year) %>% 
+  summarise(
+    planned_atco_number = sum(planned_atco_number, na.rm = TRUE), .groups = "drop"
+  ) %>% 
+  mutate(
+    state = rp_full,
+    acc = "ZZZZ"
+  )
+
 
 ## Actuals ----
 ### State ----
@@ -608,7 +619,7 @@ cap_trm_atfm_actual_ses  <-  cap_trm_atfm_actual %>%
     .groups = "drop"
   ) %>% 
   mutate(
-    state = "SES RP4",
+    state = rp_full,
     average_delay_per_flight = total_delay / ifr_movements
   )
 
@@ -625,7 +636,7 @@ cap_trm_atfm_actual_mm_ses  <-  cap_trm_atfm_actual_mm %>%
     .groups = "drop"
   ) %>% 
   mutate(
-    state = "SES RP4",
+    state = rp_full,
     average_delay_per_flight = total_delay / ifr_movements
   )
 
@@ -647,12 +658,15 @@ cap_delay_bin_actual_ses  <-  read_xlsx(
   clean_names()
 
 #### ATCOs IN OPS ----
-cap_atco_acc_ses  <- read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "ATCOs",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names()
+cap_atco_actual_ses  <- cap_atco_acc_actual %>% 
+  group_by(year) %>% 
+  summarise(
+    actual_atco_number = sum(actual_atco_number, na.rm = TRUE), .groups = "drop"
+  ) %>% 
+  mutate(
+    state = rp_full,
+    acc = "ZZZZ"
+  )
 
 #### SECTOR HOURS ----
 cap_sector_hours_actual_ses  <-  read_xlsx(
