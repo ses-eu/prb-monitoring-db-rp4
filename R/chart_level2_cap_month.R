@@ -4,63 +4,16 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
+# import data  ----
 if (country == rp_full) {
-  # SES case ----
-  ## import data  ----
+  ## SES case ----
   if (cztype == "enroute") {data_raw_actual <- cap_ert_atfm_actual_mm_ses} else {data_raw_actual <- cap_trm_atfm_actual_mm_ses}
 
   data_raw_target  <-  cap_ert_target_ses
-  
-  ## prepare data ----
-  data_prep_target <- data_raw_target %>% 
-    filter(
-      year == .env$year_report) %>% 
-    right_join(filter(data_raw_actual, year == .env$year_report),
-               by = "year") %>% 
-    mutate(
-      xlabel = month,
-      myothermetric = round(delay_target, 2),
-      type = "Target"
-    ) %>% 
-    select(
-      xlabel,
-      myothermetric,
-      type
-    )
-  
-  if(cztype == 'terminal') {data_prep_target$myothermetric = NA}
 
-  data_prep_actual <- data_raw_actual %>% 
-    filter(
-      year == .env$year_report) %>% 
-    select(c(month, atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc)) %>% 
-    pivot_longer(
-      cols = c(atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc),
-      names_to = "type",
-      values_to = "mymetric"
-    ) %>% 
-    mutate(
-      xlabel = month,
-      type = case_when(
-        type == "atc_capacity" ~ "Capacity",
-        type == "atc_staffing" ~ "Staffing",
-        type == "atc_disruptions" ~ "Disruptions",
-        type == "weather" ~ "Weather",
-        type == "other_non_atc" ~ "Other non-ATC"
-      ) 
-    ) 
 
-  data_prep_total <- data_raw_actual %>% 
-    filter(year == .env$year_report) %>% 
-    mutate(xlabel = month,
-           myothermetric = format(round(average_delay,2), digits = 2),
-           type = "Total") %>% 
-    select(xlabel, myothermetric, type)
-  
-  
 } else {
-  # state case ----
-  ## import data  ----
+  ## state case ----
   if (cztype == "enroute") {
     data_raw_target <- cap_ert_target
     data_raw_actual <- cap_ert_atfm_actual_mm
@@ -70,63 +23,65 @@ if (country == rp_full) {
     data_raw_actual <- cap_trm_atfm_actual_mm
   }
   
-  ## prepare data ----
-  data_prep_target <- data_raw_target %>% 
-    filter(
-      state == .env$country,
-      year == .env$year_report
-      ) %>% 
-    mutate(
-      myothermetric = round(delay_target, 2),
-      xlabel = year,
-      type = "Target"
-    ) %>% 
-    select(
-      xlabel,
-      type,
-      myothermetric)
-  
-  data_prep_actual <- data_raw_actual %>% 
-    filter(
-      state == .env$country,
-      year == .env$year_report
-      ) %>% 
-    mutate(
-      atc_capacity = atc_capacity / ifr_movements,
-      atc_disruptions = atc_disruptions / ifr_movements,
-      atc_staffing = atc_staffing / ifr_movements,
-      other_non_atc = other_non_atc / ifr_movements,
-      weather = weather / ifr_movements,
-    ) %>% 
-    pivot_longer(
-      cols = c(atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc),
-      names_to = "type",
-      values_to = "mymetric"
-    ) %>% 
-    mutate(
-      mymetric = round(mymetric,2),
-      xlabel = month,
-      type = case_when(
-        type == "atc_capacity" ~ "Capacity",
-        type == "atc_staffing" ~ "Staffing",
-        type == "atc_disruptions" ~ "Disruptions",
-        type == "weather" ~ "Weather",
-        type == "other_non_atc" ~ "Other non-ATC"
-      )
-    ) %>% 
-    select(xlabel, type, mymetric)
-  
-  data_prep_total <- data_prep_actual %>% 
-    select(xlabel, mymetric) %>% 
-    group_by(xlabel) %>% 
-    summarise(myothermetric = sum(mymetric)) %>%
-    mutate(myothermetric = case_when(
-      is.na(myothermetric) == TRUE ~ "",
-      .default = format(round(myothermetric,2), digits = 2)
-      )
-      ) %>% 
-    mutate(type = "Total")
 }
+
+# prepare data ----
+data_prep_target <- data_raw_target %>% 
+  filter(
+    state == .env$country,
+    year == .env$year_report
+  ) %>% 
+  mutate(
+    myothermetric = round(delay_target, 2),
+    xlabel = year,
+    type = "Target"
+  ) %>% 
+  select(
+    xlabel,
+    type,
+    myothermetric)
+
+data_prep_actual <- data_raw_actual %>% 
+  filter(
+    state == .env$country,
+    year == .env$year_report
+  ) %>% 
+  mutate(
+    atc_capacity = atc_capacity / ifr_movements,
+    atc_disruptions = atc_disruptions / ifr_movements,
+    atc_staffing = atc_staffing / ifr_movements,
+    other_non_atc = other_non_atc / ifr_movements,
+    weather = weather / ifr_movements,
+  ) %>% 
+  pivot_longer(
+    cols = c(atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc),
+    names_to = "type",
+    values_to = "mymetric"
+  ) %>% 
+  mutate(
+    mymetric = round(mymetric,2),
+    xlabel = month,
+    type = case_when(
+      type == "atc_capacity" ~ "Capacity",
+      type == "atc_staffing" ~ "Staffing",
+      type == "atc_disruptions" ~ "Disruptions",
+      type == "weather" ~ "Weather",
+      type == "other_non_atc" ~ "Other non-ATC"
+    )
+  ) %>% 
+  select(xlabel, type, mymetric)
+
+data_prep_total <- data_prep_actual %>% 
+  select(xlabel, mymetric) %>% 
+  group_by(xlabel) %>% 
+  summarise(myothermetric = sum(mymetric)) %>%
+  mutate(myothermetric = case_when(
+    is.na(myothermetric) == TRUE ~ "",
+    .default = format(round(myothermetric,2), digits = 2)
+  )
+  ) %>% 
+  mutate(type = "Total")
+
 
 # chart parameters ----
 c_suffix <- ""

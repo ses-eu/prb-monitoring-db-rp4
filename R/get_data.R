@@ -571,13 +571,6 @@ cap_apt_pis_actual  <-  read_xlsx(
 
 ### SES ----
 #### ATFM DELAY ----
-cap_ert_atfm_actual_ses  <-  read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Avg en-route ATFM delay",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
 cap_ert_atfm_actual_mm_ses  <-  read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "en route monthly delay",
@@ -585,19 +578,56 @@ cap_ert_atfm_actual_mm_ses  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
-cap_trm_atfm_actual_ses  <-  read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Avg terminal ATFM delay",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+cap_ert_atfm_actual_ses  <-  cap_ert_atfm_actual_mm_ses %>% 
+  group_by(state, year) %>% 
+  summarise(
+    ifr_movements = sum(ifr_movements, na.rm = TRUE),
+    atc_capacity = sum(atc_capacity, na.rm = TRUE),
+    atc_disruptions = sum(atc_disruptions, na.rm = TRUE),
+    atc_staffing = sum(atc_staffing, na.rm = TRUE),
+    other_non_atc = sum(other_non_atc, na.rm = TRUE),
+    weather = sum(weather, na.rm = TRUE),
+    total_delay = sum(total_delay, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    average_delay_per_flight = total_delay / ifr_movements
+    
+  )
 
-cap_trm_atfm_actual_mm_ses  <-  read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "terminal monthly delay",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+cap_trm_atfm_actual_ses  <-  cap_trm_atfm_actual %>% 
+  group_by(year) %>% 
+  summarise(
+    ifr_movements = sum(ifr_movements, na.rm = TRUE),
+    atc_capacity = sum(atc_capacity, na.rm = TRUE),
+    atc_disruptions = sum(atc_disruptions, na.rm = TRUE),
+    atc_staffing = sum(atc_staffing, na.rm = TRUE),
+    other_non_atc = sum(other_non_atc, na.rm = TRUE),
+    weather = sum(weather, na.rm = TRUE),
+    total_delay = sum(total_delay, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    state = "SES RP4",
+    average_delay_per_flight = total_delay / ifr_movements
+  )
+
+cap_trm_atfm_actual_mm_ses  <-  cap_trm_atfm_actual_mm %>% 
+  group_by(year, month) %>% 
+  summarise(
+    ifr_movements = sum(ifr_movements, na.rm = TRUE),
+    atc_capacity = sum(atc_capacity, na.rm = TRUE),
+    atc_disruptions = sum(atc_disruptions, na.rm = TRUE),
+    atc_staffing = sum(atc_staffing, na.rm = TRUE),
+    other_non_atc = sum(other_non_atc, na.rm = TRUE),
+    weather = sum(weather, na.rm = TRUE),
+    total_delay = sum(total_delay, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    state = "SES RP4",
+    average_delay_per_flight = total_delay / ifr_movements
+  )
 
 #### ALL-CAUSE PREDEP DELAY ----
 cap_all_c_predep_delay_actual_ses  <-  read_xlsx(

@@ -1,5 +1,7 @@
 # import data  ----
 if (!exists("data_loaded")) {
+  source("R/params_project.R")
+  source("R/utils.R")
   source("R/get_data.R")
 } 
 
