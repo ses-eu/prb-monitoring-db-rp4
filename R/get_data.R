@@ -580,6 +580,19 @@ cap_apt_pis_actual  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+#### AVG PEAK THROUPUT ----
+cap_avg_peak_tp_actual  <-  read_xlsx(
+  here(data_folder, cap_data_file),
+  sheet = "AVG_DAY_PEAK_THROUPUT",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() %>% 
+  mutate(
+    acc_id = substr(stat_aua_code, 1, 4)
+  ) %>% 
+  right_join(acc_list_table, by = "acc_id")
+
+
 ### SES ----
 #### ATFM DELAY ----
 cap_ert_atfm_actual_mm_ses  <-  read_xlsx(
@@ -654,12 +667,21 @@ cap_all_c_predep_delay_actual_ses  <-  cap_all_c_predep_delay_actual %>%
   )
   
 #### DELAY TIME BIN ----
-cap_delay_bin_actual_ses  <-  read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "DTB",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names()
+cap_delay_bin_actual_ses  <- cap_delay_bin_actual %>% 
+  group_by(year) %>% 
+  summarise(
+     total = sum(total, na.rm = TRUE), 
+     x0_5mins = sum(x0_5mins, na.rm = TRUE), 
+     x5_15_mins = sum(x5_15_mins, na.rm = TRUE), 
+     x15_30_mins = sum(x15_30_mins, na.rm = TRUE), 
+     x30_60_mins = sum(x30_60_mins, na.rm = TRUE), 
+     x60_mins = sum(x60_mins, na.rm = TRUE), 
+     .groups = "drop"
+  ) %>% 
+  mutate(
+    state = rp_full,
+    ansp = rp_full
+  )
 
 #### ATCOs IN OPS ----
 cap_atco_actual_ses  <- cap_atco_acc_actual %>% 
@@ -673,12 +695,16 @@ cap_atco_actual_ses  <- cap_atco_acc_actual %>%
   )
 
 #### SECTOR HOURS ----
-cap_sector_hours_actual_ses  <-  read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Sectorhour",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+cap_sector_hours_actual_ses <- cap_sector_hours_actual %>% 
+  group_by(year) %>% 
+  summarise(
+    total_soh = sum(total_soh, na.rm = TRUE), 
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    state = rp_full,
+    ansp = rp_full
+  )
 
 # CEFF ----
 ## En-route ----

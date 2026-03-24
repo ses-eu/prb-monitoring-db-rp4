@@ -4,10 +4,7 @@ if (!exists("data_loaded")) {
 
 ## import data  ----
 if (country == rp_full) {
-  data_raw  <-  cap_sector_hours_actual_ses |> 
-    #so it has the same columns as the state case
-    mutate(ansp = "ansp",
-           state = rp_full)
+  data_raw  <-  cap_sector_hours_actual_ses 
   
 } else {
   data_raw  <- cap_sector_hours_actual

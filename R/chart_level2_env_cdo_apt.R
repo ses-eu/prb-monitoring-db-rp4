@@ -3,7 +3,7 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw <- cdo_actual_apt
+data_raw <- cdo_cco_actual
 
 ## prepare data ----
 airports_country <- airports_table %>% 

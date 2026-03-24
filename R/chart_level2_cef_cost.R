@@ -1,4 +1,5 @@
 if (!exists("data_loaded")) {
+  source("R/params_country.R")
   source("R/get_data.R")
 } 
 
