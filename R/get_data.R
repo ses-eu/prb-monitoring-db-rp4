@@ -593,6 +593,30 @@ cap_avg_peak_tp_actual  <-  read_xlsx(
   right_join(acc_list_table, by = "acc_id")
 
 
+#### SHARE_DELAY_WHEN_TP_ABOVE ----
+cap_perc_delay_tp_above  <-  read_xlsx(
+  here(data_folder, cap_data_file),
+  sheet = "SHARE_DELAY_WHEN_TP_ABOVE",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() %>% 
+  mutate(
+    acc_id = substr(asp_id, 1, 4)
+  ) %>% 
+  right_join(acc_list_table, by = "acc_id") %>% 
+  group_by(year, acc_full_name, acc_ctry) %>% 
+  summarise(
+    tot_tfc = sum(tot_tfc, na.rm = TRUE),
+    tot_atfm_dly = sum(tot_atfm_dly, na.rm = TRUE),
+    tot_dly_where_tfc_guid_tfc = sum(tot_dly_where_tfc_guid_tfc, na.rm = TRUE),
+    days_where_tfc_guid_tfc = sum(days_where_tfc_guid_tfc, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    perc_delay_tp_above = tot_dly_where_tfc_guid_tfc / tot_atfm_dly
+  )
+
+
 ### SES ----
 #### ATFM DELAY ----
 cap_ert_atfm_actual_mm_ses  <-  read_xlsx(
