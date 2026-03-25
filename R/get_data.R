@@ -289,6 +289,22 @@ axot_actual_apt  <-  read_xlsx(
   as_tibble() %>% 
   clean_names() 
 
+#### AXIN ----
+axin_actual_ms  <-  read_xlsx(
+  here(data_folder, env_data_file),
+  sheet = "axin_ms",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+axin_actual_apt  <-  read_xlsx(
+  here(data_folder, env_data_file),
+  sheet = "axin_apt",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() 
+
+
 #### ASMA ----
 asma_actual_ms  <-  read_xlsx(
   here(data_folder, env_data_file),
@@ -305,28 +321,26 @@ asma_actual_apt  <-  read_xlsx(
   clean_names() 
 
 #### CDO ----
-cdo_actual_ms  <-  read_xlsx(
-  here(data_folder, env_data_file),
-  sheet = "cdo_ms",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
-cdo_actual_apt  <-  read_xlsx(
-  here(data_folder, env_data_file),
-  sheet = "cdo_apt",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
 cdo_cco_actual  <-  read_xlsx(
   here(data_folder, env_data_file),
   sheet = "CDO_APT_MM",
   range = cell_limits(c(1, 1), c(NA, NA))) %>%
   as_tibble() %>% 
-  clean_names() 
-
-
+  clean_names() %>% 
+  group_by (year, apt_icao) %>% 
+  summarise(
+    nbr_flights_descent = sum(nbr_flights_descent, na.rm = TRUE),
+    tot_time_level_seconds_descent = sum(tot_time_level_seconds_descent, na.rm = TRUE),
+    nbr_cdo_flights = sum(nbr_cdo_flights, na.rm = TRUE),
+    nbr_flights_climb = sum(nbr_flights_climb, na.rm = TRUE),
+    tot_time_level_seconds_climb = sum(tot_time_level_seconds_climb, na.rm = TRUE),
+    nbr_cco_flights = sum(nbr_cco_flights, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    avg_seconds_per_descent = tot_time_level_seconds_descent / nbr_flights_descent,
+    avg_seconds_per_climb = tot_time_level_seconds_climb / nbr_flights_climb
+    )
 
 #### MIL ----
 env_mil_actual  <-  read_xlsx(

@@ -1,9 +1,10 @@
 ## import data  ----
 if (!exists("data_loaded")) {
+  source("R/params_country.R")
   source("R/get_data.R")
 }
 
-data_raw <- axot_actual_apt
+data_raw <- rbind(axot_actual_apt, axin_actual_apt)
 
 ## prepare data ----
 data_prep <- data_raw %>% 
@@ -14,23 +15,27 @@ data_prep <- data_raw %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
   mutate(
     xlabel = apt_name,
-    type = indicator_type,
+    type = case_when(
+      indicator_type == "ARP_TAXI" ~ "Taxi-out",
+      indicator_type == "ARP_TAXI_IN" ~ "Taxi-in"
+      ),
     mymetric = value
   ) %>%  
   select(
     xlabel,
     type,
-    mymetric)
+    mymetric) %>% 
+  arrange(xlabel, type)
 
 ## chart parameters ----
 c_suffix <- ""
 c_decimals <- 2
 
 ### trace parameters
-c_colors = PRBSecondBlue
+c_colors <- c(PRBSecondBlue, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- data_prep %>% select(type) %>% unique() 
+c_factor <- data_prep %>% distinct(type) %>% pull(type)
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -39,19 +44,28 @@ c_insidetextanchor <- NA
 c_textfont_color <- 'black'
 
 #### title
-c_title_text <- paste0("AXOT, main airport(s) - ", year_report)
+c_title_text <- paste0("Average taxi times, main airport(s) - ", year_report)
 
 #### yaxis
-c_yaxis_title <- "AXOT (min/flight)"
+c_yaxis_title <- "Avg. Taxi times (min/flight)"
 c_yaxis_tickformat <- paste0(".",c_decimals, "f")
+
+### legend
+c_legend_x = -0.1
+c_legend_y = 1.3
+c_legend_xanchor = "left"
+  
+### margin 
+c_margin = list(t = 70)
 
 ## plot chart  ----
 myplot <- mybarchart2(data_prep, 
+                      height = myheight +30,
                       colors = c_colors,
                       local_factor = c_factor,
                       suffix = c_suffix,
                       decimals = c_decimals,
-                      
+
                       hovertemplate = c_hovertemplate,
                       
                       textangle = c_textangle,
@@ -62,7 +76,13 @@ myplot <- mybarchart2(data_prep,
                       
                       yaxis_title = c_yaxis_title,
                       yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat
+                      yaxis_tickformat = c_yaxis_tickformat,
+                      
+                      legend_x = c_legend_x,
+                      legend_y = c_legend_y,
+                      legend_xanchor = c_legend_xanchor,
+                      
+                      margin = c_margin
 )
 
 myplot 
