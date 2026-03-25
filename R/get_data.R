@@ -274,6 +274,23 @@ scr_actual_mm  <-  read_xlsx(
   clean_names() %>% 
   mutate(month = as.Date(month))
 
+#### VFE_ERT ----
+vfe_ert_actual <-  read_xlsx(
+  here(data_folder, env_data_file),
+  sheet = "VFE_ERT",
+  range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  as_tibble() %>% 
+  clean_names() %>% 
+  group_by(year, area_id, area_name) %>% 
+  summarise(
+    dist_km_enr_vfe = sum(dist_km_enr_vfe, na.rm = TRUE),
+    dist_km_vfe_above_within = sum(dist_km_vfe_above_within, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% 
+  mutate(
+    vfe_ert = dist_km_vfe_above_within / dist_km_enr_vfe 
+  )
+
 #### AXOT ----
 axot_actual_ms  <-  read_xlsx(
   here(data_folder, env_data_file),
