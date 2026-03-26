@@ -12,6 +12,8 @@ params_table <- read_mytable(lists_data_file, "lists", "Table_States") %>% clean
 
 state_list <- params_table %>% select(state) %>% unlist()
 
+icao_codes_vef_table <- read_mytable(lists_data_file, "lists", "Table_ICAO_Codes") %>% clean_names()
+
 aua_entities_table <- read_mytable(lists_data_file, "lists", "Table_AUA") %>% clean_names()
 
 acc_list_table <- read_mytable(lists_data_file, "lists", "Table_ACCs") %>% clean_names()

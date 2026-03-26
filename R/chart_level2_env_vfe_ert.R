@@ -9,7 +9,7 @@ data_raw <- vfe_ert_actual
 ## prepare data ----
 data_prep <- data_raw %>% 
   filter(
-    area_name == .env$country,
+    area_id == .env$state_icao_vef_code,
     year == .env$year_report
   ) %>%
   mutate(

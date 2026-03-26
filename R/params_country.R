@@ -28,6 +28,9 @@ no_saf_ansps <- nrow(saf_ansps)
 main_safety_ansp <- saf_ansps %>% filter(main ==1) %>% select(ansp_name) %>% pull ()
 saf_ansps <- saf_ansps %>% select(ansp_name) %>% pull()
   
+## icao code for VEF  ----
+state_icao_vef_code <- icao_codes_vef_table %>% filter(state == .env$country) %>% pull()
+
 ## aua entity for capacity  ----
 aua_entities <- aua_entities_table %>% filter(state == .env$country) 
 main_ansp_aua <- aua_entities %>%  filter(year == .env$year_report) %>% select(ansp_name) %>% pull()

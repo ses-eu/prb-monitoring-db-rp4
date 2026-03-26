@@ -502,6 +502,7 @@ if (out_format == 'web') {
                                               main_ansp_aua = main_ansp_aua,
                                               other_ansps_str = other_ansps_str,
                                               other_met_str = other_met_str,
+                                              state_icao_vef_code = state_icao_vef_code,
                                               
                                               no_saf_ansps = no_saf_ansps,
                                               main_safety_ansp = main_safety_ansp,
