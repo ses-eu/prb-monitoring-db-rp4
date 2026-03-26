@@ -30,7 +30,7 @@ statfor_tsu_data_file <- "statfor_forecast_en_route_tsu.xlsx"
 
 targets_data_file <- "targets.xlsx"
 
-investments_data_file <- "INVESTMNENTS DATA_master.xlsx"
+investments_data_file <- "INVESTMENTS DATA_master.xlsx"
 
 prb_findings_file <- "PRB_findings.xlsx"
 
