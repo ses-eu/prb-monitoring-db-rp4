@@ -3,26 +3,27 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
   } 
   
-data_raw_axot <- axot_actual_ms
-data_raw_asma <- asma_actual_ms
+data_raw_axot <- axot_actual_ms %>% rename(mymetric = value)
+data_raw_axin <- axin_actual_ms %>% rename(mymetric = value)
+data_raw_asma <- asma_actual_ms %>% rename(mymetric = value)
   
 rp_years_df <- data.frame(rp_years) %>% rename(xlabel = rp_years)
 
 ## prepare data ----
 
-data_prep_asma <- data_raw_asma %>% 
-  rename(mymetric = value)
-
-data_prep_axot <- data_raw_axot %>% 
-  rename(mymetric = value) 
-  
-data_prep <- data_prep_asma %>% 
-  rbind(data_prep_axot) %>% 
+data_prep <- data_raw_asma %>% 
+  rbind(data_raw_axot) %>% 
+  rbind(data_raw_axin) %>% 
   filter(
     state == .env$country
     ) %>% 
-  rename(
-    type = indicator_type,
+  mutate(
+    type = case_when(
+      indicator_type == "STATE_ASMA" ~ "ASMA",
+      indicator_type == "STATE_TAXI" ~ "AXOT",
+      indicator_type == "STATE_TAXI_IN" ~ "AXIN"
+      
+      ),
     xlabel = year
   ) %>% 
   mutate(
@@ -39,12 +40,10 @@ c_suffix <- ""
 c_decimals <- 2
 
 ### trace parameters
-c_colors = c('#0070C050', '#FFC00050')
+c_colors = c('#0070C050', '#FFC00050', '#ababab50')
 
 ###set up order of traces
-c_factor <- data_prep %>% select(type) %>% unique() 
-invisible(as.list(c_factor$type))
-c_factor <- sort(c_factor$type, decreasing = TRUE)
+c_factor <- c("AXOT", "ASMA", "AXIN")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -53,10 +52,10 @@ c_textposition <- "bottom"
 c_insidetextanchor <- NA
 
 #### title
-c_title_text <- paste0("ASMA & AXOT")
+c_title_text <- paste0("AXOT, ASMA & AXIN")
 
 #### yaxis
-c_yaxis_title <- "ASMA & AXOT (min/flight)"
+c_yaxis_title <- "AXOT, ASMA & AXIN (min/flight)"
 c_yaxis_ticksuffix <- ""
 c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 c_yaxis_rangemode <- NA
@@ -161,7 +160,7 @@ myareachart <-  function(width = mywidth, height = myheight, font = myfont,
 if (year_report == rp_min_year) {
   myplot <- mybarchart2(data_prep, 
                         height = myheight,
-                        colors = c("#AFD2EB", "#FFEBAB"),
+                        colors = c("#AFD2EB", "#FFEBAB", '#cdcdcd'),
                         local_factor = c_factor,
                         decimals = c_decimals,
                         suffix = c_suffix,
