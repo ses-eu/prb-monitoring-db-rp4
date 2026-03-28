@@ -37,12 +37,12 @@ c_insidetextanchor <- NA
 
 #### title
 if (knitr::is_latex_output()) {
-  c_title_text <- paste0("Effective use of reserved or segregated\nairspace (ERSA)(PI#6)")
+  c_title_text <- paste0("Effective use of reserved or segregated\nairspace (ERSA)(PI#9)")
   c_title_y <- 0.95
   c_margin = list(t = 60)
   
 } else {
-  c_title_text <- paste0("Effective use of reserved or segregated airspace (ERSA)(PI#6)")
+  c_title_text <- paste0("Effective use of reserved or segregated airspace (ERSA)(PI#9)")
   c_title_y <-mytitle_y
   c_margin = mymargin
 }

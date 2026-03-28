@@ -925,6 +925,26 @@ cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
 ```
 
 
+### Percentage of en route ATFM delay occurring when daily throughput was above expected daily traffic (PI#4)
+
+```{r chart_level2_cap_perc_delay_above, eval=(params$country != "Luxembourg")}
+#| file: R/chart_level2_cap_perc_delay_above.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+
+### Average daily peak throughput (PI#5)
+
+```{r chart_level2_cap_peak_tp, eval=(params$country != "Luxembourg")}
+#| file: R/chart_level2_cap_peak_tp.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+
 ### Other indicators
 
 `r layout_2fig("chart_cap_atco", "chart_cap_atco_acc")`

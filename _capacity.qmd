@@ -352,6 +352,48 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 `r if (params$country == params$rp_full | params$country == "MUAC") ":::"`
 
 
+### [**Percentage of en route ATFM delay occurring when daily throughput was above expected daily traffic**](`r params$home_address`/about.html#capacity---to-be-added) (PI#4)
+
+:::: {layout="[ 20, 60, 20 ]"}
+
+::::: {#empty-div}
+:::::
+
+::::: {.chart-container}  
+```{r chart_level2_cap_perc_delay_above}
+#| file: R/chart_level2_cap_perc_delay_above.R
+#| out.width: "100%"
+```
+:::::
+
+::::: {#empty-div}
+:::::
+
+::::
+
+
+### [**Average daily peak throughput**](`r params$home_address`/about.html#capacity---to-be-added) (PI#5)
+
+
+:::: {layout="[ 20, 60, 20 ]"}
+
+::::: {#empty-div}
+:::::
+
+::::: {.chart-container}  
+```{r chart_level2_cap_peak_tp}
+#| file: R/chart_level2_cap_peak_tp.R
+#| out.width: "100%"
+```
+:::::
+
+::::: {#empty-div}
+:::::
+
+::::
+
+
+
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 ### Summary of performance at local level
 

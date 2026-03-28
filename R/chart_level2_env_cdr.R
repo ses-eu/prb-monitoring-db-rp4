@@ -35,7 +35,7 @@ c_textposition <- "outside"
 c_insidetextanchor <- NA
 
 #### title
-c_title_text <- paste0("RAI & RAU via available conditional routes (PIs#7 & 8)")
+c_title_text <- paste0("RAI & RAU via available conditional routes (PIs#9 & 10)")
 
 #### yaxis
 c_yaxis_title <- "RAI & RAU (%)"
@@ -70,9 +70,9 @@ myplot <- mybarchart2(data_prep,
            bargroupgap = 0.15)
 
 
-if (all(is.na(data_prep$mymetric)) == TRUE) {
+# if (all(is.na(data_prep$mymetric)) == TRUE) {
   myplot <- myplot |> 
     layout(xaxis = list(range= c(rp_min_year-0.5, rp_max_year + 0.5)))
-  }
+  # }
 
 myplot

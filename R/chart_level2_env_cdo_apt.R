@@ -55,7 +55,7 @@ c_decimals <- 1
 c_colors = c(PRBSecondBlue, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- data_prep %>% distinct(type) %>% pull(type)
+c_factor <- data_prep %>% distinct(type) %>% arrange(type) %>%  pull(type)
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 

@@ -44,7 +44,7 @@ c_suffix <- ""
 c_decimals <- 1
 
 ### trace parameters
-c_colors = c('#585858',  PRBActualColor, '#00B0F0', '#196AB4', PRBPlannedColor)
+c_colors = c(PRBActualColor, '#00B0F0', PRBPlannedColor, '#196AB4', '#585858')
 
 ###set up order of traces
 c_factor <- data_prep %>% select(type) %>% unique() 
@@ -74,7 +74,7 @@ c_yaxis_tickformat <- ",.0f"
 
 # plot chart  ----
 p1 <- mybarchart2(data_prep, 
-                  height = myheight,
+                  height = myheight +30,
                   colors = c_colors,
                   local_factor = c_factor,
                   suffix = c_suffix,

@@ -55,6 +55,8 @@ c_title_y <- 0.95
 c_yaxis_title <- paste0("% En route ATFM Delay (traffic > forecast)")
 c_yaxis_tickformat <- ",.0f"
 
+c_margin <- list(t = 60)
+
 # plot chart  ----
 p1 <- mybarchart2(data_prep, 
                   height = myheight+30,
@@ -76,7 +78,9 @@ p1 <- mybarchart2(data_prep,
 
                   yaxis_title = c_yaxis_title,
                   yaxis_ticksuffix = c_suffix,
-                  yaxis_tickformat = c_yaxis_tickformat
+                  yaxis_tickformat = c_yaxis_tickformat,
+                  
+                  margin = c_margin
 ) 
 
 

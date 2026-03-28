@@ -36,7 +36,7 @@ c_textposition <- "outside"
 c_insidetextanchor <- NA
 
 #### title
-c_title_text <- paste0("RAI & RAU via available restricted\nand segregated airspace (PIs#7 & 8)")
+c_title_text <- paste0("RAI & RAU via available restricted\nand segregated airspace (PIs#9 & 10)")
 
 #### yaxis
 c_yaxis_title <- "RAI & RAU (%)"
