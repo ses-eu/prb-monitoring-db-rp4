@@ -9,28 +9,38 @@ data_raw <- cdo_cco_actual
 airports_country <- airports_table %>% 
   filter(country_name == .env$country) 
 
-### filter CDO table on country and year_report
 data_filtered <- data_raw %>% 
   filter(
-    state == .env$country,
     year == .env$year_report
-    )
+    ) %>% 
+  right_join(
+    airports_country, by = c("apt_icao" = "apt_code")
+  )
 
 ### We take the top 15 airports for France
 if (country == "France") {
   data_filtered <- data_filtered |> 
-    filter(is.na(arrivals) == FALSE) |> 
-    arrange(desc(arrivals)) |> 
+    filter(is.na(nbr_flights_descent) == FALSE) |> 
+    arrange(desc(nbr_flights_descent)) |> 
     slice_head(n = 15)
 }
 
 data_prep <- data_filtered %>% 
-  filter(airport_code %in% airports_table$apt_code) %>%
-  left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
+  select(
+    year, apt_name, avg_seconds_per_descent, avg_seconds_per_climb
+  ) %>% 
+  pivot_longer(
+    cols = c(-year, -apt_name),
+    names_to = "type",
+    values_to = "mymetric"
+  ) %>% 
   mutate(
     xlabel = apt_name,
-    type = indicator_type,
-    mymetric = round(value * 100, 0)
+    type = case_when(
+      type == "avg_seconds_per_descent" ~ "Avg. duration in descent",
+      type == "avg_seconds_per_climb" ~ "Avg. duration in climb"
+    ),
+    mymetric = round(mymetric, 1)
   ) %>%  
   select(
     xlabel,
@@ -38,14 +48,14 @@ data_prep <- data_filtered %>%
     mymetric)
 
 ## chart parameters ----
-c_suffix <- "%"
-c_decimals <- 0
+c_suffix <- ""
+c_decimals <- 1
 
 ### trace parameters
-c_colors = PRBSecondBlue
+c_colors = c(PRBSecondBlue, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- data_prep %>% select(type) %>% unique() 
+c_factor <- data_prep %>% distinct(type) %>% pull(type)
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -54,14 +64,25 @@ c_insidetextanchor <- NA
 c_textfont_color <- 'black'
 
 #### title
-c_title_text <- paste0("CDOs, main airport(s) - ", year_report)
+c_title_text <- paste0("Average duration climb/descent,\nmain airport(s) - ", year_report)
+c_title_y <- 0.95
 
 #### yaxis
-c_yaxis_title <- "CDOs (%)"
+c_yaxis_title <- "Average duration (seconds)"
 c_yaxis_tickformat <- paste0(".",c_decimals, "f")
+
+### legend
+c_legend_x = -0.1
+c_legend_y = 1.3
+c_legend_xanchor = "left"
+
+### margin 
+c_margin = list(t = 70)
+
 
 ## plot chart  ----
 myplot <- mybarchart2(data_prep, 
+                      height = myheight + 40,
                       colors = c_colors,
                       local_factor = c_factor,
                       suffix = c_suffix,
@@ -73,10 +94,21 @@ myplot <- mybarchart2(data_prep,
                       insidetextanchor = c_insidetextanchor,
                       
                       title_text = c_title_text,
+                      title_y = c_title_y,
                       
                       yaxis_title = c_yaxis_title,
                       yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat
+                      yaxis_tickformat = c_yaxis_tickformat,
+                      
+                      ### legend
+                      legend_x = c_legend_x,
+                      legend_y = c_legend_y,
+                      legend_xanchor = c_legend_xanchor,
+                      
+                      
+                      ### margin 
+                      margin = c_margin
+                      
 )
 
 myplot 

@@ -302,23 +302,19 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ### Average duration in climb ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and descent ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
 
-:::: {layout="[ 50, 50 ]"}
+:::: {layout="[ 20, 60, 20 ]"}
 
-::::: {.chart-container}  
-```{r chart-cdo-country}
-#| file: R/chart_level2_env_cdo_country.R
-#| out.width: "100%"
-```
+::::: {#empty-div}
 :::::
 
 ::::: {.chart-container}  
-```{r chart-cdo-apt}
+```{r chart-cdo-apt, eval = (params$no_tcz > 0)}
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "100%"
 ```
 :::::
-
 ::::
+
 :::
 
 ::: {.callout-note collapse=true}
