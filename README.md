@@ -7,8 +7,6 @@ For more information contact oscar.alfaro@eurocontrol.int.
 # Production
 The master branch is **main**, so be **CAREFUL** about the changes to make on this branch.
 
-[placeholder for explanation of copying files to sesperformance]
-
 # Concrete steps to publish to production
 There are 2 possible scenarios:
 
@@ -24,20 +22,12 @@ Option 1. is more for a release preparation where different contributions eventu
 ## Development of a feature
 Development of a feature or change in the dashboards can happen in each person's favorite branch. When the changes are deemed ready for next release they can be merged in the relevant release branch.
 
-## Development for a release
-Development for a release happens in a branch conventionally named like `YYYYMM-release` for a planned release in month `MM` of year `YYYY`.
+## Deployment to 'test'
+Every time you run the  `build_site.R` script, a new site/pdf document will be built, either on the test or production folders, depending on your selected toggles. 
 
-[To be replaced by explanation of how to use the test site
-You can have a preview of the development branch if you create a pull request out of changes pushed on the corresponding branch. The preview is published automatically via Netlify at a URL like
+Keep `test_check <- TRUE` during the development phase so your site/pdf is deployed on the test folder, which is defined in the `params_project.R` script. 
 
-> `https://deploy-preview-DIGITS--sesperformance.netlify.app/`
-
-for the PR of number DIGITS, i.e.
-
-https://deploy-preview-1--sesperformance.netlify.app/
-
-for PR #1.
-]
+You can visualise your pages either directly opening the .html files, or going to your web browser and replacing `\\ihx-vdm05\LIVE_var_www_performance$` in your folder by `www.eurocontrol.int/performance`.
 
 # Website/pdf generation
 The dashboard is generated from templated Quarto documents (.qmd). There are different templates for the different types of pages/pdfs to be generated:
@@ -75,5 +65,5 @@ There are four sources of information:
 # Publication
 Go to [app.netlify.com](app.netlify.com) and login with email with the user performancereviewunit@gmail.com. Enrico and Oscar have the password.
 Select 'sesperformance.eu' in the list of sites, go to 'deploys' and in the 'drag & drop' section just drop the production folder:
-- RP3: `r fixed('\\ihx-vdm05\LIVE_var_www_performance$\oscar\prb-monitoring-prod')`
-- RP4: `r fixed('\\ihx-vdm05\LIVE_var_www_performance$\prb-monitoring\rp4\prod')`.
+- RP3: `\\ihx-vdm05\LIVE_var_www_performance$\oscar\prb-monitoring-prod`
+- RP4: `\\ihx-vdm05\LIVE_var_www_performance$\prb-monitoring\rp4\prod`
