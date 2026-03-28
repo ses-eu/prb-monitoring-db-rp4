@@ -94,7 +94,10 @@ KEA, KEP, and SCR indicators are computed at Union-wide, national, and local lev
 
 For the Network Manager, KEP is used as the environment KPI, measuring the efficiency of the European route network in the flight planning phase.
 
-## Environment - Additional taxi-out time (AXOT) (PI#3) & Arrival Sequencing and Metering Area (ASMA) time (PI#4)
+## Environment - Vertical flight efficiency (VFE) (PI#3) 
+[to be added]
+
+## Environment - Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXOT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
 The Additional taxi-out time (AXOT) and the additional Arrival Sequencing and Metering Area (ASMA) time are defined by Implementing Regulation (EU) 2019/317 as environment performance indicators at local level, respectively PI#4 and PI#5.
 
@@ -106,22 +109,17 @@ These indicators are computed at airport level with a minimum of 80 000 IFR move
 
 This section is not presented for Member States having no airports in the scope of Implementing Regulation 2019/317. 
 
-## Environment - Share of arrivals applying continuous descent operations (CDOs) (PI#5)
+## Environment - Average duration in climb (PI#7) and descent (PI#8)
 
-The share of arrivals applying Continuous Descent Operation (CDOs) (PI#5) is defined as the ratio between the total number of arrivals performing a CDO from a reference point at a height above ground and the total number of arrival operations.
-
-CDO operations allow aircraft to follow a flexible, optimum flight path that delivers major environmental and economic benefits - reduced fuel burn, gaseous emissions, noise and fuel costs - without any adverse effect on safety.
-
-The indicator is computed at airport level and it is presented both at aggregate national level and broken down at airport level.
-This section is not presented for Member States having no airports in the scope of Implementing Regulation 2019/317.
+[to be added
 
 ## Civil-Military dimension
 
 Three performance indicators capturing the level of civil-military cooperation in the management of environmental performance are defined by Implementing Regulation 2019/317:
 
-- ERSA (PI#6): The effective use of reserved or segregated airspace;
--	RAI (PI#7): The rate of planning via available airspace structures, including reserved or segregated airspace and conditional routes; and
--	RAU (PI#8): The rate of using available airspace structures, including reserved or segregated airspace and conditional routes.
+- ERSA (PI#9): The effective use of reserved or segregated airspace;
+-	RAI (PI#10): The rate of planning via available airspace structures, including reserved or segregated airspace and conditional routes; and
+-	RAU (PI#11): The rate of using available airspace structures, including reserved or segregated airspace and conditional routes.
 
 ERSA is calculated as the ratio of the initial requested allocated time for reservation or segregation from general air traffic, and the final allocated time used for the activity requiring such segregation or reservation. The indicator is calculated for all airspace allocations notified to the Network Manager.
 
@@ -157,7 +155,12 @@ In addition, for the Network Manager also the capacity PI, defined as the annual
 
 ## Capacity – Oher en route indicators 
 
-In addition to the KPIs on en route ATFM delay, the evolution of the number of air traffic control officers (ATCOs) in operations (OPS) expressed as full-time equivalents (FTEs), and the sum of sector-opening hours provided by the ANSPs is also monitored.
+Two other indicators are defined by Implementing Regulation 2019/317 as capacity performance indicators at en route level: 
+
+-  Percentage of en-route ATFM delay occurring when daily throughput was above expected daily traffic (PI#4); and
+-  Average daily peak throughput (PI#5)
+
+In addition to these, the evolution of the number of air traffic control officers (ATCOs) in operations (OPS) expressed as full-time equivalents (FTEs), and the sum of sector-opening hours provided by the ANSPs is also monitored.
 
 For the number of ATCOs in OPS FTEs, both the values planned in the performance plan and the actual figures reported by the Member States are shown on the level of the ANSP, and for each ACC as well. 
 The sum of sector-opening hours is calculated for each year of the reference period based on the data included in the Demand Data Repository (DDR2) of Eurocontrol. 
@@ -172,7 +175,7 @@ The total number of sector-opening hours is calculated as the product of the num
 
 ## Capacity - Other terminal performance indicators (PI#1-3)
 
-Three other indicators are defined by Implementing Regulation 2019/317 as capacity performance indicators a terminal level: 
+Three other indicators are defined by Implementing Regulation 2019/317 as capacity performance indicators at terminal level: 
 
 -  Percentage of IFR flights adhering to their ATFM departure slots (PI#1)
 -  The average minutes of air traffic control pre-departure delay per flight caused by take-off restrictions at the departure airport (PI#2); and

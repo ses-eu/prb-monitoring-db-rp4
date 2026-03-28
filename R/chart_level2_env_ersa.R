@@ -66,6 +66,7 @@ myplot <- mybarchart2(data_prep,
                       insidetextanchor = c_insidetextanchor,
                       
                       title_text = c_title_text,
+                      title_y = c_title_y,
                       
                       yaxis_title = c_yaxis_title,
                       yaxis_ticksuffix = c_suffix,

@@ -298,6 +298,18 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 :::
 
+::: {#container-env-apt-pis}
+:::: {#table-env-apt-pis}
+
+```{r table-env-apt-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+#| file: R/table_level2_env_apt_pis.R
+#| out.width: "100%"
+```
+
+::::
+:::
+
+
 ::: {#container-cdo}
 
 ### Average duration in climb ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and descent ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
@@ -325,17 +337,18 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 :::
 
-::: {#container-env-apt-pis}
+::: {#container-env-cdco-pis}
+:::: {#table-env-cdco-pis}
 
-:::: {#table-env-apt-pis}
-
-```{r table-env-apt-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
-#| file: R/table_level2_env_apt_pis.R
+```{r table-env-cdco-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+#| file: R/table_level2_env_apt_pis_cdco.R
 #| out.width: "100%"
 ```
 
 ::::
 :::
+
+
 
 `r if (params$no_tcz == 0) ":::"`
 

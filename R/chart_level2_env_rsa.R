@@ -74,9 +74,9 @@ myplot <- mybarchart2(data_prep,
 
 
 
-if (all(is.na(data_prep$mymetric)) == TRUE) {
+# if (all(is.na(data_prep$mymetric)) == TRUE) {
   myplot <- myplot |> 
     layout(xaxis = list(range= c(rp_min_year-0.5, rp_max_year + 0.5)))
-}
+# }
 
 myplot
