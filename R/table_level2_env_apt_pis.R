@@ -6,7 +6,7 @@ if (!exists("data_loaded")) {
 
 data_raw_axot  <-  axot_actual_apt
 data_raw_asma  <-  asma_actual_apt
-data_raw_cdo  <-  cdo_actual_apt
+data_raw_axin  <-  axin_actual_apt
 
 ## prepare data ----
 data_prep_axot <- data_raw_axot  %>%
@@ -15,7 +15,7 @@ data_prep_axot <- data_raw_axot  %>%
     airport_code %in% airports_table$apt_code) %>%
   mutate_at(vars(-one_of(c('year', 'airport_code'))), ~ ifelse(year > year_report, NA, .)) %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
-  mutate(type = "Additional taxi-out time (PI#3)",
+  mutate(type = "Additional taxi-out time (PI#4)",
          mymetric = format(round(value,2), decimals =2)
   ) %>%
   select(apt_name, year, type, mymetric)
@@ -28,31 +28,31 @@ data_prep_asma <- data_raw_asma  %>%
     airport_code %in% airports_table$apt_code) %>%
   mutate_at(vars(-one_of(c('year', 'indicator_type', 'airport_code'))), ~ ifelse(year > year_report, NA, .)) %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
-  mutate(type = "Additional ASMA time (PI#4)",
+  mutate(type = "Additional ASMA time (PI#6)",
          mymetric = format(round(value,2), decimals =2 )
   ) %>%
   select(apt_name, year, type, mymetric)
 
-data_prep_cdo <- data_raw_cdo  %>%
+data_prep_axin <- data_raw_axin  %>%
   filter(
     state == .env$country,
     airport_code %in% airports_table$apt_code) %>%
   mutate_at(vars(-one_of(c('year', 'airport_code'))), ~ ifelse(year > year_report, NA, .)) %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>% 
-  mutate(type = "Share of arrivals applying CDO (PI#5)",
-         mymetric = if_else(is.na(value) == TRUE, NA_character_, paste0(round(value*100,0), '%'))
+  mutate(type = "Additional taxi-in time (PI#5)",
+         mymetric = format(round(value,2), decimals =2)
   ) %>%
-  select(apt_name, year, type, mymetric) 
+  select(apt_name, year, type, mymetric)
 
 data_prep <- data_prep_axot %>% 
   rbind(data_prep_asma) %>% 
-  rbind(data_prep_cdo) %>%
+  rbind(data_prep_axin) %>%
   pivot_wider(names_from = "type", values_from = "mymetric"
               # , names_glue = "{year}_{.value}" #suffix to prefix
   ) %>%
-  pivot_wider(names_from = "year", values_from = c("Additional taxi-out time (PI#3)",
-                                                   "Additional ASMA time (PI#4)",
-                                                   "Share of arrivals applying CDO (PI#5)")
+  pivot_wider(names_from = "year", values_from = c("Additional taxi-out time (PI#4)",
+                                                   "Additional ASMA time (PI#6)",
+                                                   "Additional taxi-in time (PI#5)")
               # , names_glue = "{year}_{.value}" #suffix to prefix
   ) %>%
   rename("Airport" = apt_name)

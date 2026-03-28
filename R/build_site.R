@@ -1,11 +1,13 @@
 #NOTES ----
 # for the pdf output you need to install TinyTex in your machine
 ## 0. you can follow the instructions @ https://github.com/euctrl-pru/howto/wiki/Tools-Installation-and-Setup-%28For-R%29#the-tinytex-and-texlatex
-## 1. or follow these steps, run install.packages("tinytex") in your console
+## 1. or follow these steps, run quarto install tinytex in your powershell
 ## 2. This will install it in the wrong folder C:\Users\[username]\AppData\Roaming
 ## 3. Cut it from there and paste it in C:\Users\[username]\dev\
 ## 4. Add  C:\Users\[username]\dev\TinyTeX\bin\windows to your path
 ## 5. Install the package pdfcrop. This is necessary so the figures get properly cropped. You can do it from the command line C:\Users\[username]\dev\TinyTeX>tlmgr install pdfcrop
+
+##IMPORTANT: The latest plotly version 4.12 is not compatible with webshot/PhantomJS which is the engine used for exporting to pdf. While IT does not let us use webshot2, do not upgrade plotly beyond 4.11
 
 # In case this matters I have these in my path
 # C:\Users\oaolive\dev\quarto-1.6.39\bin
@@ -13,7 +15,7 @@
 
 
 # toggles ----
-# set to true for generating the investments page - do only if last year of rp (i.e. 2029 for rp4)
+# set to true for generating the investments page - do only if last year of rp available
 investments <- FALSE
 
 # set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
@@ -24,7 +26,7 @@ out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Romania' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Germany' # set your one country/stakeholder here (Home for home page)
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE
@@ -74,13 +76,13 @@ if (!all_states) {
 }
 
 
-# loop ----
+# loop years ----
 for (i in 2025) {  # set your year(s) report here
 ## set year-dependent parameters ----
   # rm(list = setdiff(ls(), "i"))
   # i<- 2029
   # rm(list = ls())
-  if (i == rp_full) {year_report <- 2029} else {year_report <- i}
+  if (i == rp_full) {year_report <- rp_max_year} else {year_report <- i}
   year_folder <- i 
   
   ## set site parameters

@@ -47,6 +47,7 @@ c_yaxis_tickformat <- paste0(".",c_decimals, "f")
 
 ## plot chart  ----
 myplot <- mybarchart2(data_prep, 
+                      height = myheight  +30,
                       colors = c_colors,
                       local_factor = c_factor,
                       suffix = c_suffix,

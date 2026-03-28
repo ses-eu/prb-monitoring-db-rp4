@@ -37,3 +37,4 @@ format_annex2_files.xlsm
 Performance-Review*.tex
 
 *.log
+**/*.quarto_ipynb

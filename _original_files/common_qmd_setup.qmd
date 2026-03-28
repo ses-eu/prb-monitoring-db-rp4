@@ -200,7 +200,7 @@ other_met_str <- params$other_met_str
 no_saf_ansps <- params$no_saf_ansps
 main_safety_ansp <- params$main_safety_ansp
 saf_ansps <- params$saf_ansps
-state_icao_vef_code <- state_icao_vef_code
+state_icao_vef_code <- params$state_icao_vef_code
 
 # yearly_xrates <- params$yearly_xrates
 
