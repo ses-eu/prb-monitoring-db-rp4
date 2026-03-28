@@ -470,6 +470,7 @@ if (out_format == 'web') {
                                               rp_short = rp_short,
                                               rp_summary_year = rp_summary_year,
                                               cef_ref_year = cef_ref_year,
+                                              prb_conclusions_ready = prb_conclusions_ready,
                                               
                                               state_list = state_list, 
                                               country = country, 

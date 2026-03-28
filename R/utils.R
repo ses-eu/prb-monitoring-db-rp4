@@ -1348,6 +1348,8 @@ get_prb_conclusions <- function(filename, kpi, table) {
       # str_replace_all(c('▪' = '\\\\textbullet\\\\quad ', '%' = '\\\\%'))  # Escape `%` for LaTeX
       as_markdown_bullets
   }
+  
+  if (!prb_conclusions_ready) {prb_conc <- ''}
 
   return(prb_conc)
 }
