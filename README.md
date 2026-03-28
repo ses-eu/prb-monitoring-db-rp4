@@ -27,7 +27,7 @@ Every time you run the  `build_site.R` script, a new site/pdf document will be b
 
 Keep `test_check <- TRUE` during the development phase so your site/pdf is deployed on the test folder, which is defined in the `params_project.R` script. 
 
-You can visualise your pages either directly opening the .html files, or going to your web browser and replacing `\\ihx-vdm05\LIVE_var_www_performance$` in your folder by `www.eurocontrol.int/performance`.
+You can visualise your pages either directly opening the .html files, or going to your web browser and replacing the string `\\ihx-vdm05\LIVE_var_www_performance$` in your folder address by `www.eurocontrol.int/performance`.
 
 # Website/pdf generation
 The dashboard is generated from templated Quarto documents (.qmd). There are different templates for the different types of pages/pdfs to be generated:
