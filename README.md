@@ -40,7 +40,14 @@ for PR #1.
 ]
 
 # Website/pdf generation
-The dashboard is generated from templated Quarto documents (.qmd). There are different templates for the different types of pages to be generated, i.e. SES RP3, Network Manager, MUAC, State and Home page. There are also different templates for the generation of the .pdf documents.
+The dashboard is generated from templated Quarto documents (.qmd). There are different templates for the different types of pages/pdfs to be generated:
+- SES RP4, 
+- Network Manager,
+- MUAC,
+- State and 
+- Home page. 
+
+There are also different yaml files for web and pdf generation.
 
 Each State/year combination is a fully independent quarto website, although it is all designed to look like an integrated website.
 
@@ -51,15 +58,22 @@ The steps to which are laid out in the script `R\build_site.R`.
 The script `R\create_pages.R` sets up the different quarto framework files (.yml, .qmd, etc) depending on the type of State/stakeholder.
 
 # Source data/text
-The source data and text feeding this dashboard is provided by, and the responsibility of, PETSCO.
+The source data and text feeding this dashboard is the responsibility of the PRB Secretariat. Before publication, it is their responsibility to review and validate all data and text in the Dashboard.
 
 The data and the text are stored in the folders defined in the `r\params_project.R` and `r\params_site.R` scripts, respectively:
 1. `data_folder`: contains all data and the text for the PRB conclusions
-2. `data_folder_a2`: contains all the text for the NSA input boxes in the dashboard
+2. `data_folder_a2`: contains all the text for the PRU analysis and NSA input boxes in the dashboard
 
 Note that if the folder 2. were to be moved to another location, the structure and names of its subfolders for the different years and KPAs should be kept so as the code can find them. 
 
+There are four sources of information:
+- Data: Coming mostly from PRU databases, but also NM and PRB Secretariat (mostly for Safety).
+- NSA input: Coming from the NSA monitoring reports (methodology under development).
+- PRU analysis: Coming from the NSA monitoring reports and PRU files (methodology under development).
+- PRB conclusions: Provided by the PRB secretariat.
 
 # Publication
 Go to [app.netlify.com](app.netlify.com) and login with email with the user performancereviewunit@gmail.com. Enrico and Oscar have the password.
-Select 'sesperformance.eu' in the list of sites, go to 'deploys' and in the 'drag & drop' section just drop the production folder, typically `r fixed('\\ihx-vdm05\LIVE_var_www_performance$\oscar\prb-monitoring-prod')`.
+Select 'sesperformance.eu' in the list of sites, go to 'deploys' and in the 'drag & drop' section just drop the production folder:
+- RP3: `r fixed('\\ihx-vdm05\LIVE_var_www_performance$\oscar\prb-monitoring-prod')`
+- RP4: `r fixed('\\ihx-vdm05\LIVE_var_www_performance$\prb-monitoring\rp4\prod')`.
