@@ -179,7 +179,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 
 `r if (params$country == "Luxembourg") "::: {.content-hidden}"`
-::: {#container-kea}
+::: {#container-er-performance}
 
 ## En route performance
 
@@ -220,8 +220,26 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 :::::
 
 ::::
+
+### Vertical flight efficiency ([**VFE**](`r params$home_address`/about.html#environment---vertical-tobeadded)) (PI#3)
+
+:::: {layout="[ 20, 60, 20 ]"}
+
+::::: {#empty-div}
+:::::
+
+::::: {.chart-container}  
+```{r chart-vfe, eval = (params$country != "Luxembourg")}
+#| file: R/chart_level2_env_vfe_ert.R
+#| out.width: "100%"
+```
+:::::
+::::
+
 :::
 `r if (params$country == "Luxembourg") ":::"`
+
+
 
 
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
@@ -232,7 +250,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ## Terminal performance
 
-### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#3) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) time (PI#4)
+### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#4), Additional taxi-in time ([**AXIN**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) time (PI#6)
 
 :::: {layout="[ 20, 60, 20 ]"}
 
