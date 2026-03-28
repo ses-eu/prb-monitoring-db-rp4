@@ -656,6 +656,15 @@ cat(make_quarto_latex_table(
 
 `r layout_2fig("chart_env_kep_scr", "chart_env_kep_scr_month")`
 
+### Vertical flight efficiency (VFE) (PI#3)
+
+```{r chart_axot_asma_country, eval=(params$country != "Luxembourg")}
+#| file: R/chart_level2_env_vfe_ert.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
 `r if (params$country == "Luxembourg") ":::"`
 
 
@@ -665,7 +674,7 @@ cat(make_quarto_latex_table(
 
 ## Terminal performance
 
-### Additional taxi-out time (AXOT) (PI#3) & Arrival Sequencing and Metering Area (ASMA) time (PI#4)
+### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIN) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
 ```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_env_axot_asma_country.R
@@ -678,9 +687,9 @@ cat(make_quarto_latex_table(
 
 \needspace{3\baselineskip}
 
-`\biggertext{Focus on ASMA \& AXOT}`{=latex}
+`\biggertext{Focus on AXOT, AXIN \& ASMA}`{=latex}
 
-**AXOT**
+**AXOT, AXIN**
 
 ```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
 if (exists("env_apt_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_2))}
@@ -694,7 +703,7 @@ if (exists("env_apt_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt
 if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_3))}
 ```
 
-### Share of arrivals applying continuous descent operations (CDOs) (PI#5)
+###  Average duration in climb (PI#7) and descent (PI#8)
 
 `r layout_2fig("chart_cdo_country", "chart_cdo_apt")`
 
