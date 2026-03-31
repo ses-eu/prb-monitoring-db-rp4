@@ -28,7 +28,7 @@ data_prep_forecast <-  data_prep %>%
 data_prep_actual <-  data_prep %>%
   filter(
     forecast_id == max(forecast_id),
-    rank == 'Base forecast'
+    rank %in% c('Base forecast', 'Actual', 'Actual forecast')
   ) %>%
   mutate(
     forecast_id = .env$forecast_id,
