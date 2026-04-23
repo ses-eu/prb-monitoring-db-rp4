@@ -67,4 +67,8 @@ myplot <- mybarchart2(data_prep,
 )
 
 myplot 
-
+# 
+# htmlwidgets::saveWidget(myplot, "G:/HQ/dgof-pru/Data/DataProcessing/Covid19/Oscar/Develop/plot.html", selfcontained = TRUE)
+# webshot2::webshot("G:/HQ/dgof-pru/Data/DataProcessing/Covid19/Oscar/Develop/plot.html", file = "plot.png")
+# 
+# webshot2::webshot("https://www.eurocontrol.int/Economics/Oscar/plot.html", file = "plot.png")

@@ -1,5 +1,6 @@
 if (!exists("doclevel")) {doclevel = "level1"}
 if (!exists("data_loaded")) {
+  source("R/params_project.R")
   source("R/get_data.R")
 }
  
