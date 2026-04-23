@@ -8,11 +8,18 @@
 ## 5. Install the package pdfcrop. This is necessary so the figures get properly cropped. You can do it from the command line C:\Users\[username]\dev\TinyTeX>tlmgr install pdfcrop
 
 ##IMPORTANT: The latest plotly version 4.12 is not compatible with webshot/PhantomJS which is the engine used for exporting to pdf. While IT does not let us use webshot2, do not upgrade plotly beyond 4.11
+## To install phantomJs
+## webshot::install_phantomjs()
+## then go to C:\Users\[username]\AppData\
+## cut the phantomJs folder and paste it in your webshot library folder wherever you have your R libraries
 
 # In case this matters I have these in my path
 # C:\Users\oaolive\dev\quarto-1.6.39\bin
 # C:\Users\oaolive\dev\quarto-1.6.39\bin\tools
 
+## to install plotly 4.11
+## install.packages("remotes")
+## remotes::install_version("plotly", version = "4.11.0")
 
 # toggles ----
 # set to true for generating the investments page - do only if last year of rp available
@@ -83,7 +90,7 @@ if (!all_states) {
 for (i in 2025) {  # set your year(s) report here
 ## set year-dependent parameters ----
   # rm(list = setdiff(ls(), "i"))
-  # i<- 2029
+  # i<- 2025
   # rm(list = ls())
   if (i == rp_full) {year_report <- rp_max_year} else {year_report <- i}
   year_folder <- i 
