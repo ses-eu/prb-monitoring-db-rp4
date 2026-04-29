@@ -38,3 +38,4 @@ Performance-Review*.tex
 
 *.log
 **/*.quarto_ipynb
+.positai
