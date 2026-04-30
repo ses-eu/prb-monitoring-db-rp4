@@ -45,6 +45,7 @@ source(here("R","get_level2_text.R"))
 #| out.width: "100%"
 ```
 
+<!-- ## ENVIRONMENT -->
 <!-- ### En route performance -->
 <!-- #### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) & shortest constrained route (SCR) (PI#2) -->
 
@@ -69,6 +70,7 @@ source(here("R","get_level2_text.R"))
 ```
 
 
+<!-- ## CAPACITY -->
 <!-- ### En route performance -->
 <!-- #### En route ATFM delay (KPI#1) -->
 ```{r chart_cap_er_l2, options = (cztype=c("enroute")), include=FALSE}
@@ -80,6 +82,20 @@ source(here("R","get_level2_text.R"))
 #| file: R/chart_level2_cap_month.R
 #| out.width: "100%"
 ```
+
+<!-- En route perfromance indicators at ACC level (PI#3-4) -->
+
+```{r chart_level2_cap_perc_delay_above, eval=(params$country != "Luxembourg"), include=FALSE}
+#| file: R/chart_level2_cap_perc_delay_above.R
+#| out.width: "100%"
+```
+
+
+```{r chart_level2_cap_peak_tp, eval=(params$country != "Luxembourg"), include=FALSE}
+#| file: R/chart_level2_cap_peak_tp.R
+#| out.width: "100%"
+```
+
 <!-- #### Other indicators -->
 
 ```{r chart_cap_atco, include=FALSE}
@@ -497,11 +513,19 @@ cat(make_quarto_latex_table_2level(
 
 ## En route performance
 
-### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) & shortest constrained route (SCR) (PI#2)
+### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (SCR) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
 
 `r layout_2fig("chart_env_kea_l2", "chart_env_kea_month")`
 
 `r layout_2fig("chart_env_kep_scr", "chart_env_kep_scr_month")`
+
+```{r chart_vfe, eval=(params$country != "Luxembourg")}
+#| file: R/chart_level2_env_vfe_ert.R
+#| out.width: "50%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
 
 ### Summary of performance at local level
 
@@ -572,6 +596,10 @@ cat(make_quarto_latex_table(
 
 ))
 ```
+
+### En route perfromance indicators at ACC level (PI#3-4)
+
+`r layout_2fig("chart_level2_cap_perc_delay_above", "chart_level2_cap_peak_tp")`
 
 ### Other indicators
 
