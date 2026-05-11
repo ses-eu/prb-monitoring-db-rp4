@@ -263,7 +263,11 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 :::::
 ::::
 
-:::: {layout="[ 50, 50 ]"}
+
+:::: {layout="[ 20, 60, 20 ]"}
+
+::::: {#empty-div}
+:::::
 
 ::::: {.chart-container}  
 ```{r chart-axot-apt}
@@ -272,11 +276,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 ```
 :::::
 
-::::: {.chart-container}  
-```{r chart-asma-apt}
-#| file: R/chart_level2_env_asma_apt.R
-#| out.width: "100%"
-```
+::::: {#empty-div}
 :::::
 
 ::::
