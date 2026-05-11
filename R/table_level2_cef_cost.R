@@ -40,23 +40,25 @@ if (country == rp_full) {
     filter(entity_type == "ECZ" | entity_type == "TCZ") %>%
     group_by(status, year) %>%
     summarise(
-      total_cost_eur_ref = sum(total_cost_eur_ref, na.rm = TRUE),
+      total_cost_nominal_eur = sum(total_cost_nominal_eur, na.rm = TRUE),
       .groups = "drop"
     ) %>%
     mutate(entity_code = "SES") %>%
-    select(year, status, total_cost_eur_ref)
+    select(year, status, total_cost_nominal_eur)
 } else if (country == "MUAC") {
   data_pre_prep <- data_raw |>
     filter(grepl("MUAC", entity_code)) |>
     mutate(entity_code = NA) |>
     group_by(year, status, entity_code) |>
-    summarise(total_cost_eur_ref = sum(total_cost_eur_ref, na.rm = TRUE)) |>
+    summarise(
+      total_cost_nominal_eur = sum(total_cost_nominal_eur, na.rm = TRUE)
+    ) |>
     ungroup() %>%
-    select(year, status, total_cost_eur_ref)
+    select(year, status, total_cost_nominal_eur)
 } else {
   data_pre_prep <- data_raw %>%
     filter(entity_code == mycz) %>%
-    select(year, status, total_cost_eur_ref)
+    select(year, status, total_cost_nominal_eur)
 }
 
 
@@ -64,7 +66,7 @@ data_prep <- data_pre_prep %>%
   mutate(
     mymetric = case_when(
       status == 'A' & year > max(.env$year_report, 2021) ~ NA,
-      .default = round(total_cost_eur_ref / 10^6, 2)
+      .default = round(total_cost_nominal_eur / 10^6, 2)
     ),
     status = str_replace(status, "A", "Actual costs"),
     status = str_replace(status, "D", "Determined costs")
