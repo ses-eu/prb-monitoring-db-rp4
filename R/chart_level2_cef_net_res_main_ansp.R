@@ -98,10 +98,12 @@ range_min <- if_else(range_min > 0, 0, range_min)
 range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE) / 10^myroundup) *
   10^myroundup +
   10^myroundup / 2
-if (range_max > 0 & range_min < 0 & range_max < 0.5 * -range_min) {
-  range_max = 0.5 * -range_min
-}
 
+if (!is.na(range_max)) {
+  if (range_max > 0 & range_min < 0 & range_max < 0.5 * -range_min) {
+    range_max = 0.5 * -range_min
+  }
+}
 ### plot chart and add annotations
 myhbarc2(
   data_prep,
