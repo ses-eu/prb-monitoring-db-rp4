@@ -97,14 +97,14 @@ c_title_text <- if_else(
 )
 
 #### yaxis
-c_yaxis_title <- "RR"
+c_yaxis_title <- "RR (M€)"
 c_yaxis_tickformat <- ".1f"
 
 #### legend
 c_legend_y <- -0.24
 
 #### margin
-c_margin = list(t = 40, b = 100, l = 40, r = 60)
+c_margin = list(t = 40, b = 80, l = 40, r = 60)
 
 # setup ranges to ensure zero line at same height
 # https://stackoverflow.com/questions/76289470/plotly-barplot-with-two-y-axis-aligned-at-zero
@@ -149,6 +149,7 @@ mybarchart2(
   textposition = c_textposition,
   textfont_color = c_textfont_color,
   insidetextanchor = c_insidetextanchor,
+  trace_showlegend = c_trace_showlegend,
 
   title_text = c_title_text,
 
