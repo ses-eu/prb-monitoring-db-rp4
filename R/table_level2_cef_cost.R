@@ -75,7 +75,7 @@ data_prep <- data_pre_prep %>%
   select(year, status, mymetric) %>%
   pivot_wider(values_from = 'mymetric', names_from = 'status') %>%
   mutate('Difference costs' = .[[2]] - .[[3]]) %>%
-  mutate_at(c(2:4), ~ round(., 0)) %>%
+  mutate_at(c(2:4), ~ round(., 1)) %>%
   pivot_longer(-year, names_to = "name", values_to = 'mymetric') %>%
   pivot_wider(values_from = 'mymetric', names_from = 'year') %>%
   mutate(
@@ -99,7 +99,7 @@ if (knitr::is_latex_output()) {
 # pdf table
 data_prep_pdf <- data_prep %>%
   mutate(
-    across(-c(1), ~ format(round(.x, 0), nsmall = 0, big.mark = ","))
+    across(-c(1), ~ format(round(.x, 1), nsmall = 1, big.mark = ","))
   )
 
 
