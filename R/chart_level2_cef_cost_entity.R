@@ -3,7 +3,7 @@ if (!exists("data_loaded")) {
 }
 
 if (exists("cz") == FALSE) {
-  cz = c("1", "enroute")
+  cz = c("1", "terminal")
 }
 
 # define cz ----
