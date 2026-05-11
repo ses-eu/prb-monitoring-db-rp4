@@ -665,7 +665,7 @@ cat(make_quarto_latex_table(
 
 ## Terminal performance
 
-### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIN) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
+### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
 ```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_env_axot_asma_country.R
@@ -678,9 +678,9 @@ cat(make_quarto_latex_table(
 
 \needspace{3\baselineskip}
 
-`\biggertext{Focus on AXOT, AXIN \& ASMA}`{=latex}
+`\biggertext{Focus on AXOT, AXIT \& ASMA}`{=latex}
 
-**AXOT, AXIN**
+**AXOT, AXIT**
 
 ```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
 if (exists("env_apt_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_2))}

@@ -248,7 +248,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ## Terminal performance
 
-### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#4), Additional taxi-in time ([**AXIN**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) time (PI#6)
+### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#4), Additional taxi-in time ([**AXIT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) time (PI#6)
 
 :::: {layout="[ 20, 60, 20 ]"}
 
@@ -284,9 +284,9 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ::: {.callout-note collapse=true}
 
-#### Focus on AXOT, AXIN & ASMA
+#### Focus on AXOT, AXIT & ASMA
 
-**AXOT & AXIN**
+**AXOT & AXIT**
 
 `r if (exists("env_apt_2") == FALSE) {''} else {env_apt_2}`
 
