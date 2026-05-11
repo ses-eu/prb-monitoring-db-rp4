@@ -98,7 +98,7 @@ c_title_text <- if_else(
 
 #### yaxis
 c_yaxis_title <- "RR (M€)"
-c_yaxis_tickformat <- ".1f"
+c_yaxis_tickformat <- ".0f"
 
 #### legend
 c_legend_y <- -0.24
@@ -107,32 +107,85 @@ c_legend_y <- -0.24
 c_margin = list(t = 40, b = 80, l = 40, r = 60)
 
 # setup ranges to ensure zero line at same height
-# https://stackoverflow.com/questions/76289470/plotly-barplot-with-two-y-axis-aligned-at-zero
-# 1. Ensure y1 includes zero
-y1_max <- max(max(data_prep$mymetric, na.rm = TRUE), 0)
-y1_min <- min(min(data_prep$mymetric, na.rm = TRUE), 0)
+# setup ranges to ensure zero line at same height
 
-# 2. Ensure y2 includes zero
-y2_max <- max(max(data_prep$share, na.rm = TRUE), 0)
-y2_min <- min(min(data_prep$share, na.rm = TRUE), 0)
+# 1) y1 values
+y1_vals <- data_prep$mymetric[is.finite(data_prep$mymetric)]
+if (length(y1_vals) == 0) {
+  y1_vals <- c(0)
+}
 
-# 3. Compute y1 range with standard plotly padding
-y1_padding <- (y1_max - y1_min) / 16
+y1_min <- min(c(y1_vals, 0), na.rm = TRUE)
+y1_max <- max(c(y1_vals, 0), na.rm = TRUE)
+
+y1_span <- y1_max - y1_min
+if (!is.finite(y1_span) || y1_span == 0) {
+  y1_span <- max(abs(c(y1_min, y1_max, 1)), na.rm = TRUE)
+}
+
+y1_padding <- y1_span / 16
 y1_range <- c(y1_min - y1_padding, y1_max + y1_padding)
 
-# 4. Find the relative position of 0 in y1 range
+# 2) zero position on y1
 y1_relative_zero <- (0 - y1_range[1]) / (y1_range[2] - y1_range[1])
 
-# 5. Calculate the total range for y2 to mirror zero position
-y2_total_range <- (y2_max - y2_min) / (1 - 1.5 * y1_relative_zero)
+# 3) y2 values
+y2_vals <- data_prep$share[is.finite(data_prep$share)]
+if (length(y2_vals) == 0) {
+  y2_vals <- c(0)
+}
 
-# 6. Calculate padding needed on both ends
-y2_padding_lower <- y1_relative_zero * y2_total_range
-y2_padding_upper <- (1 - y1_relative_zero) * y2_total_range
+y2_min <- min(c(y2_vals, 0), na.rm = TRUE)
+y2_max <- max(c(y2_vals, 0), na.rm = TRUE)
 
-# 7. Final y2 range
-y2_range <- c(0 - y2_padding_lower, 0 + y2_padding_upper)
+y2_span <- y2_max - y2_min
 
+# 4) build y2 range so zero lands at the same relative height as y1
+if (!is.finite(y2_span) || y2_span == 0) {
+  # flat or single-value y2 series
+  y2_extent <- max(abs(c(y2_min, y2_max, 1)), na.rm = TRUE)
+  y2_range <- c(-y2_extent, y2_extent)
+} else {
+  # minimum total span needed to contain all data with zero at y1_relative_zero
+  y2_total_from_min <- if (y1_relative_zero > 0) {
+    abs(y2_min) / y1_relative_zero
+  } else {
+    0
+  }
+  y2_total_from_max <- if (y1_relative_zero < 1) {
+    abs(y2_max) / (1 - y1_relative_zero)
+  } else {
+    0
+  }
+  y2_total_range <- max(y2_total_from_min, y2_total_from_max)
+
+  # fallback
+  if (!is.finite(y2_total_range) || y2_total_range <= 0) {
+    y2_total_range <- max(abs(c(y2_min, y2_max, 1)), na.rm = TRUE) * 2
+  }
+
+  y2_range <- c(
+    -y1_relative_zero * y2_total_range,
+    (1 - y1_relative_zero) * y2_total_range
+  )
+}
+
+# 5) optional rounding for nicer ticks
+y2_range <- c(
+  floor(y2_range[1] / 5) * 5,
+  ceiling(y2_range[2] / 5) * 5
+)
+
+# 6) recompute final y2 zero position after rounding
+y2_total_range <- y2_range[2] - y2_range[1]
+y2_relative_zero <- (0 - y2_range[1]) / y2_total_range
+
+# 7) realign y1 to that exact zero position too
+y1_total_range <- y1_range[2] - y1_range[1]
+y1_range <- c(
+  -y2_relative_zero * y1_total_range,
+  (1 - y2_relative_zero) * y1_total_range
+)
 # plot chart  ----
 mybarchart2(
   data_prep,
@@ -219,7 +272,7 @@ mybarchart2(
       secondary_y = FALSE,
       ticksuffix = '%',
       tickformat = if_else(
-        max(data_prep$share, na.rm = TRUE) > 0.1,
+        max(abs(data_prep$share), na.rm = TRUE) < 0.1,
         ".1f",
         ".0f"
       ),
