@@ -7,17 +7,18 @@ data_raw <- env_mil_actual
 
 
 ## prepare data ----
-data_prep <- data_raw %>% 
+data_prep <- data_raw %>%
   filter(
     state == .env$country,
-    year <= .env$year_report) %>% 
+    year <= .env$year_report
+  ) %>%
   select(
     xlabel = year,
     "RAI" = rai_rsa,
     "RAU" = rau_rsa
-  ) |> 
-  pivot_longer(-xlabel, names_to = 'type', values_to = 'mymetric') |> 
-  mutate(mymetric = round(mymetric, 0))
+  ) |>
+  pivot_longer(-xlabel, names_to = 'type', values_to = 'mymetric') |>
+  mutate(mymetric = round(mymetric * 100, 0))
 
 ## chart parameters ----
 c_suffix <- "%"
@@ -27,7 +28,7 @@ c_decimals <- 0
 c_colors = c(PRBActualColor, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- c("RAI", "RAU") 
+c_factor <- c("RAI", "RAU")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -36,47 +37,48 @@ c_textposition <- "outside"
 c_insidetextanchor <- NA
 
 #### title
-c_title_text <- paste0("RAI & RAU via available restricted\nand segregated airspace (PIs#9 & 10)")
+c_title_text <- paste0(
+  "RAI & RAU via available restricted\nand segregated airspace (PIs#9 & 10)"
+)
 
 #### yaxis
 c_yaxis_title <- "RAI & RAU (%)"
-c_yaxis_tickformat <- paste0(".",0, "f")
+c_yaxis_tickformat <- paste0(".", 0, "f")
 c_title_y <- 0.95
 
 #### margin
 C_margin <- list(t = 60)
 
 ## plot chart  ----
-myplot <- mybarchart2(data_prep, 
-                      height = myheight + 30,
-                      colors = c_colors,
-                      local_factor = c_factor,
-                      suffix = c_suffix,
-                      decimals = c_decimals,
+myplot <- mybarchart2(
+  data_prep,
+  height = myheight + 30,
+  colors = c_colors,
+  local_factor = c_factor,
+  suffix = c_suffix,
+  decimals = c_decimals,
 
-                      hovertemplate = c_hovertemplate,
-                      
-                      textangle = c_textangle,
-                      textposition = c_textposition,
-                      insidetextanchor = c_insidetextanchor,
-                      
-                      title_text = c_title_text,
-                      title_y = c_title_y,
-                      
-                      yaxis_title = c_yaxis_title,
-                      yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat,
+  hovertemplate = c_hovertemplate,
 
-                      margin = C_margin
-) %>%  
-  layout(yaxis = list(range= c(0,100)),
-         bargroupgap = 0.15)
+  textangle = c_textangle,
+  textposition = c_textposition,
+  insidetextanchor = c_insidetextanchor,
 
+  title_text = c_title_text,
+  title_y = c_title_y,
+
+  yaxis_title = c_yaxis_title,
+  yaxis_ticksuffix = c_suffix,
+  yaxis_tickformat = c_yaxis_tickformat,
+
+  margin = C_margin
+) %>%
+  layout(yaxis = list(range = c(0, 100)), bargroupgap = 0.15)
 
 
 # if (all(is.na(data_prep$mymetric)) == TRUE) {
-  myplot <- myplot |> 
-    layout(xaxis = list(range= c(rp_min_year-0.5, rp_max_year + 0.5)))
+myplot <- myplot |>
+  layout(xaxis = list(range = c(rp_min_year - 0.5, rp_max_year + 0.5)))
 # }
 
 myplot
