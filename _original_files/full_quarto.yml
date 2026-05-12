@@ -258,8 +258,8 @@ website:
           - section: "<b>En route performance</b>" #environment
             href: environment.html#en-route-performance
             contents: #environment
-            - text: "Horizontal flight efficiency"
-              href: environment.html#horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-scr-pi2
+            - text: "Flight efficiency"
+              href: environment.html#horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-scr-pi2-and-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3
 # include env_terminal block
           - text: "<b>CIV-MIL</b>"
             href: environment.html#civil-military-dimension
@@ -275,6 +275,8 @@ website:
             contents: #capacity
             - text: "En route ATFM delay"
               href: capacity.html#en-route-atfm-delay-kpi1
+            - text: "En route perfromance indicators at ACC level"
+              href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4
             - text: "Other indicators"
               href: capacity.html#other-indicators
 # include cap_terminal block
