@@ -360,7 +360,7 @@ axot_actual_apt <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-#### AXIN ----
+#### AXIT ----
 axit_actual_ms <- read_xlsx(
   here(data_folder, env_data_file),
   sheet = "axin_ms",
@@ -955,6 +955,10 @@ xrate_ert <- read_xlsx(
     xrate_ref = exchange_rate_ref2022
   )
 
+tcz_list_table_xrate <- tcz_list_table %>%
+  distinct(country_zone_code = icao_code, cz_code = tcz_id)
+
+
 xrate_trm <- read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "xrate_trm",
@@ -963,7 +967,12 @@ xrate_trm <- read_xlsx(
   as_tibble() %>%
   clean_names() %>%
   filter(status == "D") %>%
-  mutate(cztype = "terminal", cz_code = paste0(country_zone_code, "_TCZ")) %>%
+  right_join(
+    tcz_list_table_xrate,
+    by = c("country_zone_code"),
+    relationship = "many-to-many"
+  ) %>%
+  mutate(cztype = "terminal") %>%
   select(
     cz_code,
     cztype,

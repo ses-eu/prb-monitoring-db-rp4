@@ -98,7 +98,7 @@ c_title_text <- if_else(
 
 #### yaxis
 c_yaxis_title <- "RR (M€)"
-c_yaxis_tickformat <- ".0f"
+c_yaxis_tickformat <- ".1f"
 
 #### legend
 c_legend_y <- -0.24
@@ -106,7 +106,6 @@ c_legend_y <- -0.24
 #### margin
 c_margin = list(t = 40, b = 80, l = 40, r = 60)
 
-# setup ranges to ensure zero line at same height
 # setup ranges to ensure zero line at same height
 
 # 1) y1 values
@@ -180,12 +179,32 @@ y2_range <- c(
 y2_total_range <- y2_range[2] - y2_range[1]
 y2_relative_zero <- (0 - y2_range[1]) / y2_total_range
 
-# 7) realign y1 to that exact zero position too
-y1_total_range <- y1_range[2] - y1_range[1]
+# 7) realign y1 to that exact zero position too, without cutting data
+y1_total_from_min <- if (y2_relative_zero > 0) {
+  abs(y1_min) / y2_relative_zero
+} else {
+  0
+}
+
+y1_total_from_max <- if (y2_relative_zero < 1) {
+  abs(y1_max) / (1 - y2_relative_zero)
+} else {
+  0
+}
+
+y1_original_total_range <- y1_range[2] - y1_range[1]
+
+y1_total_range <- max(
+  y1_total_from_min,
+  y1_total_from_max,
+  y1_original_total_range
+)
+
 y1_range <- c(
   -y2_relative_zero * y1_total_range,
   (1 - y2_relative_zero) * y1_total_range
 )
+
 # plot chart  ----
 mybarchart2(
   data_prep,

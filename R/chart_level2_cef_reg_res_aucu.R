@@ -3,7 +3,7 @@ if (!exists("data_loaded")) {
 }
 
 if (exists("cz") == FALSE) {
-  cz = c("1", "enroute")
+  cz = c("1", "terminal")
 }
 
 # define cz ----
@@ -87,7 +87,6 @@ c_yaxis_tickformat <- ".0f"
 c_margin = list(t = 60, b = 0, l = 60, r = 60)
 
 # setup ranges to ensure zero line at same height
-# setup ranges to ensure zero line at same height
 
 # === Step 1: y1 setup ===
 y1_max <- max(max(data_prep$mymetric, na.rm = TRUE), 0)
@@ -140,12 +139,29 @@ y2_range <- c(
 y2_total_range <- y2_range[2] - y2_range[1]
 y2_relative_zero <- (0 - y2_range[1]) / y2_total_range
 
-# === Step 7: realign y1 to same zero position ===
-y1_total_range <- y1_range[2] - y1_range[1]
+# === Step 7: realign y1 to same zero position, but keep all y1 data visible ===
+y1_total_from_min <- if (y2_relative_zero > 0) {
+  abs(y1_min) / y2_relative_zero
+} else {
+  0
+}
+y1_total_from_max <- if (y2_relative_zero < 1) {
+  abs(y1_max) / (1 - y2_relative_zero)
+} else {
+  0
+}
+
+y1_total_range <- max(y1_total_from_min, y1_total_from_max)
+
+# keep at least the original padded span
+y1_original_total_range <- y1_range[2] - y1_range[1]
+y1_total_range <- max(y1_total_range, y1_original_total_range)
+
 y1_range <- c(
-  0 - y2_relative_zero * y1_total_range,
-  0 + (1 - y2_relative_zero) * y1_total_range
+  -y2_relative_zero * y1_total_range,
+  (1 - y2_relative_zero) * y1_total_range
 )
+
 
 # plot chart  ----
 p1 <- mybarchart2(

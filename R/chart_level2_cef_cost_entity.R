@@ -49,7 +49,7 @@ data_prep <- data_raw %>%
         entity_type_id != "ANSP1" ~ "Other ATSP",
       entity_type == "MUAC" ~ "Other ATSP",
       entity_type == "MET" ~ "METSP",
-      .default = "NSA (including\nEUROCONTROL)"
+      entity_type == "NSA" ~ "NSA (including\nEUROCONTROL)"
     ),
     mymetric = round(total_cost_eur_ref / 10^6, 2),
     status = str_replace(status, "A", "Actual costs"),
