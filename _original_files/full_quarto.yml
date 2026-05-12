@@ -246,8 +246,6 @@ website:
               href: safety.html#rate-of-separation-minima-infringements-smis-pi2
             - text: "Occurrences reporting"
               href: safety.html#quality-of-occurences-reporting
-          - text: "<b>ASDRS</b>"
-            href: safety.html#use-of-automated-safety-data-recording-system-asdrs-pi3
       - text: "---"
 # environment level2 beginning
       - section: "<b>Environment</b>"
@@ -275,7 +273,7 @@ website:
             contents: #capacity
             - text: "En route ATFM delay"
               href: capacity.html#en-route-atfm-delay-kpi1
-            - text: "En route perfromance indicators at ACC level"
+            - text: "En route performance indicators at ACC level"
               href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4
             - text: "Other indicators"
               href: capacity.html#other-indicators
