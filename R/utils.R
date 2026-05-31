@@ -2754,3 +2754,148 @@ make_quarto_latex_table_2level <- function(
   }
   paste0("```{=latex}\n", tex, "```\n")
 }
+
+# Level 2 text -----
+replace_headings <- function(path, mytitles) {
+  if (!file.exists(path)) {
+    return(invisible(NULL))
+  }
+
+  lines <- readLines(path, warn = FALSE)
+
+  get_heading_level <- function(x) {
+    x <- sub("\r$", "", x)
+    if (!startsWith(x, "#")) {
+      return(0L)
+    }
+
+    chars <- strsplit(x, "", fixed = TRUE)[[1]]
+    level <- 0L
+
+    for (ch in chars) {
+      if (ch == "#") {
+        level <- level + 1L
+      } else {
+        break
+      }
+    }
+
+    if (level >= 1L && level <= 6L) {
+      rest <- substring(x, level + 1L)
+      if (nchar(rest) > 0L && substr(rest, 1L, 1L) == " ") {
+        return(level)
+      }
+    }
+
+    0L
+  }
+
+  get_heading_text <- function(x) {
+    level <- get_heading_level(x)
+    if (level == 0L) {
+      return("")
+    }
+    trimws(substring(x, level + 1L))
+  }
+
+  is_notes_title <- function(x) {
+    txt <- toupper(trimws(x))
+    endsWith(txt, "NOTES")
+  }
+
+  is_note_heading <- function(x) {
+    txt <- toupper(trimws(x))
+    grepl("NOTE[ ]+[0-9]+$", txt)
+  }
+
+  get_note_number <- function(x) {
+    sub(".*NOTE[ ]+([0-9]+)$", "\\1", toupper(trimws(x)))
+  }
+
+  note_has_body <- function(lines, idx) {
+    if (idx >= length(lines)) {
+      return(FALSE)
+    }
+
+    for (j in seq.int(idx + 1L, length(lines))) {
+      if (get_heading_level(lines[j]) > 0L) {
+        return(FALSE)
+      }
+      if (nzchar(trimws(lines[j]))) {
+        return(TRUE)
+      }
+    }
+
+    FALSE
+  }
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
+  heading_texts <- vapply(lines, get_heading_text, character(1))
+
+  keep <- heading_levels != 1L & heading_levels != 2L
+  lines <- lines[keep]
+  heading_levels <- heading_levels[keep]
+  heading_texts <- heading_texts[keep]
+
+  note_idx <- which(
+    heading_levels > 0L & vapply(heading_texts, is_note_heading, logical(1))
+  )
+  if (length(note_idx) > 0L) {
+    keep <- rep(TRUE, length(lines))
+    keep[note_idx] <- vapply(
+      note_idx,
+      function(i) note_has_body(lines, i),
+      logical(1)
+    )
+    lines <- lines[keep]
+  }
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
+  heading_texts <- vapply(lines, get_heading_text, character(1))
+
+  notes_title_idx <- which(
+    heading_levels > 0L & vapply(heading_texts, is_notes_title, logical(1))
+  )
+  if (length(notes_title_idx) > 0L) {
+    lines <- lines[-notes_title_idx]
+  }
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
+  heading_texts <- vapply(lines, get_heading_text, character(1))
+
+  note_idx <- which(
+    heading_levels > 0L & vapply(heading_texts, is_note_heading, logical(1))
+  )
+  if (length(note_idx) == 1L) {
+    lines[note_idx] <- "**Note**"
+  } else if (length(note_idx) > 1L) {
+    note_numbers <- vapply(
+      heading_texts[note_idx],
+      get_note_number,
+      character(1)
+    )
+    lines[note_idx] <- sprintf("**Note %s**", note_numbers)
+  }
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
+  heading_texts <- vapply(lines, get_heading_text, character(1))
+
+  replace_idx <- which(
+    heading_levels > 0L &
+      !vapply(heading_texts, is_notes_title, logical(1)) &
+      !vapply(heading_texts, is_note_heading, logical(1))
+  )
+
+  if (length(replace_idx) != length(mytitles)) {
+    stop(
+      sprintf(
+        "Title count mismatch: found %d replaceable headings but got %d replacement titles.",
+        length(replace_idx),
+        length(mytitles)
+      )
+    )
+  }
+
+  lines[replace_idx] <- mytitles
+  cat(paste(lines, collapse = "\n"))
+}

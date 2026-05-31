@@ -169,6 +169,7 @@ if (investments) {
   }
   writeLines(tmp_text, 'index.qmd')
 } else {
+  ## State----
   tmp_text <- readLines("_original_files/common_qmd_setup.qmd")
   if (out_format == 'pdf') {
     tmp_text <- str_replace(

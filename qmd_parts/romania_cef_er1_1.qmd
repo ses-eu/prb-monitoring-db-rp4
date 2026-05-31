@@ -1,0 +1,57 @@
+# ER1. EN ROUTE CHARGING ZONE - ROMANIA
+
+## ER1.1. SECTION 1 – UNIT COST
+
+### ER1.1.1. AUC VS. DUC
+
+In 2025, the en route AUC was -4.5% (or -8.51 RON2022, -1.73 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+2.6%) and lower than planned en route costs in real terms (-2.0%, or -25.6 MRON2022, -5.2 M€2022). It should be noted that the actual inflation index in 2025 was +2.9 p.p. higher than planned.
+
+### ER1.1.2. EN ROUTE SERVICE UNITS
+
+The difference between actual and planned TSUs (+2.6%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### ER1.1.3. EN ROUTE COSTS BY ENTITY
+
+Actual real en route costs are -2.0% (-5.2 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ROMATSA (-2.1%, or -5.2 M€2022) and.
+
+### ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (ROMATSA) AT CHARGING ZONE LEVEL
+
+Based on the additional information to the en-route reporting tables, the lower than planned en route costs in real terms for ROMATSA in 2025 (-2.1%, or -5.2 M€2022) result from:
+
+- Lower than planned staff costs (-2.3%),
+
+- Lower than planned other operating costs (-2.3%),
+
+- Consistent with the planned depreciation (+0.0%),
+
+- Consistent with the planned cost of capital (+0.0%),
+
+- Lower than planned exceptional costs (-2.3%).
+
+### ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA
+
+The NSA of Romania provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+insert information from monitoring report
+
+### ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+insert information from monitoring report
+
+### ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ROMATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+insert information from monitoring report
+
+ROMATSA reports the implementation of the following actions:
+
+insert information from monitoring report
+
+### ER1.1.8. NOTES
+
+#### ER1.1.8.1. NOTE 1
+
+#### ER1.1.8.2. NOTE 2

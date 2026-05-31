@@ -9,11 +9,13 @@ if (cztype == "enroute") {
   cztype_proper <- "En route"
   no_cz <- params$no_ecz
   czname <- ecz_list$ecz_name[[czindex]]
+  cz_short <- 'er'
   
 } else {
   cztype_proper <- "Terminal"
   no_cz <- params$no_tcz
   czname <- tcz_list$tcz_name[[czindex]]
+  cz_short <- 'tz'
 }
 
 ```
@@ -66,29 +68,27 @@ if (cztype == "enroute") {
 
 
 ```{r cef-level2-text-@@cz_type@@@@cz_index@@}
-# if (czindex > no_ecz) {
-# # do nothing
-# 
-# } else {
-# 
-# czname <- ecz_list$ecz_name[[czindex]]
-# cef_level2_text <- get_cef_level2_text(czindex, cztype)
-# }
+cef_titles_s1 <- c(
+  "**AUC vs. DUC**",
+  paste0("**", cztype_proper, " service units**"),
+  paste0("**", cztype_proper, " costs by entity**"),
+  paste0("**", cztype_proper, " costs for the main ANSP (", main_ansp, ") at charging zone level**"),
+  "**Assessment of the actual performance in the charging zone reported by the NSA**",
+  "**Explanation of the differences between actual and determined costs at charging zone level reported by the NSA**",
+  paste0("**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situations and actions taken by the ANSP**")
+  )
 
-  cef_txt_1_4_duc <- ''
-  cef_txt_1_4_su <- '' 
-  cef_txt_1_4_cost_all <- ''
-  cef_txt_1_4_cost_main <- ''
-  cef_txt_1_4 <- data.frame(a=c(NA,NA), b=c(NA,NA)) |> as_tibble()
-  
-  my_index_su <- 1
-  my_index_cost_by_ent <- 1
-  my_index_cost_main <- 1
-  
-  cef_txt_1_9 <- data.frame(a=c(NA,NA), b=c(NA,NA)) |> as_tibble()
-  cef_txt_1_10_txt <- ''
-  cef_txt_1_13 <- data.frame(a=c(NA,NA,NA,NA,NA), b=c(NA,NA,NA,NA,NA)) |> as_tibble()
-  
+cef_titles_s2 <- c(
+  paste0("**", cztype_proper, " AUCU monitoring at charging zone level**"),
+  "**Initiatives implemented or planned that will improve this PI reported by the NSA**"
+)
+
+cef_titles_s3 <- c(
+  paste0("**", main_ansp, " net gain/loss on activity in the ", czname, 
+         " ", tolower(cztype_proper), " charging zone in ", year_report, "**"),
+  paste0("**", main_ansp, " overall regulatory result (RR) for the ", tolower(cztype_proper), " activity**")
+)
+
 ```
 
 \needspace{3\baselineskip}
@@ -158,24 +158,16 @@ cat(make_quarto_latex_table(
 
 `\biggertext{Focus on unit cost}`{=latex}
 
+```{r}
+#| echo: false
+#| output: asis
 
-**AUC vs. DUC**
+path <- sprintf("./qmd_parts/%s_cef_%s%d_1.qmd", tolower(country), cz_short, i)
 
-\needspace{2\baselineskip}
+replace_headings(path, cef_titles_s1)
 
-**`r cztype_proper` service units**
-
-\needspace{2\baselineskip}
-
-**`r cztype_proper` costs by entity**
-
-\needspace{2\baselineskip}
-
-**`r cztype_proper` costs for the main ANSP at charging zone level**
-
-```{r cef_txt_1_4_@@cz_type@@@@cz_index@@, results = "asis"}
-
-```
+# if (file.exists(path)) {cat(sprintf("{{< include %s >}}", path))}
+``` 
 
 
 ### Actual unit cost incurred by the users (AUCU) (PI#1)
@@ -240,6 +232,20 @@ cat(make_quarto_latex_table(
 ))
 ```
 
+\needspace{3\baselineskip}
+
+`\biggertext{Focus on AUCU}`{=latex}
+
+```{r}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s_cef_%s%d_2.qmd", tolower(country), cz_short, i)
+
+replace_headings(path, cef_titles_s2)
+
+``` 
+
 
 ### Regulatory result (RR)
 
@@ -251,11 +257,12 @@ cat(make_quarto_latex_table(
 
 `\biggertext{Focus on regulatory result}`{=latex}
 
+```{r}
+#| echo: false
+#| output: asis
 
-```{r cef_txt_1_13_@@cz_type@@@@cz_index@@, results = "asis"}
-cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_13[1,1]))
-```
+path <- sprintf("./qmd_parts/%s_cef_%s%d_3.qmd", tolower(country), cz_short, i)
 
-```{r cef_txt_1_10_txt_22_@@cz_type@@@@cz_index@@, results = "asis"}
-cat(quarto_paragraph_breaks(cef_level2_text$cef_txt_1_10_txt))
-```
+replace_headings(path, cef_titles_s3)
+
+``` 
