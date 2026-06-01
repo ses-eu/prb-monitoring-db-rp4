@@ -2,166 +2,46 @@
 cz=c("@@cz_index@@", "@@cz_type@@")
   
 # define cz
-ez <- as.numeric(cz[[1]])
+czindex <- as.numeric(cz[[1]])
 cztype <- cz[[2]]
 
-# if (country == rp_full | country == "MUAC") {
-  # to avoid errors when processing the file
-  cef_txt_1_4_duc <- ''
-  cef_txt_1_4_su <- '' 
-  cef_txt_1_4_cost_all <- ''
-  cef_txt_1_4_cost_main <- ''
-  cef_txt_1_4 <- data.frame(a=c(NA,NA), b=c(NA,NA)) |> as_tibble()
+if (cztype == "enroute") {
+  cztype_proper <- "En route"
+  no_cz <- params$no_ecz
+  czname <- ecz_list$ecz_name[[czindex]]
+  cz_short <- 'er'
   
-  my_index_su <- 1
-  my_index_cost_by_ent <- 1
-  my_index_cost_main <- 1
-  
-  cef_txt_1_9 <- data.frame(a=c(NA,NA), b=c(NA,NA)) |> as_tibble()
-  cef_txt_1_10_txt <- ''
-  cef_txt_1_13 <- data.frame(a=c(NA,NA,NA,NA,NA), b=c(NA,NA,NA,NA,NA)) |> as_tibble()
-  
-# } else {
-  # # define ranges and import data
-  # ## 1st sheet
-  # sheet <- if_else(cztype == "terminal",
-  #                  if_else(ez >1, paste0("5_TRM (", ez, ")"), "5_TRM"),
-  #                  "1_ERT")
-  # ceff_file <- if_else(country == "Spain" & ez == 2, ceff_file_canarias, ceff_file)
-  # 
-  # ## range 1.4
-  # range <- "C50:M71"
-  # cef_txt_1_4  <- read_range(ceff_file, sheet, range) %>% rename(a = 1)
-  # 
-  # ### Check if the whole range is merged and apply different logic
-  # if (is.na(cef_txt_1_4[2,1]) == FALSE) {
-  #   ### find specific headings
-  #   my_index_su <- which(cef_txt_1_4$a %like% paste0(if_else(cztype == "terminal",
-  #                                                            "Terminal",
-  #                                                            "En route"), 
-  #                                                    ' service units')) + 1
-  #   
-  #   if(identical(my_index_su, numeric(0)) == TRUE) {my_index_su <- which(cef_txt_1_4$a %like% paste0("Terminal charging zone ", ez,' service units')) + 1} 
-  #   
-  #   my_index_cost_by_ent <- which(cef_txt_1_4$a %like% paste0(if_else(cztype == "terminal",
-  #                                                            "Terminal",
-  #                                                            "En route"), 
-  #                                                    ' costs by entity')) + 1
-  #   
-  #   if(identical(my_index_cost_by_ent, numeric(0)) == TRUE) {my_index_cost_by_ent <- which(cef_txt_1_4$a %like% paste0("Terminal charging zone ", ez,' costs by entity')) + 1} 
-  #   
-  #   my_index_cost_main <- which(cef_txt_1_4$a %like% paste0(if_else(cztype == "terminal",
-  #                                                            "Terminal",
-  #                                                            "En route"), 
-  #                                                    " costs for the main ANSP")) + 1
-  #   
-  #   if(identical(my_index_cost_main, numeric(0)) == TRUE) {my_index_cost_main <- which(cef_txt_1_4$a %like% paste0("Terminal charging zone ", ez,' costs for the main ANSP')) + 1}
-  #   if(identical(my_index_cost_main, numeric(0)) == TRUE) {my_index_cost_main <- which(cef_txt_1_4$a %like% paste0("Terminal charging zone costs for the main ANSP")) + 1}
-  #   
-  #   ### to avoid errors if else is executed
-  #   cef_txt_1_4_duc <- ""
-  #   cef_txt_1_4_su <- ""
-  #   cef_txt_1_4_cost_all <- ""
-  #   cef_txt_1_4_cost_main <- ""
-  # 
-  # } else {
-  #   ### find beginning and end of headings
-  #   tx <- cef_txt_1_4[1,1] |> pull()
-  #   heading1 <- str_locate(tx, fixed('AUC vs DUC')) + 7 
-  #   if(is.na(heading1[1]) == TRUE) {heading1 <- str_locate(tx, fixed('AUC vs. DUC')) + 7}
-  #   heading2 <- str_locate(str_replace_all(tx, "-", " "), fixed(paste0(if_else(cztype == "terminal",
-  #                                                            "**Terminal",
-  #                                                            "**En route"), 
-  #                                                    " service units"))) 
-  # 
-  #   heading3_1 <- str_locate(str_replace_all(tx, "-", " "), fixed(paste0(if_else(cztype == "terminal",
-  #                                                            "**Terminal",
-  #                                                            "**En route"),
-  #                                             ' costs by entity at charging zone level**<br/>')))
-  #   heading3_2 <- str_locate(str_replace_all(tx, "-", " "), fixed(paste0(if_else(cztype == "terminal",
-  #                                                            "**Terminal",
-  #                                                            "**En route"),
-  #                                             ' costs by entity**<br/>')))
-  # 
-  #   heading4_beg <- str_locate(str_replace_all(tx, "-", " "), fixed(paste0(if_else(cztype == "terminal",
-  #                                                            "**Terminal",
-  #                                                            "**En route"),
-  #                                             ' costs for the main ANSP')))
-  #   all_bold_locations <- str_locate_all(tx, fixed('**'))
-  #   heading_4 <- tail(all_bold_locations[[1]], n = 1)
-  # 
-  #   cef_txt_1_4_duc <- str_replace_all(substr(tx, max(heading1)+1, min(heading2)-1), fixed("<br/><br/>"), fixed("<br/>"))
-  #   cef_txt_1_4_su <- str_replace_all(substr(tx, max(heading2)+1+7, min(heading3_1, heading3_2, na.rm = TRUE)-1) , fixed("<br/><br/>"), fixed("<br/>"))
-  #   cef_txt_1_4_cost_all <- str_replace_all(substr(tx, max(heading3_1, heading3_2, na.rm = TRUE)+1, min(heading4_beg)-1) , fixed("<br/><br/>"), fixed("<br/>"))
-  #   cef_txt_1_4_cost_main <- str_replace_all(substr(tx, heading_4 + 2, nchar(tx)) , fixed("<br/><br/>"), fixed("<br/>"))
-  #   
-  #   ### remove leading and trailing line breaks
-  #   cef_txt_1_4_duc <- sub("^<br/>|<br/>$", "", cef_txt_1_4_duc)
-  #   cef_txt_1_4_su <- sub("^<br/>|<br/>$", "", cef_txt_1_4_su)
-  #   cef_txt_1_4_cost_all <- sub("^<br/>|<br/>$", "", cef_txt_1_4_cost_all)
-  #   cef_txt_1_4_cost_main <- sub("^<br/>|<br/>$", "", cef_txt_1_4_cost_main)
-  #   
-  #   ### just to avoid errors
-  #   my_index_su <- 2
-  #   my_index_cost_by_ent <-2
-  #   my_index_cost_main <- 2
-  # 
-  #   }
-  #   
-  # ## 2nd sheet
-  # sheet <- if_else(cztype == "terminal",
-  #                  if_else(ez >1, paste0("6_TRM (", ez, ")"), "6_TRM"),
-  #                  "2_ERT")
-  # range <- "C11:M14"
-  # cef_txt_1_5  <- read_range(ceff_file, sheet, range)
-  # 
-  # range <- "J16:M33"
-  # cef_txt_1_6  <- read_range(ceff_file, sheet, range)
-  # 
-  # ## range 1.9
-  # range <- "C62:M71"
-  # cef_txt_1_9  <- read_range(ceff_file, sheet, range)
-  # 
-  # ### check if title in the right spot
-  # mycolnames <- colnames(cef_txt_1_9)
-  # if (is.na(max(str_locate(mycolnames[1], "9. Focus"))) == TRUE) {
-  #   range <- "C63:M71"
-  #   cef_txt_1_9  <- read_range(ceff_file, sheet, range)
-  # }
-  # 
-  # ## 3rd sheet
-  # sheet <- if_else(cztype == "terminal",
-  #                  if_else(ez >1, paste0("7_TRM_ATSP (", ez, ")"), "7_TRM_ATSP"),
-  #                  "3_ATSP")
-  # 
-  # range <- "C11:M22"
-  # cef_txt_1_10  <- read_range(ceff_file, sheet, range)
-  # 
-  # ## find the notes in box 10
-  # cef_txt_1_10_txt <- cef_txt_1_10[1,1] 
-  # note_position <- str_locate(cef_txt_1_10_txt, fixed("**Note"))
-  # note_position <- if_else(is.na(note_position) == TRUE, 
-  #                          str_locate(cef_txt_1_10_txt, fixed("Note")),
-  #                          note_position)
-  # 
-  # cef_txt_1_10_txt <- ifelse(is.na(note_position[1,1]) == TRUE, "",
-  #                            substring(cef_txt_1_10_txt, note_position[1,1]))
-  # 
-  # range <- if_else(year_report >= 2022, "C66:M71", "C64:M71")
-  # cef_txt_1_13  <- read_range(ceff_file, sheet, range)
-  # ## the titles are already bold in the .qmd below
-  # if (year_report >= 2023) {
-  #   cef_txt_1_13 <- cef_txt_1_13 %>% 
-  #     mutate_all(., ~ str_replace_all(., fixed("**"),""))
-  # }
-  # 
-  # if (year_report == 2024) {
-  #   cef_txt_1_13 <- cef_txt_1_13 %>%
-  #     mutate_all(., ~ str_replace_all(., fixed("RP3 summary"), fixed("**RP3 summary**")))
-  # 
-  # }
+} else {
+  cztype_proper <- "Terminal"
+  no_cz <- params$no_tcz
+  czname <- tcz_list$tcz_name[[czindex]]
+  cz_short <- 'tz'
+}
 
-# }
+cz=c("@@cz_index@@", "@@cz_type@@")
+  
+cef_titles_s1 <- c(
+  "**AUC vs. DUC**",
+  paste0("**", cztype_proper, " service units**"),
+  paste0("**", cztype_proper, " costs by entity**"),
+  paste0("**", cztype_proper, " costs for the main ANSP (", main_ansp, ") at charging zone level**"),
+  "**Assessment of the actual performance in the charging zone reported by the NSA**",
+  "**Explanation of the differences between actual and determined costs at charging zone level reported by the NSA**",
+  paste0("**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situations and actions taken by the ANSP**")
+  )
+
+cef_titles_s2 <- c(
+  paste0("**", cztype_proper, " AUCU monitoring at charging zone level**"),
+  "**Initiatives implemented or planned that will improve this PI reported by the NSA**"
+)
+
+cef_titles_s3 <- c(
+  paste0("**", main_ansp, " net gain/loss on activity in the ", czname, 
+         " ", tolower(cztype_proper), " charging zone in ", year_report, "**"),
+  paste0("**", main_ansp, " overall regulatory result (RR) for the ", tolower(cztype_proper), " activity**")
+)
+  
+
 ```
 ::: {.grid .align-items-center}
 :::: {.g-col-9}
@@ -174,7 +54,7 @@ cztype <- cz[[2]]
 :::
 
 
-`r if (cztype == 'terminal' | ez == 2) "::: {.content-hidden}"`
+`r if (cztype == 'terminal' | czindex == 2) "::: {.content-hidden}"`
 
 ## PRB monitoring
 
@@ -184,7 +64,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r cef_conc1`
 
-`r if (cztype == 'terminal' | ez == 2) ":::"`
+`r if (cztype == 'terminal' | czindex == 2) ":::"`
 
 
 `r if ((params$no_ecz == 1 & cztype == 'enroute') | (params$no_tcz == 1 & cztype == 'terminal')) "::: {.content-hidden}"`
@@ -289,21 +169,16 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 #### Focus on unit cost
 
-**AUC vs. DUC**
+```{r}
+#| echo: false
+#| output: asis
 
-`r if_else(is.na(cef_txt_1_4[2,1]) == TRUE, cef_txt_1_4_duc, pull(cef_txt_1_4[2,1]))`
+path <- sprintf("./qmd_parts/%s_cef_%s%d_1.qmd", tolower(country), cz_short, czindex)
 
-`r if_else(cztype == "enroute", "**En route service units**", "**Terminal service units**")`
+replace_headings(path, cef_titles_s1)
 
-`r if_else(is.na(cef_txt_1_4[my_index_su,1]) == TRUE, cef_txt_1_4_su, pull(cef_txt_1_4[my_index_su,1]))`
-
-`r if_else(cztype == "enroute", "**En route costs by entity**", "**Terminal costs by entity**")`
-
-`r if_else(is.na(cef_txt_1_4[my_index_cost_by_ent,1]) == TRUE, cef_txt_1_4_cost_all, pull(cef_txt_1_4[my_index_cost_by_ent,1]))`
-
-`r if_else(cztype == "enroute", "**En route costs for the main ANSP at charging zone level**", "**Terminal costs for the main ANSP at charging zone level**")`
-
-`r if_else(is.na(cef_txt_1_4[my_index_cost_main,1]) == TRUE, cef_txt_1_4_cost_main, pull(cef_txt_1_4[my_index_cost_main,1]))`
+# if (file.exists(path)) {cat(sprintf("{{< include %s >}}", path))}
+``` 
 
 :::
 
@@ -354,7 +229,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 #### Focus on AUCU
 
-`r cef_txt_1_9[1,1]`
+```{r}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s_cef_%s%d_2.qmd", tolower(country), cz_short, czindex)
+
+replace_headings(path, cef_titles_s2)
+
+``` 
 
 :::
 
@@ -405,15 +288,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 #### Focus on regulatory result
 
-**`r cef_txt_1_13[1,1]`**
+```{r}
+#| echo: false
+#| output: asis
 
-`r cef_txt_1_13[2,1]`
+path <- sprintf("./qmd_parts/%s_cef_%s%d_3.qmd", tolower(country), cz_short, czindex)
 
-**`r cef_txt_1_13[3,1]`**
+replace_headings(path, cef_titles_s3)
 
-`r cef_txt_1_13[4,1]`
-
-`r cef_txt_1_10_txt`
+```
 
 :::
 

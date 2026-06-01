@@ -246,7 +246,6 @@ replace_headings(path, cef_titles_s2)
 
 ``` 
 
-
 ### Regulatory result (RR)
 
 `r layout_2fig(paste0("chart_cef_reg_res_", cztype, czindex), paste0("chart_cef_reg_res_aucu_", cztype, czindex))`
