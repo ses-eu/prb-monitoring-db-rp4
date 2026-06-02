@@ -672,19 +672,7 @@ cat(quarto_paragraph_breaks(saf_qr_text))
 
 `\biggertext{Focus on AXOT, AXIT \& ASMA}`{=latex}
 
-**AXOT, AXIT**
-
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_2))}
-```
-
-\needspace{2\baselineskip}
-
-**ASMA**
-
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_3))}
-```
+[placeholder for text]
 
 
 ```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -726,9 +714,7 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on average duration in climb and descent}`{=latex}
 
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_4") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_4))}
-```
+[placeholder for text]
 
 
 ```{r table_level2_env_apt_pis_cdco, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -776,43 +762,8 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on Civil-Military dimension}`{=latex}
 
-**Update on Military dimension of the plan**
+[placeholder for text]
 
-```{r env_mil_1, results = "asis"}
-cat(ifelse(env_mil_1 == '', 'n/a', quarto_paragraph_breaks(env_mil_1)))
-```
-
-\needspace{2\baselineskip}
-
-**Military - related measures implemented or planned to improve capacity**
-
-```{r env_mil_2, results = "asis"}
-cat(ifelse(env_mil_2 == '', 'n/a', quarto_paragraph_breaks(env_mil_2)))
-```
-
-\needspace{2\baselineskip}
-
-**Initiatives implemented or planned to improve PI#6**
-
-```{r env_mil_4, results = "asis"}
-cat(ifelse(env_mil_4 == '', 'n/a', quarto_paragraph_breaks(env_mil_4)))
-```
-
-\needspace{2\baselineskip}
-
-**Initiatives implemented or planned to improve PI#7**
-
-```{r env_mil_6, results = "asis"}
-cat(ifelse(env_mil_6 == '', 'n/a', quarto_paragraph_breaks(env_mil_6)))
-```
-
-\needspace{2\baselineskip}
-
-**Initiatives implemented or planned to improve PI#8**
-
-```{r env_mil_8, results = "asis"}
-cat(ifelse(env_mil_8 == '', 'n/a', quarto_paragraph_breaks(env_mil_8)))
-```
 
 `r if (params$country == "Luxembourg") ":::"`
 
@@ -865,56 +816,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 \biggertext{Focus on en route ATFM delay}
 
-**Summary of capacity performance**
-
-```{r cap_er_nsa_7, results = "asis"}
-cat(if_else(length(cap_heading_ukraine) == 0, quarto_paragraph_breaks(cap_er_nsa_7), quarto_paragraph_breaks(cap_er_nsa_8)))
-```
-
-\needspace{2\baselineskip}
-
-**NSA's assessment of capacity performance**
-
-```{r cap_er_nsa_2, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_2))
-```
-
-\needspace{2\baselineskip}
-
-**Monitoring process for capacity performance**
-
-```{r cap_er_nsa_3, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_3))
-```
-
-\needspace{2\baselineskip}
-
-**Capacity planning**
-
-```{r cap_er_nsa_4, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_4))
-```
-
-\needspace{2\baselineskip}
-
-**Application of Corrective Measures for Capacity (if applicable)**
-
-```{r cap_er_nsa_6, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_6))
-```
-
-
-```{r cap_heading_ukraine, results = "asis"}
-cat(if_else(length(cap_heading_ukraine) == 0, "", paste0("**Additional Information Related to Russia's War of Aggression Against Ukraine**\n\n", quarto_paragraph_breaks(cap_er_nsa_7))))
-```
-
-\needspace{2\baselineskip}
-
-**En route Capacity Incentive Scheme**														
-
-```{r cap_er_nsa_incentive, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
-```
+[placeholder for text]
 
 
 ### En route performance indicators at ACC level (PI#3-4)
@@ -936,9 +838,8 @@ cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
 
 `\biggertext{Focus on ATCOs in operations}`{=latex}
 
-```{r cap_er_nsa_5, results = "asis"}
-cat(ifelse(cap_er_nsa_5 == '', 'n/a', quarto_paragraph_breaks(cap_er_nsa_5)))
-```
+[placeholder for text]
+
 
 `r if (params$country == "Luxembourg") ":::"`
 
@@ -958,17 +859,7 @@ cat(ifelse(cap_er_nsa_5 == '', 'n/a', quarto_paragraph_breaks(cap_er_nsa_5)))
 
 `\biggertext{Focus on arrival ATFM delay}`{=latex}
 
-```{r cap_trm_nsa_1, results = "asis"}
-if (exists("cap_trm_nsa_1") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_1))}
-```
-
-```{r cap_trm_nsa_2, results = "asis"}
-if (exists("cap_trm_nsa_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_2))}
-```
-
-```{r cap_trm_nsa_3, results = "asis"}
-if (exists("cap_trm_nsa_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_3))}
-```
+[placeholder for text]
 
 ### Other terminal performance indicators (PI#1-3)
 
@@ -1032,27 +923,8 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on performance indicators at airport level}`{=latex}
 
-**ATFM slot adherence**
+[placeholder for text]
 
-```{r cap_trm_nsa_4, results = "asis"}
-if (!exists("cap_trm_nsa_4")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_4))}
-```
-
-\needspace{2\baselineskip}
-
-**ATC pre-departure delay**
-
-```{r cap_trm_nsa_5, results = "asis"}
-if (!exists("cap_trm_nsa_5")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_5))}
-```
-
-\needspace{2\baselineskip}
-
-**All causes pre-departure delay**
-
-```{r cap_trm_nsa_6, results = "asis"}
-if (!exists("cap_trm_nsa_6")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_6))}
-```
 
 `r if (params$no_tcz == 0) ":::"`
 
