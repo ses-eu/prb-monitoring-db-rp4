@@ -67,27 +67,9 @@ if (cztype == "enroute") {
 ```
 
 
-```{r cef-level2-text-@@cz_type@@@@cz_index@@}
-cef_titles_s1 <- c(
-  "**AUC vs. DUC**",
-  paste0("**", cztype_proper, " service units**"),
-  paste0("**", cztype_proper, " costs by entity**"),
-  paste0("**", cztype_proper, " costs for the main ANSP (", main_ansp, ") at charging zone level**"),
-  "**Assessment of the actual performance in the charging zone reported by the NSA**",
-  "**Explanation of the differences between actual and determined costs at charging zone level reported by the NSA**",
-  paste0("**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situations and actions taken by the ANSP**")
-  )
+```{r cef-level2-headings-@@cz_type@@@@cz_index@@}
 
-cef_titles_s2 <- c(
-  paste0("**", cztype_proper, " AUCU monitoring at charging zone level**"),
-  "**Initiatives implemented or planned that will improve this PI reported by the NSA**"
-)
-
-cef_titles_s3 <- c(
-  paste0("**", main_ansp, " net gain/loss on activity in the ", czname, 
-         " ", tolower(cztype_proper), " charging zone in ", year_report, "**"),
-  paste0("**", main_ansp, " overall regulatory result (RR) for the ", tolower(cztype_proper), " activity**")
-)
+source("R/get_level2_headings.R")
 
 ```
 
