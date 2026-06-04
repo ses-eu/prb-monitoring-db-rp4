@@ -27,21 +27,62 @@ investments <- FALSE
 
 # set test_check to TRUE to create test pages with hyperlinks functional within the test site (defined in parameters script)
 # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
-test_check <- TRUE       
+test_check <- TRUE
 
 out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Germany' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Romania' # set your one country/stakeholder here (Home for home page)
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE
 
 if (update_data) {
-  # delete cached files 
+  # delete cached files
   unlink("_cache", recursive = TRUE, force = TRUE)
-  
+}
+
+# Set to TRUE to refresh pru analysis files
+update_pru_analysis <- TRUE
+update_nsa_input <- TRUE
+
+if (update_pru_analysis) {
+  other_repo <- "../xlsx-to-quarto"
+  quarto_origin_dir <- file.path(other_repo, "quarto")
+
+  old_wd <- getwd()
+  on.exit(setwd(old_wd), add = TRUE)
+
+  repo_env <- new.env(parent = globalenv())
+  repo_env$update_nsa_input <- update_nsa_input
+
+  setwd(other_repo)
+  source("R/Main.R", local = repo_env)
+
+  if (!dir.exists(quarto_origin_dir)) {
+    stop(
+      "Source folder not found: ",
+      normalizePath(quarto_origin_dir, winslash = "/", mustWork = FALSE)
+    )
+  }
+
+  dest_dir <- here::here("qmd_parts")
+  if (!dir.exists(dest_dir)) {
+    dir.create(dest_dir, recursive = TRUE)
+  }
+
+  files_to_copy <- list.files(
+    quarto_origin_dir,
+    full.names = TRUE,
+    recursive = FALSE
+  )
+
+  file.copy(
+    from = files_to_copy,
+    to = file.path(dest_dir, basename(files_to_copy)),
+    overwrite = TRUE
+  )
 }
 
 # Set to TRUE when you want to include them
@@ -51,18 +92,18 @@ prb_conclusions_ready <- FALSE
 source("R/libraries.R")
 
 # functions ----
-if(!exists("substrRight")) {
+if (!exists("substrRight")) {
   source("R/utils.R")
 }
-  
+
 # project parameters ----
-if(!exists("rp")) {
+if (!exists("rp")) {
   source("R/params_project.R")
 }
 
 # lists ----
-if(!exists("params_table")) {
-  source("R/get_lists.R")  
+if (!exists("params_table")) {
+  source("R/get_lists.R")
 }
 
 # manipulate state list to produce when all_state is TRUE
@@ -72,7 +113,7 @@ if (!all_states) {
   ## modify state list as required
   state_list_prod <- state_list
   # state_list_prod <- c(state_list, "Home")  #add home to list
-  state_list_prod <- setdiff(state_list_prod, "Bulgaria")  #remove state
+  # state_list_prod <- setdiff(state_list_prod, "Bulgaria") #remove state
   # states_from <- c(1:10) # 1st number is the index of 1st state from which you want to generate
   # state_list_prod <- state_list_prod[states_from]
   # state_list_prod <- list('Bulgaria',
@@ -87,19 +128,23 @@ if (!all_states) {
 
 
 # loop years ----
-for (i in 2025) {  # set your year(s) report here
-## set year-dependent parameters ----
+for (i in 2025) {
+  # set your year(s) report here
+  ## set year-dependent parameters ----
   # rm(list = setdiff(ls(), "i"))
   # i<- 2025
   # rm(list = ls())
-  if (i == rp_full) {year_report <- rp_max_year} else {year_report <- i}
-  year_folder <- i 
-  
+  if (i == rp_full) {
+    year_report <- rp_max_year
+  } else {
+    year_report <- i
+  }
+  year_folder <- i
+
   ## set site parameters
   source("R/params_site.R")
-  
-  
-## build state pages ----
+
+  ## build state pages ----
   ## build pages
   for (i in 1:length(state_list_prod)) {
     country <- state_list_prod[i]
@@ -107,89 +152,136 @@ for (i in 2025) {  # set your year(s) report here
     source("R/params_country.R")
     source("R/create_pages.R")
 
-  ## copy site to network folder ----
-  if (out_format == 'web') {
-    if (investments & country != "Home") {
-      ### delete previous version
-      unlink(paste0(destination_dir_investments, country_lower), recursive = TRUE) 
-      
-      ### copy new site to folder
-      file.copy(site_dir, destination_dir_investments, overwrite = TRUE, recursive=TRUE, copy.mode = TRUE)
-      
-      ### rename _site with state name
-      file.rename(paste0(destination_dir_investments, "/_site"), paste0(destination_dir_investments, country_lower))
- 
-    }
-    else if (country == 'Home') {
-      ## Home page ----
-      ### delete previous files except country folders
-      files_to_be_deleted <- list.files(root_dir) 
-      files_to_be_deleted <- files_to_be_deleted[files_to_be_deleted %like% c("202") == FALSE]
-      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "download") == FALSE]
-      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == rp_summary_year) == FALSE]
-      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "investments") == FALSE]
-      files_to_be_deleted <- files_to_be_deleted[(files_to_be_deleted == "dataportal") == FALSE]
-      
-      ## otherwise it deletes everything
-      if (length(files_to_be_deleted) != 0) { 
-        fs::file_delete(paste0(root_dir, files_to_be_deleted)) 
-      }
-      
-      ### copy files to folder
-      files_to_be_copied <- list.files(site_dir) 
-      dirs_to_be_copied <- list.dirs(site_dir, full.names = FALSE, recursive = FALSE)
-      files_to_be_copied <- files_to_be_copied[files_to_be_copied %in% dirs_to_be_copied == FALSE]
-      
-      fs::file_copy(paste0(site_dir,'/', files_to_be_copied),
-                    paste0(root_dir, files_to_be_copied), 
-                    overwrite = TRUE)
-      
-      for (i in 1:length(dirs_to_be_copied)) {
-        fs::dir_copy(paste0(site_dir,'/', dirs_to_be_copied[i]),
-                     paste0(root_dir, dirs_to_be_copied[i]), 
-                     overwrite = TRUE)
-      }
-      
-    } else {
-      ## Other pages/sites ----
-      ### find list of html files
-      hmtl_files <- list.files(site_dir, pattern = "\\.html$", full.names = FALSE)
-      
-      ### replace links to countries by links to country/section ----
-      purrr::map(hmtl_files, replace_links)
+    ## copy site to network folder ----
+    if (out_format == 'web') {
+      if (investments & country != "Home") {
+        ### delete previous version
+        unlink(
+          paste0(destination_dir_investments, country_lower),
+          recursive = TRUE
+        )
 
-      ### delete previous version
-      unlink(paste0(destination_dir, country_lower), recursive = TRUE) 
-      
-      ### copy new site to folder
-      file.copy(site_dir, destination_dir, overwrite = TRUE, recursive=TRUE, copy.mode = TRUE)
-      
-      ### rename _site with state name
-      file.rename(paste0(destination_dir, "/_site"), paste0(destination_dir, country_lower))
-      # copyDirectory(here::here("images"), paste0(destination_dir,"images"), overwrite = TRUE)
-    }
-  } else if (out_format == 'pdf') {
-    
-    pdf_download_dir <- here(root_dir, "download", year_folder)
-    pdf_folders <- list("pdf_docs", pdf_download_dir) 
+        ### copy new site to folder
+        file.copy(
+          site_dir,
+          destination_dir_investments,
+          overwrite = TRUE,
+          recursive = TRUE,
+          copy.mode = TRUE
+        )
 
-    if (!dir.exists(pdf_download_dir)) {
-      dir.create(pdf_download_dir, recursive = TRUE)  
+        ### rename _site with state name
+        file.rename(
+          paste0(destination_dir_investments, "/_site"),
+          paste0(destination_dir_investments, country_lower)
+        )
+      } else if (country == 'Home') {
+        ## Home page ----
+        ### delete previous files except country folders
+        files_to_be_deleted <- list.files(root_dir)
+        files_to_be_deleted <- files_to_be_deleted[
+          files_to_be_deleted %like% c("202") == FALSE
+        ]
+        files_to_be_deleted <- files_to_be_deleted[
+          (files_to_be_deleted == "download") == FALSE
+        ]
+        files_to_be_deleted <- files_to_be_deleted[
+          (files_to_be_deleted == rp_summary_year) == FALSE
+        ]
+        files_to_be_deleted <- files_to_be_deleted[
+          (files_to_be_deleted == "investments") == FALSE
+        ]
+        files_to_be_deleted <- files_to_be_deleted[
+          (files_to_be_deleted == "dataportal") == FALSE
+        ]
+
+        ## otherwise it deletes everything
+        if (length(files_to_be_deleted) != 0) {
+          fs::file_delete(paste0(root_dir, files_to_be_deleted))
+        }
+
+        ### copy files to folder
+        files_to_be_copied <- list.files(site_dir)
+        dirs_to_be_copied <- list.dirs(
+          site_dir,
+          full.names = FALSE,
+          recursive = FALSE
+        )
+        files_to_be_copied <- files_to_be_copied[
+          files_to_be_copied %in% dirs_to_be_copied == FALSE
+        ]
+
+        fs::file_copy(
+          paste0(site_dir, '/', files_to_be_copied),
+          paste0(root_dir, files_to_be_copied),
+          overwrite = TRUE
+        )
+
+        for (i in 1:length(dirs_to_be_copied)) {
+          fs::dir_copy(
+            paste0(site_dir, '/', dirs_to_be_copied[i]),
+            paste0(root_dir, dirs_to_be_copied[i]),
+            overwrite = TRUE
+          )
+        }
+      } else {
+        ## Other pages/sites ----
+        ### find list of html files
+        hmtl_files <- list.files(
+          site_dir,
+          pattern = "\\.html$",
+          full.names = FALSE
+        )
+
+        ### replace links to countries by links to country/section ----
+        purrr::map(hmtl_files, replace_links)
+
+        ### delete previous version
+        unlink(paste0(destination_dir, country_lower), recursive = TRUE)
+
+        ### copy new site to folder
+        file.copy(
+          site_dir,
+          destination_dir,
+          overwrite = TRUE,
+          recursive = TRUE,
+          copy.mode = TRUE
+        )
+
+        ### rename _site with state name
+        file.rename(
+          paste0(destination_dir, "/_site"),
+          paste0(destination_dir, country_lower)
+        )
+        # copyDirectory(here::here("images"), paste0(destination_dir,"images"), overwrite = TRUE)
+      }
+    } else if (out_format == 'pdf') {
+      pdf_download_dir <- here(root_dir, "download", year_folder)
+      pdf_folders <- list("pdf_docs", pdf_download_dir)
+
+      if (!dir.exists(pdf_download_dir)) {
+        dir.create(pdf_download_dir, recursive = TRUE)
+      }
+
+      purrr::walk(
+        pdf_folders,
+        ~ file.copy(
+          here("_book", "Performance-Review-Board.pdf"),
+          here(
+            .x,
+            paste0(
+              "PRB-Annual-Monitoring-Report_",
+              country,
+              "_",
+              year_folder,
+              ".pdf"
+            )
+          ),
+          overwrite = TRUE,
+          copy.mode = TRUE
+        )
+      )
     }
-    
-    purrr::walk(pdf_folders, ~ file.copy(here("_book", "Performance-Review-Board.pdf"),
-                                            here(.x, paste0("PRB-Annual-Monitoring-Report_",
-                                                                    country,
-                                                                    "_",
-                                                            year_folder,
-                                                                    ".pdf")),
-                                            overwrite = TRUE,
-                                            copy.mode = TRUE)
-    )
-    
-  }
     print(paste(country, year_folder))
   }
-
 }
-

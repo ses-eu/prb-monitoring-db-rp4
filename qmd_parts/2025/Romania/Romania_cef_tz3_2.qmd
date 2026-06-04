@@ -1,6 +1,6 @@
-## TZ3.2. SECTION 2 – ACTUAL UNIT COST INCURRED BY THE USERS
+## **TZ3.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
 
-### TZ3.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL
+### **TZ3.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
 
 The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (3 015.26 RON or 598.43 €) is +5.1% higher than the nominal DUC (2 870.13 RON or 569.62 €) The difference between these two figures (+145.14 RON/SU or +28.80 €/SU) is due to:
 
@@ -14,15 +14,15 @@ The share of the regulatory result (see next sub-section) in the AUCU (before th
 
 Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
 
-### TZ3.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA
+### **TZ3.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
 
 The NSA of Romania provides the following information regarding the initiatives:
 
 Insert text from monitoring report
 
-### TZ3.2.3. NOTES 
+### **TZ3.2.3. NOTES** 
 
-#### TZ3.2.3.1. NOTE 1
+#### **TZ3.2.3.1. NOTE 1**
 
-#### TZ3.2.3.1. NOTE 2
+#### **TZ3.2.3.1. NOTE 2**
 

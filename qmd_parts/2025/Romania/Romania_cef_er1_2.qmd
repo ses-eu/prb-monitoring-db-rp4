@@ -1,6 +1,6 @@
-## ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
 
-### ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
 
 The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (225.63 RON or 44.78 €) is +1.4% higher than the nominal DUC (222.52 RON or 44.16 €). The difference between these two figures (+3.11 RON/SU or +0.62 €/SU) is due to:
 
@@ -14,14 +14,15 @@ The share of the regulatory result (see next sub-section) in the AUCU (before th
 
 Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
 
-### ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
 
 The NSA of Romania provides the following information regarding the initiatives:
 
 Insert text from monitoring report
 
-### ER1.2.3. NOTES 
+### **ER1.2.3. NOTES** 
 
-#### ER1.2.3.1. NOTE 1
+#### **ER1.2.3.1. NOTE 1**
 
-#### ER1.2.3.1. NOTE 2
+#### **ER1.2.3.1. NOTE 2**
+

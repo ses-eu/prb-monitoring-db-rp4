@@ -2798,18 +2798,24 @@ replace_headings <- function(path, mytitles) {
     trimws(substring(x, level + 1L))
   }
 
-  is_notes_title <- function(x) {
+  normalize_heading_text <- function(x) {
     txt <- toupper(trimws(x))
+    sub("[*][*][[:space:]]*$", "", txt)
+  }
+
+  is_notes_title <- function(x) {
+    txt <- normalize_heading_text(x)
     endsWith(txt, "NOTES")
   }
 
   is_note_heading <- function(x) {
-    txt <- toupper(trimws(x))
+    txt <- normalize_heading_text(x)
     grepl("NOTE[ ]+[0-9]+$", txt)
   }
 
   get_note_number <- function(x) {
-    sub(".*NOTE[ ]+([0-9]+)$", "\\1", toupper(trimws(x)))
+    txt <- normalize_heading_text(x)
+    sub(".*NOTE[ ]+([0-9]+)$", "\\1", txt)
   }
 
   note_has_body <- function(lines, idx) {

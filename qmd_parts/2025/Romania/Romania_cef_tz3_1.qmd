@@ -1,20 +1,18 @@
-# TZ3. TERMINAL CHARGING ZONE - ROMANIA ZONE 3
+## **TZ3.1. SECTION 1 -- UNIT COST**
 
-## TZ3.1. SECTION 1 – UNIT COST
-
-### TZ3.1.1. AUC VS. DUC
+### **TZ3.1.1. AUC VS. DUC**
 
 In 2025, the terminal AUC was +3.7% (or +89.06 RON2022, +18.07 €2022) higher than the planned DUC. This results from the combination of significantly lower than planned TNSUs (-5.6%) and lower than planned terminal costs in real terms (-2.1%, or -0.9 MRON2022, -0.2 M€2022). It should be noted that the actual inflation index in 2025 was +2.9 p.p. higher than planned.
 
-### TZ3.1.2. TERMINAL CHARGING ZONE 3 SERVICE UNITS
+### **TZ3.1.2. TERMINAL CHARGING ZONE 3 SERVICE UNITS**
 
 The difference between actual and planned TNSUs (-5.6%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
 
-### TZ3.1.3. TERMINAL CHARGING ZONE 3 COSTS BY ENTITY
+### **TZ3.1.3. TERMINAL CHARGING ZONE 3 COSTS BY ENTITY**
 
 Actual real terminal costs are -2.1% (-0.2 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ROMATSA (-2.1%, or -0.2 M€2022) and.
 
-### TZ3.1.4. TERMINAL CHARGING ZONE 3 COSTS FOR THE MAIN ANSP (ROMATSA) AT CHARGING ZONE LEVEL
+### **TZ3.1.4. TERMINAL CHARGING ZONE 3 COSTS FOR THE MAIN ANSP (ROMATSA) AT CHARGING ZONE LEVEL**
 
 Based on the additional information to the terminal reporting tables, the lower than planned terminal costs in real terms for ROMATSA in 2025 (-2.1%, or -0.2 M€2022) result from:
 
@@ -26,19 +24,19 @@ Based on the additional information to the terminal reporting tables, the lower 
 
 - Consistent with the planned cost of capital (+0.0%).
 
-### TZ3.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA
+### **TZ3.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 
 The NSA of Romania provides the following overall assessment of the actual performance in 2025 at charging zone level:
 
 insert information from monitoring report
 
-### TZ3.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA
+### **TZ3.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 
 The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
 
 insert information from monitoring report
 
-### TZ3.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ROMATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP
+### **TZ3.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ROMATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 
 The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
 
@@ -48,8 +46,9 @@ ROMATSA reports the implementation of the following actions:
 
 insert information from monitoring report
 
-### TZ3.1.8. NOTES
+### **TZ3.1.8. NOTES**
 
-#### TZ3.1.8.1. NOTE 1
+#### **TZ3.1.8.1. NOTE 1**
 
-#### TZ3.1.8.2. NOTE 2
+#### **TZ3.1.8.2. NOTE 2**
+
