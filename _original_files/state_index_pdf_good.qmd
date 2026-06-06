@@ -211,6 +211,10 @@ xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 
 ```
 
+```{r cef-level2-headings}
+source("R/get_level2_headings.R")
+```
+
 
 # OVERVIEW
 
@@ -672,19 +676,56 @@ cat(quarto_paragraph_breaks(saf_qr_text))
 
 `\biggertext{Focus on AXOT, AXIT \& ASMA}`{=latex}
 
-**AXOT, AXIT**
+**AXOT**
 
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_2))}
-```
+```{r env_trm_text_axot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_axot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_axot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axot)
+
+``` 
+
+**AXIT**
+
+```{r env_trm_text_axit, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_axit.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_axit.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axit)
+
+``` 
 
 **ASMA**
 
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_3))}
-```
+```{r env_trm_text_asma, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_asma.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_asma.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_asma)
+
+``` 
 
 
 ```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -724,11 +765,42 @@ cat(make_quarto_latex_table_2level(
 
 \needspace{2\baselineskip}
 
-`\biggertext{Focus on average duration in climb and descent}`{=latex}
+`\biggertext{Focus on average duration in descent and climb}`{=latex}
 
-```{r results = "asis", eval=(year_folder != params$rp_summary_year)}
-if (exists("env_apt_4") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_4))}
-```
+**Average duration in descent**
+
+```{r env_trm_text_vfed, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfed)
+
+``` 
+
+**Average duration in climb**
+
+
+```{r env_trm_text_vfec, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfec.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfec.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfec)
+
+``` 
 
 
 ```{r table_level2_env_apt_pis_cdco, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -776,43 +848,56 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on Civil-Military dimension}`{=latex}
 
-**Update on Military dimension of the plan**
+**Effective use of reserved or segregated local airspace**
 
-```{r env_mil_1, results = "asis"}
-cat(ifelse(env_mil_1 == '', 'n/a', quarto_paragraph_breaks(env_mil_1)))
-```
+```{r env_mil_text_ersa}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
-**Military - related measures implemented or planned to improve capacity**
+replace_headings(path, character(0))
 
-```{r env_mil_2, results = "asis"}
-cat(ifelse(env_mil_2 == '', 'n/a', quarto_paragraph_breaks(env_mil_2)))
-```
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
-**Initiatives implemented or planned to improve PI#6**
+replace_headings(path, env_mil_nsa_titles_ersa)
 
-```{r env_mil_4, results = "asis"}
-cat(ifelse(env_mil_4 == '', 'n/a', quarto_paragraph_breaks(env_mil_4)))
-```
+``` 
 
-\needspace{2\baselineskip}
+**Rate of planning via available airspace structures**
 
-**Initiatives implemented or planned to improve PI#7**
+```{r env_mil_text_rap}
+#| echo: false
+#| output: asis
 
-```{r env_mil_6, results = "asis"}
-cat(ifelse(env_mil_6 == '', 'n/a', quarto_paragraph_breaks(env_mil_6)))
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-\needspace{2\baselineskip}
+replace_headings(path, character(0))
 
-**Initiatives implemented or planned to improve PI#8**
 
-```{r env_mil_8, results = "asis"}
-cat(ifelse(env_mil_8 == '', 'n/a', quarto_paragraph_breaks(env_mil_8)))
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rap)
+
+``` 
+
+**Rate of using available airspace structures**
+
+```{r env_mil_nsa_rau}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rau)
+
+``` 
 
 `r if (params$country == "Luxembourg") ":::"`
 
@@ -865,61 +950,76 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 \biggertext{Focus on en route ATFM delay}
 
-**Summary of capacity performance**
+**En route ATFM delay**
 
-```{r cap_er_nsa_7, results = "asis"}
-cat(if_else(length(cap_heading_ukraine) == 0, quarto_paragraph_breaks(cap_er_nsa_7), quarto_paragraph_breaks(cap_er_nsa_8)))
-```
+```{r cap_er_text_atfm, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
 
-**NSA's assessment of capacity performance**
+replace_headings(path, character(0))
 
-```{r cap_er_nsa_2, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_2))
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
 
-\needspace{2\baselineskip}
+replace_headings(path, cap_er_nsa_titles_atfm)
 
-**Monitoring process for capacity performance**
+``` 
 
-```{r cap_er_nsa_3, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_3))
-```
+**En route capacity incentive scheme**
+```{r cap_er_text_incentive, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_incentive.qmd", as.character(year_report),country,country, as.character(year_report))
 
-**Capacity planning**
+replace_headings(path, character(0))
 
-```{r cap_er_nsa_4, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_4))
-```
+``` 
 
-\needspace{2\baselineskip}
-
-**Application of Corrective Measures for Capacity (if applicable)**
-
-```{r cap_er_nsa_6, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_6))
-```
-
-
-```{r cap_heading_ukraine, results = "asis"}
-cat(if_else(length(cap_heading_ukraine) == 0, "", paste0("**Additional Information Related to Russia's War of Aggression Against Ukraine**\n\n", quarto_paragraph_breaks(cap_er_nsa_7))))
-```
-
-\needspace{2\baselineskip}
-
-**En route Capacity Incentive Scheme**														
-
-```{r cap_er_nsa_incentive, results = "asis"}
-cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
-```
 
 
 ### En route performance indicators at ACC level (PI#3-4)
 
 `r layout_2fig("chart_level2_cap_perc_delay_above", "chart_level2_cap_peak_tp")`
+
+\needspace{3\baselineskip}
+
+`\biggertext{Focus en route performance indicators at ACC level}`{=latex}
+
+**Percentage of total en route ATFM delay that occurred on days when the daily throughput was above the expected daily traffic**
+
+```{r cap_ert_text_above}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_above)
+
+``` 
+
+**Annual weighted average of the daily peak throughput**
+
+```{r cap_ert_text_tput}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_tput)
+
+``` 
+
 
 ### Other indicators
 
@@ -936,9 +1036,22 @@ cat(quarto_paragraph_breaks(cap_er_nsa_incentive))
 
 `\biggertext{Focus on ATCOs in operations}`{=latex}
 
-```{r cap_er_nsa_5, results = "asis"}
-cat(ifelse(cap_er_nsa_5 == '', 'n/a', quarto_paragraph_breaks(cap_er_nsa_5)))
-```
+```{r cap_ert_text_atco}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atco)
+
+``` 
+
+
 
 `r if (params$country == "Luxembourg") ":::"`
 
@@ -958,17 +1071,35 @@ cat(ifelse(cap_er_nsa_5 == '', 'n/a', quarto_paragraph_breaks(cap_er_nsa_5)))
 
 `\biggertext{Focus on arrival ATFM delay}`{=latex}
 
-```{r cap_trm_nsa_1, results = "asis"}
-if (exists("cap_trm_nsa_1") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_1))}
-```
+**Arrival ATFM delay**
 
-```{r cap_trm_nsa_2, results = "asis"}
-if (exists("cap_trm_nsa_2") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_2))}
-```
+```{r cap_trm_text_atfm, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
 
-```{r cap_trm_nsa_3, results = "asis"}
-if (exists("cap_trm_nsa_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_3))}
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_atfm)
+
+``` 
+
+**Terminal capacity incentive scheme**
+```{r cap_trm_text_incentive, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_incentive.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
+
 
 ### Other terminal performance indicators (PI#1-3)
 
@@ -1034,25 +1165,52 @@ cat(make_quarto_latex_table_2level(
 
 **ATFM slot adherence**
 
-```{r cap_trm_nsa_4, results = "asis"}
-if (!exists("cap_trm_nsa_4")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_4))}
-```
+```{r cap_trm_text_slot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_slot)
+
+``` 
 
 **ATC pre-departure delay**
 
-```{r cap_trm_nsa_5, results = "asis"}
-if (!exists("cap_trm_nsa_5")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_5))}
-```
+```{r cap_trm_text_pddelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
 
-\needspace{2\baselineskip}
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
 
-**All causes pre-departure delay**
+replace_headings(path, character(0))
 
-```{r cap_trm_nsa_6, results = "asis"}
-if (!exists("cap_trm_nsa_6")) {''} else {cat(quarto_paragraph_breaks(cap_trm_nsa_6))}
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_pddelay)
+
+``` 
+
+```{r cap_trm_text_acdelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_acdelay)
+
+``` 
+
 
 `r if (params$no_tcz == 0) ":::"`
 

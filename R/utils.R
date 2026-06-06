@@ -2956,6 +2956,74 @@ replace_headings <- function(path, mytitles) {
   # cat(paste(lines, collapse = "\n"))
 }
 
+refresh_qmd_parts_country <- function(update_pru_analysis, update_nsa_input) {
+  if (!(update_pru_analysis || update_nsa_input)) {
+    return(invisible(NULL))
+  }
+
+  old_wd <- getwd()
+  other_repo <- "../xlsx-to-quarto"
+
+  tryCatch(
+    {
+      repo_env <- new.env(parent = globalenv())
+      repo_env$update_nsa_input <- update_nsa_input
+      repo_env$update_pru_analysis <- update_pru_analysis
+      repo_env$year_report <- year_report
+      repo_env$COUNTRY_NAME_REPORT <- country
+
+      setwd(other_repo)
+      source("R/Main.R", local = repo_env)
+
+      source_dir <- paste0("Quarto/", year_report, "/", country)
+      if (!dir.exists(source_dir)) {
+        stop(
+          "Source folder not found: ",
+          normalizePath(source_dir, winslash = "/", mustWork = FALSE)
+        )
+      }
+
+      dest_dir <- file.path(old_wd, "qmd_parts", year_report, country)
+
+      if (dir.exists(dest_dir)) {
+        unlink(dest_dir, recursive = TRUE, force = TRUE)
+      }
+      dir.create(dest_dir, recursive = TRUE, showWarnings = FALSE)
+
+      entries <- list.files(
+        source_dir,
+        full.names = TRUE,
+        recursive = FALSE,
+        all.files = TRUE,
+        no.. = TRUE
+      )
+
+      if (length(entries) > 0L) {
+        ok <- file.copy(
+          from = entries,
+          to = dest_dir,
+          overwrite = TRUE,
+          recursive = TRUE,
+          copy.mode = TRUE,
+          copy.date = TRUE
+        )
+
+        if (!all(ok)) {
+          stop(
+            "Failed to copy:\n",
+            paste(entries[!ok], collapse = "\n")
+          )
+        }
+      }
+    },
+    finally = {
+      setwd(old_wd)
+    }
+  )
+
+  invisible(NULL)
+}
+
 refresh_qmd_parts <- function(update_pru_analysis, update_nsa_input) {
   if (!(update_pru_analysis || update_nsa_input)) {
     return(invisible(NULL))

@@ -29,11 +29,15 @@ investments <- FALSE
 # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
 test_check <- TRUE
 
-out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
+out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
 single_state <- 'Finland' # set your one country/stakeholder here (Home for home page)
+
+# Set to TRUE to refresh pru analysis and/or nsa input
+update_pru_analysis <- FALSE
+update_nsa_input <- FALSE
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE
@@ -84,11 +88,11 @@ if (!all_states) {
   #                         'Network Manager')
 }
 
-# Set to TRUE to refresh pru analysis files
-refresh_qmd_parts(
-  update_pru_analysis = FALSE,
-  update_nsa_input = TRUE
-)
+#in case you want to brute force all states level 2 text refresh
+# refresh_qmd_parts(
+#   update_pru_analysis = TRUE,
+#   update_nsa_input = TRUE
+# )
 
 # loop years ----
 for (i in 2025) {
@@ -103,6 +107,12 @@ for (i in 2025) {
     year_report <- i
   }
   year_folder <- i
+
+  # refresh level 2 text
+  refresh_qmd_parts_country(
+    update_pru_analysis = update_pru_analysis,
+    update_nsa_input = update_nsa_input
+  )
 
   ## set site parameters
   source("R/params_site.R")
