@@ -43,48 +43,6 @@ if (update_data) {
   unlink("_cache", recursive = TRUE, force = TRUE)
 }
 
-# Set to TRUE to refresh pru analysis files
-update_pru_analysis <- TRUE
-update_nsa_input <- TRUE
-
-if (update_pru_analysis) {
-  other_repo <- "../xlsx-to-quarto"
-  quarto_origin_dir <- file.path(other_repo, "quarto")
-
-  old_wd <- getwd()
-  on.exit(setwd(old_wd), add = TRUE)
-
-  repo_env <- new.env(parent = globalenv())
-  repo_env$update_nsa_input <- update_nsa_input
-
-  setwd(other_repo)
-  source("R/Main.R", local = repo_env)
-
-  if (!dir.exists(quarto_origin_dir)) {
-    stop(
-      "Source folder not found: ",
-      normalizePath(quarto_origin_dir, winslash = "/", mustWork = FALSE)
-    )
-  }
-
-  dest_dir <- here::here("qmd_parts")
-  if (!dir.exists(dest_dir)) {
-    dir.create(dest_dir, recursive = TRUE)
-  }
-
-  files_to_copy <- list.files(
-    quarto_origin_dir,
-    full.names = TRUE,
-    recursive = FALSE
-  )
-
-  file.copy(
-    from = files_to_copy,
-    to = file.path(dest_dir, basename(files_to_copy)),
-    overwrite = TRUE
-  )
-}
-
 # Set to TRUE when you want to include them
 prb_conclusions_ready <- FALSE
 
@@ -124,6 +82,52 @@ if (!all_states) {
   #                         'Slovenia',
   #                         'MUAC',
   #                         'Network Manager')
+}
+
+# Set to TRUE to refresh pru analysis files
+update_pru_analysis <- FALSE
+update_nsa_input <- FALSE
+
+if (update_pru_analysis | update_nsa_input) {
+  other_repo <- "../xlsx-to-quarto"
+  quarto_origin_dir <- file.path(other_repo, "Quarto")
+
+  old_wd <- getwd()
+  on.exit(setwd(old_wd), add = TRUE)
+
+  repo_env <- new.env(parent = globalenv())
+  repo_env$update_nsa_input <- update_nsa_input
+  repo_env$update_pru_analysis <- update_pru_analysis
+
+  setwd(other_repo)
+  source("R/Main.R", local = repo_env)
+
+  if (!dir.exists(quarto_origin_dir)) {
+    stop(
+      "Source folder not found: ",
+      normalizePath(quarto_origin_dir, winslash = "/", mustWork = FALSE)
+    )
+  }
+
+  dest_dir <- here(old_wd, "qmd_parts")
+  if (!dir.exists(dest_dir)) {
+    dir.create(dest_dir, recursive = TRUE)
+  }
+
+  files_to_copy <- list.files(
+    quarto_origin_dir,
+    full.names = TRUE,
+    recursive = FALSE
+  )
+
+  file.copy(
+    from = files_to_copy,
+    to = file.path(dest_dir, basename(files_to_copy)),
+    overwrite = TRUE,
+    recursive = TRUE
+  )
+
+  setwd(old_wd)
 }
 
 

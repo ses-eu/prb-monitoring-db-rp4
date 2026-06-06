@@ -676,7 +676,36 @@ cat(quarto_paragraph_breaks(saf_qr_text))
 
 `\biggertext{Focus on AXOT, AXIT \& ASMA}`{=latex}
 
-[placeholder for text]
+```{r env_trm_nsa_axot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_trm_axot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axot)
+
+``` 
+
+```{r env_trm_nsa_axit, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_trm_axit.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axit)
+
+``` 
+
+
+```{r env_trm_nsa_asma, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_trm_asma.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_asma)
+
+``` 
 
 
 ```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -718,7 +747,25 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on average duration in climb and descent}`{=latex}
 
-[placeholder for text]
+```{r env_trm_nsa_vfed, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfed)
+
+``` 
+
+```{r env_trm_nsa_vfec, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_trm_vfec.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfec)
+
+``` 
 
 
 ```{r table_level2_env_apt_pis_cdco, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
@@ -766,8 +813,35 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on Civil-Military dimension}`{=latex}
 
-[placeholder for text]
+```{r env_mil_nsa_ersa}
+#| echo: false
+#| output: asis
 
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_ersa)
+
+``` 
+
+```{r env_mil_nsa_rap}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rap)
+
+``` 
+
+```{r env_mil_nsa_rau}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rau)
+
+``` 
 
 `r if (params$country == "Luxembourg") ":::"`
 
@@ -820,12 +894,46 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 \biggertext{Focus on en route ATFM delay}
 
-[placeholder for text]
+```{r cap_ert_nsa_atfm, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_er_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atfm)
+
+``` 
+
 
 
 ### En route performance indicators at ACC level (PI#3-4)
 
 `r layout_2fig("chart_level2_cap_perc_delay_above", "chart_level2_cap_peak_tp")`
+
+\needspace{3\baselineskip}
+
+`\biggertext{Focus en route performance indicators at ACC level}`{=latex}
+
+```{r cap_ert_nsa_above}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_above)
+
+``` 
+
+```{r cap_ert_nsa_tput}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_tput)
+
+``` 
+
 
 ### Other indicators
 
@@ -842,7 +950,16 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `\biggertext{Focus on ATCOs in operations}`{=latex}
 
-[placeholder for text]
+```{r cap_ert_nsa_atco}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atco)
+
+``` 
+
 
 
 `r if (params$country == "Luxembourg") ":::"`
@@ -867,7 +984,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_trm_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
 
 replace_headings(path, cap_trm_nsa_titles_atfm)
 
@@ -940,7 +1057,7 @@ cat(make_quarto_latex_table_2level(
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_trm_slot.qmd", as.character(year_report),country,country, as.character(year_report))
 
 replace_headings(path, cap_trm_nsa_titles_slot)
 
@@ -951,7 +1068,7 @@ replace_headings(path, cap_trm_nsa_titles_slot)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_trm_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
 
 replace_headings(path, cap_trm_nsa_titles_pddelay)
 
@@ -961,7 +1078,7 @@ replace_headings(path, cap_trm_nsa_titles_pddelay)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_trm_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
 
 replace_headings(path, cap_trm_nsa_titles_acdelay)
 
