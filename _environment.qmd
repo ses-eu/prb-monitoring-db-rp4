@@ -130,8 +130,56 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 #### Focus on AXOT, AXIT & ASMA
 
-[placeholder for text]
+**AXOT**
 
+```{r env_trm_text_axot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_axot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_axot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axot)
+
+``` 
+
+**AXIT**
+
+```{r env_trm_text_axit, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_axit.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_axit.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_axit)
+
+``` 
+
+**ASMA**
+
+```{r env_trm_text_asma, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_asma.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_asma.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_asma)
+
+``` 
 :::
 
 ::: {#container-env-apt-pis}
@@ -169,7 +217,40 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 #### Focus on average duration in climb and descent
 
-[placeholder for text]
+**Average duration in descent**
+
+```{r env_trm_text_vfed, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfed)
+
+``` 
+
+**Average duration in climb**
+
+
+```{r env_trm_text_vfec, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfec.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfec.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfec)
+
+``` 
 
 :::
 
@@ -230,7 +311,56 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 #### Focus on Civil-Military dimension
 
-[placeholder for text]
+**Effective use of reserved or segregated local airspace**
+
+```{r env_mil_text_ersa}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_ersa)
+
+``` 
+
+**Rate of planning via available airspace structures**
+
+```{r env_mil_text_rap}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rap)
+
+``` 
+
+**Rate of using available airspace structures**
+
+```{r env_mil_nsa_rau}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_mil_nsa_titles_rau)
+
+``` 
 
 
 :::

@@ -88,7 +88,33 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 #### Focus on en route ATFM delay
 
-[placeholder for text]
+**En route ATFM delay**
+
+```{r cap_er_text_atfm, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atfm)
+
+``` 
+
+**En route capacity incentive scheme**
+```{r cap_er_text_incentive, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_incentive.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 
 :::
 `r if (params$country == params$rp_full | params$country == "MUAC") ":::"`
@@ -112,7 +138,44 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 :::::
 ::::
 
+:::: {.callout-note collapse=true}
 
+#### Focus en route performance indicators at ACC level
+
+**Percentage of total en route ATFM delay that occurred on days when the daily throughput was above the expected daily traffic**
+
+```{r cap_ert_text_above}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_above)
+
+``` 
+
+**Annual weighted average of the daily peak throughput**
+
+```{r cap_ert_text_tput}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_tput)
+
+``` 
+
+::::
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 ### Summary of performance at local level
@@ -195,7 +258,20 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 :::: {#concl-cap-atco}
 
-[placeholder for text]
+```{r cap_ert_text_atco}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atco)
+
+``` 
 
 ::::
 :::
@@ -260,7 +336,31 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ::::: {#concl-cap-trm}
 
-[placeholder for text]
+```{r cap_trm_text_atfm, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_atfm)
+
+``` 
+
+**Terminal capacity incentive scheme**
+```{r cap_trm_text_incentive, eval=(params$no_ecz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_incentive.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 :::::
 ::::
@@ -297,7 +397,54 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 #### Focus on performance indicators at airport level
 ::::: {#concl-cap-apt-pis}
 
-[placeholder for text]
+**ATFM slot adherence**
+
+```{r cap_trm_text_slot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_slot)
+
+``` 
+
+**ATC pre-departure delay**
+
+```{r cap_trm_text_pddelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_pddelay)
+
+``` 
+
+```{r cap_trm_text_acdelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_trm_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_acdelay)
+
+``` 
+
 
 :::::
 ::::
