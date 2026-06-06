@@ -211,6 +211,10 @@ xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
 
 ```
 
+```{r cef-level2-headings}
+source("R/get_level2_headings.R")
+```
+
 
 # OVERVIEW
 
@@ -859,7 +863,16 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `\biggertext{Focus on arrival ATFM delay}`{=latex}
 
-[placeholder for text]
+```{r cap_trm_nsa_atfm, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_atfm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_atfm)
+
+``` 
+
 
 ### Other terminal performance indicators (PI#1-3)
 
@@ -923,7 +936,36 @@ cat(make_quarto_latex_table_2level(
 
 `\biggertext{Focus on performance indicators at airport level}`{=latex}
 
-[placeholder for text]
+```{r cap_trm_nsa_slot, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_slot.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_slot)
+
+``` 
+
+
+```{r cap_trm_nsa_pddelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_pddelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_pddelay)
+
+``` 
+
+```{r cap_trm_nsa_acdelay, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/%s_%s_nsa_cap_ap_acdelay.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_trm_nsa_titles_acdelay)
+
+``` 
 
 
 `r if (params$no_tcz == 0) ":::"`

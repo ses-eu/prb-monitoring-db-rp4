@@ -2818,7 +2818,7 @@ replace_headings <- function(path, mytitles) {
     sub(".*NOTE[ ]+([0-9]+)$", "\\1", txt)
   }
 
-  note_has_body <- function(lines, idx) {
+  section_has_body <- function(lines, idx) {
     if (idx >= length(lines)) {
       return(FALSE)
     }
@@ -2835,13 +2835,23 @@ replace_headings <- function(path, mytitles) {
     FALSE
   }
 
-  heading_levels <- vapply(lines, get_heading_level, integer(1))
-  heading_texts <- vapply(lines, get_heading_text, character(1))
+  get_replace_idx <- function(lines) {
+    heading_levels <- vapply(lines, get_heading_level, integer(1))
+    heading_texts <- vapply(lines, get_heading_text, character(1))
 
+    which(
+      heading_levels > 0L &
+        !vapply(heading_texts, is_notes_title, logical(1)) &
+        !vapply(heading_texts, is_note_heading, logical(1))
+    )
+  }
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
   keep <- heading_levels != 1L & heading_levels != 2L
   lines <- lines[keep]
-  heading_levels <- heading_levels[keep]
-  heading_texts <- heading_texts[keep]
+
+  heading_levels <- vapply(lines, get_heading_level, integer(1))
+  heading_texts <- vapply(lines, get_heading_text, character(1))
 
   note_idx <- which(
     heading_levels > 0L & vapply(heading_texts, is_note_heading, logical(1))
@@ -2850,7 +2860,7 @@ replace_headings <- function(path, mytitles) {
     keep <- rep(TRUE, length(lines))
     keep[note_idx] <- vapply(
       note_idx,
-      function(i) note_has_body(lines, i),
+      function(i) section_has_body(lines, i),
       logical(1)
     )
     lines <- lines[keep]
@@ -2883,14 +2893,23 @@ replace_headings <- function(path, mytitles) {
     lines[note_idx] <- sprintf("**Note %s**", note_numbers)
   }
 
-  heading_levels <- vapply(lines, get_heading_level, integer(1))
-  heading_texts <- vapply(lines, get_heading_text, character(1))
+  replace_idx <- get_replace_idx(lines)
 
-  replace_idx <- which(
-    heading_levels > 0L &
-      !vapply(heading_texts, is_notes_title, logical(1)) &
-      !vapply(heading_texts, is_note_heading, logical(1))
-  )
+  if (grepl("nsa", path, ignore.case = TRUE) && length(replace_idx) > 0L) {
+    keep_replace <- vapply(
+      replace_idx,
+      function(i) section_has_body(lines, i),
+      logical(1)
+    )
+
+    drop_idx <- replace_idx[!keep_replace]
+    if (length(drop_idx) > 0L) {
+      lines <- lines[-drop_idx]
+    }
+
+    mytitles <- mytitles[keep_replace]
+    replace_idx <- get_replace_idx(lines)
+  }
 
   if (length(replace_idx) != length(mytitles)) {
     stop(
@@ -2903,5 +2922,36 @@ replace_headings <- function(path, mytitles) {
   }
 
   lines[replace_idx] <- mytitles
-  cat(paste(lines, collapse = "\n"))
+
+  render_lines <- function(lines) {
+    if (length(lines) == 0L) {
+      return("")
+    }
+
+    lines <- sub("\r$", "", lines)
+    out <- trimws(lines[1L], which = "right")
+
+    for (i in 2:length(lines)) {
+      sep <- if (
+        grepl("the NSA reports:[[:space:]]*$", out, ignore.case = TRUE)
+      ) {
+        " "
+      } else {
+        "\n"
+      }
+
+      next_line <- if (sep == " ") {
+        trimws(lines[i], which = "left")
+      } else {
+        lines[i]
+      }
+
+      out <- paste0(out, sep, next_line)
+    }
+
+    out
+  }
+
+  cat(render_lines(lines))
+  # cat(paste(lines, collapse = "\n"))
 }

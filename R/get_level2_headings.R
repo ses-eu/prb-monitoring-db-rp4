@@ -1,4 +1,8 @@
-jump_page <- "\n\n\\Needspace{3\\baselineskip}\n\n"
+if (knitr::is_latex_output()) {
+  jump_page <- "\n\n\\Needspace{3\\baselineskip}\n\n"
+} else {
+  jump_page <- ''
+}
 
 # ENV ----
 ## MIL ----
@@ -90,6 +94,7 @@ cap_ert_titles_s6 <- c(
 )
 
 ## TRM ----
+### PRU ----
 # fmt: skip
 cap_trm_titles_s1 <- c(
   paste0(jump_page, 
@@ -116,38 +121,43 @@ cap_trm_titles_s5 <- c(
          "**Average departure delay from all causes per flight**")
 )
 
-# CEF ----
+### NSA ----
 # fmt: skip
-cef_titles_s1 <- c(
+cap_trm_nsa_titles_atfm <- c(
   paste0(jump_page, 
-         "**AUC vs. DUC**"),
+         "Regarding the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI, the NSA reports:"),
   paste0(jump_page, 
-         "**", cztype_proper, " service units**"),
+         "Regarding the identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved, the NSA reports:"),
   paste0(jump_page, 
-         "**", cztype_proper, " costs by entity**"),
-  paste0(jump_page,
-         "**", cztype_proper, " costs for the main ANSP (", main_ansp, ") at charging zone level**"),
-  paste0(jump_page,
-         "**Assessment of the actual performance in the charging zone reported by the NSA**"),
+         "Regarding recommendations to the ANSP to rectify the situation, the NSA reports:"),
   paste0(jump_page, 
-         "**Explanation of the differences between actual and determined costs at charging zone level reported by the NSA**"),
+         "Regarding remedial measures that have been / will be taken by the ANSP to rectify the situation, the NSA reports:"),
   paste0(jump_page, 
-         "**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situations and actions taken by the ANSP**")
+         "Regarding follow up of the remedial measures indicated in the previous monitoring report(s), the NSA reports:")
+  
+)
+
+
+# fmt: skip
+cap_trm_nsa_titles_slot <- c(
+  paste0(jump_page, 
+         "As background information on actual performance, the NSA reports:")
 )
 
 # fmt: skip
-cef_titles_s2 <- c(
+cap_trm_nsa_titles_pddelay <- c(
   paste0(jump_page, 
-         "**", cztype_proper, " AUCU monitoring at charging zone level**"),
+         "As background information on actual performance, the NSA reports:"),
   paste0(jump_page, 
-         "**Initiatives implemented or planned that will improve this PI reported by the NSA**")
+         "Regarding the absence of data at airport level, the NSA reports:")
+  
 )
 
 # fmt: skip
-cef_titles_s3 <- c(
+cap_trm_nsa_titles_acdelay <- c(
   paste0(jump_page, 
-         "**", main_ansp, " net gain/loss on activity in the ", czname, 
-         " ", tolower(cztype_proper), " charging zone in ", year_report, "**"),
+         "As background information on actual performance, the NSA reports:"),
   paste0(jump_page, 
-         "**", main_ansp, " overall regulatory result (RR) for the ", tolower(cztype_proper), " activity**")
+         "Regarding the absence of data at airport level, the NSA reports:")
+  
 )

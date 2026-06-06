@@ -20,9 +20,10 @@ if (cztype == "enroute") {
 
 cz=c("@@cz_index@@", "@@cz_type@@")
   
-source("R/get_level2_headings.R")
+source("R/get_level2_headings_cef.R")
 
 ```
+
 ::: {.grid .align-items-center}
 :::: {.g-col-9}
 [Cost-efficiency - {{< var doc.country >}}]{.fakeh1}
@@ -153,7 +154,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_1.qmd", tolower(country), cz_short, czindex)
+path <- sprintf("./qmd_parts/%s_cef_%s%d_1.qmd", country, cz_short, czindex)
 
 replace_headings(path, cef_titles_s1)
 
@@ -213,7 +214,7 @@ replace_headings(path, cef_titles_s1)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_2.qmd", tolower(country), cz_short, czindex)
+path <- sprintf("./qmd_parts/%s_cef_%s%d_2.qmd", country, cz_short, czindex)
 
 replace_headings(path, cef_titles_s2)
 
@@ -272,7 +273,7 @@ replace_headings(path, cef_titles_s2)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_3.qmd", tolower(country), cz_short, czindex)
+path <- sprintf("./qmd_parts/%s_cef_%s%d_3.qmd", country, cz_short, czindex)
 
 replace_headings(path, cef_titles_s3)
 

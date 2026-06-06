@@ -69,7 +69,7 @@ if (cztype == "enroute") {
 
 ```{r cef-level2-headings-@@cz_type@@@@cz_index@@}
 
-source("R/get_level2_headings.R")
+source("R/get_level2_headings_cef.R")
 
 ```
 
@@ -144,7 +144,7 @@ cat(make_quarto_latex_table(
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_1.qmd", tolower(country), cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_1.qmd", as.character(year_report),country, country, cz_short, i)
 
 replace_headings(path, cef_titles_s1)
 
@@ -222,7 +222,7 @@ cat(make_quarto_latex_table(
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_2.qmd", tolower(country), cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_2.qmd", as.character(year_report),country, country, cz_short, i)
 
 replace_headings(path, cef_titles_s2)
 
@@ -242,7 +242,7 @@ replace_headings(path, cef_titles_s2)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s_cef_%s%d_3.qmd", tolower(country), cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_3.qmd", as.character(year_report),country, country, cz_short, i)
 
 replace_headings(path, cef_titles_s3)
 
