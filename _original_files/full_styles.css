@@ -10,10 +10,18 @@ body {
 
 p {
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 li {
   font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+ul,
+ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 h1, h2 {
