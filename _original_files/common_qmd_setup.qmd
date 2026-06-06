@@ -325,6 +325,9 @@ source("R/utils.R")
 #   airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%  clean_names()
 # }
 
+## level 2 headings
+source("R/get_level2_headings.R")
+
 ## data ----
 if(investments) {
   if(!exists("data_inv_loaded")){
