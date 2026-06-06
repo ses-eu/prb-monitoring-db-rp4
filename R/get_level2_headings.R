@@ -7,23 +7,7 @@ if (knitr::is_latex_output()) {
 # ENV ----
 ## MIL ----
 ### PRU ----
-# fmt: skip
-env_mil_titles_s1 <- c(
-  paste0(jump_page, 
-         "**Effective use of reserved or segregated local airspace (ERSA)**")
-)
-
-# fmt: skip
-env_mil_titles_s2 <- c(
-  paste0(jump_page, 
-         "**Rate of planning via available airspace structures**")
-)
-
-# fmt: skip
-env_mil_titles_s3 <- c(
-  paste0(jump_page, 
-         "**Rate of using available airspace structures**")
-)
+#not needed
 
 ### NSA ----
 # fmt: skip
@@ -49,35 +33,7 @@ env_mil_nsa_titles_rau <- c(
 
 ## TRM ----
 ### PRU ----
-# fmt: skip
-env_trm_titles_s1 <- c(
-  paste0(jump_page, 
-         "**Additional time in taxi-out phase (AXOT)**")
-)
-
-# fmt: skip
-env_trm_titles_s2 <- c(
-  paste0(jump_page, 
-         "**Additional time in taxi-in phase (AXIT)**")
-)
-
-# fmt: skip
-env_trm_titles_s3 <- c(
-  paste0(jump_page, 
-         "**Additional time in terminal airspace (ASMA)**")
-)
-
-# fmt: skip
-env_trm_titles_s4 <- c(
-  paste0(jump_page, 
-         "**Vertical flight efficiency of the descent**")
-)
-
-# fmt: skip
-env_trm_titles_s5 <- c(
-  paste0(jump_page, 
-         "**Vertical flight efficiency of the climb**")
-)
+#not needed
 
 ### NSA ----
 # fmt: skip
@@ -128,42 +84,8 @@ env_trm_nsa_titles_vfec <- c(
 # CAP ----
 ## ERT ----
 ### PRU ----
-# fmt: skip
-cap_er_titles_s1 <- c(
-  paste0(jump_page, 
-         "**En route ATFM delay**")
-)
 
-# fmt: skip
-cap_er_titles_s2 <- c(
-  paste0(jump_page, 
-         "**En route capacity incentive scheme**")
-)
-
-# fmt: skip
-cap_er_titles_s3 <- c(
-  paste0(jump_page, 
-         "**Percentage of total en route ATFM delay that occurred on days when the daily throughput was above the expected daily traffic (ACC)**")
-)
-
-# fmt: skip
-cap_er_titles_s4 <- c(
-  paste0(jump_page, 
-         "**Annual weighted average of the daily peak throughput (ACC)**")
-)
-
-# fmt: skip
-cap_er_titles_s5 <- c(
-  paste0(jump_page, 
-         "**ATCOs in operations**")
-)
-
-# fmt: skip
-cap_er_titles_s6 <- c(
-  paste0(jump_page, 
-         "**Sector opening hours**")
-)
-
+#not needed
 
 ### NSA ----
 # fmt: skip
@@ -210,31 +132,7 @@ cap_er_nsa_titles_atco <- c(
 
 ## TRM ----
 ### PRU ----
-# fmt: skip
-cap_trm_titles_s1 <- c(
-  paste0(jump_page, 
-         "**Terminal and airport ANS ATFM arrival delay per flight**")
-)
-# fmt: skip
-cap_trm_titles_s2 <- c(
-  paste0(jump_page, 
-         "**Terminal capacity incentive scheme**")
-)
-# fmt: skip
-cap_trm_titles_s3 <- c(
-  paste0(jump_page, 
-         "**Adherence to ATFM slots**")
-)
-# fmt: skip
-cap_trm_titles_s4 <- c(
-  paste0(jump_page, 
-         "**Air traffic control pre-departure delay**")
-)
-# fmt: skip
-cap_trm_titles_s5 <- c(
-  paste0(jump_page, 
-         "**Average departure delay from all causes per flight**")
-)
+#not needed
 
 ### NSA ----
 # fmt: skip

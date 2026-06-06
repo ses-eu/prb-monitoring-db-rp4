@@ -33,7 +33,7 @@ out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Romania' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Finland' # set your one country/stakeholder here (Home for home page)
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE
@@ -85,51 +85,10 @@ if (!all_states) {
 }
 
 # Set to TRUE to refresh pru analysis files
-update_pru_analysis <- FALSE
-update_nsa_input <- FALSE
-
-if (update_pru_analysis | update_nsa_input) {
-  other_repo <- "../xlsx-to-quarto"
-  quarto_origin_dir <- file.path(other_repo, "Quarto")
-
-  old_wd <- getwd()
-  on.exit(setwd(old_wd), add = TRUE)
-
-  repo_env <- new.env(parent = globalenv())
-  repo_env$update_nsa_input <- update_nsa_input
-  repo_env$update_pru_analysis <- update_pru_analysis
-
-  setwd(other_repo)
-  source("R/Main.R", local = repo_env)
-
-  if (!dir.exists(quarto_origin_dir)) {
-    stop(
-      "Source folder not found: ",
-      normalizePath(quarto_origin_dir, winslash = "/", mustWork = FALSE)
-    )
-  }
-
-  dest_dir <- here(old_wd, "qmd_parts")
-  if (!dir.exists(dest_dir)) {
-    dir.create(dest_dir, recursive = TRUE)
-  }
-
-  files_to_copy <- list.files(
-    quarto_origin_dir,
-    full.names = TRUE,
-    recursive = FALSE
-  )
-
-  file.copy(
-    from = files_to_copy,
-    to = file.path(dest_dir, basename(files_to_copy)),
-    overwrite = TRUE,
-    recursive = TRUE
-  )
-
-  setwd(old_wd)
-}
-
+refresh_qmd_parts(
+  update_pru_analysis = FALSE,
+  update_nsa_input = TRUE
+)
 
 # loop years ----
 for (i in 2025) {
