@@ -258,6 +258,8 @@ replace_headings(path, cap_er_nsa_titles_tput)
 
 :::: {#concl-cap-atco}
 
+**ATCOs in operations**
+
 ```{r cap_ert_text_atco}
 #| echo: false
 #| output: asis
@@ -335,6 +337,8 @@ replace_headings(path, cap_er_nsa_titles_atco)
 #### Focus on arrival ATFM delay
 
 ::::: {#concl-cap-trm}
+
+**Arrival ATFM delay**
 
 ```{r cap_trm_text_atfm, eval=(params$no_tcz != 0)}
 #| echo: false
