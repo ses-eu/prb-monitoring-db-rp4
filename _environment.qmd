@@ -215,7 +215,7 @@ replace_headings(path, env_trm_nsa_titles_asma)
 
 ::: {.callout-note collapse=true}
 
-#### Focus on average duration in climb and descent
+#### Focus on average duration in descent and climb
 
 **Average duration in descent**
 
