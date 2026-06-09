@@ -81,7 +81,7 @@ data_prep2 <- data_raw %>%
   pivot_wider(values_from = 'mymetric', names_from = 'status') %>%
   mutate(
     'Difference inflation index (p.p.)' = case_when(
-      year <= .env$year_report ~ .[[2]] - .[[3]],
+      year <= .env$year_report ~ .[[3]] - .[[2]],
       .default = NA
     )
   ) %>%

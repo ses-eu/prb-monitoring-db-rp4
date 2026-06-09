@@ -66,7 +66,7 @@ data_prep <- data_pre_prep %>%
   mutate(
     mymetric = case_when(
       status == 'A' & year > max(.env$year_report, 2021) ~ NA,
-      .default = round(total_cost_nominal_eur / 10^6, 2)
+      .default = total_cost_nominal_eur / 10^6
     ),
     status = str_replace(status, "A", "Actual costs"),
     status = str_replace(status, "D", "Determined costs")

@@ -81,9 +81,10 @@ data_prep_pdf <- data_prep %>%
   )
 
 # plot table  ----
-table1 <- mygtable(data_prep_pdf, myfont * 0.95) %>%
+table1 <- mygtable(data_prep_pdf, myfont) %>%
   cols_label(
-    type = paste0("Components of the AUCU in ", year_report),
+    type = "",
+    # type = paste0("Components of the AUCU in ", year_report),
     value = "€/SU"
   ) %>%
   tab_options(

@@ -8,7 +8,7 @@ if (!exists("country") | is.na(country)) {
 }
 
 if (exists("cz") == FALSE) {
-  cz = c("1", "enroute")
+  cz = c("3", "terminal")
 }
 
 # define cz ----
@@ -47,7 +47,11 @@ data_prep <- data_pre_prep |>
       status == 'financial_incentive' ~ "Incentives",
       status == 'ex_post_roe' ~ "Actual RoE in value"
     ),
-    mylabel = format(round(mymetric, 1), big.mark = ",", nsmall = 1)
+    mylabel = if_else(
+      abs(mymetric) < 0.05 & abs(mymetric) >= 0.005,
+      format(round(mymetric, 2), big.mark = ",", nsmall = 2),
+      format(round(mymetric, 1), big.mark = ",", nsmall = 1)
+    )
   )
 
 
@@ -70,7 +74,7 @@ c_xaxis_title <- ""
 c_barcolor_pos <- '#9ECF8D'
 c_barcolor_neg <- '#F87474'
 c_textcolor <- 'black'
-c_hovertemplate <- paste0('%{x:,.1f}<extra></extra>')
+c_hovertemplate <- paste0('%{text}<extra></extra>')
 c_xaxis_tickformat <- "0,.1f"
 
 ###set up order of traces
@@ -82,7 +86,7 @@ c_factor <- c(
 )
 
 c_margin <- list(t = 30, b = 70)
-c_decimals <- 1
+c_decimals <- 3
 
 # plot chart  ----
 
