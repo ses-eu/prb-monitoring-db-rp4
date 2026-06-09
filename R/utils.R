@@ -2761,6 +2761,9 @@ replace_headings <- function(path, mytitles) {
     return(invisible(NULL))
   }
 
+  mytitles_name <- deparse(substitute(mytitles))
+  is_nsa_titles <- grepl("_nsa_", mytitles_name, fixed = TRUE)
+
   lines <- readLines(path, warn = FALSE)
 
   get_heading_level <- function(x) {
@@ -2846,6 +2849,34 @@ replace_headings <- function(path, mytitles) {
     )
   }
 
+  apply_nsa_body_format <- function(lines, start_idx, end_idx) {
+    if (end_idx < start_idx) {
+      return(lines)
+    }
+
+    body_idx <- seq.int(start_idx, end_idx)
+    non_empty <- body_idx[nzchar(trimws(lines[body_idx]))]
+
+    if (length(non_empty) == 0L) {
+      return(lines)
+    }
+
+    lines[non_empty] <- paste0("*", lines[non_empty], "*")
+
+    first_idx <- non_empty[1L]
+    last_idx <- non_empty[length(non_empty)]
+
+    lines[first_idx] <- sub("^\\*", '*"', lines[first_idx])
+
+    if (first_idx == last_idx) {
+      lines[last_idx] <- sub("\\*$", '"*', lines[last_idx])
+    } else {
+      lines[last_idx] <- sub("\\*$", '"*', lines[last_idx])
+    }
+
+    lines
+  }
+
   heading_levels <- vapply(lines, get_heading_level, integer(1))
   keep <- heading_levels != 1L & heading_levels != 2L
   lines <- lines[keep]
@@ -2921,6 +2952,18 @@ replace_headings <- function(path, mytitles) {
     )
   }
 
+  if (is_nsa_titles && length(replace_idx) > 0L) {
+    for (k in seq_along(replace_idx)) {
+      body_start <- replace_idx[k] + 1L
+      body_end <- if (k < length(replace_idx)) {
+        replace_idx[k + 1L] - 1L
+      } else {
+        length(lines)
+      }
+      lines <- apply_nsa_body_format(lines, body_start, body_end)
+    }
+  }
+
   lines[replace_idx] <- mytitles
 
   render_lines <- function(lines) {
@@ -2953,8 +2996,8 @@ replace_headings <- function(path, mytitles) {
   }
 
   cat(render_lines(lines))
-  # cat(paste(lines, collapse = "\n"))
 }
+
 
 refresh_qmd_parts_country <- function(update_pru_analysis, update_nsa_input) {
   if (!(update_pru_analysis || update_nsa_input)) {

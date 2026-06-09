@@ -1,3 +1,4 @@
+# Setup ----
 if (!exists("substrRight")) {
   source("R/utils.R")
 }
@@ -34,6 +35,7 @@ state_list_download <- c(state_list_download, "FABEC")
 # country_download <- "Austria"
 year_download <- "2025"
 
+# NSA excel files ----
 download_nsa_excel_reports <- function(
   country_download
 ) {
@@ -62,3 +64,48 @@ download_nsa_excel_reports <- function(
 }
 
 purrr::walk(state_list_download, download_nsa_excel_reports)
+
+# PRU files ----
+pru_kpi <- c(
+  "environment-CIVMIL",
+  # "environment-TRM",
+  # "capacity-ENR",
+  # "capacity-TRM",
+  NULL
+)
+
+kpi_subfolder_map <- c(
+  "environment-CIVMIL" = "env_mil",
+  "environment-TRM" = "env_trm",
+  "capacity-ENR" = "cap_enr",
+  "capacity-TRM" = "cap_trm"
+)
+
+download_pru_analysis_files <- function(kpi) {
+  subfolder <- unname(kpi_subfolder_map[[kpi]])
+
+  download_folder <- file.path(
+    base_folder,
+    year_download,
+    "Word files-input for dashboard",
+    kpi
+  )
+
+  word_files <- list.files(
+    download_folder,
+    pattern = "\\.doc[xm]?$",
+    full.names = TRUE
+  )
+
+  file.copy(
+    from = word_files,
+    to = file.path(
+      input_folder_word,
+      subfolder,
+      basename(word_files)
+    ),
+    overwrite = TRUE
+  )
+}
+
+purrr::walk(pru_kpi, download_pru_analysis_files)
