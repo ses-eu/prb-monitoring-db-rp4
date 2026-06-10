@@ -279,6 +279,9 @@ replace_headings(path, env_trm_nsa_titles_asma)
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "100%"
 
+```
+
+```{r cdo-airports-check}
 if(!exists("cdo_airports")) {cdo_airports <-0}
 ```
 
