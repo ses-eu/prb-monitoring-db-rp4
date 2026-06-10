@@ -44,7 +44,11 @@ download_nsa_excel_reports <- function(
     year_download,
     "MEMBER STATES MR (I)",
     toupper(country_download),
-    "EXCEL SENT BY THE MS"
+    if_else(
+      country_download == "FABEC",
+      "Excel Received by FABEC",
+      "EXCEL SENT BY THE MS"
+    )
   )
 
   excel_files <- list.files(

@@ -832,13 +832,30 @@ cat(make_quarto_latex_table_2level(
 
 ###  Average duration in climb (PI#7) and descent (PI#8)
 
-```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0))}
+```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
+#| file: R/chart_level2_env_cdo_apt.R
+#| out.width: "100%"
+
+```
+
+```{r cdo-airports-check}
+if(!exists("cdo_airports")) {cdo_airports <-0}
+```
+
+
+```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports <= 6)}
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "60%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
+```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports > 6)}
+#| file: R/chart_level2_env_cdo_apt.R
+#| out.width: "100%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
 
 \needspace{2\baselineskip}
 
