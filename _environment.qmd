@@ -275,7 +275,15 @@ replace_headings(path, env_trm_nsa_titles_asma)
 
 ### Average duration in climb ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and descent ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
 
-:::: {layout="[ 20, 60, 20 ]"}
+```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
+#| file: R/chart_level2_env_cdo_apt.R
+#| out.width: "100%"
+
+if(!exists("cdo_airports")) {cdo_airports <-0}
+```
+
+
+`r if_else(cdo_airports <= 6, ":::: {layout='[ 20, 60, 20 ]'}", ":::: {layout='[ 1, 98, 1 ]'}")`
 
 ::::: {#empty-div}
 :::::

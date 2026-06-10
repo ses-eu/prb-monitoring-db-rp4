@@ -52,7 +52,17 @@ data_prep <- data_filtered %>%
     mymetric
   )
 
+## max length airport name
+max_length_apt <- data_prep %>%
+  mutate(length_name = nchar(xlabel)) %>%
+  summarise(max_length_apt = max(length_name, na.rm = TRUE)) %>%
+  pull()
+
+cdo_airports <- length(unique(data_prep$xlabel))
+
+
 ## chart parameters ----
+c_height <- myheight + 50 + 7 * max((max_length_apt - 10), 0)
 c_suffix <- ""
 c_decimals <- 1
 
@@ -110,7 +120,7 @@ if (knitr::is_latex_output()) {
 ## plot chart  ----
 myplot <- mybarchart2(
   data_prep,
-  height = myheight + 50,
+  height = c_height,
   colors = c_colors,
   local_factor = c_factor,
   suffix = c_suffix,

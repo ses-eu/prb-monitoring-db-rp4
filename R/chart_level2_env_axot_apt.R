@@ -31,7 +31,15 @@ data_prep <- data_raw %>%
   arrange(xlabel, type) %>%
   drop_na(mymetric)
 
+## max length airport name
+max_length_apt <- data_prep %>%
+  mutate(length_name = nchar(xlabel)) %>%
+  summarise(max_length_apt = max(length_name, na.rm = TRUE)) %>%
+  pull()
+
+
 ## chart parameters ----
+c_height <- myheight + 50 + 7 * max((max_length_apt - 10), 0)
 c_suffix <- ""
 c_decimals <- 2
 
@@ -46,9 +54,14 @@ c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 c_textposition <- "outside"
 c_insidetextanchor <- NA
 c_textfont_color <- 'black'
+c_textangle <- -90
 
 #### title
 c_title_text <- paste0("AXOT, ASMA & AXIT main airport(s) - ", year_report)
+
+#### xaxis
+c_xaxis_tickangle <- -90
+
 
 #### yaxis
 c_yaxis_title <- "AXOT, ASMA & AXIT (min/flight)"
@@ -65,7 +78,7 @@ c_margin = list(t = 70)
 ## plot chart  ----
 myplot <- mybarchart2(
   data_prep,
-  height = myheight + 30,
+  height = c_height,
   colors = c_colors,
   local_factor = c_factor,
   suffix = c_suffix,
@@ -78,6 +91,8 @@ myplot <- mybarchart2(
   insidetextanchor = c_insidetextanchor,
 
   title_text = c_title_text,
+
+  xaxis_tickangle = c_xaxis_tickangle,
 
   yaxis_title = c_yaxis_title,
   yaxis_ticksuffix = c_suffix,
