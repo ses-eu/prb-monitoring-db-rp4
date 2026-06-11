@@ -843,14 +843,14 @@ if(!exists("cdo_airports")) {cdo_airports <-0}
 ```
 
 
-```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports <= 6)}
+```{r chart-cdo-apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports <= 6)}
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "60%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
-```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports > 6)}
+```{r chart-cdo-apt-big, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports > 6)}
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "100%"
 #| fig.align: "center"
@@ -1289,6 +1289,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_pddelay.qmd", as.character
 replace_headings(path, cap_trm_nsa_titles_pddelay)
 
 ``` 
+
+**All causes pre-departure delay**
 
 ```{r cap_trm_text_acdelay, eval=(params$no_tcz != 0)}
 #| echo: false
