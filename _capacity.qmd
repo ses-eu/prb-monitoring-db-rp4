@@ -434,6 +434,8 @@ replace_headings(path, cap_trm_nsa_titles_pddelay)
 
 ``` 
 
+**All causes pre-departure delay**
+
 ```{r cap_trm_text_acdelay, eval=(params$no_tcz != 0)}
 #| echo: false
 #| output: asis
