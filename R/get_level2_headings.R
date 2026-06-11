@@ -178,6 +178,7 @@ cap_er_nsa_titles_atco <- c(
     jump_page,
     "As additional comments to ATCOs in the scope of the performance scheme, the NSA reports:"
   ),
+  paste0(""),
   paste0(
     jump_page,
     "Regarding the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions, the NSA reports:"
