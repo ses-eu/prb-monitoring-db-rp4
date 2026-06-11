@@ -30,7 +30,7 @@ base_folder <- "C:/Users/oaolive/OneDrive - EUROCONTROL/ECTL - AIU - European Co
 state_list_download <- unname(state_list)[
   !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4")
 ]
-state_list_download <- c(state_list_download, "FABEC")
+# state_list_download <- c(state_list_download, "FABEC")
 
 # country_download <- "Austria"
 year_download <- "2025"
@@ -46,7 +46,7 @@ download_nsa_excel_reports <- function(
     toupper(country_download),
     if_else(
       country_download == "FABEC",
-      "Excel Received by FABEC",
+      "Sent by FABEC",
       "EXCEL SENT BY THE MS"
     )
   )
