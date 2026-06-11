@@ -1,62 +1,69 @@
-
 ## import data  ----
 if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw  <-  cdo_cco_actual
+data_raw <- cdo_cco_actual
 
 ## prepare data ----
-airports_country <- airports_table %>% 
-  filter(country_name == .env$country) %>% 
+airports_country <- airports_table %>%
+  filter(country_name == .env$country) %>%
   select(apt_code, apt_name)
 
 cross_table <- crossing(airports_country, rp_years)
 
-data_filtered <- data_raw %>% 
+data_filtered <- data_raw %>%
   filter(
     year <= .env$year_report
     # apt_icao %in% airports_country$apt_code
-  ) %>% 
+  ) %>%
   right_join(
-    cross_table, by = c("apt_icao" = "apt_code", "year" = "rp_years")
+    cross_table,
+    by = c("apt_icao" = "apt_code", "year" = "rp_years")
   )
 
 
 ### We take the top 15 airports for France
 if (country == "France") {
-  data_filtered <- data_filtered |> 
-    filter(is.na(nbr_flights_descent) == FALSE) |> 
-    arrange(desc(nbr_flights_descent)) |> 
-    slice_head(n = 15)
+  top_15_france <- data_filtered |>
+    filter(is.na(nbr_flights_descent) == FALSE) |>
+    arrange(desc(nbr_flights_descent)) |>
+    slice_head(n = 15) %>%
+    select(apt_icao) %>%
+    unique()
+
+  data_filtered <- data_filtered %>%
+    filter(apt_icao %in% top_15_france$apt_icao)
 }
 
-data_prep <- data_filtered %>% 
+data_prep <- data_filtered %>%
   select(
-    year, 
-    Airport = apt_name, 
+    year,
+    Airport = apt_name,
     `Avg. duration in climb (PI#7)` = avg_seconds_per_climb,
     `Avg. duration in descent (PI#8)` = avg_seconds_per_descent
   ) %>%
-  pivot_wider(names_from = "year", values_from = c(
-                                                   "Avg. duration in climb (PI#7)",
-                                                   "Avg. duration in descent (PI#8)"
-                                                   )
-              # , names_glue = "{year}_{.value}" #suffix to prefix
+  pivot_wider(
+    names_from = "year",
+    values_from = c(
+      "Avg. duration in climb (PI#7)",
+      "Avg. duration in descent (PI#8)"
+    )
+    # , names_glue = "{year}_{.value}" #suffix to prefix
   ) %>%
   mutate(
-    across(c(-1), ~format(round(.x, 1), nsmall =1))
-  ) 
+    across(c(-1), ~ format(round(.x, 1), nsmall = 1))
+  )
 
-data_prep_pdf <- data_prep 
+data_prep_pdf <- data_prep
 
 
 # plot table ----
 
-table1 <- mygtable(data_prep, myfont*0.9) %>% 
+table1 <- mygtable(data_prep, myfont * 0.9) %>%
   tab_spanner_delim(
     delim = "_"
-  ) |> 
+  ) |>
   tab_header(
     title = md("**Airport level**")
   )
