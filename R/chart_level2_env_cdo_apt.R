@@ -62,7 +62,6 @@ cdo_airports <- length(unique(data_prep$xlabel))
 
 
 ## chart parameters ----
-c_height <- myheight + 50 + 7 * max((max_length_apt - 10), 0)
 c_suffix <- ""
 c_decimals <- 1
 
@@ -104,9 +103,15 @@ c_legend_font_size <- mylegend_font_size
 c_margin = list(t = 70)
 
 if (knitr::is_latex_output()) {
-  pdf_ratio <- 5 / 6
+  pdf_ratio <- if_else(cdo_airports > 6, 1 / 2, 5 / 6)
+  c_height <- if_else(
+    cdo_airports > 6,
+    300,
+    myheight + 50 + 7 * max((max_length_apt - 10), 0)
+  )
   c_title_font_size <- c_title_font_size * pdf_ratio
   c_textfont_size <- c_textfont_size * pdf_ratio
+  c_minsize <- c_textfont_size * pdf_ratio
 
   c_xaxis_tickfont_size <- c_xaxis_tickfont_size * pdf_ratio
 
@@ -114,6 +119,9 @@ if (knitr::is_latex_output()) {
   c_yaxis_titlefont_size <- c_yaxis_titlefont_size * pdf_ratio
 
   c_legend_font_size <- c_legend_font_size * pdf_ratio
+} else {
+  c_height <- myheight + 50 + 7 * max((max_length_apt - 10), 0)
+  c_minsize <- c_textfont_size
 }
 
 
@@ -131,6 +139,7 @@ myplot <- mybarchart2(
   textposition = c_textposition,
   insidetextanchor = c_insidetextanchor,
   textfont_size = c_textfont_size,
+  minsize = c_minsize,
 
   title_text = c_title_text,
   title_y = c_title_y,
