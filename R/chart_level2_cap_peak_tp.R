@@ -94,7 +94,7 @@ p1 <- mylinechart2(
   # textangle = c_textangle,
   # textposition = c_textposition,
   # insidetextanchor = c_insidetextanchor,
-  textfont_color = "transparent",
+  textfont_color = "black",
   #
   title_text = c_title_text,
 

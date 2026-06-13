@@ -40,10 +40,10 @@ c_factor <- sort(c_factor$type, decreasing = FALSE)
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 # c_hovertemplate <-"%{meta}<extra></extra>"
 
-c_textangle <- -90
+c_textangle <- 0
 c_textposition <- "inside"
 c_insidetextanchor <- "middle"
-c_textfont_color <- "transparent"
+c_textfont_color <- "white"
 
 ### layout parameters
 c_barmode <- 'group'
