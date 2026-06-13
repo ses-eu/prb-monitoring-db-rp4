@@ -128,7 +128,8 @@ mybarc_aucu <- function(
         cliponaxis = FALSE,
         # insidetextanchor =  "middle",
         # name = mymetric,
-        textfont = list(color = c_textcolor, size = font * 0.9),
+        textfont = list(color = c_textcolor, size = font * 0.8),
+        constraintext = "none",
         # hovertemplate = paste0('%{y} (A-D): %{x:+0,}<extra></extra>'),
         hoverinfo = "none",
         showlegend = FALSE

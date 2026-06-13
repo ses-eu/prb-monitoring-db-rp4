@@ -67,9 +67,10 @@ c_factor <- c("AUCU (before other revenues)", "Regulatory result per SU")
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
 c_textangle <- -90
-c_textposition <- "inside"
-c_insidetextanchor <- "middle"
-c_textfont_color <- 'transparent'
+c_textposition <- "outside"
+c_insidetextanchor <- NULL
+c_textfont_color <- 'black'
+c_textfont_size <- 0.9 * myfont
 
 ### layout parameters
 c_bargap <- 0.25
@@ -163,6 +164,31 @@ y1_range <- c(
 )
 
 
+# check if all values are positive or negative
+
+y1_vals <- data_prep$mymetric[is.finite(data_prep$mymetric)]
+y2_vals <- data_prep$myothermetric[is.finite(data_prep$myothermetric)]
+
+if (length(y1_vals) == 0) {
+  y1_vals <- 0
+}
+if (length(y2_vals) == 0) {
+  y2_vals <- 0
+}
+
+y1_all_positive <- all(y1_vals >= 0)
+y1_all_negative <- all(y1_vals <= 0)
+y2_all_positive <- all(y2_vals >= 0)
+y2_all_negative <- all(y2_vals <= 0)
+
+if (y1_all_positive & y2_all_positive) {
+  y1_range <- c(0, max(y1_range))
+  y2_range <- c(0, max(y2_range))
+} else if (y1_all_negative & y2_all_negative) {
+  y1_range <- c(min(y1_range), 0)
+  y2_range <- c(min(y2_range), 0)
+}
+
 # plot chart  ----
 p1 <- mybarchart2(
   data_prep,
@@ -181,6 +207,7 @@ p1 <- mybarchart2(
   textposition = c_textposition,
   textfont_color = c_textfont_color,
   insidetextanchor = c_insidetextanchor,
+  textfont_size = c_textfont_size,
 
   title_text = c_title_text,
 
@@ -196,7 +223,11 @@ p1 %>%
     .,
     filter(data_prep, type == 'Regulatory result per SU'),
     name = "Share of RR in AUCU (%)",
-    textfontcolor = "rgba(0,0,0,0)",
+    # textfontcolor = "rgba(0,0,0,0)",
+    textfontcolor = PRBTargetColor,
+    textfontsize = myfont * 0.85,
+    textsuffix = '%',
+    textdecimals = 1,
     linecolor = "rgba(0,0,0,0)",
     showlegend = TRUE,
     yaxis = "y2"

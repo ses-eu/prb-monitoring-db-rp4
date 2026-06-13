@@ -32,9 +32,6 @@ state_list_download <- unname(state_list)[
 ]
 # state_list_download <- c(state_list_download, "FABEC")
 
-# country_download <- "Austria"
-year_download <- "2025"
-
 # NSA excel files ----
 download_nsa_excel_reports <- function(
   country_download
