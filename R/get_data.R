@@ -59,7 +59,7 @@ airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%
 
 # traffic ----
 ## forecast & actuals ----
-statfor_mvt <- read_xlsx(
+statfor_mvt <- readxl::read_xlsx(
   here(data_folder, statfor_mvt_data_file),
   sheet = "data",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -68,7 +68,7 @@ statfor_mvt <- read_xlsx(
   clean_names() %>%
   filter(daio == "T" & year >= rp_min_year - 1 & year <= rp_max_year)
 
-statfor_tsu <- read_xlsx(
+statfor_tsu <- readxl::read_xlsx(
   here(data_folder, statfor_tsu_data_file),
   sheet = "data",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -78,7 +78,7 @@ statfor_tsu <- read_xlsx(
   filter(year >= rp_min_year - 1 & year <= rp_max_year)
 
 ## targets ----
-traffic_target <- read_xlsx(
+traffic_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
   sheet = "IFR_MVTS",
   range = cell_limits(c(3, 1), c(NA, NA))
@@ -90,7 +90,7 @@ traffic_target <- read_xlsx(
 # SAF ----
 ## State ----
 ### EoSM ----
-saf_maturity <- read_xlsx(
+saf_maturity <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "A>P",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -98,7 +98,7 @@ saf_maturity <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_eosm <- read_xlsx(
+saf_eosm <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "EoSM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -107,7 +107,7 @@ saf_eosm <- read_xlsx(
   clean_names()
 
 ### RI & SMI ----
-saf_ri_actual <- read_xlsx(
+saf_ri_actual <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "RI - occurrences",
   range = cell_limits(c(1, 1), c(NA, 10))
@@ -115,7 +115,7 @@ saf_ri_actual <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_smi_actual <- read_xlsx(
+saf_smi_actual <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "SMI - occurrences",
   range = cell_limits(c(1, 1), c(NA, 10))
@@ -123,7 +123,7 @@ saf_smi_actual <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_ri_actual_apt <- read_xlsx(
+saf_ri_actual_apt <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "SPI1c-RI_Airport",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -131,7 +131,7 @@ saf_ri_actual_apt <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_smi_actual_apt <- read_xlsx(
+saf_smi_actual_apt <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "SPI1d-SMI_ANSPs",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -140,7 +140,7 @@ saf_smi_actual_apt <- read_xlsx(
   clean_names()
 
 ### AUTO TOOLS ----
-saf_auto_tools_actual <- read_xlsx(
+saf_auto_tools_actual <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "Automated tools",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -150,7 +150,7 @@ saf_auto_tools_actual <- read_xlsx(
 
 ## SES ----
 ### EoSM ----
-saf_eosm_ses <- read_xlsx(
+saf_eosm_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "SES_EoSM",
   range = cell_limits(c(1, 1), c(NA, 6))
@@ -158,7 +158,7 @@ saf_eosm_ses <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_eosm_ansp_ses <- read_xlsx(
+saf_eosm_ansp_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "EoSM target #ANSPs",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -166,7 +166,7 @@ saf_eosm_ansp_ses <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_eosm_interdep_ses <- read_xlsx(
+saf_eosm_interdep_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "EoSM interdipendency #ANSPs",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -175,7 +175,7 @@ saf_eosm_interdep_ses <- read_xlsx(
   clean_names()
 
 ### RI & SMI ----
-saf_ri_actual_ses <- read_xlsx(
+saf_ri_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "RI - occurrences",
   range = cell_limits(c(1, 1), c(NA, 5))
@@ -184,7 +184,7 @@ saf_ri_actual_ses <- read_xlsx(
   clean_names() |>
   mutate(state = rp_full)
 
-saf_smi_actual_ses <- read_xlsx(
+saf_smi_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "SMI - occurrences",
   range = cell_limits(c(1, 1), c(NA, 5))
@@ -193,7 +193,7 @@ saf_smi_actual_ses <- read_xlsx(
   clean_names() |>
   mutate(state = rp_full)
 
-saf_ri_var_ses <- read_xlsx(
+saf_ri_var_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "RI SES variation",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -204,7 +204,7 @@ saf_ri_var_ses <- read_xlsx(
     field = str_remove_all(field, " RI")
   )
 
-saf_smi_var_ses <- read_xlsx(
+saf_smi_var_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "SMI SES variation",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -218,7 +218,7 @@ saf_smi_var_ses <- read_xlsx(
 
 ## NM ----
 ### EoSM ----
-saf_eosm_nm <- read_xlsx(
+saf_eosm_nm <- readxl::read_xlsx(
   here(data_folder, nm_data_file),
   sheet = "EoSM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -227,7 +227,7 @@ saf_eosm_nm <- read_xlsx(
   clean_names()
 
 ### OVERDELIVERIES ----
-saf_overd_nm <- read_xlsx(
+saf_overd_nm <- readxl::read_xlsx(
   here(data_folder, nm_data_file),
   sheet = "PI_overdeliveries",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -239,7 +239,7 @@ saf_overd_nm <- read_xlsx(
 ## targets ----
 ### State ----
 #### KEA ----
-kea_target <- read_xlsx(
+kea_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
   sheet = "KEA",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -247,7 +247,7 @@ kea_target <- read_xlsx(
   as_tibble() %>%
   clean_names() %>%
   rbind(
-    read_xlsx(
+    readxl::read_xlsx(
       here(data_folder, targets_data_file),
       sheet = "KEA_FABEC",
       range = cell_limits(c(1, 1), c(NA, NA))
@@ -259,7 +259,7 @@ kea_target <- read_xlsx(
 
 ### SES ----
 #### KEA ----
-kea_target_ses <- read_xlsx(
+kea_target_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_KEA Targets",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -271,7 +271,7 @@ kea_target_ses <- read_xlsx(
 ## actuals ----
 ### State ----
 #### KEA ----
-kea_actual <- read_xlsx(
+kea_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "kea",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -279,7 +279,7 @@ kea_actual <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-kea_actual_mm <- read_xlsx(
+kea_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "kea_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -289,7 +289,7 @@ kea_actual_mm <- read_xlsx(
   mutate(month = as.Date(month))
 
 #### KEP ----
-kep_actual <- read_xlsx(
+kep_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "kep",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -297,7 +297,7 @@ kep_actual <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-kep_actual_mm <- read_xlsx(
+kep_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "kep_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -307,7 +307,7 @@ kep_actual_mm <- read_xlsx(
   mutate(month = as.Date(month))
 
 #### SCR ----
-scr_actual <- read_xlsx(
+scr_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "scr",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -316,7 +316,7 @@ scr_actual <- read_xlsx(
   clean_names()
 
 
-scr_actual_mm <- read_xlsx(
+scr_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "scr_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -326,7 +326,7 @@ scr_actual_mm <- read_xlsx(
   mutate(month = as.Date(month))
 
 #### VFE_ERT ----
-vfe_ert_actual <- read_xlsx(
+vfe_ert_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "VFE_ERT",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -344,7 +344,7 @@ vfe_ert_actual <- read_xlsx(
   )
 
 #### AXOT ----
-axot_actual_ms <- read_xlsx(
+axot_actual_ms <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "axot_ms",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -352,7 +352,7 @@ axot_actual_ms <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-axot_actual_apt <- read_xlsx(
+axot_actual_apt <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "axot_apt",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -361,7 +361,7 @@ axot_actual_apt <- read_xlsx(
   clean_names()
 
 #### AXIT ----
-axit_actual_ms <- read_xlsx(
+axit_actual_ms <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "axin_ms",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -369,7 +369,7 @@ axit_actual_ms <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-axit_actual_apt <- read_xlsx(
+axit_actual_apt <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "axin_apt",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -379,7 +379,7 @@ axit_actual_apt <- read_xlsx(
 
 
 #### ASMA ----
-asma_actual_ms <- read_xlsx(
+asma_actual_ms <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "asma_ms",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -387,7 +387,7 @@ asma_actual_ms <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-asma_actual_apt <- read_xlsx(
+asma_actual_apt <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "asma_apt",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -396,7 +396,7 @@ asma_actual_apt <- read_xlsx(
   clean_names()
 
 #### CDO ----
-cdo_cco_actual <- read_xlsx(
+cdo_cco_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "CDO_APT_MM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -426,7 +426,7 @@ cdo_cco_actual <- read_xlsx(
   )
 
 #### MIL ----
-env_mil_actual <- read_xlsx(
+env_mil_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "mil_pis",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -436,7 +436,7 @@ env_mil_actual <- read_xlsx(
 
 ### SES ----
 #### KEA ----
-kea_actual_ses <- read_xlsx(
+kea_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_HFE",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -445,7 +445,7 @@ kea_actual_ses <- read_xlsx(
   clean_names() |>
   mutate(entity_name = rp_full)
 
-kea_actual_mm_ses <- read_xlsx(
+kea_actual_mm_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_HFE MM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -454,7 +454,7 @@ kea_actual_mm_ses <- read_xlsx(
   clean_names()
 
 #### KEP ----
-kep_actual_ses <- read_xlsx(
+kep_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_KEP",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -463,7 +463,7 @@ kep_actual_ses <- read_xlsx(
   clean_names() |>
   mutate(entity_name = rp_full)
 
-kep_actual_mm_ses <- read_xlsx(
+kep_actual_mm_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_KEP MM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -472,7 +472,7 @@ kep_actual_mm_ses <- read_xlsx(
   clean_names()
 
 #### SCR ----
-scr_actual_ses <- read_xlsx(
+scr_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_SCR",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -481,7 +481,7 @@ scr_actual_ses <- read_xlsx(
   clean_names() |>
   mutate(entity_name = rp_full)
 
-scr_actual_mm_ses <- read_xlsx(
+scr_actual_mm_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "Table_SCR MM",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -490,7 +490,7 @@ scr_actual_mm_ses <- read_xlsx(
   clean_names()
 
 ### NM ----
-kep_nm <- read_xlsx(
+kep_nm <- readxl::read_xlsx(
   paste0(data_folder, nm_data_file),
   sheet = "Environment",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -502,7 +502,7 @@ kep_nm <- read_xlsx(
 ## NM ----
 
 ## Targets ----
-cap_ert_nm <- read_xlsx(
+cap_ert_nm <- readxl::read_xlsx(
   here(data_folder, nm_data_file),
   sheet = "Capacity_En route",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -510,7 +510,7 @@ cap_ert_nm <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-cap_trm_nm <- read_xlsx(
+cap_trm_nm <- readxl::read_xlsx(
   here(data_folder, nm_data_file),
   sheet = "Capacity_Terminal",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -519,7 +519,7 @@ cap_trm_nm <- read_xlsx(
   clean_names()
 
 
-cap_pis_nm <- read_xlsx(
+cap_pis_nm <- readxl::read_xlsx(
   paste0(data_folder, nm_data_file),
   sheet = "Capacity_PIs",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -529,7 +529,7 @@ cap_pis_nm <- read_xlsx(
 
 ### State ----
 #### ATFM DELAY ----
-cap_ert_target <- read_xlsx(
+cap_ert_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
   sheet = "ER_CAP",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -538,7 +538,7 @@ cap_ert_target <- read_xlsx(
   clean_names() %>%
   select(year, state, delay_target = x331_ert_delay_target) %>%
   rbind(
-    read_xlsx(
+    readxl::read_xlsx(
       here(data_folder, targets_data_file),
       sheet = "ER_CAP_FABEC",
       range = cell_limits(c(1, 1), c(NA, NA))
@@ -562,7 +562,7 @@ cap_ert_target <- read_xlsx(
     )
   )
 
-cap_trm_target <- read_xlsx(
+cap_trm_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
   sheet = "TRM_CAP",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -572,18 +572,22 @@ cap_trm_target <- read_xlsx(
   select(year, state, delay_target = x332_state_arr_delay_target)
 
 #### ATCOs IN OPS ----
-cap_atco_acc_planned <- read_xlsx(
+cap_atco_acc_planned <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
   sheet = "ATCO_PLANNING",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
   clean_names() %>%
-  select(state, acc, year, planned_atco_number)
+  select(state, acc, year, planned_atco_number) %>%
+  mutate(
+    acc = stringr::str_remove_all(acc, "\\s*ACC\\)"),
+    acc = stringr::str_remove_all(acc, "\\s*UAC\\)")
+  )
 
 ### SES ----
 #### ATFM DELAY ----
-cap_ert_target_ses <- read_xlsx(
+cap_ert_target_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "en route delay targets",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -607,7 +611,7 @@ cap_atco_planned_ses <- cap_atco_acc_planned %>%
 ## Actuals ----
 ### State ----
 #### ATFM DELAY ----
-cap_ert_atfm_actual_mm <- read_xlsx(
+cap_ert_atfm_actual_mm <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "enroute_atfm_delay_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -631,7 +635,7 @@ cap_ert_atfm_actual <- cap_ert_atfm_actual_mm %>%
     average_delay_per_flight = total_delay / ifr_movements
   )
 
-cap_trm_atfm_actual_mm <- read_xlsx(
+cap_trm_atfm_actual_mm <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "terminal_atfm_delay_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -660,7 +664,7 @@ cap_trm_atfm_actual <- cap_trm_atfm_actual_mm %>%
   )
 
 #### DELAY TIME BIN ----
-cap_delay_bin_actual <- read_xlsx(
+cap_delay_bin_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "delay_time_bin",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -669,7 +673,7 @@ cap_delay_bin_actual <- read_xlsx(
   clean_names()
 
 #### ALL-CAUSE PREDEP DELAY ----
-cap_all_c_predep_delay_actual <- read_xlsx(
+cap_all_c_predep_delay_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "all_cause_predep_delay",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -678,7 +682,7 @@ cap_all_c_predep_delay_actual <- read_xlsx(
   clean_names()
 
 #### ATCOs IN OPS ----
-cap_atco_acc_actual <- read_xlsx(
+cap_atco_acc_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "atcos",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -688,7 +692,7 @@ cap_atco_acc_actual <- read_xlsx(
   select(state, acc, year, actual_atco_number)
 
 #### SECTOR HOURS ----
-cap_sector_hours_actual <- read_xlsx(
+cap_sector_hours_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "sector_hour",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -697,7 +701,7 @@ cap_sector_hours_actual <- read_xlsx(
   clean_names()
 
 #### OTHER APT PIs ----
-cap_apt_pis_actual <- read_xlsx(
+cap_apt_pis_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "airport_pis",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -706,7 +710,7 @@ cap_apt_pis_actual <- read_xlsx(
   clean_names()
 
 #### AVG PEAK THROUPUT ----
-cap_avg_peak_tp_actual <- read_xlsx(
+cap_avg_peak_tp_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "AVG_DAY_PEAK_THROUPUT",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -720,7 +724,7 @@ cap_avg_peak_tp_actual <- read_xlsx(
 
 
 #### SHARE_DELAY_WHEN_TP_ABOVE ----
-cap_perc_delay_tp_above <- read_xlsx(
+cap_perc_delay_tp_above <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "SHARE_DELAY_WHEN_TP_ABOVE",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -746,7 +750,7 @@ cap_perc_delay_tp_above <- read_xlsx(
 
 ### SES ----
 #### ATFM DELAY ----
-cap_ert_atfm_actual_mm_ses <- read_xlsx(
+cap_ert_atfm_actual_mm_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "en route monthly delay",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -860,7 +864,7 @@ cap_sector_hours_actual_ses <- cap_sector_hours_actual %>%
 
 # CEFF ----
 ## En-route ----
-ceff_t1_ert <- read_xlsx(
+ceff_t1_ert <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Enroute_T1",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -868,7 +872,7 @@ ceff_t1_ert <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-ceff_t2_ert <- read_xlsx(
+ceff_t2_ert <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Enroute_T2",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -876,7 +880,7 @@ ceff_t2_ert <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-ceff_t3_ert <- read_xlsx(
+ceff_t3_ert <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Enroute_T3",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -885,7 +889,7 @@ ceff_t3_ert <- read_xlsx(
   clean_names()
 
 ### SES ----
-ceff_ses_duc_ert <- read_xlsx(
+ceff_ses_duc_ert <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "ses_duc_ert",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -893,7 +897,7 @@ ceff_ses_duc_ert <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-ceff_ses_duc_trm <- read_xlsx(
+ceff_ses_duc_trm <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "ses_duc_trm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -902,7 +906,7 @@ ceff_ses_duc_trm <- read_xlsx(
   clean_names()
 
 ### NM ----
-ceff_nm_ert <- read_xlsx(
+ceff_nm_ert <- readxl::read_xlsx(
   here(data_folder, nm_data_file),
   sheet = "Cost-efficiency",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -912,7 +916,7 @@ ceff_nm_ert <- read_xlsx(
 
 
 ## Terminal ----
-ceff_t1_trm <- read_xlsx(
+ceff_t1_trm <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Terminal_T1",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -920,7 +924,7 @@ ceff_t1_trm <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-ceff_t2_trm <- read_xlsx(
+ceff_t2_trm <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Terminal_T2",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -928,7 +932,7 @@ ceff_t2_trm <- read_xlsx(
   as_tibble() %>%
   clean_names()
 
-ceff_t3_trm <- read_xlsx(
+ceff_t3_trm <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "Terminal_T3",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -937,7 +941,7 @@ ceff_t3_trm <- read_xlsx(
   clean_names()
 
 ## Yearly xrates ----
-xrate_ert <- read_xlsx(
+xrate_ert <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "xrate_ert",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -959,7 +963,7 @@ tcz_list_table_xrate <- tcz_list_table %>%
   distinct(country_zone_code = icao_code, cz_code = tcz_id)
 
 
-xrate_trm <- read_xlsx(
+xrate_trm <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "xrate_trm",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -999,7 +1003,7 @@ xrate_ses <- xrate_year_states %>%
 xrate_year <- xrate_year_states %>% rbind(xrate_ses)
 
 ## Forecast SU for Temp ur ----
-cef_temp_su_t2 <- read_xlsx(
+cef_temp_su_t2 <- readxl::read_xlsx(
   here(data_folder, ceff_data_file),
   sheet = "forecast_su_ert",
   range = cell_limits(c(1, 1), c(NA, NA))
