@@ -1,5 +1,9 @@
-if (!exists("country") | is.na(country)) {country = "Spain"}
-if (exists("cztype") == FALSE) {cztype = "terminal"}
+if (!exists("country") | is.na(country)) {
+  country = "Spain"
+}
+if (exists("cztype") == FALSE) {
+  cztype = "terminal"
+}
 if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
@@ -7,59 +11,66 @@ if (!exists("data_loaded")) {
 # import data  ----
 if (country == rp_full) {
   ## SES case ----
-  if (cztype == "enroute") {data_raw_actual <- cap_ert_atfm_actual_mm_ses} else {data_raw_actual <- cap_trm_atfm_actual_mm_ses}
+  if (cztype == "enroute") {
+    data_raw_actual <- cap_ert_atfm_actual_mm_ses
+  } else {
+    data_raw_actual <- cap_trm_atfm_actual_mm_ses
+  }
 
-  data_raw_target  <-  cap_ert_target_ses
-
-
+  data_raw_target <- cap_ert_target_ses
 } else {
   ## state case ----
   if (cztype == "enroute") {
     data_raw_target <- cap_ert_target
     data_raw_actual <- cap_ert_atfm_actual_mm
-    
   } else {
-    data_raw_target <- cap_trm_target 
+    data_raw_target <- cap_trm_target
     data_raw_actual <- cap_trm_atfm_actual_mm
   }
-  
 }
 
 # prepare data ----
-data_prep_target <- data_raw_target %>% 
+data_prep_target <- data_raw_target %>%
   filter(
     state == .env$country,
     year == .env$year_report
-  ) %>% 
+  ) %>%
   mutate(
     myothermetric = round(delay_target, 2),
     xlabel = year,
     type = "Target"
-  ) %>% 
+  ) %>%
   select(
     xlabel,
     type,
-    myothermetric)
+    myothermetric
+  )
 
-data_prep_actual <- data_raw_actual %>% 
+data_prep_actual <- data_raw_actual %>%
   filter(
     state == .env$country,
     year == .env$year_report
-  ) %>% 
+  ) %>%
   mutate(
     atc_capacity = atc_capacity / ifr_movements,
     atc_disruptions = atc_disruptions / ifr_movements,
     atc_staffing = atc_staffing / ifr_movements,
     other_non_atc = other_non_atc / ifr_movements,
     weather = weather / ifr_movements,
-  ) %>% 
+  ) %>%
   pivot_longer(
-    cols = c(atc_capacity, atc_staffing, atc_disruptions, weather, other_non_atc),
+    cols = c(
+      atc_capacity,
+      atc_staffing,
+      atc_disruptions,
+      weather,
+      other_non_atc
+    ),
     names_to = "type",
     values_to = "mymetric"
-  ) %>% 
+  ) %>%
   mutate(
-    mymetric = round(mymetric,2),
+    mymetric = round(mymetric, 2),
     xlabel = month,
     type = case_when(
       type == "atc_capacity" ~ "Capacity",
@@ -68,18 +79,19 @@ data_prep_actual <- data_raw_actual %>%
       type == "weather" ~ "Weather",
       type == "other_non_atc" ~ "Other non-ATC"
     )
-  ) %>% 
+  ) %>%
   select(xlabel, type, mymetric)
 
-data_prep_total <- data_prep_actual %>% 
-  select(xlabel, mymetric) %>% 
-  group_by(xlabel) %>% 
+data_prep_total <- data_prep_actual %>%
+  select(xlabel, mymetric) %>%
+  group_by(xlabel) %>%
   summarise(myothermetric = sum(mymetric)) %>%
-  mutate(myothermetric = case_when(
-    is.na(myothermetric) == TRUE ~ "",
-    .default = format(round(myothermetric,2), digits = 2)
-  )
-  ) %>% 
+  mutate(
+    myothermetric = case_when(
+      is.na(myothermetric) == TRUE ~ "",
+      .default = format(round(myothermetric, 2), digits = 2)
+    )
+  ) %>%
   mutate(type = "Total")
 
 
@@ -91,9 +103,7 @@ c_decimals <- 2
 c_colors = c('#EF7D22', '#F9CCAB', '#FDB014', '#70AD47', '#A0A0A0')
 
 ###set up order of traces
-c_factor <- c("Capacity", "Staffing", 
-              "Disruptions", "Weather",
-              "Other non-ATC")
+c_factor <- c("Capacity", "Staffing", "Disruptions", "Weather", "Other non-ATC")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -113,10 +123,9 @@ if (knitr::is_latex_output()) {
   c_legend_y <- -0.2
   c_legend_x <- -0.18
   c_legend_xanchor <- 'left'
-  c_legend_fontsize <- myfont-1
+  c_legend_fontsize <- myfont - 1
   c_margin <- list(t = 50)
-  c_xaxis_tickangle <- -90 
-  
+  c_xaxis_tickangle <- -90
 } else {
   c_level1_title <- " ATFM delay by delay groups  - "
   c_title_y <- 0.99
@@ -125,11 +134,15 @@ if (knitr::is_latex_output()) {
   c_legend_xanchor <- 'left'
   c_legend_fontsize <- myfont
   c_margin <- mymargin
-  c_xaxis_tickangle <- 0 
+  c_xaxis_tickangle <- 0
 }
 
-c_title_text <- paste0("Monthly distribution of ", if_else(cztype == "enroute", "en route", "arrival"),
-                       c_level1_title, year_report)
+c_title_text <- paste0(
+  "Monthly distribution of ",
+  if_else(cztype == "enroute", "en route", "arrival"),
+  c_level1_title,
+  year_report
+)
 
 #### xaxis
 c_xaxis_dtick <- 'M1'
@@ -140,51 +153,54 @@ c_yaxis_title <- "ATFM delay (min/flight)"
 c_yaxis_tickformat <- ".2f"
 
 # plot chart ----
-p1 <- mybarchart2(data_prep_actual, 
-                      height = myheight+20,
-                      colors = c_colors,
-                      local_factor = c_factor,
-                      suffix = c_suffix,
-                      decimals = c_decimals,
-                      barmode = c_barmode,
-                      
-                      hovertemplate = c_hovertemplate,
-                      
-                      textangle = c_textangle,
-                      textposition = c_textposition,
-                      textfont_color = c_textfont_color,
-                      textfont_size = c_textfont_size,
-                      insidetextanchor = c_insidetextanchor,
-                      
-                      title_text = c_title_text,
-                      title_y = c_title_y,
-                      
-                      xaxis_dtick = c_xaxis_dtick,
-                      xaxis_tickformat = c_xaxis_tickformat,
-                      xaxis_tickangle = c_xaxis_tickangle,
-                  
-                      yaxis_title = c_yaxis_title,
-                      yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat,
-                      
-                      legend_x = c_legend_x,
-                      legend_y = c_legend_y,
-                      legend_xanchor = c_legend_xanchor,
-                      legend_fontsize = c_legend_fontsize,
-                      
-                      margin = c_margin
-) %>% 
-  add_line_trace2(., data_prep_total,
-                  name = "Total delay",
-                  textfontcolor = 'black',
-                  linecolor = "rgba(0,0,0,0)",
-                  markercolor = "rgba(0,0,0,0)",
-                  showlegend = FALSE,
-                  textweight = TRUE
-  ) %>% 
+p1 <- mybarchart2(
+  data_prep_actual,
+  height = myheight + 20,
+  colors = c_colors,
+  local_factor = c_factor,
+  suffix = c_suffix,
+  decimals = c_decimals,
+  barmode = c_barmode,
+
+  hovertemplate = c_hovertemplate,
+
+  textangle = c_textangle,
+  textposition = c_textposition,
+  textfont_color = c_textfont_color,
+  textfont_size = c_textfont_size,
+  insidetextanchor = c_insidetextanchor,
+
+  title_text = c_title_text,
+  title_y = c_title_y,
+
+  xaxis_dtick = c_xaxis_dtick,
+  xaxis_tickformat = c_xaxis_tickformat,
+  xaxis_tickangle = c_xaxis_tickangle,
+
+  yaxis_title = c_yaxis_title,
+  yaxis_ticksuffix = c_suffix,
+  yaxis_tickformat = c_yaxis_tickformat,
+
+  legend_x = c_legend_x,
+  legend_y = c_legend_y,
+  legend_xanchor = c_legend_xanchor,
+  legend_fontsize = c_legend_fontsize,
+
+  margin = c_margin
+) %>%
+  add_line_trace2(
+    .,
+    data_prep_total,
+    name = "Total delay",
+    textfontcolor = 'black',
+    textdecimals = 2,
+    linecolor = "rgba(0,0,0,0)",
+    markercolor = "rgba(0,0,0,0)",
+    showlegend = FALSE,
+    textweight = TRUE
+  ) %>%
   layout(
     yaxis = list(rangemode = "tozero")
-    )
+  )
 
 p1
-
