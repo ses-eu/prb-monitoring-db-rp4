@@ -1113,13 +1113,13 @@ add_line_trace2 <- function(
   df,
   name = "Target",
   yaxis = 1,
-  mode = "line+markers",
+  mode = "lines+markers+text",
 
   textweight = FALSE,
   textdecimals = 0,
   textsuffix = '',
   textangle = 0,
-  textposition = 'top',
+  textposition = 'top center',
   textfontcolor = PRBTargetColor,
   textfontsize = myfont,
 

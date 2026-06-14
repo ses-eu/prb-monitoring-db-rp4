@@ -126,6 +126,7 @@ if (knitr::is_latex_output()) {
   c_legend_fontsize <- myfont - 1
   c_margin <- list(t = 50)
   c_xaxis_tickangle <- -90
+  c_yshift <- 20
 } else {
   c_level1_title <- " ATFM delay by delay groups  - "
   c_title_y <- 0.99
@@ -136,6 +137,7 @@ if (knitr::is_latex_output()) {
   c_legend_fontsize <- myfont
   c_margin <- mymargin
   c_xaxis_tickangle <- 0
+  c_yshift <- 10
 }
 
 c_title_text <- paste0(
@@ -193,9 +195,8 @@ p1 <- mybarchart2(
     .,
     data_prep_total,
     name = "Total delay",
-    textfontcolor = 'black',
+    textfontcolor = 'transparent',
     textdecimals = 2,
-    textangle = c_textangle,
     linecolor = "rgba(0,0,0,0)",
     markercolor = "rgba(0,0,0,0)",
     showlegend = FALSE,
@@ -205,4 +206,14 @@ p1 <- mybarchart2(
     yaxis = list(rangemode = "tozero")
   )
 
-p1
+p1 %>%
+  add_annotations(
+    data = data_prep_total,
+    x = ~xlabel,
+    y = ~myothermetric,
+    text = ~ paste0("<b>", myothermetric, "</b>"),
+    textangle = c_textangle,
+    showarrow = FALSE,
+    font = list(color = "black", size = mytextfont_size - 1),
+    yshift = 10
+  )
