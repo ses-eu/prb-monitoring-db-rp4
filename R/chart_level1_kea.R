@@ -83,7 +83,7 @@ c_factor <- c("Actual")
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
 #### title
-if (!knitr::is_latex_output()) {
+if (knitr::is_latex_output()) {
   c_level1_title <- "Average horizontal flight efficiency\nof the actual trajectory (KEA)"
   c_title_y <- 0.95
   c_margin <- list(t = 50)
