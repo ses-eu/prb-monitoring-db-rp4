@@ -195,6 +195,7 @@ p1 <- mybarchart2(
     name = "Total delay",
     textfontcolor = 'black',
     textdecimals = 2,
+    textangle = c_textangle,
     linecolor = "rgba(0,0,0,0)",
     markercolor = "rgba(0,0,0,0)",
     showlegend = FALSE,
