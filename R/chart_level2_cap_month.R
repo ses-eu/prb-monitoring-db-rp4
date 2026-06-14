@@ -107,7 +107,6 @@ c_factor <- c("Capacity", "Staffing", "Disruptions", "Weather", "Other non-ATC")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
-c_textangle <- 0
 c_textposition <- "inside"
 c_insidetextanchor <- 'middle'
 c_textfont_color <- 'transparent'
@@ -120,6 +119,7 @@ c_barmode <- 'stack'
 if (knitr::is_latex_output()) {
   c_level1_title <- " ATFM delay\nby delay groups  - "
   c_title_y <- 0.95
+  c_textangle <- -90
   c_legend_y <- -0.2
   c_legend_x <- -0.18
   c_legend_xanchor <- 'left'
@@ -129,6 +129,7 @@ if (knitr::is_latex_output()) {
 } else {
   c_level1_title <- " ATFM delay by delay groups  - "
   c_title_y <- 0.99
+  c_textangle <- 0
   c_legend_y <- mylegend_y
   c_legend_x <- -0.1
   c_legend_xanchor <- 'left'
