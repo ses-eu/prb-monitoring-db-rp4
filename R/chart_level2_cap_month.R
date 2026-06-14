@@ -215,5 +215,5 @@ p1 %>%
     textangle = c_textangle,
     showarrow = FALSE,
     font = list(color = "black", size = mytextfont_size - 1),
-    yshift = 10
+    yshift = c_yshift
   )
