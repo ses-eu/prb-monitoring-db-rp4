@@ -43,7 +43,8 @@ data_for_chart <- rbind(data_prep_ansp, data_prep_acc) %>%
     value = case_when(
       year > year_report & type == "Actual" ~ NA,
       .default = round(value, 0)
-    )
+    ),
+    textposition = if_else((type == "Planned"), "top center", "bottom center")
   )
 
 acc_list_for_chart <- unique(data_for_chart$acc)
@@ -87,6 +88,9 @@ myc <- function(
         marker = list(size = linewidth * 3),
         color = ~type,
         colors = c_colors,
+        text = ~ format(round(value, 1), big.mark = ",", nsmall = 1),
+        textposition = ~textposition,
+        textfont = list(color = "black"),
         opacity = 1,
         visible = ifelse(i == 1, TRUE, FALSE), # Set the initial visibility
         # visible = c(rep(TRUE, 2), rep(FALSE, length(acc_list_for_chart)*2 - 2)),  # Set the initial visibility
@@ -117,7 +121,7 @@ myc <- function(
     yanchor = "top",
     x = -0.2,
     y = 1.2,
-    font = list(family = "Arial", color = "black", size = font),
+    font = list(family = "Roboto", color = "black", size = font),
     pad = 0,
     bgcolor = 'white',
     bordercolor = '#e0e0e0',
