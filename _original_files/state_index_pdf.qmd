@@ -92,13 +92,13 @@
 <!-- ### Terminal performance -->
 <!-- #### Additional taxi-out time (AXOT) (PI#3) & Arrival Sequencing and Metering Area (ASMA) time (PI#4) -->
 
-```{r chart_axot_apt, include=FALSE}
-#| file: R/chart_level2_env_axot_apt.R
+```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year), include=FALSE}
+#| file: R/chart_level2_env_axot_asma_country.R
 #| out.width: "100%"
 ```
 
-```{r chart_asma_apt, include=FALSE}
-#| file: R/chart_level2_env_asma_apt.R
+```{r chart_axot_apt, include=FALSE}
+#| file: R/chart_level2_env_axot_apt.R
 #| out.width: "100%"
 ```
 
@@ -740,14 +740,7 @@ replace_headings(path, env_er_nsa_titles_vfe)
 
 ### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
-```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year)}
-#| file: R/chart_level2_env_axot_asma_country.R
-#| out.width: "50%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
-
-`r layout_2fig("chart_axot_apt", "chart_asma_apt")`
+`r layout_2fig("chart_axot_asma_country", "chart_axot_apt")`
 
 \needspace{3\baselineskip}
 
