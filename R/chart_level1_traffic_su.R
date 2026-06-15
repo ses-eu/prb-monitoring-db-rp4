@@ -242,6 +242,7 @@ myc <- function(
         showline = FALSE,
         tickprefix = " ",
         tickformat = ",",
+        rangemode = "tozero",
         # showticklabels = TRUE,
         # tickcolor = 'rgb(127,127,127)',
         # ticks = 'outside',
