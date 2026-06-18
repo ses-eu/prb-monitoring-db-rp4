@@ -26,7 +26,7 @@ if (country == rp_full) {
 # prepare data ----
 data_raw_kep_p <- data_raw_kep %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
-  mutate(mymetric = round(mymetric * 100, 2)) %>%
+  mutate(mymetric = round(mymetric * 100, 2), type = "Flight plan") %>%
   filter(
     state == country,
     lubridate::year(xlabel) == year_report
@@ -35,7 +35,7 @@ data_raw_kep_p <- data_raw_kep %>%
 
 data_raw_scr_p <- data_raw_scr %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
-  mutate(mymetric = round(mymetric * 100, 2)) %>%
+  mutate(mymetric = round(mymetric * 100, 2), type = "Shortest constrained") %>%
   filter(
     state == country,
     lubridate::year(xlabel) == year_report
@@ -72,7 +72,7 @@ c_decimals <- 2
 c_colors = c(PRBActualColor, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- c("KEP", "SCR")
+c_factor <- c("Flight plan", "Shortest constrained")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -81,14 +81,14 @@ c_textposition <- "inside"
 c_insidetextanchor <- 'middle'
 
 #### title
-c_title_text <- paste0("KEP & SCR (monthly, compared to KEA)")
+c_title_text <- paste0("Horizontal flight efficiency")
 
 #### xaxis
 c_xaxis_dtick <- 'M1'
 c_xaxis_tickformat <- "%b"
 
 #### yaxis
-c_yaxis_title <- "KEA, KEP and SCR (%)"
+c_yaxis_title <- "Horizontal flight efficiency (%)"
 c_yaxis_tickformat <- paste0(".", c_decimals, "f")
 
 #### legend
@@ -136,7 +136,7 @@ myplot %>%
   add_line_trace2(
     .,
     data_prep_kea,
-    name = "KEA",
+    name = "Actual trajectory",
     textfontcolor = "rgba(0,0,0,0)",
     linecolor = "rgba(0,0,0,0)",
   )

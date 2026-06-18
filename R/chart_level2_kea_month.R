@@ -17,7 +17,7 @@ if (country == rp_full) {
   # State case ----
   ## import data  ----
   data_raw_target <- kea_target
-  data_raw_actual <- kea_actual_mm
+  data_raw_actual <- kea_actual_12m
 }
 
 ## prepare data ----
@@ -73,8 +73,8 @@ c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 #### title
 c_title_text <- paste0(if_else(
   country == "Network Manager",
-  "KEP (monthly)",
-  "KEA (monthly)"
+  "KEP (12-month rolling)",
+  "KEA (12-month rolling)"
 ))
 
 #### yaxis
@@ -133,10 +133,11 @@ myplot <- mybarchart2(
   margin = c_margin
 )
 
-myplot %>%
-  add_line_trace2(
-    .,
-    data_prep_target,
-    textfontcolor = "rgba(0,0,0,0)",
-    markercolor = "rgba(0,0,0,0)",
-  )
+myplot
+# %>%
+#   add_line_trace2(
+#     .,
+#     data_prep_target,
+#     textfontcolor = "rgba(0,0,0,0)",
+#     markercolor = "rgba(0,0,0,0)",
+#   )

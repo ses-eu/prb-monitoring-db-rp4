@@ -279,9 +279,22 @@ kea_actual <- readxl::read_xlsx(
   as_tibble() %>%
   clean_names()
 
+kea_actual_12m <- readxl::read_xlsx(
+  here(data_folder, env_data_file),
+  sheet = "kea_12m",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() %>%
+  mutate(
+    month = as.Date(
+      paste(year, month, "01", sep = "-")
+    )
+  )
+
 kea_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
-  sheet = "kea_mm",
+  sheet = "hfe_actual_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
@@ -299,7 +312,7 @@ kep_actual <- readxl::read_xlsx(
 
 kep_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
-  sheet = "kep_mm",
+  sheet = "hfe_plan_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
@@ -318,7 +331,7 @@ scr_actual <- readxl::read_xlsx(
 
 scr_actual_mm <- readxl::read_xlsx(
   here(data_folder, env_data_file),
-  sheet = "scr_mm",
+  sheet = "hfe_short_mm",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
