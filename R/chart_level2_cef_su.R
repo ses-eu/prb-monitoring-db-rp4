@@ -38,7 +38,7 @@ if (country == rp_full) {
 data_prep <- data_raw |>
   filter(entity_code == mycz) %>%
   mutate(
-    mymetric = round(total_su / 1000, 0),
+    mymetric = total_su / 1000,
     status = str_replace(status, "A", "Actual SUs"),
     status = str_replace(status, "D", "Planned SUs")
   ) |>
@@ -88,7 +88,11 @@ myc <- function(
       data = data_prep_planned,
       x = ~year,
       y = ~mymetric,
-      text = ~ format(round(mymetric * .02, 0), nsmall = 0, big.mark = ','),
+      text = ~ format(
+        janitor::round_half_up(mymetric * .02, 0),
+        nsmall = 0,
+        big.mark = ','
+      ),
       yaxis = "y1",
       type = 'scatter',
       mode = 'lines',
@@ -103,7 +107,11 @@ myc <- function(
       data = data_prep_planned,
       x = ~year,
       y = ~mymetric,
-      text = ~ format(round(mymetric * .1, 0), nsmall = 0, big.mark = ','),
+      text = ~ format(
+        janitor::round_half_up(mymetric * .1, 0),
+        nsmall = 0,
+        big.mark = ','
+      ),
       yaxis = "y1",
       type = 'scatter',
       mode = 'lines',
@@ -136,7 +144,11 @@ myc <- function(
       data = data_prep_planned,
       x = ~year,
       y = ~mymetric,
-      text = ~ format(round(mymetric * .02, 0), nsmall = 0, big.mark = ','),
+      text = ~ format(
+        janitor::round_half_up(mymetric * .02, 0),
+        nsmall = 0,
+        big.mark = ','
+      ),
       yaxis = "y1",
       type = 'scatter',
       mode = 'lines',
@@ -150,7 +162,11 @@ myc <- function(
       data = data_prep_planned,
       x = ~year,
       y = ~mymetric,
-      text = ~ format(round(mymetric * .1, 0), nsmall = 0, big.mark = ','),
+      text = ~ format(
+        janitor::round_half_up(mymetric * .1, 0),
+        nsmall = 0,
+        big.mark = ','
+      ),
       yaxis = "y1",
       type = 'scatter',
       mode = 'lines',

@@ -245,7 +245,7 @@ ann_ex_ante <- data_prep %>%
   transmute(
     x = xlabel,
     y = share,
-    text = paste0(format(round(share, 0), nsmall = 0), "%"),
+    text = paste0(format(janitor::round_half_up(share, 0), nsmall = 0), "%"),
     xshift = -annotation_xshift
   )
 
@@ -254,7 +254,7 @@ ann_ex_post <- data_prep %>%
   transmute(
     x = xlabel,
     y = share,
-    text = paste0(format(round(share, 0), nsmall = 0), "%"),
+    text = paste0(format(janitor::round_half_up(share, 0), nsmall = 0), "%"),
     xshift = annotation_xshift
   )
 

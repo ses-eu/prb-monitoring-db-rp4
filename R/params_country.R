@@ -157,22 +157,31 @@ if (year_folder == "rp4") {
     pull()
 
   tsu_share <- paste0(
-    format(round(tsu_rp_country / tsu_rp_ses * 100, 1), nsmall = 1),
+    format(
+      janitor::round_half_up(tsu_rp_country / tsu_rp_ses * 100, 1),
+      nsmall = 1
+    ),
     '%'
   )
 
   ert_cost_share <- paste0(
-    format(round(ert_costs_rp_country / ert_costs_rp_ses * 100, 1), nsmall = 1),
+    format(
+      janitor::round_half_up(ert_costs_rp_country / ert_costs_rp_ses * 100, 1),
+      nsmall = 1
+    ),
     '%'
   )
   trm_cost_share <- paste0(
-    format(round(trm_costs_rp_country / trm_costs_rp_ses * 100, 1), nsmall = 1),
+    format(
+      janitor::round_half_up(trm_costs_rp_country / trm_costs_rp_ses * 100, 1),
+      nsmall = 1
+    ),
     '%'
   )
 
   ert_trm_share <- paste0(
     format(
-      round(
+      janitor::round_half_up(
         ert_costs_rp_country /
           (ert_costs_rp_country + trm_costs_rp_country) *
           100,
@@ -182,7 +191,7 @@ if (year_folder == "rp4") {
     ),
     "% / ",
     format(
-      round(
+      janitor::round_half_up(
         trm_costs_rp_country /
           (ert_costs_rp_country + trm_costs_rp_country) *
           100,
@@ -196,11 +205,17 @@ if (year_folder == "rp4") {
   # =IFERROR(TEXT([@[ERT_costs]]/([@[TRM_Costs]]+[@[ERT_costs]]),"0%") & " / " & TEXT([@[TRM_Costs]]/([@[TRM_Costs]]+[@[ERT_costs]]),"0%"),"-")
 } else {
   tsu_share <- paste0(
-    format(round(as.numeric(context_data$tsu_share) * 100, 1), nsmall = 1),
+    format(
+      janitor::round_half_up(as.numeric(context_data$tsu_share) * 100, 1),
+      nsmall = 1
+    ),
     '%'
   )
   ert_cost_share <- paste0(
-    format(round(as.numeric(context_data$ert_cost_share) * 100, 1), nsmall = 1),
+    format(
+      janitor::round_half_up(as.numeric(context_data$ert_cost_share) * 100, 1),
+      nsmall = 1
+    ),
     '%'
   )
   ert_trm_share <- context_data$ert_trm_share

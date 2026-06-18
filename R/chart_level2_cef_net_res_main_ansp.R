@@ -49,8 +49,8 @@ data_prep <- data_pre_prep |>
     ),
     mylabel = if_else(
       abs(mymetric) < 0.05 & abs(mymetric) >= 0.005,
-      format(round(mymetric, 2), big.mark = ",", nsmall = 2),
-      format(round(mymetric, 1), big.mark = ",", nsmall = 1)
+      format(janitor::round_half_up(mymetric, 2), big.mark = ",", nsmall = 2),
+      format(janitor::round_half_up(mymetric, 1), big.mark = ",", nsmall = 1)
     )
   )
 

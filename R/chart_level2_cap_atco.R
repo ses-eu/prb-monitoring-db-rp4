@@ -42,7 +42,7 @@ data_for_chart <- rbind(data_prep_ansp, data_prep_acc) %>%
     min_y_axis = min(value, na.rm = T) / 1.5,
     value = case_when(
       year > year_report & type == "Actual" ~ NA,
-      .default = round(value, 0)
+      .default = janitor::round_half_up(value, 0)
     ),
     textposition = if_else((type == "Planned"), "top center", "bottom center")
   )
@@ -88,7 +88,11 @@ myc <- function(
         marker = list(size = linewidth * 3),
         color = ~type,
         colors = c_colors,
-        text = ~ format(round(value, 1), big.mark = ",", nsmall = 1),
+        text = ~ format(
+          janitor::round_half_up(value, 1),
+          big.mark = ",",
+          nsmall = 1
+        ),
         textposition = ~textposition,
         textfont = list(color = "black"),
         opacity = 1,

@@ -72,10 +72,14 @@ data_prep_pdf <- data_prep %>%
         type == 'AUCU vs. DUC',
         paste0(
           if_else(.x >= 0, "+", ""),
-          format(round(.x * 100, 1), nsmall = 1, big.mark = ","),
+          format(
+            janitor::round_half_up(.x * 100, 1),
+            nsmall = 1,
+            big.mark = ","
+          ),
           "%"
         ),
-        format(round(.x, 2), nsmall = 2, big.mark = ",")
+        format(janitor::round_half_up(.x, 2), nsmall = 2, big.mark = ",")
       )
     )
   )

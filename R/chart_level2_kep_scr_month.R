@@ -26,7 +26,10 @@ if (country == rp_full) {
 # prepare data ----
 data_raw_kep_p <- data_raw_kep %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
-  mutate(mymetric = round(mymetric * 100, 2), type = "Flight plan") %>%
+  mutate(
+    mymetric = janitor::round_half_up(mymetric * 100, 2),
+    type = "Flight plan"
+  ) %>%
   filter(
     state == country,
     lubridate::year(xlabel) == year_report
@@ -35,7 +38,10 @@ data_raw_kep_p <- data_raw_kep %>%
 
 data_raw_scr_p <- data_raw_scr %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
-  mutate(mymetric = round(mymetric * 100, 2), type = "Shortest constrained") %>%
+  mutate(
+    mymetric = janitor::round_half_up(mymetric * 100, 2),
+    type = "Shortest constrained"
+  ) %>%
   filter(
     state == country,
     lubridate::year(xlabel) == year_report
@@ -55,7 +61,7 @@ data_prep_kea <- data_raw_kea %>%
     lubridate::year(month) == year_report
   ) %>%
   mutate(
-    myothermetric = round(value * 100, 2),
+    myothermetric = janitor::round_half_up(value * 100, 2),
     type = indicator_type,
     xlabel = lubridate::floor_date(month, unit = 'month')
   ) %>%

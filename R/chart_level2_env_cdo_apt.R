@@ -44,7 +44,7 @@ data_prep <- data_filtered %>%
       type == "avg_seconds_per_descent" ~ "CDO",
       type == "avg_seconds_per_climb" ~ "CCO"
     ),
-    mymetric = round(mymetric, 1)
+    mymetric = janitor::round_half_up(mymetric, 1)
   ) %>%
   select(
     xlabel,

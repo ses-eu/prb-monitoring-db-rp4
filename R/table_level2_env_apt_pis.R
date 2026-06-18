@@ -20,7 +20,7 @@ data_prep_axot <- data_raw_axot %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>%
   mutate(
     type = "Additional taxi-out time (PI#4)",
-    mymetric = format(round(value, 2), decimals = 2)
+    mymetric = format(janitor::round_half_up(value, 2), decimals = 2)
   ) %>%
   select(apt_name, year, type, mymetric)
 # %>%
@@ -38,7 +38,7 @@ data_prep_asma <- data_raw_asma %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>%
   mutate(
     type = "Additional ASMA time (PI#6)",
-    mymetric = format(round(value, 2), decimals = 2)
+    mymetric = format(janitor::round_half_up(value, 2), decimals = 2)
   ) %>%
   select(apt_name, year, type, mymetric)
 
@@ -54,7 +54,7 @@ data_prep_axit <- data_raw_axit %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>%
   mutate(
     type = "Additional taxi-in time (PI#5)",
-    mymetric = format(round(value, 2), decimals = 2)
+    mymetric = format(janitor::round_half_up(value, 2), decimals = 2)
   ) %>%
   select(apt_name, year, type, mymetric)
 

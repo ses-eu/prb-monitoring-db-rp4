@@ -52,7 +52,7 @@ data_prep <- data_filtered %>%
     # , names_glue = "{year}_{.value}" #suffix to prefix
   ) %>%
   mutate(
-    across(c(-1), ~ format(round(.x, 1), nsmall = 1))
+    across(c(-1), ~ format(janitor::round_half_up(.x, 1), nsmall = 1))
   )
 
 data_prep_pdf <- data_prep

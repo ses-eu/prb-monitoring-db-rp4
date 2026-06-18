@@ -1,5 +1,6 @@
-if (!exists("country") | is.na(country)) {country <- "Poland"
-source("R/params_country.R")
+if (!exists("country") | is.na(country)) {
+  country <- "Poland"
+  source("R/params_country.R")
 }
 
 # import data  ----
@@ -7,19 +8,26 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw  <- saf_ri_actual_apt
+data_raw <- saf_ri_actual_apt
 
 # process data ----
-data_prep <- data_raw %>% 
-  filter(state == .env$country & year == year_report) %>% 
-  arrange(desc(ifr_movements)) %>% 
+data_prep <- data_raw %>%
+  filter(state == .env$country & year == year_report) %>%
+  arrange(desc(ifr_movements)) %>%
   mutate(
     rank = row_number(),
-    ifr_movements = format(round(ifr_movements,0), big.mark   = ",", nsmall = 0),
-    ri = format(round(ri,0), big.mark   = ",", nsmall = 0),
-    rate_per_100_000 = format(round(rate_per_100_000,2), big.mark   = ",", nsmall = 2)
-    
-  ) %>% 
+    ifr_movements = format(
+      janitor::round_half_up(ifr_movements, 0),
+      big.mark = ",",
+      nsmall = 0
+    ),
+    ri = format(janitor::round_half_up(ri, 0), big.mark = ",", nsmall = 0),
+    rate_per_100_000 = format(
+      janitor::round_half_up(rate_per_100_000, 2),
+      big.mark = ",",
+      nsmall = 2
+    )
+  ) %>%
   select(
     "#" = rank,
     "Airport name" = name_apt,
@@ -29,16 +37,21 @@ data_prep <- data_raw %>%
   )
 
 # plot table ----
-table1 <- mygtable(data_prep, myfont) %>% 
-  tab_options(column_labels.background.color = "white",
-              # column_labels.font.weight = 'bold',
-              container.padding.y = 0) %>% 
+table1 <- mygtable(data_prep, myfont) %>%
+  tab_options(
+    column_labels.background.color = "white",
+    # column_labels.font.weight = 'bold',
+    container.padding.y = 0
+  ) %>%
   cols_align(columns = 2, align = "left") %>%
   tab_header(
-    title = md(paste0("**Rate of RIs per 100,000 airport movements - ", country, "**"))
+    title = md(paste0(
+      "**Rate of RIs per 100,000 airport movements - ",
+      country,
+      "**"
+    ))
   )
 
 if (!knitr::is_latex_output()) {
   table1
 }
-

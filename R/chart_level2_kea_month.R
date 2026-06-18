@@ -28,7 +28,7 @@ target_value <- data_raw_target %>%
   ) %>%
   mutate(
     # type = 'Target',
-    target = round(kea_target * 100, 2)
+    target = janitor::round_half_up(kea_target * 100, 2)
   ) %>%
   select(
     target
@@ -41,7 +41,7 @@ data_prep_actual <- data_raw_actual %>%
     lubridate::year(month) == year_report
   ) %>%
   mutate(
-    mymetric = round(value * 100, 2),
+    mymetric = janitor::round_half_up(value * 100, 2),
     xlabel = lubridate::floor_date(month, unit = 'month'),
     type = "Actual"
   ) %>%

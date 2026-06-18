@@ -13,7 +13,7 @@ data_prep <- data_raw %>%
     year == .env$year_report
   ) %>%
   mutate(
-    mymetric = round(vfe_ert * 100, 1),
+    mymetric = janitor::round_half_up(vfe_ert * 100, 1),
     type = "En route VFE"
   ) %>%
   select(

@@ -864,7 +864,11 @@ mylinechart2 <- function(
       colors = colors,
       color = ~ factor(type, levels = local_factor),
       text = ~ paste0(
-        format(round(mymetric, decimals), big.mark = ",", nsmall = decimals),
+        format(
+          janitor::round_half_up(mymetric, decimals),
+          big.mark = ",",
+          nsmall = decimals
+        ),
         suffix
       ),
       textangle = textangle,
@@ -943,7 +947,11 @@ mybarchart2 <- function(
   shape = c(""),
 
   text = ~ paste0(
-    format(round(mymetric, decimals), big.mark = ",", nsmall = decimals),
+    format(
+      janitor::round_half_up(mymetric, decimals),
+      big.mark = ",",
+      nsmall = decimals
+    ),
     suffix
   ),
   meta = ~type,
@@ -1144,7 +1152,7 @@ add_line_trace2 <- function(
       text = ~ paste0(
         if_else(textweight == TRUE, "<b>", ""),
         format(
-          round(as.numeric(myothermetric), textdecimals),
+          janitor::round_half_up(as.numeric(myothermetric), textdecimals),
           big.mark = ",",
           nsmall = textdecimals
         ),
@@ -1232,7 +1240,7 @@ myhbarc2 <- function(
     plot_ly(
       width = width,
       height = height,
-      x = ~ round(mymetric, decimals),
+      x = ~ janitor::round_half_up(mymetric, decimals),
       y = ~ factor(ylabel, levels = local_factor),
       yaxis = "y1",
       marker = list(
@@ -1649,8 +1657,8 @@ quarto_paragraph_breaks <- function(x) {
 format_parens <- function(x) {
   ifelse(
     x < 0,
-    paste0("(", format(abs(round(x, 2)), nsmall = 2), ")"),
-    format(round(x, 2), nsmall = 2)
+    paste0("(", format(abs(janitor::round_half_up(x, 2)), nsmall = 2), ")"),
+    format(janitor::round_half_up(x, 2), nsmall = 2)
   )
 }
 
@@ -1817,7 +1825,7 @@ make_quarto_latex_table <- function(
     if (abs(sum(col_widths) - 100) > 1e-6) {
       stop("col_widths must sum to 100 (e.g. c(50,25,25)).")
     }
-    col_widths <- as.integer(round(col_widths))
+    col_widths <- as.integer(janitor::round_half_up(col_widths))
     if (sum(col_widths) != 100) {
       col_widths[length(col_widths)] <- col_widths[length(col_widths)] +
         (100 - sum(col_widths))

@@ -59,8 +59,8 @@ c_yaxis_ticksuffix <- ""
 c_yaxis_tickformat <- paste0(".", c_decimals, "f")
 c_yaxis_rangemode <- NA
 c_yaxis_range <- c(
-  round(min(data_prep$mymetric, na.rm = TRUE) / 5) * 5,
-  round(max(data_prep$mymetric, na.rm = TRUE) / 5) * 5
+  janitor::round_half_up(min(data_prep$mymetric, na.rm = TRUE) / 5) * 5,
+  janitor::round_half_up(max(data_prep$mymetric, na.rm = TRUE) / 5) * 5
 )
 
 #### margin

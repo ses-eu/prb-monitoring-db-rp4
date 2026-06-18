@@ -114,7 +114,7 @@ data_prep <- data_prep_eur %>%
   mutate(
     mymetric = case_when(
       year > year_report ~ NA,
-      .default = round(mymetric, 2),
+      .default = janitor::round_half_up(mymetric, 2),
     ),
     myothermetric = case_when(
       year > year_report ~ NA,
@@ -132,12 +132,15 @@ data_prep_pdf <- data_prep %>%
     across(
       2,
       ~ format(
-        round(.x, local_decimals),
+        janitor::round_half_up(.x, local_decimals),
         nsmall = local_decimals,
         big.mark = ","
       )
     ),
-    across(3, ~ format(round(.x, 2), nsmall = 2, big.mark = ","))
+    across(
+      3,
+      ~ format(janitor::round_half_up(.x, 2), nsmall = 2, big.mark = ",")
+    )
   )
 
 

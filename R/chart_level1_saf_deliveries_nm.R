@@ -6,14 +6,15 @@ if (!exists("data_loaded")) {
 data_raw <- saf_overd_nm
 
 # prepare data ----
-data_prep <- data_raw %>% 
+data_prep <- data_raw %>%
   mutate(
     xlabel = year,
-    mymetric =  case_when(
-      year > year_report  ~ NA,
-      .default = round(percentage_overdeliveries * 100, 1)),
+    mymetric = case_when(
+      year > year_report ~ NA,
+      .default = janitor::round_half_up(percentage_overdeliveries * 100, 1)
+    ),
     type = "Actual"
-      )
+  )
 
 # chart parameters ----
 c_suffix <- "%"
@@ -41,24 +42,24 @@ c_yaxis_tickformat <- ".1f"
 
 
 # plot chart ----
-myplot <- mybarchart2(data_prep, 
-                      height = myheight,
-                      colors = c_colors,
-                      local_factor = c_factor,
-                      suffix = c_suffix,
-                      decimals = c_decimals,
-                      
-                      hovertemplate = c_hovertemplate,
-                      
-                      textposition = c_textposition,
-                      insidetextanchor = c_insidetextanchor,
+myplot <- mybarchart2(
+  data_prep,
+  height = myheight,
+  colors = c_colors,
+  local_factor = c_factor,
+  suffix = c_suffix,
+  decimals = c_decimals,
 
-                      title_text = c_title_text,
-                      
-                      yaxis_title = c_yaxis_title,
-                      yaxis_ticksuffix = c_suffix,
-                      yaxis_tickformat = c_yaxis_tickformat
+  hovertemplate = c_hovertemplate,
+
+  textposition = c_textposition,
+  insidetextanchor = c_insidetextanchor,
+
+  title_text = c_title_text,
+
+  yaxis_title = c_yaxis_title,
+  yaxis_ticksuffix = c_suffix,
+  yaxis_tickformat = c_yaxis_tickformat
 )
 
 myplot %>% add_empty_trace(., data_prep)
-

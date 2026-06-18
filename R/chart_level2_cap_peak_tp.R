@@ -16,12 +16,12 @@ data_prep <- data_raw %>%
     change_yoy = weighted_td - lag(weighted_td, 1),
     myothermetric = paste0(
       if_else(change_yoy >= 0, "+", ""),
-      format(round(change_yoy, 1), nsmall = 1)
+      format(janitor::round_half_up(change_yoy, 1), nsmall = 1)
     ),
     mytooltip = paste0(
       year,
       ": ",
-      format(round(weighted_year, 1), nsmall = 1),
+      format(janitor::round_half_up(weighted_year, 1), nsmall = 1),
       " (",
       myothermetric,
       " vs ",

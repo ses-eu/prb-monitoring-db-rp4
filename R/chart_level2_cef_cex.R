@@ -69,7 +69,7 @@ data_prep <- data_prep_eur %>%
   mutate(
     mymetric = case_when(
       xlabel > year_report ~ NA,
-      .default = round(mymetric / 1000, 2),
+      .default = janitor::round_half_up(mymetric / 1000, 2),
     ),
     type = "A"
   )

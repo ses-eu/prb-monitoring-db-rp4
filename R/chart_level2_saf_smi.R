@@ -3,17 +3,15 @@ if (!exists("data_loaded")) {
 }
 
 # import data  ----
-if (country == rp_full){
+if (country == rp_full) {
   ## SES case ----
-  data_raw  <-  saf_smi_actual_ses %>% 
+  data_raw <- saf_smi_actual_ses %>%
     mutate(
-      rate_per_100_000=NA
-    ) 
-    
-  
-} else  {
+      rate_per_100_000 = NA
+    )
+} else {
   ## State case ----
-  data_raw  <-  saf_smi_actual
+  data_raw <- saf_smi_actual
 }
 
 # prepare data ----
@@ -21,22 +19,25 @@ if (country == rp_full){
 data_prep <- data_raw %>%
   filter(
     state == country,
-    year <= year_report) |> 
-  select(year, rate_per_100_000, eu_wide_average_per_100_000) |> 
-  pivot_longer(-c(year), names_to = "type", values_to = "mymetric") |> 
-  mutate(xlabel = year,
-         type = if_else(type == "rate_per_100_000",
-                        "Rate of SMI",
-                        "EU Wide Average"),
-         textposition = "top center",
-         linedash = if_else(type == "Rate of SMI",
-                            "solid",
-                            if_else(country == rp_full,
-                                    "solid",
-                                    "dot")
-         )
-  ) |> 
-  select(xlabel, type, mymetric, textposition, linedash) |> 
+    year <= year_report
+  ) |>
+  select(year, rate_per_100_000, eu_wide_average_per_100_000) |>
+  pivot_longer(-c(year), names_to = "type", values_to = "mymetric") |>
+  mutate(
+    xlabel = year,
+    type = if_else(
+      type == "rate_per_100_000",
+      "Rate of SMI",
+      "EU Wide Average"
+    ),
+    textposition = "top center",
+    linedash = if_else(
+      type == "Rate of SMI",
+      "solid",
+      if_else(country == rp_full, "solid", "dot")
+    )
+  ) |>
+  select(xlabel, type, mymetric, textposition, linedash) |>
   #otherwise the lindash column does not work
   arrange(desc(linedash))
 
@@ -55,7 +56,7 @@ c_factor <- c("Rate of RI", "EU Wide Average")
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
 #### title
-c_title_text <-  paste0("SMIs per 100,000 flight hours")
+c_title_text <- paste0("SMIs per 100,000 flight hours")
 
 #### yaxis
 c_yaxis_title <- "SMIs per 100,000 flight hours"
@@ -64,34 +65,42 @@ c_yaxis_tickformat <- ".1f"
 # plot chart ----
 ##I had to do it this way because when there are NA values the dash doesn't work
 data_prep_s1 <- data_prep |> filter(type == "EU Wide Average")
-data_prep_s2 <- data_prep |> filter(type == "Rate of SMI") |> 
-  mutate(myothermetric = round(mymetric,2))
+data_prep_s2 <- data_prep |>
+  filter(type == "Rate of SMI") |>
+  mutate(myothermetric = janitor::round_half_up(mymetric, 2))
 
-p1 <- mylinechart2(data_prep_s1, 
-                   height = myheight,
-                   colors = c_colors,
-                   local_factor = c_factor,
-                   suffix = c_suffix,
-                   decimals = c_decimals,
-                   
-                   hovertemplate = c_hovertemplate,
-                   
-                   title_text = c_title_text,
-                   
-                   yaxis_title = c_yaxis_title,
-                   yaxis_ticksuffix = c_suffix,
-                   yaxis_tickformat = c_yaxis_tickformat
-) %>% 
-  layout(yaxis = list(rangemode = "tozero"),
-         xaxis = list(range = c(rp_min_year-0.5, rp_max_year+0.5)))
+p1 <- mylinechart2(
+  data_prep_s1,
+  height = myheight,
+  colors = c_colors,
+  local_factor = c_factor,
+  suffix = c_suffix,
+  decimals = c_decimals,
 
-p1 %>%  add_line_trace2(., data_prep_s2,
-                        name = "Rate of SMI",
-                        textfontcolor = "black",
-                        markercolor = local_color,
-                        linecolor = local_color
-                        
-) |> 
-  layout(legend=list(
-    traceorder= "reversed"))
+  hovertemplate = c_hovertemplate,
 
+  title_text = c_title_text,
+
+  yaxis_title = c_yaxis_title,
+  yaxis_ticksuffix = c_suffix,
+  yaxis_tickformat = c_yaxis_tickformat
+) %>%
+  layout(
+    yaxis = list(rangemode = "tozero"),
+    xaxis = list(range = c(rp_min_year - 0.5, rp_max_year + 0.5))
+  )
+
+p1 %>%
+  add_line_trace2(
+    .,
+    data_prep_s2,
+    name = "Rate of SMI",
+    textfontcolor = "black",
+    markercolor = local_color,
+    linecolor = local_color
+  ) |>
+  layout(
+    legend = list(
+      traceorder = "reversed"
+    )
+  )

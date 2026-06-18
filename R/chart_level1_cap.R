@@ -34,7 +34,7 @@ data_prep_target <- data_raw_target %>%
     state == .env$country
   ) %>%
   mutate(
-    myothermetric = round(delay_target, 2),
+    myothermetric = janitor::round_half_up(delay_target, 2),
     type = 'Target',
     xlabel = year
   ) %>%
@@ -90,7 +90,7 @@ data_prep_total <- data_prep %>%
   mutate(
     myothermetric = case_when(
       is.na(myothermetric) == TRUE ~ "",
-      .default = format(round(myothermetric, 2), nsmall = 2)
+      .default = format(janitor::round_half_up(myothermetric, 2), nsmall = 2)
     )
   ) %>%
   mutate(type = "Total")

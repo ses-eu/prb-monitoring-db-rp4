@@ -104,7 +104,7 @@ data_prep <- data_prep_pivot |>
       '-',
       paste0(
         if_else(mymetric > 0, '+', ''),
-        round((A / D - 1) * 100, 1),
+        janitor::round_half_up((A / D - 1) * 100, 1),
         '%'
       )
     ),

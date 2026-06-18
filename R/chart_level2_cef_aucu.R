@@ -62,13 +62,21 @@ mybarc_aucu <- function(
             NA,
             paste0(
               if_else(metric >= 0, '+', ''),
-              trimws(format(round(metric, 2), big.mark = ",", nsmall = 2))
+              trimws(format(
+                janitor::round_half_up(metric, 2),
+                big.mark = ",",
+                nsmall = 2
+              ))
             )
           ),
           .default = if_else(
             is.na(metric) == TRUE,
             NA,
-            format(round(metric, 2), big.mark = ",", nsmall = 2)
+            format(
+              janitor::round_half_up(metric, 2),
+              big.mark = ",",
+              nsmall = 2
+            )
           )
         ),
         new_duc = case_when(
@@ -110,7 +118,7 @@ mybarc_aucu <- function(
       plot_ly(
         width = width,
         height = height,
-        y = ~ round(metric, 2),
+        y = ~ janitor::round_half_up(metric, 2),
         x = ~ factor(
           type,
           levels = c('new_duc', 'total_adjustments_aucu', 'aucu')

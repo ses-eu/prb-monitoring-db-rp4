@@ -62,7 +62,8 @@ if (negative_check) {
 }
 
 #### legend
-c_legend_y <- -0.1 - (round(c_ticklen / 100, 1) - 0.01) * negative_check
+c_legend_y <- -0.1 -
+  (janitor::round_half_up(c_ticklen / 100, 1) - 0.01) * negative_check
 
 # plot chart  ----
 p1 <- mybarchart2(

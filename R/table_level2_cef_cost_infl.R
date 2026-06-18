@@ -36,7 +36,7 @@ data_prep1 <- data_raw %>%
   ) %>%
   mutate(
     mymetric = paste0(
-      format(round(x5_1_inflation_rate * 100, 1), nsmall = 1),
+      format(janitor::round_half_up(x5_1_inflation_rate * 100, 1), nsmall = 1),
       '%'
     ),
     mymetric = case_when(
@@ -85,7 +85,7 @@ data_prep2 <- data_raw %>%
       .default = NA
     )
   ) %>%
-  mutate_at(c(2:4), ~ as.character(round(., 1))) %>%
+  mutate_at(c(2:4), ~ as.character(janitor::round_half_up(., 1))) %>%
   mutate_at(c(4), ~ if_else(as.numeric(.) >= 0, paste0('+', .), .)) %>%
   pivot_longer(-year, names_to = "ia", values_to = 'mymetric') %>%
   pivot_wider(values_from = 'mymetric', names_from = 'year')

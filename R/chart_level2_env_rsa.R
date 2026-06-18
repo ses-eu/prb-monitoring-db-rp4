@@ -18,7 +18,7 @@ data_prep <- data_raw %>%
     "RAU" = rau_rsa
   ) |>
   pivot_longer(-xlabel, names_to = 'type', values_to = 'mymetric') |>
-  mutate(mymetric = round(mymetric * 100, 0))
+  mutate(mymetric = janitor::round_half_up(mymetric * 100, 0))
 
 ## chart parameters ----
 c_suffix <- "%"

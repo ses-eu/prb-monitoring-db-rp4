@@ -48,7 +48,7 @@ data_prep <- data_prep_reg %>%
       type == 'aucu_excluding_or' ~ 'AUCU (before other revenues)'
     ),
     xlabel = year,
-    myothermetric = round(rr_as_perc_aucu, 2)
+    myothermetric = janitor::round_half_up(rr_as_perc_aucu, 2)
   ) %>%
   mutate(across(
     c(mymetric, myothermetric),

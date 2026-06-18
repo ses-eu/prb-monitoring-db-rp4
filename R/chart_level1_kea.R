@@ -42,7 +42,7 @@ data_prep_target <- data_raw_target %>%
   ) %>%
   mutate(
     xlabel = year,
-    myothermetric = round(kea_target * 100, 2),
+    myothermetric = janitor::round_half_up(kea_target * 100, 2),
     type = "Target"
   ) %>%
   select(
@@ -63,7 +63,7 @@ data_prep_actual <- data_raw_actual %>%
   ) %>%
   mutate(
     xlabel = year,
-    mymetric = round(actual * 100, 2),
+    mymetric = janitor::round_half_up(actual * 100, 2),
     type = "Actual"
   ) %>%
   select(

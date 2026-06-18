@@ -11,7 +11,7 @@ data_prep <- data_raw %>%
   filter(acc_full_name %in% acc_list$acc_full_name) %>%
   filter(year >= rp_min_year, year <= year_report) %>%
   mutate(
-    mymetric = round(perc_delay_tp_above * 100, 1)
+    mymetric = janitor::round_half_up(perc_delay_tp_above * 100, 1)
   ) %>%
   select(
     type = year,
