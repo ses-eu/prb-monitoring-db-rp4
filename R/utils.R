@@ -2931,7 +2931,7 @@ replace_headings <- function(path, mytitles) {
     heading_levels > 0L & vapply(heading_texts, is_note_heading, logical(1))
   )
   if (length(note_idx) == 1L) {
-    lines[note_idx] <- "**Note**"
+    lines[note_idx] <- "**Note 1**"
   } else if (length(note_idx) > 1L) {
     note_numbers <- vapply(
       heading_texts[note_idx],

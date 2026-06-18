@@ -144,7 +144,8 @@ cat(make_quarto_latex_table(
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_1.qmd", as.character(year_report),country, country, cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
+
 
 replace_headings(path, cef_titles_s1)
 
@@ -222,7 +223,7 @@ cat(make_quarto_latex_table(
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_2.qmd", as.character(year_report),country, country, cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
 
 replace_headings(path, cef_titles_s2)
 
@@ -242,7 +243,7 @@ replace_headings(path, cef_titles_s2)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/%s_cef_%s%d_3.qmd", as.character(year_report),country, country, cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
 
 replace_headings(path, cef_titles_s3)
 
