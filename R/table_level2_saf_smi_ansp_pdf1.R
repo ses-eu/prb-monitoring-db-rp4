@@ -9,7 +9,7 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw <- saf_smi_actual_apt
+data_raw <- saf_smi_actual_ansp
 
 # process data ----
 if (country != rp_full) {
@@ -63,7 +63,7 @@ data_prep <- data_calc %>%
     myentity,
     year,
     "Flight hours" = flight_hours,
-    "Number of SMIs" = smi,
+    "Number of SMIs with ANS contribution" = smi,
     NULL
   ) %>%
   pivot_wider(names_from = "year", values_from = c(3:4)) %>%

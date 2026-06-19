@@ -33,7 +33,9 @@ data_prep <- data_raw %>%
     "Airport name" = name_apt,
     "APT movements" = ifr_movements,
     "Number of RI" = ri,
-    "Rate RI  per 100,000" = rate_per_100_000
+    "Rate RI  per 100,000" = rate_per_100_000,
+    "Number of RI with ANS contribution" = ri_with_contribution,
+    "Rate RI with ANS contribution" = rate_with_contribution
   )
 
 # plot table ----
@@ -50,6 +52,9 @@ table1 <- mygtable(data_prep, myfont) %>%
       country,
       "**"
     ))
+  ) %>%
+  cols_width(
+    1 ~ pct(5)
   )
 
 if (!knitr::is_latex_output()) {

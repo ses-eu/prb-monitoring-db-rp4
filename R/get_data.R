@@ -110,7 +110,7 @@ saf_eosm <- readxl::read_xlsx(
 saf_ri_actual <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "RI - occurrences",
-  range = cell_limits(c(1, 1), c(NA, 10))
+  range = cell_limits(c(1, 1), c(NA, 11))
 ) %>%
   as_tibble() %>%
   clean_names()
@@ -118,7 +118,7 @@ saf_ri_actual <- readxl::read_xlsx(
 saf_smi_actual <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "SMI - occurrences",
-  range = cell_limits(c(1, 1), c(NA, 10))
+  range = cell_limits(c(1, 1), c(NA, 11))
 ) %>%
   as_tibble() %>%
   clean_names()
@@ -131,7 +131,7 @@ saf_ri_actual_apt <- readxl::read_xlsx(
   as_tibble() %>%
   clean_names()
 
-saf_smi_actual_apt <- readxl::read_xlsx(
+saf_smi_actual_ansp <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
   sheet = "SPI1d-SMI_ANSPs",
   range = cell_limits(c(1, 1), c(NA, NA))
@@ -140,13 +140,13 @@ saf_smi_actual_apt <- readxl::read_xlsx(
   clean_names()
 
 ### AUTO TOOLS ----
-saf_auto_tools_actual <- readxl::read_xlsx(
-  here(data_folder, saf_data_file),
-  sheet = "Automated tools",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names()
+# saf_auto_tools_actual <- readxl::read_xlsx(
+#   here(data_folder, saf_data_file),
+#   sheet = "Automated tools",
+#   range = cell_limits(c(1, 1), c(NA, NA))
+# ) %>%
+#   as_tibble() %>%
+#   clean_names()
 
 ## SES ----
 ### EoSM ----

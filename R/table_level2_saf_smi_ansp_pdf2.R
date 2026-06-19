@@ -9,7 +9,7 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw <- saf_smi_actual_apt
+data_raw <- saf_smi_actual_ansp
 
 # process data ----
 if (country != rp_full) {
@@ -64,7 +64,7 @@ data_prep <- data_calc %>%
     year,
     # "Flight hours" = flight_hours,
     # "Number of SMIs" = smi,
-    "Rate of SMI per 100,000 flight hours" = rate_per_100_000,
+    "Rate of SMI with ANS contribution per 100,000 flight hours" = rate_per_100_000,
     "% variation in rate of SMIs" = variation,
     NULL
   ) %>%
