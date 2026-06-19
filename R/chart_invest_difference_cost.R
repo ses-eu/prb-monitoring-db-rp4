@@ -119,7 +119,7 @@ data_prep <- rbind(data_prep_year, data_prep_total) %>%
   ungroup() %>%
   select(-split_flag) %>%
   mutate(
-    mymetric = janitor::round_half_up(value * 100, 1),
+    mymetric = value * 100,
     myothermetric = 5,
     textlabel = if_else(
       mymetric == 0,

@@ -29,17 +29,31 @@ data_prep <- data_raw %>%
     state == country,
     year <= year_report
   ) |>
-  select(year, rate_per_100_000, eu_wide_average) |>
+  select(
+    year,
+    rate_per_100_000,
+    rate_per_100_000_with_ans_contribution,
+    eu_wide_average,
+    eu_wide_average_ans_contribution
+  ) |>
   pivot_longer(-c(year), names_to = "type", values_to = "mymetric") |>
   mutate(
     xlabel = year,
-    type = if_else(type == "rate_per_100_000", "Rate of RI", "EU Wide Average"),
+    linedash = case_when(
+      type == "rate_per_100_000" ~ "solid",
+      type == "rate_per_100_000_with_ans_contribution" ~ "solid",
+      type == "eu_wide_average" ~ "dot",
+      type == "eu_wide_average_ans_contribution" ~ "dot"
+    ),
+    type = case_when(
+      type == "rate_per_100_000" ~ "RI",
+      type ==
+        "rate_per_100_000_with_ans_contribution" ~ "RI with ANS contribution",
+      type == "eu_wide_average" ~ "EU Wide Average - RI",
+      type ==
+        "eu_wide_average_ans_contribution" ~ "EU Wide Average - RI with ANS contribution"
+    ),
     textposition = "top center",
-    linedash = if_else(
-      type == "Rate of RI",
-      "solid",
-      if_else(country == rp_full, "solid", "dot")
-    )
   ) |>
   select(xlabel, type, mymetric, textposition, linedash) |>
   #otherwise the lindash column does not work
@@ -49,13 +63,21 @@ data_prep <- data_raw %>%
 # chart parameters ----
 c_suffix <- ""
 c_decimals <- 2
+c_markersize <- 4
+
 
 ### trace parameters
-local_color <- '#00B0F0'
-c_colors = c(local_color, local_color)
+local_color1 <- "#22a0dd"
+local_color2 <- "#196AB4"
+c_colors = c(local_color1, local_color2, local_color2, local_color1)
 
 ###set up order of traces
-c_factor <- c("Rate of RI", "EU Wide Average")
+c_factor <- c(
+  "RI with ANS contribution",
+  "RI",
+  "EU Wide Average - RI with ANS contribution",
+  "EU Wide Average - RI"
+)
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -69,10 +91,14 @@ c_yaxis_tickformat <- ".1f"
 
 # plot chart ----
 ##I had to do it this way because when there are NA values the dash doesn't work
-data_prep_s1 <- data_prep |> filter(type == "EU Wide Average")
+data_prep_s1 <- data_prep |>
+  filter(
+    type %in%
+      c("EU Wide Average - RI", "EU Wide Average - RI with ANS contribution")
+  )
 data_prep_s2 <- data_prep |>
-  filter(type == "Rate of RI") |>
-  mutate(myothermetric = janitor::round_half_up(mymetric, c_decimals))
+  filter(type %in% c("RI", "RI with ANS contribution")) |>
+  mutate(myothermetric = mymetric)
 
 p1 <- mylinechart2(
   data_prep_s1,
@@ -95,17 +121,34 @@ p1 <- mylinechart2(
     xaxis = list(range = c(rp_min_year - 0.5, rp_max_year + 0.5))
   )
 
-p1 %>%
+p2 <- p1 %>%
   add_line_trace2(
     .,
-    data_prep_s2,
-    name = "Rate of RI",
+    filter(data_prep_s2, type == "RI with ANS contribution"),
+    name = "RI with ANS contribution",
     textfontcolor = "black",
-    markercolor = local_color,
-    linecolor = local_color
-  ) |>
+    textdecimals = c_decimals,
+    textfontsize = myfont - 1,
+    markercolor = local_color2,
+    markersize = 6,
+    linecolor = local_color2
+  )
+
+p2 %>%
+  add_line_trace2(
+    .,
+    filter(data_prep_s2, type == "RI"),
+    name = "RI",
+    textfontsize = myfont - 1,
+    textfontcolor = "black",
+    textdecimals = c_decimals,
+    markercolor = local_color1,
+    markersize = 6,
+    linecolor = local_color1
+  ) %>%
   layout(
     legend = list(
-      traceorder = "reversed"
+      traceorder = "reversed",
+      font = list(size = myfont - 1)
     )
   )

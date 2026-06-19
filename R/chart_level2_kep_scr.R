@@ -23,7 +23,7 @@ rp_years_df <- data.frame(rp_years) %>% rename(xlabel = rp_years)
 data_prep_kep <- data_raw_kep %>%
   mutate(
     type = indicator_type,
-    mymetric = janitor::round_half_up(value * 100, 2),
+    mymetric = value * 100,
     xlabel = year
   ) %>%
   filter(
@@ -38,7 +38,7 @@ data_prep_kep_full <- data_prep_kep %>%
 data_prep_scr <- data_raw_scr %>%
   mutate(
     type = indicator_type,
-    mymetric = janitor::round_half_up(value * 100, 2),
+    mymetric = value * 100,
     xlabel = year
   ) %>%
   filter(

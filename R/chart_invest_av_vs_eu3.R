@@ -17,7 +17,7 @@ data_prep_uw <- data_union_wide %>%
       variable == "Unknown"
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(percent * 100, 0),
+    mymetric = percent * 100,
     union_wide_median = "Union-wide"
   ) %>%
   select(
@@ -55,7 +55,7 @@ data_prep_ansp <- data_category %>%
       key == "other_share" ~ "Other"
     ),
     xlabel = "ANSP",
-    mymetric = janitor::round_half_up(value, 0),
+    mymetric = value,
     NULL
   ) %>%
   select(xlabel, type, mymetric)

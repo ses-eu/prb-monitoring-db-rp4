@@ -12,7 +12,7 @@ data_prep <- data_raw %>%
     year <= .env$year_report
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(ersa * 100, 0),
+    mymetric = ersa * 100,
     type = "ERSA"
   ) %>%
   select(

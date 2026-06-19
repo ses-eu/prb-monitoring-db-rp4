@@ -38,7 +38,7 @@ data_prep <- data_category %>%
       key == "other_share" ~ "Other"
     ),
     xlabel = "ANSP",
-    mymetric = janitor::round_half_up(value, 0),
+    mymetric = value,
     textposition = if_else(mymetric == 0 | mymetric > 2, "inside", "outside"),
     textlabel = if_else(
       mymetric == 0,

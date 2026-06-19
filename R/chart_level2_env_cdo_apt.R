@@ -43,8 +43,7 @@ data_prep <- data_filtered %>%
     type = case_when(
       type == "avg_seconds_per_descent" ~ "CDO",
       type == "avg_seconds_per_climb" ~ "CCO"
-    ),
-    mymetric = janitor::round_half_up(mymetric, 1)
+    )
   ) %>%
   select(
     xlabel,

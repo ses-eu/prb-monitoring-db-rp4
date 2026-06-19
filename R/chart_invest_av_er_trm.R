@@ -31,7 +31,7 @@ data_prep <- data_new_major %>%
       key == "terminal_share" ~ "Terminal"
     ),
     xlabel = "Asset value",
-    mymetric = janitor::round_half_up(value, 0),
+    mymetric = value,
     textposition = if_else(mymetric == 0 | mymetric > 2, "inside", "outside"),
     textlabel = if_else(
       mymetric == 0,

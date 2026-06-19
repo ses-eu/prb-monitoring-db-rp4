@@ -34,7 +34,7 @@ data_prep_target <- data_raw_target %>%
     state == .env$country
   ) %>%
   mutate(
-    myothermetric = janitor::round_half_up(delay_target, 2),
+    myothermetric = delay_target,
     type = 'Target',
     xlabel = year
   ) %>%

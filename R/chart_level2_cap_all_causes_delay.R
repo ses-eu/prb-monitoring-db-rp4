@@ -17,7 +17,7 @@ data_prep <- data_raw %>%
   ) %>%
   mutate(
     xlabel = year,
-    mymetric = janitor::round_half_up(all_cause_predep_dly, 1),
+    mymetric = all_cause_predep_dly,
     type = "Pre-departure delay per flight"
   ) %>%
   select(

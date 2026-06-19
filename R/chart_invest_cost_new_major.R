@@ -32,7 +32,7 @@ data_prep <- data_new_major_detail %>%
     xlabel = investment_name,
     type = if_else(type == "determined", "Determined", "Actual"),
     type = factor(type, levels = c("Determined", "Actual")),
-    mymetric = janitor::round_half_up(value / 10^6, 2)
+    mymetric = value / 10^6
   ) %>%
   select(
     xlabel,

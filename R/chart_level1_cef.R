@@ -3,7 +3,7 @@ if (!exists("data_loaded")) {
 }
 
 if (exists("cz") == FALSE) {
-  cz = c("1", "terminal", "level1")
+  cz = c("1", "enroute", "level1")
 }
 
 # define cz & level----
@@ -46,7 +46,7 @@ data_prep <- data_raw %>%
     entity_code == mycz
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(duc_eur_ref, 2)
+    mymetric = duc_eur_ref
   ) %>%
   select(
     year,

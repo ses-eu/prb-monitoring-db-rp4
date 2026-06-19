@@ -41,7 +41,7 @@ data_prep_actual <- data_raw_actual %>%
     lubridate::year(month) == year_report
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(value * 100, 2),
+    mymetric = value * 100,
     xlabel = lubridate::floor_date(month, unit = 'month'),
     type = "Actual"
   ) %>%

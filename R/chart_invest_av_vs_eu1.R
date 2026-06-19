@@ -13,7 +13,7 @@ data_prep_uw <- data_union_wide %>%
     variable == "New major investments" | variable == "Other new investments"
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(percent * 100, 0)
+    mymetric = percent * 100
   ) %>%
   select(
     xlabel = union_wide_median,
@@ -36,7 +36,7 @@ data_prep_ansp <- data_capex %>%
       key == "share_new_major_inv" ~ "New major investments",
       key == "share_other_new_inv" ~ "Other new investments"
     ),
-    mymetric = janitor::round_half_up(value * 100, 0)
+    mymetric = value * 100
   ) %>%
   select(xlabel, type, mymetric)
 

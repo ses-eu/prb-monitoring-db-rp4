@@ -42,7 +42,7 @@ data_prep <- data_raw %>%
   ) %>%
   mutate(
     xlabel = year,
-    mymetric = janitor::round_half_up(mymetric, 0),
+    mymetric = mymetric,
     type = case_when(
       type == 'x0_5mins_perc' ~ '<5 min',
       type == 'x5_15_mins_perc' ~ '5 - 15 min',

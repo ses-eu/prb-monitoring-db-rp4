@@ -21,21 +21,31 @@ data_prep <- data_raw %>%
     state == country,
     year <= year_report
   ) |>
-  select(year, rate_per_100_000, eu_wide_average_per_100_000) |>
+  select(
+    year,
+    rate_per_100_000,
+    rate_per_100_000_with_ans_contribution,
+    eu_wide_average_per_100_000,
+    eu_wide_average_with_ans_contribution
+  ) |>
   pivot_longer(-c(year), names_to = "type", values_to = "mymetric") |>
   mutate(
     xlabel = year,
-    type = if_else(
-      type == "rate_per_100_000",
-      "Rate of SMI",
-      "EU Wide Average"
+    linedash = case_when(
+      type == "rate_per_100_000" ~ "solid",
+      type == "rate_per_100_000_with_ans_contribution" ~ "solid",
+      type == "eu_wide_average_per_100_000" ~ "dot",
+      type == "eu_wide_average_with_ans_contribution" ~ "dot"
     ),
-    textposition = "top center",
-    linedash = if_else(
-      type == "Rate of SMI",
-      "solid",
-      if_else(country == rp_full, "solid", "dot")
-    )
+    type = case_when(
+      type == "rate_per_100_000" ~ "SMI",
+      type ==
+        "rate_per_100_000_with_ans_contribution" ~ "SMI with ANS contribution",
+      type == "eu_wide_average_per_100_000" ~ "EU Wide Average - SMI",
+      type ==
+        "eu_wide_average_with_ans_contribution" ~ "EU Wide Average - SMI with ANS contribution"
+    ),
+    textposition = "top center"
   ) |>
   select(xlabel, type, mymetric, textposition, linedash) |>
   #otherwise the lindash column does not work
@@ -47,11 +57,17 @@ c_suffix <- ""
 c_decimals <- 2
 
 ### trace parameters
-local_color <- PRBActualColor
-c_colors = c(local_color, local_color)
+local_color1 <- PRBActualColor
+local_color2 <- "#58595B"
+c_colors = c(local_color1, local_color2, local_color2, local_color1)
 
 ###set up order of traces
-c_factor <- c("Rate of RI", "EU Wide Average")
+c_factor <- c(
+  "SMI with ANS contribution",
+  "SMI",
+  "EU Wide Average - SMI with ANS contribution",
+  "EU Wide Average - SMI"
+)
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -64,10 +80,14 @@ c_yaxis_tickformat <- ".1f"
 
 # plot chart ----
 ##I had to do it this way because when there are NA values the dash doesn't work
-data_prep_s1 <- data_prep |> filter(type == "EU Wide Average")
+data_prep_s1 <- data_prep |>
+  filter(
+    type %in%
+      c("EU Wide Average - SMI", "EU Wide Average - SMI with ANS contribution")
+  )
 data_prep_s2 <- data_prep |>
-  filter(type == "Rate of SMI") |>
-  mutate(myothermetric = janitor::round_half_up(mymetric, 2))
+  filter(type %in% c("SMI", "SMI with ANS contribution")) |>
+  mutate(myothermetric = mymetric)
 
 p1 <- mylinechart2(
   data_prep_s1,
@@ -90,17 +110,34 @@ p1 <- mylinechart2(
     xaxis = list(range = c(rp_min_year - 0.5, rp_max_year + 0.5))
   )
 
-p1 %>%
+p2 <- p1 %>%
   add_line_trace2(
     .,
-    data_prep_s2,
-    name = "Rate of SMI",
+    filter(data_prep_s2, type == "SMI with ANS contribution"),
+    name = "SMI with ANS contribution",
     textfontcolor = "black",
-    markercolor = local_color,
-    linecolor = local_color
-  ) |>
+    textdecimals = c_decimals,
+    textfontsize = myfont - 1,
+    markercolor = local_color2,
+    markersize = 6,
+    linecolor = local_color2
+  )
+
+p2 %>%
+  add_line_trace2(
+    .,
+    filter(data_prep_s2, type == "SMI"),
+    name = "SMI",
+    textfontsize = myfont - 1,
+    textfontcolor = "black",
+    textdecimals = c_decimals,
+    markercolor = local_color1,
+    markersize = 6,
+    linecolor = local_color1
+  ) %>%
   layout(
     legend = list(
-      traceorder = "reversed"
+      traceorder = "reversed",
+      font = list(size = myfont - 1)
     )
   )

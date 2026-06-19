@@ -27,7 +27,7 @@ if (country == rp_full) {
 data_raw_kep_p <- data_raw_kep %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
   mutate(
-    mymetric = janitor::round_half_up(mymetric * 100, 2),
+    mymetric = mymetric * 100,
     type = "Flight plan"
   ) %>%
   filter(
@@ -39,7 +39,7 @@ data_raw_kep_p <- data_raw_kep %>%
 data_raw_scr_p <- data_raw_scr %>%
   rename(type = indicator_type, mymetric = value, xlabel = month) %>%
   mutate(
-    mymetric = janitor::round_half_up(mymetric * 100, 2),
+    mymetric = mymetric * 100,
     type = "Shortest constrained"
   ) %>%
   filter(
@@ -61,7 +61,7 @@ data_prep_kea <- data_raw_kea %>%
     lubridate::year(month) == year_report
   ) %>%
   mutate(
-    myothermetric = janitor::round_half_up(value * 100, 2),
+    myothermetric = value * 100,
     type = indicator_type,
     xlabel = lubridate::floor_date(month, unit = 'month')
   ) %>%

@@ -36,7 +36,7 @@ data_prep_target <- data_raw_target %>%
     year == .env$year_report
   ) %>%
   mutate(
-    myothermetric = janitor::round_half_up(delay_target, 2),
+    myothermetric = delay_target,
     xlabel = year,
     type = "Target"
   ) %>%
@@ -70,7 +70,7 @@ data_prep_actual <- data_raw_actual %>%
     values_to = "mymetric"
   ) %>%
   mutate(
-    mymetric = janitor::round_half_up(mymetric, 2),
+    mymetric = mymetric,
     xlabel = month,
     type = case_when(
       type == "atc_capacity" ~ "Capacity",

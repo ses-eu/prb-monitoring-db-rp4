@@ -56,7 +56,7 @@ if (country == rp_full) {
 
 data_prep <- data_pre_prep %>%
   mutate(
-    mymetric = janitor::round_half_up(total_cost_eur_ref / 10^6, 2),
+    mymetric = total_cost_eur_ref / 10^6,
     status = str_replace(status, "A", "Actual costs"),
     status = str_replace(status, "D", "Determined costs")
   ) %>%
