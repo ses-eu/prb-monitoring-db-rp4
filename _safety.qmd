@@ -381,7 +381,7 @@ mycharts[[4]]
 `r if (params$country != params$rp_full) "::::"`
 
 
-:::: {layout="[ 20, 60, 20 ]"}
+:::: {layout="[ 10, 80, 10 ]"}
 ::::: {#emptydiv}  
 :::::
 
