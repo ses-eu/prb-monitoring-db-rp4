@@ -90,7 +90,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 **En route ATFM delay**
 
-```{r cap_er_text_atfm, eval=(params$no_ecz != 0)}
+```{r cap_er_text_atfm, eval=((params$no_ecz != 0) | (params$country == "FABEC")) }
 #| echo: false
 #| output: asis
 

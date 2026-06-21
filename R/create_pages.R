@@ -497,6 +497,28 @@ if (out_format == 'web') {
           'href: environment.html#civil-military-dimension',
           '# href: environment.html#civil-military-dimension'
         )
+
+        tx <- str_replace(
+          tx,
+          '- text: "En route performance indicators at ACC level"',
+          '# - text: "En route performance indicators at ACC level"'
+        )
+        tx <- str_replace(
+          tx,
+          'href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4',
+          '# href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4'
+        )
+
+        tx <- str_replace(
+          tx,
+          '- text: "Other indicators"',
+          '# - text: "Other indicators"'
+        )
+        tx <- str_replace(
+          tx,
+          'href: capacity.html#other-indicators',
+          '# href: capacity.html#other-indicators'
+        )
       }
 
       ### remove env for luxembourg, MUAC ----
