@@ -35,6 +35,8 @@ website:
             href: 'destination-dir/denmark/'
           - text: "Estonia"
             href: 'destination-dir/estonia/'
+          - text: "FABEC"
+            href: 'destination-dir/fabec/'
           - text: "Finland"
             href: 'destination-dir/finland/'
           - text: "France"
@@ -103,6 +105,8 @@ website:
             href: home_address/investments/rp_summary_year/denmark
           - text: "Estonia"
             href: home_address/investments/rp_summary_year/estonia
+          - text: "FABEC"
+            href: home_address/investments/rp_summary_year/fabec
           - text: "Finland"
             href: home_address/investments/rp_summary_year/finland
           - text: "France"
@@ -307,7 +311,7 @@ website:
     #   [![](images/euctrl-logo-wide-poweredby.svg){fig-alt="EUROCONTROL" width=95px}](https://eurocontrol.int)
     center: 
       - href: '/'
-        text: '<span style= "font-size: 0.825rem">© European Union, 2025</span>'
+        text: '<span style= "font-size: 0.825rem">© European Union, 2026</span>'
       - href: home_address/disclaimer.html
         text: '<span style= "font-size: 0.825rem">{{< fa triangle-exclamation Disclaimer</span>'
       # - href: mailto:prb-office@prb.eusinglesky.eu

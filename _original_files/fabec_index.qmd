@@ -1,0 +1,59 @@
+::: {.grid .align-items-center}
+:::: {.g-col-9}
+[Annual Monitoring Report `r toupper(params$year_folder)` - {{< var doc.country >}}]{.fakeh1}
+::::
+
+:::: {.g-col-3}
+<span class="no-external-icon">[<i class="fa fa-download"></i> Download Report](`r params$home_address`/download/{{< var doc.year_report >}}/PRB-Annual-Monitoring-Report_{{< var doc.country >}}_{{< var doc.year_report >}}.pdf){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+::::
+:::
+
+
+```{r context-data, eval=TRUE}
+
+# to be added
+```
+
+## Contextual information
+[to be added]
+
+
+::: {#container-env style="clear: both"}
+
+## Environment (FABEC)
+
+:::: {#chart-env class="mychart"}
+```{r chart-env-kea, options = (doclevel=c("level1"))}
+#| file: R/chart_level1_kea.R
+#| out.width: "100%"
+```
+::::
+
+
+:::: {#concl-env}
+```{r concl-env}
+env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
+```
+
+:::
+
+::: {#container-cap style="clear: both"}
+
+## Capacity (FABEC)
+:::: {#chart-cap class="mychart"}
+```{r chart-cap-er, options = (cztype=c("enroute"))}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+::::
+
+:::: {#concl-cap}
+```{r concl-cap}
+cap_er_conc1 <-  get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
+
+```
+
+`r cap_er_conc1`
+
+::::
+:::

@@ -358,7 +358,7 @@ replace_headings(path, env_trm_nsa_titles_vfec)
 `r if (params$no_tcz == 0) ":::"`
 
 
-`r if (params$country == "Luxembourg") "::: {.content-hidden}"`
+`r if (params$country == "Luxembourg" | params$country == "FABEC") "::: {.content-hidden}"`
 ::: {#container-mil-pi}
 
 ## [**Civil-Military dimension**](`r params$home_address`/about.html#civil-military-dimension)  
@@ -452,7 +452,7 @@ replace_headings(path, env_mil_nsa_titles_rau)
 
 
 :::
-`r if (params$country == "Luxembourg") ":::"`
+`r if (params$country == "Luxembourg" | params$country == "FABEC") ":::"`
 `r if (params$country == params$rp_full) ":::"`
 
 

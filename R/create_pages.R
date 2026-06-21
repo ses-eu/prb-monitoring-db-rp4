@@ -134,6 +134,24 @@ if (investments) {
   }
 
   writeLines(tmp_text, 'index.qmd')
+} else if (country == "FABEC") {
+  tmp_text <- readLines("_original_files/common_qmd_setup.qmd")
+
+  if (out_format == 'pdf') {
+    tmp_text <- str_replace(
+      tmp_text,
+      "file-placeholder",
+      "_original_files/fabec_index_pdf.qmd"
+    )
+  } else {
+    tmp_text <- str_replace(
+      tmp_text,
+      "file-placeholder",
+      "_original_files/fabec_index.qmd"
+    )
+  }
+
+  writeLines(tmp_text, 'index.qmd')
 } else if (country == "MUAC") {
   tmp_text <- readLines("_original_files/common_qmd_setup.qmd")
 
@@ -196,6 +214,8 @@ if (
     year_folder == rp_summary_year
 ) {
   level2_files <- ""
+} else if (country == "FABEC") {
+  level2_files <- c("environment.qmd", "capacity.qmd")
 } else if (country == "MUAC") {
   level2_files <- c("capacity.qmd", "cost-efficiency-muac.qmd", "safety.qmd")
 } else {
@@ -433,6 +453,52 @@ if (out_format == 'web') {
 
       tx <- tx[-c(block_l1_ses_beg:block_l1_nm_end)]
 
+      ### remove saf cef + terminal for FABEC ----
+      if (country == "FABEC") {
+        tx <- str_replace(
+          tx,
+          '- text: "Traffic"',
+          '# - text: "Traffic"'
+        )
+        tx <- str_replace(
+          tx,
+          'href: index.html#traffic-en-route-traffic-zone',
+          '# href: index.html#traffic-en-route-traffic-zone'
+        )
+
+        tx <- str_replace(
+          tx,
+          '- text: "Safety"',
+          '# - text: "Safety""'
+        )
+        tx <- str_replace(
+          tx,
+          'href: index.html#safety-main-ansp',
+          '# href: index.html#safety-main-ansp'
+        )
+        tx <- str_replace(
+          tx,
+          '- text: "Cost-efficiency"',
+          '# - text: "Cost-efficiency""'
+        )
+        tx <- str_replace(
+          tx,
+          'href: index.html#cost-efficiency',
+          '# href: index.html#cost-efficiency'
+        )
+
+        tx <- str_replace(
+          tx,
+          '- text: "<b>CIV-MIL</b>"',
+          '# - text: "<b>CIV-MIL</b>"'
+        )
+        tx <- str_replace(
+          tx,
+          'href: environment.html#civil-military-dimension',
+          '# href: environment.html#civil-military-dimension'
+        )
+      }
+
       ### remove env for luxembourg, MUAC ----
       if (country == "Luxembourg" | country == "MUAC") {
         tx <- str_replace(
@@ -459,6 +525,42 @@ if (out_format == 'web') {
     }
 
     ## level 2 ----
+    ### FABEC, remove elements ----
+    if (country == "FABEC") {
+      ### replace some links
+      lines_to_replace <- c(
+        '-member-state #tag'
+      )
+
+      for (i in 1:length(lines_to_replace)) {
+        tx <- str_replace(tx, lines_to_replace[i], '-fabec')
+      }
+
+      ### find beginning and end of safety section remove
+      for (i in 1:length(tx)) {
+        if (tx[i] %like% '# block level2 beginning') {
+          block_fabec_saf_beg = i
+        }
+        if (tx[i] %like% '# environment level2 beginning') {
+          block_fabec_saf_end = i
+        }
+      }
+
+      tx <- tx[-c(block_fabec_saf_beg:block_fabec_saf_end)]
+
+      ### find beginning and end of level2 cef to remove
+      for (i in 1:length(tx)) {
+        if (tx[i] %like% '# cost-efficiency level2 beginning') {
+          block_fabec_cef_beg = i
+        }
+        if (tx[i] %like% ' block level2 end') {
+          block_fabec_cef_end = i
+        }
+      }
+
+      tx <- tx[-c(block_fabec_cef_beg:block_fabec_cef_end)]
+    }
+
     ### MUAC, remove elements ----
     if (country == "MUAC") {
       ### replace some links

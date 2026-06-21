@@ -255,7 +255,14 @@ kea_target <- readxl::read_xlsx(
       as_tibble() %>%
       clean_names()
   ) %>%
-  select(year, state, kea_target = x321_kea_target)
+  select(year, state, kea_target = x321_kea_target) %>%
+  rbind(
+    readxl::read_xlsx(
+      here(data_folder, targets_data_file),
+      sheet = "KEA_FABEC_FAB",
+      range = cell_limits(c(1, 1), c(NA, NA))
+    )
+  )
 
 ### SES ----
 #### KEA ----
@@ -573,7 +580,12 @@ cap_ert_target <- readxl::read_xlsx(
       state == "Skyguide" ~ 'Switzerland',
       .default = state
     )
-  )
+  ) %>%
+  rbind(readxl::read_xlsx(
+    here(data_folder, targets_data_file),
+    sheet = "ER_CAP_FABEC_FAB",
+    range = cell_limits(c(1, 1), c(NA, NA))
+  ))
 
 cap_trm_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),
