@@ -43,6 +43,12 @@ if (country != rp_full) {
     mutate(myentity = state)
 }
 
+# if (knitr::is_latex_output()) {
+long_title <- "Rate of SMI with ANS contribution per 100,000 flight hours"
+# } else {
+# long_title <- "Rate of SMI with ANS contribution per 100,000 flight hours"
+# }
+
 data_prep <- data_calc %>%
   group_by(myentity) %>%
   arrange(year) %>%
@@ -64,7 +70,7 @@ data_prep <- data_calc %>%
     year,
     # "Flight hours" = flight_hours,
     # "Number of SMIs" = smi,
-    "Rate of SMI with ANS contribution per 100,000 flight hours" = rate_per_100_000,
+    !!long_title := rate_per_100_000,
     "% variation in rate of SMIs" = variation,
     NULL
   ) %>%

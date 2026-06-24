@@ -535,8 +535,9 @@ cat(quarto_paragraph_breaks(saf_eosm_text))
 cat(make_quarto_latex_table(
   title = paste0("Rate of RIs per 100,000 airport movements - ",  country),
   df = data_prep,
-  col_align = "clrrr",
-  col_widths = c(6, 27, 67/3, 67/3, 67/3),
+  body_fontsize = c(8, 10),
+  col_align = "clrrrrr",
+  col_widths = c(6, 25, rep(69/5, 5)),
   paginate = (country == "France")
 ))
 ```

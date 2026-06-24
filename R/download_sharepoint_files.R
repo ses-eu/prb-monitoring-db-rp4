@@ -68,11 +68,12 @@ purrr::walk(state_list_download, download_nsa_excel_reports)
 
 # PRU files ----
 pru_kpi <- c(
-  "environment-ENR",
-  "environment-CIVMIL",
+  # "environment-ENR",
+  # "environment-CIVMIL",
   # "environment-TRM",
   # "capacity-ENR",
   # "capacity-TRM",
+  "cost-efficiency",
   NULL
 )
 
@@ -81,7 +82,8 @@ kpi_subfolder_map <- c(
   "environment-CIVMIL" = "env_mil",
   "environment-TRM" = "env_trm",
   "capacity-ENR" = "cap_ert",
-  "capacity-TRM" = "cap_trm"
+  "capacity-TRM" = "cap_trm",
+  "cost-efficiency" = "cef"
 )
 
 download_pru_analysis_files <- function(kpi) {

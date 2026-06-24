@@ -1240,7 +1240,7 @@ myhbarc2 <- function(
     plot_ly(
       width = width,
       height = height,
-      x = ~ janitor::round_half_up(mymetric, decimals),
+      x = ~mymetric,
       y = ~ factor(ylabel, levels = local_factor),
       yaxis = "y1",
       marker = list(
@@ -2533,11 +2533,36 @@ make_quarto_latex_table_2level <- function(
       g <- fmt(groups[i])
       span <- spans[i]
       mc_spec <- if (i == 1) "|c|" else "c|"
-      content <- if (nzchar(g)) {
-        paste0("\\bfseries ", g)
+
+      # content <- if (nzchar(g)) {
+      #   paste0("\\bfseries ", g)
+      # } else {
+      #   paste0("\\rule{0pt}{", header_row_height_ex, "ex}")
+      # }
+      content <- if (nzchar(groups[i])) {
+        if (
+          identical(
+            groups[i],
+            "Rate of SMI with ANS contribution per 100,000 flight hours"
+          )
+        ) {
+          paste0(
+            "\\begin{tabular}{@{}c@{}}",
+            "\\cellcolor{",
+            header_shade_name,
+            "}\\bfseries Rate of SMI with ANS contribution\\\\",
+            "\\cellcolor{",
+            header_shade_name,
+            "}\\bfseries per 100,000 flight hours",
+            "\\end{tabular}"
+          )
+        } else {
+          paste0("\\bfseries ", fmt(groups[i]))
+        }
       } else {
         paste0("\\rule{0pt}{", header_row_height_ex, "ex}")
       }
+
       paste0(
         "\\multicolumn{",
         span,
@@ -2835,7 +2860,7 @@ replace_headings <- function(path, mytitles) {
 
   is_na_body_line <- function(x) {
     txt <- trimws(x)
-    grepl("^(n/a|n\\.a\\.?|not applicable|/|\\\\)$", txt, ignore.case = TRUE)
+    grepl("^(na|n/a|n\\.a\\.?|not applicable|/|\\\\)$", txt, ignore.case = TRUE)
   }
 
   section_has_body <- function(lines, idx) {
