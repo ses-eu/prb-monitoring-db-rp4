@@ -85,7 +85,13 @@ c_colors = c('#8497B0')
 c_factor <- data_prep %>% select(type) %>% unique()
 invisible(as.list(c_factor$type))
 c_factor <- sort(c_factor$type, decreasing = TRUE)
-c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
+c_hovertemplate <- paste0(
+  '%{y:,.',
+  c_decimals,
+  'f}',
+  c_suffix,
+  '<extra></extra>'
+)
 
 c_textposition <- "auto"
 c_insidetextanchor <- NULL
