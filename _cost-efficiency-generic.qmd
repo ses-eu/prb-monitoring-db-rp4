@@ -1,3 +1,9 @@
+---
+pagetitle: "`r paste0('Cost-efficiency - ', country)`"
+title-block: false
+---
+
+
 ```{r cef-level2-text}
 cz=c("@@cz_index@@", "@@cz_type@@")
   

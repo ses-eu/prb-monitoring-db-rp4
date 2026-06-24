@@ -157,9 +157,9 @@ c_xaxis_title <- paste0("Costs (M€<sub>", cef_ref_year, "</sub>)")
 c_barcolor_pos <- '#A5A5A5'
 c_barcolor_neg <- '#A5A5A5'
 
-c_hovertemplate <- paste0('%{y} (A-D): %{x:,.1f}<extra></extra>')
+c_hovertemplate <- paste0('%(A-D): %{x:,.1f}<extra></extra>')
 # c_xaxis_tickformat <- "0,.1f"
-c_xaxis_tickformat <- if_else(all_negative_or_zero, "0,.1f", "+0,")
+c_xaxis_tickformat <- if_else(all_negative_or_zero, "0,.1f", "+,")
 c_decimals <- 3
 
 ###set up order of traces
@@ -170,6 +170,15 @@ c_factor <- c(
   "Depreciation costs",
   "Other operating costs",
   "Staff costs"
+)
+
+tickvals <- pretty(c(range_min, range_max))
+
+tickvals <- ifelse(abs(tickvals) < 1e-10, 0, tickvals)
+
+ticktext <- dplyr::case_when(
+  tickvals == 0 ~ "0",
+  TRUE ~ scales::number(tickvals, accuracy = 0.1)
 )
 
 # plot chart  ----
@@ -191,4 +200,10 @@ myhbarc2(
   xaxis_title = c_xaxis_title,
   xaxis_tickformat = c_xaxis_tickformat
 ) %>%
-  layout(xaxis = list(range = c(range_min, range_max)))
+  layout(
+    xaxis = list(
+      range = c(range_min, range_max),
+      tickvals = tickvals,
+      ticktext = ticktext
+    )
+  )

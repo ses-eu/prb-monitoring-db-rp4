@@ -326,6 +326,7 @@ format:
     toc-depth: 3
     number-sections: false
     number-depth: 2
+    title-block: false
     page-layout: full
     css: styles.css
     link-external-newwindow: true

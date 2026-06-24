@@ -1,3 +1,8 @@
+---
+pagetitle: "`r paste0('Capacity - ', country)`"
+title-block: false
+---
+
 ```{r cap-level2-headings}
 # placeholder for sourcing level 2 headings
 
