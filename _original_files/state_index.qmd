@@ -328,6 +328,17 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `r if (params$no_tcz == 1) "::::::"`
 
+`r if (params$no_tcz < 3) ":::::: {.content-hidden}"`
+<br>
+
+```{r chart-cef-trm-3, options = (cz=c("3", "terminal", "level1"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
+`r if (params$no_tcz < 3) "::::::"`
+
+
 `r if (params$no_tcz == 0) ":::::"`
 ::::
 

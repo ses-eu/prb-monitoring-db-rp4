@@ -18,6 +18,11 @@
 #| out.width: "100%"
 ```
 
+```{r chart_cef_trm_3, options = (cz=c("3", "terminal", "level1")), eval = (params$no_tcz == 3), include = FALSE}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
 <!-- ## Safety L2-->
 
 <!-- ### Effectiveness of Safety Management (EoSM) (KPI#1) -->
@@ -459,6 +464,11 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 ```
 
 `r if ((params$no_ecz + params$no_tcz != 3) | params$no_ecz == 2) "::::"`
+
+
+`r if ((params$no_ecz + params$no_tcz) != 4) ":::: {.content-hidden}"`
+`r layout_2fig("chart_cef_trm_2", "chart_cef_trm_3")`
+`r if ((params$no_ecz + params$no_tcz) != 4) "::::"`
 
 `r cef_conc1`
 
