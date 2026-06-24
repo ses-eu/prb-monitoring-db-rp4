@@ -36,6 +36,13 @@ if (country == rp_full) {
 }
 
 # prepare data ----
+
+if (cztype == "terminal") {
+  nsa_cost_title <- "NSA"
+} else {
+  nsa_cost_title <- "NSA (including\nEUROCONTROL)"
+}
+
 data_prep <- data_raw %>%
   filter(
     charging_zone_code == mycz,
@@ -49,7 +56,7 @@ data_prep <- data_raw %>%
         entity_type_id != "ANSP1" ~ "Other ATSP",
       entity_type == "MUAC" ~ "Other ATSP",
       entity_type == "MET" ~ "METSP",
-      entity_type == "NSA" ~ "NSA (including\nEUROCONTROL)"
+      entity_type == "NSA" ~ nsa_cost_title
     ),
     mymetric = total_cost_eur_ref / 10^6,
     status = str_replace(status, "A", "Actual costs"),
@@ -71,7 +78,7 @@ data_prep <- data_raw %>%
         "Main ATSP",
         "Other ATSP",
         "METSP",
-        "NSA (including\nEUROCONTROL)"
+        nsa_cost_title
       )
     )
   )
