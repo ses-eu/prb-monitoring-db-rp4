@@ -3037,7 +3037,13 @@ replace_headings <- function(path, mytitles) {
     out
   }
 
-  cat(render_lines(lines))
+  out <- render_lines(lines)
+
+  if (!grepl("\n$", out)) {
+    out <- paste0(out, "\n")
+  }
+
+  cat(out)
 }
 
 refresh_qmd_parts_country <- function(update_pru_analysis, update_nsa_input) {
