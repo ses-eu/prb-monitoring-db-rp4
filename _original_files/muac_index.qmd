@@ -41,9 +41,9 @@ data_muac <- data_muac_raw |>
 
 total_muac_costs <- sum(data_muac$total_cost_eur_ref, na.rm = TRUE)
 
-share_EBEL <- paste0(round(pull(select(filter(data_muac, entity_code == "EBEL_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
-share_ED <- paste0(round(pull(select(filter(data_muac, entity_code == "ED_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
-share_EH <- paste0(round(pull(select(filter(data_muac, entity_code == "EH_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
+share_EBEL <- paste0(janitor::round_half_up(pull(select(filter(data_muac, entity_code == "EBEL_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
+share_ED <- paste0(janitor::round_half_up(pull(select(filter(data_muac, entity_code == "ED_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
+share_EH <- paste0(janitor::round_half_up(pull(select(filter(data_muac, entity_code == "EH_MUAC"), total_cost_eur_ref)) / total_muac_costs *100,0), "%")
 
 ```
 

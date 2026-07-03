@@ -200,7 +200,7 @@ format:
                 \renewcommand{\arraystretch}{1.15}%
                 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth}|X}
                   \MakeUppercase{Copyright Notice\par and Disclaimer} &
-                  © European Union, 2025\par\vspace{4pt}%
+                  © European Union, 2026\par\vspace{4pt}%
                   This document has been prepared for the European Commission by the Performance Review Board of the Single European Sky (PRB).\par\vspace{6pt}%
                   Reproduction is authorised provided the source is acknowledged. However, neither the European Commission, nor any person acting on its behalf, may be held responsible for the use which may be made of the information contained in this publication, or for any errors which may appear, despite careful preparation and checking.%
                   \\
@@ -322,7 +322,7 @@ format:
  
 book:
   title: "Performance Review Board"
-  subtitle: "Monitoring Report" 
+  subtitle: "Monitoring Report (Version for fact validation)" 
   author: "{{< var doc.country >}} - {{< var doc.year_folder >}}"
   chapters:
     - index.qmd
