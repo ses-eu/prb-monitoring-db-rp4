@@ -66,7 +66,14 @@ statfor_mvt <- readxl::read_xlsx(
 ) %>%
   as_tibble() %>%
   clean_names() %>%
-  filter(daio == "T" & year >= rp_min_year - 1 & year <= rp_max_year)
+  filter(daio == "T" & year >= rp_min_year - 1 & year <= rp_max_year) %>%
+  mutate(
+    tz = stringr::str_replace_all(
+      tz,
+      "Norway-Continental",
+      "Norway"
+    )
+  )
 
 statfor_tsu <- readxl::read_xlsx(
   here(data_folder, statfor_tsu_data_file),
@@ -75,7 +82,10 @@ statfor_tsu <- readxl::read_xlsx(
 ) %>%
   as_tibble() %>%
   clean_names() %>%
-  filter(year >= rp_min_year - 1 & year <= rp_max_year)
+  filter(year >= rp_min_year - 1 & year <= rp_max_year) %>%
+  mutate(
+    tz_id = stringr::str_replace_all(tz_id, "Norway-Continental", "Norway")
+  )
 
 ## targets ----
 traffic_target <- readxl::read_xlsx(
@@ -85,7 +95,19 @@ traffic_target <- readxl::read_xlsx(
 ) %>%
   as_tibble() %>%
   clean_names() %>%
-  select(state, year, x121_ecz_name, x121_ecz_ifr_mvt, x121_ecz_su)
+  select(state, year, x121_ecz_name, x121_ecz_ifr_mvt, x121_ecz_su) %>%
+  mutate(
+    x121_ecz_name = stringr::str_replace_all(
+      x121_ecz_name,
+      "Portugal Continental",
+      "Portugal-Continental"
+    ),
+    x121_ecz_name = stringr::str_replace_all(
+      x121_ecz_name,
+      "Belgium-Luxembourg",
+      "Belgium/Luxembourg"
+    )
+  )
 
 # SAF ----
 ## State ----
@@ -121,7 +143,11 @@ saf_smi_actual <- readxl::read_xlsx(
   range = cell_limits(c(1, 1), c(NA, 11))
 ) %>%
   as_tibble() %>%
-  clean_names()
+  clean_names() %>%
+  rename(
+    number_of_smi = number_of_smi_state_level,
+    number_of_smi_with_ans_contribution = number_of_smi_with_ans_contribution_ansp_level
+  )
 
 saf_ri_actual_apt <- readxl::read_xlsx(
   here(data_folder, saf_data_file),
@@ -834,17 +860,17 @@ cap_trm_atfm_actual_mm_ses <- cap_trm_atfm_actual_mm %>%
   )
 
 #### ALL-CAUSE PREDEP DELAY ----
-cap_all_c_predep_delay_actual_ses <- cap_all_c_predep_delay_actual %>%
-  group_by(year) %>%
-  summarise(
-    fl_total = sum(fl_total, na.rm = TRUE),
-    dly_all_min_total = sum(dly_all_min_total, na.rm = TRUE),
-    .groups = "drop"
-  ) %>%
-  mutate(
-    all_cause_predep_dly = dly_all_min_total / fl_total,
-    state = rp_full
-  )
+# cap_all_c_predep_delay_actual_ses <- cap_all_c_predep_delay_actual %>%
+#   group_by(year) %>%
+#   summarise(
+#     fl_total = sum(fl_total, na.rm = TRUE),
+#     dly_all_min_total = sum(dly_all_min_total, na.rm = TRUE),
+#     .groups = "drop"
+#   ) %>%
+#   mutate(
+#     all_cause_predep_dly = dly_all_min_total / fl_total,
+#     state = rp_full
+#   )
 
 #### DELAY TIME BIN ----
 cap_delay_bin_actual_ses <- cap_delay_bin_actual %>%
