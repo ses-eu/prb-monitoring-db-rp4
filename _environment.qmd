@@ -278,7 +278,7 @@ replace_headings(path, env_trm_nsa_titles_asma)
 
 ::: {#container-cdo}
 
-### Average duration in climb ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and descent ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
+### Average duration in climb ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and descent ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
 
 ```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
 #| file: R/chart_level2_env_cdo_apt.R
@@ -308,24 +308,7 @@ if(!exists("cdo_airports")) {cdo_airports <-0}
 
 ::: {.callout-note collapse=true}
 
-#### Focus on average duration in descent and climb
-
-**Average duration in descent**
-
-```{r env_trm_text_vfed, eval=(params$no_tcz != 0)}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
-
-replace_headings(path, character(0))
-
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
-
-replace_headings(path, env_trm_nsa_titles_vfed)
-
-``` 
+#### Focus on average duration in climb and descent
 
 **Average duration in climb**
 
@@ -344,6 +327,25 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfec.qmd", as.character(ye
 replace_headings(path, env_trm_nsa_titles_vfec)
 
 ``` 
+
+
+**Average duration in descent**
+
+```{r env_trm_text_vfed, eval=(params$no_tcz != 0)}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_vfed.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_trm_nsa_titles_vfed)
+
+``` 
+
 
 :::
 
