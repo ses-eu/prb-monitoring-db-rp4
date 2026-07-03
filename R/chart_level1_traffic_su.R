@@ -100,8 +100,11 @@ data_prep_actual <- data_prep_actual_rts |>
 
 data_prep_planned <- data_raw_planned %>%
   filter(
-    x121_ecz_name == country,
-    # status == 'D',
+    if (country == "Spain") {
+      x121_ecz_name == country
+    } else {
+      state == country
+    },
     year >= rp_min_year
   ) %>%
   select(state, year, x121_ecz_su) %>%
