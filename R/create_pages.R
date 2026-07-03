@@ -141,7 +141,7 @@ if (investments) {
     tmp_text <- str_replace(
       tmp_text,
       "file-placeholder",
-      "_original_files/fabec_index_pdf.qmd"
+      "_original_files/state_index_pdf.qmd"
     )
   } else {
     tmp_text <- str_replace(
