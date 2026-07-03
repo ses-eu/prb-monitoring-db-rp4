@@ -63,9 +63,9 @@ if (knitr::is_latex_output()) {
 }
 
 c_title_text <- paste0(
-  "Net result from ",
-  if_else(cztype == 'terminal', 'terminal', 'en route'),
-  " activity - ",
+  "Net gain/loss for ",
+  # if_else(cztype == 'terminal', 'terminal', 'en route'),
+  # " activity - ",
   if_else(country == rp_full, "Main ANSPs ", paste0(main_ansp, " ")),
   year_report
 )

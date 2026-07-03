@@ -28,7 +28,7 @@ data_prep <- data_raw %>%
 
 ## chart parameters ----
 c_suffix <- ""
-c_decimals <- 1
+c_decimals <- 2
 
 ### trace parameters
 c_colors <- PRBPlannedColor

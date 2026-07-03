@@ -46,7 +46,8 @@ c_labels <- c(
   paste0(
     "Number of ",
     toupper(safindicator),
-    "&nbsp;&nbsp;\nin the MS&nbsp;&nbsp;"
+    "s",
+    "&nbsp;&nbsp;"
   ),
   paste0(
     "Rate of ",
@@ -61,6 +62,7 @@ c_labels <- c(
   paste0(
     "Number of ",
     toupper(safindicator),
+    "s",
     "&nbsp;&nbsp;\nwith ANS contribution&nbsp;&nbsp;"
   ),
   paste0(

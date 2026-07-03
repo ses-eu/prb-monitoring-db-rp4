@@ -358,7 +358,7 @@ legend_annotations <- list(
     xanchor = "left",
     x = 0.07,
     y = c_legend_y - 0.1 - 0.04 * negative_check,
-    text = "RR in percent of en route revenues",
+    text = "RR as percentage of en route revenues",
     font = list(size = myfont * 0.9, color = "black"),
     xref = "paper",
     yref = "paper",
@@ -397,7 +397,7 @@ mybarchart2(
     data = data_prep,
     x = ~xlabel,
     y = ~share,
-    name = "RR in percent of en-route revenues",
+    name = "RR as percentage of en-route revenues",
     yaxis = "y2",
     # mode = "markers",
     text = "",
@@ -417,7 +417,11 @@ mybarchart2(
     mode = "markers",
     type = 'scatter',
     text = "",
-    name = "RR (ex-ante) in % of revenues",
+    name = paste0(
+      "RR (ex-ante) as % of ",
+      if_else(cztype == "enroute", "en route", "terminal"),
+      " revenues"
+    ),
     marker = list(size = 1, color = "transparent"),
     hovertemplate = paste0('%{y:,.1f}%'),
     showlegend = F
@@ -430,7 +434,11 @@ mybarchart2(
     mode = "markers",
     type = 'scatter',
     text = "",
-    name = "RR (ex-post) in % of revenues",
+    name = paste0(
+      "RR (ex-post) as % of ",
+      if_else(cztype == "enroute", "en route", "terminal"),
+      " revenues"
+    ),
     marker = list(size = 1, color = "transparent"),
     hovertemplate = paste0('%{y:,.1f}%'),
     showlegend = F
@@ -446,7 +454,11 @@ mybarchart2(
       secondary_y = TRUE
     ),
     yaxis2 = list(
-      title = "RR as % of revenues",
+      title = paste0(
+        "RR as % of ",
+        if_else(cztype == "enroute", "en route", "terminal"),
+        " revenues"
+      ),
       overlaying = "y",
       zerolinecolor = "#E8E8E8",
       range = y2_range,

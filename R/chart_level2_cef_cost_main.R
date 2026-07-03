@@ -83,7 +83,7 @@ data_prep_pivot <- data_pre_prep |>
   mutate(
     xlabel = year,
     type = case_when(
-      type == "vfr_exempted_costs_eur_ref" ~ "VFR exempted",
+      type == "vfr_exempted_costs_eur_ref" ~ "Costs for VFR exempted flights",
       type == "exceptional_items_costs_eur_ref" ~ "Exceptional items",
       type == "cost_of_capital_eur_nom" ~ "Cost of capital",
       type == "depreciation_costs_eur_nom" ~ "Depreciation costs",
@@ -93,7 +93,7 @@ data_prep_pivot <- data_pre_prep |>
     )
   )
 
-data_prep <- data_prep_pivot |>
+data_prep_item <- data_prep_pivot |>
   filter(xlabel == year_report) |>
   pivot_wider(names_from = 'status', values_from = 'value') %>%
   arrange(desc(type)) %>%
@@ -103,7 +103,7 @@ data_prep <- data_prep_pivot |>
       D == 0,
       '-',
       paste0(
-        if_else(mymetric > 0, '+', ''),
+        if_else(A / D - 1 > 0, '+', ''),
         janitor::round_half_up((A / D - 1) * 100, 1),
         '%'
       )
@@ -111,7 +111,7 @@ data_prep <- data_prep_pivot |>
     ylabel = factor(
       type,
       levels = c(
-        "VFR exempted",
+        "Costs for VFR exempted flights",
         "Exceptional items",
         "Cost of capital",
         "Depreciation costs",
@@ -122,10 +122,77 @@ data_prep <- data_prep_pivot |>
   ) |>
   mutate(
     mymetric = case_when(
-      ylabel == "VFR exempted" ~ -mymetric,
+      ylabel == "Costs for VFR exempted flights" ~ -mymetric,
       .default = mymetric
     )
+  ) %>%
+  select(
+    D,
+    A,
+    xlabel,
+    mymetric,
+    mylabel,
+    ylabel
   )
+
+data_prep_total <- data_prep_item %>%
+  group_by(xlabel) %>%
+  mutate(
+    D = case_when(
+      ylabel == "Costs for VFR exempted flights" ~ -D,
+      .default = D
+    ),
+    A = case_when(
+      ylabel == "Costs for VFR exempted flights" ~ -A,
+      .default = A
+    )
+  ) %>%
+  summarise(
+    D = sum(D, na.rm = TRUE),
+    A = sum(A, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    mymetric = (A - D) / 10^6,
+    mylabel = if_else(
+      D == 0,
+      '-',
+      paste0(
+        if_else(mymetric > 0, '+', ''),
+        janitor::round_half_up((A / D - 1) * 100, 1),
+        '%'
+      )
+    )
+  ) %>%
+  select(
+    xlabel,
+    mymetric,
+    mylabel
+  ) %>%
+  mutate(ylabel = "Total")
+
+data_prep <- data_prep_item %>%
+  select(
+    xlabel,
+    mymetric,
+    mylabel,
+    ylabel
+  ) %>%
+  rbind(data_prep_total) %>%
+  mutate(
+    mymetric
+  )
+
+# to force display of small values
+data_prep <- data_prep %>%
+  mutate(
+    mymetric = if_else(
+      (abs(mymetric) < 0.005 & mymetric != 0),
+      0.005 * sign(mymetric),
+      mymetric
+    )
+  )
+
 
 # check if all values are negative or very small to fix formatting issue
 all_negative_or_zero <- all(data_prep$mymetric <= 0.05)
@@ -143,12 +210,17 @@ range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE) / 10^myroundup) *
   10^myroundup +
   10^myroundup / 2
 
+
 # chart parameters ----
 c_title_text <- paste0(
   if_else(
     country == rp_full,
-    "Costs by nature for main ANSPs - ",
-    paste0("Costs by nature - ", main_ansp, " ")
+    "Costs by nature for main ANSPs (difference\nbetween actual and determined) - ",
+    paste0(
+      "Costs by nature (difference between\nactual and determined) - ",
+      main_ansp,
+      " "
+    )
   ),
   year_report
 )
@@ -157,14 +229,15 @@ c_xaxis_title <- paste0("Costs (M€<sub>", cef_ref_year, "</sub>)")
 c_barcolor_pos <- '#A5A5A5'
 c_barcolor_neg <- '#A5A5A5'
 
-c_hovertemplate <- paste0('%(A-D): %{x:,.1f}<extra></extra>')
+c_hovertemplate <- paste0('(A-D): %{x:,.1f}<extra></extra>')
 # c_xaxis_tickformat <- "0,.1f"
 c_xaxis_tickformat <- if_else(all_negative_or_zero, "0,.1f", "+,")
-c_decimals <- 3
+c_decimals <- 10
 
 ###set up order of traces
 c_factor <- c(
-  "VFR exempted",
+  "Total",
+  "Costs for VFR exempted flights",
   "Exceptional items",
   "Cost of capital",
   "Depreciation costs",
@@ -195,10 +268,12 @@ myhbarc2(
 
   title_text = c_title_text,
   title_y = 0.5,
-  title_x = 0.99,
+  title_x = 0.95,
 
   xaxis_title = c_xaxis_title,
-  xaxis_tickformat = c_xaxis_tickformat
+  xaxis_tickformat = c_xaxis_tickformat,
+
+  margin = list(t = 50)
 ) %>%
   layout(
     xaxis = list(
