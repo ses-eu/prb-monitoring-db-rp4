@@ -67,7 +67,7 @@ if (cztype == "enroute") {
 ```
 
 
-```{r cef-level2-headings-@@cz_type@@@@cz_index@@}
+```{r cef-level2-headings-@@cz_type@@@@cz_index@@, eval = (params$country != "FABEC")}
 
 source("R/get_level2_headings_cef.R")
 
