@@ -31,6 +31,8 @@ state_list_download <- unname(state_list)[
   !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4")
 ]
 # state_list_download <- c(state_list_download, "FABEC")
+state_list_download <- c("Bulgaria")
+
 
 # NSA excel files ----
 download_nsa_excel_reports <- function(
@@ -73,7 +75,7 @@ pru_kpi <- c(
   # "environment-TRM",
   # "capacity-ENR",
   # "capacity-TRM",
-  "cost-efficiency",
+  "cost-efficiency-CEF",
   NULL
 )
 
@@ -83,10 +85,11 @@ kpi_subfolder_map <- c(
   "environment-TRM" = "env_trm",
   "capacity-ENR" = "cap_ert",
   "capacity-TRM" = "cap_trm",
-  "cost-efficiency" = "cef"
+  "cost-efficiency-CEF" = "cef"
 )
 
 download_pru_analysis_files <- function(kpi) {
+  # kpi <-"cost-efficiency"
   subfolder <- unname(kpi_subfolder_map[[kpi]])
 
   download_folder <- file.path(
