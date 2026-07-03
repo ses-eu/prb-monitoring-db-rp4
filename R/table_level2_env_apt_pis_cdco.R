@@ -24,17 +24,17 @@ data_filtered <- data_raw %>%
 
 
 ### We take the top 15 airports for France
-if (country == "France") {
-  top_15_france <- data_filtered |>
-    filter(is.na(nbr_flights_descent) == FALSE) |>
-    arrange(desc(nbr_flights_descent)) |>
-    slice_head(n = 15) %>%
-    select(apt_icao) %>%
-    unique()
-
-  data_filtered <- data_filtered %>%
-    filter(apt_icao %in% top_15_france$apt_icao)
-}
+# if (country == "France") {
+#   top_15_france <- data_filtered |>
+#     filter(is.na(nbr_flights_descent) == FALSE) |>
+#     arrange(desc(nbr_flights_descent)) |>
+#     slice_head(n = 15) %>%
+#     select(apt_icao) %>%
+#     unique()
+#
+#   data_filtered <- data_filtered %>%
+#     filter(apt_icao %in% top_15_france$apt_icao)
+# }
 
 data_prep <- data_filtered %>%
   select(

@@ -33,8 +33,8 @@ data_prep <- data_raw %>%
       decimals = 2
     ),
     "All causes pre departure\ndelay (PI#3)" = format(
-      janitor::round_half_up(all_cause_predep_dly, 1),
-      decimals = 1
+      janitor::round_half_up(all_cause_predep_dly, 2),
+      decimals = 2
     ),
   ) %>%
   select(

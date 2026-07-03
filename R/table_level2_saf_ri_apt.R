@@ -26,6 +26,11 @@ data_prep <- data_raw %>%
       janitor::round_half_up(rate_per_100_000, 2),
       big.mark = ",",
       nsmall = 2
+    ),
+    rate_per_100_000_with_contribution = format(
+      janitor::round_half_up(rate_per_100_000_with_contribution, 2),
+      big.mark = ",",
+      nsmall = 2
     )
   ) %>%
   select(
@@ -33,9 +38,9 @@ data_prep <- data_raw %>%
     "Airport name" = name_apt,
     "APT movements" = ifr_movements,
     "Number of RI" = ri,
-    "Rate RI  per 100,000" = rate_per_100_000,
+    "Rate RI per 100,000" = rate_per_100_000,
     "Number of RI with ANS contribution" = ri_with_contribution,
-    "Rate RI with ANS contribution" = rate_with_contribution
+    "Rate RI per 100,000 with ANS contribution " = rate_per_100_000_with_contribution
   )
 
 # plot table ----

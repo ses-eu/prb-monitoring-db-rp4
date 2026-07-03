@@ -73,9 +73,9 @@ data_prep_t2 <- data_raw %>%
   )
 
 # t exchange rates
-data_prep_xrates <- xrate_year %>%
-  filter(cztype == cztype) %>%
-  select(cz_code, year, xrate)
+xrate_year_cz <- xrate_year %>%
+  # mutate (xrate = if_else(cz_code == "EBEL_ECZ", 2, xrate)) %>%
+  filter(cztype == cztype)
 
 data_prep_eur <- data_prep_t2 %>%
   left_join(xrate_year_cz, by = c('year', "entity_code" = "cz_code")) %>%
@@ -114,7 +114,7 @@ data_prep <- data_prep_eur %>%
   mutate(
     mymetric = case_when(
       year > year_report ~ NA,
-      .default = janitor::round_half_up(mymetric, 2),
+      .default = mymetric,
     ),
     myothermetric = case_when(
       year > year_report ~ NA,
