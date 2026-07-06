@@ -3043,6 +3043,13 @@ replace_headings <- function(path, mytitles) {
     out <- paste0(out, "\n")
   }
 
+  out <- gsub("(?m)^NA$", "", out, perl = TRUE)
+  out <- trimws(out)
+
+  if (!grepl("\n$", out)) {
+    out <- paste0(out, "\n")
+  }
+
   cat(out)
 }
 

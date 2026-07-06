@@ -28,7 +28,7 @@ input_folder_excel <- paste0(
 base_folder <- "C:/Users/oaolive/OneDrive - EUROCONTROL/ECTL - AIU - European Commission - Monitoring"
 
 state_list_download <- unname(state_list)[
-  !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4")
+  !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4", "Italy")
 ]
 # state_list_download <- c(state_list_download, "FABEC")
 state_list_download <- c("Bulgaria")
@@ -68,14 +68,16 @@ download_nsa_excel_reports <- function(
 
 purrr::walk(state_list_download, download_nsa_excel_reports)
 
+stop()
+
 # PRU files ----
 pru_kpi <- c(
   # "environment-ENR",
-  # "environment-CIVMIL",
+  "environment-CIVMIL",
   # "environment-TRM",
   # "capacity-ENR",
   # "capacity-TRM",
-  "cost-efficiency-CEF",
+  # "cost-efficiency-CEF",
   NULL
 )
 

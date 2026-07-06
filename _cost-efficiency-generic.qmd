@@ -203,7 +203,7 @@ replace_headings(path, cef_titles_s1)
 
 ::::: {#table_cef_er_cex}
 ```{r table_cef_cex, R.options = (cz=c("@@cz_index@@", "@@cz_type@@"))}
-#| file: R/table_level2_cef_cex_tbv.R
+#| file: R/table_level2_cef_cex.R
 #| out.width: "100%"
 ```
 :::::

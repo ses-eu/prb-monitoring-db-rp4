@@ -33,11 +33,22 @@ out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Finland' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Bulgaria' # set your one country/stakeholder here (Home for home page)
 
 # Set to TRUE to refresh pru analysis and/or nsa input
-update_pru_analysis <- FALSE
 update_nsa_input <- FALSE
+update_pru_analysis <- FALSE
+if (update_pru_analysis) {
+  KPI <- c(
+    # 'cef',
+    # 'cap_ert',
+    # 'cap_trm',
+    'env_mil',
+    # 'env_trm',
+    # 'saf',
+    NULL
+  )
+}
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
 update_data <- FALSE
@@ -75,17 +86,29 @@ if (!all_states) {
   ## modify state list as required
   state_list_prod <- state_list
   # state_list_prod <- c(state_list, "Home")  #add home to list
-  # state_list_prod <- setdiff(state_list_prod, "Bulgaria") #remove state
-  # states_from <- c(1:10) # 1st number is the index of 1st state from which you want to generate
+  # state_list_prod <- setdiff(state_list_prod, "FABEC") #remove state
+  # states_from <- c(13:29) # 1st number is the index of 1st state from which you want to generate
   # state_list_prod <- state_list_prod[states_from]
-  # state_list_prod <- list('Bulgaria',
-  #                         'Croatia',
-  #                         'Cyprus',
-  #                         'Lithuania',
-  #                         'Slovakia',
-  #                         'Slovenia',
-  #                         'MUAC',
-  #                         'Network Manager')
+  # state_list_prod <- c(
+  #   'Austria',
+  #   'Croatia',
+  #   'Cyprus',
+  #   'Denmark',
+  #   'Estonia',
+  #   'Finland',
+  #   'Greece',
+  #   'Ireland',
+  #   'Italy',
+  #   'Latvia',
+  #   'Lithuania',
+  #   'Malta',
+  #   'Poland',
+  #   'Portugal',
+  #   'Slovakia',
+  #   'Slovenia',
+  #   'Spain',
+  #   'Sweden'
+  # )
 }
 
 #in case you want to brute force all states level 2 text refresh
@@ -108,12 +131,6 @@ for (i in 2025) {
   }
   year_folder <- i
 
-  # refresh level 2 text
-  refresh_qmd_parts_country(
-    update_pru_analysis = update_pru_analysis,
-    update_nsa_input = update_nsa_input
-  )
-
   ## set site parameters
   source("R/params_site.R")
 
@@ -121,6 +138,13 @@ for (i in 2025) {
   ## build pages
   for (i in 1:length(state_list_prod)) {
     country <- state_list_prod[i]
+
+    # refresh level 2 text
+    refresh_qmd_parts_country(
+      update_pru_analysis = update_pru_analysis,
+      update_nsa_input = update_nsa_input
+    )
+
     # country <- state_list_prod
     source("R/params_country.R")
     source("R/create_pages.R")

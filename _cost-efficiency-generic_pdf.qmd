@@ -194,7 +194,7 @@ cat(make_quarto_latex_table(
 
 
 ```{r table_level2_cef_cex_@@cz_type@@@@cz_index@@, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
-#| file: R/table_level2_cef_cex_tbv.R
+#| file: R/table_level2_cef_cex.R
 #| include: false
 ```
 

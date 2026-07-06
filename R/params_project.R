@@ -7,11 +7,10 @@ rp_years <- c(2025, 2026, 2027, 2028, 2029)
 rp_min_year <- min(rp_years)
 rp_max_year <- max(rp_years)
 cef_ref_year <- 2022
-  
+
 # source data folders ----
 data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/'
 # data_folder_a2 <- paste0(data_folder, "monitoring_files/", year_report, "/")
-
 
 # source data files ----
 context_data_file <- "context_data.xlsx"
@@ -30,7 +29,7 @@ statfor_tsu_data_file <- "statfor_forecast_en_route_tsu.xlsx"
 
 targets_data_file <- "targets.xlsx"
 
-investments_data_file <- "INVESTMENTS DATA_master.xlsx"
+investments_data_file <- "investments_data.xlsx"
 
 prb_findings_file <- "PRB_findings.xlsx"
 
@@ -39,7 +38,7 @@ prb_findings_file <- "PRB_findings.xlsx"
 mywidth = NULL
 myheight = 300
 myfont = 14
-mymargin = list (t = 40)
+mymargin = list(t = 40)
 mylinewidth = 3
 
 mysuffix <- ""
@@ -68,7 +67,7 @@ mybargap <- 0.25
 mybarmode <- 'group'
 myhovermode <- "x unified"
 myhoverlabel_bgcolor <- 'rgba(255,255,255,0.88)'
-myminsize <- myfont*0.8
+myminsize <- myfont * 0.8
 
 #### title
 mytitle_text <- "Chart title"
@@ -76,7 +75,7 @@ mytitle_x <- 0.5
 mytitle_y <- 0.99
 mytitle_xanchor <- 'center'
 mytitle_yanchor <- 'top'
-mytitle_font_size <- myfont * 16/15
+mytitle_font_size <- myfont * 16 / 15
 
 #### xaxis
 myxaxis_title <- ''
@@ -113,10 +112,9 @@ mylegend_y <- -0.1
 mylegend_font_size <- myfont
 
 ## pdf
-mywidth_pdf = 300 *4
-myheight_pdf = 220 *4
+mywidth_pdf = 300 * 4
+myheight_pdf = 220 * 4
 myfont_pdf = 64
-mytitle_font_size_pdf <- 10 *4
-mymargin_pdf = list (t = 30)
+mytitle_font_size_pdf <- 10 * 4
+mymargin_pdf = list(t = 30)
 mylinewidth_pdf = 3
-  

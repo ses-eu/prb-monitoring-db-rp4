@@ -36,7 +36,7 @@ data_prep <- data_new_major %>%
     textlabel = if_else(
       mymetric == 0,
       " ",
-      paste0(format(mymetric, nsmall = 0), "%")
+      paste0(format(janitor::round_half_up(mymetric, 0), nsmall = 0), "%")
     )
   ) %>%
   select(xlabel, type, mymetric, textlabel, textposition)
