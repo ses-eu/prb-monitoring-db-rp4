@@ -1,0 +1,6 @@
+## **2.3.2.A. PI #1**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+Adherence to ATFM slots at LMML was 95.28% in 2025. This indicates generally good operational compliance with ATFM regulations and supports the view that, notwithstanding the miss on the terminal arrival delay KPI, the local operational system continued to function with a satisfactory level of tactical discipline. The NSA will continue to monitor slot-adherence together with terminal delay and peak-traffic indicators to identify whether any deterioration emerges as traffic increases further during RP4.
+

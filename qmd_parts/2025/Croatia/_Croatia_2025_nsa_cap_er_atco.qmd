@@ -1,0 +1,14 @@
+## **2.3.3 ATCO Planning 1**
+
+### **Additional comments**
+
+Operational ATCO availability is affected by national demographic policy measures in Croatia, including statutory paternity leave (up to 20 working days per child) and parental leave entitlements that may be exercised until the child reaches the age of eight. The higher than planned non-duty hours in 2025 reflect primarily extended sickness leave and increase of the paternity leaves, coupled with planned reinforcement of refresher training in response to traffic growth and increasing operational complexity.
+
+### **Additional comments**
+
+Please note that, as required, the number of additional ATCOs in OPS is presented here in terms of Full-Time Equivalents (FTEs). In 2025, 12 new ATCOs began working as ACC ATCOs in OPS (out of which 2 renewals). However, since most of them obtained their licenses in late 2025 (October), they cumulatively increased the FTE count by a significantly lower amount. At the same time, during 2025, two ACC ATCOs lost their licenses, resulting in a 0.41 decrease in FTEs.
+
+### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
+
+CCL ATCO TO provides training pursuant to the Commission Regulation (EU) 2015/340 including applicable Acceptable Means of Compliance (AMC) for: Basic Training, Rating Training for ADC, APS and ACS and Unit Training for 16 different locations. Duration of training (Initial and Unit) for ADC and APS is up to 2 years. Duration of training for ACS is approximately 2.5 years. Hereby presented numbers represents only ATCO trainees in the scope of the performance plan (i.e. ACS and APS). The number of ATCO trainees at year end is affected by a slightly lower than expected success rate of generation 2024, as well as delayed ATCO Additional (EU) employments planned in 2025.
+

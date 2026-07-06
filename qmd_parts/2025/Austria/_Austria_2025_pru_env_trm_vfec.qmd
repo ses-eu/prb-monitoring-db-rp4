@@ -1,0 +1,3 @@
+## TRM1.5. Vertical flight efficiency of the climb (PI#8)
+
+Compared to the overall RP5 average value (34.8 seconds per flight), average times flown level during climb are on average 19.9 seconds per flight higher in Austria. The highest average time flown level during climb happens at Salzburg Airport (LOWS) (71.3 seconds per flight), while the lowest happens at Vienna International Airport (LOWW) (41.6 seconds per flight).

@@ -1,0 +1,84 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -4.4% (or -1.78 €2022) lower than the planned DUC. This results from the combination of significantly lower than planned en route costs in real terms (-6.7%, or -1.7 M€2022) and lower than planned TSUs (-2.5%).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (-2.5%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -6.7% (-1.7 M€2022) lower than planned. This is the result of lower costs for the main ANSP, LGS (-7.5%, or -1.7 M€2022), the NSA/EUROCONTROL (-0.6%, or -0.01 M€2022) and the MET service provider (-1.7%, or -0.01 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (LGS) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the significantly lower than planned en route costs in real terms for LGS in 2025 (-7.5%, or -1.7 M€2022) result from:
+
+- Lower than planned staff costs (-4.6%), mainly reflecting vacancies, recruitment timing and delays in reaching the planned staffing level.
+
+- Significantly lower than planned other operating costs (-17.5%), mainly due to lower-than-expected corrective maintenance and repair needs, supported by the absence of significant unplanned failures.
+
+- Significantly lower than planned depreciation (-11.7%), mainly due to timing differences in asset commissioning and capitalisation, as some assets entered service later than planned due to acceptance and certification procedures.
+
+- Higher than planned cost of capital (+4.7%), due to a higher average asset base linked to ongoing investment projects.
+
+- Significantly higher than planned deduction for VFR exempted flights (+135.7%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Latvia provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"In 2025, the en-route cost-efficiency performance for the Latvia charging zone was better than planned, with the actual DUC below the determined DUC target. The improvement is primarily explained by actual en-route costs being below determined costs, while service units were also slightly below forecast.*
+
+*Specifically, updated monitoring data show total actual en-route costs of EUR 26,588 million compared to EUR 28,241 million determined (−EUR 1,653 million; −5,9%). At the same time, actual en-route service units were 617.282 thousand compared to a forecast of 633 thousand (−2.48%). Overall, the cost under-execution more than offset the service unit shortfall, resulting in an improved DUC outcome of EUR 39.02 compared to the determined target of EUR 40.80."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"The difference between actual and determined en-route costs in 2025 is mainly driven by lower staff costs, lower other operating expenditure, and lower depreciation, partly offset by a small increase in capital costs.*
+
+*Compared with determined costs, staff costs were lower mainly due to timing differences in recruitment, vacancies, turnover, and training lead times. This reflects differences between actual staffing implementation and planning assumptions rather than a reduction in service provision.*
+
+*Other operating expenditure was lower primarily because of expenditure control measures and timing effects related to procurement, contract execution, and the delivery of planned works.*
+
+*Depreciation was lower mainly due to shifts in investment implementation schedules and the later commissioning of certain assets.*
+
+*Capital costs were slightly higher than determined.*
+
+*The main measures not implemented as originally planned relate to staffing ramp-up and the commissioning of certain investments, both of which occurred later than assumed when determined costs were established. These deviations are predominantly timing-related rather than cancellations.*
+
+*If recruitment reaches planned levels and delayed investments are commissioned, part of the currently under-executed cost components, particularly depreciation and potentially related operating expenditure, may materialise in later years of RP4, depending on the updated implementation schedule."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LGS) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"Following the analysis of the 2025 cost-efficiency results, the NSA recalled that already during the planning phase it had emphasised the need to ensure a high level of accuracy and prudence in assumptions across all cost categories, in particular regarding staff costs, taking into account the known conditions within the RP4 framework. The currently observed significant under-execution of costs indicates a lack of alignment between planning assumptions and actual implementation dynamics, including recruitment phasing, staff turnover, and training schedules.*
+
+*The NSA underlines the need to strengthen the realism of cost planning in future periods and to ensure a closer linkage to actual implementation conditions across all cost categories, in order to reduce systematic deviations from determined costs.*
+
+*With regard to investments, the NSA emphasised the need to closely monitor the implementation of the approved investment programme and ensure timely commissioning of assets in line with RP4 assumptions. Delays in investment delivery may result in deviations in depreciation and related cost items, which should be properly justified and tracked.*
+
+*The NSA also recalled that, in case of material under-implementation of the investment programme at the end of the RP4 period, appropriate reconciliation mechanisms under the performance scheme may require adjustments or repayment of funds to airspace users in accordance with applicable EU regulatory provisions.*
+
+*The NSA will continue to monitor cost developments and investment execution through its annual supervisory activities and will address any material deviations from the determined cost trajectory."*
+
+LGS reports the implementation of the following actions:
+
+*"No corrective measures are required to address a cost-efficiency underperformance in 2025, as actual en-route costs were below determined costs and the actual DUC was lower than the determined DUC target.*
+
+*However, LGS acknowledges the NSA's observations regarding the need to improve the alignment between planning assumptions and actual implementation dynamics. In response, LGS will strengthen the monitoring of the main variance drivers, in particular staff cost development, recruitment and training phasing, procurement execution, and the commissioning schedule of investments.*
+
+*For staffing, LGS will continue to recruit in line with operational requirements and available training capacity, while regularly reviewing whether recruitment and training assumptions remain realistic against actual progress. For operating expenditure and investments, LGS will continue to apply expenditure control, update implementation schedules where needed, and monitor delayed procurements and asset commissioning to ensure that any timing shifts are properly documented and reflected in subsequent planning and reporting.*
+
+*LGS will also continue to provide explanations to the NSA on material deviations from determined costs in the annual monitoring process. Where under-execution results from timing shifts rather than cancellations, LGS will track whether the related costs may materialize in later years of RP4. If any material under-implementation of the investment program remains at the end of RP4, LGS will cooperate with the NSA on the appropriate treatment under the applicable performance and charging scheme rules."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

@@ -1,0 +1,8 @@
+## SAF1.3. Rate of runway incursions (RIs) (PI#1)
+
+Belgium reported 2 runway incursions (RI) at Brussels airport during 2025. When comparing the RIs at airport level to Union-wide level, Belgium was lower than the Union-wide average (0.98 vs 2.53). The rate of runway incursions has increased compared to 2024 at airport level (0.98 vs 0.5).
+
+In 2025, Belgium reported 2 runway incursions with ATS/CNS contribution. When comparing the RIs with ATS/CNS contribution to the Union-wide level, Belgium was just slightly higher than Union-wide average (0.98 vs 0.96). At ATS/CNS contribution-level, Belgium reported 0 RIs in 2024.
+
+As described in the monitoring report, Local Runway Safety Teams (LRSTs) are established at all international airports in Belgium. Occurrence of runway incursions and associated investigation is permanently monitored and reported in line with international regulation. Outcome of safety investigations and associated safety recommendations is permanently monitored by NSA and verified during ongoing oversight activities.
+

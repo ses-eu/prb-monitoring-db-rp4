@@ -1,0 +1,10 @@
+## **2.3.2.A. PI #1**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The national adherence to ATFM slots rate in 2025 was 99.24%, reflecting a very high level of compliance with Network Manager slot allocations across Romanian airports. All airports recorded values above 97.6%, with LROP Bucharest Otopeni at 99.5% and most regional airports around or above 99%. The comparatively lower values at LRCL Cluj, 97.68%, and LRCK Constanța, 97.81%, remain within acceptable operational parameters and do not indicate a systemic performance issue.
+
+This performance was supported by established ATFM coordination procedures between ROMATSA operational units, airport operators and aircraft operators, including timely exchange of flight planning, delay and slot-related information. Compliance with ATFM procedures under Commission Regulation (EU) No 255/2010 and local coordination between TWR/APP units and airport stakeholders contributed to maintaining predictable departures and reducing avoidable CTOT non-compliance.
+
+Minor airport-level variations may be linked to local operational factors such as traffic peaks, adverse weather, infrastructure constraints, apron/stand availability, ground handling performance, late aircraft readiness or temporary works. No significant deterioration requiring corrective action was identified at national level in 2025.
+

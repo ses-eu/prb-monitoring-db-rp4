@@ -1,0 +1,6 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Denmark reported 1 separation minima infringement (SMI) in their airspace during 2025. The rate of separation minima infringements was significantly below Union-wide average (0.48 vs 7.10). At ANSP level, Denmark reported 1 SMI with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was significantly below the Union-wide average (0.48 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has decreased at both State level (0.48 vs 2.91) and at ANSP level (0.48 vs 2.91).
+

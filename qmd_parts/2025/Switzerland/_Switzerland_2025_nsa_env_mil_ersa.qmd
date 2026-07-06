@@ -1,0 +1,12 @@
+## 2.2.2.I. PI #9
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+Ongoing national civil-military initiatives
+
+Enabled the technical capabilities for applying VPA, working on implementation of Dynamic RAD in Switzerland and in the frame of the CIV MIL ASM System we are implementing a fully integrated ASM data transfer from input by airspace user until output to airspace user as well as to ATCO radar.
+
+Monitoring of effectiveness
+
+Military mission effectivness increased over the last years and fulfillment of planned missions is improving. CH NSA measure and analyze the PIs in a regular basis in order to better assess (and improve, if necessary) the effectiveness of national FUA processes.
+

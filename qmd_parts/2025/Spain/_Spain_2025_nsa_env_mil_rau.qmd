@@ -1,0 +1,7 @@
+## **2.2.2.K. PI #11**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+In the coming years, we aim to improve this Performance Indicator (PI) through a number of measures, continuing with the introduction of new FUA restrictions to allow additional traffic flows through RSAs with military activity, the development of adjustable boundary procedures, the implementation of modular RSAs and improvements in the management of military RPAS activity. In addition, the implementation of FRA is expected to support more efficient flight planning through optimal routing.
+
+This PI is monitored annually to evaluate the evolution of the indicators because our ANSP, ENAIRE, which provides the data to calculate the indicator, requests it from Eurocontrol. Should any significant deviations be identified, the possible causes will be analysed as part of the annual monitoring process, in collaboration with the relevant stakeholder.

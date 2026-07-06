@@ -1,0 +1,40 @@
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
+
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (43.16 €) is -3.3% lower than the nominal DUC (44.61 €) which includes DUC initially charged: 54.03 €, and DUC to be charged retroactively: -9.41 €. The difference between these two figures (-1.45 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.46 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.62 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+0.13 €/SU);
+
+- the addition of the traffic adjustment (+0.16 €/SU) for the costs not subject to traffic risk sharing;
+
+- financial incentives (+0.41 €/SU);
+
+- the deduction of other revenues (-1.33 €/SU); and,
+
+- application of a lower unit rate as foreseen in Art. 29(6) in year 2025 (-0.67 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 8.9%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Latvia provides the following information regarding the initiatives:
+
+*"Initiatives implemented in 2025 and planned going forward to support improvement of the actual unit cost incurred by users include: (i) continued discipline in operating expenditure, avoiding execution of costs solely because they were included in plan; (ii) phased recruitment and training aligned with operational needs and training capacity; (iii) aligning investment execution with actual project readiness and procurement results, thereby improving predictability of depreciation/capital cost build‑up; and (iv) continued improvement of the cost allocation methodology to strengthen the linkage between costs and the services/zones that use the resources.*
+
+*Effectiveness is monitored through regular internal variance analysis against the determined cost base and updated monitoring tables, including tracking of staffing ramp‑up, procurement execution timing, and investment commissioning milestones, as these drivers influence unit costs over the reference period.*
+
+*Monitoring by the NSA is supported through the annual monitoring process and cost reporting/verification mechanisms, including review of submitted monitoring tables and supporting financial accounting information."*
+
+### **ER1.2.3. NOTES** 
+
+#### **ER1.2.3.1. NOTE 1**
+
+#### **ER1.2.3.1. NOTE 2**
+

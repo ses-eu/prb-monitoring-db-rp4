@@ -1,0 +1,58 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -12.3% (or -6.70 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TSUs (+9.2%) and lower than planned en route costs in real terms (-4.2%, or -9.5 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+9.2%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -4.2% (-9.5 M€2022) lower than planned. This is the result of lower costs for the main ANSP, Austro Control (-2.8%, or -5.7 M€2022) and the MET service provider (-30.7%, or -3.8 M€2022), while the NSA/EUROCONTROL cost are in line with the plan (+0.01%).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (AUSTRO CONTROL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for Austro Control in 2025 (-2.8%, or -5.7 M€2022) result from:
+
+- Higher than planned staff costs (+3.7%), mainly reflecting higher than foreseen inflation and its effects on pension costs. Additional traffic also increased overtime charges, while later than foreseen hiring of staff in support roles partly mitigated the increase.
+
+- Significantly lower than planned other operating costs (-30.4%), mainly due to one-off effects from previous years, renegotiated contracts, lower energy costs and delays in the investment plan as well as lower than planned external support costs.
+
+- Significantly lower than planned depreciation (-17.6%), reflecting the delayed operational readiness of major investments, notably the new Voice Communication System and ATC One.
+
+- Slightly lower than planned cost of capital (-0.3%), mainly due to lower than planned investment-related cost of capital, reflecting delays in the investment programme. This was partly offset by higher than planned cost of capital for net current assets.
+
+- Slightly lower than planned exceptional costs (-0.9%) due to the inflation index (+1.1 p.p.) since in nominal terms the actual costs were equal to those planned.
+
+- Significantly lower than planned deduction for VFR exempted flights (-13.8%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Austria provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Lower costs together with a higher inflation and more traffic than determined led to lower real en route unit costs".*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Total personnel costs are above plan due to higher pension costs, but can be partially offset by lower headcount levels, particularly among non-ops employees. Within other operating expenses, the highly volatile energy costs play a significant role. Lower depreciation due to later than determined operational readiness of some investments."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (AUSTRO CONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"The investment monitoring by the ANSP will be impacted by a directive from the NSA."*
+
+Austro Control reports the implementation of the following actions:
+
+*"Currently a different investment monitoring and reporting is being implemented by the ANSP."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

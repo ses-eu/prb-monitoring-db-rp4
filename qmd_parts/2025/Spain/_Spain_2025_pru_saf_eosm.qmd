@@ -1,0 +1,32 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+[ENAIRE]{.underline}
+
+In 2025, ENAIRE achieved the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, ENAIRE exceeded the planned levels in all areas, reaching the highest level D in all components.
+
+In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements:
+
+-   Well-established SMS processes and continuously improving since 2009.
+
+-   The systematic integration of human factors across all safety areas.
+
+-   The development of increasingly powerful and robust dashboards to support more effective safety monitoring facilitating informed decision‑making.
+
+-   Consistent and proactive involvement in international working groups focused on safety improvement.
+
+-   Commitment to benchmarking and the exchange of best practices.
+
+[EA]{.underline}
+
+In 2025, EA met the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, EA exceeded the planned target in the area of Safety Risk Management, reaching level D together with Safety Culture component.
+
+According to the monitoring report, some differences should be noted in the fields (c) and (d) due to the military condition of the EA and the comprehensive approach to safety of the EA that under Flight Safety includes all the Operational Safety aspects of all the activities done by the EA, some of then the not easily releasable to the public.
+
+[Skyway]{.underline}
+
+Skyway met the planned maturity levels set out in its performance plan for four out of five components of the EoSM. In more detail, the area where Skyway missed the planned level was Safety Policy and Objectives.
+
+In terms of main measures put in place to achieve the planned levels, the report lists Definition of Skyway\'s Safety Culture. Just Culture fora for debate among employees and management. Human Factors training itinerary.
+
+For the maturity levels where Skyway did not reach the planned level, the monitoring report lists the following circumstances that lead to this situation: Actual values for the new questions 3.1 and 5.1 are lower than expected due to the inclusion of specific Human Factors capability requirements. The coordination carried out by AESA (Civil Spanish NSA) with EASA to ensure future compliance is particularly noteworthy. The current gap is mainly related to the formal recognition of the EUROCONTROL Practitioner LZ -- Human Factors Practitioner Programme \[HUM-PRG-PP\] qualification within the EoSM framework. Following coordination with EASA, it has been clarified that this qualification may be considered acceptable in place of the HF Specialist/Expert accreditation required under the EoSM, provided that the staff member has fully completed the programme and has officially obtained the certification, rather than being only in the process of training. Until the certification is formally achieved by the relevant personnel, the organisation cannot demonstrate Level C compliance for questions 3.1 and Level D for 5.1. Nevertheless, the transition period foreseen within RP4 and the ongoing coordination with EASA provide a clear path towards full compliance in the coming years.
+

@@ -1,0 +1,16 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The following initiatives were implemented or are planned in order to improve the vertical flight efficiency of actual en-route trajectories:
+
+Implementation of measures in accordance with the roadmap defined in the PBN 2025 Plan, which was amended in 2025;
+
+Implementation of Baltic FAB cross-border Free Route Airspace (FRA) operations since 2022;
+
+Planned implementation of cross-border FRA operations with neighbouring countries within the NEFAB framework;
+
+Further development and implementation of cross-border FRA operations between adjacent airspace areas in order to enhance flight trajectory efficiency, optimise airspace utilisation, and support more efficient vertical flight profiles.
+
+The National Supervisory Authority (NSA) intends to monitor the effectiveness of these initiatives through regular performance monitoring activities, analysis of relevant environmental performance indicators, and oversight audits of the ANSP. In addition, the NSA will review operational data, trend analyses, and reports related to flight efficiency in order to assess whether the implemented measures contribute to continuous improvement of vertical flight efficiency performance.
+

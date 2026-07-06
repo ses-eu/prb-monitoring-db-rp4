@@ -1,0 +1,6 @@
+## 2.2.2.G. PI #7
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+skeyes established recurrent monitoring of the CDO performance, in order to improve monitoring and to be able to identify where and to which extent inefficiencies are taking place. Since ToD is outside skeyes AoR, skeyes developed its own indicators. In addition to binary indicators, skeyes is using non-binary CDO indicators based on average level-off time. The statistics are presented and discussed with the main Airlines during quarterly CEM meetings at airports.
+

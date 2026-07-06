@@ -1,0 +1,16 @@
+## **2.2.2.A. PI #1**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+For information on measures implemented before 2025, please refer to the respective Annual Monitoring Reports.
+
+In 2025, in order to support the minimisation of the KEP indicator, effective civil-military cooperation was maintained, particularly considering tactical operations resulting from activity related to the war in Ukraine. Implementation of the Dynamic RAD (Route Availability Document) tool took place, enabling usage of EPWW level capping restrictions only to minimum required level, thus allowing airspace users to plan more efficient cruising flight levels for certain traffic flows.
+
+Furthermore, preparations were underway for the implementation (completed in July 2025) and operational use of a three-layer airspace split in all sectors of the Polish airspace. The vertical split of the FIR Warszawa is expected to reduce the risk of negative impact of possible congestion in ACC sectors on KEP.
+
+In RP4 further development of the FRA is planned as part of cross-border FRA operations with Germany and petentially -- should the war end -- with Ukraine.
+
+Similarly, as KEA, KEP indicator is also impacted by the geopolitical factors, beyond control of PANSA. As indicated in chapter 2.2.1.(a) of this Report, HFE indicators are expected to remain high during the subsequent years due to the military conflict in Ukraine and related sanctions.
+
+The NSA receives the list of planned changes to the ATM functional system on a regular basis. Once a change is notified the relevant monitoring activities are implemented.
+

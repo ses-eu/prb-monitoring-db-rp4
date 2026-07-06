@@ -1,0 +1,20 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+In 2025, Slovenia Control achieved the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, Slovenia Control exceeded the planned maturity level in the area of Safety Policy and Objectives.
+
+As described in the monitoring report, Slovenia Control has established a mature and fully operational Safety Management System (SMS) in compliance with EU Regulation 2019/317. The system is based on evidence-driven oversight and supports continuous improvement through proactive and risk-based processes integrated across all organisational levels. Its effectiveness is ensured through internal audits, ongoing performance monitoring, and oversight by the competent authority. Audits focus not only on identifying non-compliances but also on understanding successful operations. Emphasis is placed on learning from everyday activities, recognising human performance variability as a key factor in safety and efficiency. Root cause analysis is applied to address systemic issues and prevent recurrence. A strong reporting culture is actively promoted, with employees encouraged to report safety concerns in a psychologically safe environment. The organisation follows Just Culture principles, ensuring fair treatment while clearly distinguishing between acceptable and unacceptable behaviour. Changes are managed through a structured and approved change management process, including risk-based criteria. Continuous improvements are driven by internal assessments and feedback mechanisms. Overall, the SMS effectively supports the achievement of EU safety targets and reflects a high level of safety maturity, strong governance, and commitment to continuous improvement.
+
+In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements: To achieve the defined safety performance targets and further strengthen SMS maturity in line with EoSM expectations, Slovenia Control has implemented a set of targeted measures across key areas of the system. In the area of Risk Management, the organisation has maintained Level D maturity by further reinforcing the systematic and proactive identification, assessment, and mitigation of risks. This includes consistent application of risk assessment methodologies, the use of safety data and trend analysis to identify emerging risks, and the integration of risk management into decision-making processes at operational and management levels. Significant progress has been achieved in the area of Safety Policy and Objectives, where the maturity level has improved from Level C to Level D. This advancement has been supported by strengthened management commitment to safety, clearer alignment between safety objectives and organisational strategy, and enhanced communication of safety priorities across all levels of the organisation. Safety objectives are now more consistently monitored, reviewed, and linked to measurable performance indicators.
+
+Furthermore, additional supporting measures include:
+
+-   Enhanced internal audit and monitoring activities focusing on both compliance and effectiveness.
+
+-   Promotion of a strong reporting and Just Culture environment.
+
+-   Improved use of safety data to support evidence-based decisions.
+
+-   And continuous engagement of operational staff in safety-related processes.
+
+These measures collectively ensured not only the achievement of safety performance targets but also a measurable increase in SMS maturity, particularly in reinforcing leadership, accountability, and system-wide integration of safety.
+

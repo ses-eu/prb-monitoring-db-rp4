@@ -1,0 +1,8 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Romania reported 17 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was below Union-wide average (2.87 vs 7.10).
+
+At ANSP level, ROMATSA reported 19 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (1.92 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has increased at both State level (2.87 vs 1.03) and at ANSP level (1.92 vs 1.04).
+

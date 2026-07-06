@@ -1,0 +1,6 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Hungary reported 8 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was below the Union-wide average (2.00 vs 7.10). At ANSP level, Hungary reported 8 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was below the Union-wide average (2.00 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements was stable at both State level (2.00 vs 2.09) and at ANSP level (2.00 vs 1.9).
+

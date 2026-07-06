@@ -1,0 +1,50 @@
+## 2.2.1.A. KPI #1
+
+### Assessment of the achieved level of actual performance in the environment KPA
+
+In 2025, the target has not been met, as KEA reached a value of 3,32%, where the target was set at the value of 2,87%. Performance was quite similar to previous years, which is slightly better than in 2023.
+
+As it has already been the case during the previous years, there are strong interdependencies between horizontal flight efficiency, ATFM delays and traffic levels In 2025, as it is described in the en route capacity monitoring chapters, the performance has still been impacted by capacity and staffing issues at Reims & Brest ACCS but mainly strongly impacted by Marseille ACCs low performance and very high en route ATFM delays (see en route capacity chapter), generating major rerouting and longer routes for a large amount of flights.
+
+### Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact
+
+Main measures addressing KEA underachievement in France are in the capacity field, by trying to enhanced DSNA ACC capacity issues which should enable better flight efficiency ; another important measure to be implemented in France will be the full enhcnaced FRA implementation as per CP1 regulation, which has progressed in 2025 and has been fully implemented above flight level 305 in all French airspace 19th March 2026. More details on measures to address both capacity and environment performance in France are given in the dedicated annex to this monitoring report (French capacity and environment remedial measures).
+
+### Progress on the implementation of the measures committed to in the ERNIP
+
+DSNA is currently implementing ERNIP measures as planned; a major achievement is the full enhcnaced FRA implementation as per CP1 regulation, which has progressed in 2025 and has been fully implemented above flight level 305 in all French airspace 19th March 2026. A more detailed view on ERNIP measures implementation desciption by DSNA is provided in the dedicated annex to this monitoring report (French capacity and environment remedial measures).
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+High traffic levels and delays in Reims and Marseille - which is very much interdependent with HFE - and high peak traffic levels during Summer and traffic volatility in general, adverse weather condition had a negative impact on DSNA HFE performance in 2025.
+
+It should also be recalled that, regarding HFE, other stakeholders behaviour have an impact on the KPI : use of airspace by the military, fuel efficiency choices made by air space users, NM recommendation not to provide direct routes (flight it as it is planned concept), meteorological issues \... It is also recognized by the NM that KEA reduction is structurally limited (at European level, it should be difficult) to go under 2% with the current airspace structure).
+
+DSNA is also implementing new projects and measures that should have a positive impact on environment but more in the vertical field or in line with better fuel efficiency.\"
+
+### Recommendations to the ANSP to rectify the situation
+
+A specific meeting has been organized with DSNA in order to gather both explanations and information about remedial measures already launched and identify potential additional measures that could be implemented by DSNA in 2025 and beyond to tackle non temporary environment issues.
+
+The following recommendations / course of actions have been discussed and agreed with DSNA:
+
+- Measures already identified, coordinated with the Network Manager and published in the ERNIP;
+
+- A set of specific remedial measures put in place by DSNA or already planned in 2025 to mitigate identified non temporary issues at the French ACCs have been presented to the French NSA and are listed in the table below and provided in more details in the dedicated annex to this monitoring report (French capacity and environment remedial measures). : the French NSA will be kept informed by DSNA of their timely implementation, of the expected benefit and of any issue in the implementation plan, and a follow-up meeting will be organized 2nd Semester 2026;
+
+- An analysis of potential risks on 2025 and beyond underperformance has been carried over and required potential remedial measures to address such a situation have been discussed; they are also addressed hereafter and in the dedicated annex already mentioned, with the actions taken by the NSA to monitor future performance through its surveillance program. \"
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+As already said, main measures to improve KEA achievements by DSNA rely on addressing capacity issues in order to provide better routing to airspace users in a less congested area. Other measures address the priorisation of TRA use, the final and full implementaiton in France of the enha,ced FRA as per CP1 (done 19th March 2026), dynamic RAD implementation but also measures addressing environment in general such as green operations implementation and the implementaiton of the GreenATM label at DSNA (level 3 reached in 2025).
+
+Please refer to the dedicated annex to this monitoring report (French capacity and environment remedial measures) for more details.
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+As explained above, the French NSA is kept informed of any development related to the implementation of capacity and environment remedial and corrective measures. In particular:
+
+- A follow-up meeting has been organized by the French NSA with DSNA operational directorate in May 2025 to check the implementation of the measures;
+
+- The French NSA has been invited to the two yearly DSNA strategic users\' consultation meetings held in 2025 and spring 2026 which include an update on all strategic and operational measures taken by DSNA to improve capacity and environment performances, prepare Summer season 2026 and on the investment program.
+

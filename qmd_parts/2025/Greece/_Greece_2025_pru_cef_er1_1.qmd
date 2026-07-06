@@ -1,0 +1,52 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -0.3% (or -0.08 €2022) lower than the planned DUC. This results from the combination of lower than planned en route costs in real terms (-1.1%, or -2.1 M€2022) and slightly lower than planned TSUs (-0.7%).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (-0.7%) falls inside the ±2% dead-band. Hence, the loss of en route revenues is borne by the ANSPs.
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -1.1% (-2.1 M€2022) lower than planned. This is the result of lower costs for the main ANSP, HASP (-0.9%, or -1.4 M€2022) and the MET service provider (-11.3%, or -1.3 M€2022) and higher costs for the NSA/EUROCONTROL (+2.8%, or +0.7 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (HASP) AT CHARGING ZONE LEVEL**
+
+The slightly lower than planned en route costs in real terms for HASP in 2025 (-0.9%, or -1.4 M€2022) result from:
+
+- Staff costs consistent with those planned (-0.1%),
+
+- Significantly lower than planned other operating costs (-7.0%),
+
+- Significantly lower than planned depreciation (-12.7%),
+
+- Significantly lower than planned cost of capital (-52.4%),
+
+- Higher than planned deduction for VFR exempted flights (+4.0%).
+
+No explanations on the differences between the 2025 determined and actual costs are available in the Additional information to the reporting tables or in the NSA Monitoring Report.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Greece provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*There is a marginal decrease in actual real en route unit cost compared with the determined one.*"
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*There is a small decrease in total en route costs in real terms mainly due to lower actual SU and higher actual inflation.*"
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (HASP) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

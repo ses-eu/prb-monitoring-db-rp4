@@ -1,0 +1,10 @@
+## **2.3.2.D. PI #4**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The actual capacity performance achieved in 2025 reflects the continuation of a long-standing trend of maintaining sufficient en-route ATC capacity in Lithuanian airspace. No en-route ATFM delays were generated during the reporting period, resulting in an actual KPI value of 0.00 minutes of en-route ATFM delay per flight.
+
+This level of performance is consistent with that achieved during previous reference periods, where capacity provision was continuously aligned with traffic demand and no en-route ATFM delays were recorded. The absence of delays in 2025 therefore does not represent a significant change in performance, but rather the continuation of established operational practices and capacity planning arrangements that have ensured adequate service provision over time.
+
+As no deterioration in performance was observed, no corrective measures were required during the reporting period. The National Supervisory Authority (NSA) will continue to monitor capacity performance through regular oversight activities, including the review of ANSP capacity planning, traffic developments, operational performance indicators and Network Manager reports, in order to ensure the continued maintenance of sufficient capacity and the timely identification of any emerging risks to performance.
+

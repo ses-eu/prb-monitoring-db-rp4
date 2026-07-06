@@ -1,0 +1,22 @@
+## **2.2.2.G. PI #7**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: Implemented:
+
+- SID/STAR RNAV 1 procedures at selected airports (including LROP, LRCL, LRBS, LROP, LRCV (SID), LRSB, LRTM, LRTR);
+
+- application of continuous descent vectorisation practices where traffic complexity allows (only in Bucharest TMA, Arad TMA, NAPOC TMA ansd Constanța TMA)
+
+Planned:
+
+- AMAN (Arrival Manager) for Bucharest TMA --- system implementation finalised in Q1 2026; entry into operational use pending, expected to contribute to improved vertical descent profiles at LROP and LRBS once operational by enabling optimised sequencing and continuous descent clearances from higher flight levels;
+
+- implementation of RNAV/RNP procedures at all airports included in the Performance Plan, in accordance with the national PBN Transition Plan. Implemented LRSV, LRBC, LRIA, LRTC, LRCK, LRCV, LRCL. Pending publication new RNP - LRBS, LROP. Pending approval LRTM, LRSB.
+
+It is noted that elevated values recorded at certain airports, in particular LRCK (Constanța) and LRTC (Tulcea), are significantly influenced by the sustained military activity in the Black Sea region, which generates airspace restrictions that prevent the application of optimal descent profiles. These factors are outside the control of ROMATSA and are expected to persist for as long as the current geopolitical situation continues.
+
+Effectiveness will be monitored through the tracking of PI #7 values per airport on the ansperformance.eu platform and through ROMATSA\'s internal performance monitoring processes.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+

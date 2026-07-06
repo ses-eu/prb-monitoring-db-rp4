@@ -1,0 +1,15 @@
+## 2.2.2.H. PI #8
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+Vertical flight efficiency to Top of Climb remained stable in 2025 despite traffic increase. CCOs can be flown only when traffic is reduced.
+
+In 2025, the average duration of level-off segments during the climb phase was 0.6 minutes at Geneva Airport and 0.9 minutes at Zurich Airport, compared with an average of 0.5 minutes across the top 30 European airports.
+
+Skyguide was audited in 2023, 2024 and 2025 by CANSO for CCO/CDO practices in ZRH and GVA as part of its GreenATM accreditation. Room for improvement is identified and corrective actions will be taken.
+
+Projects are planned to renew the DMAN in Zurich and implement one in Geneva. The DMAN has a positive impact on CCO by Optimisation of departure trajectories (i.e. better planning and management of departures, optimisation of flight paths from the outset),
+
+Reducing climb disruptions (i.e. DMAN helps to coordinate departures more smoothly, minimising air traffic control interventions that could disrupt a continuous climb. For example, it can help to avoid intermediate steps in the climb that would require the CCO to be interrupted. This is particularly true when the DMAN and AMAN are linked, as is the case at Zurich).
+
+To further optimise CCO/CDO, a project based on new controller tools (including DMAN) and airspace design is planned.

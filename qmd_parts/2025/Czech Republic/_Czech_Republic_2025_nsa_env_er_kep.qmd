@@ -1,0 +1,8 @@
+## **2.2.2.A. PI #1**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+There is a a minor year-on-year decline in this PI. The FRA over the Prague FIR has been implemented. Continuous monitoring of flight trajectories allowing to further fine tune RAD restrictions to allow as much flight planning flexibility as possible. Ongoing communication with airline operators to ensure they utilise FRA to their best benefit. Traffic restrictions (RAD restrictions, flow measures) in sectors of the adjacent ANSPs have negative impact. Airlines file suboptimal routings, sometimes for a reason (restritions in other ACCs, avoiding regulated sectors, utilising better wind) sometimes for no known reason - inefficiencies in flight planning software. We try to actively communicate with AO and CFPSPs to avoid these cases.
+
+ince February 23, 2023, FRA has been applied in the Czech Republic as a part of SEE FRA. From November 28, 2024, the Czech free route airspace (FRA) within the SEE FRA (South East Europe Free Route Airspace) is connected with the BALTIC FRA and SECSI FRA (South East Common Sky Initiative Free Route Airspace).
+

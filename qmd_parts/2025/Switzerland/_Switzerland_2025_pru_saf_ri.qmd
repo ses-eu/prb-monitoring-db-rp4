@@ -1,0 +1,14 @@
+## SAF1.3. Rate of runway incursions (RIs) (PI#1)
+
+In 2025, Switzerland reported a total of 15 runway incursions (RI) at its 2 airports listed in the performance plans. When comparing the RIs at airport level to Union-wide level, Switzerland was higher than Union-wide average (3.32 vs 2.53). The rate of runway incursions has increased compared to 2024 at airport level (3.32 vs 0.69).
+
+In 2025, Switzerland reported 5 runway incursions with ATS/CNS contribution. When comparing the rate of RIs at airport level with ATS/CNS contribution, Switzerland was slightly higher than Union-wide average (1.11 vs 0.96). The rate of RIs with ATS/CNS contribution has increased slightly compared to 2024 (1.11 vs 0.91).
+
+In terms of the initiatives implemented or planned to improve this performance indicator, according to the report, a new "Departure and Arrival Traffic Management System" (project owned and implemented by FZAG). The new DARTS project aims at replacing the old departure manager at Zurich airport, and improving the support provided to apron controllers. Better departure planning, by considering runway concept plan. Improved safety and efficiency on the apron, by automatically detecting conflicts on the taxiways. The monitoring of the effectiveness on performance is done via the annual oversight activity and in addition to that via FOCA internal KPI \'quartal reporting SI\' by the Safety Officer SI.
+
+-   For Geneva airport, the monitoring report lists the following initiatives implemented or planned: Colocation of CAT I / II / III stop bars on TWY P & Q (03.10.2024) as well as renaming of TWY and intermediate holding point on North Apron.
+
+-   Implementation of ARSI alerts (15.05.2025): Unexpected Movement (2 alerts): TKOFFCLR vs UnexpectedMovement & LDGCLR vs UnexpectedMovement
+
+-   A new set of ARSI alerts are foreseen to be implemented in May 2026 to improve today\'s situation.
+

@@ -1,0 +1,48 @@
+## 2.2.1.A. KPI #1
+
+### Assessment of the achieved level of actual performance in the environment KPA
+
+In 2025, Switzerland has met its KPA environment target, with the KEA reaching 4.14% compared to the goal of 4.34%, a difference of 0.20 percentage points.
+
+Performance slightly decreased in 2025 compared to 2024 due to increased traffic which is the main factor for a deterioration of flight trajectories. The positive trend set by the Free Route Airspace (FRA) in 2023 and 2024 while still playing may have reach its limit for absobing new trafic without impairing too drastically KEA. Trafic forecast
+
+The expansion and growing use of Free Route Airspace (FRA) enables more direct and efficient flight planning. While FRA had a limited effect on KEA, it significantly improved KEP performance, especially at the Swiss-German border (cross-border FRA), allowing for more direct planned routes. These more efficient trajectories reduce fuel consumption, as aircraft can carry less fuel and thus fly lighter.
+
+Within Switzerland, the internal KEA component stands at 0.8%, indicating that 99.2% of trajectories between CH FIR entry and exit points are direct showing stability. The most notable improvement from 2023 occurred at the CH FIR interface, with a 10% efficiency gain, likely due to cross-border FRA enhancements and fewer industrial actions in neighboring countries.
+
+This case once again highlights that the KEA indicator does not fully reflect the performance of the air navigation service provider. Performance is influenced by multiple interdependent factors, such as safety, capacity, cost-efficiency, and weather, and responsibility is shared among various stakeholders, including airspace users and the Network Manager (NM).
+
+### Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact
+
+Free Route Airspace Switzerland (FRACH), referenced in ERNIP 92.065, was implemented in December 2022, positively influencing HFE performance since then. Its primary objective was to enhance skyguide's service to airspace users by enabling shorter flight paths and simplifying the Route Availability Document (RAD) where feasible.
+
+At the same time, Cross-Border FRA between Switzerland and Germany (CHE/DEU, ERNIP 102.006) was launched. This initiative introduced limited cross-border operations using mandatory FRA points strategically placed away from ATC sector boundaries to minimize flight distances between FRA zones. Further enhancements are planned to expand cross-border FRA operations and reduce network inefficiencies.
+
+A FABEC study comparing February 2023 to February 2020 highlighted the benefits of cross-border FRA. It showed improvements in HFE for both internal and interface components. With strike days excluded, the study found that:
+
+- HFE-KEP improved by 0.88%, indicating shorter planned trajectories and reduced fuel requirements.
+
+- HFE-KEA improved by 0.22%.
+
+Additional Cross-Border FRA are planned between 2026 and 2028 to improve operations between Switzerland and France (CHE/FRA ERNIP 102.036, CHE/FRA ERNIP 102.028)
+
+### Progress on the implementation of the measures committed to in the ERNIP
+
+skyguide\'s FRA-CH and cross-border FRA measures are progressing as planned (ERNIP entries 92.065 and 102.006). Further cross-border FRA developments at the CHE/FRA border (102.036, 102.028) are planned for 2026-2028.
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+### 
+
+### Recommendations to the ANSP to rectify the situation
+
+### 
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+### 
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+## 
+

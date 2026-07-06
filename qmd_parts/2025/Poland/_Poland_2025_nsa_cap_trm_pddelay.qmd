@@ -1,0 +1,14 @@
+## **2.3.2.B. PI #2**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+Pre-departure delays may be attributed to recovering or, in some cases, exceeding pre-COVID traffic volumes, which increases apron and terminal congestion. Ice-shedding procedures began to be utilized by some airlines, which in tight aerodromes like EPWA accounts for some delays.
+
+GND planner position concept has been established and is now planned to be implemented in 2027 to increase effectiveness of GND operations and reduce delays. Low visibility procedures are planned to be updated in 2026, which can reduce queue times in low visibility conditions. Additional de-icing pad is planned to be open in 2027, which should reduce some of de-icing related congestions.
+
+The NSA receives the list of planned changes to ATM functional system on a regular basis. Once the GND planner position is notified the relevant monitoring activities will be proceeded.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+n/a
+

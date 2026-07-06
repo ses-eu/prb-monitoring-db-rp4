@@ -1,0 +1,10 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+In 2025, MATS achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+As described in the in the monitoring report, the ANSP initially proposed that some areas achieved D level. However, following NCA verification, these areas which were considered not to sufficiently demonstrate level D and were therefore assigned an actual value of C in the EOSM.
+
+As further outlined in the monitoring report, the way the SMS is set, the continuous improvement process managed under MATS Quality Pillar (ISO 9001-2015), and the structure of the SQSC include, as one of the annual activity indicators, an internal safety performance report based on data extraction across all areas, including CNS availability, service delivery, management of occurrences (SMIs and RIs), and other required indicators. This provides MATS with an overview to support the management of results and the improvement of performance.
+
+As also noted in the monitoring report, MATS completed a safety culture survey last year, which indicated that all safety targets were achieved.
+

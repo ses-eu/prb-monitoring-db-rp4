@@ -1,0 +1,8 @@
+## 2.2.2.I. PI #9
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+FUA is integrated for the entire German airspace. Taking operational requirements into account DFS utilizes the available airspace for routing aircraft as much as possible.
+
+The NSA is monitoring the KPA by regularly checking the current performance using the existing dashboards.
+

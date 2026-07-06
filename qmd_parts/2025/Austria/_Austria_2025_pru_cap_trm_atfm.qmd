@@ -1,0 +1,6 @@
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
+
+Average ATFM arrival delay in Austria was 0.66 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 0.74 min/arr.
+
+The 2025 result was mainly driven by weather regulations in the months of June to October at Vienna and Innsbruck, with very little delay at other Austrian airports included in the performance plan.
+

@@ -1,0 +1,16 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The additional taxi-in time (aggregated for the 6 airports monitored in RP4) has remained stable (+0,02 min/flight) compared with 2024 while traffic has increased by 3,5%.
+
+In general, the highest additional taxi-in times throughout the year occur during the high season months of each airport, variations in this indicator are related to traffic especially at airports such as LEPA and LEMG.
+
+In 2025 taxi-in times at LEMD are higher than 2024. Additionally, the number of heavy aircraft operating at the airport increased (+4,5%). The observed increase in taxi-in time in LEMD is mainly due to works carried out on the taxiway system near RWY 32L, particularly on sections A and M (information in SUP 163/24).
+
+LEIB is monitored together with these 6 airports as it is one of the airports considered in the Spanish performance plan (ESPP4) for RP4. In 2025 it reaches a value of 1,43, higher (5,1%) than the 2024 value (1,36). The additional taxi-in time (aggregated for the 7 airports monitored in RP4) has a value of 1,50, +1,4% higher than the previous year (1,48).
+
+This PI is monitored by AESA. Should any significant deviations be identified, the possible causes will be analysed as part of the annual monitoring process, in collaboration with the relevant stakeholder.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

@@ -1,0 +1,14 @@
+## **2.2.2.D. PI #4**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+As in previous years of RP3, a rationale that can be considered valid for Performance Indicators from PI#4 to PI#9---related to performance in both the taxi phases and the terminal area (ASMA and CCO/CDO)---is that ENAV SpA, as well as other ANSPs within the ECAC area, does not have full access to the complete set of data used by Eurocontrol/PRU to generate its outputs.
+
+With the aim of reducing inefficiencies and improving operational performance, ENAV SpA has developed several ad hoc tools primarily intended to identify areas of inefficiency and to support the planning of targeted mitigation actions aimed at enhancing flight efficiency.
+
+Starting from the first year of RP4 (2025), the outputs produced using the new methodology are presented in this report for the whole RP4 period, while acknowledging that the existing limitations related to data availability for ANSPs remain unchanged.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+not applicable
+

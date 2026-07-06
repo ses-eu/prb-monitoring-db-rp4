@@ -1,0 +1,9 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Portugal reported 12 separation minima infringements (SMI) in their airspace\
+during 2025. The rate of separation minima infringements was lower than the Union-wide average (1.24 vs 7.10). At ANSP level, Portugal reported 16 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (1.65 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has decreased slightly at State level (1.24 vs 1.51) and increased slightly at ANSP level (1.65 vs 1.51).
+
+In terms of improving this performance indicator, the monitoring report lists the following initiatives implemented or planned: Implementation of new features in the new Air Traffic Management System (TOPSKY) which are intended to improve safety. Continuous refreshment training (annual refreshment courses) delivered to all ATCOs. Increase of the Normal Operations Monitoring activities targeting En-route and Approach environments.
+

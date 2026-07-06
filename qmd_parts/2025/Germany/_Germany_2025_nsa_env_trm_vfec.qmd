@@ -1,0 +1,5 @@
+## 2.2.2.H. PI #8
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+No additional procedures are currently planned or being considered. Continuous Climb Operations (CCO) are applied within the framework of published procedures whenever traffic conditions allow.

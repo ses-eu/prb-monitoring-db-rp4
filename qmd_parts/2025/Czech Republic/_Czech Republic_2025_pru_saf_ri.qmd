@@ -1,0 +1,8 @@
+## SAF1.3. Rate of runway incursions (RIs) (PI#1)
+
+Czechia reported 6 runway incursions (RI) at Prague airport during 2025. When comparing the RIs at airport level to Union-wide level, Czechia was higher than Union-wide average (4.21 vs 2.53). The rate of runway incursions has increased compared to 2024 at airport level (4.21 vs 3.8).
+
+In 2025, Czechia reported 0 runway incursions with ATS/CNS contribution, compared to 2024 when they reported 1 RI with ATS/CNS contribution (rate of 0.75 in 2024).
+
+In terms of initiatives implemented or planned, the monitoring report lists the following initiatives for both RIs and SMIs: Continuous development of the Safety management system (SMS), continued development of all operational ATM systems and seminars for Airspace Users. Local Runway Safety Team meetings are regularly conducted, the ANS CR participated on these meetings. Operational safety within the provision of ATM/ANS services constitutes one of the principal agenda items of the Safety Boards conducted between the Czech CAA and ANS providers. In this context, four Safety Board meetings with ANS CR were held during 2025.
+

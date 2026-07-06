@@ -1,0 +1,24 @@
+## **2.2.2.F. PI #6**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The additional time in terminal area (aggregated for the 6 airports monitored in RP4) has decreased by 2,7% in 2025 compared to 2024, despite traffic increased (+3,5%).
+
+In general, the highest additional ASMA times throughout the year occur during the high season months of each airport, variations in this indicator are related to traffic especially at airports such as LEPA and LEMG. Additionally, Barcelona and Palma airports experienced frequent adverse weather conditions over several months.
+
+Some restructuring projects have been implemented in recent years:
+
+- Reorganization of Canarias TMA
+
+- PBN STARs and RNP APCH in Madrid TMA
+
+Some restructuring projects are planned for the coming years in the main TMAs in Spain:
+
+- PBN SIDs, ILS & RNP APCH in Palma TMA
+
+LEIB is monitored together with these 6 airports as it is one of the airports considered in the Spanish performance plan (ESPP4) for RP4. In 2025 it reaches a value of 2,42, lower (-6,9%) than the 2024 value (2,60). The additional time in terminal airspace (aggregated for the 7 airports monitored in RP4) has a value of 3,02, -2,9% lower than the previous year (3,11).
+
+This PI is monitored by AESA. Should any significant deviations be identified, the possible causes will be analysed as part of the annual monitoring process, in collaboration with the relevant stakeholder.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

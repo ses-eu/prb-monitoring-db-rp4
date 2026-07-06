@@ -1,0 +1,44 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The NSAs are monitoring the performance by using the SES dashboards
+
+https://www.sesperformance.eu/dataportal/vis/2025/
+
+Direct coordination between NSAs and ANSPs is done regularly and ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
+
+\-\-- Germany \-\--
+
+No additional procedures are currently planned or being considered. Continuous Descent Operations (CDO) are applied within the framework of published procedures whenever traffic conditions allow.
+
+\-\-- Netherlands \-\--
+
+LVNL has hardly any contribution to this PI, as most flights in the cruising phase are above FL245, so outside LVNL\'s area of responsibility. No specific measures are planned.
+
+\-\-- Switzerland \-\--
+
+Vertical fligtht efficiency for the en-route part of the trajectory is a new performance indicator on which there has been no previous performance result published.
+
+As for Horizontal Flight Efficiency, this indicator benefits from FRA-CH deployment and FUA improvement. It is also sensitive to capacity shortfall and increased convective weather.
+
+FRA-CH was implemented at the end of 2022. Since then, further cross-border developments have been implemented and more are planned.
+
+Additional FUA activities are planned to improve tools, processes and procedures to allocate airspace according to both CIV and MIL needs.
+
+FUA has also developed
+
+\-\-- France \-\--
+
+This indicator is new and no previous historic data is available to provide any sound analysis at this stage. The PI will be monitored during RP4 and the evolution of the achievements will enable comparisons, explanations, performance drivers identification and benchmarking in the next years of RP4.
+
+In addition, France is continuously working on improving CDO implementation and FUA improvements.
+
+\-\-- Belgium \-\--
+
+Upper airspace in Belgium (above FL245) is delegated to MUAC and is therefore out of scope for skeyes.
+
+\-\-- MUAC contribution for D/B/NL\-\--
+
+\[No contribution received\]
+

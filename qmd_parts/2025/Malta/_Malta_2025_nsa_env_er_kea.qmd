@@ -1,0 +1,42 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The 2025 target for horizontal en-route flight efficiency of the actual trajectory (KEA) was not achieved.
+
+Actual performance was 1.67% compared with the target of 1.56%.
+
+The NSA considers that environmental performance at local level was affected mainly by the wider network context, including traffic growth above forecast and changes in traffic patterns linked to geopolitical developments affecting route choices across the network. This was particularly the case in the East Sector of LMMM during the 12-day war in the Middle East and its immediate aftermath. It is also noted that delays in the Greece FIR also affected LMMM as operators rerouted through LMMM to reduce flow control delays and therefore flight plans filed diverged from actual traffic routing.
+
+No evidence was identified of a major local structural degradation in environmental performance attributable solely to the local service provision arrangements.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+No major operational or structural changes were implemented in 2025 that would explain the variance in KEA. The local ANSP continued planning and investment activities relevant to future operational modernisation, including deployment-related projects under RP4, but these are expected to contribute primarily in the medium term rather than to have materially changed the 2025 KEA outcome.
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+Implementation continued in line with Malta's RP4 planning and wider network coordination arrangements.
+
+In particular, the investment programme continued to include initiatives supporting interoperability and network integration, such as the new SWIM-compliant ATM system and free-route-airspace-related developments.
+
+The performance effect of these measures is expected to materialise progressively over RP4 & RP5.
+
+Plans for in the introduction of PBN SIDs / STARs and a redesign of the TMA are still ongoing and will affect future years.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+The principal factors underlying the shortfall were traffic levels above forecast and the continued influence of wider network constraints and geopolitical routing and rerouting effects outside Malta's sole control. These factors affected the trajectories operated in the charging zone and reduced the likelihood of meeting the local KEA target despite the absence of any evidence of significant local capacity stress in en-route operations.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+The NSA recommends that the ANSP continue to support network measures aimed at improving flight efficiency, including route design optimisation where feasible, timely implementation of network-relevant ATM modernisation projects, and continued coordination with the Network Manager. The NSA will continue to monitor the evolution of KEA, the related planning indicators (KEP/KES) and the implementation status of the relevant RP4 investments and network measures in subsequent annual monitoring cycles.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+While the Free Route Implementation in the Malta FIR / UIR has been achieved with full implementation by end Nov 2025, the introduction of RNAV SIDs and STARs previously planned for implementation in 2023 has experienced several delays. These delays are further delaying the introduction of CCO/CDO. MATS is looking forward to rectify this issue with urgency.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+Not applicable.
+

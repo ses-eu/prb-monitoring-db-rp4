@@ -1,0 +1,41 @@
+## **2.2.2.H. PI #8**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The NSAs are monitoring the performance by using the SES dashboards
+
+https://www.sesperformance.eu/dataportal/vis/2025/
+
+Direct coordination between NSAs and ANSPs is done regularly and additionally ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
+
+\-\-- Germany \-\--
+
+No additional procedures are currently planned or being considered. Continuous Climb Operations (CCO) are applied within the framework of published procedures whenever traffic conditions allow.
+
+\-\-- Netherlands \-\--
+
+Detailed monthly monitoring of performance has started for EHAM; the same is planned to be implemented for the other airports in 2025. Based on detailed analyses, measures to improve performance will be developed, but possibilities are limited, given the already good performance.
+
+\-\-- Switzerland \-\--
+
+Vertical flight efficiency to Top of Climb remained stable in 2025 despite traffic increase. CCOs can be flown only when traffic is reduced.
+
+In 2025, the average duration of level-off segments during the climb phase was 0.6 minutes at Geneva Airport and 0.9 minutes at Zurich Airport, compared with an average of 0.5 minutes across the top 30 European airports.
+
+Skyguide was audited in 2023, 2024 and 2025 by CANSO for CCO/CDO practices in ZRH and GVA as part of its GreenATM accreditation. Room for improvement is identified and corrective actions will be taken.
+
+Projects are planned to renew the DMAN in Zurich and implement one in Geneva. The DMAN has a positive impact on CCO by Optimisation of departure trajectories (i.e. better planning and management of departures, optimisation of flight paths from the outset),
+
+Reducing climb disruptions (i.e. DMAN helps to coordinate departures more smoothly, minimising air traffic control interventions that could disrupt a continuous climb. For example, it can help to avoid intermediate steps in the climb that would require the CCO to be interrupted. This is particularly true when the DMAN and AMAN are linked, as is the case at Zurich).
+
+To further optimise CCO/CDO, a project based on new controller tools (including DMAN) and airspace design is planned.
+
+\-\-\-- France \-\--
+
+The average time spent in level-off for climbing aircraft is much lower than for descending aircraft. This is explained by the fact that climbing aircraft depart from an airport and therefore diverge from a single point (whereas arriving aircraft converge toward one point). As a result, there are fewer conflicts between aircraft and, consequently, less need for level-offs.
+
+Nevertheless, some local initiatives have been implemented where potential improvements have been identified. This is the case in the Paris area, where LFPG and LFPO have worked on transfer conditions to the ACC to enable airlines to use software that computes the most fuel-efficient climb profile for each flight (as part of the HERON SESAR project).
+
+\-\-- Belgium \-\--
+
+skeyes : for monitoring skeyes relies on the data published by the AIU portal; the results there indicate that no major inefficiencies are detected. Continuous climb operations are being flown and facilitated as long as traffic situation permits. Since ToC is outside skeyes AoR, currently there is a work being done to develop an internal indicator for monitoring.

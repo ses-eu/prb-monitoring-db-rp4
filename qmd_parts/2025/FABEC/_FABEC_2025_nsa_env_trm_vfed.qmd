@@ -1,0 +1,60 @@
+## **2.2.2.G. PI #7**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The NSAs are monitoring the performance by using the SES dashboards
+
+https://www.sesperformance.eu/dataportal/vis/2025/
+
+Direct coordination between NSAs and ANSPs is done regularly and additionally ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
+
+\-\-- Germany \-\--
+
+No additional procedures are currently planned or being considered. Continuous Descent Operations (CDO) are applied within the framework of published procedures whenever traffic conditions allow.
+
+The NSA is monitoring the KPA Environment by regularly checking the current performance by using the existing dashboards.
+
+Source of above shown values: SES DB (https://www.sesperformance.eu/dataportal/vis/2025/)
+
+\-\-- Netherlands \-\--
+
+Detailed monthly monitoring of performance has started for EHAM; the same is in development for the other airports. Based on detailed analyses, measures to improve performance will be developed. These will focus on reducing the time in level flight, not specifically the share of CDOs.
+
+\-\-- Switzerland \-\--
+
+Vertical flight efficiency from Top of Descent remained stable in 2025 despite traffic increase. CDOs can be flown only when traffic is reduced.
+
+In 2025, the average duration of level-off segments during the descent phase was 2.8 minutes at Geneva Airport and 3.2 minutes at Zurich Airport, compared with an average of 2.8 minutes across the top 30 European airports.
+
+Skyguide was audited in 2023, 2024 and 2025 by CANSO for CCO/CDO practices in ZRH and GVA as part of its GreenATM accreditation. Room for improvement is identified and corrective actions will be taken.
+
+Skyguide continues to work with the airlines to improve the CCO/CDO rate. The OMASI trial with Swiss, aimed at implementing dynamic RAD on the border between France and Switzerland, OMASI waypoint, and thus enabling CDO from Top of Descent, was completed in March 2024. It shows impressive results and even if post-trial analysis determine that it can be continued because of its impact on capacity, improvement measured could be found.
+
+Projects are planned to implement an AMAN in Geneva and optimize the Extended-AMAN (XMAN) in Zurich. The AMAN plays a critical role in ensuring that CDO can be executed effectively. By optimizing traffic flow, coordinating arrivals, and minimizing disruptions, AMAN enhances the ability of aircraft to maintain a smooth, uninterrupted descent.
+
+Furthermore, in LSZH, LADY (Lean AMAN Development Yielder) will improve the inbound trajectory calculation, thus allowing the ATCOs to deliver a highly reliable \"miles to touchdown\" information to the pilots, which in turn will allow them to optimise their descents and contribute to our CDO objectives.
+
+Projects are planned to implement an AMAN in Geneva and optimize the Extended-AMAN (XMAN) in Zurich. The AMAN plays a critical role in ensuring that CDO can be executed effectively. By optimizing traffic flow, coordinating arrivals, and minimizing disruptions, AMAN enhances the ability of aircraft to maintain a smooth, uninterrupted descent.
+
+To further optimise CCO/CDO, a project based on new controller tools (including AMAN) and airspace design is planned
+
+\-\-- France \-\--
+
+DSNA is continuously working on improving the vertical efficiency of descents and has set an objective to reduce the time spent in level flight (from the Top of Descent) by 25% compared to 2019. This aims to reduce both noise and fuel consumption at major airports.
+
+This initiative is being implemented locally through several projects:
+
+- Implementation of PBN to final systems at LFPO and LFMN;
+
+- Implementation of new approach trajectories at LFLL (level-off time reduced by 10 seconds);
+
+- At LFPG, a green slot for optimizing descent has been expanded, resulting in fuel savings of 40 to 80 kg for 150 to 200 flights each day;
+
+- At LFPO, a similar system has been implemented, saving 10 seconds of level-off time;
+
+- An experiment will take place in 2026 at LFST to facilitate Continuous Descent Operations (CDO).
+
+\-\-- Belgium \-\--
+
+skeyes established recurrent monitoring of the CDO performance, in order to improve monitoring and to be able to identify where and to which extent inefficiencies are taking place. Since ToD is outside skeyes AoR, skeyes developed its own indicators. In addition to binary indicators, skeyes is using non-binary CDO indicators based on average level-off time. The statistics are presented and discussed with the main Airlines during quarterly CEM meetings at airports.
+

@@ -1,0 +1,16 @@
+## **2.2.2.A. PI #1**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+Two Free Route Airspace (FRA) projects were successfully implemented on 28 November 2024: 1) FRA interface between SECSI FRA and SEE FRA (Vienna, Praha, Bratislava, Budapest CTAs) and 2) FRA interface between Baltic FRA and SEE FRA (Praha CTA). In both projects, FRA is available 24/7 and flight planning does not require intermediate points along the FRA boundaries. The new interfaces reduce complexity and improve horizontal flight efficiency.
+
+from Q4/2026 to Q1/2027 - LBSR/LRBB/LZBB/LUUU/EPWW/EYVC/UKOV - cross-border FRA Operations between SEE FRA, FRA Poland (Baltic FRA and FRA Ukraine.
+
+Due to the impact of the war in Ukraine, it is not possible to directly compare the KEP RP3 and RP4 targets.
+
+A number of events in 2025 affected the network and had direct consequences on the flight efficiency evolution:
+
+The closure and avoidance of Ukrainian, Belarusian and Russian airspace forced traffic to reroute through neighbouring countries (Türkiye, Bulgaria, Romania, Poland, Slovakia, Hungary, Lithuania, Latvia and Estonia, etc.). This shifted significant demand to adjacent ACCs/UACs, especially Far Eastern traffic, and led to increased route extensions.
+
+KEA, KEP, KES and other indicators are valuable -- but they do not describe the full runway-to-runway fuel optimum.
+

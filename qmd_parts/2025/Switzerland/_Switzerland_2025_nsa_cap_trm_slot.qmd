@@ -1,0 +1,14 @@
+## 2.3.2.A. PI #1
+
+### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
+
+The performance in 2025 slightly deteriorated (5.21% outside slot tolerance window) against 2024 (4.46%), but Switzerland remains largely below the target of 20%.
+
+Take note that following a technical update to Skyguide's system deployed on 8 May 2025, which resolved an issue related to incorrect time calculations for joining or leaving flights with only one waypoint in the route, an unintended side effect was identified. This side effect affected IFR flights for which the SID endpoint coincided with the Exit COP within Swiss airspace. The issue was observed exclusively for departures from EDNY and LZSR using the BEMKI or KPT SIDs.
+
+In these specific cases, the system transmitted multiple flight status messages (FSAs) after the initial correct message, with each subsequent FSA indicating progressively earlier timings.
+
+The impact of this bug is, as of May 2025, the proportion of flights operating outside the Slot Tolerance Window increased significantly, exceeding the regulatory threshold.
+
+A corrective software update was deployed on 19 February 2026, preventing the transmission of multiple incorrect FSAs. As anticipated, this fix fully resolved the issue for both EDNY and LSZR
+

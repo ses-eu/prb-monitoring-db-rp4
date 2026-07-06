@@ -1,0 +1,48 @@
+## **2.2.2.B. PI #2**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The NSAs are monitoring the performance by using the SES dashboards
+
+https://www.sesperformance.eu/dataportal/vis/2025/
+
+and the FABEC BI dashboards
+
+https://app.powerbi.com/view?r=eyJrIjoiNzFjMGVhNmMtODAyZi00YzI3LWFjNmMtOTlhZWUyZmE3NjlkIiwidCI6ImZlMmE2ZDZmLTlhNDMtNGI5MC04ZDdlLTE3YTllOGY3ZGNmMSIsImMiOjh9
+
+Direct coordination between NSAs and ANSPs is done regularly and ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
+
+\-\-- Germany \-\--
+
+In 2025, ten out of thirteen AIRACs have been used for several route changes. The PYXIS/ZEBRA implementation in March 2025 was successful improving the overall capacity in Bremen ACC and Maastricht UAC with increased MME (military mission effectiveness). Throughout the year en-route and RAD updates were implemented to accompany the various PBN implementations for several airports in accordance with CP1.
+
+Besides that, the major change has been made through flight plan adherence. In 2025, air traffic controllers were instructed not to issue non-standard flight level clearances or shortcuts in order to avoid undermining regulated airspace.
+
+\-\-- Netherlands \-\--
+
+LVNL: simultaneously with PYXIS a route in the western part of LVNL airspace was made more direct. This direct was already often given in the actual operation, but was formalised so that it can be planned.
+
+Additionally, in RP4 LVNL plans to implement the use of LARA for advanced FUA, making temporary reserved areas available for civil traffic more efficiently, allowing airspace users to make use of more efficient routes.
+
+\-\-- Switzerland \-\--
+
+Despite an increase in traffic, the flight efficiency of the shortest constrained route remained satble in 2025 (6.04%).
+
+FRA-CH was implemented at the end of 2022, bringing significant improvements at KES level thanks to its cross-border design. Since then, further cross-border developments have been implemented and more are planned.
+
+The difference between KEP and KES is is increasing from 0.31% in 2024 to 0.37%. It shows the difference between the cheapest and the shortest available route.
+
+\-\-- France \-\--
+
+See 2.2.1.A KPI #1 and 2.2.2.A PI #1 for major changes implemented by the ANSPs. Measures that improve KEA&KEP generally also improve KES.
+
+For information on the monitoring of the effectivenesss on performance, see 2.2.2.A PI #1.
+
+\-\-- Belgium \-\--
+
+skeyes is monitoring the performance by using the SES dashboards, even though there is limited room for improvement within Belgian Airspace; skeyes contributing to improvements of en-route flight efficiency by establishing a CIV-MIL AMC, co-located at skeyes premises, which aims at optimising the airspace management between CIV and MIL and contestant improvements of FUA on local level.
+
+\-\-- MUAC contribution for D/B/NL\-\--
+
+\[No contribution received\]
+

@@ -1,0 +1,6 @@
+## **2.2.2.B. PI #2**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The narrow gap between KEP and KES indicates that flight planning is already highly optimised, operating close to the best achievable trajectories within the existing constraints.
+

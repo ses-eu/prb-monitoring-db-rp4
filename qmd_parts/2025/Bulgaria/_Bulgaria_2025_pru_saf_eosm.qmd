@@ -1,0 +1,20 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+In 2025, BULATSA met the planned maturity levels set out in its performance plan for all five components of the EoSM. When looking ahead to end of RP4 targets, BULATSA has already achieved 4 out of 5 EoSM targets, needing improvement in Safety Risk Management component to reach the RP4 targets.
+
+As described in the monitoring report, although relatively conservative targets were initially set for 2025 to maintain a resilience buffer in light of the unstable geopolitical situation east of the Sofia FIR, as well as the anticipated increase in traffic demand, actual performance has surpassed expectations in several areas. In particular, the components related to Safety Policy and Objectives, Safety Assurance, Safety Promotion, and Safety Culture have already reached higher maturity levels. This demonstrates a higher-than-anticipated level of effectiveness and robustness of the Safety Management System under conditions of both operational growth and external uncertainty.
+
+As for the measures put in place to achieve the safety performance targets, the monitoring report states that in 2025 BULATSA continued the systematic implementation and enhancement of its Safety Management System through a combination of structured governance, data‑driven monitoring, and organisation‑wide engagement. A key measure is the mature Safety Culture framework, built on biennial Safety Culture Surveys, supported by formal action plans, Safety Monitoring Reports, and Safety Council oversight. Safety culture activities cover the entire organisation---including operational and support staff---and are reinforced through workshops, safety bulletins, and targeted communication campaigns. BULATSA also maintains strong management and governance involvement, with regular Safety Council meetings, regular daily operational briefings with the management participation, and direct engagement between senior management and operational staff. Safety performance is continuously monitored through dashboards (Power BI, e‑TOKAI), enabling data‑driven decision‑making. In 2025, BULATSA demonstrated tangible progress in safety performance through the following achievements:
+
+-   Strengthened Just Culture framework, including updated guidance, formal processes for behavioural assessment, and enhanced transparency and staff trust.
+
+-   Enhanced human performance management, notably through the implementation of the Stress and Fatigue Risk Management Programme and associated 2025 action plan.
+
+-   Improved data‑driven safety oversight, with expanded use of Power BI dashboards, integrated reporting systems, and systematic KPI monitoring.
+
+-   Full integration of safety processes across the organisation, including active involvement of frontline staff in investigations, risk assessments, and safety improvement initiatives.
+
+-   Strengthened stakeholder collaboration, including formalised internal and external interface management.
+
+-   Demonstrated resilience and adaptability, maintaining high safety performance despite increased operational demand and external challenges, supported by robust SMS processes and governance.
+

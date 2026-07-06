@@ -1,0 +1,14 @@
+## **2.2.2.I. PI #9**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: The effective use ratio of reserved or segregated airspace in 2025 stands at 80.1% (75,766 hours used out of 94,535 hours allocated and notified to the Network Manager). This relatively high ratio reflects the sustained level of military activity across Romanian airspace throughout 2025, driven by the ongoing geopolitical situation in the region.
+
+The high utilisation rate of reserved airspace is consistent with the elevated military activity --- including both scheduled and ad-hoc activations --- described in other sections of this report. In this context, the ratio reflects the operational reality rather than a planning inefficiency.
+
+ROMATSA continues to apply the civil-military coordination framework under the ASM (Airspace Management) process at all three levels, aiming to ensure that airspace reservations are as closely matched to actual military requirements as possible, thereby minimising the impact on civil traffic. The implementation of RoMAIR TCM in 2026 further supports this coordination by providing enhanced real-time complexity indicators that inform sector configuration and airspace management decisions.
+
+Effectiveness will be monitored through the continued tracking of this indicator via the NM reporting framework and ROMATSA\'s internal ASM performance monitoring processes.
+
+NSA: continuous oversight activities.
+

@@ -1,0 +1,14 @@
+## ERT1.2. Rate of planning via available airspace structures (PI#10)
+
+CROATIA reported the following ratios:
+
+- the ratio of planning via available airspace structures is **36%** (via available restricted and segregated airspaces)
+
+- the ratio of planning via available airspace structures is **95%** (via available conditional routes)
+
+*[Comment]{.underline}:*
+
+*The data regarding ratio of planning via available airspace structures has been received from NM upon request and published on the SES Performance Portal.*
+
+*The data regarding number of aircraft filing flight plans via available restricted or segregated airspace, number of aircraft filing flight plans via available conditional routes and number of aircraft that could have planned through those airspace structures are not available because such data have not been delivered by NM upon request nor are available on the SES Performance Portal and cannot be monitored at local level.*
+

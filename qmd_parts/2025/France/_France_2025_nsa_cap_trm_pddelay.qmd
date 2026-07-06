@@ -1,0 +1,10 @@
+## 2.3.2.B. PI #2
+
+### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
+
+Performance evolution is linked with the overall traffic evolution and general ATC terminal performance. In 2025, the situation impoved at LFPO, and LFMN despite their respective delay situation.
+
+### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
+
+In 2025, again the quality threshold for unidentified delays has not reached the 50% quality threshold at Roissy Charles de Gaulle airport to validate the 2025 data flow, the 1st condition for publication. This airport currently mainly uses the code \[ZZZ\], which indicates that ATCOs have not always the information about the origin of the various delays. This situation has still to be examined in detail with the ad-hoc airport and DSNA experts in order to find a solution to fix this recurrent issue for RP4.
+

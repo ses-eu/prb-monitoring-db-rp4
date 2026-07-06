@@ -1,0 +1,56 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -6.5% (or -1.85 €2022) lower than the planned DUC. This results from the combination of significantly lower than planned en route costs in real terms (-6.6%, or -9.8 M€2022) and slightly lower than planned TSUs (-0.1%).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (-0.1%) falls inside the ±2% dead-band. Hence, the loss of en route revenues is borne by the ANSPs.
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -6.6% (-9.8 M€2022) lower than planned. This is the result of lower costs for the main ANSP, AirNav Ireland (-7.8%, or -9.5 M€2022), the NSA/EUROCONTROL (-1.4%, or -0.3 M€2022) and the MET service provider (-0.2%, or -0.02 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (AIRNAV IRELAND) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the significantly lower than planned en route costs in real terms for AirNav Ireland in 2025 (-7.8%, or -9.5 M€2022) result from:
+
+- Significantly lower than planned staff costs (-5.2%), mainly due to the timing of recruitment and the timing of the 2025 pension payment. In line with the RP4 decision, a headcount rebate applies when actual ATCO and engineering headcount is below forecast. For 2025, this payroll rebate amounts to 3.7 M€ (nominal terms) and will be returned to airspace users in 2027 through a reduction in the en route unit rate.
+
+- Significantly lower than planned other operating costs (-8.4%), where *"other operating costs comprise training, systems and equipment maintenance, telecommunications, spares, power and administration costs including rent and rates, insurance, security, building repairs and maintenance."*
+
+- Significantly lower than planned depreciation (-21.0%), mainly reflecting "*a shortfall in technical and operational resources necessary to deliver capital projects."*
+
+- Significantly lower than planned cost of capital (-29.8%), mainly *"due to delays in project completions as outlined above."*
+
+- Slightly lower than planned deduction for VFR exempted flights (-0.2%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Ireland provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"The actual unit cost in real terms was 6.5% lower than forecast. Total En Route costs in nominal terms were 6% below the forecast level included in the RP4 Performance Plan. Nominal costs were lower than forecast for each of AirNav Ireland, MET and the NSA, including lower than determined Eurocontrol costs. Total En Route costs in real terms were 6.6% below the forecast level, together with service units close to forecast this led to an outperformance of the DUC by 6.5%."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"The lower than determined level of costs was driven by AirNav Ireland\'s delay in recruitment. The challenges faced by AirNav Ireland in recruiting engineers and ATCOs had a negative knock-on impact to it delivering its proposed capital investment programme. Under the RP4 decision, where actual ATCO and engineering headcount is below forecast, a headcount rebate applies. For 2025, this payroll rebate amounts to €3.7 million and will be returned to airspace users in 2027 through a reduction in the en route unit rate."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (AIRNAV IRELAND) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"Continue efforts to hire engineers and ATCOs. This will allow AirNav to allocate resources to its capex programme."*
+
+AirNav Ireland reports the implementation of the following actions:
+
+*"The ANSP will return any unspent capex to users in RP5. The Unit rate will also be adjusted downwards in 2027 to account for the under delivery of ATCOs and engineers in 2025."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

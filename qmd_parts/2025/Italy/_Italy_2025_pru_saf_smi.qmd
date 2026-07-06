@@ -1,0 +1,9 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Italy reported 296 separation minima infringements (SMI) in their airspace\
+during 2025. The rate of separation minima infringements was significantly higher than the Union-wide average (20.25 vs 7.10). At ANSP level, Italy reported 127 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was higher than the Union-wide average (8.97 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has increased at both State level (20.25 vs 8.77) and at ANSP level (8.97 vs 6.93).
+
+Information for ITAF was not submitted in the monitoring report.
+

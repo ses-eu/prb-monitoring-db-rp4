@@ -1,0 +1,12 @@
+## **2.3.2.B. PI #2**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The ATC pre-departure delay at LROP in 2025 was 0.66 min/flight, indicating a low level of delay attributable to ATC-related causes in the departure phase. This confirms that ROMATSA TWR and APP operations at Bucharest Henri Coandă International Airport did not represent a significant constraint for departure traffic in 2025. The main contributors to overall departure delay are considered to be predominantly non-ATC factors, such as airline turnaround processes, ground handling, apron/stand availability, airport infrastructure constraints, weather conditions and traffic peaks, as reflected in PI #3.
+
+This performance was supported by established coordination between TWR Otopeni, Bucharest APP, the airport operator, aircraft operators and the Network Manager. Relevant measures include the application of ATFM procedures, tactical coordination of start-up and push-back clearances, the clearance delivery position, A-SMGCS support for surface situational awareness, and Advanced Tower Messaging / ATOP capabilities supporting improved departure planning and surface movement predictability.
+
+No significant deterioration requiring corrective action was identified for PI #2 in 2025. Planned actions will focus on maintaining the current level of ATC performance, further refining departure management procedures, improving the operational use of ATOP taxi-time and departure planning information, and strengthening coordination during traffic peaks, adverse weather, low visibility operations or temporary infrastructure restrictions.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

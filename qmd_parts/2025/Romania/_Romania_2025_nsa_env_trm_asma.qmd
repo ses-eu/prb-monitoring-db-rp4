@@ -1,0 +1,22 @@
+## **2.2.2.F. PI #6**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: a) Implemented:
+
+- SID / STAR RNAV 1;
+
+- as current practice, vectorizations for shortening the trajectories when the traffic is of low complexity (DIRECT TO);
+
+- Bucharest TMA resectorisation - implementation of new sector: DIRECTOR.
+
+b\) Planned:
+
+- AMAN for Bucharest TMA, technically finalised in Q1 2026, with operational deployment pending validation, safety assessment and operational acceptance. Once operational, AMAN is expected to improve arrival sequencing and traffic predictability, with a possible indirect positive effect on taxi-in efficiency by reducing arrival bunching and surface demand peaks.
+
+- implementation of RNP (required navigation performance) approach procedures - to be published in 2026.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

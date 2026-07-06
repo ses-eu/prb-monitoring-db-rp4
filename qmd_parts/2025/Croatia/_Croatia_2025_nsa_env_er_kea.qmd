@@ -1,0 +1,34 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The ANSP did not fully achieve the targets set out in the Performance Plan or meet the established KEA values. However, the deviation from the target remained minimal. It should also be noted that several influencing factors within the KPA environment---such as the increased utilisation of Free Route Airspace (FRA) by airspace users and adverse weather conditions---are beyond the direct control of the ANSP.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+No major change
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+The ANSP implemented LDZO optimisation measures aimed at adjusting the sector division levels on lower sectors to FL325 and FL335, as well as introducing new combined (Upper + High) sectors above FL375. These changes were successfully implemented in accordance with the ERNIP Plan.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+While the ANSP does not have full control over the KEA KPI, the slight increase and subsequent marginal exceedance of the defined target can be largely attributed to factors beyond its direct influence, notably airline route adjustments in response to adverse weather conditions and constraints in congested airspace.
+
+Notwithstanding these external factors, the ANSP has undertaken significant measures to enhance airspace efficiency and flexibility, including the full and successful implementation of cross-border Free Route Airspace (FRA).
+
+### **Recommendations to the ANSP to rectify the situation**
+
+None
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+Croatia Control has implemented and effectively operates FRA procedures in accordance with European ATM network objectives and operational requirements. Through active participation in operational coordination meetings and collaborative decision-making processes, measures aimed at further airspace improvements are regularly identified and implemented in line with the European Route Network Improvement Plan.
+
+In addition, support to cross-border weather management processes contributes to increased flight predictability and operational resilience. This enables aircraft operators to receive more accurate and timely information for flight planning and execution, thereby supporting safer, more efficient, and environmentally sustainable operations across the network.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+The ANSP's contribution to the improvement of horizontal flight efficiency is reflected through continuous system enhancements, airspace design optimisation, the implementation and effective utilisation of Free Route Airspace as well as close coordination with neighbouring ACCs and the Network Manager.
+

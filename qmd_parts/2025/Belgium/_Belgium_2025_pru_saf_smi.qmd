@@ -1,0 +1,8 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Belgium reported 17 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was significantly higher than the Union-wide average (16.04 vs 7.10). At ANSP level, Belgium reported 19 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was higher than the Union-wide average (9.31 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has increased significantly at State level (16.04 vs 5.27) but decreased significantly at ANSP level (9.31 vs 17.94).
+
+As described in the monitoring report, at Member State level, separation minima infringement occurrences and investigations are permanently monitored and followed up by the Belgian NSA and reported in line with international regulation. Safety of service provision and follow-up of safety recommendations is permanently subject to NSA oversight.
+

@@ -1,0 +1,26 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Bulgaria reported 13 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was lower than the Union-wide average (2.93 vs 7.10). At ANSP level, Bulgaria reported 12 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (2.71 vs 6.0).
+
+Comparison for 2024 is not possible, as Bulgaria did not submit information on SMIs in 2024.
+
+In terms of initiatives implemented or planned, the monitoring report lists the following initiatives:
+
+-   Systematic occurrence management: comprehensive recording, classification, and analysis of all ATM/CNS events in e-TOKAI/ECCAIRS to identify trends and contributory factors.
+
+-   Structured change management: application of formal change assessments, safety cases, and implementation plans to mitigate risks from operational and technical changes.
+
+-   Continuous safety performance monitoring: weekly operational reviews and systematic tracking of safety recommendations and corrective actions through maintained registers.
+
+-   Targeted risk mitigation and coordination: regular national and inter‑institutional coordination (incl. cross-border cooperation) to address identified risks and prevent recurrence of SMIs.
+
+In terms of monitoring the effectiveness of the initiatives, the NSA states in the monitoring report that the NSA ensures performance monitoring through:
+
+-   Risk-based oversight and regulatory supervision, including structured review of change management processes and safety assessments.
+
+-   Performance monitoring using ECCAIRS data, focusing on trends, severity and ATS/CNS contribution.
+
+-   Verification of corrective actions implementation, including follow-up on recommendations and timeliness/effectiveness of mitigation measures.
+
+-   Regular review of safety outcomes and effectiveness of measures through reported data and oversight activities.
+

@@ -1,0 +1,56 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+In 2025, once all the processes of the delay reattribution (post-ops, eNM25 and CWBO, including the adjustment due to power failure in Spain in April 2025, approved by NM in January 2026) have been applied the final average en‑route ATFM delay per flight in Spain was 0.95 min/fl (that differs from the value included in the above table) , lower than the 2024 figure of 1.02 minutes per flight, even taking into account the significant increase in traffic in 2025, although it exceeded the performance target established in the Performance Plan.
+
+The main driver of the en‑route ATFM delay was ATC capacity (71%), accounting for approximately two thirds of the total delay, reflecting the strong traffic growth experienced in Spanish ACCs during 2025, especially compared to the traffic level in 2019 (+15% in ENAIRE, +19% in Barcelona ACC, +33% in Sevilla ACC). It is worth mentioning that the peak levels were heavier than in 2024, with daily figures up to +60% compared to 2019 figures for the same day in Sevilla ACC. Actual and forecasted demand is far higher than forecasted by STATFOR & in RP4. By 2025 demand already showed a deviation of around 4% compared to the forecasts in the Spanish Performance Plan, and according to the latest STATFOR forecasts (Base, March 2026), this deviation is expected to grow moderately during the RP4 period. Some staffing constraints, with last minute absences unable to be covered, have also been a relevant factor in terms of ATC Capacity & Staffing. Weather-related delays were the second most significant factor (24%), particularly during the summer period, driven by convective weather and resulting traffic re-routings; it is also important to highlight the continuous increase of the number of the convective phenomena affecting tha Mediterranean area, especially Barcelona ACC.
+
+Additional contributing factors included special events and disruptions, such as military exercises and temporary airspace restrictions, as well as ATC staffing limitations in specific periods.
+
+Some of the Spanish ACCs (notably Barcelona, Madrid and Sevilla) experienced higher-than-average en‑route ATFM delays, mainly due to traffic levels exceeding forecasts and the limited availability of sector capacity during peak periods, exceeding even elementary sectors capacity.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+The adopted performance plan for 2025 reflects several adjustments, aimed at mitigating the impact of increasing traffic demand and improving en‑route capacity delivery. These adjustments have required a stronger operational focus to address higher‑than‑forecast traffic levels and recurrent peak‑period constraints, particularly in several ACCs. As a result, greater emphasis was placed on operational capacity delivery measures. These included intensified use of ATFM measures (notably STAM, occupancy‑ and complexity‑based regulations), increased reliance on dynamic and optimised sector configurations, and closer alignment of sector opening schemes with actual traffic demand, especially during the summer season.
+
+In the staffing domain, although moderate ATCO increases were envisaged in the initial plan, the effectiveness of capacity delivery in 2025 relied more heavily on short‑term availability measures, such as voluntary additional shifts during peak periods and optimisation of rostering and competency management processes.
+
+Regarding airspace and system developments, several initiatives (such as the expansion of Free Route Airspace, advanced civil‑military coordination, and the deployment of new ATM system functionalities including TTM) progressed during 2025 but with phased implementation timelines, resulting in limited immediate capacity benefits within the year. Consequently, interim operational solutions were prioritised to maintain network performance.
+
+Overall, the adopted performance plan for 2025 reflects some adjustments from the initial strategic assumptions toward a more operationally driven capacity management approach, aimed at preserving performance and resilience under intensified traffic conditions, while maintaining the medium‑term objectives.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+Since January, the target set for Spain has been exceeded. Although the en-route traffic increase in Spain is very significant, 4,7% compared to 2024, the proportion of increase in ERD indicators has not been as higher as in 2024, only LECB and LECM have continued to rise, whilst GCCC, LECS and LECP have seen their indicators decline compared with the previous year.
+
+In all ACCs the main cause of delay is C-ATC Capacity, representing at least two-thirds of the total delay in each ACC. The ERD ATT indicator of attributable causes of delay (CRSTMP) has also not met its target at national level, as well as in LECB, LECM and LECS.
+
+The W-Weather delay is not a determining factor, although it contributes to complex situations in some sectors.
+
+The non-compliance of ERD was anticipated before the end of the year and was informed to the Commission according to Regulation (EU) 2019/317 Article 37 (1), concluding that the main reasons that have led to this situation are the increase in traffic over the STATFOR forecast set in 2024 and the inability to accommodate new personnel in the short term. Moroccan flows via Barcelona/Seville ACCs to avoid Algerian airspace increased saturation of LECB and LECS sectors. Demand drift during the day into the night shift has also led to delays at the end of the day. Weather/network scenarios in SE France/Pyrenees add complexity and volatility to sector loads in LECB. Higher volumes of overflights and oceanic flows created saturation in upper sectors and Santiago area in LECM.
+
+As a result of the monitoring of the capacity plan and the evolution of the en-route capacity related projects, both of those initially set out in ESPP4 and the new ones considered in NOP, it was observed that about 40% of the planned projects had not been completed but there were some new projects, not initially planned, already implemented or under development. Nevertheless, progress in the implementation of projects is not as expected and the improvements in capacity obtained after the implementation of the completed projects plus the new projects have not been sufficient to meet the volume of traffic managed as well as the current characteristics of the delay in the different regions, resulting in the non-compliance with the targets.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+In the report to the Commission, some of the additional measures planned by ENAIRE were explained. The common pillars are the incorporation of new ATCOs, improvement of the coordination and operational procedures related to bad weather situations, reorganization and strengthening of Regional FMPs, airspace use & network integration (DCTs, RAD, civil-military coordination), review of OTMV in high delay sectors and tools to reduce admin load.
+
+Endorse ENAIRE to continue implementing the capacity plan according to the scheduled timetable in order to achieve the objectives of delays and better air traffic management, focusing on projects that have an impact on the increase of available capacity, as well as on the implementation of projects that improve operations to manage traffic increases.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+ENAIRE has implemented a set of remedial measures aimed at reducing en‑route ATFM delays and improving overall capacity performance. These measures include a productivity incentive program for ATCO (June - September), additional ATCO recruiting programm, implementation of ATFM Regulations based on Occupancy and ongoing revisions of sector capacities with regular performance monitoring.
+
+Operational measures such as the deployment of new direct routings, enhanced civil‑military coordination, and continuous improvement in the application of STAM and dynamic sector configurations are being pursued.
+
+In parallel, ENAIRE is progressing with ATM system modernisation initiatives, including the further deployment of TTM tools, to unlock additional capacity and improve predictability in future performance years, as well as intensive use of CPDLC.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+AESA continues its monitoring activities in RP4, particularly that of the KPIs associated with a target to be met, which is monitored on a monthly and annual basis. With them, it is possible to keep track of the evolution of the indicators and to maintain an adequate coordination and communication with the parties involved.
+
+Additionally, before the end of the year and having previously made a forecast of the possible final values of the KPIs, AESA monitors the implementation status of the projects mentioned in the ESPP4 Performance Plan as well as new projects that may have been included in the NOP and that can have a positive effect in the capacity area, in order to know their evolution as well as the impact on the corresponding indicators.
+
+The measures are being implemented and future improvements are expected to be observed in the comig years.
+

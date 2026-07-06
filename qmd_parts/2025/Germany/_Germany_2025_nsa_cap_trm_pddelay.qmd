@@ -1,0 +1,12 @@
+## 2.3.2.B. PI #2
+
+### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
+
+This data is not collected by DFS.
+
+No indicator specific initiatives are planed by DFS.
+
+### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
+
+Among the relevant airports of the German TNC charging zone, again in 2025, EDDK was the only one which could not produce sufficientyl reliable data. To the knowledge of the German NSA, in order to improve the situation EUROCONTROL regularly contacts the airports to check on the status of the reporting and provide support in the final correct implementation of the APDF. EUROCONTROL is also part of an ACI sub-group (APN) that includes several airports and informs them regularly on data provision issues. While the NSA is in favour of a solution of this issue, currently and due to prioritisation, no extra activities are planned by the NSA itself.
+

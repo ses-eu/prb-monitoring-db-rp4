@@ -1,0 +1,50 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -2.6% (or -40.35 SEK2022, -3.8 €2022) lower than the planned DUC. This results from the combination of lower than planned terminal costs in real terms (-4.6%, or -9.2 MSEK2022, -0.9 M€2022) and lower than planned TNSUs (-2.0%).
+
+### **TZ1.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (-2.0%) falls inside the ±2% dead-band. Hence, the loss of terminal revenues is borne by the ANSPs.
+
+### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are -4.6% (-0.9 M€2022) lower than planned. This is the result of lower costs for the main ANSP, LFV (-10.2%, or -1.3 M€2022) and slightly higher costs for the NSA (+0.5%), the other ANSP (Swedavia, +7.5%, or +0.5 M€2022).
+
+### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (LFV) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the significantly lower than planned terminal costs in real terms for LFV in 2025 (-10.2%, or -1.3 M€2022) result from:
+
+- Significantly lower than planned staff costs (-8.2%), mainly due to the variation in pension costs (-16 MSEK, or some -1 M€2022) reflecting a combined effect of higher interest rates (which lowered the level of pension liability) and higher pension indexation (which increased pension liability). At the same time, the staff costs (excluding pensions) were higher than planned. It should be noted that the difference in pension costs will be returned to the airspace users through the cost exempt from cost sharing mechanism.
+
+- Significantly lower than planned other operating costs (-18.7%), reflecting "many *small differences including slightly lower rent and lower overhead costs (partly due to re-organisation in some units and delays in digitalisation projects)*".
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Sweden provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*Overall lower actual unit cost in real terms because of lower actual costs exceeding the effect of lower traffic. Note that excluding the effect of uncontrollable costs of LFV the unit cost would be higher. A similar effect is difficult to anticipate the upcoming years.*"
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"The most impacting effect and reason behind the lower actual costs is staff costs. For LFV, in total, staff costs were below planned, mainly as a result of a one-time effect on pension costs, this one-time effect amounts to -28 SEKm for TNC Stockholm-Arlanda. The pension costs in all were 16 SEKm lower than planned as the indexation reduced the one-time effect.*
+
+*Swedavia have also lower staff costs but instead higher operating costs due to consultants.*
+
+*Regarding other operating costs LFVs costs is lower than planned due slightly lower rent and lower overhead costs. Swedavia's costs is higher due to consultants instead of hired staff.*
+
+*Higher depreciations costs because of E-strip. The asset called E-strip and activated on 2024-12-01 relates to the project that was carried out during RP3 and was delayed at that time. The investment plan for 2029 also includes necessary measures to update this E-strip in order to ensure continued functionality through life extension. These measures need to be implemented earlier than originally planned to enable completion and commissioning according to plan. The project is also intended to include upcoming measures linked to A-SMGCS, which is somewhat earlier in time than the corresponding efforts for Estrip."*
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LFV) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates that "*No official recommendations made*."
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

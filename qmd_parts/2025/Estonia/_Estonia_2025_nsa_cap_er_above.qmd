@@ -1,0 +1,6 @@
+## **2.3.2.D. PI #4**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+Given the very low level of en-route ATFM delay per flight (0,01), this indicator reflects the distribution of a marginal amount of delay rather than a structural capacity issue. Therefore, no specific measures are considered necessary at this stage. NSA will continue monitoring the evolution of this indicator.
+

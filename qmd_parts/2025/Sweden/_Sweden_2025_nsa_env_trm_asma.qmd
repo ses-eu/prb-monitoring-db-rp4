@@ -1,0 +1,18 @@
+## **2.2.2.F. PI #6**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+There is a new methodology calculating this PI. The PI has increased according to the available data using the legacy methodology. However, the data presented in this table is based on the new methodology.
+
+Nevertheless, the relevant drivers behind the development of this PI, as well as ongoing initiatives, have been analysed.
+
+With regard to initiatives, LFV and Swedavia are jointly conducting the SWEA project, aimed at modernising traffic flows within the Stockholm area. The project will result in a major redesign of traffic flows within Stockholm TMA and adjacent ACC sectors. The redesign is currently planned for implementation no earlier than November 2027, representing a postponement compared with last year's reporting. In addition, parallel approaches (established on RNP-AR + ILS) were implemented during autumn 2025.
+
+Parallel approaches are expected to contribute positively to performance and, over time, reduce ASMA values. At the same time, other developments within the Swedish aviation market may have had a negative impact. From the beginning of 2025, a significant share of traffic previously operating at Bromma was transferred to Arlanda following a consolidation of the Swedish domestic aviation market. This may have affected ASMA performance due to an increased proportion of turboprop traffic within the arrival flow.
+
+The overall trade-off is difficult to assess, as the reduced complexity resulting from lower traffic levels at Bromma --- located in close proximity to Stockholm-Arlanda --- must be balanced against the increased traffic load at Arlanda itself. Overall, LFV considers that arrival efficiency at Arlanda improved during 2025.
+
+The NSA will continue to monitor the development of this PI and the associated reference values. The NSA welcomes further dialogue regarding this outcome if considered useful.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

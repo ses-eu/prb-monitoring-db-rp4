@@ -1,0 +1,20 @@
+## **2.3.2.B. PI #2**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The final result of this indicator is N/A due to some of monthly data are not available.
+
+There has been an improvement in the reporting of monthly data. LEIB, LEPA, LEMD and LEBL report data for less than half of the months, but with the exception of LEIB, they have improved by increasing the number of months for which data is reported. GCLP reports data for more than half of the months, and this figure has increased compared to 2024. Only LEAL and LEMG provide data every month, and a reduction in the indicator value is observed at both airports compared with 2024,
+
+LEIB it is monitored together with these 6 airports since it is one of the airports considered in the Spanish performance plan (ESPP4) for RP4.
+
+This PI is monitored by AESA. Should any significant deviations be identified, the possible causes will be analysed as part of the annual monitoring process, in collaboration with the relevant stakeholder.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+There has been no change compared to previous years.
+
+During 2022 AESA focused on investigating the origin of the lack of data. The delay represented in this indicator is related to IATA code 89 and AESA was able to confirm that the lack of data was due to the fact that these data did not meet the minimum quality required to be considered. PRU sets a minimum threshold on the quality of its data, so if codes ZZZ and 999 exceed 40% of the delay minutes, then the indicator is not published with a numerical value, as it exceeds that minimum threshold set by PRU. Sometimes it happens that the airport operator has no information on the reasons for the delay or it cannot be associated with an IATA code. After several communications with the airport manager, AESA understood that codes ZZZ and 999 are generally assigned when no code has been given (and therefore the cause of the delay is not known) or when the actual delay does not match the declared delay. The indicator picks up the initial declared delay data but this is subject to change and so there are occasions when it does not match the actual delay. This is why there is so much indeterminacy represented by these ZZZ and 999 codes.
+
+There does not seem to be a simple resolution to this situation since the data needed to publish the indicator is collected around the middle of the following month and the process of defining the codes that are more in line with reality is done through a post-operational analysis that takes considerably longer.
+

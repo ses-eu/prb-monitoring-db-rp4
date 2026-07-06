@@ -1,0 +1,42 @@
+## 2.3.1.B. KPI #2
+
+### Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI
+
+The performance in 2025 was slightly above the target, for both the total ARR ATFM delay per ARR flight and the CRTSMP ARR ATFM delay per ARR flight. The main reasons for delays at Zurich airport were Weather (52%), Other (TTMS live trial, 20%), Aerodrome Capacity (17%), Special Event (WEF Davos and LSZH TMA redesign project, 5%), Environmental issues (3%) and Staffing (2%). The main reasons for delays in Geneva aiport were Weather (32%), Aerodrome Capacity (25%), Equipment non-ATC (A-CDM replacement at Geneva Airport, 17%), Staffing (15%), ATC-Capacity (8%) and Equipment-ATC (3%).
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+In 2025,
+
+- in LSZH, exceptional delays were linked to Aerodrome Capacity and TTMS live trial (which we intend to continue, as they provide benefits to our customers)
+
+- in LSGG, exceptional delays were linked to Aerodrome Capacity and A-CDM replacement and Staffing
+
+### Recommendations to the ANSP to rectify the situation
+
+The adverse weather conditions not being in hands of the ANSP, the NSA recommended to work on the below remedial measures.
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+- New DARTS / Zurich \"Replacement of Zurich Airport\'s obsolete application DARTS. skyguide is investing quite significantly, to modernise the architecture, so as to make it more reliable for the future.
+
+DARTS is Zurich Ariports\' main ATM application, supporting the management of departures as well as deicing. Quite some interactions with skyguide systems are necessary.\" 2027 Ongoing
+
+- PAGE-2 / Geneva Introduction of e-strip (to replace paper strips) and of an AMAN, leading to reduced waste (and reduced delays). 2030 Ongoing
+
+- LORD / Zurich Optimisation of separation on final (via RECAT, PWS, reduce MRS or TBS), allowing reduced delays. 2030 Planned
+
+- AOP / Zurich Extension of the A-CDM mechanisms to the landside, and extension in time to D-180, thus allowing better planning (and allowing to optimise delays). 2027 Ongoing
+
+- RET rwy 34 LSZH / Zurich Introduction of rapid exit taxiways for runway 34 in LSZH, allowing to increase the arrival throughput, and thus to reduce the delays. 2027 Ongoing
+
+- RET rwy 04 LSGG / Geneva Introduction of rapid exit taxiways for runway 04 in LSGG, allowing to increase the arrival throughput, and thus to reduce the delays. 2029 Planned
+
+- Staffing / Geneva Recruitment as necessary to use the full capacity of the training. Initiative launched to enhance the training success rate. Initiative launched to develop a break optimiser. 2026 Ongoing
+
+- TTMS Target Time Management System trial during the entire year 2026; it generates additional delays (as observed in 2025) compared to normal situations but brings significant benefits to both Zurich airport and Swiss aircraft operator. 2026 Ongoing
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+Monthly Equipment Reports, that focus on the health of Skyguide\'s systems are systematically completed and made available to the Executive Board. These reports include both quantitative (number of open bugs...) and qualitative (feedback from the operators) information, which provides a good overview.
+

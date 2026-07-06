@@ -1,0 +1,10 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+As MUAC is not a Member State, separation minima infringements occurrences reported on State level are included in the respective Member State figures (1 for Belgium and 1 for Netherlands).
+
+For ANSP level, 2 SMIs were reported with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (0.31 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has decreased at ANSP level (0.31 vs 2.2).
+
+According to the monitoring report, MUAC is continuously monitoring closely this PI by means of boards, investigation teams, defined thresholds to ensure a thorough follow up, etc. In case a threshold is reached or breached additional investigation will be launched to look into any systemic issues. This is in addition to the recommendations originating from the investigations of the individual incidents. Furthermore, 4NSA oversight activities are continuously monitoring the processes.
+

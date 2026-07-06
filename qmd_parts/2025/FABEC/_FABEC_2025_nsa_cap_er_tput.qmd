@@ -1,0 +1,24 @@
+## **2.3.2.E. PI #5**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The Netherlands NSA:
+
+The daily peak throughput of Amsterdam ACC slightly increased in 2025 compared to 2024, but no specific measures were taken. The increase was caused by the traffic demand.
+
+Swiss NSA:
+
+This indicator is dependent on traffic evolution; as Zurich UAC lost 4.8 of traffic in 2025 compared to 2024, it is logical to observe a decrease of this indicator by 4%; in Geneva ACC, traffic increased by 1.5% in 2025 vs. 2024 and the sector capacity were increased in April 2025 showing an increase of the indicator by 3.6%.
+
+French NSA:
+
+Even if this PI has been introduced for RP4, compared with 2024 available values, 2025 calculation shows an improvement for LFBB (+2%), LFMM( +3%), LFRR (+5%) and LFFF(+5%). The values for LFEE (-6%) are influenced by the alignment of the border at the interface with MUAC which had an impact on the trafic counts.
+
+BE NSA:
+
+Regarding skeyes, the daily peak throughput of Brussels ACC increased in 2025 compared to 2024; this is mainly due to the accommodation of the higher the traffic demand.
+
+German NSA:
+
+With the specifics of traffic in the different airspaces under their responsibilites, the values are hardly comparable between different area control centres. This indicator will therefore become more interesting during the course of RP4. Yet, already the comparison of the values for EDWW, EDUU, EDGG, EDMM show, that not only did they handle more traffic with less delay, especially in the categories capacity and staffing, but also did the throughput increase by between 2,7% (EDWW) and 14,8% (EDUU). The German NSA concludes that the additional traffic did at least to a relevant degree occurr in peak hours, which makes the development of CAP KPI#1 even more noticable.
+

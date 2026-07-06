@@ -1,0 +1,28 @@
+## **2.2.2.D. PI #4**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: a) Implemented:
+
+- clearance delivery position;
+
+- ASMGCS at Otopeni TWR - advanced surface management ground control system;
+
+- Common procedure between Bucharest Airports National Company and TWR Otopeni for repairing works periods on the manoeuvering area, ie pre-established alternative standard taxi routes;
+
+- Common procedure regarding ATFM (according to EU Reg 255/2010) regarding the regulation of traffic in situations that may influence the airport\'s capacity.
+
+- Modernisation ASMGCS - Implementation of Advanced Tower Messaging - upgrading the local ATC system at Otopeni TWR to provide departure planning information
+
+b\) Planned:
+
+• AMAN implementation in Bucharest TMA, finalized in Q1 2026, followed by operational deployment after validation and safety assessment. The system is expected to improve traffic predictability and runway demand balancing, supporting more efficient departure planning.
+
+• Further optimisation of start-up, push-back and taxi procedures through enhanced coordination between TWR, APP, airport operator and ground handlers.
+
+• Continued refinement of alternative taxi routes during works/restrictions on the manoeuvring area.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

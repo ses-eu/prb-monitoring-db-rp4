@@ -1,0 +1,6 @@
+## 2.3.2.D. PI #4
+
+### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
+
+Regarding skeyes, there is too little historical data available to conduct monitoring. An analysis would require data from previous years, but the SES dashboard only provides only 2025 itself as baseline.
+

@@ -1,0 +1,10 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, France reported 353 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was significantly higher than Union-wide average (17.42 vs 7.10). At ANSP level, France reported 285 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was significantly higher than the Union-wide average (14.16 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has increased slightly at State level (17.42 vs 17.15) and decreased slightly at ANSP level (14.16 vs 14.44).
+
+In terms of initiatives implemented or planned, the monitoring report notes the implementation of the new ATM system named 4Flight for the ACCs, currently in operation at Reims (LFEE), Aix (LFMM), Paris (LFFF) and planned for Bordeaux (LFBB) and Brest (LFRR) in 2028 & 2029. This new system embarked new functionalities such as the TCT (Tactical Controller Tool) which allowed prevention of SMI. The number of SMI has significantly decreased for the ACC where 4F is in operation.
+
+The NSA notes in the monitoring report that continuous oversight activities are carried out to monitor the effectiveness of safety nets within the 4F system, including through regular safety follow‑up meetings.
+

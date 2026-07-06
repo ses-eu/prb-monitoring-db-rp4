@@ -1,0 +1,42 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The negative trend in KEA performance was registered at the end of 2015 and beginning of 2016. It was thoroughly analysed using detailed data, provided by the PRU. An analysis report outlines the major reasons for the deterioration in flight efficiency as a combination of the following:
+
+1\. The crisis in Crimea region and subsequent political developments (the Ukrainian ban on Russian Federation aircraft to operate in Ukrainian airspace - enforced on 25 October 2015), preventing traffic from flying optimum routes;
+
+2\. Airlines preferences for longer and more inefficient (from HFE methodology perspective) routes due to various reasons and their own assessment on the use/non-use of certain airspaces;
+
+3\. It was found out that the change in values was driven by an underlying change in the application of the HFE methodology, stemming from data accuracy and availability. The deterioration was not in anyway related to any change in traffic flow patterns or operational practices but was entirely due to inconsistencies in HFE measurement.
+
+4\. Additionally, the war in Ukraine, which began on 24 February 2022, brought about a ban of flights in vast portions of Russian airspace and the complete closure of Ukrainian airspace. This was a major factor which has not existed at the time of the RP3 performance plan preparation and environmental target setting but has had a major impact on the deviations of traffic flows.
+
+These restrictions led to material and continuous traffic flow shifts and traffic increases above the plan, since airspace users are forced to fly far from optimal trajectories. Moreover in order to balance sector loads it became necessary to implement specific traffic flow rules. . Such implemented traffic flow rules should be regarded as capacity enablers by reducing the complexity or workload in particular hot spots and giving the opportunity to accommodate extra traffic that is not in favour of KEA at large.
+
+5\. Lack of sufficient capacity in neighbouring ACCs which results in additional traffic through Sofia FIR based on airlines\' preferences to choose the next best routes to avoid delays.
+
+In 2023 it was noted that revision of KEA methodology should be carried out so that circumstances beyond the ANSP\'s control are properly reflected. The shortcomings of the current KEA methodology are largely recognised. All these factors result in higher-than-planned KEA and are due to reasons beyond BULATSA control.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+The Analysis is as provided above. It should be noted that all possible measures are taken at local level
+
+(such as the cross-border expansion of FRA airspace over several countries), but their impact on the overall trend remains limited.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+KEA values are to be monitored monthly through the data officially published by PRU. However, given the reasons
+
+described above an improvement of KEA values will hardly materialise under the existing airspace restrictions.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+As explained above.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+

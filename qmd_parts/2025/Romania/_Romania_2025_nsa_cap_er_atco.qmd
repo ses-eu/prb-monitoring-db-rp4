@@ -1,0 +1,22 @@
+## **2.3.3 ATCO Planning 1**
+
+### **Additional comments**
+
+The number of ATCOs in OPS are broadly in line with the assumptions of the Performance Plan. The marginal shortfall relative to plan does not reflect a structural recruitment or retention issue, but rather the inherent variability in the duration of the initial training, qualification and authorisation process for new ATCOs, which can extend beyond initially projected timelines depending on individual progression. ROMATSA considers the overall trajectory to be on track with the RP4 staffing plan. The significant efforts put by ROMATSA during 2025 to implement the FF-ICE and RoMAIRTCM, validate solutions in the S3JU projects for ATC TBO, Network TBO, MITRANO and SPATIO, as well as continue the training program for new ATCOs has generated an increase for the average number of ATCOs on other duties.
+
+### **Additional comments**
+
+At the end of 2025, the number of ATCOs in OPS at Bucharest ACC stood at 261 FTEs, compared to a PP RP4 planned year-end value of 263 FTEs. During 2025, 10 ATCOs entered operational duties at the ACC, while 1 ATCO left the OPS room due to retirement, resulting in a net increase of 9 ATCOs over the year.
+
+The year-end figure of 261 is marginally below the planned value of 263, which is partly attributable to the starting position at end-2024 being 252 FTEs rather than the 254 FTEs assumed in the Performance Plan at the time of submission. The shortfall relative to plan does not reflect a structural recruitment or retention issue, but rather the inherent variability in the duration of the initial training, qualification and authorisation process for new ATCOs, which can extend beyond initially projected timelines depending on individual progression. ROMATSA considers the overall trajectory to be on track with the RP4 staffing plan.
+
+### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
+
+ROMATSA recruits new ATCO\'s using the FEAST selection tool. The ab-initio students go through the basic and rating training carried out by ROMATSA Training Organization after wich they start the Unit Training Plan according to the units they opted for. The recruits are allocated in order of their results in the FEAST test and according with the unit neceseties. The average failure rate is about 2-3 recruits for every 20 selected.
+
+Trainees entering the training program: 59 ab-initio CTA trainees commenced training in November 2025, against a planned figure of 61. The marginal shortfall is attributable to the sourcing of a proportion of candidates through internal competition processes rather than exclusively through external recruitment, which resulted in a slightly smaller cohort entering the ab-initio programme. The overall recruitment trajectory remains on track with the RP4 staffing plan.
+
+Trainees completing the training program: 47 trainee ATCOs completed their Unit Training Plans (UTPs) during 2025 (31 TWR/APP and 16 ACC), against a planned figure of 59. The difference reflects the inherent variability in the duration of the individual training and qualification process at Bucharest ACC, where the complexity and volume of the training syllabus --- including simulator exercises and on-the-job training (OJT) phases --- means that individual progression timelines can extend beyond initially projected estimates. This does not represent a structural issue; ROMATSA considers the overall training pipeline to be on track with RP4 staffing requirements.
+
+Trainees at year-end: The year-end figure of 98 trainees is substantially above the planned figure of 57. This difference is explained by the fact that the planned figure in the Performance Plan did not fully account for the trainees who were in advanced OJT phases and were therefore already contributing to the training pipeline but had not yet completed full qualification. ROMATSA acknowledges that the planning assumptions used at the time of PP submission in 2024 did not capture this group, and will incorporate a more comprehensive baseline in future planning cycles.
+

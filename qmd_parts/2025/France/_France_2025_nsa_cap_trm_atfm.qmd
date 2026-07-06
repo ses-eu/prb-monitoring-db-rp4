@@ -1,0 +1,76 @@
+## 2.3.1.B. KPI #2
+
+### Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI
+
+2025 underperformance is due to the combination of locally significant traffic (2025 French is now often well above 2019 levels at many French airports), understaffing (CDG, Nice, Basel, Toulouse, Bordeaux, etc.) and the MET impact.
+
+In particular, regarding main airports having underperformed against their indicative breakdown values, in addition to understaffing concerns, the following concerns have been noted in 2025:
+
+- Charles-de-Gaulle airport: +0.73min/flt above the indicative breakdown value. The delays in CDG in 2025 were mainly due to Weather (56%) which was particularly impacting during Q4 2025 and Aerodrome Capacity outside of ATC (26%) followed by ATC Staffing (10%).
+
+- Nice airport : +2.32main/flts above the indicative breakdown value. The delays in 2025 are due to a combination of a lack of staffing or flexibility regarding the rosters and an imbalance between the capacity and the demand mainly due to BA/GA traffic slot management during commercial peak hours. In addiciotn, beyond the strong recovery in traffic and staffing issues and despite the implementation of adapted rostering and the modification of airport coordination parameters in the middle of Summer, it is also necessary to take into account, even if the impact on airport capacity has been limited, the precautionary safety limitation measures implemented following the serious incident of September 21, for which an investigation is still underway.
+
+- Marseille airport: +0.76mn/flt above the indicative breakdown value. The delays in 2025 are mainly due to a technical issue with the ground radar during Q4 and the preparation for the new APP ops room that opened early 2026. These events are responsible for around 70% of the total delay.
+
+These measures stipulate, for example, that in a dual-runway configuration, at night, and possibly when runway lighting must be activated during the day due to low visibility, only precision approach procedures may be used. In particular, procedures RNP A and D, which normally aim to avoid urban areas, are prohibited.
+
+Regarding some local staffing issues, it should be recalled that, during the previous years, in order to address the en route staffing and capacity issues due to ATCO shortages in some DSNA ACCs, priority has been given to recruiting, training and assigning staff to the 5 French ACCs. In that context, some DSNA approaches and towers are now progressively also experiencing locally staff shortages.
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+See above
+
+### Recommendations to the ANSP to rectify the situation
+
+A dedicated meeting has been organized with DSNA in order to gather both explanations and information about remedial measures already launched and identify potential additional measures that could be implemented by DSNA in 2026 and beyond to tackle non temporary capacity issues.
+
+The following recommendations / course of actions have been discussed and agreed with DSNA:
+
+- General remedial measures already identified;
+
+- A set of specific remedial measures put in place by DSNA or already planned in 2025 to mitigate identified non temporary issues at the French airports have been presented and discussed with the French NSA and are listed in the table below : the French NSA will be kept informed by DSNA of their timely implementation, of the expected benefit and of any potential issue in the implementation plan, and a follow-up meeting will be organized 2nd Semester 2026;
+
+A synthesis of all those remedial measures are presented below and detailed in the annex to this report already mentioned above.
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+Main remedial measures already identified and under implementation by DSNA to remedy the current capacity result from the implementation of the DSNA 2030 Strategy and the new social agreement signed in May 2024.
+
+Those remedial measures consist of :
+
+- A territorial organization of control units in the lower airspace : in order to reduce the duration of training and to reinforce the capacity of DSNA ACCs, the sectors dealing with flights between flight levels 115 and 195 will be progressively transferred to APP units ; at the same time a consolidation plan of APP units is ongoing with the objective to reduce their number ; in addition, in order to optimise the work of ATCOs at APP units by refocusing on the core business, 2 Flight Information Centres (North and South) will by created to provide Flight Information Services within about 20 flight information sectors instead of 50 at present and armed by dedicated DSNA FIS Officers instead of ATCOs ; regarding TWR control, DSNA ATC services will be closed and AFIS services provided by airports operators will progressively be implemented at 6 small airports as from 2028.
+
+- The implementation of the new social agreement signed in May 2024 : it includes new organization of services, staffing levels and recruitments, additional flexibility of rostering schemes, updated assugnement policy for ACCs and APPs etc.
+
+- The implementaiton of new densified rostering scheme : possibility of using options that are activated according to the local context of balance between traffic demand and capacity : densified rostering at certain time of the year, additional densified rostering for specific weekdays during the densification period, flexible shift hours for a fixed number of days, addional limitation of leave entitlement during traffic peak periods : flexibility measures applied as follown :
+
+- Option 1 : LFKJ, LFMN, LFBO, LFPO, LFPG, LFMT, LFML, LFLL, TFFF, TFFR
+
+- Option 1+ : LFMN, LFPG, LFML
+
+- Option 2bis : LFSB, LFLL, LFML, LFMT, LFRS, LFMN, LFST, LFPB, LFBO, LFBD, LFPO
+
+- Option 3-2 : LFMN, LFKJ, LFKB
+
+- The implementation of new ATM systems at major airports : iATS (Orly new ATC system) the safety study validated by the NCA for planned operationnal assessment phases 1 & 2 allows the current operational use with positive feedback; regarding SYSAT G2 (new ATC system for regional airports): planned implementation of TWR ASMGCS/EFS in Nice 2027, Marseilles/Lyon 2028, Bâle/Toulouse 2029. Next phases for TWR EFS in Bordeaux by 2031, Strasbourg/Montpellier by 2032, Lille/Nantes by 2033, Ajaccio/Bastia by 2034. Nice APP EFS is expected to be deployed by 2033 as well.
+
+- A new law on industrial action management in France : two days notice for ATCO and minimum services have been redefined wrt the number of sectors / services operated and a scope update of the ACC and airports concerned will be implemented as from begining of 2024. New procedures for industrial action management have been introduced and minimum service rules updated.This implementation should limit the number of industrial actions and reduce their impact on airspace users.
+
+- The implementation of dedicated systems providing nominative means of recording the presence of controllers on premises and at the CWP.
+
+- Regarding the airports already mentioned regarding their underperformance when compared to their indicative breakdown values : for all these units, additional flexibility measures are introduced to improve sectors offer in particular early morning and evening and better slot management thanks to airport CDM regarding the Business Jet slots. Staffing issues are also addressed on the longer term (for example at Nice airport).
+
+Regarding 2026, airport work both at LFPO (with a runway closure) and LFPG in the morning will have an impact on the performance.
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+Regarding France and DSNA:
+
+The French NSA is kept informed of any development related to the implementation of capacity and environment remedial and corrective measures. In particular:
+
+- A follow-up meeting has been organized by the French NSA with DSNA operational directorate in May 2025 to check the implementation of the previous remedial measures;
+
+- The French NSA has been invited to the yearly DSNA strategic users\' consultation meetings held in 2025 (2) and in May 2026 which include an update on all strategic and operational measures taken by DSNA to improve capacity and environment performances, prepare Summer season and on the investment program;
+
+- According to the NSA review, all remedial measures indicated in the previous monitoring report have been implemented or are under immplementation for mid/long terms ones. In addition, an additional action has been decided during Summer 2025 by the French NSA to launch an audit (run by Eurocontrol) on 2025 Marseille ACC underperformance.
+

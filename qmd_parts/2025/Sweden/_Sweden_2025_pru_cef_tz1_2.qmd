@@ -1,0 +1,32 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (1 592.17 SEK or 144.08 €) is -6.6% lower than the nominal DUC (1 705.22 SEK or 154.31 €). The difference between these two figures (-113.06 SEK/SU or -10.23 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.52 SEK/SU or +0.05 €/SU), it should be noted that Sweden excludes the pension costs for LFV in its calculation of inflation adjustment;
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-120.18 SEK/SU or -10.88 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+0.09 SEK/SU or +0.01 €/SU);
+
+- the addition of the traffic adjustment (+0.83 SEK/SU or +0.08 €/SU) for the costs not subject to traffic risk sharing;
+
+- financial incentives (+17.36 SEK/SU or +1.57 €/SU); and
+
+- the deduction of other revenues (-11.69 SEK/SU or -1.06 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is -1.9%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Sweden indicates that no initiatives were implemented or planned.
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.1. NOTE 2**
+

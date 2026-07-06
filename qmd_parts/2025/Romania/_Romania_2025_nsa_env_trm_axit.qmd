@@ -1,0 +1,22 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: The additional taxi-in time recorded at LROP, 1.77 min/flight, remains relatively contained compared with the additional taxi-out time, 4.02 min/flight. This indicates that surface congestion at Bucharest Henri Coandă International Airport is currently more significant during the departure phase than after landing. Nevertheless, PI #5 remains relevant, as taxi-in performance is influenced by runway occupancy, runway exit usage, taxi route availability, apron/stand allocation, manoeuvring area works, traffic peaks and infrastructure constraints.
+
+Measures implemented and planned include:
+
+• A-SMGCS operational at LROP TWR, providing enhanced surveillance and situational awareness on the manoeuvring area and supporting efficient routing of arriving aircraft from runway exit to stand/apron area;
+
+• Advanced Tower Messaging / ATOP capabilities supporting taxi-time matrices for each stand/parking position, correlated with the relevant runway entry/exit points. This improves the estimation of expected taxi-in times, surface movement predictability and the identification of deviations from reference taxi-time values;
+
+• common ROMATSA--Bucharest Airports National Company procedures for managing works or temporary restrictions on the manoeuvring area, including pre-established alternative standard taxi routes;
+
+• AMAN for Bucharest TMA, technically finalised in Q1 2026, with operational deployment pending validation, safety assessment and operational acceptance. Once operational, AMAN is expected to improve arrival sequencing and traffic predictability, with a possible indirect positive effect on taxi-in efficiency by reducing arrival bunching and surface demand peaks.
+
+The effectiveness of these measures will be monitored through the evolution of PI #5 values at LROP on ansperformance.eu, complemented by ROMATSA internal performance monitoring, A-SMGCS data, ATOP taxi-time matrices, ATC operational reports and airport operational data. Actual taxi-in times will be compared with reference taxi-time values by runway exit point, taxi route, apron area and parking position, in order to identify recurrent deviations and support targeted corrective actions.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

@@ -1,0 +1,7 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+In 2025, Oro Navigacija achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+According to the monitoring report, the verification process confirmed that the performance levels of all SMS components are in line with the maturity targets set out in the Lithuanian RP4 Performance Plan. Five components (\"Safety Policy and Objectives\", \"Safety Risk Management\", \"Safety Assurance\", \"Safety Promotion\", and \"Safety Culture\") are assessed at Level C, while the \"Interdependency\" component is assessed at Level D. Overall, the organisation demonstrates a well-established and effectively implemented Safety Management System.\
+In terms of main measures put in place to achieve the safety performance targets, the report defines that the Safety Management System (SMS) processes are established, implemented, and continuously improved. The safety objectives remain unchanged. Safety assurance processes remained stable and effectively maintained throughout 2025.
+

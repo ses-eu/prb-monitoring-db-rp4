@@ -1,0 +1,6 @@
+## **2.3.2.D. PI #4**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The value recorded for LRBB ACC in 2025 is 61.4%, meaning that 61.4% of the total en-route ATFM delay minutes occurred on days when actual daily throughput exceeded the expected daily traffic volume. This indicator is significant in that it demonstrates that the delays incurred at Bucharest ACC were not systematically associated with capacity shortfalls relative to demand --- the majority of delay occurred on high-traffic days where the ACC was effectively handling above-plan traffic volumes. This is consistent with the finding that 100% of en-route ATFM delay in 2025 was weather-attributed: adverse weather conditions generated ATFM delay precisely during high-demand days when airspace capacity could not be fully utilised due to meteorological restrictions, rather than reflecting an inherent ATC capacity gap.
+

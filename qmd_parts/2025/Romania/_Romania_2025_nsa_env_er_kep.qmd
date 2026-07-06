@@ -1,0 +1,18 @@
+## **2.2.2.A. PI #1**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA:
+
+a\) Implementation of Free Route Airspace (FRA) according to ERNIP is in force;
+
+b\) Removal of the ATS routes above FL 105 - implemented on 15th of July 2021;
+
+c\) Dynamic civil-military coordination and GAT transit corridors for safely crossing of an active TRAs by civil flights, in order to maintain the preffered trajectory instead of diverting, whenever possible;
+
+d\) Only essential RADs activation mainly for avoiding ad-hoc millitary areas (in the context of increased millitary activity especially in the North-Eastearn part of the country), to maintain segregated traffic flows and balance complexity during FRA operations, to segregate traffic flows and balance sector loads during the most crowded traffic intervals, to optimize direct routing and reduce ATC workload at the LR/LB cross-border interface.
+
+All these initiatives represent facilities for air operators to optimize their flight planning provided that they are adequately informed before flight planning and introduce the new facilities offered in their flight planning tools that they use.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities
+

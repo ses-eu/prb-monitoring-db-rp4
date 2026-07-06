@@ -1,0 +1,80 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The Italian Airspace is, as well as others in ECAC, one of the most attractive for AUs\' planning activity and one of the most performing from the point of view of the management of the trajectory chosen for the Flight Plan routes, conditio sine qua non in view of the lower fuel consumption and, accordingly, the lower CO2 emissions into the atmosphere.
+
+Keeping as a milestone the above considerations, confirmed by the benefits (in terms of flight efficiency) also computed by the AUs whose flight trajectories crossed the Italian airspace.
+
+Looking at the proposed results anticipated in the Report for the year 2024 relating to the KPI KEA, it continues to be highlighted that the errors already underlined (for the proposed performance results related to the previous years from 2020 of the RP3 and correlated to the calculation of the additional distance with respect to the Reference) have not been corrected or amended even for the year 2025.
+
+Although both the Italian ANSP and NSA have already demonstrated and reported within the Performance Report of the previous years of RP3, both to the NM and to the PRU, the inconsistency of the KEA algorithm to detect some groups of \"additional distances\" not ascribable neither to the ANSPs nor to the stakeholders but associated to the scopes of some flight trajectories for particular City_Pairs or to ATC reasons or specific necessities of military flights (the single correction made to the computation of the KEA was the exclusion from the calculation of the \"Diverted\" flights and nothing else for the other evidences), the permanence of the other incorrect calculations determine a large discrepancy between the expectations of the performance results for the KPI KEA and the proposed performance outputs assessed by the PRU.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+Also in 2025, in line with the ongoing national ATM implementation programme, ENAV S.p.A. continued with the planned applications and optimizations of the National Airspace structure and the ATS Lower NTW, most of which are also included in the ERNIP and outlined in the boxes below.
+
+Notwithstanding the negative aspects identified (and several time reported and demonstrated in the past years of RP3) in the determination of the algorithmic and database errors used for the calculation of the KEA, for the year 2025 an increase has been detected in the gap between actual routings and the Great Circle Distance (GCD), amounting to 0.28% compared to 2024
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+The Italian performance results on flight efficiency, annually reported in the ENAV\'s Flight Efficiency Plan, are quantified with the aim to highlight the annual environmental benefits and also to compare with the assigned SES performance targets.
+
+The quantification of the outputs come from the deployed effective implementations introduced within the Italian airspace in the past years, in line and according to the National ATM implementation programme, such as:
+
+- the FRA Airspace and the lowere of the lower limit at FLK 195 starting from 21 of March 2024
+
+- the SECSI Airspace (Cross Border between FRAIT and the Austrian/Balcans ANSPs) also implemented from 21 of March 2024
+
+- the armonization of the EnRoute and Terminal NTW with the FRA
+
+- the National PBN Implementation Plan
+
+- the National Programme of APP in ACC
+
+- the Airspace availability implementations (RAD) assessed to optimize the flight planning activity of the AUs
+
+- the implementation of the eighth layer in the ATC sectorization of all four Italian ACCs
+
+- all the other measures that are inserted and published in ERNIP.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+Looking at the 2025's consolidated results above presented in the Table, and similar as they have been calculated and reported also for the previous years of the RP3, there is a large mismatch between the target\'s expectation and the measured output by PRU, determined by the permanence of some inconsistencies, part of which below reported.
+
+For this reason, ENAV SpA has continued requesting the recalculation (and the action is currently still in progress since the 2020) of the output\'s KPI attributed by PRU/NM, having found and shared evidence of some errors in the attribution of part of the actual flight trajectories in comparison to the appropriate GCD.
+
+The main ones highlighted, among others, are:
+
+1\. the failure to manage correctly the DVT flights, that has been represented as one of the most negative impact
+
+(the single error removed from the calculation);
+
+2\. the failure to manage those City-Pairs that have been involved some military flights, as so called \"round-robin flighs\"
+
+trajectories or routings that did not have been compliant with the shortest trajectories for their own institutional
+
+needs;
+
+3\. the failure to manage (remove or do not consider as additional distances for the KPI KEA) some negative impacts
+
+measured in case of RWY changed/opposite RWY due to weather conditions or other ATC reasons, so not caused
+
+by inefficiencies to manage the flight trajectories by the ATCOs;
+
+4\. other negative impact measured when considered holdings/AFTCM delay due to ATM Capacity issues or other
+
+unavailability on the arrival airport.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+The Italian NSA/NCA encourage ENAV SpA to continue implementing the planned flight efficiency measures, as in the shared programme, while parallely NSA is still supporting the recalculation of the presented values for the 2025 (as it was requested for the entire RP3) in light of the evidenced errors and the failure to manage correctly the \"anomalus\" trajectories.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+The Italian NSA/NCA incentives the Italian ANSP (ENAV SpA) to continue implementing the planned flight efficiency measures, as in the shared programme, with the aim to be compliant with the scheduled flight efficiency actions.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+No remedial measures were indicated in the previous monitoring report.
+

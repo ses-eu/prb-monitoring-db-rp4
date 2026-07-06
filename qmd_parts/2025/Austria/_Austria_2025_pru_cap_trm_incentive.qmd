@@ -1,0 +1,6 @@
+## TRM1.2. Terminal capacity incentive scheme
+
+In the first year of RP4, with an ATFM Arr delay of 0.66 min/arr, Austria **did not achieve the national target** of 0.53 min/arr. The KPI falls **within the deadband** for the incentive scheme, meaning that **no bonus or penalty** applies.
+
+While national targets were always met during RP3, it has to be noted that in 2024 the target was higher, at 0.82 min/arr.
+

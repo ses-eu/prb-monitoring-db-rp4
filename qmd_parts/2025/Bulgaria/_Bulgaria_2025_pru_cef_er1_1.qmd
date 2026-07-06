@@ -1,0 +1,48 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -2.9% (or -0.80 BGN2022, -0.41 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+3.8%) and slightly higher than planned en route costs in real terms (+0.8%, or +1.1 MBGN2022, +0.6 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+3.8%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +0.8% (+0.6 M€2022) higher than planned. This is the result of higher costs for the main ANSP, BULATSA (+1.3%, or +0.9 M€2022) and lower costs for the NSA/EUROCONTROL (-6.5%, or -0.3 M€2022) while the costs for the MET service provider were in line with the plan (-0.01%).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (BULATSA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for BULATSA in 2025 (+1.3%, or +0.9 M€2022) result from:
+
+- Lower than planned staff costs (-1.1%), mainly due to lower than planned social benefits and pension costs.
+
+- Significantly higher than planned other operating costs (+19.1%), driven by increases in the average and minimum salary impacting externally procured services (such as security, building and maintenance) as well as additional software maintenance, development and consultancy expenses, including unplanned costs related to the euro conversion.
+
+- Significantly higher than planned depreciation (+8.6%), mainly due to the development of the investment cycle.
+
+- Lower than planned cost of capital (-4.9%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Bulgaria provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Although the effects of the war between Russia and Ukraine on many traffic flows was taken into account in the PP, the actual service units exceeded the planned ones by 3.8%. This additional traffic was related to minor increase of total costs in real terms (less than 1%). The cumulative effect leads to a real en route unit cost below the target (approximately 3%)."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"The higher than planned costs come as a logical consequence given the additional increase in traffic than the one envisaged in the PP for 2025. The drivers behind the growth in costs are mainly depreciation related to CAPEX projects and external services. Further analysis of depreciation is presented in Section 4 of this Report. External services increased mainly due to a specialised consultancy and software development service related to the implementation of the euro in Bulgaria as of 01.01.2026, a consultancy service related to the design and implementation of virtualization for operating systems, as well as services whose value is related to the minimum wage defined annually on the basis of the average wage for the country, health and life insurance costs."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (BULATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

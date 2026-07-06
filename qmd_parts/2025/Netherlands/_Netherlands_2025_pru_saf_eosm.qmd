@@ -1,0 +1,10 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+In 2025, LVNL achieved the planned maturity levels set out in its performance plan for three out of five components of the EoSM. The components where LVNL missed the planned levels were Safety Policy and Objectives and Safety Promotion.
+
+In terms of main measures put in place to achieve the safety performance targets, the report defines that LVNL developed a safety management system development plan for RP4. This SMS development plan is a stark framework describing that for every RP4 year, LVNL will develop SMS elements in steps, according to various sources (SoE CANSO/Eurocontrol, internal needs, perceived gaps) but mainly based on the EoSM questionnaire results. On board/executive level, LVNL has defined a new safety policy and three strategic safety objectives for the long term (end of RP4, so 2029 - 2030).
+
+In terms of remedial actions implemented or planned, as described in the monitoring report, the SMS development plan and the associated annual RP4 plan should support the development of the necessary EoSM \'levels\' to the required RP4 targets. The new safety policy, strategic objectives and the annual plans should ensure LVNL achieves the RP4 targets.
+
+Furthermore, according to the monitoring report, the NCA will continue to monitor the development of the organisation\'s SMS.
+

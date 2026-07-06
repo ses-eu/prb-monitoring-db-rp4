@@ -1,0 +1,12 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+GND planner position concept has been established and is planned to be implemented in 2027 to increase effectiveness of GND operations and reduce taxi times. Low visibility procedures are planned to be updated in 2026, which may contribute to reducing taxi times in low visibility conditions.
+
+The NSA receives the list of planned changes in the ATM functional system on regular basis. Once a change is notified, the relevant monitoring activities are implemented.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+n/a
+

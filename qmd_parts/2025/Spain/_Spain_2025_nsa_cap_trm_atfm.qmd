@@ -1,0 +1,44 @@
+## **2.3.1.B. KPI #2**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI**
+
+In 2025, once all the processes of the delay reattribution (post-ops and eNM25, including the adjustment due to power failure in Spain in April 2025, approved by NM in January 2026) have been applied, the final average of the arrival ATFM delay per flight in Spain (in the 7 main airports at national level) is 0,93 min/arr, representing a clear improvement compared with 2024, when the corresponding value was 1.10 minutes per flight, despite still remaining above the target value set in the Performance Plan. The final figures per airport vary from those presented in the table above for the following airports: Madrid Barajas (LEMD): 0,43 min/arr and Barcelona (LEBL): 1,35 min/arr.
+
+The 2025 arrival delay result corresponding to ENAIRE, once the distribution of delays between ENAIRE and Skyway has been carried out, is 0.91 min/arr, which represents a 15% improvement over the previous year. This improvement is also evident when analyzing arrival delays causes attributable to ENAIRE, which improved from 0.17 min/arr in 2024 to 0.14 min/arr in 2025 (a 19% of improvement).
+
+By may, 4 of the 7 airports were already failing to meet their target, as well as the national target (SPA7). In general, the indicators have improved except for LEMG and LEAL. Adverse weather conditions, including convective weather and wind‑related disruptions, weighted around 69% of the total minutes of delay (focused in LEBL and LEPA), and contributed to a great extent in the arrival ATFM delays, both directly and through knock‑on effects on airport operations and arrival sequencing. The second leading cause of delay is G-Aerodrome Capacity (14% of the 2025 total), focused on GCLP. The third cause of delay is C-ATC Capacity (11% of the 2025 total, focused on LEPA and LEMD.
+
+The achieved level of performance in 2025 was mainly influenced by capacity‑related constraints at major airports during peak traffic periods, particularly in the summer season. Airports with the highest traffic figures, such as Madrid‑Barajas, Barcelona, Palma de Mallorca and Gran Canaria, experienced arrival delays when demand temporarily exceeded available runway capacity, combined with limited operational flexibility during peak hours, more pronounced than in previous year and involving a direct impact on the delay figures generated. Gran Canaria stands out for G-Aerodrome capacity delays and LEPA and LEMD for C-ATC Capacity delays, although the total number of minutes is lower than in 2024. Overall, the improvement observed compared with the previous year reflects the positive impact of operational and capacity‑related actions implemented since 2024; however, continued traffic growth and the concentration of demand at coordinated airports limited the extent to which further delay reductions could be achieved within the 2025 calendar year.
+
+Regarding the particularity of the LEAL and LEIB airports, in which different ANSPs are involved, SKYWAY (Aerodrome ATC service provider) and ENAIRE (Approach ATC service provider), according to the document \"Monitoring of delays in arrivals in RP3 for Alicante and Ibiza airports\" prepared by AESA, the part of delay that would correspond to ENAIRE or SKYWAY (previously FerroNATS) for these two airports would be as follows:
+
+- LEAL: ENAIRE: 0,02 min/flight. SKYWAY: 0,13 min/flight. Delay minutes due to G-Aerodrome Capacity and W-Weather mainly. Attributable delay causes (CRSTMP) is almost zero.
+
+- LEIB: ENAIRE: 0,08 min/flight . SKYWAY: 0,19 min/flight. Delay minutes due to W-Weather and G-Aerodrome Capacity mainly. Attributable delay causes (CRSTMP) is almost zero.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+The targets have been exceeded both at the Spanish level and at 5 airports. W-Weather was the first cause of delay at national level and very significant at LEBL and LEPA, G-Aerodrome Capacity was the next cause due mainly to the minutes accumulated in GCLP and, to a lesser extent, in LEMG, LEMD and LEBL. C-ATC Capacity was the third most common cause, particulary in LEPA, LEMD and LEMG. The minutes for these main causes across all 7 airports (SPA7) were slightly lower than in 2024.
+
+The TAD ATT indicator of attributable causes of delay (CRSTMP) has met its target at national level but has not done so at 3 airports (LEPA, LEMG and GCLP).
+
+The non-compliance of TAD was anticipated before the end of the year and was informed to the Commission according to Regulation (EU) 2019/317 Article 37 (1), concluding that the main reasons that have led to this situation are meterorological issues especially in the warm Mediterranean Sea.Environmental concerns in LEPA that have been delaying implementation of capacity improving projects. Shifts in demand during the day that bring higher than expected traffic counts to the night shift in LEPA and LEMG. Stronger seasonality year after year and structural demand growth in LEMG. In GCLP the main factor has been Aerodrome Capacity, Runway sharing with Spanish Air Force and large-scale military exercises.As a result of the monitoring of the capacity plan and the evolution of the arrival capacity related projects initially set out in ESPP4, it was observed that the delay in the projects planned prior to ESPP4 (SACTA iTEC 4.1, Stripless TMA and RECAT departures) is not a determining factor because Weather delay is the most relevant factor in not achieving the targets. The improvements in capacity have not been sufficient to meet the volume of traffic managed as well as the current characteristics of the delay in the different regions, together with the ocurrence of bad weather, resulting in the non-compliance with the targets.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+In the report to the Commission, some of the additional measures planned by ENAIRE were explained. On the one hand, on improving capacity and operations, such as progressive increases in capacity at LEMD, GCLP and LEIB APP, refinement of A-CDM integration, RECAT departures, Godox sector split to improve LEPA, improvements in sector structures such as NB (affecting GCLP) or Levante sectors (affecting LEAL) and, on the other hand, focus on improvements in processes related to Weather, such as improving coordination with NM in cross-border, adjustments in the Central sector affecting LEBL or the standardisation of ramp-up/down after Weather.
+
+Encourage ENAIRE to continue implementing the capacity plan in order to achieve the objectives of delays and better air traffic management, focusing on projects that have an impact on the increase of available capacity, on the implementation of projects that improve operations to manage traffic increases and projects that can reduce the impact of weather.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+ENAIRE has continued to implement a range of actions aimed at improving terminal and airport arrival performance, focusing on both operational efficiency and capacity provision. These actions include the recruiting of additional ATCO for TWR & TMA, optimisation of TMA sector configurations and enhanced application of ATFM measures at airport level, including sequencing, regulation refinement, improved use of available capacity and additional capacity according to the capacity program agreed with AENA. ENAIRE is also progressing with operational improvements, including the gradual deployment of ATM system upgrades, such as P-DPI or OSF, which are expected to support improved arrival management and capacity utilisation in the coming years.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+AESA continues its monitoring activities in RP4, particularly that of the KPIs associated with a target to be met, which is monitored on a monthly and annual basis. With them, it is possible to keep track of the evolution of the indicators and to maintain an adequate coordination and communication with the parties involved.
+
+Additionally, before the end of the year and having previously made a forecast of the possible final values of the KPIs, AESA monitors the implementation status of the projects mentioned in the ESPP4 Performance Plan as well as new projects that may have been included in the NOP and that can have a positive effect in the capacity area, in order to know their evolution as well as the impact on the corresponding indicators.
+
+The measures are being implemented and future improvements are expected to be observed in the comig years.
+

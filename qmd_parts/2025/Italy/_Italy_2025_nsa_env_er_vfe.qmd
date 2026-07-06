@@ -1,0 +1,10 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+With the primary objective of monitoring compliance with the vertical demand of Airspace Users (AUs) operating in Italian airspace, and also of enabling the definition of mitigation actions aimed at improving ATC sectorisation, both in terms of flight efficiency and AU requirements, ENAV S.p.A. developed, in recent months, a dedicated database and ad‑hoc tool.
+
+This was designed to monitor the relevant data and to quantify an output suitable to verify the results presented in the table.
+
+At the conclusion of this monitoring activity, the results produced were found to be very close to, and therefore broadly in line with, the values reported in the table above, although the figure calculated by ENAV S.p.A. is objectively slightly higher in percentage terms than the value presented.
+

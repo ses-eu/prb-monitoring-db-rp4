@@ -1,0 +1,30 @@
+## 2.3.3 ATCO Planning 5
+
+### Additional comments
+
+As requested by the ACE study, the update of the non-ops duty percentage for 2025 (24.2%) showed a significant difference with 2023 (18.6%) and 2024 (22.3%) figures
+
+### Additional comments
+
+Geneva ACC
+
+ATCOs planned to be operational: 93 (the value in the plan) is a value that was based on a percentage of non-ops duty equal to 18.6% (as requested by the ACE study for 2023 data); however, this percentage raised to 24.2% in 2025 and if Skyguide had applied the 2023 percentage to 85.5 (the actual value), they would have had 92.1 FTEs (so very close to 93).
+
+Zurich ACC
+
+ATCOs planned to be operational: 106.4 (the value in the plan) is a value that was based on a percentage of non-ops duty equal to 18.6% (as requested by the ACE study for 2023 data); however, this percentage raised to 24.2% in 2025 and if Skyguide had applied the 2023 percentage to 97.7 (the actual value), they would have had 104.9 FTEs (so, very close to 106.4).
+
+### Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions
+
+Training process: new ATCOs complete Basic and Rating Training in the Academy during their first year, followed by Unit Training in the operational units, which typically lasts 1.5 to 2 years depending on the unit. The allocation of newly qualified ATCOs is based on operational needs, available training capacity, and the candidates' performance and suitability profiles. For smaller units, allocation occurs before Unit Training begins, whereas for larger units the assignment to ACC, TWR/APP (or APP only) is made after the Basic phase, to ensure a balanced match between trainee potential and unit requirements (roughly five months into training).
+
+Training courses that have recently finished (all trainees have either passed their second endorsement or have definitely failed) reached the following overall training success rate:
+
+ZRH ACC: E23 = 67%; A22 = 57%, E24 = 80%
+
+ZRH TWR/APP: A20 = 25%
+
+GVA ACC: E23 = 80%; E24 = 100%; A22 = 33%;
+
+GVA TWR/APP: A20 = 0%, A22 = 100%; E23 = 0%; E24 = 50%
+

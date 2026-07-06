@@ -1,0 +1,16 @@
+## **2.2.2.H. PI #8**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+Maintaining the work technologies and procedures of air traffic control services enabling the use of CCO take-off techniques by aircraft crews.
+
+TMA Zielona Góra reorganisation project was initiated in 2025 with the following goals:
+
+1\. Implementation of separate arrival/departure point to/from east direction with linked separated SID/STAR procedures,
+
+2\. Redesign of terminal airspace.
+
+Implementation will enable simultaneous departures and arrivals to/from EPZG reducing the risk of holding patterns in such situation.
+
+The NSA receives the list of planned changes to the ATM functional system on a regular basis. Once a change is notified the relevant monitoring activities are implemented.
+

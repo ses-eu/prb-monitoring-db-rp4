@@ -1,0 +1,12 @@
+## 2.3.3 ATCO Planning 3
+
+### Additional comments
+
+### Additional comments
+
+The number of ATCOs who are planned to stop working in the OPS room consists of people finishing their operational career and of an approximation of unplanned leaves. Planned and actual number of ATCOs in OPS also contain planned or actual temporary absences (such as training for bigger system changes and others) which may increase or decrease over the years, and which are not depicted in the template. This may lead to differences in the numbers of actual ATCOs in ops, which are not directly explainable from the template. Yet, the numbers are considered the most accurate presentation of ATCOs in ops. A more detailed view on the development of the operationally available ATCOs in OPS is part of the the continuous monitoring approach of the NSA as described in the dedicated Annex DE.
+
+### Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions
+
+"Entering the training program" describes the number of ATCO-trainees starting at the academy. "ATCOs completing the training program" are those finishing their respective unit training at the ATC branches with different lengths in training dependent on sector group or center added to the institutional training. The average success-rate in DFS is appr. 90% at the academy (IT -- initial training) and varies in between 60%-90% dependent on the respective sector-family or tower-branch (UT -- unit training).
+

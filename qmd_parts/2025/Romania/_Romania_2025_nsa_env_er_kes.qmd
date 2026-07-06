@@ -1,0 +1,14 @@
+## **2.2.2.B. PI #2**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: The KES value for 2025 (3.83%) reflects a marginal improvement compared to 2024 (4.00%), albeit remaining elevated due to the persistence of the geopolitical factors described under KPI #1. The structural impact of the war in Ukraine and the temporary disruption caused by the Iran-Israel conflict of June 2025 continued to generate atypical trajectory patterns through Romanian airspace, preventing a more significant improvement in horizontal flight efficiency relative to the shortest constrained route.
+
+In 2025, ROMATSA maintained safe and optimal trajectory management within national airspace despite the challenging operational environment, including elevated military activity across the entirety of Romanian airspace.
+
+The completion of the RoMAIR TCM implementation in 2026 contributes to further improvements in sector configuration efficiency and traffic flow management, with a positive effect on flight efficiency indicators in subsequent years.
+
+Effectiveness will be monitored through the continuous tracking of KES values on the ansperformance.eu platform and through ROMATSA\'s internal performance monitoring processes.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+

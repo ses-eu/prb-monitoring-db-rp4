@@ -1,0 +1,8 @@
+## 2.2.2.A. PI #1
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+In 2025, ten out of thirteen AIRACs have been used for several route changes. The PYXIS/ZEBRA implementation in March 2025 was successful improving the overall capacity in Bremen ACC and Maastricht UAC with increased MME (military mission effectiveness). Throughout the year en-route and RAD updates were implemented to accompany the various PBN implementations for several airports in accordance with CP1.
+
+Besides that, the major change has been made through flight plan adherence. In 2025, air traffic controllers were instructed not to issue non-standard flight level clearances or shortcuts in order to avoid undermining regulated airspace.
+

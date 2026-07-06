@@ -1,0 +1,204 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+In 2025, FABEC did not achieve its en route ATFM delay target, with an actual value of 1.67 min/flight against a target of 0.63 min/flight. The overrun was driven primarily by DSNA (+1.45 min against its breakdown value), with a significant contribution also from DFS (+0.56 min). The four remaining FABEC ANSPs --- skeyes, LVNL, skyguide and MUAC --- all achieved their respective breakdown targets.
+
+DSNA:
+
+For DSNA, the main source of delay was the Marseille area, due to the reasons capacity and staffing followed by weather delay and some industrial action; severe convective weather during the summer season resulted in sustained and repeated capacity reductions. Traffic demand continued to increase in 2025, further amplifying the impact of weather-driven disruptions. Reims and Brest ACCs also contributed to the under performance due traffic increase, structural capacity limits (Reims ACC) and to the impact of the prepation of the implementation of 4-FLIGHT (ATCO training at Brest ACC).
+
+\-\--
+
+DFS:
+
+For DFS, the performance shortfall was primarily driven by capacity reasons and adverse weather conditions (convective activity in summer, fog and winter precipitation) as well as isolated technical issues. Notwithstanding the missed target, DFS achieved a significant improvement compared to 2024, demonstrating fort the second year in a row the continued effectiveness of the measures implemented in previous years, even against a backdrop of rising traffic and increased military airspace activity.
+
+\-\--
+
+LVNL:
+
+LVNL achieved the target in 2025, although performance was worse than in 2024. The main reasons were severe weather and special events. Re-routings associated with security measures for the NATO summit in June caused overdemand in adjacent centres, and the delay from their regulations was re-attributed to LVNL. Furthermore, severe thunderstroms in July and parajumping events in August caused a decrease in sector capacity, and hence significant delays.
+
+\-\--
+
+MUAC:
+
+Historically, there has always been an overdemand in the MUAC Brussels sector group (except for the COVID years). This was also the case in 2025, but it was further exacerbated by the significant increase in the NL route charges. This led to AOs filing additional flights (on the East-West axis) via Belgium rather than via The Netherlands, which increased the already high demand. On top of this, there was also a shift of traffic on the North-South axis, avoiding The Netherlands and filing through Germany, to then enter the Brussels East sectors and continue down south (and vice versa). This caused an additional shift within the Brussels sectors from hte Brussels West sectors to the Brussels East sectors, leading to an even higher concentration of traffic in the already saturated Brussels East sectors.
+
+Additional summer measures were therefore implemented to steer demand to the extent possible, but options were limited due to the downstream effects of such measures. Also, given the performance outlook for MUAC for 2025 compared to the overall network performance, the necessity of some proposed measures was questionable in the context of overall network delay containment.
+
+\-\--
+
+skyguide:
+
+Skyguide achieved its target in 2025. In spite of observing traffic levels well above 2019 level (+8%) and above 2024 level (+3.6%), Skyguide could reduce its en-route ATFM delay by 38% compared to 2024.
+
+\-\--
+
+skeyes : skeyes achieved the target set with a yearly performance of 0.08 minute per flight. This performance is similar to 2024 (0.08 min per flight), despite a 4.4% increase in traffic, demonstrating that skeyes has been able to demonstrate greater capacity.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+\-\--
+
+DFS: For DFS, the NOP 2025-2029 did not identify capacity bottlenecks requiring plan adjustments.
+
+For LVNL, the NOP 2025-2029 shows no bottleneck expected for Amsterdam ACC.
+
+For skyguide, the NOP 2026 shows no bottleneck expected for LSAZACC or LSAGACC through 2026 and beyond.
+
+For MUAC, while 2025 performance remained within target, current capacity levels may be insufficient beyond 2025 given continued traffic growth. Additional summer measures have been requested (sector rebalancing between Brussels and DECO sectors), and airspace solutions are under study for summer 2027 and beyond.
+
+For DSNA, NOP 2025-2029 was revised just before Summer, reducing planned capacity for Summer 2025.
+
+In addition, the evolution of the capacity situation in airspaces under DFS\' control in 2026 has so far been rather positive. All measures with pending implementation remain in place under NOP 2026, apart from GAMS Project for EDMM, which was cancelled after a recent reassessment under current conditions did not predict the positive effects originally intended.
+
+\-\--
+
+DSNA:
+
+NOP 2026 shows that bottlenecks are identified and that DSNA ACCs have delays forecast higher than their reference values and identifies remedial measures that will have to be implemented. In addition, some new measures are under examination resulting from the recommendations of an audit run by Eurocontrol and requested by the French NSA regarding Marseille ACC 2025 bad performance. Identification of quick wins for Summer 2026 will be done and additional mid/long terms remedial measures may be identified and inserted in the future updated versions of RP4 yearly NOP or rollling NOP.
+
+\-\--
+
+LVNL:
+
+According to the Network Operations Plan (NOP) 2025-2029 no capacity bottlenecks were expected for Amsterdam ACC. Capacity can still be increased until the traffic demand reaches the 2019 levels. As such, it is consistent with the required performance and no adjustments are needed.
+
+\-\--
+
+MUAC:
+
+Given that the achieved performance for 2025 -while being within target for that year- would already not be sufficient to satisfy the 2026 and subsequent targets, and the fact that traffic will increase, additional (summer) measures have been requested. As in 2025, the aim is to achieve a more even distribution mainly between the Brussels and the DECO sectors of MUAC, thus relieving the Brussels sectors and making better use of the available capacity in DECO.
+
+Further airspace solutions are currently under development or study, with target implementations for summer 2027 and beyond.
+
+\-\--
+
+skyguide:
+
+According to the latest Network Operations Plan (NOP 2026), no capacity bottleneck is expected, neither in LSAZACC nor in LSAGACC. The level of performance achieved in 2025 shows that, with the STATFOR traffic forecast baseline scenario, capacity should still be sufficient in 2026 and beyond.
+
+\-\--
+
+skeyes : According to the latest Network Operations Plan (NOP 2026), no capacity bottleneck is expected for EBBUACC. The level of performance achieved in 2025 shows that capacity should be sufficient in 2026.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+According to the French NSA analysis, the main reason in 2025 for delays are linked to:
+
+- capacity and staffing issues in a first in a context of growing traffic (all French ACC have recovered 2019 traffic levels already in 2024, with additional increase in 2025 : the 8 highest traffic days ever where reached between 26th June and 1st August 2025 in France, with a peak 18th July with 11 963 IFR flights) and additional volatility, weather delays still very high in 2025, impact of industrial action (mainly for two days of strickes : 3rd &4th July 2025) even if limited by the benefits of the implementation since 2024 of a new law for ATC industrial action management (5% of 2025 all causes total delays);
+
+- In particular delays have been exceptionnally high at Marseille ACC due to the combined effects of capacity and staffing issues (lack of ATCOs), severe weather and industrial action impact during the Summer period, social tension resulting from the local implementation of the new social agreement signed in May 2024. The under performance has been particularly strong in the East area of Marseille ACC, leading to the launching by the French NSA of an audit run by Eurocontrol;
+
+- In addition Reims ACC the 2025 traffic increase since 2019 has been very high and the centre is also facing structural capacity issues: some Reims ACC elementary sectors are currently reaching their maximum capacity, which means that this has to be addressed not only with additional resources but through major structural changes (airspace redesign);
+
+- It should also be noted that Brest ACC has also capacity and staffing issues due to the preparation of the implementation of the new ATM system 4-FLIGHT (training of ATCOs) and to the traffic increase.
+
+Corrective and remedial measures were taken to address actual en route capacity underachievement, presented and discussed with the French NSA. The synthesis of these measures are presented below and detailed in a dedicated annex to this report (French capacity and environment remedial measures).
+
+With regard to this 2025 underperformance, a financial penalty will be applied to DSNA and deducted from the 2027 cost base to reduce the 2027 en route unit rate. See the incentive section for the detailed calculation.
+
+The German NSA concludes on DFS\' performance in 2025:
+
+With \"Capacity\" and \"Staffing\", both most prominent delay reasons directly attributable to the performance of the ANSP could be reduced in minutes by more than 30% and over 35% in minutes per flight. Despite this, DFS\' en route capacity performance was not in line with the guideline value in all months of the year 2025. An increase of traffic and overall complexity during the summer months, the capacity targets got further out of reach. This represents not only the complexity of the airspaces under DFS\' control, which is also intensified with increased military operations, but also shows that there are still relevant capacity issues to be solved. Those are addressed by the planned capacity measures as described in the performance plan, in the NOP and possible further measures which DFS is strongly encouraged to develop in cooperation with NM during the course of RP4, where the chance arises.
+
+The mechanism for the monitoring of the capacity development and the implementation of the capacity measures of the RP4 performance plan is described in a dedicated annex to this report (Annex DE - Capacity - Monitoring of Performance and Capacity Measures (DFS)).
+
+### **Recommendations to the ANSP to rectify the situation**
+
+French NSA:
+
+A dedicated meeting has been organized with DSNA in order to gather both explanations and information about remedial measures already launched and identify potential additional measures that could be implemented by DSNA in 2026 and beyond to tackle non temporary capacity issues.
+
+The following recommendations / course of actions have been discussed and agreed with DSNA:
+
+- General remedial measures already identified, coordinated with the Network Manager and to be published in the NOP 2026-2029 for the 5 French ACC should be implemented as soon as possible;
+
+- A set of specific remedial measures put in place by DSNA or already planned in 2025 to mitigate identified non temporary issues at the French ACCs have been presented and discussed with the French NSA and are listed in the table below and detailed in a dedicated annex to this report (French capacity and environment remedial measures): the French NSA will be kept informed by DSNA of their timely implementation, of the expected benefit and of any potential issue in the implementation plan, and a follow-up meeting will be organized 2nd Semester 2026;
+
+- An analysis of potential risks on 2026 and beyond underperformance has been carried over and required potential remedial measures to address such a situation have been discussed and will also be closely monitored : in particular, the French NSA has launched in July 2025 an audit, run by Eurocontrol, regarding Marseille ACC 2025 under performance : the recommendations figuring in the final report will be analysed by the FR NSA and DSNA will be asked to provide feedback on potential quick-wins (in particular for Summer 2026), feasibility, implementation timeline and potential extention to other DSNA ACCs.
+
+A synthesis of all those remedial measures are presented below and detailed in the annex to this report already mentioned above.
+
+German NSA:
+
+DFS is recommended to timely continue the implementation of the planned capacity measures and to provide maximum transparency on the progress, while also to identifying possible temporary capacity shortfalls, expected to derive from the implementation of some measures.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+DFS:
+
+Development of a web based weather-phenomena presentation aligned with the needs of operational services, integrating trends and forecasts, to create a shared situational awareness across the U/ACC and to enhance both internal communication and communication with stakeholders.
+
+\-\--
+
+LVNL: Target met --- no remedial measures required.
+
+\-\--
+
+MUAC:Target met --- no remedial measures required
+
+\-\--
+
+skyguide: Target met --- no remedial measures required
+
+\-\--
+
+DSNA:
+
+Main remedial measures already identified and under implementation by DSNA to remedy the current capacity result from the implementation of the DSNA 2030 Strategy, the new social agreement signed in May 2024, the potential outcome of the audit launched in July 2025 by the French NSA on Marseille ACC 2025 underperformance run by Eurocontrol.
+
+Those remedial measures mainly consist of:
+
+- the implementation of new densified rostering schemes,
+
+- the finalization of the implementation of 4-FLIGHT, the new DSNA ATM system in the 2 remaining ACCs (Brest and Bordeaux),
+
+- changes in ATCO initial and continuing training, transfer of sector FL 115-195 from ACCs to APPs,
+
+- implementation of the new social agreement (including massive ATCO recruitment plan),
+
+- new pretactical processes to address meteorological adverse conditions and reduce MET delays,
+
+- new law on industrial action management, implementation of dedicated systems providing nominative means of recording the presence of controllers on premises and at the CWP,
+
+- major French upper airspace redesign, identification of measures resulting from the recommendations provided in the Eurocontrol audit report on Marseille ACC underperformance (including quick-wins for Summer 2026).
+
+These measures are detailed in the dedicated annex attached to this report (French capacity and environment remedial measures).
+
+\-\--
+
+skeyes : According to the latest Network Operations Plan (NOP 2026), no capacity bottleneck is expected for EBBUACC. The level of performance achieved in 2025 shows that capacity should be sufficient in 2026.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+Regarding France and DSNA:
+
+The French NSA is kept informed of any development related to the implementation of capacity and environment remedial and corrective measures. In particular:
+
+- A follow-up meeting has been organized by the French NSA with DSNA operational directorate in May 2025 to check the implementation of the previous remedial measures;
+
+- The French NSA has been invited to the yearly DSNA strategic users\' consultation meetings held in 2025 (2) and in May 2026 which include an update on all strategic and operational measures taken by DSNA to improve capacity and environment performances, prepare Summer season and on the investment program;
+
+- The French NSA is also involved in the capacity planning process run by the Network Manager together with DSNA during Winter 2025/2026 in order to prepare the updated 2026-2029 European Network Operations Plan;
+
+- According to the French NSA review, all remedial measures indicated in the previous monitoring report have been implemented or are under implementation for mid/long terms ones. In addition, an additional action has been decided during Summer 2025 by the French NSA to launch an audit (run by Eurocontrol) on 2025 Marseille ACC underperformance.
+
+Regarding Germany, in especially DFS:
+
+Capacity development and implementation of remedial measures are monitored by the NSA via regular updates provided by DFS. The implementation of all measures established last year will continue, some of which are part of the measures of the RP4 performance plan.
+
+- Cooperation with NM - eNM26 (network summer distribution measures to relieve EDUU)
+
+- Continued use of extra shifts (The labour agreement provides flexibility to make more extensive use of incentivised extra ATCO shifts, especially while the training of additional ATCOs is still ongoing.)
+
+- ATCO training capacity is being increased (new ATCO Training at maximum level for EDWW and EDUU and training on high level for EDMM and EDGG)
+
+- Flight Plan adherence in order to improve predictability
+
+- Continuous development and implementation of airspace redesign and adaption of procedures
+
+- Support of network weather procedures and implementation of additional local weather-related activities, such as local tactical weather briefings at EDUU developed in 2025, which will be further enhanced.
+

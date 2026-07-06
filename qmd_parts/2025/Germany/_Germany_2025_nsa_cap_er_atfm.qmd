@@ -1,0 +1,26 @@
+## 2.3.1.A. KPI #1
+
+### Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI
+
+For DFS, the performance shortfall was primarily driven by capacity reasons and adverse weather conditions (convective activity in summer, fog and winter precipitation) as well as isolated technical issues. Notwithstanding the missed target, DFS achieved a significant improvement compared to 2024, demonstrating fort the second year in a row the continued effectiveness of the measures implemented in previous years, even against a backdrop of rising traffic and increased military airspace activity.
+
+### Description of the adjustments to the capacity plan included in adopted performance plan
+
+For DFS, the NOP 2025-2029 did not identify capacity bottlenecks requiring plan adjustments.
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+With \"Capacity\" and \"Staffing\", both most prominent delay reasons directly attributable to the performance of the ANSP could be reduced in minutes by more than 30% and over 35% in minutes per flight. Despite this, DFS\' en route capacity performance was not in line with the guideline value in all months of the year 2025. An increase of traffic and overall complexity during the summer months, the capacity targets got further out of reach. This represents not only the complexity of the airspaces under DFS\' control, which is also intensified with increased military operations, but also shows that there are still relevant capacity issues to be solved. Those are addressed by the planned capacity measures as described in the performance plan, in the NOP and possible further measures which DFS is strongly encouraged to develop in cooperation with NM during the course of RP4, where the chance arises.
+
+The mechanism for the monitoring of the capacity development and the implementation of the capacity measures of the RP4 performance plan is described in a dedicated annex to this report (Annex DE - Capacity - Monitoring of Performance and Capacity Measures (DFS)).
+
+### Recommendations to the ANSP to rectify the situation
+
+DFS is recommended to timely continue the implementation of the planned capacity measures and to provide maximum transparency on the progress, while also to identifying possible temporary capacity shortfalls, expected to derive from the implementation of some measures.
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+Development of a web based weather-phenomena presentation aligned with the needs of operational services, integrating trends and forecasts, to create a shared situational awareness across the U/ACC and to enhance both internal communication and communication with stakeholders.
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+

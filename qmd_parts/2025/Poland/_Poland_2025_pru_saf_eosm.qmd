@@ -1,0 +1,72 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+[PANSA]{.underline}
+
+In 2025, PANSA achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+According to the monitoring report, PANSA achieved all targets set for that year. At the end of 2025 the actual safety performance was in line with the established targets. Evidence supporting the EoSM maturity levels declared by PANSA in each component was provided to the NSA. Moreover, the NSA conducted an in-depth analysis of the responses provided, as well as the supporting evidence. During this assessment, additional questions arose, and PANSA was requested to provide further explanations. Representatives of the NSA and PANSA held a meeting during which all identified issues and additional arguments related to the introduced changes were discussed. Following the receipt of additional explanations and the discussions held during the meeting, the NSA accepted the responses provided and the maturity levels declared by PANSA.
+
+In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements:
+
+-   The \"PANSA Safety Culture\" document was prepared in 2025 and approved by the Safety Manager. It is accompanied by the \"Safety Culture Assessment Programme\" based on the blocks and target audience defined in the document. The Assessment Programme was approved by the Safety Manager and market research started for the purpose of obtaining a contractor for the assessment.
+
+-   Various meetings in local ATS units, including "Safety Days", were continued in 2025 to popularise PANSA's Safety Vision, promote Just Culture, including Reporting Culture and discuss local safety issues.
+
+-   Local Safety Experts have become key experts in risk assessment.
+
+-   PANSA has updated the training programme for all personnel which covers Safety Management matters. Dedicated training has been developed for the top management in a classroom form. SMS training for the operational personnel is part of the operational training. Other PANSA personnel are provided with mandatory e-learning.
+
+-   The integrated Hazard Register was ramped-up under the control of the dedicated unit for hazard identification and SMS development.
+
+-   All SMS procedures have been reviewed and updated, and new Just Culture Policy was agreed with all trade unions, signed and published.
+
+-   A rolling programme of verifying working time based on rostering was continued (planned and executed) for all units (3 subsequent operational units at once on a quarterly basis). The reports were provided to the Director of Operations for on-going corrections.
+
+-   Co-operation was established with other ANSPs and information exchanged on practices in safety performance and procedures.
+
+-   PANSA joined the Data4Safety programme of EASA.
+
+-   PANSA joined the CANSO/EUROCONTROL safety benchmarking programme Standard of Excellence in SMS.
+
+-   Initiation of integration of change management with safety assessment processes within the safety management department.
+
+-   Training and implementing the Kanban method using MS Teams to oversee air traffic occurrence investigations.
+
+The Polish NSA notes in the monitoring report that certain initiatives still need to be undertaken and implemented in order to allow achievement of the targets set for PANSA for the upcoming years of RP4. These include:
+
+-   Dedicated Human Factor expert(s) to be employed to provide support across PANSA. Actions are planned to be taken to acquire a contract expert (Safety Risk Management -- Level D -- 2029).
+
+-   Fatigue Risk Management procedure to be revised and adapted to improve the management of fatigue-related risk based on internally and externally collected data (Safety Risk Management -- Level D -- 2029). HR data research started in 2025.
+
+-   Safety Dashboard shall be ready in 2026 and is intended to be the tool to identify and present operational risk for acceptance by the operational managers. The current operational risk identification is limited to sector overload (Safety Risk Management -- Level D -- 2029). Formalisation of current practices to analyse trends arising from SMS audits and surveys (Safety Assurance -- Level C -- 2026).
+
+Furthermore, as per the monitoring report, the NSA will closely monitor the implementation of measures aimed at improving the effectiveness of safety management, including through ongoing monitoring activities, as well as planned and unplanned inspections carried out as part of the continuous oversight of the ANSP.
+
+[Port Lotniczy Bydgoszcz S.A.]{.underline}
+
+In 2025, Port Lotniczy Bydgoszcz S.A. met the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+The NSA notes in the monitoring report, that as this was the first year of completing the new version of the questionnaire, the process proved to be significantly more time- and resource-consuming, and the assessment of Port Lotniczy Bydgoszcz S.A. declared maturity levels required increased engagement from both the ANSP and the CAA.
+
+In terms of main measures put in place to achieve the safety performance levels, the report defines that the ANSP introduced changes to internal procedures related to Safety Management System, including an expansion on the scope of its internal assessments.
+
+According to the monitoring report, based on the results of the 2025 questionnaire assessment, the CAA considers that in order to achieve the target RP4 safety levels Port Lotniczy Bydgoszcz S.A. will need to implement additional measures related to safety requirements. In the coming years the organisation is expected to further strengthen internal governance and management involvement in safety, in particular by ensuring that board-level management is systematically informed about key operational and organisational risks, safety hotspots, ongoing safety initiatives and safety culture assessments outcomes. Continued improvement is required in the formalisation and effective implementation of hazard identification processes, ensuring they adequately address both current operations and changes, and are supported by an appropriate balance of reactive, proactive and predictive safety data. Port Lotniczy Bydgoszcz S.A. should also focus on enhancing safety culture assessment processes and implementing robust actions to address identified gaps. Further efforts are needed to reinforce Just Culture principles and encourage staff involvement in developing solutions related to Just Culture. In addition, improvements are expected in supporting areas such as change management, emergency preparedness, and targeted safety communication. Overall, ANSPs should aim to ensure greater consistency, integration and effectiveness across all SMS elements, with a focus on continuous improvement.
+
+Furthermore, the NSA will closely monitor the implementation of measures aimed at improving the effectiveness of safety management, including through ongoing monitoring activities and planned and unplanned inspections carried out as part of the continuous oversight of the ANSP.
+
+[Warmia i Mazury Sp. z o.o.]{.underline}
+
+In 2025, Warmia i Mazury Sp. z o.o. met the planned maturity levels set out in its performance plan for all five components of the EoSM. In Safety Promotion, the organisation exceeded their planned level.
+
+In terms of main measures put in place to achieve the planned safety performance levels, Warmia i Mazury Sp. z o.o. introduced and executed a comprehensive suite of initiatives designed to uphold the safety targets specified in the preceding year\'s questionnaire. Key actions included aligning all SMS-related procedures, requirements, and documentation with national and international legal frameworks. Continuous SMS training was delivered to both internal staff and external contractors. Furthermore, operational oversight was strengthened through the active roles of the Safety Manager, Safety Committee, and Safety Review Board, complemented by routine Local Safety Meetings and the refinement of key safety performance indicators. To foster a proactive organisational culture, the airport conducted systematic internal SMS audits, regular safety surveys, and integrated safety-specific investments into its annual business planning while actively exchanging best practices. Notably, in accordance with the latest regulatory frameworks, the airport has implemented an Information Security Management System (ISMS) compliant with Part-IS requirements.
+
+To demonstrate the continuous maturity of Level C within safety risk management, the monitoring report notes that the following evidence-backed processes were confirmed:
+
+-   A comprehensive review of the SMS framework is conducted at least annually.
+
+-   Risk management processes utilise a combination of reactive, proactive, and predictive methods.
+
+In terms of reaching the targets in future years of the reference period, according to the report, based on the results of the 2025 questionnaire assessment, the CAA considers that in order to achieve the target RP4 safety levels Warmia i Mazury Sp. z o.o. will need to implement additional measures related to safety requirements. In the coming years the ANSP is expected to further strengthen internal governance arrangements and ensure that board-level management is systematically informed about key operational and organisational risks, safety hotspots, safety initiatives and safety culture outcomes. A stronger and more consistent top-down commitment from senior and middle management is required to actively promote and sustain a positive safety culture, supported by clear communication, visible leadership engagement and structured organisational messaging. Further development is also expected in the integration of human performance principles into day-to-day operations, including the adoption and effective use of recognised good practices and the active involvement of Human Factors expertise across relevant organisational areas. In addition, the organisation should continue to mature its safety culture process, including regular and structured safety culture assessments, the implementation and tracking of improvement actions, and effective monitoring of their outcomes. Overall, the ANSP is expected to ensure greater consistency, integration and effectiveness across all SMS and safety culture elements, with a clear focus on continuous improvement and operational resilience.
+
+According to the report, the NSA will closely monitor the implementation of the measures aimed at improving the effectiveness of safety management, including through ongoing monitoring activities, as well as planned and unplanned inspections carried out as part of the continuous oversight of the ANSP.
+

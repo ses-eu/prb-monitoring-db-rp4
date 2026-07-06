@@ -1,0 +1,24 @@
+## **2.3.1.B. KPI #2**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI**
+
+In 2025, average terminal delay at the relevant airports (Dublin, Shannon and Cork) was 0.28 minutes per arriving flight, considering RP4 CRSTMP Performance Targets subtracting the non-CRSTMP delay from the actual delay was 0.00 minutes per arriving flights.
+
+Of the 42,442 minutes delay, the primary causes were 30,601 minutes due Weather, Aerodrome Capacity 10,709 minutes (the most significant cause due Runway Displaced threshold works).
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+The IAA notes that ATFM delay minutes were primarily caused by weather and aerodrome related issues. Consistent with historic patterns, only a small proportion of ATFM arrival delay was directly ANSP attributable.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+Continue efforts to increase ATCO staffing levels at least in line with the Performance Plan forecasts, and review measures which might be possible to reduce the extent of weather related delay.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+AirNav Ireland will continue its efforts to increase ATCO levels throughout the period of RP4. The capacity incentive scheme introduced by the IAA aims to incentives AirNav to meet the performance plan targets.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+The IAA meets quarterly with AirNav Ireland to discuss progress with its hiring targets.
+

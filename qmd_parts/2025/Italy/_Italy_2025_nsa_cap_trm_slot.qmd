@@ -1,0 +1,8 @@
+## **2.3.2.A. PI #1**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+Slightly difference in adherence values exists between the prefilled tables and what has been elaborated by Italy (ENAV) for the same year.
+
+ENAV data source is NM/NMIR, the difference is around one decimal percentage point and can be explained by the use of different/updated flight samples that eventually respected the ATFM slot time window. Nevertheless, it must clarified what the cluster of LIxx aiports is, since the EU REG 255/2010 and its modifications refers to all the national airports and not only those 41 airports falling under the performance and charging scheme. Here again different sources lead to different figures.
+

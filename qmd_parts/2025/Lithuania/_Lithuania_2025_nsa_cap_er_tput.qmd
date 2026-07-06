@@ -1,0 +1,10 @@
+## **2.3.2.E. PI #5**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The actual performance achieved in 2025 reflects a continuation of the capacity performance delivered by Lithuania during previous reference periods. Throughout RP2, RP3 and the first year of RP4, sufficient en-route capacity has been provided to accommodate traffic demand without generating en-route ATFM delays.
+
+The absence of en-route ATFM delays in 2025 was supported by established capacity planning processes, adequate operational staffing and the continuous alignment of available ATC capacity with traffic demand. No deterioration in performance was observed compared with previous years and, therefore, no corrective actions were required.
+
+The NSA will continue monitoring capacity performance through the assessment of key performance indicators, traffic and capacity trends, ANSP reporting and Network Manager performance data, with a view to ensuring the continued provision of adequate capacity and the early identification of any factors that could adversely affect performance.
+

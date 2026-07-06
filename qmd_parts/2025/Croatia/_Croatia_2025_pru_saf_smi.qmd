@@ -1,0 +1,8 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Croatia reported 1 separation minima infringement (SMI) in their airspace during 2025. The rate of separation minima infringements was well below Union-wide average (0.29 vs 7.10). At ANSP level, Croatia reported 1 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was well below the Union-wide average (0.29 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has decreased at both State level (0.29 vs 3.01) and at ANSP level (0.29 vs 2.17).
+
+As described in the monitoring report, Croatia Control has a very low number of SMI. Croatia Control is closely monitoring the level of SMI using various tools (ASMT, TOKAI). NCA is using ECCAIRS database which is compatible with TOKAI. NCA can monitor the level of SMI and trends. As part of ongoing oversight of compliance with the requirements of Regulation (EU) 376/2014 and the requirements related to SMS, CCAA verifies whether the proposed implemented corrective actions have been implemented, whether their performance/efficiency is monitored and whether feedback on the results was disseminated adequately. Reported occurrences are also subject to analysis by the CCAA, which is responsible at national level for receiving and analysing of occurrence reports. Alert levels are set for MAC (one of the precursors is SMI), monitored and in case of identified deviations, mitigation measures are initiated.
+

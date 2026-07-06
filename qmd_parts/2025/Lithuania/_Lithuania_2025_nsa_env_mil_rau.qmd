@@ -1,0 +1,13 @@
+## **2.2.2.K. PI #11**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The performance achieved for Environment PI #11 (Rate of using available airspace structures) amounted to 83% in 2025. The achieved level reflects the extent to which available airspace structures were utilised by airspace users in operational flight planning and execution.
+
+Performance was supported by the continued application of Flexible Use of Airspace (FUA) principles, effective civil-military coordination, and the timely availability of airspace structures through established airspace management processes. The availability of relevant airspace structures was regularly communicated to airspace users and the Network Manager to facilitate their operational use.
+
+The achieved value was influenced not only by the availability of airspace structures but also by factors outside the direct control of the ANSP, including airspace users' route selection preferences, network operational constraints, traffic distribution patterns and temporary airspace requirements.
+
+No specific deficiencies in the airspace management process were identified during the reporting period. Nevertheless, efforts will continue to maximise the operational availability and attractiveness of airspace structures, where feasible, in coordination with civil and military stakeholders and the Network Manager.
+
+NSA will continue to monitor performance through regular analysis of performance indicator trends, airspace utilisation data, airspace management reports and Network Manager information. Particular attention will be paid to the relationship between airspace availability and actual utilisation in order to identify opportunities for further improving flight efficiency and environmental performance.

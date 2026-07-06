@@ -1,0 +1,16 @@
+## **2.2.2.F. PI #6**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+For information on measures implemented before 2025, please refer to the respective Annual Monitoring Reports.
+
+In 2025 PANSA reduced radar separation minimum applicable in Warszawa TMA from 5 NM to 3 NM. This measure enables more efficient traffic flow within that airspace. Additionally, RRSM has been introduced at EPWA, alongside more efficient coordination methods between APP and TWR which aimed at reducing the additional time spent in the terminal airspace of that airport. One more initiative that was implemented is a special procedure regarding VFR Spec flights (more precisely rescue helicopters) in CTR, based on buffer zones, which minimises impact of such flights on scheduled traffic.
+
+Furthermore, more efficient coordination procedures are being validated for APP and TWR, including reduction of the spacing on final approach.
+
+The NSA receives the list of planned changes in the ATM functional system on regular basis. Once a change is notified, the relevant monitoring activities are implemented.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+n/a
+

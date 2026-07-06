@@ -1,0 +1,10 @@
+## 2.2.2.B. PI #2
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+Despite an increase in traffic, the flight efficiency of the shortest constrained route remained satble in 2025 (6.04%).
+
+FRA-CH was implemented at the end of 2022, bringing significant improvements at KES level thanks to its cross-border design. Since then, further cross-border developments have been implemented and more are planned.
+
+The difference between KEP and KES is is increasing from 0.31% in 2024 to 0.37%. It shows the difference between the cheapest and the shortest available route.
+

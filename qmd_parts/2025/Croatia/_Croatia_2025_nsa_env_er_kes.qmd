@@ -1,0 +1,6 @@
+## **2.2.2.B. PI #2**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+In coordination with the Network Manager, en-route restrictions are systematically planned and implemented to assess and manage their impact on network performance. Such restrictions are driven by operational requirements and are introduced with the primary objective of maintaining traffic safety and reducing operational complexity.
+

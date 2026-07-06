@@ -1,0 +1,18 @@
+## **2.2.2.H. PI #8**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+ROMATSA: The vertical climb efficiency values for 2025 are generally lower than the corresponding descent values (PI #7), indicating that climb profiles are managed more efficiently across Romanian airspace. The highest values are recorded at LRBS (Băneasa) and LRCK (Constanța).
+
+The elevated value at LRBS reflects a combination of factors specific to this location: the airport is situated within the city of Bucharest, imposing altitude restrictions and limited departure headings to avoid densely populated areas; coordination requirements with LROP traffic within the shared TMA București; and the presence of Military Air Base 90 (Baza 90) which generates military airspace restrictions that further constrain available climb profiles.
+
+The elevated value at LRCK is attributable to the sustained military activity in the Black Sea region, generating airspace restrictions that affect the available climb profiles, as described under PI #7.
+
+Initiatives planned to improve this indicator:
+
+- implementation of RNAV/RNP departure procedures at all airports included in the Performance Plan, in accordance with the national PBN Transition Plan, enabling more direct and fuel-efficient climb profiles (LRBS, LROP, LRCV (SID), LRCL, LRSB, LRTM);
+
+Effectiveness will be monitored through the tracking of PI #8 values per airport on the ansperformance.eu platform and through ROMATSA\'s internal performance monitoring processes.
+
+NSA: specific monitoring of data on EUROCONTROL portal and continuous oversight activities.
+

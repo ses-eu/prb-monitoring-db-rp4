@@ -1,0 +1,21 @@
+## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
+
+At State level, Spain reported 85 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was lower than Union-wide average (4.26 vs 7.10). At ANSP level, Spain reported 133 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was higher than the Union-wide average (6.67 vs 6.0).
+
+When comparing to 2024, the rate of separation minima infringements has decreased significantly at State level (4.26 vs 29.13) and decreased at ANSP level (6.67 vs 8.57).
+
+In terms of the initiatives implemented or planned to improve this performance indicator, at State level, Spain describes that the monitoring of the proposed measures is structured at three levels. Firstly, through the application within AESA of the Risk-Based Oversight (RBO) methodology, where the evolution of the indicators is monitored. Moreover, several key safety areas are identified at a State Level (through the State Safety Program) to categorize occurrences. These key safety areas include, for the ATM/ANS scope, loss of separation in flight. In the case of loss of separation in flight, this key safety area includes occurrences where:
+
+-   The separation minima between two aircraft are breached.
+
+-   In which two aircraft fail to maintain the separation prescribed for the current airspace and flight rules.
+
+-   And where there is an inadequate separation, meaning situations in which the separation, perceived by either the pilots or the ATS personnel, is compromised even where no minima was prescribed (for example, between aircraft in uncontrolled airspace, or between VFR and IFR aircraft in class E airspace).
+
+Secondly, the monitoring continues through the follow-up of the effective implementation of measures via ATM/ANS audits (related functional changes, specific action plans). Finally, regular meetings are held with the ANSP Accountable Manager and the Safety Manager, during which updates are provided on the evolution of the indicators, as well as on the underlying causes and the measures implemented.
+
+In terms of the initiatives implemented or planned to improve this performance indicator, at ANSP level, the monitoring report defines the following elements: For ENAIRE, a TTM (Tactical Trajectory Module) tool with medium-term conflict warnings and a "what-else" function, for blind spot event prevention, has been implemented in 2025, in LECM and LECB Enroute sectors, and its implementation at LECS and GCCC is planned for the near future. Also, a STCA (Short Term Conflict Alert) alert system has been implemented in 2025 at GCXO Approach. Airspace restructuring has also been carried out at LECP in 2025. Improvements in civil-military coordination in the Torrejón area (LEMD-LETO) are also planned for 2026.\
+On the other hand, the effectiveness of the implementation of measures in the different action plans activated in previous years is monitored, especially a specific Action Plan in LECM-Enroute (May 2024), and an Action Plan for speed adherence in the final approach to LEPA (July 2023).
+
+For EA, the monitoring report states that this PI is new for the EA and doesn't reflect exactly the statistics EA is keeping. EA states it will need more time to accommodate their data to this new indicator.
+

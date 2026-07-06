@@ -1,0 +1,6 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+This indicator, in its current form, is monitored by the Network Manager, and no additional data collection is required. Refinements to the indicator may require additional data and analysis
+

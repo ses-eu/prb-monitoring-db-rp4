@@ -1,0 +1,8 @@
+## **2.3.2.D. PI #4**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+According to Network Manager dashboard data, the ANSP recorded 29.2% of total en-route ATFM delay on days when daily throughput exceeded expected traffic levels (ACC). Local data indicate an even higher proportion than that reflected in the NM dashboard.
+
+The occurrence of delays under conditions where throughput surpassed expected demand can be attributed to a combination of factors, including the impact of geopolitical developments (notably in Ukraine and the Middle East), sustained pressure on South-East axis ANSPs to accommodate high traffic volumes, adverse weather conditions across the network, and the influence of neighbouring ANSPs' operational performance.
+

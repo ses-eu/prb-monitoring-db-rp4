@@ -1,0 +1,9 @@
+## ERT1.3. Rate of using available airspace structures (PI#11)
+
+*ESTONIA mentions that the Data used and reported comes from NM.*
+
+(Data source NM)
+
+- the ratio of the used of the available airspace structures is **25%** (via available restricted and segregated airspaces)
+
+- the ratio of the use of the available airspace structures is **35%** (via available conditional routes)

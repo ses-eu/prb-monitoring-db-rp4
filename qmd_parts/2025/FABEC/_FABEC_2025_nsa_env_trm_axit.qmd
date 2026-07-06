@@ -1,0 +1,44 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The NSAs are monitoring the performance by using the SES dashboards
+
+https://www.sesperformance.eu/dataportal/vis/2025/
+
+Direct coordination between NSAs and ANSPs is done regularly and additionally ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
+
+\-\-- Germany \-\--
+
+DFS is constantly optimising its approach system in order to improve capacity (open STARS) and to reduce detours (adjustments in IAPs during PBN transition).
+
+\-\-- Netherlands \-\--
+
+No specific measures have been implemented or are planned. Performance very much depends on the runways in use, which depends on the weather conditions. E.g. the higher the share of flights landing on runway 18R, the higher the taxi-in additional time. This is because the absolute taxi-in time for this runway is high, which means that the additional time is relatively large in an absolute sense as well. Moreover, taxi times from this runway may be negatively influenced by the taxi route, as with some runway combinations landings on 18R have to taxi around runway 18C/36C to avoid crossing an active runway. The reference time is determined by traffic that can cross the (inactive) runway.
+
+\-\-- Switzerland \-\--
+
+Ground efficiency has suffered from increased traffic in the summer of 2025.
+
+Further improvements will result from the use of :
+
+1/ the CP1 Airport Operation Plan, although it should be noted that taxi-out time is dependent on weather conditions, particularly if de-icing is required.
+
+2/ the deployment of new DARTS (LSZH only) where various ground efficiency elements are expected
+
+\-\-- France \-\--
+
+The 2025 values show a deterioration for LFMN, LFPO and LFPG linked to the traffic increase and volatility, the overall DSNA ATC capacity performance but also impacted by works on the airport side.
+
+\-\-- Belgium \-\--
+
+skeyes has its own taxi indicators. As the actual performance for this indicator is good, no specific action is planned.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+\"Regarding LFML (Marseille airport), te Airport data flow (APDF) has been implemented 2019 but with some technical issues regarding block data. Beginning 2020, when within the framework of a project on implementing A-CDM concept at Marseille airport, additional exchanges took place regarding lacking information (AOBT/AIBT) and how to provide it through the airport data flow but it could not be implemented during the covid 19 phase.
+
+Eurocontrol has contacted Marseille airport authorities to tackle the issue. The French NSA will support Eurocontrol and Marseille airport in order to identify remaining issues and implement the on block data provision as soon as possible.
+
+Ongoing work with good progress has been made for the implementation of ECRA at LFML.\"
+

@@ -1,0 +1,30 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (151.68 €) is -3.0% lower than the nominal DUC (156.41 €). The difference between these two figures (-4.73 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.91 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-7.22 €/SU);
+
+- the addition of the traffic adjustment (+0.06 €/SU) for the costs not subject to traffic risk sharing; and
+
+- financial incentives (+1.52 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 5.0%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Portugal provides the following information regarding the initiatives:
+
+*"The effective savings in 2025 -- when comparing the actual unit cost that will be borne by airspace users with the determined unit cost -- were €4.73 per service unit, an effect that will be reflected in the price to be paid in subsequent years. This results from various adjustments, some refunds and other recoveries, but the largest contribution comes from the reimbursement of costs exempt from cost sharing, as explained in spreadsheet 2.4.1.B.TERM."*
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.1. NOTE 2**
+

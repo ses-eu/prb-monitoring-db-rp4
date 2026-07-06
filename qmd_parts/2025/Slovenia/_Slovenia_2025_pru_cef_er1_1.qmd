@@ -1,0 +1,62 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -4.1% (or -2.28 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TSUs (+8.0%) and higher than planned en route costs in real terms (+3.5%, or +1.4 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+8.0%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +3.5% (+1.4 M€2022) higher than planned. This is the result of higher costs for the main ANSP, Slovenia Control (+3.8%, or +1.4 M€2022) and the MET service provider (+11.9%, or +0.2 M€2022) and lower costs for the NSA/EUROCONTROL (-4.6%, or -0.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (SLOVENIA CONTROL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for Slovenia Control in 2025 (+3.8%, or +1.4 M€2022) result from:
+
+- Slightly higher than planned staff costs (+0.2%), mainly reflecting the impact of lower than planned inflation index (-0.3 p.p.) since costs in nominal terms were slightly below planned (-0.1%).
+
+- Significantly higher than planned other operating costs (+16.8%), mainly driven by higher prices under new contracts concluded in 2024--2025 and unplanned costs related to ATCO training abroad, cybersecurity upgrades and maintenance, PART-IS implementation, rising cybersecurity market prices, and external expert support for the documentation of certification processes.
+
+- Slightly lower than planned depreciation (-0.6%),
+
+- Significantly higher than planned cost of capital (+32.4%), entirely driven by a change in capital structure following the full repayment of long-term debt in 2025, which increased the equity financing share (from 60% to 86.5%) and the actual pre-tax WACC rate at 7.04% compared to the determined (6.21%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Slovenia provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Costs in nominal terms were higher than determined by 3,3%, in real terms 3,5% higher than determined. Number of service units was 8,0% higher than planned, reason being higher number of IFR flights compared to STATFOR used for preparation of performance plan. This resulted in 4% lower actual unit cost for 2025."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"*Operating costs 1*6.5*% higher due *to:*
+
+*- the conclusion of new contracts in 2024 and 2025, following the expiration of previous agreements, with prices exceeding initially forecasted inflation levels.*
+
+*- Unplanned costs incurred in 2025, including:*
+
+> *o Training of air traffic controllers abroad and related business trips costs,*
+>
+> *o Costs related to upgrades and maintenance of the cybersecurity system and technical solutions related to the implementation of PART-IS requirements,*
+>
+> *o Considerable increase of prices in cyber security domain due to significant demand,*
+>
+> *o Expenses related to the external professional experts support in the preparation of technical documentation in certification processes.*
+
+*Cost of capital is 32.4% higher than determined due to two changes against the values determined in the RP4 performance plan. The assumptions in the performance plan were based on then valid debt level, but Slovenia Control was able to fully repay its outstanding long-term debt during 2025 (closing balance EUR 0 at 31/12/2025, against EUR 5,604,969 at 31/12/2024). This resulted in an average debt of EUR 2,802,484 and an actual share of financing through equity of 86.5% (against 60% determined). The average interest on debts of 4.34% remained in line with the determined value. In accordance with paragraph 47 of the PRB Cost of Capital Guidelines (June 2024) and Articles 22(4) and 23 of Regulation (EU) 2019/317, the return on equity is kept equal to the determined rate of 7*.46% pre-tax. The resulting actual pre-tax WACC for 2025 is 7.04%, compared to the determined 6.21%, with the difference driven entirely by the change in capital structure following debt repayment.*"*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (SLOVENIA CONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 monitoring report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

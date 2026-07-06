@@ -1,0 +1,12 @@
+## SAF1.3. Rate of runway incursions (RIs) (PI#1)
+
+Romania has reported 2 runway incursions (RI) during 2025 for all airports listed in the performance plans (11). In terms of ATS/CNS contribution, Romania reported 2 runway incursions.
+
+When comparing the RIs at airport level to Union-wide level, Romania was lower than Union-wide average (0.88 vs 2.53). When comparing airport level with ATS/CNS contribution to the Union-wide level, Romania was below the Union-wide average (0.88 vs 0.96).
+
+As Romania reported 0 runway incursions in 2024, the rate of RIs has increased compared to 2024 at both airport level and ATS/CNS contribution-level.
+
+To improve both RIs and SMIs, ROMATSA lists the following elements in the monitoring report: Dissemination of the occurrences (RI + SMI) at all ROMATSA structures that provide ATS services. Participation in Local Runway Safety Teams (LRST). Issuing Safety Recommendations after the occurrence was reported and investigated. Issuing bi-annual Reports for all the Occurrences reported and investigated. Implementation of good practices taken over from European level or from BULATSA through DANUBE FAB Safety Committee.
+
+Regarding the monitoring of the effectiveness of the above initiatives, the NSA noted in the monitoring report that NSA monitors by continuous oversight -- the processes for collecting, storing and analysing occurrences were improved by all parties involved (ANSP, CAA/NSA and AIB). In addition, the NSA carried out audits and inspections at ROMATSA, and automated interfaces were established between the safety databases of the AIS and the CAA/NSA. Moreover, specialized assessment is performed by the aeronautical inspectors on daily basis and reports.
+

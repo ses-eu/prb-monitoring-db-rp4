@@ -1,0 +1,86 @@
+## **2.3.3 ATCO Planning 1**
+
+### **Additional comments**
+
+The numbers presented in the above tables "ATCOs in the scope of the performance scheme" (division into ACC, APP and TWR), for planned and actual values, represent the number of ATCOs (FTEs) who work in the given unit (ACC, APP and TWR respectively). They do not take into account the work performed by ATCO for a given service (e.g. when ATCO assigned to TWR unit performs APP service). PANSA does not allocate ATCO FTEs to types of services (ER, TNC, non-ANS). The element that is allocated to services are costs. Staff costs are allocated to resources, which then are allocated through a multistep approach, using the dedicated EPM tool, to types of services.
+
+Therefore, the values of ATCOs allocated to ER presented in lines "Number of ATCOs in OPS (year-end FTEs) allocated to the en route cost base(s)", for planned and actual values, represent only estimates. It should be noted that in Poland at majority of airports APP service is performed from TWR unit -- therefore the values in those lines include also those ATCOs who work in TWR units but perform APP service.
+
+What needs to be stressed here is that TMAs in Poland (especially those where radar approach is provided) are extensive, with upper limits even up to FL285 (TMAs dimensions, including upper limits, are based on individual operational requirements and therefore vary between various TMAs). They were established in such a way historically (in 2010) to improve airspace capacity until vertical split of the Polish airspace could be put in place -- with the assumption that in fact they would cover lower airspace offloading ACC capacity. Those historically established upper limits have not been changed (lowered) until now. As a consequence, those TMAs serve not only approaching/departing flights but also transit flight (that do not land on or depart from an airport located under the given TMA). Thereby they largely perform a function similar to lower ACC sectors.
+
+### **Additional comments**
+
+Number of additional ACC ATCOs in OPS who have started working in the OPS room (FTEs) in 2025: 11.5166 consists of:
+
+• 8 - new licenses,
+
+• 3 - shifts from other PRU categories to PRU1 (ATCOs in OPS) category,
+
+• 0.5166 - increase of working time on the request of employee.
+
+Number of ACC ATCOs in OPS who have stopped working in the OPS room (FTEs): 6.0999 consists of:
+
+• 5 - shifts from PRU1 (ATCOs in OPS) category to other PRU categories,
+
+• 1.0999 - reduction of working time on the request of employee.
+
+### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
+
+Additional information for the above tables
+
+The values in lines \"Number ATCO trainees at year end\", for planned and actual values, are totals (No of persons) at the given year\'s end of Staff categories 3 (Ab-initio trainees) and 4 (On-the-job trainees) as defined in EUROCONTROL Specification for Economic Information Disclosure.
+
+The actual values in line "Number of trainees entering the training program(s) during the year" for 2025 include trainees starting the basic training (107 trainees) and trainees for whom training for APP or SUR APP rating was organized (9 On-the-job trainees who got ADC rating).
+
+The actual value in line "Number of trainees completing the training program(s) during the year" for 2025 includes 43 new ATCOs, while the total number of new trainees completing the training program during 2025 was 45 (this value includes 2 endorsements of ATCOs who completed the training program in 2024, but they at once started another training; those ATCOs have been employed under PRU1 category only from 2025).
+
+Description of the training process
+
+In 2025 PANSA was the only organisation under the Performance Scheme involved in the ATCO training process.
+
+Both, basic training and rating training were performed by PANSA in its dedicated training organisational unit - certified ATCO training centre (ATCO-TO). When possible and available, PANSA also employs candidates for the rating training who obtained student license (S-ATCL) during initial training at other certified ATCO-TO in Poland (eg. Lotnicza Akademia Wojskowa in Dęblin).
+
+As it was described in RP4 PP, trainees participated in initial training, consisting of two courses: basic training and rating training. In 2025 two courses where launched -- in May and November.
+
+Basic training 2025:
+
+Basic training launched in May 2025 was implemented in accordance with RP4 PP assumptions -- theoretical part including 374 lessons (1 lesson unit = 45 min) and practical part including 12 to 15 exercises. However, in October 2025 there were some changes made in the training process, which were approved by CAA. Basic training launched in November 2025 was divided into a theoretical part, including 289 lessons (1 lesson unit = 45 min) and a practical part, which included 20 to 40 exercises. The level of knowledge of training participants was periodically monitored (tests), and after the theoretical part there was an oral knowledge test and exam.
+
+During the practical training, students' competence was monitored on an ongoing basis, during each training session on the simulator. After the practical part it was checked in the form of an assessment.
+
+Rating training 2025:
+
+The rating training was also divided into a theoretical and a practical part, as it was described in RP4 PP. Both rating trainings for May and November courses were executed in accordance with the new established training process of ATCOs, which was approved by CAA.
+
+The duration of theoretical training (1 lesson = 45 min) depended on its type, as follows:
+
+• aerodrome control rating (ADC): 72,5 lesson units,
+
+• aerodrome control surveillance rating endorsement (SUR): 5 lesson units,
+
+• approach control procedural rating (APP): 72,5 lesson units,
+
+• approach control surveillance rating (APS): 73 lesson units,
+
+• area control surveillance rating (ACS): 56 lesson units.
+
+The practical part of qualification training depended on its type, in accordance with the below:
+
+• aerodrome control rating (ADC): from 90 to 120 exercises,
+
+• aerodrome control surveillance rating endorsement (SUR): from 10 to 13 exercises,
+
+• approach control procedural rating (APP): from 35 to 47 exercises,
+
+• approach control surveillance rating (APS): from 150 to 200 exercises,
+
+• area control surveillance rating (ACS): from 170 to 220 exercises.
+
+The level of knowledge and skills of trainees was monitored on an ongoing basis, during each simulator training session, and periodically (by analyzing training progress). After completing the practical part, an assessment was conducted, and after the theoretical part an exam took place.
+
+The process of assigning candidates to units was a two-stage process. The first stage was the assignment of candidates to specific services (TWR, APP or ACC), which was carried out on the basis of predisposition testing during initial training - in accordance with the needs of the Operations Department of PANSA.
+
+The second stage was the assignment to the specific units, which took place during the rating training based on the assessment of the candidates\' training progress, in consultation with the Operations Department, took into account the needs and possibilities of training in the unit in terms of its effectiveness.
+
+For 2025 PANSA planned to train 7 new ATCOs for ACC, 8 new ATCOs for APP and 27 new ATCOs for TWR, while the actual values were 8 new ATCL licences for ACC, 8 new ATCL licences for APP and 27 new ATCL licences for TWR.
+

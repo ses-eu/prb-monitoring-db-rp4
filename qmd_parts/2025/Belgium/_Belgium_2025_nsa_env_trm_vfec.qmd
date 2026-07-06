@@ -1,0 +1,5 @@
+## 2.2.2.H. PI #8
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+for monitoring skeyes relies on the data published by the AIU portal; the results there indicate that no major inefficiencies are detected. Continuous climb operations are being flown and facilitated as long as traffic situation permits. Since ToC is outside skeyes AoR, currently there is a work being done to develop an internal indicator for monitoring.

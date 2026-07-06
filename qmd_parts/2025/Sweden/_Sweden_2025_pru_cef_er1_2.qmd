@@ -1,0 +1,34 @@
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
+
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (741.36 SEK or 67.09 €) is -5.5% lower than the nominal DUC (784.18 SEK or 70.96 €). The difference between these two figures (-42.82 SEK/SU or -3.87 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.20 SEK/SU or +0.02 €/SU), it should be noted that Sweden excludes the pension costs for LFV in its calculation of inflation adjustment;
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-65.04 SEK/SU or -5.89 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+17.36 SEK/SU or +1.57 €/SU);
+
+- the addition of the traffic adjustment (+7.36 SEK/SU or +0.67 €/SU) for the costs not subject to traffic risk sharing;
+
+- financial incentives (+5.89 SEK/SU or +0.53 €/SU); and
+
+- the deduction of other revenues (-8.59 SEK/SU or -0.78 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 0.6%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Sweden provides the following information regarding the initiatives:
+
+*"The major initiatives are on the ATCO staffing side, where SWEA project will not only contribute to more efficient operational provision but also will reduce the number of ATCOs. Also introduction of FIS positions will offload ATCOs and contribute to a more efficient. Last of major initiatives is remote tower systems where ATCOs (for approach, and also Tower) will be reduced. These initiatives where in the RP4 plan originally. NSA monitoring is made on a yearly basis and these are especially scrutinized and consulted."*
+
+### **ER1.2.3. NOTES** 
+
+#### **ER1.2.3.1. NOTE 1**
+
+#### **ER1.2.3.1. NOTE 2**
+

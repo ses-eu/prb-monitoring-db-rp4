@@ -1,0 +1,80 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The 2025 target, based on reference value calculated in 2024 by EC/PRB for Poland, was not met. This situation resulted from external circumstances beyond control of both ANSP (PANSA) and NSA (CAA Poland). Similarly to the 2022--2024 period, the geopolitical situation had the strongest impact on the 2025 results.The HFE indicator remained at a very high level in 2025. Although the targets set for RP4 took into account the effects of the war in Ukraine, the KEA indicator exceeded the 2025 target from February onwards. Between June and August the KEA indicator decreased; however the situation from September 2025 onwards, related to drone and repeated balloon incursions into Polish airspace, and in consequence even more intensified military activity, resulted in a renewed increase in the indicator. Additionally, violations of Polish airspace by Russian drones necessitated the establishment of further zones restricting civil aviation operations. At the same time, military activity related to border defense during attacks on Ukraine is further restricting civilian traffic, and thus reducing efficiency. As a consequence, the target set for 2025 was not met. Furthermore, the increased traffic (a higher number of movements than assumed in RP4 PP) might have also resulted in an increase in the number of ineffective movements, which determined the deviation of actual results from the target. Other factors affecting the KEA indicator for Poland in 2025 were similar to those observed in the preceding years and included airspace users\' preference for certain routes that differred from the shortest available route, weather conditions (e.g. storms, particularly during the summer season) or restricted airspace (also beyond Poland\'s borders).
+
+It needs to be underlined that for the traffic flows affected by the above factors the trajectory offered by PANSA inside Poland is as short as possible, while the additional distance mostly comes from the overall trajectory inefficiency (so called inter-connectivity component, as visible in EUROCONTROL annual Performance Review Reports -- Figure 5--20 in Performance Review Report 2025). What also needs to be borne in mind is the significant increase in military activity along Polish eastern border. Although PANSA -- in close cooperation with the military (including the Polish Armed Forces and NATO) as well as with partners from ANSPs from neighboring States -- implements actions aimed at minimising the negative impact of the geopolitical situation on civil aviation, it should not be overlooked that Poland is a frontline state and the impact of the developments outside the SES/EUROCONTROL area is specifically significant in Polish airspace.
+
+In the near future, given the current geopolitical situation and the continued traffic increase (which, according to the latest STATFOR forecast, is expected to exceed the assumptions adopted for RP4 PP), achievement of the targets set in RP4 PP regarding the KEA indicator seems to be really ambitious.
+
+The evolution of KEA in the Polish airspace over RP3 and 2025 proves that this indicator is not suitable for measuring ANSPs' contribution to the environmental performance.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+For information on measures implemented before 2025, please refer to the respective Annual Monitoring Reports.
+
+During 2025 PANSA continued implementing improvements aimed at providing airspace users with the shortest possible routes, in line with the provisions of ERNIP and adopted RP4 Performance Plan for Poland.
+
+Main actions undertaken in 2025 to improve the environmental performance:
+
+• Optimisation of FRA airspace and cross-border FRA operations by reviewing current RAD restrictions (limiting the plannability availability) for the LOW and MID ACC sectors. This resulted in updated definitions of most of the analysed restrictions (easing flow restriction conditions), freeing up some flows, and withdrawing selected restrictions.
+
+• Implementation of the Dynamic RAD (Route Availability Document) functionality managed via own ASM support system (CAT -- implementation of CAT system update) connected via B2B to NM, enabling improved horizontal and/or vertical flight efficiency.
+
+• Implementation of new coordination procedures between AMC Poland and FMP Warszawa to support flexible use of airspace, for example, enabling management of so-called Dynamic RAD via AUP.
+
+The above actions resulted in increased availability of more direct routings within Baltic FRA for airspace users.
+
+Tools for automatic exchange of information regarding activities in military zones and ASM support systems have also been developed to optimise the process of releasing military zones for civilian traffic. Web-based tools were implemented in the CAT system to streamline the process of requesting, negotiating, and activating/deactivating zones. Changes to the TRA/TSA zones for the military are subject to ongoing negotiations based on the needs of both parties.
+
+In addition, an agreement was reached with UAC Karlsruhe on the possibility of using the FARCU point for planning overflights in the Polish and German FRA, which allowed for shortening the planned routes -- previously, the point was only available for flights to EPSC.
+
+In 2025 PANSA also worked on the operational use of the three-layer airspace split across all sectors of Polish airspace, with full implementation planned for 2026 (the implementation of the three-layer airspace split for all sectors took place in 2025, and the operational use for JR sectors took place in 2023). The vertical split of the FIR Warszawa is intended to reduce the risk of negative impacts from potential congestion in ACC sectors -- introduced earlier than assumed in ERNIP 2024.
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+Please refer to the information above. Other initiatives foreseen in ERNIP and not mentioned above include:
+
+• Cross-border FRA with Sweden (DK-SE FAB) -- due to the limitations of Norwegian ATM system currently limited only to traffic departing/arriving from/to Danish and Swedish airports. Implemented in November 2024, resulting in shortening plannable routes for all flights to/from Denmark and Sweden in south direction.
+
+• New DEP/ARR points for EPWR on EPWW -- LKAA border: start of development phase in 2025, planned for implementation in 2027. New TMA entry/exit gates will significantly shorten planned routing for EPWR departures and arrivals in south direction via LKAA airspace.
+
+• Lower airspace re-organisation -- planned for 2028, in 2025 start of RTS preparation.
+
+• FRA in TMAs (Warszawa TMA, Gdańsk TMA and Kraków TMA) -- implementation date postponed due to reprioritisation, currently planned for 2027.
+
+• Cross-border FRA operations with Germany -- planned for 2029.
+
+• Cross-border FRA operations with Ukraine -- project suspended due to the geopolitical situation.
+
+Following approval from the Inspector General of the Polish Air Force, work has started on the implementation of the iOAT flight planning, which is expected to enhance Network Manager traffic planning. The implementation is planned for 2026.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+As mentioned above the non-achievement of the target set for 2025 was caused mainly by external factors: the geopolitical situation, violations of the Polish airspace, intensified military activity, airspace closures, weather conditions and airspace users\' decisions, all of which are beyond the control of the ANSP and the NSA. Since the target set for 2025 (and RP4 generally) takes into account the impact of the war in Ukraine on the feasibility of achieving the HFE indicator\'s value, the margin of non-achievement in 2025 was significantly smaller than in the previous years, even though the final HFE value recorded was higher.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+Taking into account the circumstances and reasons described above, it must be borne in mind that the influence of PANSA and the Polish CAA on the KEA indicator is limited. The NSA recommends the timely implementation of the measures foreseen and dependent on the ANSP. Further recommendations can be issued once the war in Ukraine ends and the resulting geopolitical situation resolves.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+As the deviation from the target resulted from factors beyond the control of PANSA, this situation cannot be rectified by measures taken by PANSA.
+
+Although the target set for RP4 takes into account the geopolitical situation, including the effects of the war in Ukraine, the KEA indicator performance exceeded the 2025 target from February onwards. Consequently, the target set for 2025 was not achieved. Nevertheless, as stated above, PANSA continues to implement the measures foreseen in ERNIP and the adopted RP4 Performance Plan.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+Previous monitoring reports did not identify any remedial measures. As indicated in the Annual Monitoring Reports for 2022, 2023 and 2024, following the outbreak of the war, PANSA implemented solutions aimed at minimising the negative impact of the outbreak of the war on ENV performance, especially in the south-eastern part of the Polish airspace. These measures include: level change of military areas, RAD and PTR to change EPRZ traffic profiles, new sector configurations in JR part since 17.06.2022, coordination with LZBB to unblock PODAN and KEFIR border points (above FL315), implementation of the 3rd layer of ACC Warszawa in sectors JR since 20.04.2023. In mid-2023 lifting some of flight planning restrictions by shifting more responsibility to ACC ATCOs to handle routings and MIL areas collisions tactically in order to ease flight planning process for airspace users. Further improvements were also implemented during 2025, as listed above (especially further verification of RAD restrictions, DRAD implementation, improvements related to CIV-MIL coordination (including improved tools for AMC/FMP)). Nevertheless, taking into account the KEA calculation methodology and the geographical location of Poland, the potential impact of PANSA on the value of KEA is considered negligible. As long as the Ukrainian airspace is closed and traffic flows restrictions beyond Poland's eastern border are in place, KEA value for Poland will remain high.
+
+It should be emphasised that although the RP4 targets take into account the geopolitical situation, the increase in the KEA indicator in 2025 does not result from actions of PANSA and is not related to the airspace structure or capacity in the FIR Warszawa. These are still external factors, outside PANSA\'s control, that impact the indicator\'s values.
+
+In the near future there is no possibility to improve the KEA indicator in FIR Warszawa without eliminating the above mentioned external, geopolitical factors that directly, negatively impact the indicator's value.
+
+There is a risk that -- despite all measures foreseen in the RP4 Performance Plan -- the KEA target will not be met in the remaining RP4 years. Particularly as long as the military conflict in Ukraine continues, the impact of sanctions affecting the traffic flows persists, and Ukrainian, Belarusian and Russian airspace is not unconditionally open for all GAT flights with similar reopening of EU airspace for Russian and Belarusian airspace users and the increased military presence of NATO in the Polish airspace is visible.
+
+The evolution of KEA in the Polish airspace over RP3 and 2025 proves that this indicator is not suitable for measuring ANSPs' contribution to the environmental performance.
+
+Measures to support the environmental area in RP4 have been listed above and in the RP4 PP for Poland.
+

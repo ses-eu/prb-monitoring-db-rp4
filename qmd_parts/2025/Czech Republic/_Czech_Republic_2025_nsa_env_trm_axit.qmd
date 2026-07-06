@@ -1,0 +1,10 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The performance is not affected by ATC but mainly by taxiway configuration of the airport. In 2025 and 2026, major maintenance is being carried out on the main runway (RWY 06/24), which has a significant impact on this PI.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
+N/A
+

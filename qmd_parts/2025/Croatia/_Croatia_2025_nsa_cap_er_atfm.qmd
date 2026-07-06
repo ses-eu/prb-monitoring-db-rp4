@@ -1,0 +1,44 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+The Single European Sky Data Portal is the primary information source and is used to monitor all available KPIs and PIs.
+
+In 2025, traffic within the LDZO ACC increased by 8.7%, reaching levels consistent with high traffic forecast scenarios for the third consecutive year and significantly exceeding the RP4 Performance Plan forecast. Despite this sustained and above-forecast traffic growth, LDZO ACC achieved a 74% reduction in delay compared to the elevated delay levels recorded in 2024.
+
+Nevertheless, the continued increase in demand---particularly along the South-East axis---resulted in capacity constraints during the summer season, driven by unplanned peaks in traffic during high-intensity periods. In addition, national demographic measures adversely affected the availability of operational resources, impacting adequate staffing during the peak summer period.
+
+As a consequence, the en-route delay target was marginally missed by 0.13 minutes per flight.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+The ANSP continuously updates its capacity plans in response to dynamic changes in traffic demand, in line with the collaborative decision-making (CDM) approach applied during the annual NOP planning process.
+
+Given that traffic growth is anticipated throughout the RP4 period, the ANSP regularly revises its capacity-related parameters to accommodate forecasted demand levels.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+The NSA holds biannual meetings with the ANSP to assess the implementation and fulfilment of activities defined in the ERNIP and NOP. These meetings serve as a structured mechanism for monitoring progress and ensuring alignment with the network objectives.
+
+During 2025, traffic levels in six out of twelve months increased by more than 10%, while the remaining six months also recorded traffic growth within the single-digit range. This trend further intensified the operational demands placed on the Croatian airspace system and confirmed the continuation of sustained traffic growth throughout the year.
+
+At the same time, the period of elevated traffic demand has expanded from the traditional peak summer months to a period exceeding six months in duration. Such prolonged and sustained traffic intensity creates additional challenges in air traffic flow and capacity management, requiring continuous operational adaptation and enhanced resource coordination.
+
+Furthermore, the significant increase and extension of traffic demand considerably reduces the operational margins available to absorb unforeseen disruptions and short-term variations that are inherently associated with the human factor, including sick leave, and other unavoidable staff absences. Under these conditions, maintaining operational resilience during prolonged peak periods represents an increasingly demanding challenge for the ANSP.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+None
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+Continuous improvements to the rostering system were implemented with the objective of increasing operational flexibility and optimising the utilisation of available ATCO\'s. In addition, a new concept for the composition of ATCO teams was introduced, enabling a more efficient deployment of operational staff and creating additional capacity for the opening of supplementary sectors in response to operational requirements and increasing traffic demand.
+
+Furthermore, dedicated ATFCM awareness workshops were conducted in order to strengthen operational understanding, improve coordination processes, and enhance proactive traffic management practices across operational units.
+
+To further support tactical traffic management and operational decision-making, an additional morning MET briefing was introduced prior to the start of the first operational rotation. This measure ensures that traffic management activities can be initiated at the earliest stage based on the most up-to-date meteorological and operational information available, thereby contributing to improved traffic predictability and network performance.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+The ANSP implemented all recommended NOP remedial measures for the 2025 summer season. However, the continued and above-forecast traffic growth along the South-East axis significantly impacted capacity performance and contributed to the marginal non-achievement of the Capacity KPA target.
+
