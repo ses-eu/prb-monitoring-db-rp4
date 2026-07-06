@@ -232,8 +232,6 @@ source("R/get_level2_headings.R")
 ## Contextual information
 *`r pp_version`*
 
-*See FABEC States reports for more detail*
-
 `r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 ```{=latex}
