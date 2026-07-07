@@ -24,11 +24,18 @@ input_folder_excel <- paste0(
   "/nsa_monitoring_reports"
 )
 
+if(Sys.info()["user"]=="ncashman"){
+  user <- Sys.info()["user"]
+  base_folder <- paste0("C:/Users/",user,"/OneDrive - EUROCONTROL/ECTL - AIU - European Commission - Monitoring")
+}else{
+  base_folder <- "C:/Users/oaolive/OneDrive - EUROCONTROL/ECTL - AIU - European Commission - Monitoring"
+}
 
-base_folder <- "C:/Users/oaolive/OneDrive - EUROCONTROL/ECTL - AIU - European Commission - Monitoring"
+
+
 
 state_list_download <- unname(state_list)[
-  !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4", "Italy")
+  !unname(state_list) %in% c("MUAC", "Network Manager", "SES RP4", "Italy", "FABEC")
 ]
 # state_list_download <- c(state_list_download, "FABEC")
 state_list_download <- c("Bulgaria")

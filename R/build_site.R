@@ -37,7 +37,7 @@ single_state <- 'Sweden' # set your one country/stakeholder here (Home for home 
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
-update_pru_analysis <- FALSE
+update_pru_analysis <- TRUE
 if (update_pru_analysis) {
   KPI <- c(
     'cef',
@@ -51,7 +51,7 @@ if (update_pru_analysis) {
 }
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
-update_data <- FALSE
+update_data <- TRUE
 
 if (update_data) {
   # delete cached files
