@@ -203,6 +203,9 @@ main_ansp <- params$main_ansp
 other_ansps_str <- params$other_ansps_str
 other_met_str <- params$other_met_str
 
+fac_val_date <- params$fac_val_date
+fac_val_file <- params$fac_val_file
+
 ```
 
 ```{r yearly_xrates}
@@ -230,6 +233,8 @@ source("R/get_level2_headings.R")
 # OVERVIEW
 
 ## Contextual information
+*This document is based on the version of the Annual Monitoring Report file version '`r fac_val_file`' submitted by the state on `r fac_val_date`.*
+
 *`r pp_version`*
 
 `r if (params$country == "FABEC") "::: {.content-hidden}"`

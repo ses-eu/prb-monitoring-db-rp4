@@ -154,6 +154,10 @@ params:
 
   prb_findings_file:  $prb_findings_file
   investments_data_file: $investments_data_file
+  
+  fac_val_date:       $fac_val_date
+  fac_val_file:       $fac_val_file
+  
 ---
 
 ```{r, eval=TRUE}
@@ -203,6 +207,9 @@ no_saf_ansps <- params$no_saf_ansps
 main_safety_ansp <- params$main_safety_ansp
 saf_ansps <- params$saf_ansps
 state_icao_vef_code <- params$state_icao_vef_code
+
+fac_val_date <- params$fac_val_date
+fac_val_file <- params$fac_val_file
 
 # yearly_xrates <- params$yearly_xrates
 

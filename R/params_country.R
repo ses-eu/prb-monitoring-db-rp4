@@ -264,6 +264,14 @@ if (nrow(other_met) > 0) {
   }
 }
 
+fac_val_date <- fact_val_table |>
+  filter(state == country) |>
+  pull(max_date) |>
+  format(format = "%Y-%m-%d")
+
+fac_val_file <- fact_val_table |> filter(state == country) |> pull(file_version)
+
+
 # # get level 2 data files (not needed for SES or NM) ----
 cap_file <- ''
 cap_trm_file <- ''

@@ -830,6 +830,9 @@ quarto::quarto_render(
     main_safety_ansp = main_safety_ansp,
     saf_ansps = saf_ansps,
 
+    fac_val_date = fac_val_date,
+    fac_val_file = fac_val_file,
+
     PRBPlannedColor = PRBPlannedColor,
     PRBTargetColor = PRBTargetColor,
     PRBActualColor = PRBActualColor,

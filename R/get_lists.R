@@ -54,3 +54,11 @@ airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%
 
 currency_table <- read_mytable(lists_data_file, "lists", "Table_currency") %>%
   clean_names()
+
+fact_val_table <- read_mytable(
+  lists_data_file,
+  "lists",
+  "Table_fact_validation"
+) %>%
+  clean_names() |>
+  mutate(state = trimws(state))
