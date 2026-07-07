@@ -73,11 +73,11 @@ stop()
 # PRU files ----
 pru_kpi <- c(
   # "environment-ENR",
-  "environment-CIVMIL",
+  # "environment-CIVMIL",
   # "environment-TRM",
   # "capacity-ENR",
   # "capacity-TRM",
-  # "cost-efficiency-CEF",
+  "cost-efficiency-CEF",
   NULL
 )
 
