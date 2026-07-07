@@ -243,7 +243,11 @@ source("R/get_level2_headings.R")
 ))`
 \emph{submitted by `r pp_country_name` on `r fac_val_date`.}
 
-*`r pp_version`*
+`r if_else(pp_version == "", "", "*pp_version*")`
+
+`r if (params$country != "FABEC") "::: {.content-hidden}"`
+See FABEC States' reports.
+`r if (params$country != "FABEC") ":::"`
 
 `r if (params$country == "FABEC") "::: {.content-hidden}"`
 
