@@ -47,7 +47,7 @@ state_list_download <- unname(state_list)[
     )
 ]
 # state_list_download <- c(state_list_download, "FABEC")
-# state_list_download <- c("Bulgaria")
+state_list_download <- c("Hungary")
 
 # NSA excel files ----
 download_nsa_excel_reports <- function(
@@ -61,7 +61,11 @@ download_nsa_excel_reports <- function(
     if_else(
       country_download == "FABEC",
       "Sent by FABEC",
-      "EXCEL SENT BY THE MS"
+      if_else(
+        country_download == "Hungary",
+        "EXCEL SENT BY MS",
+        "EXCEL SENT BY THE MS"
+      )
     )
   )
 
