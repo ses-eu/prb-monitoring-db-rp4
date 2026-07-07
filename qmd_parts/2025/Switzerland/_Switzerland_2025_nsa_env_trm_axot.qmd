@@ -12,5 +12,3 @@ Further improvements will result from the use of :
 
 ### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
 
-## 
-

@@ -6,5 +6,3 @@ Performance improved in both Geneva and Zurich airports, no specific measures we
 
 ### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
 
-## 
-
