@@ -51,3 +51,6 @@ saf_ansp_table <- read_mytable(lists_data_file, "lists", "Table_SAF_ANSP") %>%
 
 airports_table <- read_mytable(lists_data_file, "lists", "Table_tcz_apt") %>%
   clean_names()
+
+currency_table <- read_mytable(lists_data_file, "lists", "Table_currency") %>%
+  clean_names()

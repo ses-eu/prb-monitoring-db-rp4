@@ -13,7 +13,10 @@ if (country_lower == 'home') {
   if (is.na(main_ansp)) {
     main_ansp <- ""
   }
-  nat_curr <- state_parameters %>% select(currency) %>% pull()
+  nat_curr <- currency_table %>%
+    filter(state == .env$country, year == .env$year_report) %>%
+    select(currency) %>%
+    pull()
   if (is.na(nat_curr)) {
     nat_curr <- ""
   }
