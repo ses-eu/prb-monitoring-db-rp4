@@ -2,4 +2,4 @@
 
 ### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
 
-Data for this indicator is currently not systematically collected at the required level of detail. Work is ongoing to establish appropriate data collection.
+The reported ratio is based on NM data. Data for this indicator is currently not systematically collected at the required level of detail. Work is ongoing to establish appropriate data collection. The NM data based RAU value indicates that available opportunities are utilised effectively, and the results can be considered good in light of the operational constraints in the region. NSA will continue to monitor this indicator for trends.

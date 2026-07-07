@@ -2,4 +2,6 @@
 
 ### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
 
-There are no data available in the Czech Republic
+With the implementation of free route airspace in Hungary in 2015 all the ATS routes have been eliminated.
+
+Therefore, the entire CDR route concept has no meaning anymore in Hungary.

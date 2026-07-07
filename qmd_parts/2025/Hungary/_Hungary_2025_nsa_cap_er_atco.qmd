@@ -1,0 +1,26 @@
+## **2.3.3 ATCO Planning 1**
+
+### **Additional comments**
+
+ACC: Hungary provides ATC services in LHCC and in the KFOR sector. When the performance plan had been prepared, the agreed reporting/planning methodology regarding ACC ATCOs was that the total cost shall be reported in the Hungarian ENR cost-base and subsequently the KFOR-related costs are returned to users (as other revenues). At the same time actual costs will be covered through the KFOR cost-base (as part of the common charging zone with Serbia and Montenegro). In the past only Hungarian ACC ATCOs were planned and cca 9% of these resources was normally deployed in the KFOR sector. Based on the 2025 planned ACC ATCO number that would mean 12 FTEs in the KFOR sector with dual licence. 100% of the ATCO FTEs were reported in the Hungarian Performance Plan. However, as of 2025, HungaroControl started to train and licence foreign ATCOs in the KFOR sector whose costs are directly covered and reported through the Serbia/Montenegro/KFOR cost-base. Therefore, we will not report their FTEs here either as they are not in the scope of the performance plan.
+
+The actual and planned ATCO numbers differ by 13,6 FTEs in the ACC. Additional information to the analysis of the plan vs actual difference is the number of foreign ATCO FTEs employed in the KFOR sector: 12 FTEs. The ATCO availability of the Hungarian ACC ATCOs that were freed up by the new foreign ATCOs in the KFOR sector was ultimately utilized in the Budapest ACC. This was instrumental to achieve the capacity level we had committed to in the performance plan for 2025. We met the 2025 capacity requirements partly through this measure and largely through the efficient utilization of other internal company resources.
+
+APP: The 1,8 FTE shortfall in APP is manageable.
+
+TWR: The 6,5 FTE shortfall in TWR is a result of unplanned leaves and losses of licences. The ANSP detected the problem and allocated resources into the training.
+
+### **Additional comments**
+
+The difference between the planned FTE and the actual FTE adds up from three sources: the actual 2024 closing FTE was already 1,6 lower than the estimate in the plan. The number of new ATCOs was 8 FTEs lower (due to a low success rate). Also the unplanned leave was 7 instead of 3. The total difference is -13,6 FTEs. However, this shortage did not result inan operational or capacity problem, as we have made up for the shortage in another way: we have trained 12 foreign ATCOs who work exclusively in the KFOR sector. In the performance plan though, since ATCO mobility initiatives had not been finalized at the time of the drafting of the plan, we only planned with the 2 Lithuanian colleagues who had already been recruited at that time and planned with an ATCO mobility cost in OPEX (as part of the additional capacity building) with the committment that any savings we will reimburse to users.
+
+### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
+
+Experience from previous years has clearly shown that smaller training groups provide a more effective learning environment. As a result, from 2025 onwards, a parallel training system has been introduced, under which initial training courses start twice a year, in January and September. This approach allows for an increase of an additional 8--8 students per year for ACC and TWR positions. Accordingly, we began training fewer students than planned for 2025.
+
+In 2025, an ACC training course also began for an additional five foreign controllers ---already holding ATCO licenses---beyond the planned number, further strengthening available capacity.
+
+The current success rate is lower than planned. The primary reason for this is that some students encounter capacity limitations during the training process. Hungarian airspace is highly congested and complex, and only candidates with exceptional competencies are able to successfully complete the training. Although the required competencies are assessed during the selection process, their true limits often only become clear during training.
+
+The number of ATCO trainees at year-end is significantly lower than planned, because the number of trainees completing the training was unexpectedly low due to low success rate and also those who entered the training programme was lower than the plan due to the above mentioned paralel training system that was introduced in 2025. In 2026, this latter factor will not have an impact on the trainee number.
+

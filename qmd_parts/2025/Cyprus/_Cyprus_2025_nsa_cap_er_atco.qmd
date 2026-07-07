@@ -1,10 +1,10 @@
 ## **2.3.3 ATCO Planning 1**
 
-### **Additional comments**
+### **ATCOs (ALL)**
 
-### **Additional comments**
+ATCOs in OPS
 
-### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
+### **Number of ATCOs in OPS operational at year-end (FTEs)**
 
-Selection and recruitement process has commenced in 2025. Actual training is expected to commence within 2026.
+### **Number ATCO trainees at year end**
 

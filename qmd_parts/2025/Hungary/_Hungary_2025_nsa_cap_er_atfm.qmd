@@ -1,0 +1,46 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+During preparations for the 2025 summer season, HungaroControl implemented the following significant measures:
+
+1\. To increase the number of ATCOs, foreign ATCOs were recruited starting in autumn 2024 for the KFOR sector.
+
+2\. The training of these ATCOs was successfully completed in June 2025, resulting in a significant increase in ATCO resources in the LHCC sectors.
+
+3\. Office-based staff, holding ATCO licenses were required to perform daily operational ATCO duties.
+
+4\. A new early-morning shift was introduced to handle traffic more efficiently---particularly traffic arriving from outside the NM area---thereby reducing delays in the first rotation of traffic.
+
+5\. Additional personnel were called in for daytime and weekend peak periods.
+
+6\. To improve the accuracy of adverse weather forecasting and support more effective supervisory decision-making, a meteorologist was permanently assigned to the Budapest ACC operations room.
+
+7\. Instead of pre-tactical ATFM restrictions, a tactical restriction scheme aligned with actual traffic development was applied.
+
+8\. The sector capacity values were reviewed.
+
+9.The traffic flows were redesigned in order to better use available ACC sectors capacity.
+
+These measures proved to be highly effective and resulted in a significant reduction in delays attributable to Budapest ACC, both in nominal terms and in terms of delay per flight.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+n/a
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+n/a
+
+### **Recommendations to the ANSP to rectify the situation**
+
+n/a
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+n/a
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+All planned measures were implemented on time and with the planned efficiency.
+
