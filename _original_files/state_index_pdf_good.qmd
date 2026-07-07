@@ -1,4 +1,4 @@
-```{r chart_cef_er_1, options = (cz=c("1", "enroute", "level1")), include = FALSE}
+```{r chart_cef_er_1, options = (cz=c("1", "enroute", "level1")), include = FALSE, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_cef.R
 #| out.width: "100%"
 ```
@@ -18,10 +18,15 @@
 #| out.width: "100%"
 ```
 
+```{r chart_cef_trm_3, options = (cz=c("3", "terminal", "level1")), eval = (params$no_tcz == 3), include = FALSE}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
 <!-- ## Safety L2-->
 
 <!-- ### Effectiveness of Safety Management (EoSM) (KPI#1) -->
-```{r chart_level1_saf_1, include=FALSE, options = (saf_ansp_index = 1)}
+```{r chart_level1_saf_1, eval = (params$country != "FABEC"), include=FALSE, options = (saf_ansp_index = 1)}
 #| file: R/chart_level1_saf.R
 #| out.width: "100%"
 ```
@@ -43,24 +48,24 @@
 
 <!-- ### Rate of runway incursions (RIs) (PI#1) -->
 
-```{r chart_saf_ri, include=FALSE}
+```{r chart_saf_ri, eval = (params$country != "FABEC"), include=FALSE}
 #| file: R/chart_level2_saf_ri.R
 #| out.width: "100%"
 ```
 
-```{r chart_level2_saf_ri_year_report, eval= (params$country != "MUAC"), options = (safindicator=c("ri")), include=FALSE}
+```{r chart_level2_saf_ri_year_report, eval= (params$country != "MUAC" & params$country != "FABEC"), options = (safindicator=c("ri")), include=FALSE}
 #| file: R/chart_level2_saf_ri_smi_year_report.R
 #| out.width: "100%"
 ```
 
 <!-- ### Rate of separation minima infringements (SMIs) (PI#2) -->
 
-```{r chart_saf_smi, include=FALSE}
+```{r chart_saf_smi, eval = (params$country != "FABEC"), include=FALSE}
 #| file: R/chart_level2_saf_smi.R
 #| out.width: "100%"
 ```
 
-```{r chart_level2_saf_smi_year_report, options = (safindicator=c("smi")), include=FALSE}
+```{r chart_level2_saf_smi_year_report, eval = (params$country != "FABEC"), options = (safindicator=c("smi")), include=FALSE}
 #| file: R/chart_level2_saf_ri_smi_year_report.R
 #| out.width: "100%"
 ```
@@ -92,13 +97,13 @@
 <!-- ### Terminal performance -->
 <!-- #### Additional taxi-out time (AXOT) (PI#3) & Arrival Sequencing and Metering Area (ASMA) time (PI#4) -->
 
-```{r chart_axot_apt, include=FALSE}
-#| file: R/chart_level2_env_axot_apt.R
+```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year), include=FALSE}
+#| file: R/chart_level2_env_axot_asma_country.R
 #| out.width: "100%"
 ```
 
-```{r chart_asma_apt, include=FALSE}
-#| file: R/chart_level2_env_asma_apt.R
+```{r chart_axot_apt, include=FALSE}
+#| file: R/chart_level2_env_axot_apt.R
 #| out.width: "100%"
 ```
 
@@ -198,6 +203,9 @@ main_ansp <- params$main_ansp
 other_ansps_str <- params$other_ansps_str
 other_met_str <- params$other_met_str
 
+fac_val_date <- params$fac_val_date
+fac_val_file <- params$fac_val_file
+
 ```
 
 ```{r yearly_xrates}
@@ -207,11 +215,17 @@ xrate <- xrate_ert |>
   filter(year == year_report & cz_code == ecz_list$ecz_id[1]) |> 
   select(xrate)
 
-xrate_year_report <- if_else(country == "Luxembourg", 1, pull(xrate))
+if(country == "Luxembourg" | country == "FABEC") {
+  xrate_year_report <- 1
+    
+} else {
+  xrate_year_report <- pull(xrate)
+
+}
 
 ```
 
-```{r cef-level2-headings}
+```{r cef-level2-headings, eval = (params$country != "FABEC")}
 source("R/get_level2_headings.R")
 ```
 
@@ -219,7 +233,15 @@ source("R/get_level2_headings.R")
 # OVERVIEW
 
 ## Contextual information
+
+*This document is based on the version of the Annual Monitoring Report file version* `r knitr::asis_output(sprintf(
+  "{\\small\\texttt{%s}}",
+  stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1")
+))` *submitted by the state on `r fac_val_date`.*
+
 *`r pp_version`*
+
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 ```{=latex}
 
@@ -277,8 +299,11 @@ paste0(
   fixed('`\\hspace*{2em}`{=tex}'),
   tcz_list$tcz_name[1],
   if_else(is.na(tcz_list$tcz_name[2]), '' , paste0(fixed('`\\\\ \\hspace*{2em}`{=tex}'), tcz_list$tcz_name[2])
+  ),
+  if_else(is.na(tcz_list$tcz_name[3]), '' , paste0(fixed('`\\\\ \\hspace*{2em}`{=tex}'), tcz_list$tcz_name[3])
   )
-  ))
+  )
+)
 ```
 
 `r tcz_list_string`
@@ -330,7 +355,7 @@ other_met_str_1 <- reduce(other_met_list, ~ paste(.x, .y, sep = fixed('`\\\\`{=t
 mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
 ```
 
-```{r chart_level1_traffic_mvt}
+```{r chart_level1_traffic_mvt, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_traffic_mvt.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -344,7 +369,7 @@ tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findin
 
 ```
 
-```{r chart_level1_traffic_su}
+```{r chart_level1_traffic_su, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_traffic_su.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -359,7 +384,7 @@ tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findin
 saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
 ```
 
-```{r chart_saf_l1, options = (saf_ansp_index = 1)}
+```{r chart_saf_l1, options = (saf_ansp_index = 1), eval = (params$country != "FABEC")}
 #| file: R/chart_level1_saf.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -367,6 +392,8 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 ```
 
 `r saf_conc1`
+
+`r if (params$country == "FABEC") ":::"`
 
 <!-- exception for luxembourg -->
 `r if (params$country == "Luxembourg") "::: {.content-hidden}"`
@@ -406,7 +433,7 @@ cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_c
 
 `r if_else(params$country != "Luxembourg", cap_er_conc1, '')`
 
-```{r chart_cap_trm, options = (cztype=c("terminal")), include = params$no_tcz != 0}
+```{r chart_cap_trm, options = (cztype=c("terminal")), include = params$no_tcz != 0, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_cap.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -414,6 +441,9 @@ cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_c
 ```
 
 `r if_else(params$no_tcz != 0, cap_trm_conc1, '')`
+
+
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 ## Cost-efficiency (En route/Terminal charging zone(s))
 
@@ -457,9 +487,18 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `r if ((params$no_ecz + params$no_tcz != 3) | params$no_ecz == 2) "::::"`
 
+
+`r if ((params$no_ecz + params$no_tcz) != 4) ":::: {.content-hidden}"`
+`r layout_2fig("chart_cef_trm_2", "chart_cef_trm_3")`
+`r if ((params$no_ecz + params$no_tcz) != 4) "::::"`
+
 `r cef_conc1`
 
+`r if (params$country == "FABEC") ":::"`
+
 `r if (year_folder == params$rp_summary_year) "::: {.content-hidden}"`
+
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 # SAFETY - `r toupper(params$country)`
 
@@ -506,9 +545,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 \biggertext{Focus on EoSM}
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_eosm_text))
-```
+```{r saf_text_eosm}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_eosm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (params$country == "MUAC") "::: {.content-hidden}"`
 
@@ -532,9 +577,10 @@ cat(quarto_paragraph_breaks(saf_eosm_text))
 cat(make_quarto_latex_table(
   title = paste0("Rate of RIs per 100,000 airport movements - ",  country),
   df = data_prep,
-  col_align = "clrrr",
-  col_widths = c(6, 27, 67/3, 67/3, 67/3),
-  paginate = (country == "France")
+  body_fontsize = c(8, 10),
+  col_align = "clrrrrr",
+  col_widths = c(6, 25, rep(69/5, 5)),
+  paginate = (country == "France" | country == "Italy")
 ))
 ```
 
@@ -545,8 +591,13 @@ cat(make_quarto_latex_table(
 
 \biggertext{Focus on runway incursions}
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_ri_text))
+```{r saf_text_ri}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_ri.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
 
 ```
 
@@ -557,13 +608,13 @@ cat(quarto_paragraph_breaks(saf_ri_text))
 `r layout_2fig("chart_saf_smi", "chart_level2_saf_smi_year_report")`
 
 
-```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != params$rp_summary_year)}
+```{r table_level2_saf_smi_ansp_pdf1, eval=(year_folder != params$rp_summary_year & params$country != "FABEC")}
 #| file: R/table_level2_saf_smi_ansp_pdf1.R
 #| include: false
 ```
 
 
-``` {r table_level2_saf_smi_ansp_pdf1-p, eval=(year_folder != params$rp_summary_year)}
+``` {r table_level2_saf_smi_ansp_pdf1-p, eval=(year_folder != params$rp_summary_year & params$country != "FABEC")}
 #| echo: false
 #| results: asis
  
@@ -582,12 +633,12 @@ cat(make_quarto_latex_table_2level(
 
 \vspace{-20pt}
 
-```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != params$rp_summary_year)}
+```{r table_level2_saf_smi_ansp_pdf2, eval=(year_folder != params$rp_summary_year & params$country != "FABEC")}
 #| file: R/table_level2_saf_smi_ansp_pdf2.R
 #| include: false
 ```
 
-``` {r table_level2_saf_smi_ansp_pdf2_p, eval=(year_folder != params$rp_summary_year)}
+``` {r table_level2_saf_smi_ansp_pdf2_p, eval=(year_folder != params$rp_summary_year & params$country != "FABEC")}
 #| echo: false
 #| results: asis
  
@@ -610,19 +661,32 @@ cat(make_quarto_latex_table_2level(
 
 \biggertext{Focus on separation minima}
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_smi_text))
+```{r saf_text_smi}
+#| echo: false
+#| output: asis
 
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_smi.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
-### Quality of occurences reporting 
+### Quality of occurrences reporting 
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_qr_text))
+```{r saf_text_occ}
+#| echo: false
+#| output: asis
 
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_occ.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
+`r if (params$country == "FABEC") ":::"`
+
 
 \needspace{2\baselineskip}
 
@@ -652,10 +716,84 @@ cat(quarto_paragraph_breaks(saf_qr_text))
 #| fig-pos: "H"
 ```
 
+\needspace{3\baselineskip}
+
+`\biggertext{Focus on en route performance}`{=latex}
+
+**KEA**
+
+```{r env_er_text_kea}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kea.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kea.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_er_nsa_titles_kea)
+
+``` 
+
+**KEP**
+
+```{r env_er_text_kep}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_er_nsa_titles_kep)
+
+``` 
+
+**KES**
+
+```{r env_er_text_kes}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_er_nsa_titles_kes)
+
+``` 
+
+**Vertical flight efficiency**
+
+```{r env_er_text_vfe}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, env_er_nsa_titles_vfe)
+
+``` 
+
+
+
 `r if (params$country == "Luxembourg") ":::"`
 
 
-`r if (params$no_tcz == 0) "::: {.content-hidden}"`
+`r if (params$no_tcz == 0 | params$country == "FABEC") "::: {.content-hidden}"`
 
 \needspace{3\baselineskip}
 
@@ -663,14 +801,7 @@ cat(quarto_paragraph_breaks(saf_qr_text))
 
 ### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
-```{r chart_axot_asma_country, eval=(year_folder != params$rp_summary_year)}
-#| file: R/chart_level2_env_axot_asma_country.R
-#| out.width: "50%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
-
-`r layout_2fig("chart_axot_apt", "chart_asma_apt")`
+`r layout_2fig("chart_axot_asma_country", "chart_axot_apt")`
 
 \needspace{3\baselineskip}
 
@@ -753,15 +884,32 @@ cat(make_quarto_latex_table_2level(
 ```
 
 
-###  Average duration in climb (PI#7) and descent (PI#8)
+###  Average duration in climb (PI#8) and descent (PI#7)
 
-```{r chart_cdo_apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0))}
+```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
+#| file: R/chart_level2_env_cdo_apt.R
+#| out.width: "100%"
+
+```
+
+```{r cdo-airports-check}
+if(!exists("cdo_airports")) {cdo_airports <-0}
+```
+
+
+```{r chart-cdo-apt, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports <= 6)}
 #| file: R/chart_level2_env_cdo_apt.R
 #| out.width: "60%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
 
+```{r chart-cdo-apt-big, eval=((year_folder != params$rp_summary_year) & (params$no_tcz > 0) & cdo_airports > 6)}
+#| file: R/chart_level2_env_cdo_apt.R
+#| out.width: "100%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
 
 \needspace{2\baselineskip}
 
@@ -823,7 +971,8 @@ cat(make_quarto_latex_table_2level(
   wrap_raw_block = FALSE,
   header_row_height_ex = 2.4,
   row_extrarowheight_pt = 2,
-  paginate = (country == "France") 
+  paginate = (country == "France" | country == "Italy") 
+ 
 ))
 ```
 
@@ -831,7 +980,7 @@ cat(make_quarto_latex_table_2level(
 `r if (params$no_tcz == 0) ":::"`
 
 
-`r if (params$country == "Luxembourg") "::: {.content-hidden}"`
+`r if (params$country == "Luxembourg" | params$country == "FABEC") "::: {.content-hidden}"`
 
 ## Civil-Military dimension
 
@@ -899,7 +1048,7 @@ replace_headings(path, env_mil_nsa_titles_rau)
 
 ``` 
 
-`r if (params$country == "Luxembourg") ":::"`
+`r if (params$country == "Luxembourg" | params$country == "FABEC") ":::"`
 
 # CAPACITY - `r toupper(params$country)`
 
@@ -939,6 +1088,9 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 `r layout_2fig("chart_cap_er_l2", "chart_cap_er_month")`
 
+
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
+
 ```{r chart_cap_delay_bin, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_delay_bin.R
 #| out.width: "52%"
@@ -946,13 +1098,16 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 #| fig-pos: "H"
 ```
 
+`r if (params$country == "FABEC") ":::"`
+
+
 \needspace{3\baselineskip}
 
 \biggertext{Focus on en route ATFM delay}
 
 **En route ATFM delay**
 
-```{r cap_er_text_atfm, eval=(params$no_ecz != 0)}
+```{r cap_er_text_atfm, eval=((params$no_ecz != 0) | (params$country == "FABEC"))}
 #| echo: false
 #| output: asis
 
@@ -967,7 +1122,7 @@ replace_headings(path, cap_er_nsa_titles_atfm)
 ``` 
 
 **En route capacity incentive scheme**
-```{r cap_er_text_incentive, eval=(params$no_ecz != 0)}
+```{r cap_er_text_incentive, eval=((params$no_ecz != 0) | (params$country == "FABEC"))}
 #| echo: false
 #| output: asis
 
@@ -977,9 +1132,9 @@ replace_headings(path, character(0))
 
 ``` 
 
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
 
-
-### En route performance indicators at ACC level (PI#3-4)
+### En route performance indicators at ACC level (PI#4-5)
 
 `r layout_2fig("chart_level2_cap_perc_delay_above", "chart_level2_cap_peak_tp")`
 
@@ -1129,7 +1284,7 @@ cat(make_quarto_latex_table_2level(
   wrap_raw_block = FALSE,
   header_row_height_ex = 2.4,
   row_extrarowheight_pt = 2,
-  paginate = (country == "France") 
+  paginate = (country == "France" | country == "Italy") 
 ))
 ```
 
@@ -1154,7 +1309,7 @@ cat(make_quarto_latex_table_2level(
   wrap_raw_block = FALSE,
   header_row_height_ex = 2.4,
   row_extrarowheight_pt = 2,
-  paginate = (country == "France") 
+  paginate = (country == "France" | country == "Italy") 
 ))
 ```
 
@@ -1196,6 +1351,8 @@ replace_headings(path, cap_trm_nsa_titles_pddelay)
 
 ``` 
 
+**All causes pre-departure delay**
+
 ```{r cap_trm_text_acdelay, eval=(params$no_tcz != 0)}
 #| echo: false
 #| output: asis
@@ -1225,7 +1382,7 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 `r cef_conc1`
 
 
-```{r generate_ceff_er sections}
+```{r generate_ceff_er sections, eval = (params$country != "FABEC")}
 #| echo: false
 #| results: asis
 
@@ -1246,7 +1403,7 @@ for (i in seq_len(myn)) {
 }
 ```
 
-```{r generate_ceff_trm sections}
+```{r generate_ceff_trm sections, eval = (params$country != "FABEC")}
 #| echo: false
 #| results: asis
 
@@ -1266,3 +1423,8 @@ for (i in seq_len(myn)) {
   cat("\n\n")
 }
 ```
+
+`r if (params$country == "FABEC") ":::"`
+
+`r if (year_folder == params$rp_summary_year) ":::"`
+

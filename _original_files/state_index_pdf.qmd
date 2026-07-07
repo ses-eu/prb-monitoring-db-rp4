@@ -206,6 +206,8 @@ other_met_str <- params$other_met_str
 fac_val_date <- params$fac_val_date
 fac_val_file <- params$fac_val_file
 
+pp_country_name <- if_else(params$country %in% c('France', 'Belgium', 'FABEC', 'Luxembourg', 'MUAC', 'Netherlands', 'Switzerland'), 'FABEC', 'the state')
+
 ```
 
 ```{r yearly_xrates}
@@ -233,7 +235,13 @@ source("R/get_level2_headings.R")
 # OVERVIEW
 
 ## Contextual information
-*This document is based on the version of the Annual Monitoring Report file version '`r fac_val_file`' submitted by the state on `r fac_val_date`.*
+
+\emph{This document is based on the version of the Annual Monitoring Report file version}
+`r knitr::asis_output(sprintf(
+  "\\begingroup\\small\\texttt{%s}\\endgroup\\ ",
+  stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1")
+))`
+\emph{submitted by `r pp_country_name` on `r fac_val_date`.}
 
 *`r pp_version`*
 
