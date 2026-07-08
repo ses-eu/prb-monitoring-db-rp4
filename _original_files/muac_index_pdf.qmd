@@ -228,9 +228,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 `\biggertext{Focus on EoSM}`{=latex}
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_eosm_text))
-```
+```{r saf_text_eosm}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_eosm.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
@@ -292,17 +298,29 @@ cat(make_quarto_latex_table_2level(
 
 \biggertext{Focus on separation minima}
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_smi_text))
-```
+```{r saf_text_smi}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_smi.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
 ### Quality of occurences reporting 
 
-```{r results = "asis"}
-cat(quarto_paragraph_breaks(saf_qr_text))
-```
+```{r saf_text_occ}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_occ.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
