@@ -745,6 +745,8 @@ replace_headings(path, env_er_nsa_titles_kea)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **KEP**
 
 ```{r env_er_text_kep}
@@ -762,6 +764,8 @@ replace_headings(path, env_er_nsa_titles_kep)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **KES**
 
 ```{r env_er_text_kes}
@@ -778,6 +782,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kes.qmd", as.character(year
 replace_headings(path, env_er_nsa_titles_kes)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **Vertical flight efficiency**
 
@@ -832,6 +838,8 @@ replace_headings(path, env_trm_nsa_titles_axot)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **AXIT**
 
 ```{r env_trm_text_axit, eval=(params$no_tcz != 0)}
@@ -848,6 +856,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_axit.qmd", as.character(ye
 replace_headings(path, env_trm_nsa_titles_axit)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **ASMA**
 
@@ -940,6 +950,8 @@ replace_headings(path, env_trm_nsa_titles_vfed)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **Average duration in climb**
 
 
@@ -1022,6 +1034,8 @@ replace_headings(path, env_mil_nsa_titles_ersa)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **Rate of planning via available airspace structures**
 
 ```{r env_mil_text_rap}
@@ -1038,6 +1052,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(yea
 replace_headings(path, env_mil_nsa_titles_rap)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **Rate of using available airspace structures**
 
@@ -1129,6 +1145,8 @@ replace_headings(path, cap_er_nsa_titles_atfm)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **En route capacity incentive scheme**
 ```{r cap_er_text_incentive, eval=((params$no_ecz != 0) | (params$country == "FABEC"))}
 #| echo: false
@@ -1165,6 +1183,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(ye
 replace_headings(path, cap_er_nsa_titles_above)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **Annual weighted average of the daily peak throughput**
 
@@ -1250,6 +1270,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_atfm.qmd", as.character(ye
 replace_headings(path, cap_trm_nsa_titles_atfm)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **Terminal capacity incentive scheme**
 ```{r cap_trm_text_incentive, eval=(params$no_ecz != 0)}
@@ -1343,6 +1365,8 @@ replace_headings(path, cap_trm_nsa_titles_slot)
 
 ``` 
 
+\needspace{3\baselineskip}
+
 **ATC pre-departure delay**
 
 ```{r cap_trm_text_pddelay, eval=(params$no_tcz != 0)}
@@ -1358,6 +1382,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_trm_pddelay.qmd", as.character
 replace_headings(path, cap_trm_nsa_titles_pddelay)
 
 ``` 
+
+\needspace{3\baselineskip}
 
 **All causes pre-departure delay**
 
