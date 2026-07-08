@@ -133,6 +133,12 @@ cat(make_quarto_latex_table(
 ))
 ```
 
+```{=latex}
+\vspace{-20pt}
+
+{\footnotesize *100 = 2022}
+```
+
 `r layout_2fig(paste0("chart_cef_cost_entity_", cztype, czindex), paste0("chart_cef_cost_main_", cztype, czindex))`
 
 
