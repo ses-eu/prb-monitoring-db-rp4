@@ -2,11 +2,5 @@
 
 ### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
 
-[Over the past years AUP and UUP procedures have been updated in line with ERNIP Part 3, ensuring that any airspace made available is immediately published to NM through a UUP.]{.mark}
-
-[Belgium is also developing Flight Buffer Zones (FBZs) for all the major areas with linked FUA restrictions to maximise the accommodation of traffic flows.]{.mark}
-
-[In parallel, Belgium and the Netherlands are redesigning EBTRA North, moving from static area structures to configuration based airspace, with implementation foreseen in 2027.]{.mark}
-
-[EUROCONTROL supports initiatives through tools such as the GRRT (Group rerouting tool) and working groups with CFSPs and AOS to promote optimal use of ASM opportunities.]{.mark}
+For FABEC the data was retrieved from: https://www.sesperformance.eu/dataportal/data/. The guidance material states that the data for PI #9, #10, and #11 should be provided by the Network Manager. However, the data is not complete, only the ratios are provided by NM and on a state level (not on the ACC level). Therefore, the data is only provided at a state level (ratios only).
 
