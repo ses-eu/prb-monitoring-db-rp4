@@ -1,0 +1,50 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -0.9% (or -0.56 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+3.2%) and higher than planned en route costs in real terms (+2.3%, or +32.5 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+3.2%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +2.3% (+32.5 M€2022) higher than planned. This is the result of higher costs for the main ANSP, DSNA (+2.8%, or +35.4 M€2022) and lower costs for the MET service provider (-1.2%, or -0.8 M€2022) and the NSA/EUROCONTROL (-2.3%, or -2.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (DSNA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for DSNA in 2025 (+2.8%, or +35.4 M€2022) result from:
+
+- Slightly higher than planned staff costs (+0.5%), mainly reflecting the impact of lower than planned inflation index (-1.1 p.p.) since costs in nominal terms were slightly below plan (-0.5%).
+
+- Significantly higher than planned other operating costs (+6.0%), due to higher costs of MCO (costs related to legacy systems maintenance) linked to the operational program of DSNA, impacted (with some delays) by the high inflation of the previous years.
+
+- Significantly higher than planned depreciation (+11.7%), due to higher cost of investments and catching up with delayed RP3 amortization.
+
+- Significantly lower than planned cost of capital (-8.9%) due to a lower NBV of fixed assets (-13.0%) combined with a lower than planned weighted average cost of capital rate, mainly resulting from a lower average interest on debt.
+
+- Significantly higher than planned deduction for VFR exempted flights (+5.2%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of France provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"2025 en route actual unit cost is lower than the target (-0.9%) due to a combination of actuals costs in line with the determined (slight increase by 2.3% at 2022 prices with a 2025 actual inflation lower than planned) and an increase in traffic (+3.2%)"*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Staff costs are in line with the plan, where opex and capex costs are higher than planned, mainly due to a good implementation of DSNA investments, catching-up with previous year (investments costs used to be lower than planned during RP3, excepted for year 2024), despite a cost of capital lower than planned, due to a lower than planned average interest rate for loans in 2025 and a decrease in the net book value fixed assets base."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DSNA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates that NSA did not propose any specific recommendations.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

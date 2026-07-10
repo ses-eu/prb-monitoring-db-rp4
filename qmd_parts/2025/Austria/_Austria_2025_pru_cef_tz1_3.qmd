@@ -12,6 +12,6 @@ Ex-post, the overall RR, taking into account the net gain from the terminal acti
 
 #### **TZ1.3.3.1. NOTE 1**
 
-The analysis presented above excludes the costs of meteorological services provided by Austro Control since MET figures are disclosed separately in terminal reporting tables.
+The analysis of presented above excludes the costs of meteorological services provided by Austro Control since MET figures are disclosed separately in terminal reporting tables.
 
 #### **TZ1.3.3.2. NOTE 2**

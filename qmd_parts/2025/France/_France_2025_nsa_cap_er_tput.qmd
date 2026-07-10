@@ -1,6 +1,0 @@
-## 2.3.2.E. PI #5
-
-### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
-
-Even if this PI has been introduced for RP4, compared with 2024 available values, 2025 calculation shows an improvement for LFBB (+2%), LFMM( +3%), LFRR (+5%) and LFFF(+5%). The values for LFEE (-6%) are influenced by the alignment of the border at the interface with MUAC which had an impact on the trafic counts.
-

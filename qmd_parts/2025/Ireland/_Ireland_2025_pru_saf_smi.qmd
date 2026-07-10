@@ -1,9 +1,0 @@
-## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
-
-At State level, Ireland reported 5 separation minima infringements (SMI) in their airspace\
-during 2025. The rate of separation minima infringements was below the Union-wide average (1.43 vs 7.10). At ANSP level, Ireland reported 4 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was below the Union-wide average (1.15 vs 6.0).
-
-When comparing to 2024, the rate of separation minima infringements has decreased at both State level (1.43 vs 2.6) and at ANSP level (1.15 vs 2.33).
-
-As described in the monitoring report, AirNav Ireland has integrated tools such as Final Approach Spacing, Tactical Control Tool, and Blindspot Detection. International collaboration among aviation stakeholders is important to harmonize standards and ensure consistent application of procedures across borders. AirNav Ireland supports EASA CAT CAG, D4S, and CANSO SAFOPS and Safety Teams. By focusing on preventive measures and promoting a culture of safety, AirNav Ireland aims to reduce risks and uphold the high standards needed for safe and efficient airspace operations. AirNav Ireland has developed and implemented leading and lagging indicators to monitor the effectiveness of safety measures to prevent SMI. These indicators are reviewed at the Safety Review Board and through Safety Action Group. SMIs are documented on the enterprise risk register and monitored for safety assurance.
-

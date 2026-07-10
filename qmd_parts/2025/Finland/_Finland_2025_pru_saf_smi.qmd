@@ -1,8 +1,0 @@
-## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
-
-At State level, Finland reported 12 separation minima infringements (SMI) in their airspace during 2025. The rate of separation minima infringements was higher than Union-wide average (11.33 vs 7.10). At ANSP level, Finland reported 4 SMIs with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (3.78 vs 6.0).
-
-When comparing to 2024, the rate of separation minima infringements has increased at both State level (11.33 vs 2.78) and at ANSP level (3.78 vs 1.89).
-
-Finland notes in the monitoring report that the NSA started using ERCS risk classification at full scale from the beginning of 2025, which has led to increase in both RI and SMI compared to previous years, however also noting that the actual safety situation has remained unchanged.
-

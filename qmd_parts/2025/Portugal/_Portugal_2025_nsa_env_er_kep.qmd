@@ -1,6 +1,0 @@
-## **2.2.2.A. PI #1**
-
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
-
-Since introducing Free Route Operations in Lisbon FIR (May 2009), NAV Portugal has consistently coordinated with neighboring regions and Eurocontrol to create cross-border free-route interfaces for our main traffic flows (Spain, France, and Morocco). While Lisbon FIR remains fully prepared for cross-border expansion, our neighbors are currently managing their own internal FRA deployment schedules. The varied pace of these internal initiatives naturally impacts the timeline for achieving a synchronized cross-border Free Route environment with Lisbon FIR.
-

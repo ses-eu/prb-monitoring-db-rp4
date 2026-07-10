@@ -1,0 +1,68 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -2.8% (or -6.35 €2022) lower than the planned DUC. This results from the combination of higher than planned TNSUs (+2.0%) and slightly lower than planned terminal costs in real terms (-0.9%, or -0.8 M€2022).
+
+### **TZ1.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+2.0%) falls inside the ±2% dead-band. Hence, the gain of additional terminal revenues is kept by the ANSPs.
+
+### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are -0.9% (-0.8 M€2022) lower than planned. This is the result of lower costs for the main ANSP, LVNL (-0.8%, or -0.7 M€2022) and the MET service provider (-3.7%, or -0.1 M€2022).
+
+### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (LVNL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the slightly lower than planned terminal costs in real terms for LVNL in 2025 (-0.8%, or -0.7 M€2022) result from:
+
+- Significantly higher than planned staff costs (+7.7%), mainly due to the continued tight labour market in the Netherlands, which resulted in more vacancies than expected and required additional staffing measures. LVNL reports that it aims to encourage temporarily hired staff to move to permanent employment contracts, an approach which reduces costs but also decreases cost flexibility. While the en route charging zone benefits less from this approach due to the continued need for significant external hiring for the iCAS projects, terminal staff costs increased at a faster rate than en route staff costs. In addition, terminal operations required the procurement of additional ATCO capacity.
+
+- Significantly lower than planned other operating costs (-20.4%), mainly due to lower than expected external staff costs, in line with the explanation provided for staff costs above. Other cost elements show only minor changes.
+
+- Lower than planned depreciation (-4.6%), No further explanation of the drivers is provided in the additional information to the reporting tables, which only indicates that actual depreciation costs differed slightly from determined costs.
+
+- Significantly lower than planned cost of capital (-27.1%). mainly due to a lower average interest on debt than planned, which more than offset the effect of a higher than planned total asset base.
+
+It should be noted that LVNL has updated and revised its cost allocation model and applied this model on the actual 2025 figures. This was necessary due to the foreseen civil-military integration taking place at the end of 2026. The update enables a more accurate allocation of military services costs with respect to staff costs and the hiring of temporary personnel as part of other operating expenses for en route and terminal. There is no impact on the total cost bases of en route and terminal.
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Netherlands provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"For the Netherlands terminal charging zone, the unit cost is lower than planned by -5,5%. This is driven by an increased number of service units (+2,0%) and a lower-than-planned determined cost (-3,7%).*"
+
+\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above differ from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of terminal reporting tables (both of which are aligned).\]
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"For individual organisations:*
+
+*LVNL achieved a lower total cost base, mainly due to reduced personnel costs; however, its cost of capital increased due to higher-than-planned inflation.*
+
+*MUAC, the cost base is lower than planned because lower operating costs outweighed an increase in personnel costs.*
+
+*KNMI, a reduced cost base is driven by lower personnel expenses, though this was partially offset by increased operating costs associated with external staffing.*
+
+*NSA's higher cost base is driven by the need to expand the organisation, which has led to increased staff costs."*
+
+\[It should be noted that the extract from the NSA 2025 monitoring report cited above lists the en route entities whereas it is reported under "terminal ANS" section of the report.\]
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LVNL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"The NSA recommends to the ASNP\'s to look for further cost reduction measures while noting that the traffic variation has a dominant effect on the ability to reach the DUC target. "*
+
+LVNL reports the implementation of the following actions:
+
+*"Cost reduction has been achieved through lower personnel cost and lowering of operating costs."*
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

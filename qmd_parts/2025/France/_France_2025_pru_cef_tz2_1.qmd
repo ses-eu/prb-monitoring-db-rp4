@@ -1,0 +1,54 @@
+## **TZ2.1. SECTION 1 -- UNIT COST**
+
+### **TZ2.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was +2.9% (or +11.12 €2022) higher than the planned DUC. This results from the combination of lower than planned TNSUs (-1.9%) and higher than planned terminal costs in real terms (+1.0%, or +1.9 M€2022).
+
+### **TZ2.1.2. TERMINAL CHARGING ZONE 2 SERVICE UNITS**
+
+The difference between actual and planned TNSUs (-1.9%) falls inside the ±2% dead-band. Hence, the loss of terminal revenues is borne by the ANSPs.
+
+### **TZ2.1.3. TERMINAL CHARGING ZONE 2 COSTS BY ENTITY**
+
+Actual real terminal costs are +1.0% (+1.9 M€2022) higher than planned. This is the result of higher costs for the MET service provider (+15.1%, or +2.2 M€2022) and lower costs for the main ANSP, DSNA (-0.03%, or -0.1 M€2022) and the NSA (-19.1%, or -0.2 M€2022).
+
+### **TZ2.1.4. TERMINAL CHARGING ZONE 2 COSTS FOR THE MAIN ANSP (DSNA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the slightly lower than planned terminal costs in real terms for DSNA in 2025 (-0.03%, or -0.1 M€2022) result from:
+
+- Lower than planned staff costs (-2.3%), mainly due to the late implementation of some of the measures stipulated in the new social agreement (related for example to new working arrangements and new flexible rostering schemes).
+
+- Significantly higher than planned other operating costs (+16.3%), mainly due to acceleration of some operational expenses relating to ATC projects in the main regional airports.
+
+- Lower than planned depreciation (-5.0%), mainly due to catching up with delayed RP3 amortization.
+
+- Significantly lower than planned cost of capital (-21.8%), due to lower NBV of fixed assets (-23.9%) combined with a lower than planned weighted average cost of capital rate, mainly resulting from lower average interest on debt.
+
+- Significantly higher than planned deduction for VFR exempted flights (+6.9%).
+
+### **TZ2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of France provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+\"*Actual costs are in line with determined costs (only +1% at 2022 prices).*
+
+*Actual unit cost is slightly higher than the target (+2.9% at 2022 prices).\"*
+
+### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **TZ2.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DSNA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA indicates that:
+
+"*No specific recommendation is made by the French NSA regarding costs, as actual costs are perfectly in line with determined costs for 2025.*
+
+*Regarding the actual unit costs, 2025 achievement is slightly higher than the target, but this is due to the difference between the actual traffic compared to the STATFOR forecast (-1,9%). The domestic traffic is recovering at a slower pace than expected, compared to international and overflights*."
+
+### **TZ2.1.8. NOTES**
+
+#### **TZ2.1.8.1. NOTE 1**
+
+#### **TZ2.1.8.2. NOTE 2**
+

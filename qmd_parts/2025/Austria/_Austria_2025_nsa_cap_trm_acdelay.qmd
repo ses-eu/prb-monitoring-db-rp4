@@ -1,8 +1,0 @@
-## **2.3.2.C. PI #3**
-
-### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
-
-Prefilled data have not been reviewed
-
-### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
-

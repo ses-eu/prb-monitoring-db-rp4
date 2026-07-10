@@ -1,8 +1,0 @@
-## 2.3.2.D. PI #4
-
-### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
-
-Even if this PI has been introduced for RP4, Particularly during Spring 2025, Brest ACC saw an actual trafic higher than what was expected in the NOP.
-
-To be noted for Reims ACC, the trafic figures have been influenced by the alignment of the border at the interface with MUAC. The project was planned but the effect itself on the traffic counts was not expected in the NOP.
-

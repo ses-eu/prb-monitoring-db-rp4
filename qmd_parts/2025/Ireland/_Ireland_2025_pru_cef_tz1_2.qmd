@@ -2,7 +2,7 @@
 
 ### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (156.50 €) is -4.3% lower than the nominal DUC (163.55 €) which includes DUC initially charged: 167.39 €, and DUC to be charged retroactively: -3.85 €. The difference between the AUCU and the nominal DUC(-7.04 €/SU) is due to:
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (156.50 €) is -4.3% lower than the nominal DUC (163.55 €) which includes DUC initially charged: 167.39 €, and DUC to be charged retroactively: -3.85 €. The difference between the AUCU and the nominal DUC (-7.04 €/SU) is due to:
 
 - the positive inflation adjustment resulting from higher than planned inflation (+0.22 €/SU);
 

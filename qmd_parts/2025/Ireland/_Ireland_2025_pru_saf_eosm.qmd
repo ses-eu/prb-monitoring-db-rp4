@@ -1,6 +1,0 @@
-## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
-
-In 2025, AirNav Ireland achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
-
-As described in the monitoring report, the competent authority conducted a review and verification of the ANSP 2025 EoSM questionnaire, based on the outcomes of the 2025 oversight cycle and the review of 2025 safety performance. Furthermore, the verification process resulted in the evidence supporting a number of verification points not being accepted as demonstrating the resilient level and therefore the safety assurance and safety culture components were downgraded one level to managed. However all targets were achieved.
-

@@ -1,8 +1,0 @@
-## 2.2.2.H. PI #8
-
-### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
-
-The average time spent in level-off for climbing aircraft is much lower than for descending aircraft. This is explained by the fact that climbing aircraft depart from an airport and therefore diverge from a single point (whereas arriving aircraft converge toward one point). As a result, there are fewer conflicts between aircraft and, consequently, less need for level-offs.
-
-Nevertheless, some local initiatives have been implemented where potential improvements have been identified. This is the case in the Paris area, where LFPG and LFPO have worked on transfer conditions to the ACC to enable airlines to use software that computes the most fuel-efficient climb profile for each flight (as part of the HERON SESAR project).
-

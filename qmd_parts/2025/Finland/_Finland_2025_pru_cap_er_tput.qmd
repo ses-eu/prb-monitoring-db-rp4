@@ -1,4 +1,0 @@
-## ERT1.4. Capacity PI #5: Annual weighted average of the daily peak throughput (ACC)
-
-\[And some more text.\]
-

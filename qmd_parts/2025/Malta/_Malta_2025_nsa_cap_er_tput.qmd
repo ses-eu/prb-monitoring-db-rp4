@@ -1,6 +1,0 @@
-## **2.3.2.E. PI #5**
-
-### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
-
-For Malta ACC, 93.1% of total en-route ATFM delay in 2025 occurred on days when throughput was above expected daily traffic, and the annual weighted average of daily peak throughput was 33.5. These indicators are consistent with a traffic pattern where operational pressure is concentrated in peak periods rather than driven by persistent structural capacity shortage throughout the year. The NSA will continue to monitor whether peak concentration increases in future years and whether additional resilience measures become necessary.
-

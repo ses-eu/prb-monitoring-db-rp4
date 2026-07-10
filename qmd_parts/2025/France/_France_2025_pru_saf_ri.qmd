@@ -1,8 +1,0 @@
-## SAF1.3. Rate of runway incursions (RIs) (PI#1)
-
-France reported 45 runway incursions (RI) at during 2025 for all airports listed in the performance plans (54). When comparing the rate of RIs at airport level to Union-wide level, France was lower than Union-wide average (1.73 vs 2.53). The rate has increased compared to 2024 (1.73 vs 1.23).
-
-France reported 18 runway incursions with ATS/CNS contribution in 2025. When comparing the rate of RIs at airport level with ATS/CNS contribution, France was lower than Union-wide average (0.69 vs 0.96). The rate remains stable compared to 2024 (0.69 vs 0.68).
-
-As described in the monitoring report, in 2026 and beyond, DSNA has decided to prioritize runway incursion risk prevention by an action plan, which will be done in cooperation with all stakeholders (Airspace users, general aviation, aerodrome operators, State regulator, etc). Prevention of runway incursions is also considered one of France's key safety priorities. In this context, NSA actively monitors, as part of its oversight activities, the implementation of the DSNA action plan. Furthermore, DSNA has launched a modernization project for ASMGCS (Advanced Surface Movement Guidance and Control Systems) outside the Paris region, enabling the deployment of safety nets for France's major airports namely at Nice, Marseille, Lyon, Toulouse, Basel (Bâle-Mulhouse) from late 2028 until 2030.
-

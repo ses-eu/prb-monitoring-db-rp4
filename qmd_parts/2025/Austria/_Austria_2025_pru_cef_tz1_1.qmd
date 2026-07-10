@@ -16,15 +16,15 @@ Actual real terminal costs are +2.8% (+1.4 M€2022) higher than planned. This i
 
 Based on the additional information to the terminal reporting tables, the higher than planned terminal costs in real terms for Austro Control in 2025 (+3.4%, or +1.6 M€2022) result from:
 
-- Significantly higher than planned staff costs (+5.7%), mainly due to higher than foreseen inflation and its effects on pension costs;
+- Significantly higher than planned staff costs (+5.7%), mainly due to higher than foreseen inflation and its effects on pension costs.
 
-- Lower than planned other operating costs (-5.0%);
+- Lower than planned other operating costs (-5.0%).
 
-- Slightly lower than planned depreciation (-0.9%);
+- Slightly lower than planned depreciation (-0.9%).
 
-- Slightly higher than planned cost of capital (+1.8%);
+- Slightly higher than planned cost of capital (+1.8%).
 
-- Slightly lower than planned exceptional costs (-0.9%), due to the inflation index (+1.1 p.p.) since in nominal terms the actual costs were equal to those planned.
+- Slightly lower than planned exceptional costs (-0.9%), due to the effect of higher than planned inflation index (+1.1 p.p.) since in nominal terms the actual costs were equal to those planned.
 
 ### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 
@@ -32,7 +32,7 @@ The NSA of Austria provides the following overall assessment of the actual perfo
 
 *"Higher costs together with a higher inflation and less traffic than determined led to higher real en route unit costs."*
 
-*\[It should be noted that the extract from the NSA 2025 monitoring report cited above refers to "en-route" whereas it is reported under "terminal ANS" section of the report.\]*
+\[It should be noted that the extract from the NSA 2025 monitoring report cited above refers to "en-route" whereas it is reported under "terminal ANS" section of the report.\]
 
 ### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 

@@ -1,0 +1,42 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (187.78 €) is +76.7% higher than the nominal DUC (106.27 €). The difference between these two figures (+81.50 €/SU) is due to:
+
+- the negative inflation adjustment resulting from lower than planned inflation (-0.89 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+0.75 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+1.37 €/SU);
+
+- the addition of the traffic adjustment (+0.24 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (-0.52 €/SU);
+
+- cross-financing between terminal charging zones 1 and 2 (+83.30 €/SU); and
+
+- the deduction of other revenues (-2.75 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is -0.02%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of France provides the following information regarding the initiatives:
+
+*\"Please note that the cost exempt from cost-risk sharing item takes into account the mandatory compensation in year N+2 iaw Art 28(5) e.g. Eurocontrol and NSA and only a provisional values for other CRS related cost items.*
+
+*With regard to these other CRS related cost items, data will be provided in the cost exempt report due on Sept, 1st after consultation of AUs.*
+
+*In addition, it is recalled that the French NSA has opted for a carry-over to RP4 based on an assessment over the whole RP4 iaw Art 28(4) & (6).*
+
+*The terminal unit costs of both CZ1 and CZ2 have to be analyzed together due to the cross-financing (CZ2 unit cost incurred by the users is much lower than planned, while CZ1 is much higher). The evolution over RP4 will be closely monitored by the French NSA, taking into account the impact of a traffic lower than the performance plan traffic forecast (-1.9% for CZ2 and -3.9% for CZ1).\"*
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.1. NOTE 2**
+

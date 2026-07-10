@@ -2,17 +2,17 @@
 
 ### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (29.87 BGN or 15.27 €) is -1.6% lower than the nominal DUC (30.34 BGN or 15.52 €). The difference between the AUCU and the nominal DUC (-0.48 BGN/SU or -0.24 €/SU) is due to:
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (29.87 €) is -1.6% lower than the nominal DUC (30.34 €). The difference between these two figures (-0.48 €/SU) is due to:
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.04 BGN/SU or -0.02 €/SU);
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.04 €/SU);
 
-- the deduction of the traffic risk sharing adjustments (-0.33 BGN/SU or -0.17 €/SU);
+- the deduction of the traffic risk sharing adjustments (-0.33 €/SU);
 
-- the deduction of the traffic adjustment (-0.11 BGN/SU or -0.06 €/SU) for the costs not subject to traffic risk sharing;
+- the deduction of the traffic adjustment (-0.11 €/SU) for the costs not subject to traffic risk sharing;
 
-- financial incentives (+0.14 BGN/SU or +0.07 €/SU); and
+- financial incentives (+0.14 €/SU); and
 
-- the deduction of other revenues (-0.13 BGN/SU or -0.07 €/SU).
+- the deduction of other revenues (-0.13 €/SU).
 
 The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 9.8%.
 

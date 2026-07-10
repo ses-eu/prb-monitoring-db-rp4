@@ -20,7 +20,7 @@ Based on the additional information to the en route reporting tables, the higher
 
 - Significantly higher than planned other operating costs (+16.8%), mainly driven by higher prices under new contracts concluded in 2024--2025 and unplanned costs related to ATCO training abroad, cybersecurity upgrades and maintenance, PART-IS implementation, rising cybersecurity market prices, and external expert support for the documentation of certification processes.
 
-- Slightly lower than planned depreciation (-0.6%),
+- Slightly lower than planned depreciation (-0.6%).
 
 - Significantly higher than planned cost of capital (+32.4%), entirely driven by a change in capital structure following the full repayment of long-term debt in 2025, which increased the equity financing share (from 60% to 86.5%) and the actual pre-tax WACC rate at 7.04% compared to the determined (6.21%).
 
@@ -34,7 +34,7 @@ The NSA of Slovenia provides the following overall assessment of the actual perf
 
 The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
 
-*"*Operating costs 1*6.5*% higher due *to:*
+*"Operating costs 16.5% higher due to:*
 
 *- the conclusion of new contracts in 2024 and 2025, following the expiration of previous agreements, with prices exceeding initially forecasted inflation levels.*
 
@@ -48,7 +48,7 @@ The NSA provides the following explanation for the differences between actual an
 >
 > *o Expenses related to the external professional experts support in the preparation of technical documentation in certification processes.*
 
-*Cost of capital is 32.4% higher than determined due to two changes against the values determined in the RP4 performance plan. The assumptions in the performance plan were based on then valid debt level, but Slovenia Control was able to fully repay its outstanding long-term debt during 2025 (closing balance EUR 0 at 31/12/2025, against EUR 5,604,969 at 31/12/2024). This resulted in an average debt of EUR 2,802,484 and an actual share of financing through equity of 86.5% (against 60% determined). The average interest on debts of 4.34% remained in line with the determined value. In accordance with paragraph 47 of the PRB Cost of Capital Guidelines (June 2024) and Articles 22(4) and 23 of Regulation (EU) 2019/317, the return on equity is kept equal to the determined rate of 7*.46% pre-tax. The resulting actual pre-tax WACC for 2025 is 7.04%, compared to the determined 6.21%, with the difference driven entirely by the change in capital structure following debt repayment.*"*
+*Cost of capital is 32.4% higher than determined due to two changes against the values determined in the RP4 performance plan. The assumptions in the performance plan were based on then valid debt level, but Slovenia Control was able to fully repay its outstanding long-term debt during 2025 (closing balance EUR 0 at 31/12/2025, against EUR 5,604,969 at 31/12/2024). This resulted in an average debt of EUR 2,802,484 and an actual share of financing through equity of 86.5% (against 60% determined). The average interest on debts of 4.34% remained in line with the determined value. In accordance with paragraph 47 of the PRB Cost of Capital Guidelines (June 2024) and Articles 22(4) and 23 of Regulation (EU) 2019/317, the return on equity is kept equal to the determined rate of 7.46% pre-tax. The resulting actual pre-tax WACC for 2025 is 7.04%, compared to the determined 6.21%, with the difference driven entirely by the change in capital structure following debt repayment."*
 
 ### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (SLOVENIA CONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 
