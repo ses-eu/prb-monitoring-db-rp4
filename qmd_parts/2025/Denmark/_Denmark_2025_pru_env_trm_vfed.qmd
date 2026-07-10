@@ -1,4 +1,4 @@
-## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+## TRM1.4. Vertical flight efficiency of the descent (PI#7)
 
 Compared to the overall RP4 average value (149.2 seconds per flight), the average time flown level during descent is 85.4 seconds per flight lower in Denmark. Copenhagen (EKCH) has an average time flown level of 63.8 seconds per flight during descent.
 

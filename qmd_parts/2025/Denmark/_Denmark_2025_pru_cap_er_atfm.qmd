@@ -1,10 +1,10 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+## ERT1.1. En route ATFM delay per flight (KPI#1)
 
-- Denmark had 600k flights in 2025, up from 594k flights in 2024.
+-   Denmark had 600k flights in 2025, up from 594k flights in 2024.
 
-- Naviair applied en route ATFM regulations resulting in 66k minutes of delay, an increase from the 28k minutes in 2024.
+-   Naviair applied en route ATFM regulations resulting in 66k minutes of delay, an increase from the 28k minutes in 2024.
 
-- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, \<1k minutes of delay originating in Denmark were re-attributed **to other ANSPs**.
+-   Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, \<1k minutes of delay originating in Denmark were re-attributed **to other ANSPs**.
 
-- When the above post-operations re-attribution is factored in, the total en route delay for Naviair in 2025 was 65k minutes in 2025.
+-   When the above post-operations re-attribution is factored in, the total en route delay for Naviair in 2025 was 65k minutes in 2025.
 
