@@ -1,0 +1,19 @@
+## **TZ1.3. SECTION 3 -- REGULATORY RESULT**
+
+### **TZ1.3.1. DFS NET GAIN/LOSS ON ACTIVITY IN THE GERMANY TERMINAL CHARGING ZONE IN 2025**
+
+DFS reported a net gain of +2.3 M€, as a combination of a gain of +5.8 M€ arising from the cost sharing mechanism, with a loss of -1.8 M€ arising from the traffic risk sharing mechanism and a loss of -1.7 M€ relating to financial incentives.
+
+### **TZ1.3.2. DFS OVERALL REGULATORY RESULT (RR) ON ACTIVITY IN THE TERMINAL CHARGING ZONE** 
+
+Ex-post, the overall RR, taking into account the net gain from the terminal activity mentioned above (+2.3 M€) and the actual RoE (+22.1 M€, see Note 1 below for details), amounts to +24.4 M€ (7.2% of the terminal revenues). The resulting ex-post rate of return on equity is 9.0%, which is higher than the 8.2% planned in the PP. See also Note 2 below.
+
+### **TZ1.3.3. NOTES**
+
+#### **TZ1.3.3.1. NOTE 1**
+
+As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of terminal reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the terminal reporting tables (13.6 M€) differs from the value that is calculated on the basis of the assumptions provided (25.9 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*.
+
+#### **TZ1.3.3.2. NOTE 2**
+
+The ex-post RR does not take into account the application of a lower unit rate in 2025 as per Art. 29.6 (the loss in revenues corresponds to -19.6 M€ for 2025).

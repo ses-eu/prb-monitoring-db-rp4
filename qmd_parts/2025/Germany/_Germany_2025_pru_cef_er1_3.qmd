@@ -14,7 +14,7 @@ Ex-post, the overall RR, taking into account the net loss from the en route acti
 
 As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of en route reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the en-route reporting tables (38.5 M€) differs from the value that is calculated on the basis of the assumptions provided (58.8 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*
 
-#### .**ER1.3.3.2. NOTE 2**
+#### **ER1.3.3.2. NOTE 2**
 
 # **TZ1. TERMINAL CHARGING ZONE - GERMANY**
 
