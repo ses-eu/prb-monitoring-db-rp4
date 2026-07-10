@@ -114,6 +114,7 @@ replace_headings(path, cap_er_nsa_titles_atfm)
 `r if (params$country == "FABEC") ":::: {.content-hidden}"`
 
 **En route capacity incentive scheme**
+
 ```{r cap_er_text_incentive, eval=(params$no_ecz != 0)}
 #| echo: false
 #| output: asis
@@ -379,6 +380,7 @@ replace_headings(path, cap_trm_nsa_titles_atfm)
 ``` 
 
 **Terminal capacity incentive scheme**
+
 ```{r cap_trm_text_incentive, eval=(params$no_ecz != 0)}
 #| echo: false
 #| output: asis
