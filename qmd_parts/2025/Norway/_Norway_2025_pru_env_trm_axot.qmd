@@ -1,0 +1,8 @@
+## TRM1.1. Additional time in taxi-out phase (PI#4) {#trm1.1.-additional-time-in-taxi-out-phase-pi4 .Heading-2-TZ}
+
+The additional time in Oslo in 2025 decreased to 4.32 min/dep, below the 2024 value -- last year of RP3 -- of 4.52 min/dep (*using the new methodology*). As in previous years, the figure is driven by winter weather: 10.92 min/dep in January 2025.
+
+No results are available for Bergen due to data quality issues in the APDF process (airport does not provide runway information).
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 3.61 min/dep.
+

@@ -1,0 +1,6 @@
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+
+Average ATFM arrival delay in Sweden was 0.01 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 0.07 min/arr. Delay is the lowest among RP4 states.
+
+The average for RP4 airports subject to monitoring of ATFM Arrival delay across Member States in 2025 was 0.97 min/arr.
+

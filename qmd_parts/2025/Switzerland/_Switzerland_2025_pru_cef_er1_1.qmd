@@ -1,0 +1,56 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was +5.7% (or +7.68 CHF2022, +7.64 €2022) higher than the planned DUC. This results from the combination of significantly lower than planned TSUs (-6.8%) and lower than planned en route costs in real terms (-1.5%, or -3.8 MCHF2022, -3.8 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (-6.8%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -1.5% (-3.8 M€2022) lower than planned. This is the result of lower costs for the main ANSP, Skyguide (-1.9%, or -4.4 M€2022) and higher costs for the MET service provider (+0.4%, or +0.04 M€2022) and the NSA/EUROCONTROL (+3.6%, or +0.6 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (SKYGUIDE) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for Skyguide in 2025 (-1.9%, or -4.4 M€2022) result from:
+
+- Slightly lower than planned staff costs (-0.2%), with salaries, social charges and other staff costs broadly in line with the Performance Plan.
+
+- Significantly lower than planned other operating costs (-7.2%), mainly due to lower purchased services and products, including external experts, maintenance, material and tools. This reflects the implementation of savings measures in response to the drop in traffic, mainly affecting support service expenses.
+
+- Slightly higher than planned depreciation (+0.4%), with depreciation of assets broadly in line with the Performance Plan.
+
+- Significantly lower than planned cost of capital (-5.6%). mainly due to a lower asset base and lower WACC.
+
+- Slightly higher than planned deduction for VFR exempted flights (+0.1%).
+
+It is understood that the costs for Skyguide are netted off by the financing received for activities outside of the Swiss FIR. This should be considered when interpreting the variation in costs detailed above.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Switzerland provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"The +5.7% increase in actual unit costs relative to the DUC is primarily explained by a significant decline in traffic (-6.8%), exceeding the decrease in costs (-1.5% in real terms)."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Actual costs in nominal terms are slightly lower than the determined costs from the Performance Plan by -1.6% (-4.3M CHF) and -1.5% in real terms (-3.8M CHF).*
+
+*This variance is mainly driven by lower operating costs, in particular a reduction in support service expenses.*
+
+*Indeed, some savings measures have been implemented over the year to partly compensate for the loss in revenue resulting from lower than forecasted traffic levels."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (SKYGUIDE) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No recommendation from the NSA or action from the ANSP is reported in the 2025 NSA Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

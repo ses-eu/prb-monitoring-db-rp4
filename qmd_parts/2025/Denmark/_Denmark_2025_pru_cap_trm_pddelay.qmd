@@ -1,0 +1,6 @@
+## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+
+Delay in 2025 was equal to 0.14 min/dep, very close to 2024 value-- last year of RP3 -- of 0.10 min/dep. This is the third lowest among RP4 states.
+
+The average for RP4 airports subject to monitoring of ATC pre-departure delay across Member States and for which enough data is available in 2025 was 0.74 min/dep.
+

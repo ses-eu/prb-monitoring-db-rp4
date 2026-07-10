@@ -1,0 +1,16 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+Total distance (km) 66,802,844
+
+Distance flown at altitude ≥ Requested FL - 1000 ft - 51,821,671
+
+Indicator (%) 77.6
+
+Based on data available as of early 2026, the vertical flight efficiency of the actual trajectory (VFE) for Slovakia in 2025 has been influenced by a significant increase in traffic and airspace restrictions in Central Europe, leading to continued environmental performance challenges.
+
+A number of events in 2025 affected the network and had direct consequences on the flight efficiency evolution:
+
+The closure and avoidance of Ukrainian, Belarusian and Russian airspace forced traffic to reroute through neighbouring countries (Türkiye, Bulgaria, Romania, Poland, Slovakia, Hungary, Lithuania, Latvia and Estonia, etc.). This shifted significant demand to adjacent ACCs/UACs, especially Far Eastern traffic, and led to increased route extensions.
+

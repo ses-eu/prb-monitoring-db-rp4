@@ -1,0 +1,4 @@
+## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+
+Compared to the overall RP4 average value (149.2 seconds per flight), average times flown level during descent are 94.1 seconds per flight lower in Malta. Malta/Luqa (LMML) has an average time flown level of 55.1 seconds per flight during descent.
+

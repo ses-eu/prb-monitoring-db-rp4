@@ -1,0 +1,52 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -5.7% (or -361.70 CZK2022, -14.75 €2022) lower than the planned DUC. This results from the combination of higher than planned TNSUs (+3.1%) and lower than planned terminal costs in real terms (-2.8%, or -15.2 MCZK2022, -0.6 M€2022).
+
+### **TZ1.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+3.1%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are -2.8% (-0.6 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ANS CR (-2.9%, or -0.6 M€2022) and the NSA (-0.7%) and higher costs for the MET service provider (+2.9%).
+
+### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (ANS CR) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the lower than planned terminal costs in real terms for ANS CR in 2025 (-2.9%, or -0.6 M€2022) result from:
+
+- Slightly higher than planned staff costs (+1.6%), mainly due to the high inflation experienced in 2022 and 2023 feeding through into employee compensation.
+
+- Lower than planned other operating costs (-3.0%), mainly due to cost containment measures introduced by ANS CR.
+
+- Significantly lower than planned depreciation (-16.5%), mainly because some planned system upgrades were postponed.
+
+- Significantly lower than planned cost of capital (-9.7%), mainly due to a gap in some investments resulting in a lower NBV of fixed assets.
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Czech Republic provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*The actual DUC was lower than determined and the target was met.*"
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*The slightly higher staff costs were offset by savings in the other cost categories and by higher than determined traffic.*"
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ANS CR) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+"*To maintain the efforts keeping ANSP in healthy financial condition being able to cope the current and future challenges. ANSPs should continue its cost-cutting measures while not undermining future capacity.*"
+
+No information was provided by the ANSP in the NSA 2025 Monitoring Report regarding actions taken.
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

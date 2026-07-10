@@ -1,0 +1,60 @@
+## **TZ2.1. SECTION 1 -- UNIT COST**
+
+### **TZ2.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was +21.5% (or +463.82 RON2022, +94.12 €2022) higher than the planned DUC. This results from the combination of significantly higher than planned terminal costs in real terms (+19.0%, or +9.0 MRON2022, +1.8 M€2022) and lower than planned TNSUs (-2.0%). It should be noted that the actual inflation index in 2025 was +2.9 p.p. higher than planned.
+
+### **TZ2.1.2. TERMINAL CHARGING ZONE 2 SERVICE UNITS**
+
+The difference between actual and planned TNSUs (-2.0%) falls inside the ±2% dead-band. Hence, the loss of terminal revenues is borne by the ANSPs.
+
+### **TZ2.1.3. TERMINAL CHARGING ZONE 2 COSTS BY ENTITY**
+
+Actual real terminal costs are +19.0% (+1.8 M€2022) higher than planned. This is the result of higher costs for the main ANSP, ROMATSA (+19.1%, or +1.8 M€2022) while the NSA costs were broadly in line with the plan (+0.1%).
+
+### **TZ2.1.4. TERMINAL CHARGING ZONE 2 COSTS FOR THE MAIN ANSP (ROMATSA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the significantly higher than planned terminal costs in real terms for ROMATSA in 2025 (+19.1%, or +1.8 M€2022) result from:
+
+- Significantly higher than planned staff costs (+18.4%), reflecting "*an increase of pension costs and compensation of personnel with inflation*".
+
+- Significantly higher than planned other operating costs (+37.7%), understood to result from 1) the impact of higher than anticipated inflation on the prices of materials and external services, 2) the impact of exchange rate fluctuations on the costs of licences maintenance contracts in Euros, and 3) the recognition of impairment allowance for amounts due to be reimbursed by the Ministry of Transport and Infrastructure stemming from exempted flights. This item, which constitutes an accounting provision, is understood to be "*recorded in accordance with Romanian accounting regulations and was not included in the determined costs for the reference period, nor is it recoverable through charges to airspace users*".
+
+- Significantly lower than planned depreciation (-13.4%), resulting from delays in implementation and commissioning of some investment projects.
+
+- Significantly higher than planned cost of capital (+8.7%) resulting from a higher than planned asset base due to "*rescheduling of investments according to operational needs*".
+
+### **TZ2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Romania provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*In 2025, the real terminal unit cost at TCZ2 level was 2,620.75 RON/US (in 2022 prices), compared to the determined unit cost of 2,156.92 RON/US, representing a deviation of +21.5% above the planned level --- the most significant unit cost overrun across all charging zones.*
+
+*The deviation results from a double negative effect, operating simultaneously on both sides of the unit cost ratio. Total terminal costs in real terms amounted to RON 56,336 thousand against determined costs of RON 47,327 thousand (+19.04%), while terminal service units realised were 21,496 against the plan of 21,942 (−2.03%). Unlike TCZ1, where above-plan traffic partially offset cost overruns, at TCZ2 the traffic underperformance compounds the cost overrun, amplifying the unit cost deviation*."
+
+### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*The cost overrun is attributable to the following factors: other operating costs exceeded the determined level due to the higher-than-anticipated inflationary environment impacting utility costs, communications services, software maintenance and licensing, technical support contracts, spare parts and consumables, adverse EUR/RON exchange rate developments, and the recognition of an impairment allowance on trade receivables --- an accounting provision not included in the determined cost base and not recoverable through charges. Depreciation was below plan (RON 1,017 thousand vs. RON 1,175 thousand determined) due to delays in commissioning certain investment projects. Cost of capital exceeded the determined level by approximately 9%, reflecting the rescheduling of investments according to operational needs.*
+
+*The traffic shortfall of −2.03% in 2025 reflects below-plan performance at Cluj-Napoca, Sibiu and Târgu Mureș airports. However, early 2026 data indicates a recovery: service units in the first four months of 2026 reached 6,368, compared to a PP RP4 plan of 6,207 for the same period (+2.59%), with the positive deviation accelerating through the spring season (March +3.47%, April +6.37%). This reversal suggests that the 2025 traffic shortfall was not structural and that demand growth in TCZ2 is resuming in line with, and in the most recent months above, the RP4 trajectory*."
+
+### **TZ2.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ROMATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No recommendation formulated by the NSA was provided in the NSA 2025 Monitoring Report. At the same time, ROMATSA reports the following information:
+
+"*The cost overruns recorded in 2025 are attributable predominantly to factors outside ROMATSA\'s direct control and, where applicable, are subject to recovery mechanisms already provided for under Regulation (EU) 2019/317, which do not require corrective action by the ANSP. Specifically:*
+
+*--- The deviation in other operating costs reflects the higher-than-planned inflationary environment, adverse exchange rate developments. ROMATSA continues to apply cost discipline within the parameters of its operational and contractual obligations. The overrun is also attributable to the recognition of an impairment allowance on trade receivables, recorded in accordance with Romanian accounting regulations. This item constitutes an accounting provision and was not included in the determined costs for the reference period, nor is it recoverable through charges to airspace users.*
+
+*--- The lower depreciation is a direct consequence of implementation delays in certain investment projects and does not indicate underinvestment: the overall investment programme remains on track. No corrective action is required or appropriate.*
+
+*ROMATSA considers that no additional corrective measures are warranted beyond the regulatory recovery mechanisms already in place, as the cost deviations do not reflect operational inefficiency or a failure to implement planned measures*."
+
+### **TZ2.1.8. NOTES**
+
+#### **TZ2.1.8.1. NOTE 1**
+
+#### **TZ2.1.8.2. NOTE 2**
+

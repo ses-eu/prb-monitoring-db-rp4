@@ -1,0 +1,8 @@
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+
+In the first year of RP4, with an ATFM arrival delay of 0.17 min/arr, Romania **achieved the national target** of 0.40 min/arr.
+
+The Performance Plan provides the possibility of adjusting the pivot value for incentives based on traffic changes, however, this was not applied in 2025, and the pivot value is also 0.40 min/arr. Due to this, the KPI is beyond the end of the bonus sliding range for the incentive scheme, meaning that **the maximum bonus of 0.75%** applies. As such, the NSA computes a bonus of RON 1,934,160.61.
+
+Note that the State reported an ATFM arrival delay of 0.16 min/arr, 0.01 less than what PRB estimates. Nevertheless, such difference does not impact the resulting bonus within the incentive scheme.
+

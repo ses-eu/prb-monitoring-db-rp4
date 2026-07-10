@@ -1,0 +1,28 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+The average delay per flight was 0.1 minutes per flight in Summer 2025.
+
+37,6 % of the Summer delays were due to the reason ATC Capacity, 61,5 % due to Weather and 1 % due to Staffing. On 22/01/2026, new sector configurations were introduced. Currently, the horizontally split sector configuration is being used in operation.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+The National Performance Plan for the RP4 (2025-2029 period) were not yet adopted for Slovakia.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+Target has been met.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+n/a
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+n/a
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+during the previous calendar years the modification of the Bratislava CTA were being introduced
+

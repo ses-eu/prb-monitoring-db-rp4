@@ -1,0 +1,8 @@
+## ERT1.2. Rate of planning via available airspace structures (PI#10) {#ert1.2.-rate-of-planning-via-available-airspace-structures-pi10 .Heading-2-ER}
+
+FRANCE reports that:
+
+- The ratio of planning via available airspace structures is **50.81%** (via available restricted and segregated airspaces)
+
+- The ratio of planning via available airspace structures is **74.86%** (via available conditional routes -- CDR)
+

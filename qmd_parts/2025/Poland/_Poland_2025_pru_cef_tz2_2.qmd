@@ -1,0 +1,32 @@
+## **TZ2.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ2.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (1 257.81 PLN or 297.04 €) is -6.3% lower than the nominal DUC (1 342.84 PLN or 317.12 €). The difference between the AUCU and the nominal DUC (-85.03 PLN/SU or -20.08 €/SU) is due to:
+
+- the negative inflation adjustment resulting from lower than planned inflation (-29.99 PLN/SU or -7.08 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+1.68 PLN/SU or +0.40 €/SU);
+
+- the deduction of the traffic risk sharing adjustment (-20.91 PLN/SU or -4.94 €/SU);
+
+- the deduction of the traffic adjustment (-10.76 PLN/SU or -2.54 €/SU) for the costs not subject to traffic risk sharing; and
+
+- the deduction of other revenues (-25.05 PLN/SU or -5.92 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.9%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ2.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Poland provides the following information regarding the initiatives:
+
+*"The value of this indicator derives directly from adjustment mechanisms defined in the EU Performance and Charging Regulation. Poland does not apply modulation of charges, the provisions of Article 29(6) or cross-financing between charging zones. Detailed data on the calculation of the adjustments is presented in TNC2 charges\' reporting tables."*
+
+### **TZ2.2.3. NOTES** 
+
+#### **TZ2.2.3.1. NOTE 1**
+
+#### **TZ2.2.3.1. NOTE 2**
+

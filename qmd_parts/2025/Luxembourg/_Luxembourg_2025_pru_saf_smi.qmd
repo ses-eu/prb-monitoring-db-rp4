@@ -1,7 +1,0 @@
-## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
-
-At State level, Luxembourg reported 1 separation minima infringement (SMI) in their airspace\
-during 2025. The rate of separation minima infringements was higher than the Union-wide average (8.76 vs 7.10). At ANSP level, Luxembourg reported 1 SMI with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was higher than the Union-wide average (8.76 vs 6.0).
-
-When comparing to 2024, the rate of separation minima infringements has decreased significantly at both State level (8.76 vs 52.59) and at ANSP level (8.76 vs 43.82).
-

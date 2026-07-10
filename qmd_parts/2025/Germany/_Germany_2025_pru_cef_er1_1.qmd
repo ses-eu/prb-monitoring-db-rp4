@@ -1,0 +1,64 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -0.4% (or -0.31 €2022) lower than the planned DUC. This results from the combination of slightly higher than planned TSUs (+0.9%) and slightly higher than planned en route costs in real terms (+0.4%, or +4.6 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+0.9%) falls inside the ±2% dead-band. Hence, the gain of additional en route revenues is kept by the ANSPs.
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +0.4% (+4.6 M€2022) higher than planned. This is the result of higher costs for the main ANSP, DFS (+1.0%, or +9.1 M€2022) and lower costs for the other ANSP (MUAC, -2.0%, or -2.2 M€2022), the MET service provider (-2.1%, or -0.2 M€2022) and the NSA/EUROCONTROL (-3.1%, or -2.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (DFS) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for DFS in 2025 (+1.0%, or +9.1 M€2022) result from:
+
+- Slightly higher than planned staff costs (+0.4%), due to "*additional costs for special payments to increase capacity provision*".
+
+- Significantly higher than planned other operating costs (+6.8%), due to "*additional IT security costs and higher bad debt losses*".
+
+- Significantly lower than planned depreciation (-11.4%), mainly "*due to changes in the projects MaRS, iCAS Lower Airspace as well as in the product management ATS-LAN*".
+
+- Significantly lower than planned cost of capital (-8.9%), which are understood to mainly reflect the fact that actual costs of capital are netted off using an *"interest income from temporarily invested fixed deposits"* (see also the analysis of Regulatory Result for details).
+
+- No deduction of exceptional costs which were included as part of the determined cost-base for DFS for 2025 (negative amount). This negative amount of -11.4 M€ (in nominal terms) which was used to reduce the chargeable cost base for 2025 is understood to be related to depreciation costs charged to the airspace users but not spent during RP2.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Germany provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"There are no major deviations between determined and actual enroute costs. Slightly lower costs and higher than determined traffic led to lower actual unit costs. Overall actual costs for NSA, MUAC and MET were below determined costs while DFS incurred higher actual costs.*
+
+*Note: The determined costs for DFS in 2025 included an exceptional item for depreciation costs charged but not spent during RP2. They lowered the amounts charged to airspace users in 2025 but aren\'t reflected in the actual costs structure of the given year"*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"In 2025, DFS had higher than expected personnel costs, which can be attributed to incentivised extra ATCO shifts, and other operating costs, mainly for additional IT-security costs and bad debt losses. Depreciation and costs of capital were below planned levels as interest on temporarily invested fixed deposits was generated and projects were changed. Main changes to projects include MaRS, iCAS Lower Airspace and the product management ATS-LAN. Parts of the project PIPE2 were postponed due to resource constraints and a longer than anticipated internal decision process.*
+
+*MUAC experienced slightly rising staff costs mainly attributable to pension costs. The other operating costs were lower than expected as cost containment measures in multiple areas were implemented, expenditure reprioritized and procurement processes experienced slight delays.*
+
+*MET costs are below determined costs as changes in interest rates led to lower pension costs while the other operating costs rose slightly.*
+
+*Changes in NSA costs are mainly rooted within expenses for personnel as actual staffing level is below the planned staffing level."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DFS) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"As regards DFS the NSA recommends adhering to planned investment schedules more strictly and monitoring upcoming delays in project schedules more closely."*
+
+DFS reports the implementation of the following actions:
+
+*"DFS is committed to adhering to the investment schedule as laid out in the performance plan and implementing planned measures on time. Any shortfalls are analysed and, if possible, actively managed to minimize delays in current and future investment implementation."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

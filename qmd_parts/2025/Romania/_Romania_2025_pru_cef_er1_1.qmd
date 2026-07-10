@@ -1,0 +1,92 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was +1.4% (or +2.68 RON2022, +0.54 €2022) higher than the planned DUC. This results from the combination of higher than planned en route costs in real terms (+4.1%, or +52.3 MRON2022, +10.6 M€2022) and higher than planned TSUs (+2.6%). It should be noted that the actual inflation index in 2025 was +2.9 p.p. higher than planned.
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+2.6%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +4.1% (+10.6 M€2022) higher than planned. This is the result of higher costs for the main ANSP, ROMATSA (+4.3%, or +10.6 M€2022) while costs for the NSA/EUROCONTROL were broadly in line with the plan (+0.3%).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (ROMATSA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for ROMATSA in 2025 (+4.3%, or +10.6 M€2022) result from:
+
+- Higher than planned staff costs (+4.1%), which are explained by three distinct drivers: 1) a significant increase in pension costs due to an annual actuarial revaluation (under IAS 19) of the defined benefit obligation, 2) an inflation-linked compensation adjustments set out in the collective agreement, and 3) a non-recurring bonus payments linked to the achievement of capacity targets and to higher than forecast traffic volumes.
+
+- Significantly higher than planned other operating costs (+17.3%), understood to reflect: 1) the impact of higher than anticipated inflation on the prices of materials and external services, 2) the impact of exchange rate fluctuations on the cost of licences and maintenance contracts denominated in Euros, and 3) procurement delays in 2024 which resulted in the recognition of some associated costs in the 2025 accounting year.
+
+- Significantly lower than planned depreciation (-14.9%), resulting from delays in the implementation and the commissioning of some investment projects.
+
+- Higher than planned cost of capital (+1.8%), reflecting a slightly higher than planned asset-base.
+
+- Slightly lower than planned exceptional costs (-0.6%) corresponding to the costs for space weather with the observed variation reflecting mostly the effect of higher than planned inflation index (+2.9 p.p.) since nominal costs were slightly above the plan (+1.8%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Romania provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*In 2025, the real en route unit cost (DUC) at charging zone level was 191.38 RON/SU (in 2022 prices), compared to the determined unit cost of 188.70 RON/SU, representing a deviation of +1.42% above the planned level.*
+
+*Total en route costs in real terms amounted to 1,330,772 thousand RON against determined costs of 1,278,443 thousand RON (+4.09%). In nominal terms, actual costs were 1,605,117 thousand RON against the determined 1,507,616 thousand RON (+6.47%).*
+
+*Traffic volume exceeded the PP RP4 forecast by +2.64% (6,953,723 TSU realised vs. 6,775,110 TSU planned), which partially offset the cost overrun in unit cost terms relative to the nominal cost deviation.*
+
+*The cost overrun is driven primarily by: (i) personnel costs exceeding the determined level by 8.27%, mainly due to pension costs (+33.84% vs. plan) and inflation-linked salary compensation above the planned level; (ii) other operating costs exceeding the determined level by 20.14%, largely attributable to the completion of objectives carried over from 2023 and 2024; partially offset by (iii) depreciation below plan by 14.87%, due to delays in commissioning certain investment projects*."
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*In 2025, total en route costs in real terms exceeded the determined level by 4.09% (RON 1,330,772 thousand vs. RON 1,278,443 thousand), resulting in a real unit cost of 191.38 RON/SU against the DUC of 188.70 RON/SU (+1.42%). The cost overrun is partially offset by traffic volumes exceeding the PP RP4 forecast by +2.64% (6,953,723 TSU realised vs. 6,775,110 TSU planned).*
+
+*The deviation in actual costs relative to determined costs is driven by the following factors:*
+
+*Staff costs (+6.59%): The overrun reflects three distinct drivers:*
+
+*(i) pension costs exceeded the determined level due to the annual actuarial revaluation of the defined benefit obligation under IAS 19, which produced a higher service cost than assumed in the RP4 Performance Plan --- this increase is attributable to the sensitivity of the defined benefit liability to macro-economic evolutions outside ROMATSA\'s control;*
+
+*(ii) inflation-linked compensation adjustments applied to gross remuneration in accordance with the provisions of the collective agreement, in a higher-than-planned inflationary environment (actual HICP 6.8% vs. 5.623% planned);*
+
+*(iii) non-recurring bonus payments linked to the achievement of capacity targets and to traffic volumes above the RP4 baseline.*
+
+*Other operating costs (+20.14%):*
+
+*The deviation reflects the combined effect of:*
+
+*(i) a higher-than-anticipated inflationary environment impacting prices of goods and services required for the provision of air navigation services (utility costs, communications services, software maintenance and licensing, technical support contracts, spare parts);*
+
+*(ii) adverse exchange rate developments, particularly for services and software licences denominated in EUR;*
+
+*(iii) procurement processes carried over from RP3 materialised in 2025, as certain acquisitions were not finalised within the original scheduling assumptions, leading to the recognition of the associated costs in the 2025 accounting year;*
+
+*(iv) costs arising from legislative changes --- specifically the minimum turnover tax, the monitoring fee for public enterprises, and the tax on special buildings introduced in 2025 --- which are recoverable from airspace users in year n+2 pursuant to Article 28(3)(e) and (6) of Regulation (EU) 2019/317.*
+
+*Depreciation (−14.87%): Actual depreciation of RON 31,805 thousand was below the determined RON 37,362 thousand, due to adjustments in the commissioning schedule of certain investment projects. This variance should be read in conjunction with the cost of capital outturn: the actual asset base --- including assets under construction --- supported a cost of capital slightly above the determined level (+1.82%), confirming that the overall investment programme remains on track.*
+
+*Cost of capital (+1.82%): Actual cost of capital exceeded the determined level by RON 1,409 thousand, reflecting actual investment expenditure above the Annex E assumptions for 2025."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ROMATSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information on the recommendations formulated by the NSA was provided in the NSA 2025 Monitoring Report. At the same time, ROMATSA reports the implementation of the following actions:
+
+"*The cost overruns recorded in 2025 are attributable predominantly to factors outside ROMATSA\'s direct control and, where applicable, are subject to recovery mechanisms already provided for under Regulation (EU) 2019/317, which do not require corrective action by the ANSP. Specifically:*
+
+*--- The deviation in pension costs arises from the annual actuarial revaluation of the defined benefit obligation under IAS 19. The increase in the actuarial provision does not reflect any change in the benefit structure or workforce size. The difference, excluding the inflation adjustment component, will be deferred for recovery, with the timing to be confirmed following consultation with airspace users.*
+
+*--- The deviation in other operating costs reflects the higher-than-planned inflationary environment, adverse exchange rate developments, and the recognition in 2025 of procurement processes carried over from prior years when underspending was recorded. ROMATSA continues to apply cost discipline within the parameters of its operational and contractual obligations.*
+
+*--- The lower depreciation outturn is a direct consequence of implementation delays in certain investment projects and does not indicate underinvestment: the overall investment programme remains on track, as confirmed by the cost of capital outturn. No corrective action is required or appropriate.*
+
+*ROMATSA considers that no additional corrective measures are warranted beyond the regulatory recovery mechanisms already in place, as the cost deviations do not reflect operational inefficiency or a failure to implement planned measures*.".
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

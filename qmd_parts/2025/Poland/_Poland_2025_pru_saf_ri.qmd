@@ -8,15 +8,15 @@ When comparing the rate of RIs at airport level with ATS/CNS contribution, Polan
 
 According to the monitoring report, the CAA addresses the reduction of runway incursions through the National Aviation Safety Plan 2026--2028 (Area A.5 -- Runway Incursion). Key initiatives implemented and planned include:
 
--   Establishment by the CAA President of the internal CAA National Runway Safety Team aimed at enhancing the exchange of information between the CAA and aerodrome operators in the field of runway safety. The Team meets on a regular annual basis (with additional ad hoc meetings convened when necessary), and representatives of other aviation industry stakeholders may also be invited to participate in the meetings, where appropriate. Information from the meetings is published on the CAA website.
+- Establishment by the CAA President of the internal CAA National Runway Safety Team aimed at enhancing the exchange of information between the CAA and aerodrome operators in the field of runway safety. The Team meets on a regular annual basis (with additional ad hoc meetings convened when necessary), and representatives of other aviation industry stakeholders may also be invited to participate in the meetings, where appropriate. Information from the meetings is published on the CAA website.
 
--   Organising yearly meetings with aerodrome operators to discuss the entire spectrum of aerodrome oversight most vital issues.
+- Organising yearly meetings with aerodrome operators to discuss the entire spectrum of aerodrome oversight most vital issues.
 
--   Supporting development and implementation of Local Runway Safety Plans by aerodrome operators.
+- Supporting development and implementation of Local Runway Safety Plans by aerodrome operators.
 
--   Promoting safety awareness through Local Safety Days and the dissemination of Safety Lessons derived from occurrence investigations.
+- Promoting safety awareness through Local Safety Days and the dissemination of Safety Lessons derived from occurrence investigations.
 
--   Strengthened oversight of aerodrome operators' Safety Management Systems (SMS), with particular focus on ground movement safety and preventive barriers, including dissemination of safety information (e.g. EASA SIB) to aerodrome operators for implementation, publication of such information on the Authority's website, and verification of related recommendations during ongoing oversight activities; particular attention is also given to the assessment of detailed information concerning RI reporting, including verification of reports submitted by aerodrome operators and ATS providers, in order to ensure comprehensive occurrence reporting and effective exchange of information between the involved parties.
+- Strengthened oversight of aerodrome operators' Safety Management Systems (SMS), with particular focus on ground movement safety and preventive barriers, including dissemination of safety information (e.g. EASA SIB) to aerodrome operators for implementation, publication of such information on the Authority's website, and verification of related recommendations during ongoing oversight activities; particular attention is also given to the assessment of detailed information concerning RI reporting, including verification of reports submitted by aerodrome operators and ATS providers, in order to ensure comprehensive occurrence reporting and effective exchange of information between the involved parties.
 
 Furthermore, The CAA monitors the SPI (number of runway incursions as well as taxiway and apron incursions, per 10,000 operations) on a continuous basis using data from the ECCAIRS2 system and mandatory reporting by aerodrome operators. Effectiveness is assessed through trend analysis, the severity of occurrences, the percentage of events with ATS/CNS contribution, and the implementation rate of safety recommendations. Where negative trends are observed, the CAA applies additional supervisory measures, including enhanced audits and targeted corrective action plans.
 

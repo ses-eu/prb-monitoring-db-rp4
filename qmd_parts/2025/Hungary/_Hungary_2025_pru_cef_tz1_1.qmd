@@ -1,0 +1,54 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -9.4% (or -10 389.74 HUF2022, -26.61 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TNSUs (+14.5%) and higher than planned terminal costs in real terms (+3.7%, or +359.9 MHUF2022, +0.9 M€2022).
+
+### **TZ1.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+14.5%) falls outside the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are +3.7% (+0.9 M€2022) higher than planned. This is the result of higher costs for the main ANSP, HungaroControl (+3.8%, or +0.9 M€2022) and the MET service provider (+0.7%), while the costs for the NSA were in line with the plan.
+
+### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (HUNGAROCONTROL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the higher than planned terminal costs in real terms for HungaroControl in 2025 (+3.8%, or +0.9 M€2022) result from:
+
+- Significantly higher than planned staff costs (+13.0%), mainly due to traffic being significantly higher than planned and pay rises exceeding the plan in nominal terms for both ATCO and non-ATCO positions as a result of inflation that was slightly higher than expected.
+
+- Significantly lower than planned other operating costs (-6.7%), due to: more favourable air traffic control liability insurance; favourable changes in the energy market; lower than planned manufacturer support costs, shifts in planned investments impacting IT services expenditure.- Significantly lower than planned depreciation (-7.3%), mainly due to later than planned implementation of some investments and some assets being put into operation later than planned.
+
+- Higher than planned cost of capital (+4.2%), mainly due to the average net current assets - being slightly above plan, although this was partially offset by the value of fixed assets under construction being below plan.
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Hungary provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*In the terminal, there is a 9% decrease in the real terminal unit cost value compared to DUC (which represents better-than-planned performance). This results from the nominal cost level being 5% higher, while traffic is 14% higher, so the unit cost is lower than planned.*"
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*Staff costs: Traffic was significantly higher than PP, and furthermore pay rises exceeded the plan in nominal terms for both ATCO and non-ATCO positions as a result of inflation that was slightly higher than expected in PP.*
+
+*OPEX: More favorable air traffic control liability insurance; further favorable changes in the energy market since the performance plan was drawn up; lower-than-planned manufacturer support costs, IT services partly related to some shifts in investments within the PP.*
+
+*The former was offset to a small extent by extra payment to the government based on a government decree applicable to all state-owned companies.*
+
+*Depreciation: Some investment items are being implemented slightly later than planned within the PP, and certain assets have been put into operation later than planned in the PP. These effects result in depreciation that is below plan.*
+
+*Cost of capital: Marginally above PP, as the average net current assets - which were slightly above PP - offset the value of fixed assets under construction, which was below PP.*"
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (HUNGAROCONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

@@ -1,0 +1,8 @@
+## **2.3.2.B. PI #2**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+There was no delay attributed to ATC Capacity or Staffing at Dublin Airport. However, there are 3 dominant eastbound departure flows, ENDEQ, BOFUM, DEXEN. The ANSP is in discussions with adjacent ANSP to have increased access via DEXEN/Y124 and the North Wales Military Training Area. Dublin departures are affected by Regulation mainly in LAKES Sector, and airports Amsterdam, Heathrow and Gatwick
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

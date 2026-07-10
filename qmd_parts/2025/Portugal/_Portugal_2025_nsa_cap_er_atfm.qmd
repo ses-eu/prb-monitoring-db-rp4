@@ -1,0 +1,40 @@
+## **2.3.1.A. KPI #1**
+
+### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI**
+
+The achieved level of performance for the en-route ATFM delay per flight KPI demonstrates a sustained alignment between capacity provision and traffic demand, with the actual delay remaining below the applicable reference value. This outcome reflects the effectiveness of the capacity planning and ATFCM measures implemented, ensuring that delays were overall contained despite continued traffic growth above the STATFOR forecast.
+
+The main contributors to delays were structural ATC capacity constraints during peak demand periods, which represent the predominant driver of en-route ATFM delay. Additional contributions arose from special events and, to a lesser extent, staffing and weather-related factors. Furthermore, a share of the delay was attributable to exceptional external circumstances, namely a large-scale power outage affecting the Iberian Peninsula, This event had a direct impact on operational continuity and contributed to the overall delay figures. Without this extraordinary occurrence, performance would have been further improved.
+
+Significant operational and structural improvements were implemented in Lisboa ACC to address capacity needs and mitigate delays. These included the progressive optimisation of sector configurations, enabling the availability of additional sectors and increased sector capacity, supported by continuous ATCO recruitment and flexible rostering. In parallel, airspace design enhancements---such as the evolution of the Point Merge System---and the implementation of enhanced ATFCM measures (including STAM and participation in the Network Manager occupancy regulation trial) contributed to improving traffic flow management and overall network performance.
+
+As a result, capacity provided during critical periods, particularly in IATA summer , was generally sufficient to meet actual traffic demand. This confirms that the combination of structural capacity measures and dynamic ATFCM measures has been effective in mitigating delay generation and supporting the achievement of the en-route delay performance target in line with PRB expectations.
+
+### **Description of the adjustments to the capacity plan included in adopted performance plan**
+
+The adjustments to the capacity plan included in the adopted performance plan were primarily driven by the need to accommodate sustained traffic growth and mitigate the risk of delay generation during peak demand periods. These adjustments focused on reinforcing the alignment between declared capacity and evolving traffic patterns, while ensuring consistency with network-level objectives and coordination with the Network Manager.
+
+A key element of the adjustments was the optimisation of sector configurations within Lisboa ACC, enabling the progressive opening of additional sectors and increasing the capacity of existing ones. This was supported by continued ATCO recruitment and qualification, as well as the application of flexible rostering practices to maximise the availability of operational resources during high-demand periods. These measures allowed for a more dynamic and scalable capacity provision in response to traffic variability.
+
+In parallel, the capacity plan was strengthened through targeted airspace and operational improvements. These included enhancements to airspace design---such as the further development of the Point Merge System---and the implementation of advanced ATFCM measures aimed at improving traffic flow efficiency. In particular, participation in the Network Manager occupancy regulation trial and the systematic use of STAM measures contributed to a more balanced distribution of traffic demand and a reduction of congestion hotspots.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+N.A.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+N.A.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+N.A.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+The remedial measures agreed with the ANSP in 2024 are being prepared as most of them are supposed to be implemented along RP4. Concerning ATCO recruitment NAV has maintained full training classes each year, with very good approval rates, allowing for the ATCO gap to start to narrow.
+
+As for the split of West and Central sectors, the implementation in Central sector is already in place, and in the West sector it is about to start, missing only radio frequency availability, which is expeced in October.
+
+Finally. the restructuring of airspace is continuing, in a joint effort of NAV and Eurocontrol.
+

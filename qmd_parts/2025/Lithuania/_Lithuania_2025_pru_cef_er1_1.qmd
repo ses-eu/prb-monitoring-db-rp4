@@ -1,0 +1,54 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -4.2% (or -2.36 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+3.1%) and lower than planned en route costs in real terms (-1.3%, or -0.3 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+3.1%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -1.3% (-0.3 M€2022) lower than planned. This is the result of lower costs for the main ANSP, Oro Navigacija (-0.9%, or -0.2 M€2022), the MET service provider (-6.3%, or -0.07 M€2022), the other ANSP (LGS-NINTA ADAXA, -12.8%, or -0.05 M€2022) and the NSA/EUROCONTROL (-1.0%, or -0.02 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (ORO NAVIGACIJA) AT CHARGING ZONE LEVEL**
+
+The slightly lower than planned en route costs in real terms for Oro Navigacija in 2025 (-0.9%, or -0.2 M€2022) are mainly due to higher than planned actual inflation index (+1.3 p.p), since, in nominal terms, the costs were slightly above plan (+0.3%). Based on the additional information to the terminal reporting tables, this results from:
+
+- Slightly higher than planned staff costs (+0.7%), mainly driven by a higher share of costs allocated to en-route services as overflight traffic exceeded expectations, while staffing levels remained below plan;
+
+- Significantly lower than planned other operating costs (-7.6%), mainly due to lower utility and maintenance costs, procurement savings, and reduced consultancy expenditure, including the internalisation of part of the SWIM implementation activities;
+
+- Significantly lower than planned depreciation (-6.8%), mainly driven by delays in the implementation and commissioning of some investment projects, resulting in a later-than-planned recognition of depreciation expenses;
+
+- Significantly lower than planned cost of capital (-14.0%), mainly due to a lower-than-expected cost of capital rate, following the removal of the risk premium associated with Russian carriers' debt exposure, despite a slightly higher asset base; and
+
+- unplanned exceptional costs (+0.5 M€2022), relate to a one-off change in the accounting treatment of the ATCOs early-retirement scheme (DBO), following recommendations from the external financial audit, whereby these obligations are now recognised based on actuarial calculations in line with IAS 19 rather than as direct annual payments.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Lithuania provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"The actual en route unit costs in Lithuania\'s charging zone, expressed at 2022 prices, were lower by -4.3% than the determined real en route unit costs. This resulted due to higher by +3.1% than planned number of total en route service units and both the lower by -0.3% number of total costs expressed in nominal terms and higher inflation than it was forecasted at the time of drafting RP4 PP. Consequently, the combination of higher traffic and lower real costs expressed at 2022 prices resulted in actual en route unit costs below the determined en route unit costs."*
+
+\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above and provided in the respective data table in the NSA Monitoring Report differ from the amounts reported in the submission of en route reporting tables.\]
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"At the charging zone level, the difference between the actual and determined costs is very small (-0.3%)."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ORO NAVIGACIJA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"No recommendations were formulated to ANSPs."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

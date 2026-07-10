@@ -1,0 +1,6 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Ireland had 616k flights in 2025, up from the 587k flights in 2024.
+
+- AirNav Ireland applied en route ATFM regulations resulting in \<7k minutes of delay.
+

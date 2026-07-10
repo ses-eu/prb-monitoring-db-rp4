@@ -1,0 +1,4 @@
+## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+
+Compared to the overall RP4 average value (149.2 seconds per flight), average times flown level during descent are on average 115.3 seconds per flight higher in France. The highest average time flown level during descent happens at Toussus-le-Noble (LFPN) (697.7 seconds per flight), while the lowest happens at Toulouse-Blagnac (LFBO) (79.8 seconds per flight).
+

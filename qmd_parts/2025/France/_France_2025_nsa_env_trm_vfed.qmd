@@ -1,0 +1,18 @@
+## 2.2.2.G. PI #7
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+DSNA is continuously working on improving the vertical efficiency of descents and has set an objective to reduce the time spent in level flight (from the Top of Descent) by 25% compared to 2019. This aims to reduce both noise and fuel consumption at major airports.
+
+This initiative is being implemented locally through several projects:
+
+- Implementation of PBN to final systems at LFPO and LFMN;
+
+- Implementation of new approach trajectories at LFLL (level-off time reduced by 10 seconds);
+
+- At LFPG, a green slot for optimizing descent has been expanded, resulting in fuel savings of 40 to 80 kg for 150 to 200 flights each day;
+
+- At LFPO, a similar system has been implemented, saving 10 seconds of level-off time;
+
+- An experiment will take place in 2026 at LFST to facilitate Continuous Descent Operations (CDO).
+

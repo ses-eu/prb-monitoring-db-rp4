@@ -1,0 +1,44 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The KEA performance, as currently measured by EUROCONTROL, deterioriated in 2025 from 1.40% in 2024. We believe that this change in performance was correlated with other changes largely beyond the control of AirNav Ireland. These changes include:
+
+- Implementation of LD1 free route airspace in the London FIR;
+
+- Changes in airline flight‑planning behaviour and traffic levels using NAT airspace, driven by cost optimisation and achieving more efficient trajectories via TANGO and oceanic routings;
+
+- Inclusion of the Reykjavik FIR within the EUROCONTROL measurement and reference area, with consequent methodological effects on achieved distance and KEA calculations.
+
+AirNav Ireland\'s peer ranking remained in the top quartile among European ANSP performance on KEA (5th best) overall.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+No. There has been no local structural changes that would impact the KEA score in Irish airspace.
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+Work continued on the Shannon FIR reorganisation. This included the removal of the last remaining routes (which were available for flight planning but not mandatory) and additional controlled airspace introduced at Ireland West airport to protect instrument flight procedures and faciliate CCO/CDO.
+
+Internal changes to a number of Shannon sectors were completed in order to assist the ANSP match sector design to trafic flows.
+
+Work continued on the development of new IFP\'s and associated changes for the Shannon and Cork CTRs. This area continues to be a work in progress.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+Both the Network Manager and AirNav Ireland were asked for assistance to assess of the drivers of KEA performance in Irish airspace. AirNav Ireland commissioned a KEA assessment, which subsequently identified three drivers which were correlated with the change in KEA performance observed in 2025 (highlighted above). The Network Manager corroborated this analysis, in particular airline flight planning, as a key driver in the change of KEA performance in 2025.
+
+Note the Network Manager also advised that all Member State\'s were assigned a KEA inprovement target, which was capped for States which had already implemented free route airspace, or had limited opportunities to improve KEA performance beyond what was achieved in 2023.
+
+### **Recommendations to the ANSP to rectify the situation**
+
+We expect AirNav Ireland to engage proactively with regulators in future when changes arise that have the potential to affect interdependencies and Ireland's environmental performance metrics. This includes early notification, assessment of impacts and options, and coordinated engagement with relevant external parties where appropriate.
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+We have engaged the European Commission on a number of KEA related methodological queries linked to the expansion of the KEA reference area to include Reykjavik FIR.
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+A number of elements have been introduced as part of a low Level airspace review. AirNav Ireland also worked with the neighbouring ANSP on a new initiative on the Irish Sea interface. This included changes to some internal sectors and the introduction of a new boundary point (WETFI) on the Ireland UK boundary.
+

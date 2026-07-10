@@ -1,0 +1,34 @@
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
+
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (37.96 €) is -7.5% lower than the nominal DUC (41.06 €). The difference between these two figures (-3.10 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.70 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.65 €/SU);
+
+- the deduction of the traffic risk sharing adjustments (-1.12 €/SU);
+
+- the deduction of the traffic adjustment (-0.35 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (-0.04 €/SU); and
+
+- the deduction of other revenues (-1.63 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.2%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Croatia provides the following information regarding the initiatives:
+
+*"Participation in EU funding facilities continues and other revenues steaming from this programs will be channelled to users via \"Other revenues\" unit rate deduction mechanism as was the case in previous years. The process established for monitoring this PI includes Data collection (mandatory and additionally requested); Data assessment; Data validation - in accordance with Reg. (EU) 2019/317."*
+
+### **ER1.2.3. NOTES** 
+
+#### **ER1.2.3.1. NOTE 1**
+
+#### **ER1.2.3.1. NOTE 2**
+

@@ -1,0 +1,4 @@
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+
+In the first year of RP4, with an ATFM arrival delay of 0.77 min/arr, Belgium **achieved the national target** of 1.50 min/arr. However, the pivot value for incentives (0.09 min/arr) is limited to CRSTMP delay causes. As CRSTMP delay of 0.03 min/arr falls beyond the end of the bonus sliding range for the incentive scheme, meaning that the **maximum bonus of 0.5%** applies. As such, the NSA computes a bonus of EUR 55,297.
+

@@ -1,0 +1,8 @@
+## 2.2.2.C. PI #3
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+This indicator is new and no previous historic data is available to provide any sound analysis at this stage. The PI will be monitored during RP4 and the evolution of the achievements will enable comparisons, explanations, performance drivers identification and benchmarking in the next years of RP4.
+
+In addition, France is continuously working on improving CDO implementation and FUA improvements.
+

@@ -1,0 +1,58 @@
+## **TZ2.1. SECTION 1 -- UNIT COST**
+
+### **TZ2.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -1.0% (or -2.70 €2022) lower than the planned DUC. This results from the combination of significantly lower than planned terminal costs in real terms (-5.1%, or -7.5 M€2022) and lower than planned TNSUs (-4.2%).
+
+### **TZ2.1.2. TERMINAL CHARGING ZONE 2 SERVICE UNITS**
+
+The difference between actual and planned TNSUs (-4.2%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ2.1.3. TERMINAL CHARGING ZONE 2 COSTS BY ENTITY**
+
+Actual real terminal costs are -5.1% (-7.5 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ENAV (-5.8%, or -7.5 M€2022) and the NSA (-11.9%, or -0.1 M€2022) and higher costs for the other ANSP (ITAF, +0.3%).
+
+### **TZ2.1.4. TERMINAL CHARGING ZONE 2 COSTS FOR THE MAIN ANSP (ENAV) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the significantly lower than planned terminal costs in real terms for ENAV in 2025 (-5.8%, or -7.5 M€2022) result from:
+
+- Lower than planned staff costs (-4.9%), mainly due to lower than planned inflation recorded during the year; an agreement to postpone predominantly ATCO bonuses, as part of labour contract renewal; reductions in the fixed portion of staff costs due to different hiring dynamics; a lower cost for operational overtime; and higher rate of capitalisation of internal effort.
+
+- Significantly lower than planned other operating costs (-14.4%), lower external support costs from cost-containment measures and greater use of internal expertise; reduced travel expenses following the postponement of some ATCO training sessions; lower utility and telecommunications costs driven by reduced electricity tariffs and partial deployment of the remote towers network; delayed data network infrastructure upgrades for security reasons; and lower infrastructure costs related to the Palermo offshore platforms and Pantelleria control tower
+
+- Slightly lower than planned depreciation (-2.0%),
+
+- Significantly higher than planned cost of capital (+9.7%), mainly due to higher average cost of debt and higher total asset base.
+
+### **TZ2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Italy provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*TCZ 2 2025 Italy AUC has been € 276.75, -1.0% compared to the 2025 DUC of € 279.46.*
+
+*Cost reductions have been detailed in the Additional Information to Reporting Tables uploaded on ETNA.*"
+
+### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*Main ANSP reductions for Staff and Operational have been already indicated in Section 2.4.1A. ERT-CZ 1 as they are at Company level. For what concerns Depreciation the reduction in TCZ 1 is 368 K€ that will be reimbursed to users. For increases, refer to COC considerations provided in Section 2.4.1A. ERT-CZ 1 that is valid for all ENAV SpA.*"
+
+### **TZ2.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ENAV) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+"*NSA recommended the ANSP a more precise cost planning for: specific investments and internal works capitalized.*
+
+*NSA recommends as well more transparency in cost planning (specifically for what concerns revenue deductions).*"
+
+ENAV reports the implementation of the following actions:
+
+"*Refer to comment already indicated in En route CZ section.*"
+
+### **TZ2.1.8. NOTES**
+
+#### **TZ2.1.8.1. NOTE 1**
+
+#### **TZ2.1.8.2. NOTE 2**
+

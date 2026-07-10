@@ -1,0 +1,4 @@
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+
+In the first year of RP4, with an ATFM arrival delay of 0.04 min/arr, Hungary **achieved the national target** of 0.1 min/arr. The KPI is beyond the end of the bonus sliding range for the incentive scheme, meaning that **the maximum bonus of 1.0%** applies. As such, the NSA computes a bonus of HUF 109,462,113.62.
+

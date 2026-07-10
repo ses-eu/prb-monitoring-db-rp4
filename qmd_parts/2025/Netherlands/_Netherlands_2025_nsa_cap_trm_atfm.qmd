@@ -1,0 +1,22 @@
+## 2.3.1.B. KPI #2
+
+### Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI
+
+The performance in 2025 was significantly above the target, almost exclusively due to the performance at Amsterdam; for the other airports ATFM delays were nearly non-existent. The main reason for the delays at Amsterdam was a demand higher than the declared capacity, both during inbound peaks and outbound peaks. Like in 2024 delays during the latter were amplified by the non-availability of a fourth runway (only 2+1/1+2 runway usage) due to controller shortages at Schiphol. Hence, daily variations in the traffic demand around peak transitions could not be efficiently handled. Furthermore, there were significant delays due to severe weather, either strong winds or poor visibility, in January, May, September and October, which increased in May due to unavailability of a runway due to heavy maintenance. Finally, the security measures associated with the NATO summit caused additional delays.
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+The Airport ATFM delay per flight was not met in 2025, primarily due to aerodrome capacity and weather related incidents. Additionally, runway maintenance, the ATCO shortages, and the NATO summit in June of 2025 had an impact on the airport ATFM delay target. It should be noted that the CRSTMP delay target remained below the target values.
+
+### Recommendations to the ANSP to rectify the situation
+
+Long term corrective measures are expected to be feasible and LVNL is working with AAS, the main airline operators at schiphol and the slot coordinator to better spread traffic demand, possibly by improving the slot allocation. This with the aim of reducing bunch forming for inbound for inbound aircraft since this is one of the major causes of airport delay at schiphol. With the envisaged growth in traffic volume at schiphol this delay cause will gain importance in the coming years. LVNL is working on increasing their ATCO capacity with additional training for which the first effects will start to show at the end of 2025. It is expected that 2+2 runway usage will be partially available again as of summer 2026, this is expected to reduce delays.
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+For measures that have been taken, see follow up of the measures relating to previous calendar years below. The sector partners continue to work on reducing delays. The peak shaving is planned to be progressively extended to the rest of the day. Additionally, LVNL is trialing with dynamic capacity/rates, to improve the effectiveness of regulations and reduce delays in case regulations are needed.
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+The Netherlands NSA: LVNL is working with AAS, the main airline operators at Schiphol and the slot coordinator to better spread traffic demand. The first step was implemented at the start of Summer 2026, for the first inbound peak period of the day. Moreover, LVNL has increased its ATCO capacity with additional training, making 2+2 runway usage possible again in the early morning, also from the beginning of the Summer season 2026.
+

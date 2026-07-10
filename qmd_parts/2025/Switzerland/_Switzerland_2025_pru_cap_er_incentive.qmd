@@ -1,0 +1,12 @@
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
+
+The FABEC NSAs report neither a financial penalty, nor a financial bonus, for Skyguide, because of the 2025 performance.
+
+For Skyguide, the local en route capacity incentive target, due to CRSTMP causes only, was set at 0.25 mins/flight, (with a deadband of +/- 0.04 mins).
+
+The FABEC NSAs report an achieved CRSTMP performance, for Skyguide, of 0.11 mins/flight using data from the ansperformance.eu dashboard including post ops adjustments.
+
+\[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified.\]
+
+Although the local incentive target was surpassed, no bonus is applicable due to FABEC missing the overall capacity target.
+

@@ -1,0 +1,5 @@
+## TRM1.5. Average departure delay from all causes per flight (PI#3) {#trm1.5.-average-departure-delay-from-all-causes-per-flight-pi3 .Heading-2-TZ}
+
+The delay in 2025 decreased to 18.83 min/dep, lower than the value of 2024 -- last year of RP3 -- of 19.53 min/dep.
+
+The average for RP4 airports subject to monitoring of all causes pre-departure delay across Member States in 2025 was 16.47 min/dep.

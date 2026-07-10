@@ -1,0 +1,62 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -9.1% (or -55.15 PLN2022, -11.78 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TNSUs (+12.1%) and higher than planned terminal costs in real terms (+2.0%, or +1.3 MPLN2022, +0.3 M€2022). It should be noted that the actual inflation index in 2025 was -3.4 p.p. lower than planned.
+
+### **TZ1.1.2. TERMINAL CHARGING ZONE 1 SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+12.1%) falls outside the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ1.1.3. TERMINAL CHARGING ZONE 1 COSTS BY ENTITY**
+
+Actual real terminal costs are +2.0% (+0.3 M€2022) higher than planned. This is the result of higher costs, in real terms, for the main ANSP, PANSA (+1.9%, or +0.3 M€2022) and the NSA (+9.1%, or +0.1 M€2022) and lower costs for the MET service provider (-5.5%).
+
+### **TZ1.1.4. TERMINAL CHARGING ZONE 1 COSTS FOR THE MAIN ANSP (PANSA) AT CHARGING ZONE LEVEL**
+
+The slightly higher than planned terminal costs in real terms for PANSA in 2025 (+1.9%, or +0.3 M€2022) are mainly due to lower than planned actual inflation index (-3.4 p.p), since, in nominal terms, the costs were slightly below plan (-0.7%). Based on the additional information to the terminal reporting tables, this results from:
+
+- Significantly higher than planned staff costs (+5.4%), mainly due to the evolution of costs related to provisions, including; 1) the fact that "*determined ER costs for 2025 included forecasted net change in the value of accounting provisions related to court cases of -28 MPLN \[some 6.6 M€\] for PANSA overall which did not materialise*" , as well as 2) higher than forecast net change in provisions for pensions and related benefits and 3) additional costs stemming from revaluation of provisions for unused employee holidays.
+
+- Significantly lower than planned other operating costs (-17.7%) mainly due to lower than planned costs for electricity, repairs, maintenance and support of IT systems as well as lower than planned expenses for meetings as well as "*some works initially planned to be financed under opex executed as capex due to either expanded scope of the necessary works or higher unit value*".
+
+- Significantly higher than planned depreciation (+8.2%) which "*reflects actual evolutions of useful life of assets and value of assets*".
+
+- Slightly higher than planned cost of capital (+1.7%) due to the use of slightly higher weighted average cost of capital (WACC) rate reflecting effective interest rate of debt.
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Poland provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+***"PANSA:\**
+AUC was by 9.1% lower than DUC. The reason for this difference was significantly higher number of actual service units for EPWA than the forecast (+12.1%). This is a factor beyond PANSA control. Actual costs in real terms were slightly higher than determined (+1.9%) what resulted from lower inflation index (-3.4 pp.). Actual costs in nominal terms were 0.7% below planned -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 1 (EPWA).\
+\
+**IMWM:**\
+The difference between the actual and planned costs of the en-route charges was 197 715 PLN and results from:\
+- lower other operating costs by 7.22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4.97%, while the actual inflation level in 2025 according to EUROSTAT data was 3.30%.\
+- lower personnel costs by 10.26% resulting from the lack of filling the vacancies planed in PSD."*
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+***"PANSA:***
+
+*information about differences between actual and determined costs for the terminal charging zone 1 (EPWA) per cost category listed in the reporting tables is presented in additional information to terminal charges' reporting tables for the charging zone 1 (EPWA)."*
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (PANSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+"*Since the target was met, no corrective measures were required.*"
+
+PANSA reports the implementation of the following actions:
+
+*"As the target was met there was no need to undertake any measures to rectify the situation. However, the comments presented in the ER sheet of this monitoring report related to inflation and cost evolution are also valid for terminal services.*"
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

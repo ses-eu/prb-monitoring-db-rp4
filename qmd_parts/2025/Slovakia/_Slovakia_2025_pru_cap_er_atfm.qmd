@@ -1,0 +1,12 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Slovakia had 597k flights in 2025, down from 601k flights in 2024.
+
+- LPS SR applied en route ATFM regulations resulting in 51k minutes of delay, a reduction from the 77k minutes in 2024.
+
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, 2k minutes of delay originating in Slovakia were re-attributed **to other ANSPs.**
+
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, 2k minutes of delay originating in Slovakia, being re-attributed **to other ANSPs**.
+
+- When the above post-operations re-attributions are factored in, the total en route delay for LPS SR in 2025 was 48k minutes in 2025 down from 67k minutes in 2024.
+

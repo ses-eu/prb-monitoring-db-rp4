@@ -1,6 +1,0 @@
-## **2.3.2.A. PI #1**
-
-### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
-
-EBBR is in line with requirements. Performance is quite stable over years, and slightly improved by +0.1% compared to 2024.
-

@@ -1,0 +1,18 @@
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
+
+The FABEC NSAs report neither a financial penalty, nor a financial bonus, for either of the en route ANSPs operating over Belgium & Luxembourg, because of the 2025 performance.
+
+Individual en route incentive targets were set for both skeyes and MUAC (global).
+
+For skeyes, the local incentive target for en route ATFM delays, due to CRSTMP causes only, was set at 0.17 mins/flight, (with a deadband of +/- 0.03 mins).
+
+The FABEC NSAs report an achieved CRSTMP performance, for skeyes, of 0.05 mins/flight using data from the ansperformance.eu dashboard including post ops adjustments. \[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified.\]
+
+Although the local incentive target was surpassed, no bonus is applicable due to FABEC missing the overall capacity target.
+
+For MUAC, the local incentive target for en route AFTM delays, due to CRSTMP causes only, was set at 0.19 mins/flight, (with a deadband of +/- 0.04 mins).
+
+The FABEC NSAs report an achieved CRSTMP performance, for MUAC, of 0.18 mins/flight using data from the ansperformance.eu dashboard including post ops adjustments. \[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified.\]
+
+The en route incentive capacity performance for MUAC fell inside the deadband, therefore no malus is applicable.
+

@@ -1,0 +1,5 @@
+## TRM1.5. Average departure delay from all causes per flight (PI#3) {#trm1.5.-average-departure-delay-from-all-causes-per-flight-pi3 .Heading-2-TZ}
+
+Delay in 2025 decreased in both Zurich and Geneva compared to the value of 2024 -- last year of RP3. In the case of Zurich, it went from 18.75 min/dep to 16.75 min/dep, a reduction of 11%. In the case of Geneva, from 16.26 min/dep to 15.66 min/dep, a reduction of 4%.
+
+The average for RP4 airports subject to monitoring of all causes pre-departure delay across Member States in 2025 was 16.47 min/dep.

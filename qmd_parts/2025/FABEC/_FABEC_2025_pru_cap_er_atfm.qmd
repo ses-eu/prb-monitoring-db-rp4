@@ -1,0 +1,12 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+FABEC had 6 203 flights in 2025, an increase from the 5 982k flights in 2024.
+
+ANSPs in FABEC applied en route ATFM regulations which created 10 283k minutes of delay for airspace users, compared to 9 827k minutes of delay in 2024.
+
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, there were 139k minutes of en route ATFM delay reattributed **to FABEC ANSPs** from ANSPs outside FABEC; 51k minutes of delay originating in FABEC were re-attributed **to other ANSPs outside FABEC.**
+
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, an additional 13k minutes of en route ATFM delay were re-attributed **to FABEC ANSPs** -- with 33k minutes of delay originating in FABEC, being re-attributed **to other ANSPs outside FABEC**.
+
+- When the above post-operations re-attributions are factored in, the total en route delay for FABEC ANSPs in 2025 was 10 368k minutes in 2025 compared to 10 069k minutes in 2024.
+

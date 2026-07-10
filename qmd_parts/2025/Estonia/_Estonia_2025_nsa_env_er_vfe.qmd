@@ -1,0 +1,10 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+VFE indicator for Estonia is strongly influenced by structural characteristics of the airspace, including the relatively small size, proximity to airports in neighbouring countries and the high proportion of climb and descent phases within the FIR.
+
+Analysis provided by the ANSP indicates that a significant proportion (approx 90%) of cases where aircraft operates below the planned cruise level during cruise phase are attributable to airline or pilot operational choices rather than ATC constraints. These include requests for lower levels due to aircraft weight, operational considerations or more favourable wind conditions. It is also common practice for some operators to submit standard flight plans and then request adjusted flight levels depending on daily conditions.
+
+The focus of ongoing and planned initiatives is on improving the understanding and interpretation of the indicator.
+

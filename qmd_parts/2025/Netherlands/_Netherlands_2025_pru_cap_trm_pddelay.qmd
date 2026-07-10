@@ -1,0 +1,18 @@
+## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+
+Amsterdam Schiphol is the only Dutch airport subject to the monitoring of this indicator.
+
+The calculation of the ATC pre-departure delay is based on the data provided by the airport operators through the Airport Operator Data Flow (APDF).
+
+However, there are several quality checks before EUROCONTROL can produce the final value which is established as the average minutes of pre-departure delay (delay in the actual off block time) associated to the IATA delay code 89 (through the APDF, for each delayed flight, the reasons for that delay have to be transmitted and coded according to IATA delay codes.
+
+However, sometimes the airport operator has no information concerning the reasons for the delay in the off block, or they cannot convert the reasons to the IATA delay codes. In those cases, the airport operator might:
+
+- Not report any information about the reasons for the delay for that flight (unreported delay)
+
+- Report a special code to indicate they do not have the information (code ZZZ)
+
+- Report a special code to indicate they do not have the means to collect or translate the information (code 999)
+
+To be able to calculate with a minimum of accuracy the PI for a given month, the minutes of delay that are not attributed to any IATA code reason should not exceed 40% of the total minutes of pre-departure delay observed at the airport.
+
