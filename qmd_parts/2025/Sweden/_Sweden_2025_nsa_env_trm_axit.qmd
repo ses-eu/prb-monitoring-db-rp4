@@ -1,0 +1,8 @@
+## **2.2.2.E. PI #5**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+Swedavia will start sending GAPI (General Arrival Planning Information) to Eurocontrol (NMOC) as the next validation phase once A-CDM is complete. In the long term, this will reduce the risk of early arrivals having to wait at busy gates, which will contribute to shorter taxi- in times in the long term. Countinous ops work in TWR to reduce taxi-in times.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+
