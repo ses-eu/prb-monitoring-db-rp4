@@ -40,13 +40,13 @@ update_nsa_input <- TRUE
 update_pru_analysis <- FALSE
 if (update_pru_analysis) {
   KPI <- c(
-    'cef',
-    # 'cap_ert',
-    'cap_trm',
+    # 'cef',
+    'cap_ert',
+    # 'cap_trm',
     # 'env_ert',
-    'env_mil',
-    'env_trm',
-    'saf',
+    # 'env_mil',
+    # 'env_trm',
+    # 'saf',
     NULL
   )
 }
