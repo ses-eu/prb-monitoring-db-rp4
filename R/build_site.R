@@ -43,6 +43,7 @@ if (update_pru_analysis) {
     'cef',
     # 'cap_ert',
     'cap_trm',
+    # 'env_ert',
     'env_mil',
     'env_trm',
     'saf',
