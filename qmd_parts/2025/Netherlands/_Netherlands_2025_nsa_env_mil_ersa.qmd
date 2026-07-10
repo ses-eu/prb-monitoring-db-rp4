@@ -1,6 +1,0 @@
-## 2.2.2.I. PI #9
-
-### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
-
-For FABEC the data was retrieved from: https://www.sesperformance.eu/dataportal/data/. The guidane material states that the data for PI #9, #10, and #11 should be provided by the Network Manager. However, the data is not complete, only the ratios are provided by NM and on a state level (not on the ACC level). Therefore, the data is only provided at a state level (ratios only).
-

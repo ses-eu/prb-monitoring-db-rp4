@@ -1,8 +1,0 @@
-## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
-
-In 2025, EANS achieved the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, EANS exceeded the planned target in the area of Safety Policy and Objectives.
-
-As described in the monitoring report, Safety performance remained stable and in line with the established targets, demonstrating that the organisation has maintained the expected level of performance as confirmed by the ETA's Air Traffic Services and Aerodromes Unit. In the area of safety policy and objectives, the achieved performance exceeded the planned level, indicating positive development in the implementation and effectiveness of this area.
-
-As for the measures put in place to achieve the safety performance targets, the monitoring report states that the achievement of the safety performance targets is primarily supported by the maturity of the existing SMS. This result demonstrates that the key safety management elements, processes and practices necessary to achieve the target level were already established and effectively implemented prior to the assessment, so no additional specific measures or corrective actions were required to reach these performance targets.
-

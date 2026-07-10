@@ -1,8 +1,0 @@
-## **2.2.2.D. PI #4**
-
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
-
-Dublin Airport is engaged in a project to implement A-CDM, with a T4 trial scheduled for October 2026. AirNav Ireland will continue to support Dublin Airport in the development of A-CDM.
-
-### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
-

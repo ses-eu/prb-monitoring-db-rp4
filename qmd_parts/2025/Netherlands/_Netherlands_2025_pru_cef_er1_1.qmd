@@ -1,0 +1,68 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was +3.7% (or +3.83 €2022) higher than the planned DUC. This results from the combination of significantly lower than planned TSUs (-5.3%) and lower than planned en route costs in real terms (-1.8%, or -5.6 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (-5.3%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -1.8% (-5.6 M€2022) lower than planned. This is the result of lower costs for the main ANSP, LVNL (-2.0%, or -4.3 M€2022), the other ANSP (MUAC, -2.1%, or -1.3 M€2022) and the MET service provider (-2.8%, or -0.4 M€2022) and higher costs for the NSA/EUROCONTROL (+1.6%, or +0.3 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (LVNL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for LVNL in 2025 (-2.0%, or -4.3 M€2022) result from:
+
+- Lower than planned staff costs (-4.2%), mainly due to the continued tight labour market in the Netherlands, which resulted in more vacancies than expected, together with higher than expected employee attrition. LVNL reports that it aims to encourage temporarily hired staff to move to permanent employment contracts, an approach which reduces costs but also decreases cost flexibility. However, the en route charging zone benefits less from this approach than the terminal charging zone, as significant external hiring is still required for the iCAS projects.
+
+- Higher than planned other operating costs (+1.7%), mainly due to higher than expected external staff costs, in line with the explanation provided for staff costs above, notably the continued need for significant external hiring for the iCAS projects. Other cost elements show only minor changes.
+
+- Consistent with the planned depreciation (+0.04%).
+
+- Significantly higher than planned cost of capital (+15.8%), mainly due to a higher allocation of cost of capital to en route, reflecting the significant share of en route projects related to iCAS and its prerequisite projects. In addition, the repayment of COVID-related debt has slowed due to a lower number of en route service units in 2025, resulting in the associated interest expenses decreasing at a slower pace.
+
+- Higher than planned deduction for VFR exempted flights (+3.1%).
+
+It should be noted that LVNL has updated and revised its cost allocation model and applied this model on the actual 2025 figures. This was necessary due to the foreseen civil-military integration taking place at the end of 2026. The update enables a more accurate allocation of military services costs with respect to staff costs and the hiring of temporary personnel as part of other operating expenses for en route and terminal. There is no impact on the total cost bases of en route and terminal.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Netherlands provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"For the Netherlands en route charging zone, the unit cost is higher than planned by 3.5%, primarily caused by lower-than-forecast traffic, resulting in a 3.5% decrease in the number of service units. Despite a 3.6% decrease in determined cost, this reduction was not enough to offset the impact of reduced traffic."*
+
+\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above differ from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of en route reporting tables (both of which are aligned).\]
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"For individual organisations:*
+
+*LVNL achieved a lower total cost base, mainly due to reduced personnel costs; however, its cost of capital increased due to higher-than-planned inflation.*
+
+*MUAC, the cost base is lower than planned because lower operating costs outweighed an increase in personnel costs.*
+
+*KNMI, a reduced cost base is driven by lower personnel expenses, though this was partially offset by increased operating costs associated with external staffing.*
+
+*NSA's higher cost base is driven by the need to expand the organisation, which has led to increased staff costs."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LVNL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"The NSA recommends to the ASNP\'s to look for further cost reduction measures while noting that the traffic variation has a dominant effect on the ability to reach the DUC target "*
+
+LVNL reports the implementation of the following actions:
+
+*"Cost reduction has been achieved through lower personnel cost and lowering of operating costs."*
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

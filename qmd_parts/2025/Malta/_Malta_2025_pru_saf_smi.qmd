@@ -1,9 +1,0 @@
-## SAF1.4. Rate of separation minima infringements (SMIs) (PI#2)
-
-At State level, Malta reported 5 separation minima infringements (SMI) in their airspace\
-during 2025. The rate of separation minima infringements was lower than the Union-wide average (3.00 vs 7.10). At ANSP level, Malta reported 5 SMI with ATS/CNS contribution. The rate of separation minima infringements at ANSP level was lower than the Union-wide average (3.00 vs 6.0).
-
-When comparing to 2024, the rate of separation minima infringements has increased slightly at both State level (3.00 vs 2.91) and at ANSP level (3.00 vs 2.91).
-
-As reported in the monitoring report, the SMI PI is maintaining its trend and remains in the extremely low zone. Furthermore, MATS monitors, investigates, and briefs the ATCOs to ensure that achievement trends in this area are maintained and ATCOs are briefed annually on all SMIs and RIs. MATS considers that 5 SMIs in 2025 is a very low figure given the increase in traffic achieved.
-

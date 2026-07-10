@@ -1,8 +1,0 @@
-## **2.2.2.C. PI #3**
-
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
-
-AirNav Ireland will continue to monitor this PI, however adjacent ANSP requirements does create limitations.
-
-It should be noted a FRA concept of operations applies in Irish airspace so the vertical profile of actual en-route trajectories is dependent on the levels planned by the airspace users, the cleared oceanic flight levels (cleared levels are provided by the UK's Prestwick Oceanic Control Centre) and any level restrictions placed on trajectories by neighbouring ANSPs.
-

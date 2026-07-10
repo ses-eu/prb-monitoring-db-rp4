@@ -1,0 +1,40 @@
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
+
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (65.75 €) is -2.5% lower than the nominal DUC (67.45 €). The difference between these two figures (-1.70 €/SU) is due to:
+
+- the negative inflation adjustment resulting from lower than planned inflation (-0.52 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+0.33 €/SU);
+
+- the deduction of the traffic risk sharing adjustments (-0.49 €/SU);
+
+- the deduction of the traffic adjustment (-0.22 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of the financial incentives (-0.29 €/SU); and
+
+- the deduction of other revenues (-0.51 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 1.9%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of France provides the following information regarding the initiatives:
+
+*\"Actual unit cost incurred by users for en route ANS are better than planned for year 2025. The FR NSA will continue to closely monitor this PI during RP4.*
+
+*Please note that the cost exempt from cost-risk sharing item takes into account the mandatory compensation in year N+2 iaw Art 28(5) e.g. Eurocontrol and NSA and only provisional values for other CRS related cost items.*
+
+*With regard to these other CRS related cost items, data will be provided in the cost exempt report due on Sept, 1st after consultation of AUs.*
+
+*In addition, it is recalled that the French NSA has opted for a carry-over to RP4 based on an assessment over the whole RP4 iaw Art 28(4) & (6).\"* []{.mark}
+
+### **ER1.2.3. NOTES** 
+
+#### **ER1.2.3.1. NOTE 1**
+
+#### **ER1.2.3.1. NOTE 2**
+

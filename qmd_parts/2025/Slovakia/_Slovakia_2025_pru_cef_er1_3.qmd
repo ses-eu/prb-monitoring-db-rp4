@@ -6,10 +6,12 @@ LPS reported a net loss of -8.6 M€, as a combination of a loss of -5.5 M€ ar
 
 ### **ER1.3.2. LPS OVERALL REGULATORY RESULT (RR) FOR THE EN ROUTE ACTIVITY**
 
-Ex-post, the overall RR, taking into account the net loss from the en route activity mentioned above (-8.6 M€) and the actual RoE (+2.2 M€), amounts to -6.4 M€ (-8.5% of the en route revenues). The resulting ex-post rate of return on equity is negative (-11.6%), compared to the 4.0% planned in the PP.
+Ex-post, the overall RR, taking into account the net loss from the en route activity mentioned above (-8.6 M€) and the actual RoE (+2.2 M€, see also Note 1 below), amounts to -6.4 M€ (-8.5% of the en route revenues). The resulting ex-post rate of return on equity is negative (-11.6%), compared to the 4.0% planned in the PP.
 
 ### **ER1.3.3. NOTES** 
 
 #### **ER1.3.3.1. NOTE 1**
+
+As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for LPS is derived using the assumptions provided in the Slovak submission of en-route reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for LPS in the en-route reporting tables (2.1 M€) differs from the value that is calculated on the basis of the assumptions provided (2.3 M€).
 
 #### **ER1.3.3.2. NOTE 2**

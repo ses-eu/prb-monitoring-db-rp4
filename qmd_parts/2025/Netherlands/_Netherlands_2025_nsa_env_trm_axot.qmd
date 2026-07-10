@@ -1,8 +1,0 @@
-## 2.2.2.D. PI #4
-
-### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
-
-No specific measures have been implemented or are planned. Performance very much depends on the runways in use, which depends on the weather conditions. E.g. the higher the share of flights departing from runway 36L, the higher the taxi-out additional time. This is because the absolute taxi-out time for this runway is high, which means that the additional time is relatively large in an absolute sense as well. Moreover, taxi times to this runway may be negatively influenced by the taxi route, as with some runway combinations departures 36L have to taxi around runway 18C/36C to avoid crossing an active runway. The reference time is determined by traffic that can cross the (inactive) runway.
-
-### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
-

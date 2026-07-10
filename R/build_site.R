@@ -29,15 +29,15 @@ investments <- FALSE
 # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
 test_check <- TRUE
 
-out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
+out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- TRUE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Sweden' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Norway' # set your one country/stakeholder here (Home for home page)
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
-update_pru_analysis <- TRUE
+update_pru_analysis <- FALSE
 if (update_pru_analysis) {
   KPI <- c(
     'cef',
@@ -51,11 +51,12 @@ if (update_pru_analysis) {
 }
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
-update_data <- TRUE
+update_data <- FALSE
 
 if (update_data) {
   # delete cached files
   unlink("_cache", recursive = TRUE, force = TRUE)
+ 
 }
 
 # Set to TRUE when you want to include them
@@ -89,20 +90,23 @@ if (!all_states) {
   # state_list_prod <- setdiff(state_list_prod, "FABEC") #remove state
   # states_from <- c(13:29) # 1st number is the index of 1st state from which you want to generate
   # state_list_prod <- state_list_prod[states_from]
-  # state_list_prod <- c(
-  #   # 'Austria',
-  #   'Bulgaria',
+   #state_list_prod <- c(
+    # 'Austria',
+    # 'Bulgaria',
   #   # 'Croatia',
-  #   'Cyprus',
-  #   'Denmark',
-  #   'Estonia',
-  #   'Finland',
-  #   'Greece',
-  #   'Ireland',
+    # 'Cyprus',
+   #  'Denmark',
+   #  'Estonia',
+   #  'Finland',
+   #  'France',
+   #  'Greece',
+   #  'Ireland',
   #   # 'Italy',
-  #   'Latvia',
+   #  'Latvia',
   #   # 'Lithuania',
-  #   'Malta',
+   #  'Malta',
+   #  'Netherlands',
+   #  'Malta',
   #   'Poland',
   #   'Portugal',
   #   'Slovakia',
@@ -131,10 +135,11 @@ for (i in 2025) {
     year_report <- i
   }
   year_folder <- i
+  print("1")
 
   ## set site parameters
   source("R/params_site.R")
-
+  print("2")
   ## build state pages ----
   ## build pages
   for (i in 1:length(state_list_prod)) {
@@ -152,7 +157,9 @@ for (i in 2025) {
 
     ## copy site to network folder ----
     if (out_format == 'web') {
+      print("2")
       if (investments & country != "Home") {
+        print("3")
         ### delete previous version
         unlink(
           paste0(destination_dir_investments, country_lower),
@@ -167,6 +174,7 @@ for (i in 2025) {
           recursive = TRUE,
           copy.mode = TRUE
         )
+        print("4")
 
         ### rename _site with state name
         file.rename(
@@ -214,6 +222,7 @@ for (i in 2025) {
           paste0(root_dir, files_to_be_copied),
           overwrite = TRUE
         )
+        
 
         for (i in 1:length(dirs_to_be_copied)) {
           fs::dir_copy(
@@ -281,5 +290,6 @@ for (i in 2025) {
       )
     }
     print(paste(country, year_folder))
+    
   }
 }

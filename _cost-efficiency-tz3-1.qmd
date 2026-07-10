@@ -1,4 +1,10 @@
-```{r cz_def_terminal3}
+---
+pagetitle: "`r paste0('Cost-efficiency - ', country)`"
+title-block: false
+---
+
+
+```{r cef-level2-text}
 cz=c("3", "terminal")
   
 # define cz
@@ -18,228 +24,268 @@ if (cztype == "enroute") {
   cz_short <- 'tz'
 }
 
-```
-
-```{r chart_cef_duc_l2_terminal3, options = (cz=c(czindex, cztype,"level2")), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level1_cef.R
-#| out.width: "100%"
-```
-
-```{r chart_cef_su_l2_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_su.R
-#| out.width: "100%"
-```
-
-
-
-```{r chart_cef_cost_entity_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_cost_entity.R
-#| out.width: "100%"
-```
-
-```{r chart_cef_cost_main_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_cost_main.R
-#| out.width: "100%"
-```
-
-<!-- #### Actual unit cost incurred by the users (AUCU) (PI#1) -->
-
-<!-- #### Regulatory result (RR) -->
-
-```{r chart_cef_reg_res_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_reg_res.R
-#| out.width: "100%"
-```
-
-```{r chart_cef_reg_res_aucu_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_reg_res_aucu.R
-#| out.width: "100%"
-```
-
-```{r chart_cef_reg_res_ansp_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_reg_res_ansp.R
-#| out.width: "100%"
-```
-
-```{r chart_cef_net_res_main_ansp_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
-#| file: R/chart_level2_cef_net_res_main_ansp.R
-#| out.width: "100%"
-```
-
-
-```{r cef-level2-headings-terminal3, eval = (params$country != "FABEC")}
-
+cz=c("3", "terminal")
+  
 source("R/get_level2_headings_cef.R")
 
 ```
 
-\needspace{3\baselineskip}
+::: {.grid .align-items-center}
+:::: {.g-col-9}
+[Cost-efficiency - {{< var doc.country >}}]{.fakeh1}
+::::
+
+:::: {.g-col-3}
+<span class="no-external-icon">[<i class="fa fa-download"></i> Download Report](`r params$home_address`/download/{{< var doc.year_report >}}/PRB-Annual-Monitoring-Report_{{< var doc.country >}}_{{< var doc.year_report >}}.pdf){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+::::
+:::
+
+
+`r if (cztype == 'terminal' | czindex == 2) "::: {.content-hidden}"`
+
+## PRB monitoring
+
+```{r concl-cef-duc}
+cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
+```
+
+`r cef_conc1`
+
+`r if (cztype == 'terminal' | czindex == 2) ":::"`
+
 
 `r if ((params$no_ecz == 1 & cztype == 'enroute') | (params$no_tcz == 1 & cztype == 'terminal')) "::: {.content-hidden}"`
-## `r cztype_proper` charging zone - `r czname`
+## Terminal charging zone - {{< var doc.tcz3 >}}
 `r if ((params$no_ecz == 1 & cztype == 'enroute') | (params$no_tcz == 1 & cztype == 'terminal')) ":::"`
 
 
-`r if ((params$no_ecz > 1 & cztype == 'enroute') | (params$no_tcz > 1 & cztype == 'terminal')) "::: {.content-hidden}"`
-## `r cztype_proper` charging zone 
-`r if ((params$no_ecz > 1 & cztype == 'enroute') | (params$no_tcz > 1 & cztype == 'terminal')) ":::"`
+`r if ((params$no_ecz != 1 & cztype == 'enroute') | (params$no_tcz >= 2 & cztype == 'terminal')) "::: {.content-hidden}"`
+## Terminal charging zone
+`r if ((params$no_ecz != 1 & cztype == 'enroute') | (params$no_tcz >= 2 & cztype == 'terminal')) ":::"`
 
-### Unit cost (KPI#1)
+::: {#container-cef-duc}
 
-`r layout_2fig(paste0("chart_cef_duc_l2_", cztype, czindex), paste0("chart_cef_su_l2_", cztype, czindex))`
+### [**Unit cost**](`r params$home_address`/about.html#cost-efficiency---unit-costs-ducaucu-kpi1) (KPI#1)
 
+:::: {layout="[ 50, 50 ]"}
 
-```{r chart_cef_cost_terminal3, options = (cz=c(czindex, cztype)), include=FALSE, eval = no_cz >= czindex}
+::::: {.chart-container}  
+`r if (params$country == params$rp_full & cztype == "enroute") ":::::: {.content-hidden}"`
+```{r chart_cef_duc, options = (cz=c("3", "terminal","level2"))}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+`r if (params$country == params$rp_full & cztype == "enroute") "::::::"`
+
+`r if (params$country != params$rp_full | cztype == "terminal") ":::::: {.content-hidden}"`
+```{r chart_cef_duc_er_ses, options = (cz=c("3", "terminal")), eval=(params$country == params$rp_full)}
+#| file: R/chart_level1_cef_er_ses.R
+#| out.width: "100%"
+```
+`r if (params$country != params$rp_full | cztype == "terminal") "::::::"`
+
+:::::
+
+::::: {.chart-container}  
+```{r chart_cef_su, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_su.R
+#| out.width: "100%"
+```
+:::::
+::::
+
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_cost, options = (cz=c("3", "terminal"))}
 #| file: R/chart_level2_cef_cost.R
-#| fig.align: "center"
-#| fig-pos: "H"
-```  
+#| out.width: "100%"
+```
+:::::
 
-
-```{r table_level2_cef_cost_terminal3, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+::::: {#table-costs}
+```{r table-cef-cost, options = (cz=c("3", "terminal"))}
 #| file: R/table_level2_cef_cost.R
-#| include: false
+#| out.width: "100%"
 ```
 
-``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex)}
-#| echo: false
-#| results: asis
- 
-cat(make_quarto_latex_table(
-  title = paste0("Actual and determined data"),
-  col_labels = c("Total costs - nominal (M€)", as.character(rp_years)),
-  df = data_prep_pdf,
-  col_align = "lrrrrr",
-  col_widths = c(35, rep(65/5, 5))
-))
-```
+`r if (params$country == params$rp_full) ":::::: {.content-hidden}"`
 
-\vspace{-20pt}
-
-```{r table_level2_cef_cost_infl_terminal3, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex) }
+```{r table-cef-cost-infl, eval = (params$country != params$rp_full), options = (cz=c("3", "terminal"))}
 #| file: R/table_level2_cef_cost_infl.R
-#| include: false
+#| out.width: "100%"
 ```
+`r if (params$country == params$rp_full) "::::::"`
+:::::
+::::
 
-``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex) }
-#| echo: false
-#| results: asis
- 
-cat(make_quarto_latex_table(
-  title = NA,
-  df = data_prep,
-  col_align = "lrrrrr",
-  col_widths = c(35, rep(65/5, 5))
-))
+
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_cost_entity, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_cost_entity.R
+#| out.width: "100%"
 ```
+:::::
 
-`r layout_2fig(paste0("chart_cef_cost_entity_", cztype, czindex), paste0("chart_cef_cost_main_", cztype, czindex))`
+::::: {.chart-container}  
+```{r chart_cef_cost_main, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_cost_main.R
+#| out.width: "100%"
+```
+:::::
+::::
+:::
 
 
-\needspace{3\baselineskip}
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+### Summary of performance at local level
 
-`\biggertext{Focus on unit cost}`{=latex}
+:::: {#table-cef-summary}
+```{r table-cef-summary, options = (cztype="terminal"), eval=params$country == params$rp_full}
+#| file: R/table_cef_summary.R
+#| out.width: "100%"
+```
+::::
+
+`r if (params$country != params$rp_full) ":::"`
+
+
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+
+::: {.callout-note collapse=true}
+
+#### Focus on unit cost
 
 ```{r}
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+
 replace_headings(path, cef_titles_s1)
 
 # if (file.exists(path)) {cat(sprintf("{{< include %s >}}", path))}
 ``` 
 
+:::
 
-### Actual unit cost incurred by the users (AUCU) (PI#1)
+`r if (params$country == params$rp_full) ":::"`
 
-```{r chart_cef_aucu_terminal3, options = (cz=c(czindex, cztype)), include=(no_cz >= czindex), eval = (no_cz >= czindex)}
+
+::: {#container-cef-aucu}
+
+### Actual unit cost incurred by the users ([**AUCU**](`r params$home_address`/about.html#cost-efficiency---actual-unit-cost-incurred-by-the-users-aucu-pi1)) (PI#1)
+
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_aucu, options = (cz=c("3", "terminal"))}
 #| file: R/chart_level2_cef_aucu.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```  
+#| out.width: "100%"
+```
+:::::
 
-
-```{r table_level2_cef_aucu_terminal3, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+::::: {#table-cef-aucu}
+```{r table_cef_aucu, options = (cz=c("3", "terminal"))}
 #| file: R/table_level2_cef_aucu.R
-#| include: false
+#| out.width: "100%"
 ```
-
-``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex)}
-#| echo: false
-#| results: asis
- 
-cat(make_quarto_latex_table(
-  title = paste0("AUCU components (€/SU) – ", as.character(year_report)),
-  df = data_prep_pdf,
-  col_labels = c(paste0("Components of the AUCU in ", as.character(year_report)), 
-             "€/SU"
-             ),
-  col_align = "lr",
-  col_widths = c(80, 20),
-  bold_data_rows = c(1,12,13)
-))
-```
+:::::
+::::
 
 
-```{r chart_cef_cex_terminal3, options = (cz=c(czindex, cztype)), include=(no_cz >= czindex), eval = no_cz >= czindex}
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_cex, R.options = (cz=c("3", "terminal"))}
 #| file: R/chart_level2_cef_cex.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```  
+#| out.width: "100%"
+```
+:::::
 
-
-```{r table_level2_cef_cex_terminal3, options = (cz=c(czindex, cztype)), eval = (no_cz >= czindex)}
+::::: {#table_cef_er_cex}
+```{r table_cef_cex, R.options = (cz=c("3", "terminal"))}
 #| file: R/table_level2_cef_cex.R
+#| out.width: "100%"
 ```
+:::::
+::::
+:::
 
-``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex)}
-#| echo: false
-#| results: asis
- 
-cat(make_quarto_latex_table(
-  title = paste0("Cost exempt from cost sharing – ", as.character(year_report)),
-  df = data_prep_pdf,
-  col_labels = c(paste0("Cost exempt from cost sharing by item - ", as.character(year_report)),
-                         "€'000",
-                        "€/SU"
-  ),
-  col_align = "lrr",
-  col_widths = c(60, 20, 20),
-  bold_data_rows = c(7)
-))
-```
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
-\needspace{3\baselineskip}
+::: {.callout-note collapse=true}
 
-`\biggertext{Focus on AUCU}`{=latex}
+#### Focus on AUCU
 
 ```{r}
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+
 replace_headings(path, cef_titles_s2)
 
 ``` 
 
-### Regulatory result (RR)
+:::
 
-`r layout_2fig(paste0("chart_cef_reg_res_", cztype, czindex), paste0("chart_cef_reg_res_aucu_", cztype, czindex))`
+`r if (params$country == params$rp_full) ":::"`
 
-`r layout_2fig(paste0("chart_cef_reg_res_ansp_", cztype, czindex), paste0("chart_cef_net_res_main_ansp_", cztype, czindex))`
 
-\needspace{3\baselineskip}
+::: {#container-cef-reg-res}
 
-`\biggertext{Focus on regulatory result}`{=latex}
+### Regulatory result ([**RR**](`r params$home_address`/about.html#cost-efficiency---regulatory-result-rr))
+
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_reg_res, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_reg_res.R
+#| out.width: "100%"
+```
+:::::
+
+::::: {.chart-container}  
+```{r chart_cef_reg_res_aucu,  options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_reg_res_aucu.R
+#| out.width: "100%"
+```
+:::::
+::::
+
+:::: {layout="[ 50, 50 ]"}
+::::: {.chart-container}  
+```{r chart_cef_reg_res_ansp, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_reg_res_ansp.R
+#| out.width: "100%"
+```
+:::::
+
+::::: {.chart-container}  
+```{r chart_cef_net_res_main_ansp, options = (cz=c("3", "terminal"))}
+#| file: R/chart_level2_cef_net_res_main_ansp.R
+#| out.width: "100%"
+```
+:::::
+::::
+
+:::
+
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+
+::: {.callout-note collapse=true}
+
+#### Focus on regulatory result
 
 ```{r}
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, i)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+
 replace_headings(path, cef_titles_s3)
 
-``` 
+```
+
+:::
+
+`r if (params$country == params$rp_full) ":::"`
+

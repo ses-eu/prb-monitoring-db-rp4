@@ -12,7 +12,7 @@ Ex-post, the overall RR, taking into account the net gain from the en route acti
 
 #### **ER1.3.3.1. NOTE 1**
 
-The ex-post RoE cannot be correctly calculated because of a very low total asset base, due to: 1) the exclusion of net current assets from the calculation of the total asset base; 2) a very low net book value of existing fixed assets in operation.
+The ex-post RoE cannot be correctly calculated because of a very low total asset base which results from: 1) the exclusion of net current assets from the calculation of the total asset base, and 2) a very low net book value of existing fixed assets in operation.
 
 #### **ER1.3.3.2. NOTE 2**
 

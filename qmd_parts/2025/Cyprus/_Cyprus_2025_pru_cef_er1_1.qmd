@@ -30,7 +30,7 @@ The NSA of Cyprus provides the following overall assessment of the actual perfor
 
 "*The actual costs are lower than the determined ones by 2.7% whilst the en route service units are higher than the forecast by 12.2%. The combination of the two parameters results to an actual unit cost (in real terms) which is lower than the determined unit cost (by 12.8%).*"
 
-*\[It should be noted that Cyprus submitted revised Monitoring Report 2025 with the updated en route costs, but not all corresponding figures were updated in the analysis. As a result, some of the amounts indicated by the NSA cited above differ slightly from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of en route reporting tables (both of which are aligned).\]*
+\[It should be noted that Cyprus submitted revised Monitoring Report 2025 with the updated en route costs, but not all corresponding figures were updated in the analysis. As a result, some of the amounts indicated by the NSA cited above differ slightly from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of en route reporting tables (both of which are aligned).\]
 
 ### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 
@@ -46,7 +46,7 @@ The NSA provides the following explanation for the differences between actual an
 
 *- Delays to or partial implementation of certain investments (leading to lower depreciation costs and cost of capital).*"
 
-*\[It should be noted that Cyprus submitted revised Monitoring Report 2025 with the updated en route costs, but not all corresponding figures were updated in the analysis. As a result, some of the amounts indicated by the NSA cited above differ slightly from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of en route reporting tables (both of which are aligned).\]*
+\[It should be noted that Cyprus submitted revised Monitoring Report 2025 with the updated en route costs, but not all corresponding figures were updated in the analysis. As a result, some of the amounts indicated by the NSA cited above differ slightly from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of en route reporting tables (both of which are aligned).\]
 
 ### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DCAC CYPRUS) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 

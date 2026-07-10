@@ -1,0 +1,28 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (2 488.63 NOK or 212.68 €) is -1.1% lower than the nominal DUC (2 517.27 NOK or 215.13 €), which includes DUC initially charged: 2 609.95 NOK (or 223.05 € ), and DUC to be charged retroactively: -92.68 NOK (or -7.92 € ). The difference between the AUCU and the nominal DUC (-28.64 NOK/SU or -2.45 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+4.19 NOK/SU or +0.36 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-33.06 NOK/SU or -2.83 €/SU); and
+
+- the addition of the traffic adjustment (+0.22 NOK/SU or +0.02 €/SU) for the costs not subject to traffic risk sharing.
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.7%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Norway provides the following information regarding the initiatives:
+
+*"The reduced unit cost (adjustments per actual service unit) is mainly driven by unforeseen changes in pension costs mainly driven by plan changes in the defined benefit pension scheme (SPK), as well as changes in the underlying pension assumptions (including discount rate and expected return, pension increase and social security increase), which are carried forward to the airspace users in n+2."*
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.1. NOTE 2**
+

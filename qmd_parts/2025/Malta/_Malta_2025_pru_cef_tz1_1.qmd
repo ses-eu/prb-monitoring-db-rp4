@@ -10,7 +10,7 @@ The difference between actual and planned TNSUs (+5.9%) falls outside the ±2% d
 
 ### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
 
-Actual real terminal costs are -5.6% (-0.4 M€2022) lower than planned. This is the result of lower costs for the main ANSP, MATS (-6.3%, or -0.3 M€2022), the NSA (-9.2%, or 0.04 M€2022) and the MET service provider (-3.9%, or 0.01 M€2022) and slightly higher costs for the other ANSP (Malta International Airport (MIA), +0.9%, or +0.01 M€2022).
+Actual real terminal costs are -5.6% (-0.4 M€2022) lower than planned. This is the result of lower costs for the main ANSP, MATS (-6.3%, or -0.3 M€2022), the NSA (-9.2%, or -0.04 M€2022) and the MET service provider (-3.9%, or -0.01 M€2022) and slightly higher costs for the other ANSP (Malta International Airport (MIA), +0.9%, or +0.01 M€2022).
 
 ### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (MATS) AT CHARGING ZONE LEVEL**
 
@@ -36,7 +36,7 @@ The NSA provides the following explanation for the differences between actual an
 
 *"For 2025, total actual terminal costs amounted to EUR 6.113 million compared with determined costs of EUR 6.905 million, i.e. EUR 0.792 million below plan. MATS actual terminal costs were EUR 0.348 million below determined costs, with lower staff and other operating costs offsetting higher depreciation and lower cost of capital. MIA costs were broadly in line with plan with a small net increase, while MET costs were slightly below determined costs. Actual terminal service units were 47.553 thousand compared with 44.901 thousand forecast (+5.9%)."*
 
-*\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above differ from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of terminal reporting tables (both of which are aligned).\]*
+\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above differ from the amounts reported in the respective data tables in the same NSA Monitoring Report and in the submission of terminal reporting tables (both of which are aligned).\]
 
 ### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (MATS) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 

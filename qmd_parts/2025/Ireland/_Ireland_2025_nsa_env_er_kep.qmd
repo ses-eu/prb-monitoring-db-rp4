@@ -1,8 +1,0 @@
-## **2.2.2.A. PI #1**
-
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
-
-There is Full Free Route in the Shannon FIR/UIR. The flight plan trajectory is determined by the airspace users' preferences as a free route airspace (FRA) concept of operations applies within Irish airspace. With the possible exception of some RADS for ATM purposes, inefficiencies in KEP result from factors outside of Irish airspace and therefore, outside of the ANSP's control.
-
-The ANSP will continue to monitor and review the KEP and factors that may impact the value. The ANSP continues to review RADs with neighbouring ANSPs with a view to identifying possible improvements in horizontal flight efficiency. Work continues on the feasibility of using Dynamic RADs. It is intended to work with NATS in the expansion of Nighttime Fuel Savings Routes in (NTFSR) in 2026. There are no capacity RADs in Irish FRA, the RADs applied are structural to protect adjacent airspace and to force efficient flight profiles, the adjacent ANSP has limited introduction of dynamic RAD (3). It is intended to have a full review of RADS post Summer 26.
-

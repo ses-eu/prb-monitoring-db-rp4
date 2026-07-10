@@ -1,6 +1,0 @@
-## **2.2.2.I. PI #9**
-
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
-
-The reported ratio is based on NM data. Data for this indicator is currently not systematically collected at the required level of detail. Work is ongoing to establish appropriate data collection. The NM data based ERSA value indicates a high level of effectiveness in the use of reserved or segregated airspace, suggesting that airspace allocation is generally well aligned with actual operational needs. NSA will continue to monitor this indicator for trends.
-

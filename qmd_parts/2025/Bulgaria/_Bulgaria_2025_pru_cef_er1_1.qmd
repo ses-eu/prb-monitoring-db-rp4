@@ -2,7 +2,7 @@
 
 ### **ER1.1.1. AUC VS. DUC**
 
-In 2025, the en route AUC was -2.9% (or -0.80 BGN2022, -0.41 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+3.8%) and slightly higher than planned en route costs in real terms (+0.8%, or +1.1 MBGN2022, +0.6 M€2022).
+In 2025, the en route AUC was -2.9% (or -0.80 €2022) lower than the planned DUC. This results from the combination of higher than planned TSUs (+3.8%) and slightly higher than planned en route costs in real terms (+0.8%, or +1.1 M€2022).
 
 ### **ER1.1.2. EN ROUTE SERVICE UNITS**
 
@@ -10,11 +10,11 @@ The difference between actual and planned TSUs (+3.8%) falls outside the ±2% de
 
 ### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
 
-Actual real en route costs are +0.8% (+0.6 M€2022) higher than planned. This is the result of higher costs for the main ANSP, BULATSA (+1.3%, or +0.9 M€2022) and lower costs for the NSA/EUROCONTROL (-6.5%, or -0.3 M€2022) while the costs for the MET service provider were in line with the plan (-0.01%).
+Actual real en route costs are +0.8% (+1.1 M€2022) higher than planned. This is the result of higher costs for the main ANSP, BULATSA (+1.3%, or +1.8 M€2022) and lower costs for the NSA/EUROCONTROL (-6.5%, or -0.6 M€2022) while the costs for the MET service provider were in line with the plan (-0.01%).
 
 ### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (BULATSA) AT CHARGING ZONE LEVEL**
 
-Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for BULATSA in 2025 (+1.3%, or +0.9 M€2022) result from:
+Based on the additional information to the en route reporting tables, the higher than planned en route costs in real terms for BULATSA in 2025 (+1.3%, or +1.8 M€2022) result from:
 
 - Lower than planned staff costs (-1.1%), mainly due to lower than planned social benefits and pension costs.
 

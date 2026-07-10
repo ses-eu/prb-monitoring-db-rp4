@@ -6,7 +6,7 @@ In 2025, the en route AUC was -8.2% (or -3.78 €2022) lower than the planned DU
 
 ### **ER1.1.2. EN ROUTE SERVICE UNITS**
 
-The difference between actual and planned TSUs (+5.7%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+The difference between actual and planned TSUs (+5.7%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
 
 ### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
 
