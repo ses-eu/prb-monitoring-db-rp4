@@ -860,17 +860,18 @@ cap_trm_atfm_actual_mm_ses <- cap_trm_atfm_actual_mm %>%
   )
 
 #### ALL-CAUSE PREDEP DELAY ----
-# cap_all_c_predep_delay_actual_ses <- cap_all_c_predep_delay_actual %>%
-#   group_by(year) %>%
-#   summarise(
-#     fl_total = sum(fl_total, na.rm = TRUE),
-#     dly_all_min_total = sum(dly_all_min_total, na.rm = TRUE),
-#     .groups = "drop"
-#   ) %>%
-#   mutate(
-#     all_cause_predep_dly = dly_all_min_total / fl_total,
-#     state = rp_full
-#   )
+cap_all_c_predep_delay_actual_ses <- readxl::read_xlsx(
+  here(data_folder, ses_data_file),
+  sheet = "V_STAT_RP4_BY_RP",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() |>
+  select(year, kpi, value) |>
+  filter(kpi == 'STATE_DLY_ALL') |>
+  mutate(state = rp_full) |>
+  pivot_wider(names_from = "kpi", values_from = "value") |>
+  rename(all_cause_predep_dly = STATE_DLY_ALL)
 
 #### DELAY TIME BIN ----
 cap_delay_bin_actual_ses <- cap_delay_bin_actual %>%
