@@ -38,6 +38,7 @@ download.qmd
 format_annex2_files.xlsm
 Performance-Review*.tex
 
+*.rmarkdown
 *.log
 **/*.quarto_ipynb
 .positai
