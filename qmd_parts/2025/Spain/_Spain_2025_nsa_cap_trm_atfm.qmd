@@ -2,7 +2,7 @@
 
 ### **Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the arrival ATFM delay per flight KPI**
 
-In 2025, once all the processes of the delay reattribution (post-ops and eNM25, including the adjustment due to power failure in Spain in April 2025, approved by NM in January 2026) have been applied, the final average of the arrival ATFM delay per flight in Spain (in the 7 main airports at national level) is 0,93 min/arr, representing a clear improvement compared with 2024, when the corresponding value was 1.10 minutes per flight, despite still remaining above the target value set in the Performance Plan. The final figures per airport vary from those presented in the table above for the following airports: Madrid Barajas (LEMD): 0,43 min/arr and Barcelona (LEBL): 1,35 min/arr.
+In 2025, once all the processes of the delay reattribution (post-ops and eNM25, including the adjustment due to power failure in Spain in April 2025, approved by NM in January 2026) have been applied, the final average of the arrival ATFM delay per flight in Spain (in the 7 main airports at national level) is 0,93 min/arr, representing a clear improvement compared with 2024, when the corresponding value was 1.10 minutes per flight, despite still remaining above the target value set in the Performance Plan.
 
 The 2025 arrival delay result corresponding to ENAIRE, once the distribution of delays between ENAIRE and Skyway has been carried out, is 0.91 min/arr, which represents a 15% improvement over the previous year. This improvement is also evident when analyzing arrival delays causes attributable to ENAIRE, which improved from 0.17 min/arr in 2024 to 0.14 min/arr in 2025 (a 19% of improvement).
 
