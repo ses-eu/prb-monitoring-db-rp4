@@ -1,0 +1,6 @@
+## 2.3.2.A. PI #1
+
+### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
+
+Performance has been nearly 100% throughout the years (including 2025), with small deviations per year. No specific measures were taken or are planned, because they are not needed.
+

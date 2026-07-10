@@ -24,7 +24,7 @@ Detailed monthly monitoring of performance has started for EHAM; the same is in 
 
 Vertical flight efficiency from Top of Descent remained stable in 2025 despite traffic increase. CDOs can be flown only when traffic is reduced.
 
-In 2025, the average duration of level-off segments during the descent phase was 2.8 minutes at Geneva Airport and 3.2 minutes at Zurich Airport, compared with an average of 2.8 minutes across the top 30 European airports.
+In 2025, the average duration of level-off segments during the descent phase was 3.2 minutes at Geneva Airport and 2.8 minutes at Zurich Airport, compared with an average of 2.8 minutes across the top 30 European airports.
 
 Skyguide was audited in 2023, 2024 and 2025 by CANSO for CCO/CDO practices in ZRH and GVA as part of its GreenATM accreditation. Room for improvement is identified and corrective actions will be taken.
 

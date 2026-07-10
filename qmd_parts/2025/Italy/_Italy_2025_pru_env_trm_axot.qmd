@@ -1,0 +1,14 @@
+## TRM1.1. Additional time in taxi-out phase (PI#4) {#trm1.1.-additional-time-in-taxi-out-phase-pi4 .Heading-2-TZ}
+
+Rome Fiumicino, Milan Malpensa, Milan Linate and Bergamo are the only Italian airports subject to the monitoring of this indicator. Despite reductions in three of them, the average additional taxi out time across these four airports was 5.26 min/dep, the highest across all RP4 states.
+
+Additional time in Rome -- Fiumicino in 2025 decreased to 6.74 min/dep, 12% lower than 2024 value -- last year of RP3 -- of 7.67 min/dep. Still, Rome -- Fiumicino had the highest additional taxi out time of all airports subject to monitoring of this indicator in RP4.
+
+Additional time in Milan -- Malpensa in 2025 increased to 4.35 min/dep, 3% higher than 2024 value -- last year of RP3 -- of 4.24 min/dep. Milan -- Malpensa had the fourth highest additional taxi out time of all airports subject to monitoring of this indicator in RP4.
+
+Additional time in Milan -- Linate in 2025 decreased to 4.60 min/dep, 6% lower than 2024 value -- last year of RP3 -- of 4.89 min/dep. Still, Milan -- Linate had the second highest additional taxi out time of all airports subject to monitoring of this indicator in RP4.
+
+Additional time in Bergamo in 2025 decreased to 3.37 min/dep, 6% lower than 2024 value -- last year of RP3 -- of 3.58 min/dep.
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 3.61 min/dep.
+

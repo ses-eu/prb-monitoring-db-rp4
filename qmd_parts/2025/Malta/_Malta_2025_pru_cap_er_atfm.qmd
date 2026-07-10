@@ -1,0 +1,6 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Malta had 167k flights in 2025, up from the 148k flights in 2024.
+
+- MATS applied en route ATFM regulations that resulted in 5k minutes of delay.
+

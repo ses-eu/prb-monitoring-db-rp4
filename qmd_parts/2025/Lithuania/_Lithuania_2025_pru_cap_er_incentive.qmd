@@ -1,0 +1,4 @@
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
+
+The Lithuanian NSA reports that a financial bonus is due to the ANSP for 2025 en route capacity performance. The local en route incentive target was set at 0.03 mins/flight and the actual achieved performance was 0 delays. Therefore the full 1% bonus of € 251 076 should apply.
+

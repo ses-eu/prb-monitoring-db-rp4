@@ -1,0 +1,8 @@
+## TRM1.2. Additional time in taxi-in phase (PI#5) {#trm1.2.-additional-time-in-taxi-in-phase-pi5 .Heading-2-TZ}
+
+The additional time in Zurich in 2025 was equal to 1.54 min/arr.
+
+The additional time in Geneva in 2025 was equal to 1.17 min/arr.
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 1.79 min/arr.
+

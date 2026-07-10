@@ -1,0 +1,54 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -8.6% (or -3.18 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TSUs (+6.8%) and lower than planned en route costs in real terms (-2.4%, or -2.6 M€2022). It should be noted that the actual inflation index in 2025 was +2.7 p.p. higher than planned.
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+6.8%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -2.4% (-2.6 M€2022) lower than planned. This is the result of lower costs for the main ANSP, Croatia Control (-2.7%, or -2.7 M€2022) and higher costs for the NSA/EUROCONTROL (+0.8%, or +0.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (CROATIA CONTROL) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for Croatia Control in 2025 (-2.7%, or -2.7 M€2022) result from:
+
+- Significantly higher than planned staff costs (+5.8%), mainly due to collective agreement negotiations concluded in June 2025, inflation-driven salary adjustments, continued recruitment and training to support ATCO capacity needs, and higher pension-related expenses.
+
+- Significantly lower than planned other operating costs (-15.1%), mainly due to lower than planned CAPEX-related operating expenses, reflecting slight delays in the investment timeline and a higher CAPEX/OPEX ratio for the TOPSKY investment than initially planned. Lower than planned expenses for intellectual services and travel also contributed to the decrease.
+
+- Significantly lower than planned depreciation (-18.4%), mainly due to delays in the operational deployment of certain CAPEX projects. Investment implementation in 2024 and 2025 continued to rely on significant technical staffing efforts. However, higher than planned traffic and a longer high-traffic season reduced the availability of ATCOs for project-related and other non-operational duties. The CAPEX realisation rate reached 78% of the planned level, representing one of the best historical performances.
+
+- Significantly lower than planned cost of capital (-17.2%), mainly due to a significantly lower level of net current assets than planned. This was driven by higher than planned average interest-bearing assets and higher than planned year-end CAPEX-related liabilities. Lower average fixed assets, resulting from postponed and/or prolonged investment projects in 2024 and 2025, also contributed to the decrease.
+
+- Lower than planned exceptional costs (-2.3%), mainly due to the inflation impact (+2.7 p.p.), while the nominal amount was fully in line with the plan. These costs relate to ICAO space weather services provided by EU Member States under the Joint Declaration by the Single Sky Committee regarding the inclusion of charges for space weather information services in RP4 performance plans.
+
+- Significantly lower than planned deduction for VFR exempted flights (-9.2%).
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Croatia provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"The improvement in Croatia\'s cost-efficiency performance in 2025 was primarily driven by higher than planned traffic growth. Nominal costs were kept mainly at planned levels despite a high inflation environment, allowing CEF performance to improve as the growth is service volumes outpaced the rise in costs.*
+
+*In 2025, nominal total costs are mainly in line with the planned figures, but with service units being 6.8% higher than planned, the resulting CEF performance is 8.6% better than anticipated."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Overall nominal costs on state level were marginally below planned level (-0.2%) with higher than planned staff costs driven mainly by demanding collective agreement negotiations on ANSP level coupled with higher than planned state pension cost, which was offset by lower than planned other operating costs, depreciation and cost of capital primarily as a result of lower than planned investment activity due to higher than planned traffic growth (which resulted in slightly postponed investment timeline)."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (CROATIA CONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report by either the NSA or Croatia Control.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

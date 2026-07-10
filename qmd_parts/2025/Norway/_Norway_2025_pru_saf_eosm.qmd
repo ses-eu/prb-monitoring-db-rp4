@@ -1,0 +1,18 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+[Avinor ANS]{.underline}
+
+In 2025, Avinor ANS achieved the planned maturity levels set out in its performance plan for four out of five components of the EoSM. Avinor ANS missed the planned levels in the area of Safety Risk Management.
+
+As reported in the monitoring report, the achieved level of actual performance complies with the RP4 targets established for 2025, except in the area of safety risk management. In this respect, the current plan is to achieve the target (C) by the end of 2026. Avinor ANS adopted a conservative self-assessment for 2025, having invested significant time in familiarising with the new questionnaire and wishing to ensure that the fundamentals of safety management are properly established before progressing towards the future performance targets.
+
+As further indicated in the monitoring report, Avinor ANS is currently establishing a Safety Plan, which will include all measures needed to achieve the safety performance. Avinor ANS decided to prioritise the production of evidence and explanations supporting the level B during this first year of the new reference period. As the questionnaire was more extensive than expected, it also decided to adjust its ambition for risk management from level C to level B.
+
+[Saerco]{.underline}
+
+In 2025, Saerco achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+As reported in the monitoring report, the achieved level of actual performance complies with the RP4 targets established for 2025. Saerco has proposed a conservative self-assessment for 2025, as it is the first year of the reference period with a new questionnaire.
+
+As for the measures put in place to achieve the planned levels, according to the monitoring report, throughout the period, Saerco has committed to working on areas such as enhancing human factors competence, reviewing formal interfaces and contracted activities with a focus on training needs, as well as hazard identification and safety assessment in the context of functional changes, together with the interrelationship between risk management and safety assurance, among other measures. Furthermore, for questions 3.1 and 5.1, the measure to be implemented is EUROCONTROL\'s Human Factors practitioner programme to achieve the target by the end of the reference period. The coordination carried out by AESA (Civil Spanish NSA) with EASA to ensure future compliance is particularly noteworthy. The current gap is mainly related to the formal recognition of the EUROCONTROL Practitioner LZ -- Human Factors Practitioner Programme \[HUM-PRG-PP\] qualification within the EoSM framework. It has been clarified that this qualification may be considered acceptable in place of the HF Specialist/Expert accreditation required under the EoSM, provided that the staff has fully completed the programme and has officially obtained the certification, rather than being only in the process of training.
+

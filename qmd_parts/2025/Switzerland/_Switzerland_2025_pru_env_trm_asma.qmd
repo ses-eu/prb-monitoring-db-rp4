@@ -1,0 +1,8 @@
+## TRM1.3. Additional time in terminal airspace (PI#6) {#trm1.3.-additional-time-in-terminal-airspace-pi6 .Heading-2-TZ}
+
+The additional time in Zurich in 2025 decreased to 3.46 min/arr, 2% lower than the 2024 value -- last year of RP3 -- of 3.54 min/arr (*using the new methodology*).
+
+The additional time in Geneva in 2025 decreased to 3.33 min/arr, 3% lower than the 2024 value -- last year of RP3 -- of 3.45 min/arr (*using the new methodology*).
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 2.98 min/arr.
+

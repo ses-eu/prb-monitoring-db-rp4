@@ -1,0 +1,56 @@
+## **TZ1.1. SECTION 1 -- UNIT COST**
+
+### **TZ1.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was +1.2% (or +5.61 CHF2022, +5.58 €2022) higher than the planned DUC. This results from the combination of higher than planned terminal costs in real terms (+1.5%, or +2.0 MCHF2022, +2.0 M€2022) and slightly higher than planned TNSUs (+0.3%).
+
+### **TZ1.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+0.3%) falls inside the ±2% dead-band. Hence, the gain of additional terminal revenues is kept by the ANSPs.
+
+### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are +1.5% (+2.0 M€2022) higher than planned. This is the result of higher costs for the main ANSP, Skyguide (+1.5%, or +2.0 M€2022), the MET service provider (+0.5%, or +0.02 M€2022) and the NSA (+0.04%).
+
+### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (SKYGUIDE) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the slightly higher than planned terminal costs in real terms for Skyguide in 2025 (+1.5%, or +2.0 M€2022) result from:
+
+- Higher than planned staff costs (+2.7%), mainly linked to the endorsement of ATCOs, operational training and ab initio programmes, as well as increased recruitment efforts.
+
+- Significantly lower than planned other operating costs (-5.8%), mainly due to lower purchased services and products, including external experts, maintenance, material and tools. This reflects the implementation of savings measures mainly affecting support service expenses.
+
+- Significantly higher than planned depreciation (+7.1%).
+
+- Significantly higher than planned cost of capital (+15.7%), mainly due to higher net current assets.
+
+### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Switzerland provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Actual unit costs are broadly in line with the DUC (+1.3%). This slight increase is mainly driven by a modest rise in actual costs (see explanation below)."*
+
+### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Actual terminal costs for 2025 are slightly above the determined level, with a variance of +1.3% in nominal term (+1.9M CHF) and +1.5% in real term (+2.0M CHF).*
+
+*This variance is mainly driven by higher staff costs, notably linked to the endorsement of ATCOs, operational training and ab initio programs, as well as increased recruitment efforts, all aimed at enhancing capacity and delivering better services to airspace users. This increase is partly offset by lower staff costs in operations departments.*
+
+*This increase is partly compensated by Other operating costs lower than determined, where some reductions have been achieved during the year as explain for the En route.*
+
+*Depreciation and cost of capital show a moderate increase compared to the determined level, in line with the evolution of the asset base. This difference will not be passed on to airspace users.*
+
+*Overall, while some cost containment actions have been implemented, particularly on operating expenses, they only partly offset the increase in staff-related costs."*
+
+### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (SKYGUIDE) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No recommendation from the NSA nor action from the ANSP is reported in the 2025 NSA Monitoring Report.
+
+### **TZ1.1.8. NOTES**
+
+#### **TZ1.1.8.1. NOTE 1**
+
+#### **TZ1.1.8.2. NOTE 2**
+

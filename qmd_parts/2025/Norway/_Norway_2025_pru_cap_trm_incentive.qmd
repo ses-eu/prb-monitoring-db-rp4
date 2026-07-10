@@ -1,0 +1,6 @@
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+
+In the first year of RP4, with an ATFM Arr delay of 0.13 min/arr, Norway **achieved the national target** of 0.50 min/arr.
+
+Furthermore, the pivot value for incentives (0.08 min/arr) is limited to CRSTMP delay causes. CRSTMP delay of 0.02 min/arr falls beyond the end of the bonus sliding range for the incentive scheme, however, the Norwegian Performance Plan does not establish any bonus.
+

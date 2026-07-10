@@ -1,0 +1,8 @@
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+
+Average ATFM arrival delay in Switzerland was 2.07 min/arr in 2025, the first year of RP4. The **performance has worsened compared to 2024**, last year of RP3, when there were 1.78 min/arr.
+
+Out of the two airports included in RP4, Zurich had delays of 2.73 min/arr and Geneva 1.03 min/arr. Aside from weather, operational challenges came from Zurich TTMS live trials and Geneva A-CDM systems replacement, as well as aerodrome capacity regulations in both.
+
+The average for RP4 airports subject to monitoring of ATFM Arrival delay across Member States in 2025 was 0.97 min/arr.
+

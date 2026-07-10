@@ -184,6 +184,8 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(yea
 replace_headings(path, character(0))
 
 
+cat("\n\n")
+
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 replace_headings(path, cap_er_nsa_titles_tput)

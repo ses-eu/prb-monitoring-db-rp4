@@ -1,0 +1,55 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (260.38 €) is -6.1% lower than the nominal DUC (277.42 €). The difference between these two figures (-17.04 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+0.48 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.14 €/SU);
+
+- the addition of the traffic adjustment (+0.03 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (-1.37 €/SU);
+
+- the deduction of other revenues (-0.41 €/SU); and,
+
+- the application of a lower unit rate as foreseen in Art. 29(6) in year 2025 (-15.63 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.7%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Germany provides the following information regarding the initiatives:
+
+*"During the last years the PI was primarily influenced by regulatory adjustments according to Art. 29 (6), adjustments for traffic risk sharing and inflation as well as the incurred malus from the incentive scheme. The indicator is monitored on an ongoing basis while the possibility and necessity of a regulatory adjustment through Art. 29(6) is being assessed respectively. Art. 29(6) has been used to lower unit rates multiple times in the past years.*
+
+*Referring to (...) the cost-exempt from cost-sharing, (...) the value provided is provisional since the verification in accordance with Article 28 (7) of IR (EU) 2019/317 is not yet finalised since it is only due by 1 September 2026."*
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.2. NOTE 2**
+
+## **TZ1.2.3.1. NOTE 2TZ1.3. SECTION 3 -- REGULATORY RESULT**
+
+### **TZ1.3.1. DFS NET GAIN/LOSS ON ACTIVITY IN THE GERMANY TERMINAL CHARGING ZONE IN 2025**
+
+DFS reported a net gain of +2.3 M€, as a combination of a gain of +5.8 M€ arising from the cost sharing mechanism, with a loss of -1.8 M€ arising from the traffic risk sharing mechanism and a loss of -1.7 M€ relating to financial incentives.
+
+### **TZ1.3.2. DFS OVERALL REGULATORY RESULT (RR) ON ACTIVITY IN THE TERMINAL CHARGING ZONE** 
+
+Ex-post, the overall RR, taking into account the net gain from the terminal activity mentioned above (+2.3 M€) and the actual RoE (+22.1 M€, see Note 1 below for details), amounts to +24.4 M€ (7.2% of the terminal revenues). The resulting ex-post rate of return on equity is 9.0%, which is higher than the 8.2% planned in the PP. See also Note 2 below.
+
+### **TZ1.3.3. NOTES**
+
+#### **TZ1.3.3.1. NOTE 1**
+
+As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of terminal reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the terminal reporting tables (13.6 M€) differs from the value that is calculated on the basis of the assumptions provided (25.9 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*.
+
+#### **TZ1.3.3.2. NOTE 2**
+
+The ex-post RR does not take into account the application of a lower unit rate in 2025 as per Art. 29.6 (the loss in revenues corresponds to -19.6 M€ for 2025).

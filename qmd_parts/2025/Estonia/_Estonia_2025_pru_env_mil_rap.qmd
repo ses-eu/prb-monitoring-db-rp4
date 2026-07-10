@@ -1,0 +1,12 @@
+## ERT1.2. Rate of planning via available airspace structures (PI#10) {#ert1.2.-rate-of-planning-via-available-airspace-structures-pi10 .Heading-2-ER}
+
+*[Comment]{.underline}*
+
+*ESTONIA mentions that the Data used and reported comes from NM.*
+
+(Data source NM)
+
+- the ratio of planning via available airspace structures is **23%** (via available restricted and segregated airspaces)
+
+- the ratio of planning via available airspace structures is **15%** (via available conditional routes)
+

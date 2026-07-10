@@ -1,0 +1,34 @@
+## **ER1.2. SECTION 2 - ACTUAL UNIT COSTS INCURRED BY THE USERS**
+
+### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (285.96 PLN or 67.53 €) is -4.2% lower than the nominal DUC (298.36 PLN or 70.46 €). The difference between the AUCU and the nominal DUC (-12.40 PLN/SU or -2.93 €/SU) is due to:
+
+- the negative inflation adjustment resulting from lower than planned inflation (-6.76 PLN/SU or -1.60 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.13 PLN/SU or -0.03 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+1.43 PLN/SU or +0.34 €/SU);
+
+- the addition of the traffic adjustment (+0.86 PLN/SU or +0.20 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (+2.75 PLN/SU or +0.65 €/SU); and
+
+- the deduction of other revenues (-10.57 PLN/SU or -2.50 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 0.9%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Poland provides the following information regarding the initiatives:
+
+"*The value of this indicator derives directly from adjustment mechanisms defined in the EU Performance and Charging Regulation. Poland does not apply modulation of charges or the provisions of Article 29(6). There is a single ER charging zone in Poland, therefore cross-financing between charging zones is not applicable. Detailed data on the calculation of the adjustments is presented in ER charges\' reporting tables*."
+
+### **ER1.2.3. NOTES** 
+
+#### **ER1.2.3.1. NOTE 1**
+
+#### **ER1.2.3.1. NOTE 2**
+

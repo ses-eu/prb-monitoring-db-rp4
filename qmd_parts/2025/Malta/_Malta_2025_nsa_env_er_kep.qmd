@@ -1,0 +1,6 @@
+## **2.2.2.A. PI #1**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+When the implementation of the PBN SIDs / STARs and the redesign of the TMA the PI is expected to improve.
+

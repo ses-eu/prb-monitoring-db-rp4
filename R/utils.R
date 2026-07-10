@@ -2860,7 +2860,11 @@ replace_headings <- function(path, mytitles) {
 
   is_na_body_line <- function(x) {
     txt <- trimws(x)
-    grepl("^(na|n/a|n\\.a\\.?|not applicable|/|\\\\)$", txt, ignore.case = TRUE)
+    grepl(
+      "^\\s*(na|n/a|n\\.a\\.?|not applicable|/|\\\\|\\\\\\[And some more text\\.\\\\\\])\\s*$",
+      txt,
+      ignore.case = TRUE
+    )
   }
 
   section_has_body <- function(lines, idx) {

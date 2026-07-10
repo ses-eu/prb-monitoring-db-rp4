@@ -1,0 +1,6 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Estonia had 176k flights in 2025, up from 170k flights in 2024.
+
+- EANS applied en route ATFM regulations resulting in \<2k minutes of delay
+

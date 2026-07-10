@@ -1,0 +1,6 @@
+## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+
+Dublin is the only Irish airport subject to the monitoring of this indicator. The delay in 2025 was equal to 0.86 min/dep. This figure cannot be compared to RP3 values from 2024 as last year reporting quality was not good enough to compute this PI. Reporting quality improved as of November 2024, allowing for the calculation of 2025 values.
+
+The average for RP4 airports subject to monitoring of ATC pre-departure delay across Member States and for which enough data is available in 2025 was 0.74 min/dep.
+

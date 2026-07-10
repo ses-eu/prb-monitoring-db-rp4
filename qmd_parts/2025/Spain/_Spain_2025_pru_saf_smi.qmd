@@ -6,11 +6,11 @@ When comparing to 2024, the rate of separation minima infringements has decrease
 
 In terms of the initiatives implemented or planned to improve this performance indicator, at State level, Spain describes that the monitoring of the proposed measures is structured at three levels. Firstly, through the application within AESA of the Risk-Based Oversight (RBO) methodology, where the evolution of the indicators is monitored. Moreover, several key safety areas are identified at a State Level (through the State Safety Program) to categorize occurrences. These key safety areas include, for the ATM/ANS scope, loss of separation in flight. In the case of loss of separation in flight, this key safety area includes occurrences where:
 
--   The separation minima between two aircraft are breached.
+- The separation minima between two aircraft are breached.
 
--   In which two aircraft fail to maintain the separation prescribed for the current airspace and flight rules.
+- In which two aircraft fail to maintain the separation prescribed for the current airspace and flight rules.
 
--   And where there is an inadequate separation, meaning situations in which the separation, perceived by either the pilots or the ATS personnel, is compromised even where no minima was prescribed (for example, between aircraft in uncontrolled airspace, or between VFR and IFR aircraft in class E airspace).
+- And where there is an inadequate separation, meaning situations in which the separation, perceived by either the pilots or the ATS personnel, is compromised even where no minima was prescribed (for example, between aircraft in uncontrolled airspace, or between VFR and IFR aircraft in class E airspace).
 
 Secondly, the monitoring continues through the follow-up of the effective implementation of measures via ATM/ANS audits (related functional changes, specific action plans). Finally, regular meetings are held with the ANSP Accountable Manager and the Safety Manager, during which updates are provided on the evolution of the indicators, as well as on the underlying causes and the measures implemented.
 

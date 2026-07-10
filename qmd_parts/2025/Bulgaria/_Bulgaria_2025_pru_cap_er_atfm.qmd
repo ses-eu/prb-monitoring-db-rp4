@@ -1,0 +1,12 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Bulgaria had 1129k flights in 2025, up from 1050k flights in 2024.
+
+- BULATSA applied en route ATFM regulations resulting in 60k minutes of delay, a reduction from the 190k minutes in 2024.
+
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, there were \<1k minutes of en route ATFM delay reattributed **to BULATSA**; 3k minutes of delay originating in Bulgaria were re-attributed **to other ANSPs.**
+
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, \<1k minutes of delay originating in Bulgaria, were re-attributed **to other ANSPs**.
+
+- When the above post-operations re-attributions are factored in, the total en route delay for BULATSA in 2025 was 57k minutes in 2025 down from 102k minutes in 2024.
+

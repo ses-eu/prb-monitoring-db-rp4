@@ -1,0 +1,20 @@
+## **ER1.3.  SECTION 3 -- REGULATORY RESULT**
+
+### **ER1.3.1. DFS NET GAIN/LOSS ON ACTIVITY IN THE GERMANY EN ROUTE CHARGING ZONE IN 2025**
+
+DFS reported a net loss of -7.7 M€, as a combination of a loss of -11.3 M€ arising from the cost sharing mechanism, with a gain of +8.4 M€ arising from the traffic risk sharing mechanism and a loss of -4.8 M€ relating to financial incentives.
+
+### **ER1.3.2. DFS OVERALL REGULATORY RESULT (RR) FOR THE EN ROUTE ACTIVITY**
+
+Ex-post, the overall RR, taking into account the net loss from the en route activity mentioned above (-7.7 M€) and the actual RoE (+48.0 M€, see Note 1 below for details), amounts to +40.4 M€ (4.2% of the en route revenues). The resulting ex-post rate of return on equity is 5.2%, which is lower than the 6.2% planned in the PP.
+
+### **ER1.3.3. NOTES** 
+
+#### **ER1.3.3.1. NOTE 1**
+
+As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of en route reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the en-route reporting tables (38.5 M€) differs from the value that is calculated on the basis of the assumptions provided (58.8 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*
+
+#### .**ER1.3.3.2. NOTE 2**
+
+# **TZ1. TERMINAL CHARGING ZONE - GERMANY**
+

@@ -1,0 +1,6 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Sweden had 656k flights in 2025, slightly down from the 660k flights in 2024.
+
+- LFV applied en route ATFM regulations that resulted in 14k minutes of delay.
+

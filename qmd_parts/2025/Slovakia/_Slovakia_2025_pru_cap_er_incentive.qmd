@@ -1,0 +1,6 @@
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
+
+The Slovakian NSA reports a financial bonus for the ANSP of € 545 025 for en route capacity performance in 2025.
+
+A local incentive target was set at 0.17 min/flight, for all causes of delay, and an actual value of 0.08 mins/flight was achieved.
+

@@ -1,0 +1,3 @@
+## TRM1.5. Vertical flight efficiency of the climb (PI#8) {#trm1.5.-vertical-flight-efficiency-of-the-climb-pi8 .Heading-2-TZ}
+
+Compared to the overall RP4 average value (34.8 seconds per flight), average times flown level during climb are on average 10.4 seconds per flight higher in Switzerland. The highest average time flown level during climb happens at Zurich (LSZH) (53.2 seconds per flight), while the lowest happens at Geneva (LSGG) (37.3 seconds per flight).

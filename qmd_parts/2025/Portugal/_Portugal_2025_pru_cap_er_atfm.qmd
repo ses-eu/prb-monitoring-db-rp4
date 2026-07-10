@@ -1,0 +1,10 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Portugal (Continental) had 762k flights in 2025, up from 723k flights in 2024.
+
+- Nav Portugal applied en route ATFM regulations resulting in 209k minutes of delay, a reduction from the 283k minutes in 2024.
+
+- As part of the strategic traffic re-orientation programme (S25/NTDM), and the use of RN scenarios during Capacity & Weather Based Operations, both operated by the Network Manager, \<1k minutes of delay originating in Portugal were re-attributed **to other ANSPs.**
+
+- When the above post-operations re-attribution is factored in, the total en route delay for Nav Portugal in 2025 was 209k minutes in 2025 down from 282k minutes in 2024.
+

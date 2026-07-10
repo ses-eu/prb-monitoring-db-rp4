@@ -1,0 +1,8 @@
+## **2.2.2.F. PI #6**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+While the implementation of the Point Merge System (PMS) at Lisbon Airport has successfully delivered a significant increase in airspace capacity and enhanced controller workload predictability, it has inherently affected horizontal flight efficiency. This is reflected in an increase in Eurocontrol's ASMA metric, driven by the longer trajectories required for sequencing within the Point Merge structure. To mitigate this operational trade-off, NAV Portugal is actively developing targeted airspace restructuring projects aimed at optimizing these flight profiles and improving ASMA performance.
+
+### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+

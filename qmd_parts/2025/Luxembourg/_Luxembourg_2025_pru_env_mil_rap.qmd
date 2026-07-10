@@ -1,8 +1,0 @@
-## ERT1.2. Rate of planning via available airspace structures (PI#10)
-
-BELGIUM and LUXEMBOURG report that:
-
--   The ratio of planning via available airspace structures is **8%** (via available restricted and segregated airspaces)
-
--   The ratio of planning via available airspace structures is **51%** (via available conditional routes -- CDR)
-

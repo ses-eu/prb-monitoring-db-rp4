@@ -1,0 +1,6 @@
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+
+In the first year of RP4, with an ATFM Arr delay of 0.01 min/arr, Sweden **achieved the national target** of 0.35 min/arr.
+
+However, the pivot value for incentives calculation is limited to CRSTMP delay causes, and was set at also 0.035 min/arr. As CRSTMP delay was null (i.e. no CRSTMP delay in 2025), **the maximum bonus of 1.0%** applies. As such, the NSA computes a bonus of SEK 2,212,080.95.
+

@@ -1,0 +1,58 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -8.4% (or -1 005.43 HUF2022, -2.58 €2022) lower than the planned DUC. This results from the combination of significantly higher than planned TSUs (+9.5%) and slightly higher than planned en route costs in real terms (+0.3%, or +149.4 MHUF2022, +0.4 M€2022).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+9.5%) falls outside the ±2% dead-band but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are +0.3% (+0.4 M€2022) higher than planned. This is the result of higher costs for the NSA/EUROCONTROL (+4.5%, or +0.5 M€2022) and the MET service provider (+0.4%) and slightly lower costs for the main ANSP, HungaroControl (-0.1%, or -0.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (HUNGAROCONTROL) AT CHARGING ZONE LEVEL**
+
+The slightly higher than planned en route costs in real terms for HungaroControl in 2025 (-0.1%, or -0.1 M€2022) are mainly due to higher than planned actual inflation index (+1.0 p.p), since, in nominal terms, the costs were above the plan (+1.3%). Based on the additional information to the en route reporting tables this results from:
+
+- Significantly higher than planned staff costs (+9.2%), mainly due to the implementation of operational measures aimed at capacity restoration, expansion and airspace flexibility, which required personnel-related expenditures that exceeded the plan. In addition, pay rises exceeded the plan in nominal terms for both ATCO and non-ATCO positions as a result of inflation that was slightly higher than expected.
+
+- Lower than planned other operating costs (-3.7%), due to: more favourable air traffic control liability insurance; favourable changes in the energy market; lower than planned manufacturer support costs, shifts in planned investments impacting IT services expenditure; lower than expected use of ATCO mobility.
+
+- Significantly lower than planned depreciation (-13.2%), mainly due to later than planned implementation of some investments and some assets being put into operation later than planned.
+
+- Significantly lower than planned cost of capital (-16.8%), due to a lower than planned average regulatory asset base that primarily reflects some fixed assets under construction being behind schedule.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Hungary provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+"*Based on actual costs, there was an 8% decrease in the real unit cost value in ENR compared to DUC (which represents better-than-planned performance). This is because the nominal cost level increased by 2%, but traffic was 9% higher, resulting in a unit cost lower than planned.*"
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+"*Staff costs: Staff costs were driven primarily by significant efforts to restore and increase capacity. Thanks to numerous measures outlined in the PRC capacity performance analysis as well, capacity performance improved dramatically in 2025. The implementation of operational measures aimed at capacity restoration, expansion, and airspace flexibility required personnel-related expenditures that exceeded the plan.*
+
+*In addition, pay rises exceeded the plan in nominal terms for both ATCO and non-ATCO positions as a result of inflation that was slightly higher than expected in PP.*
+
+*OPEX: More favourable air traffic control liability insurance; further favourable changes in the energy market since the performance plan was drawn up; lower-than-planned manufacturer support costs, IT services partly related to some shifts in investments within the PP; we planned for the ATCO mobility measure in this category, while its actual costs consist largely of staff costs. As declared in PP, unspent ATCO mobility costs will be reimbursed to airspace users.*
+
+*Cost savings were offset to a small extent by extra payment to the government based on a government decree applicable to all state-owned companies.*
+
+*Depreciation: Some investment items are being implemented slightly later than planned within the PP, and certain assets have been put into operation later than planned in the PP. These effects result in depreciation that is below plan.*
+
+*Cost of capital: Lower than planned average regulatory asset base that is primarily due to the fact that fixed assets under construction are behind schedule within the reference period, as noted earlier.*"
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (HUNGAROCONTROL) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

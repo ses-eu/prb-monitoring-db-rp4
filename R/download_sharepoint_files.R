@@ -14,6 +14,7 @@ if (!exists("params_table")) {
 year_download <- "2025"
 root_input_folder <- "G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/monitoring_files/"
 
+
 input_folder_word <- paste0(
   root_input_folder,
   year_download,
@@ -91,13 +92,14 @@ if (Sys.info()["user"] == "ncashman") {
 
 stop()
 
+
 # PRU files ----
 pru_kpi <- c(
   # "environment-ENR",
-  # "environment-CIVMIL",
-  # "environment-TRM",
-  # "capacity-ENR",
-  # "capacity-TRM",
+   "environment-CIVMIL",
+   "environment-TRM",
+   "capacity-ENR",
+   "capacity-TRM",
   "cost-efficiency-CEF",
   NULL
 )
@@ -140,3 +142,4 @@ download_pru_analysis_files <- function(kpi) {
 }
 
 purrr::walk(pru_kpi, download_pru_analysis_files)
+

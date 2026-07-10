@@ -1,0 +1,8 @@
+## **2.2.2.C. PI #3**
+
+### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+
+The ANSP has implemented measures aimed at improving the vertical flight efficiency of actual en-route trajectories, including the application of Flexible Use of Airspace (FUA) principles, enhanced civil-military coordination, and operational procedures designed to minimise unnecessary level-offs and flight level changes. Moreover, within the framework of the ATHENIAN Project, which includes the redesign of the terminal airspace (TMA) and the implementation of new Performance-Based Navigation (PBN) procedures, dedicated arrival and departure routes are planned to be developed in order to improve traffic flows and enhance flight efficiency. Furthermore, as part of the national plan for the implementation of PBN procedures at all Greek airports by 2030, the ANSP will examine the development of routes designed to facilitate uninterrupted climb and descent operations, thereby reducing the need for level-offs and contributing to improved vertical flight efficiency.
+
+These measures are continuously monitored and assessed by the ANSP to evaluate their effectiveness and identify opportunities for further optimisation. The NSA conducts regular oversight through the review of performance data, annual performance reports, and dedicated performance meetings with the ANSP.
+

@@ -1,0 +1,4 @@
+## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+
+Compared to the overall RP4 average value (149.2 seconds per flight), average times flown level during descent are on average 13.3 seconds per flight lower in Italy. The highest average time flown level during descent happens at Albenga (LIMG) (309.9 seconds per flight), while the lowest happens at ITAF Trapani (LICT) (41.3 seconds per flight).
+

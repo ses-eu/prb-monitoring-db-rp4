@@ -1,0 +1,18 @@
+## TRM1.1. Additional time in taxi-out phase (PI#4) {#trm1.1.-additional-time-in-taxi-out-phase-pi4 .Heading-2-TZ}
+
+Six German airports are subject to the monitoring of this indicator: Frankfurt, Munich, Berlin, Düsseldorf, Hamburg and Cologne/Bonn. Variations stayed between plus/minus 5%, with the exception of Hamburg (+8%).
+
+Additional time in Frankfurt in 2025 decreased to 3.54 min/dep, 4% lower than 2024 value -- last year of RP3 -- of 3.67 min/dep.
+
+Additional time in Munich in 2025 increased to 3.39 min/dep, 5% higher than 2024 value -- last year of RP3 -- of 3.23 min/dep.
+
+Additional time in Berlin in 2025 was equal to 2.55 min/dep, very close to 2024 value -- last year of RP3 -- of 2.61 min/dep.
+
+Additional time in Düsseldorf in 2025 decreased to 2.62 min/dep, 5% lower than 2024 value -- last year of RP3 -- of 2.77 min/dep.
+
+Additional time in Hamburg in 2025 increased to 2.73 min/dep, 8% higher than 2024 value -- last year of RP3 -- of 2.52 min/dep.
+
+Additional time in Cologne-Bonn in 2025 decreased to 2.84 min/dep, 5% lower than 2024 value -- last year of RP3 -- of 2.98 min/dep.
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 3.61 min/dep.
+

@@ -1,0 +1,12 @@
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+
+- Croatia had 1 001k flights in 2025, up from 922k flights in 2024.
+
+- Croatia Control applied en route ATFM regulations resulting in 383k minutes of delay, a significant reduction from the 1 459k minutes in 2024.
+
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, there were 31k minutes of en route ATFM delay reattributed **to Croatia Control**; 3k minutes of delay originating in Croatia were re-attributed **to other ANSPs.**
+
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, there were 10k minutes of en route ATFM delay re-attributed **to Croatia**; 4k minutes of delay originating in Croatia, were re-attributed **to other ANSPs**.
+
+- When the above post-operations re-attributions are factored in, the total en route delay for Croatia Control in 2025 was 414k minutes in 2025 down from 1 390k minutes in 2024.
+

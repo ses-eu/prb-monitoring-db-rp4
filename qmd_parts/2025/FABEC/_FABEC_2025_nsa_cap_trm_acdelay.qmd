@@ -18,7 +18,7 @@ Performance improved in both Geneva and Zurich airports, no specific measures we
 
 French NSA:
 
-Regarding ATC part of the delays and related corrective measures, please do refer to 2.3.1.B. KPI#2.
+Regarding ATC part of the delays and related corrective measures, please do refer to Capacity KPI #2: Terminal and airport ANS ATFM arrival delay per flight.
 
 The values reflect the difficulties encountered in LFMN last year mainly due to staffing issues.
 

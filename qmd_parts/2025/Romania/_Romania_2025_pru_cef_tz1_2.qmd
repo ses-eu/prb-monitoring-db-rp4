@@ -1,0 +1,36 @@
+## **TZ1.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (1 833.08 RON or 363.80 €) is +0.1% higher than the nominal DUC (1 830.68 RON or 363.33 €). The difference between these two figures (+2.41 RON/SU or +0.48 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+37.29 RON/SU or +7.40 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+21.99 RON/SU or +4.36 €/SU);
+
+- the deduction of the traffic risk sharing adjustments (-62.86 RON/SU or -12.48 €/SU);
+
+- the deduction of the traffic adjustment (-4.92 RON/SU or -0.98 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (+12.71 RON/SU or +2.52 €/SU); and,
+
+- the deduction of other revenues (-1.80 RON/SU or -0.36 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is -0.05%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Romania provides the following information regarding the initiatives:
+
+"*The actual unit cost incurred by users in 2025 was RON 1,833.08/US, compared to the nominal DUC of RON 1,830.68/US. The difference of +RON 2.41/US reflects the net effect of adjustments: the inflation adjustment under Article 26 (RON +3.3 million), costs exempt from traffic risk sharing under Articles 28(4) to 28(6) (RON +2.4 million), and the capacity incentive bonus (RON +1.1 million), substantially offset by the traffic risk sharing adjustment under Article 27(2) to 27(5) (RON −5.5 million, reflecting the strong above-plan traffic performance of +7.48%), the Article 27(8) adjustment (RON −0.4 million), and other revenues (RON −0.2 million). The traffic outperformance in TCZ1 thus generated a significant return to airspace users through the TRS mechanism.*
+
+*ROMATSA\'s ongoing investments in capacity at Bucharest Otopeni are expected to support continued traffic growth and unit cost reduction through the remainder of RP4*."
+
+### **TZ1.2.3. NOTES** 
+
+#### **TZ1.2.3.1. NOTE 1**
+
+#### **TZ1.2.3.1. NOTE 2**
+

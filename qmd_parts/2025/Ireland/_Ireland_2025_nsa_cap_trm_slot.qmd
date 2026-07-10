@@ -1,0 +1,6 @@
+## **2.3.2.A. PI #1**
+
+### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
+
+The ANSP monitors ATFM Slot adherence on an ongoing basis. The ANSP\'s performance on a national level shows a slight improvement on previous years which is largely driven by Dublin Airport. The performance at Cork and Shannon is slightly down on 2024.
+

@@ -1,0 +1,76 @@
+## 2.3.1.A. KPI #1
+
+### Identification and analysis of the reasons and circumstances resulting in the achieved level of actual performance of the en-route ATFM delay per flight KPI
+
+For DSNA, the main source of delay was the Marseille area, due to the reasons capacity and staffing followed by weather delay and some industrial action; severe convective weather during the summer season resulted in sustained and repeated capacity reductions. Traffic demand continued to increase in 2025, further amplifying the impact of weather-driven disruptions. Reims and Brest ACCs also contributed to the under performance due traffic increase, structural capacity limits (Reims ACC) and to the impact of the prepation of the implementation of 4-FLIGHT (ATCO training at Brest ACC).
+
+### Description of the adjustments to the capacity plan included in adopted performance plan
+
+For DSNA, NOP 2025-2029 was revised just before Summer, reducing planned capacity for Summer 2025.
+
+NOP 2026 shows that bottlenecks are identified and that DSNA ACCs have delays forecast higher than their reference values and identifies remedial measures that will have to be implemented. In addition, some new measures are under examination resulting from the recommendations of an audit run by Eurocontrol and requested by the French NSA regarding Marseille ACC 2025 bad performance. Identification of quick wins for Summer 2026 will be done and additional mid/long terms remedial measures may be identified and inserted in the future updated versions of RP4 yearly NOP or rollling NOP.
+
+### Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved
+
+According to the French NSA analysis, the main reason in 2025 for delays are linked to:
+
+- capacity and staffing issues in a first in a context of growing traffic (all French ACC have recovered 2019 traffic levels already in 2024, with additional increase in 2025 : the 8 highest traffic days ever where reached between 26th June and 1st August 2025 in France, with a peak 18th July with 11 963 IFR flights) and additional volatility, weather delays still very high in 2025, impact of industrial action (mainly for two days of strickes : 3rd &4th July 2025) even if limited by the benefits of the implementation since 2024 of a new law for ATC industrial action management (5% of 2025 all causes total delays);
+
+- In particular delays have been exceptionnally high at Marseille ACC due to the combined effects of capacity and staffing issues (lack of ATCOs), severe weather and industrial action impact during the Summer period, social tension resulting from the local implementation of the new social agreement signed in May 2024. The under performance has been particularly strong in the East area of Marseille ACC, leading to the launching by the French NSA of an audit run by Eurocontrol;
+
+- In addition Reims ACC the 2025 traffic increase since 2019 has been very high and the centre is also facing structural capacity issues: some Reims ACC elementary sectors are currently reaching their maximum capacity, which means that this has to be addressed not only with additional resources but through major structural changes (airspace redesign);
+
+- It should also be noted that Brest ACC has also capacity and staffing issues due to the preparation of the implementation of the new ATM system 4-FLIGHT (training of ATCOs) and to the traffic increase.
+
+Corrective and remedial measures were taken to address actual en route capacity underachievement, presented and discussed with the French NSA. The synthesis of these measures are presented below and detailed in a dedicated annex to this report (French capacity and environment remedial measures).
+
+With regard to this 2025 underperformance, a financial penalty will be applied to DSNA and deducted from the 2027 cost base to reduce the 2027 en route unit rate. See the incentive section for the detailed calculation.
+
+### Recommendations to the ANSP to rectify the situation
+
+A dedicated meeting has been organized with DSNA in order to gather both explanations and information about remedial measures already launched and identify potential additional measures that could be implemented by DSNA in 2026 and beyond to tackle non temporary capacity issues.
+
+The following recommendations / course of actions have been discussed and agreed with DSNA:
+
+- General remedial measures already identified, coordinated with the Network Manager and to be published in the NOP 2026-2029 for the 5 French ACC should be implemented as soon as possible;
+
+- A set of specific remedial measures put in place by DSNA or already planned in 2025 to mitigate identified non temporary issues at the French ACCs have been presented and discussed with the French NSA and are listed in the table below and detailed in a dedicated annex to this report (French capacity and environment remedial measures): the French NSA will be kept informed by DSNA of their timely implementation, of the expected benefit and of any potential issue in the implementation plan, and a follow-up meeting will be organized 2nd Semester 2026;
+
+- An analysis of potential risks on 2026 and beyond underperformance has been carried over and required potential remedial measures to address such a situation have been discussed and will also be closely monitored : in particular, the French NSA has launched in July 2025 an audit, run by Eurocontrol, regarding Marseille ACC 2025 under performance : the recommendations figuring in the final report will be analysed by the FR NSA and DSNA will be asked to provide feedback on potential quick-wins (in particular for Summer 2026), feasibility, implementation timeline and potential extention to other DSNA ACCs.
+
+A synthesis of all those remedial measures are presented below and detailed in the annex to this report already mentioned above.
+
+### Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why
+
+Main remedial measures already identified and under implementation by DSNA to remedy the current capacity result from the implementation of the DSNA 2030 Strategy, the new social agreement signed in May 2024, the potential outcome of the audit launched in July 2025 by the French NSA on Marseille ACC 2025 underperformance run by Eurocontrol.
+
+Those remedial measures mainly consist of:
+
+- the implementation of new densified rostering schemes,
+
+- the finalization of the implementation of 4-FLIGHT, the new DSNA ATM system in the 2 remaining ACCs (Brest and Bordeaux),
+
+- changes in ATCO initial and continuing training, transfer of sector FL 115-195 from ACCs to APPs,
+
+- implementation of the new social agreement (including massive ATCO recruitment plan),
+
+- new pretactical processes to address meteorological adverse conditions and reduce MET delays,
+
+- new law on industrial action management, implementation of dedicated systems providing nominative means of recording the presence of controllers on premises and at the CWP,
+
+- major French upper airspace redesign, identification of measures resulting from the recommendations provided in the Eurocontrol audit report on Marseille ACC underperformance (including quick-wins for Summer 2026).
+
+These measures are detailed in the dedicated annex attached to this report (French capacity and environment remedial measures).
+
+### Follow up of the remedial measures indicated in the previous monitoring report(s)
+
+The French NSA is kept informed of any development related to the implementation of capacity and environment remedial and corrective measures. In particular:
+
+- A follow-up meeting has been organized by the French NSA with DSNA operational directorate in May 2025 to check the implementation of the previous remedial measures;
+
+- The French NSA has been invited to the yearly DSNA strategic users\' consultation meetings held in 2025 (2) and in May 2026 which include an update on all strategic and operational measures taken by DSNA to improve capacity and environment performances, prepare Summer season and on the investment program;
+
+- The French NSA is also involved in the capacity planning process run by the Network Manager together with DSNA during Winter 2025/2026 in order to prepare the updated 2026-2029 European Network Operations Plan;
+
+- According to the French NSA review, all remedial measures indicated in the previous monitoring report have been implemented or are under implementation for mid/long terms ones. In addition, an additional action has been decided during Summer 2025 by the French NSA to launch an audit (run by Eurocontrol) on 2025 Marseille ACC underperformance.
+

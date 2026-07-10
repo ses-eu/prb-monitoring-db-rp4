@@ -1,0 +1,8 @@
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+
+Average ATFM arrival delay in Norway was 0.13 min/arr in 2025, the first year of RP4. The **performance has improved by 50% compared to 2024**, last year of RP3, when there were 0.26 min/arr.
+
+The 2025 result is the third lowest among RP4 states and was driven mostly by Oslo airport during January, when it suffered 1.09 min/arr due to weather issues, and February (0.15 min/arr). The rest of the year Oslo was below 0.10 min/arr, and the rest of Norwegian airports had very little or no ATFM arrival delay throughout 2025.
+
+The average for RP4 airports subject to monitoring of ATFM Arrival delay across Member States in 2025 was 0.97 min/arr.
+

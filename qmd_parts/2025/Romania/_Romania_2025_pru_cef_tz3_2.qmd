@@ -1,0 +1,38 @@
+## **TZ3.2. SECTION 2 -- ACTUAL UNIT COST INCURRED BY THE USERS**
+
+### **TZ3.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
+
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (3 025.05 RON or 600.37 €) is +5.4% higher than the nominal DUC (2 870.13 RON or 569.62 €). The difference between these two figures (+154.93 RON/SU or +30.75 €/SU) is due to:
+
+- the positive inflation adjustment resulting from higher than planned inflation (+65.14 RON/SU or +12.93 €/SU);
+
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+19.84 RON/SU or +3.94 €/SU);
+
+- the addition of the traffic risk sharing adjustments (+45.16 RON/SU or +8.96 €/SU);
+
+- the addition of the traffic adjustment (+4.65 RON/SU or +0.92 €/SU) for the costs not subject to traffic risk sharing;
+
+- the impact of financial incentives (+22.40 RON/SU or +4.45 €/SU); and
+
+- the deduction of other revenues (-2.27 RON/SU or -0.45 €/SU).
+
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is -10.6%.
+
+Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+
+### **TZ3.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
+
+The NSA of Romania provides the following information regarding the initiatives:
+
+"*The actual unit cost incurred by users in 2025 was RON 3,024.64/US, compared to the nominal DUC of RON 2,870.13/US. The difference of +RON 154.51/US reflects the net effect of adjustments: the inflation adjustment under Article 26 (RON +1.1 million), costs exempt from traffic risk sharing under Articles 28(4) to 28(6) (RON +0.3 million), the capacity incentive bonus (RON +0.4 million), and the traffic risk sharing adjustment under Article 27(2) to 27(5) (RON +788 thousand, reflecting the material traffic shortfall of −4.23% which exceeds the neutral band and triggers partial recovery for ROMATSA). Other revenues (RON −40 thousand) have a negligible effect.*
+
+*Given the structural nature of the factors depressing TCZ3 traffic --- military airspace restrictions in the Constanța and Tulcea areas --- and the absence of a recovery signal in early 2026 data, the cost-efficiency situation in TCZ3 requires close monitoring through the remainder of RP4. ROMATSA\'s cash conservation approach and avoidance of discretionary cost commitments are the primary mitigation measures currently in place*."
+
+\[It should be noted that the amount of AUCU indicated by the NSA in the extract cited above differs slightly from the amount reported in the submission of terminal reporting tables which serves as the basis of this analysis.\]
+
+### **TZ3.2.3. NOTES** 
+
+#### **TZ3.2.3.1. NOTE 1**
+
+#### **TZ3.2.3.1. NOTE 2**
+

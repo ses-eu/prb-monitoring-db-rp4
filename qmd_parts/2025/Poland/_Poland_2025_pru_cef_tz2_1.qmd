@@ -1,0 +1,105 @@
+## **TZ2.1. SECTION 1 -- UNIT COST**
+
+### **TZ2.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was -6.4% (or -72.45 PLN2022, -15.48 €2022) lower than the planned DUC. This results from the combination of higher than planned TNSUs (+4.8%) and lower than planned terminal costs in real terms (-1.8%, or -3.9 MPLN2022, -0.8 M€2022). It should be noted that the actual inflation index in 2025 was -3.4 p.p. lower than planned.
+
+### **TZ2.1.2. TERMINAL CHARGING ZONE 2 SERVICE UNITS**
+
+The difference between actual and planned TNSUs (+4.8%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ2.1.3. TERMINAL CHARGING ZONE 2 COSTS BY ENTITY**
+
+Actual real terminal costs are -1.8% (-0.8 M€2022) lower than planned. This is the result of lower costs for the main ANSP, PANSA (-0.9%, or -0.3 M€2022), the MET service providers (-4.9%, or -0.3 M€2022) and the other ANSPs (Bydgoszcz and Warmia-Mazury, -28.1%, or -0.2 M€2022) and higher costs for the NSA (+3.6%, or +0.1 M€2022).
+
+### **TZ2.1.4. TERMINAL CHARGING ZONE 2 COSTS FOR THE MAIN ANSP (PANSA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the slightly lower than planned terminal costs in real terms for PANSA in 2025 (-0.9%, or -0.3 M€2022) result from:
+
+- Higher than planned staff costs (+2.6%), mainly reflecting the impact of lower than planned inflation index (-3.4 p.p.) since staff costs were mostly consistent with the plan in nominal terms (-0.3%).
+
+- Significantly lower than planned other operating costs (-12.9%), mainly due to lower than planned costs for electricity, repairs, maintenance and support of IT systems as well as lower than planned expenses for meetings as well as "*some works initially planned to be financed under opex were executed as capex*".
+
+- Slightly higher than planned depreciation (+1.2%).
+
+- Lower than planned cost of capital (-2.5%) resulting from a combination of lower total asset base and slightly higher weighted average cost of capital (WACC) rate reflecting effective interest rate of debt.
+
+### **TZ2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Poland provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+***"PANSA:**\
+AUC was by 5,5% lower than DUC. The main reason for this difference was higher number of actual service units for the regional airports than the forecast (+4.8%). This is a factor beyond PANSA control. Actual costs in real terms were slightly lower than determined (-0,9%) what resulted from lower actual costs in nominal terms (-3.3%) -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 2 (other airports). Inflation index was also lower than forecasted (-3.4 pp.).\
+\
+**IMWM:**\
+The difference between the actual and planned costs of the en-route charges was 2.317.168 PLN and results from:\
+- lower personnel costs by 10,26% resulting from the lack of filling the vacancies planed in PSD.\
+- lower other operating costs by 7,22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4,97%, while the actual inflation level in 2025 according to EUROSTAT data was 3,30%.\
+- lower depreciation costs resulting above all from the postponement in the time of purchase process. Some of the planned investments for 2025 have been implemented as current costs and some have been postponed to 2026.\
+- higher cost of capital by 39,69% resulting from the recognition of costs related to interest on the balance in the cost of capital in connection with the settlement concluded with PANSA regarding the terms of repayment of the amount constituting the balance between the contractual remuneration and the regulatory remuneration, arising by December 31, 2024. The settlement was concluded on July 30, 2025 and was not planned in the PSD.\
+\
+**Airport Meteo:**\
+ANSP has noted AUC equal to 7.86 PLN (in 2022 prices), while the DUC was equal to 7.64 PLN (in 2022 prices), which resulted in not meeting the cost-efficiency target.\
+\
+**Warmia i Mazury:**\
+WiM\'s AUC was equal to 18.22 PLN2022 which was a lower value than DUC (18.35 PLN2022). This means that the target has been met. The actual costs in nominal terms were slightly higher (3%) than planned.\
+\
+**PL Bydgoszcz:**\
+AUC level (16.71 PLN) was lower than DUC level (25.68 PLN), which means that the ANSP has met the target, therefore no further comment has to be made."*
+
+### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"**PANSA:***
+
+*information about differences between actual and determined costs for the terminal charging zone 2 (other airports) per cost category listed in the reporting tables is presented in additional information to terminal charges' reporting tables for the charging zone 2 (other airports).*
+
+***Airport Meteo:***
+
+*The total actual costs in nominal terms were 5% higher than determined. As far as staff costs (-68%) and other operating costs (+119%) are concerned, these discrepancies should be analysed together, as the most important part of both of them are the costs of MET specialists, whose duties are realised by both own staff (employees) and external, self-employed contractors (B2B contracts). ANSP has introduced in the last months of 2024 the two-person MET shifts, which has been continued for the whole 2025, in order to increase the safety of ANS provisions, decrease the fatigue of MET specialists and apply to the standards of MET functioning at other airports in Poland. As CAA has not accepted the cost increase stemming from this development at the stage of PP RP4 preparation, AM has noted overspending and these additional costs have been funded by the Airport Meteo\'s savings (differences between actual and determined costs) from the RP3. This approach has been widely accepted and supported by the personnel, who also agreed to minimize the size of previously negotiated wage increases in order to provide safe and cost-efficient services in the existing environment. It is expected, that the costs of this nature will continue to be higher than determined, which will be reflected both in staff cost (employees) and other operating costs (B2B specialists contractors). Depreciation costs were significantly higher than expected (+84%, especially as a result of speeded-up purchase of company and service vehicles) and cost of capital was lower (-26%), mainly due to the fact that AM has signed the MET services agreement with PANSA, which is regulating the scope of financial settlements, with more favourable terms than previously expected.*
+
+***Warmia i Mazury:***
+
+*The staff costs were similar to the plan (+6%), which was caused by the increase of the meteorologists renumeration expenses, as well as working hours due to increase in shifts\' staffing and in the same time slight decrease in the AFIS personnel expenses, due to lower amount of shifts.*
+
+*The level of actual other operating costs was slightly higher than the determined values (+10%), yet WiM has faced increase in equipment and energy costs, as well as external staffing (B2B contracts) comparing to the plan. At the same time, ANSP managed to find savings in network maintenance services, cleaning services, taxes and fees, trainings and indirect costs.*
+
+*In case of depreciation, its level of execution was below the projected values (-42%), mainly due to the delay in purchase of the lightning detector, which was finally executed in the first months of 2026. What is more, the COM investments that were planned initially for the last months of 2024 were either delayed or reduced in expenses.*
+
+*As far as cost of capital is concerned, its values were lower than determined (-17%) due to delays in assets purchase and also due to lower net current assets, which was the consequence of signing agreement with PANSA resolving the settlements of navigation charges for MET services with improved terms comparing to the ones initially expected.*
+
+***PL Bydgoszcz:***
+
+*ANSP has noted lower actual costs than determined, in all natures. In case of staff costs, the difference was equal to -22% and mainly due to AFIS. The number of duties performed by this service was lower than planned, due to time shifts of main ATS provider at EPBY (PANSA) and lower than expected level of operations at this airport. Similar level of changes were noted in other operating costs (-20%), which was the consequence of the fact that PL Bydgoszcz has changed the form of cooperation with MET personnel, from B2B contracts with external companies to its own specialists and also lower activity of AFIS (described above) and therefore lesser usage of the B2B contractors. What is more, PL Bydgoszcz was forced to postpone, due to external factors and the delivery issues, the purchase of the new AWOS sensors, which was finally realized in the 2026Q1. In case of depreciation (-61%), PL Bydgoszcz is still postponing the most significant investment (TWR EPBY modernization) due to issues linked with the military stakeholder. The other reason of significant discrepancy was the delay in purchasing the specialist vehicle due to the shortages on market. Regarding CoC (-85%), the noted difference was the consequence, above all, of the lower investment activity and more favourable terms of agreement signed with PANSA than initially planned concerning the timeline of settlements of the navigation charges for MET services."*
+
+### **TZ2.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (PANSA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"Since the target was met, no corrective measures were required."*
+
+ANSPs report the implementation of the following actions:
+
+*"**PANSA:***
+
+*As the target was met there was no need to undertake any measures to rectify the situation. However, the comments presented in the ER sheet of this monitoring report related to inflation and cost evolution are also valid for terminal services.*
+
+***Airport Meteo:***
+
+*Apart from the conscious decision related to the increase of personnel working hours, ANSP is constantly looking for savings in other areas. The additional investment costs incurred in 2025, largely linked to the speeded-up purchase of several assets should be levelled in the next years as the timeline of depreciation and cost of capital has been moved.*
+
+***Warmia i Mazury:***
+
+*WiM is aware of the lower results from the investment activity. These differences should be mitigated in the following years, as current internal estimations of the future purchases of assets indicate increase in investment costs that will allow ANSP to reach the levels of determined values for the whole RP4.*
+
+***PL Bydgoszcz:***
+
+*ANSP is constantly trying to implement its most significant investment, which is TWR EPBY modernization. Due to external factors (issues with the military stakeholder), PL Bydgoszcz is currently analyzing different approach, consisting of an alternative construction and solution, which will increase the safety of ANS provision."*
+
+### **TZ2.1.8. NOTES**
+
+#### **TZ2.1.8.1. NOTE 1**
+
+#### **TZ2.1.8.2. NOTE 2**
+

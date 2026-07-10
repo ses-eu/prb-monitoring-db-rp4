@@ -1,0 +1,8 @@
+## 2.2.2.B. PI #2
+
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
+
+See 2.2.1.A KPI #1 and 2.2.2.A PI #1 for major changes implemented by the ANSPs. Measures that improve KEA&KEP generally also improve KES.
+
+For information on the monitoring of the effectivenesss on performance, see 2.2.2.A PI #1.
+

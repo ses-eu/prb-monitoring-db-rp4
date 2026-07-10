@@ -1,0 +1,6 @@
+## TRM1.1. Additional time in taxi-out phase (PI#4) {#trm1.1.-additional-time-in-taxi-out-phase-pi4 .Heading-2-TZ}
+
+The additional time in 2025 resulted in 2.53 min/dep, very close to the 2024 value -- last year of RP3 -- of 2.60 min/dep (*using the new methodology).*
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 3.61 min/dep.
+

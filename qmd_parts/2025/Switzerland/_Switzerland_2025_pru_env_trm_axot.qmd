@@ -1,0 +1,8 @@
+## TRM1.1. Additional time in taxi-out phase (PI#4) {#trm1.1.-additional-time-in-taxi-out-phase-pi4 .Heading-2-TZ}
+
+The additional time in Zurich in 2025 decreased to 3.30 min/dep, 4% lower than 2024 value -- last year of RP3 -- of 3.43 min/dep (*using the new methodology*).
+
+The additional time in Geneva in 2025 increased to 3.76 min/dep, 14% higher than 2024 value -- last year of RP3 -- of 3.29 min/dep (*using the new methodology*).
+
+The average for RP4 airports subject to monitoring of this indicator across Member States in 2025 was 3.61 min/dep.
+
