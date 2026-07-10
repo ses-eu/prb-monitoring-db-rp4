@@ -272,7 +272,7 @@ replace_headings(path, cap_er_nsa_titles_tput)
 
 :::
 
-`r if (params$country == params$rp_full | params$country == "MUAC") "::: {.content-hidden}"`
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on ATCOs in operations
@@ -299,7 +299,7 @@ replace_headings(path, cap_er_nsa_titles_atco)
 
 ::::
 :::
-`r if (params$country == params$rp_full | params$country == "MUAC") ":::"`
+`r if (params$country == params$rp_full) ":::"`
 
 `r if (params$country == "FABEC") ":::"`
 
