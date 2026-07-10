@@ -29,9 +29,22 @@ investments <- FALSE
 # set test_check to FALSE to create production-ready pages with hyperlinks functional within the sesperformance.eu site
 test_check <- TRUE
 
-out_format <- 'web' # set your output format here: 'pdf' or 'web'
+out_format <- 'pdf' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
+<<<<<<< HEAD
+all_states <- TRUE # go below after lists below if you want to to manipulate the state list
+single_state <- 'Sweden' # set your one country/stakeholder here (Home for home page)
+
+# Set to TRUE to refresh pru analysis and/or nsa input
+update_nsa_input <- FALSE
+update_pru_analysis <- FALSE
+if (update_pru_analysis) {
+  KPI <- c(
+    # 'cef',
+    # 'cap_ert',
+    # 'cap_trm',
+=======
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
 single_state <- 'Austria' # set your one country/stakeholder here (Home for home page)
 
@@ -44,6 +57,7 @@ if (update_pru_analysis) {
     'cef',
     'cap_ert',
     #'cap_trm',
+>>>>>>> 710cd60471ce17f69575debaceae813f135bce23
     # 'env_ert',
     #'env_mil',
     #'env_trm',
