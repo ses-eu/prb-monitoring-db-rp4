@@ -1,6 +1,6 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+## ERT1.1. En route ATFM delay per flight (KPI#1)
 
-- Cyprus had 435k flights in 2025, up from 379k flights in 2024.
+-   Cyprus had 435k flights in 2025, up from 379k flights in 2024.
 
-- DCAC Cyprus applied en route ATFM regulations resulting in 12k minutes of delay, an increase from the 2k minutes in 2024.
+-   DCAC Cyprus applied en route ATFM regulations resulting in 12k minutes of delay, an increase from the 2k minutes in 2024.
 
