@@ -1,8 +1,8 @@
-## ERT1.2. Rate of planning via available airspace structures (PI#10) {#ert1.2.-rate-of-planning-via-available-airspace-structures-pi10 .Heading-2-ER}
+## ERT1.2. Rate of planning via available airspace structures (PI#10)
 
 POLAND reports that:
 
-- The ratio of planning via available airspace structures is **30%** (via available restricted and segregated airspaces)
+-   The ratio of planning via available airspace structures is **30%** (via available restricted and segregated airspaces)
 
-- The ratio of planning via available airspace structures is **69%** (via available conditional routes -- CDR)
+-   The ratio of planning via available airspace structures is **69%** (via available conditional routes -- CDR)
 

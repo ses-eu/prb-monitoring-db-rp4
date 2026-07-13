@@ -1,4 +1,4 @@
-## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+## TRM1.4. Air traffic control pre-departure delay (PI#2)
 
 Warsaw is the only Polish airport subject to the monitoring of this indicator. Delay in 2025 increased to 0.99 min/dep, 34% above the value of 2024 -- last year of RP3 -- of 0.74 min/dep.
 

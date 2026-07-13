@@ -755,12 +755,15 @@ replace_headings(path, env_er_nsa_titles_kea)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_er_nsa_titles_kep)
+mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_kep))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
@@ -774,12 +777,15 @@ replace_headings(path, env_er_nsa_titles_kep)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_er_nsa_titles_kes)
+mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_kes))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
@@ -793,12 +799,15 @@ replace_headings(path, env_er_nsa_titles_kes)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_er_nsa_titles_vfe)
+mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_vfe))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
@@ -1025,13 +1034,15 @@ cat(make_quarto_latex_table_2level(
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_mil_nsa_titles_ersa)
-
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_ersa))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 \needspace{3\baselineskip}
@@ -1044,13 +1055,15 @@ replace_headings(path, env_mil_nsa_titles_ersa)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1) 
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_mil_nsa_titles_rap)
-
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rap))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 \needspace{3\baselineskip}
@@ -1063,12 +1076,15 @@ replace_headings(path, env_mil_nsa_titles_rap)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, env_mil_nsa_titles_rau)
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rau))
+if(is.null(mytext1) & is.null(mytext2)){cat(cat("No comment provided."))} else {cat(mytext2)}
 
 ``` 
 
@@ -1177,11 +1193,15 @@ replace_headings(path, character(0))
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
+
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, cap_er_nsa_titles_above)
+mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_above))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
@@ -1195,12 +1215,15 @@ replace_headings(path, cap_er_nsa_titles_above)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, cap_er_nsa_titles_tput)
+mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_tput))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
@@ -1226,12 +1249,15 @@ replace_headings(path, cap_er_nsa_titles_tput)
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
 
+cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, cap_er_nsa_titles_atco)
+mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_atco))
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 
 ``` 
 
