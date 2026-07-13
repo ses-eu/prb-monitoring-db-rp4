@@ -1,0 +1,50 @@
+## **TZ2.1. SECTION 1 -- UNIT COST**
+
+### **TZ2.1.1. AUC VS. DUC**
+
+In 2025, the terminal AUC was +7.6% (or +23.07 €2022) higher than the planned DUC. This results from the combination of higher than planned terminal costs in real terms (+4.8%, or +0.8 M€2022) and lower than planned TNSUs (-2.6%).
+
+### **TZ2.1.2. TERMINAL SERVICE UNITS**
+
+The difference between actual and planned TNSUs (-2.6%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting loss of terminal revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **TZ2.1.3. TERMINAL COSTS BY ENTITY**
+
+Actual real terminal costs are +4.8% (+0.8 M€2022) higher than planned. This is the result of higher cost for the main ANSP, ANA (+4.8%, or +0.8 M€2022).
+
+### **TZ2.1.4. TERMINAL COSTS FOR THE MAIN ANSP (ANA) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the terminal reporting tables, the higher than planned terminal costs in real terms for ANA in 2025 (+4.8%, or +0.8 M€2022) result from:
+
+- Significantly higher than planned staff costs (+6.6%), mainly due to fewer staff retiring than planned while "*ANA estimated the average age of retirement at 59 years for staff working on shifts and 62 for other staff*".
+
+- Slightly lower than planned other operating costs (-1.3%).
+
+- Significantly higher than planned depreciation (+6.1%), mainly due to higher CNS-related depreciation costs. This reflects the activation in 2025 of certain projects, including investment costs stemming from 2018 onwards, as well as the activation of 2025 investments during the year rather than only at year-end.
+
+### **TZ2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Luxembourg provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Please note that all figures are still subject to audit. Actual costs are higher than DC by 4,8%. As in addition traffic was lower by 2,6%, this leads to 7,6% higher UC."*
+
+### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"Staff costs were slightly higher than initially forecasted for the RP4 performance plan. ANA had estimated an average age of retirement at 59 years for staff working on shifts (ATCOs, etc\...) and 62 for other staff. Since the departure rate in 2025 did not materialise as forecasted, the overall staff costs have increased by 844kEUR."*
+
+*"Depreciation costs are higher, as some projects have been activated during 2025 (investment costs stemming from 2018 onwards, where the activation was not foreseen by now) and as investments from 2025 were activated during the year instead of only at the end of the year."*
+
+### **TZ2.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ANA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA did not provide any recommendation in the NSA 2025 Monitoring Report.
+
+The ANSP (ANA) did not report on any action in the NSA 2025 Monitoring Report.
+
+### **TZ2.1.8. NOTES**
+
+#### **TZ2.1.8.1. NOTE 1**
+
+#### **TZ2.1.8.2. NOTE 2**
+

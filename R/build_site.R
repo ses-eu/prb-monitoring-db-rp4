@@ -32,12 +32,12 @@ test_check <- TRUE
 out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
-all_states <- TRUE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Austria' # set your one country/stakeholder here (Home for home page)
+all_states <- FALSE # go below after lists below if you want to to manipulate the state list
+single_state <- 'Luxembourg' # set your one country/stakeholder here (Home for home page)
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
-update_pru_analysis <- FALSE
+update_pru_analysis <- TRUE
 if (update_pru_analysis) {
   KPI <- c(
     'cef',
@@ -89,10 +89,10 @@ if (!all_states) {
   # state_list_prod <- c(state_list, "Home")  #add home to list
   # state_list_prod <- setdiff(state_list_prod, "FABEC") #remove state
   states_from <- c(1:31) # 1st number is the index of 1st state from which you want to generate
-  state_list_prod <- state_list_prod[states_from]
-  #state_list_prod <- c(
+  # state_list_prod <- c(
   #'Austria',
   #'Bulgaria',
+  # 'Belgium',
   #'Croatia',
   #'Cyprus',
   #'Czech Republic',
@@ -108,6 +108,7 @@ if (!all_states) {
   # 'Italy',
   # 'Latvia',
   # 'Lithuania',
+  # 'Luxembourg',
   #'Malta',
   #'Netherlands',
   #'Norway',
@@ -119,6 +120,7 @@ if (!all_states) {
   # 'Spain',
   #   'Sweden',
   #  'Switzerland'
+  # NULL
   # )
 }
 

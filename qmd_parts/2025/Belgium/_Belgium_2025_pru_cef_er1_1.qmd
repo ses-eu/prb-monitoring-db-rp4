@@ -1,0 +1,76 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -5.9% (or -5.72 €2022) lower than the planned DUC. This results from the combination of lower than planned en route costs in real terms (-4.5%, or -11.7 M€2022) and higher than planned TSUs (+1.5%).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+1.5%) falls inside the ±2% dead-band. Hence, the gain of additional en route revenues is kept by the ANSPs.
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -4.5% (-11.7 M€2022) lower than planned. This is the result of lower costs for the main ANSP, skeyes (-6.7%, or -10.7 M€2022), the other ANSPs (ANA and MUAC, -0.9%, or -0.8 M€2022), the NSA/EUROCONTROL (-1.3%, or -0.2 M€2022) and the MET service provider (-3.8%).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (SKEYES) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the significantly lower than planned en route costs in real terms for skeyes in 2025 (-6.7%, or -10.7 M€2022) result from:
+
+- Slightly lower than planned staff costs (-0.7%), mainly due to lower than foreseen salary increases, including indexation and merit increases.
+
+- Significantly lower than planned other operating costs (-27.6%), mainly due to lower than planned maintenance costs and external support costs.
+
+- Lower than planned depreciation (-3.2%), mainly due to lower depreciation costs for IT infrastructure network, systems and data centres, as well as IT communication radio assets.
+
+- Significantly lower than planned cost of capital (-8.4%), mainly due to a lower than planned asset base.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"Overall, actual performance at charging zone level is favourable compared to budget, with underspending in operating costs and lower capital costs in both skeyes and MUAC largely offsetting slightly higher staff costs, while delays in investments have contributed to lower depreciation and cost of capital".*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*" ANSP: skeyes*
+
+*1.1 Staff costs: The staff costs for En route are slightly below the budget due to lower than foreseen salary increase (index, merit).*
+
+*1.2 Other operating costs: Other operating costs represent 72% of the budget foreseen in 2025. The underspent is driven by lower maintenance and lower external support costs versus budget.*
+
+*1.3 Depreciation: The depreciation costs are 339k€ below budget: 97% of planned costs have materialized. We have lower costs for IT infra network, system & datacenter as well as IT com radio.*
+
+*1.4 Cost of capital: The cost of capital is lower than foreseen in the budget, mainly due to a lower fixed asset base*
+
+*ANSP MUAC*
+
+*1.1 Staff costs: for MUAC BE LUX in 2025 (€69.8M) were slightly above the RP4 plan (+1.3%), mainly due to higher salary indexation, partly offset by fewer FTEs. Compared to 2024, staff costs decreased by 8.9% due to the absence of a one off reward paid in 2024.*
+
+*1.2 Other operating costs: were 15.9% below plan thanks to cost containment, though slightly higher than 2024 due to increased spending on systems, security, and maintenance.*
+
+*1.3 Depreciation: was lower than planned due to delays in investments but remained close to 2024 levels.*
+
+*1.4 The cost of capital: was below plan due to lower interest rates but increased versus 2024 due to higher borrowing linked to renewed investments.*
+
+*ANSP: ANA*
+
+*Staff costs were slightly higher than initially forecasted for the RP4 performance plan. ANA had estimated an average age of retirement at 59 years for staff working on shifts (ATCOs, etc\...) and 62 for other staff. Since the departure rate in 2025 did not materialise as forecasted, the overall staff costs have increased by 500kEUR.*
+
+*Depreciation costs are higher, as some projects have been activated during 2025 (investment costs stemming from 2018 onwards, where the activation was not foreseen by now) and as investments from 2025 were activated during the year instead of only at the end of the year."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (SKEYES) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
+
+*"Lack of time between the delivery of the data from the ANSPs and the deadline for submission did not allow an analysis of the situation".*
+
+No action is reported by skeyes in the NSA 2025 Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+
