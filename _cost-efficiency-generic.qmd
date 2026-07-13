@@ -160,11 +160,14 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                as.character(year_report),
+                cz_short, 
+                czindex)
 
 replace_headings(path, cef_titles_s1)
-
-# if (file.exists(path)) {cat(sprintf("{{< include %s >}}", path))}
 ``` 
 
 :::
@@ -220,7 +223,12 @@ replace_headings(path, cef_titles_s1)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                as.character(year_report),
+                cz_short, 
+                czindex)
 
 replace_headings(path, cef_titles_s2)
 
@@ -279,7 +287,12 @@ replace_headings(path, cef_titles_s2)
 #| echo: false
 #| output: asis
 
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),country,country, as.character(year_report),cz_short, czindex)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
+                as.character(year_report),
+                cz_short, 
+                czindex)
 
 replace_headings(path, cef_titles_s3)
 
