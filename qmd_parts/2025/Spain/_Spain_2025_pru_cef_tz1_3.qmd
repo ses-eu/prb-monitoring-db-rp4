@@ -1,0 +1,23 @@
+## **TZ1.3. SECTION 3 -- REGULATORY RESULT**
+
+### **TZ1.3.1. ENAIRE NET GAIN/LOSS ON ACTIVITY IN THE SPAIN TERMINAL CHARGING ZONE IN 2025**
+
+ENAIRE reported a net gain of +18.0 M€, as a combination of a gain of +14.9 M€ arising from the cost sharing mechanism, with a gain of +3.1 M€ arising from the traffic risk sharing mechanism. See also Note 1 below.
+
+### **TZ1.3.2. ENAIRE OVERALL REGULATORY RESULT (RR) ON ACTIVITY IN THE TERMINAL CHARGING ZONE** 
+
+Ex-post, the overall RR, taking into account the net gain from the terminal activity mentioned above (+18.0 M€) and the actual RoE (+2.1 M€), amounts to +20.1 M€ (15.7% of the terminal revenues). The resulting ex-post rate of return on equity is 76.7%, which is much higher than the 8.2% planned in the PP. See also Notes 1 and 2 below.
+
+### **TZ1.3.3. NOTES**
+
+#### **TZ1.3.3.1. NOTE 1**
+
+ENAIRE only charges a portion of terminal determined costs (approximately 20%) to the airspace users through terminal navigation charges, while the rest is financed through the income relating to contractual arrangement between ENAIRE and the airport operator Aena.
+
+Furthermore, as is the case for all charging zones, the gain/loss in respect to ENAIRE activity in the Spanish terminal charging zone in 2025 is derived using the data reported in Table T2A. However, ENAIRE only retains a portion of this calculated result (approximately 20%, which is attributable to the \"*final approach determined costs*\").
+
+For these reasons, the gain/loss on activity in 2025 as well as RR presented here for ENAIRE should be interpreted with caution.
+
+#### **TZ1.3.3.2. NOTE 2**
+
+The ex-post RR does not take into account the application of a lower unit rate in 2025 as per Art. 29.6 (the loss in revenues corresponds to -35.4 M€ for 2025).

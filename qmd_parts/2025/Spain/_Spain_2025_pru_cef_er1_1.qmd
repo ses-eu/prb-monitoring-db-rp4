@@ -1,0 +1,48 @@
+## **ER1.1. SECTION 1 -- UNIT COST**
+
+### **ER1.1.1. AUC VS. DUC**
+
+In 2025, the en route AUC was -7.6% (or -4.18 €2022) lower than the planned DUC. This results from the combination of lower than planned en route costs in real terms (-4.0%, or -29.8 M€2022) and higher than planned TSUs (+3.9%).
+
+### **ER1.1.2. EN ROUTE SERVICE UNITS**
+
+The difference between actual and planned TSUs (+3.9%) falls outside the ±2% dead-band, but does not exceed the ±10% threshold foreseen in the traffic risk sharing mechanism. The resulting gain of additional en route revenues is therefore shared between the ANSP and the airspace users (see the main ANSP regulatory result).
+
+### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
+
+Actual real en route costs are -4.0% (-29.8 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ENAIRE (-4.2%, or -26.8 M€2022), the other ANSP (EA (Continental), -7.1%, or -2.1 M€2022), the NSA/EUROCONTROL (-1.9%, or -0.9 M€2022) and the MET service provider (-0.2%, or -0.1 M€2022).
+
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (ENAIRE) AT CHARGING ZONE LEVEL**
+
+Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for ENAIRE in 2025 (-4.2%, or -26.8 M€2022) result from:
+
+- Significantly lower than planned staff costs (-5.1%), mainly resulting from a "*significant decrease in "Other Staff Related Benefits", due to lower-than-expected allocations to provisions related to the Special Active Reserve (RAE) and, to a lesser extent, the Active Reserve (RA)*" (as of the RP4 these provisions are treated as pension costs). This decrease was only partly offset by a higher than expected (2.5%) salary increase approved by the Government, higher ATCO costs due to the implementation of a new unilateral, non consolidated incentive under the "*Summer Plan 2025*", implemented to address higher than expected traffic levels and increased overtime requirements.
+
+- Significantly lower than planned other operating costs (-10.7%), reflecting a more efficient resource use and lower-than-expected expenditure across several operating categories, including certain professional services, communications, insurance and energy related items.
+
+- Lower than planned depreciation (-2.6%), driven by the later-than-expected entry into service of certain investments.
+
+- Significantly higher than planned cost of capital (+11.5%), driven by higher total asset base and higher average interest rate on debt.
+
+### **ER1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
+
+The NSA of Spain provides the following overall assessment of the actual performance in 2025 at charging zone level:
+
+*"The reduction in costs is mainly due to widespread savings across the majority of the entities. In general, there have been decreases across all actual cost categories compared to the determined costs for the year 2025. For further details, please refer to the Additional Information file. The aforementioned savings result in a lower actual unit cost compared to the determined unit cost (DUC) for the year 2025."*
+
+### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
+
+The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
+
+*"A broad-based cost reduction is observed across all categories, including staff costs. This occurs even though the RP4 National Performance Plan assumed a 2.0% salary increase, and the most recent salary increase approved by the Government amounts to a 2.5% rise for public employees in 2025. However, the overall outcome shows a reduction driven by a significant decrease in other staff-related benefits at the ANSP ENAIRE. This is mainly due to lower-than-planned allocations to provisions related to the Special Active Reserve (RAE), introduced by National Law 26/2022 of 19 December."*
+
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ENAIRE (CONTINENTAL)) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+
+No information was provided in the NSA 2025 Monitoring Report.
+
+### **ER1.1.8. NOTES**
+
+#### **ER1.1.8.1. NOTE 1**
+
+#### **ER1.1.8.2. NOTE 2**
+

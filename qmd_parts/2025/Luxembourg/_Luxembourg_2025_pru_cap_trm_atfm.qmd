@@ -1,0 +1,6 @@
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+
+Average ATFM arrival delay in Luxembourg was 0.15 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 0.55 min/arr. The reduction is mostly to the resolution of ATC Equipment issues, which caused \>10,000 minutes of delay in 2024 but none in 2025.
+
+The average for RP4 airports subject to monitoring of ATFM Arrival delay across Member States in 2025 was 0.97 min/arr.
+
