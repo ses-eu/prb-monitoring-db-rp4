@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM Arr delay of 0.15 min/arr, Luxembourg **achieved the national target** of 0.20 min/arr. However, the pivot value for incentives (0.10 min/arr) is limited to CRSTMP delay causes. As there was no CRSTMP delay (0.00 min/arr), **the maximum bonus of 0.5%** applies. As such, the NSA calculates a financial bonus of €90,585.00.
 
