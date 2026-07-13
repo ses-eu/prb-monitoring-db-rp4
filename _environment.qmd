@@ -115,14 +115,14 @@ replace_headings(path, env_er_nsa_titles_kea)
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_er_nsa_titles_kep)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **KES**
@@ -134,14 +134,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_er_nsa_titles_kes)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **Vertical flight efficiency**
@@ -153,14 +153,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_er_nsa_titles_vfe)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 
@@ -427,14 +427,14 @@ replace_headings(path, env_trm_nsa_titles_vfed)
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0)) 
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_mil_nsa_titles_ersa)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **Rate of planning via available airspace structures**
@@ -446,14 +446,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1 
+cat(mytext1) 
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_mil_nsa_titles_rap)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **Rate of using available airspace structures**
@@ -465,14 +465,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, env_mil_nsa_titles_rau)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat(cat("No comment provided."))} else {cat(mytext2)}
 ``` 
 
 

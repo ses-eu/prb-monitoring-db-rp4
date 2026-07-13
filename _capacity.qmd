@@ -164,14 +164,14 @@ replace_headings(path, character(0))
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, cap_er_nsa_titles_above)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **Annual weighted average of the daily peak throughput**
@@ -183,14 +183,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, cap_er_nsa_titles_tput)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 ::::
@@ -290,14 +290,14 @@ if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- replace_headings(path, character(0))
-mytext1
+cat(mytext1)
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- replace_headings(path, cap_er_nsa_titles_atco)
-if(is.null(mytext1) & is.null(mytext2)){"No comment provided."} else {mytext2}
+if(is.null(mytext1) & is.null(mytext2)){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 ::::
