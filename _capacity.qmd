@@ -171,7 +171,7 @@ cat("\n\n")
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_above))
-if(mytext1 == "" & mytext2 == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 **Annual weighted average of the daily peak throughput**
@@ -190,7 +190,7 @@ cat("\n\n")
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_tput))
-if(mytext1 == "" & mytext2 == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 ::::
@@ -297,7 +297,7 @@ cat("\n\n")
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_atco))
-if(mytext1 == "" & mytext2 == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
 ``` 
 
 ::::
