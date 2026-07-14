@@ -6,7 +6,7 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the positive inflation adjustment resulting from higher than planned inflation (+4.19 NOK/SU or +0.36 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-33.06 NOK/SU or -2.83 €/SU); and
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-33.06 NOK/SU or -2.83 €/SU); and,
 
 - the addition of the traffic adjustment (+0.22 NOK/SU or +0.02 €/SU) for the costs not subject to traffic risk sharing.
 

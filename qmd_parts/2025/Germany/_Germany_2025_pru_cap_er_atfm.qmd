@@ -1,8 +1,8 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   Germany had 3 145k flights in 2025, up from 3 052k flights in 2024.
+- Germany had 3 145k flights in 2025, up from 3 052k flights in 2024.
 
--   En route ANSPs in Germany, DFS and MUAC (Hannover sector group), applied en route ATFM regulations resulting in 2 651k minutes of delay in 2025, a significant decrease from the 4 057k minutes in 2024.
+- En route ANSPs in Germany, DFS and MUAC (Hannover sector group), applied en route ATFM regulations resulting in 2 651k minutes of delay in 2025, a significant decrease from the 4 057k minutes in 2024.
 
--   Following the NM post operations re-attributions process, the en route ANSPs in Germany were responsible for 2 817k minutes of en route ATFM delay, compared to 4 467k minutes in 2024.
+- Following the NM post operations re-attributions process, the en route ANSPs in Germany were responsible for 2 817k minutes of en route ATFM delay, compared to 4 467k minutes in 2024.
 

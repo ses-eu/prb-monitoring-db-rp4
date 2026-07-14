@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 With respect to 2024, the value of the indicator has been improving in terms of both the KEA (from 3.52% in 2024 to 3.38% in 2025) and the KEA corrected to take into consideration the effect of the conflict in Ukraine (from 2.18% to 2.10%). In terms of "ranking" those values place Bulgaria in 19^th^ and 15^th^ place among the States.
 

@@ -1,14 +1,14 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   France had 3 597k flights in 2025, up from 3 443k flights in 2024.
+- France had 3 597k flights in 2025, up from 3 443k flights in 2024.
 
--   The French ANSP, DSNA, applied en route ATFM regulations resulting in 6 640k minutes of delay in 2025, a significant increase from the 4 737k minutes in 2024.
+- The French ANSP, DSNA, applied en route ATFM regulations resulting in 6 640k minutes of delay in 2025, a significant increase from the 4 737k minutes in 2024.
 
--   As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, there were 17k minutes of en route ATFM delay reattributed **to DSNA**; 73k minutes of delay originating in France were re-attributed **to other ANSPs.**
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, there were 17k minutes of en route ATFM delay reattributed **to DSNA**; 73k minutes of delay originating in France were re-attributed **to other ANSPs.**
 
--   Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, an additional 8k minutes of en route ATFM delay were re-attributed **to DSNA** -- with 19k minutes of delay originating in France, being re-attributed **to other ANSPs**.
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, an additional 8k minutes of en route ATFM delay were re-attributed **to DSNA** -- with 19k minutes of delay originating in France, being re-attributed **to other ANSPs**.
 
--   A further 10k minutes of delay were reattributed to DSNA due restrictions stemming from the 4-flight implementation onloading adjacent ANSPs.
+- A further 10k minutes of delay were reattributed to DSNA due restrictions stemming from the 4-flight implementation onloading adjacent ANSPs.
 
--   Following the NM post operations re-attributions process, DSNA were responsible for 6 610k minutes of en route ATFM delay in 2025, a significant increase from the 4 709k minutes in 2024.
+- Following the NM post operations re-attributions process, DSNA were responsible for 6 610k minutes of en route ATFM delay in 2025, a significant increase from the 4 709k minutes in 2024.
 

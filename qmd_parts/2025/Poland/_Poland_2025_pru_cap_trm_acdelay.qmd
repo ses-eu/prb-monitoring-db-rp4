@@ -1,4 +1,4 @@
-## TRM1.5. Average departure delay from all causes per flight (PI#3)
+## TRM1.5. Average departure delay from all causes per flight (PI#3) {#trm1.5.-average-departure-delay-from-all-causes-per-flight-pi3 .Heading-2-TZ}
 
 Warsaw is the only Polish airport subject to the monitoring of this indicator. Delay in 2025 decreased to 16.74 min/dep, 15% below the value of 2024 -- last year of RP3 -- of 19.76 min/dep.
 

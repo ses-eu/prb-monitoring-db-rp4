@@ -16,9 +16,9 @@ Actual real en route costs are -2.9% (-20.2 M€2022) lower than planned. This i
 
 Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for ENAV in 2025 (-3.1%, or -18.8 M€2022) result from:
 
-- Lower than planned staff costs (-2.7%), mainly due to lower than planned inflation recorded during the year; an agreement to postpone (predominantly) ATCO bonuses, as part of labour contract renewal; reductions in the fixed portion of staff costs due to different hiring dynamics; a lower cost for operational overtime; and higher rate of capitalisation of internal effort.
+- Lower than planned staff costs (-2.7%), mainly due to: lower than planned inflation recorded during the year; an agreement to postpone (predominantly) ATCO bonuses, as part of labour contract renewal; reductions in the fixed portion of staff costs due to different hiring dynamics; a lower cost for operational overtime; and higher rate of capitalisation of internal effort.
 
-- Significantly lower than planned other operating costs (-10.3%), mainly due to lower external support costs from cost-containment measures and greater use of internal expertise; reduced travel expenses following the postponement of some ATCO training sessions; lower utility and telecommunications costs driven by reduced electricity tariffs and partial deployment of the remote towers network; delayed data network infrastructure upgrades for security reasons; and lower infrastructure costs related to the Palermo offshore platforms and Pantelleria control tower.
+- Significantly lower than planned other operating costs (-10.3%), mainly due to: lower external support costs from cost-containment measures and greater use of internal expertise; reduced travel expenses following the postponement of some ATCO training sessions; lower utility and telecommunications costs driven by reduced electricity tariffs and partial deployment of the remote towers network; delayed data network infrastructure upgrades for security reasons; and lower infrastructure costs related to the Palermo offshore platforms and Pantelleria control tower.
 
 - Lower than planned depreciation (-2.0%).
 

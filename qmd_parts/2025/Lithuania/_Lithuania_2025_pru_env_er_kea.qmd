@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 Lithuania has seen an improvement in the values of KEA and the corrected KEA for the influence of the war in Ukraine in the period 2023 to 2025. The values are 13.14% in 2023, 12.19% in 2024 and 11.41% in 2025 for KEA; 4.52% in 2023, 4.20% in 2024 and 3.98% in 2025 for the corrected KEA. These values place Lithuania as 28^th^ for KEA and 27^th^ for the corrected KEA.
 

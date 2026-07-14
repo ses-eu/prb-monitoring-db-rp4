@@ -12,7 +12,7 @@ The actual en route unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the addition of the traffic adjustment (+0.16 €/SU) for the costs not subject to traffic risk sharing;
 
-- financial incentives (+0.41 €/SU);
+- impact of financial incentives (+0.41 €/SU);
 
 - the deduction of other revenues (-1.33 €/SU); and,
 

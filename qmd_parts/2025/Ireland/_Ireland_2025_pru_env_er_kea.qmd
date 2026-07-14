@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 In terms of absolute values, there has been a slight degradation with respect to 2024 both in terms of KEA and the KEA corrected (KEA: 1.44% in 2023, 1.40% in 2024, 1.63% in 2025; corrected KEA: 1.42% in 2023, 1.38% in 2024, 1.60% in 2025).
 

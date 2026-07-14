@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
 
 The PRB has not been able to assess the results of the ATFM Arrival incentive scheme due to limitations in the target/pivot values information available.
 

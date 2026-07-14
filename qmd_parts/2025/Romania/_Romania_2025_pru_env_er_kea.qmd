@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 With respect to 2024, Romania has seen an improvement of KEA (3.70% in 2025 vs 3.77% in 2024) and a very slight improvement in the KEA corrected for the effect of the war in Ukraine (1.76% in 2025 vs 1.77% in 2024). In 2025 those values rank Romania as 20^th^ in terms of KEA and 11^th^ in terms of corrected KEA.
 

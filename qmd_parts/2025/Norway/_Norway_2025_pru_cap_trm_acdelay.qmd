@@ -1,4 +1,4 @@
-## TRM1.5. Average departure delay from all causes per flight (PI#3)
+## TRM1.5. Average departure delay from all causes per flight (PI#3) {#trm1.5.-average-departure-delay-from-all-causes-per-flight-pi3 .Heading-2-TZ}
 
 Delay in 2025 decreased in both Oslo and Bergen compared to the value of 2024 -- last year of RP3. In the case of Oslo, it went from 11.08 min/dep to 7.44 min/dep, a reduction of 32%. In the case of Bergen, from 9.58 min/dep to 6.88 min/dep, a reduction of 28%.
 

@@ -6,21 +6,21 @@ Comparison for 2024 is not possible, as Bulgaria did not submit information on S
 
 In terms of initiatives implemented or planned, the monitoring report lists the following initiatives:
 
--   Systematic occurrence management: comprehensive recording, classification, and analysis of all ATM/CNS events in e-TOKAI/ECCAIRS to identify trends and contributory factors.
+- Systematic occurrence management: comprehensive recording, classification, and analysis of all ATM/CNS events in e-TOKAI/ECCAIRS to identify trends and contributory factors.
 
--   Structured change management: application of formal change assessments, safety cases, and implementation plans to mitigate risks from operational and technical changes.
+- Structured change management: application of formal change assessments, safety cases, and implementation plans to mitigate risks from operational and technical changes.
 
--   Continuous safety performance monitoring: weekly operational reviews and systematic tracking of safety recommendations and corrective actions through maintained registers.
+- Continuous safety performance monitoring: weekly operational reviews and systematic tracking of safety recommendations and corrective actions through maintained registers.
 
--   Targeted risk mitigation and coordination: regular national and inter‑institutional coordination (incl. cross-border cooperation) to address identified risks and prevent recurrence of SMIs.
+- Targeted risk mitigation and coordination: regular national and inter‑institutional coordination (incl. cross-border cooperation) to address identified risks and prevent recurrence of SMIs.
 
 In terms of monitoring the effectiveness of the initiatives, the NSA states in the monitoring report that the NSA ensures performance monitoring through:
 
--   Risk-based oversight and regulatory supervision, including structured review of change management processes and safety assessments.
+- Risk-based oversight and regulatory supervision, including structured review of change management processes and safety assessments.
 
--   Performance monitoring using ECCAIRS data, focusing on trends, severity and ATS/CNS contribution.
+- Performance monitoring using ECCAIRS data, focusing on trends, severity and ATS/CNS contribution.
 
--   Verification of corrective actions implementation, including follow-up on recommendations and timeliness/effectiveness of mitigation measures.
+- Verification of corrective actions implementation, including follow-up on recommendations and timeliness/effectiveness of mitigation measures.
 
--   Regular review of safety outcomes and effectiveness of measures through reported data and oversight activities.
+- Regular review of safety outcomes and effectiveness of measures through reported data and oversight activities.
 

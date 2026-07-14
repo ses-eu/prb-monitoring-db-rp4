@@ -1,6 +1,6 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   Norway had 563k flights in 2025, up from 555k flights in 2024.
+- Norway had 563k flights in 2025, up from 555k flights in 2024.
 
--   Avinor applied en route ATFM regulations resulting in 20k minutes of delay, slightly lower than the 25k minutes in 2024.
+- Avinor applied en route ATFM regulations resulting in 20k minutes of delay, slightly lower than the 25k minutes in 2024.
 

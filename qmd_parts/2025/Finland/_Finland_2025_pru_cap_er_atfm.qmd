@@ -1,6 +1,6 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   Finland had 241k flights in 2025, slightly fewer than the 242k flights in 2024.
+- Finland had 241k flights in 2025, slightly fewer than the 242k flights in 2024.
 
--   Fintraffic ANS applied en route ATFM regulations resulting in negligible delay (\<1k).
+- Fintraffic ANS applied en route ATFM regulations resulting in negligible delay (\<1k).
 

@@ -12,7 +12,7 @@ Ex-post, the overall RR, taking into account the net gain from the terminal acti
 
 #### **TZ1.3.3.1. NOTE 1**
 
-As it is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of terminal reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the terminal reporting tables (13.6 M€) differs from the value that is calculated on the basis of the assumptions provided (25.9 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*.
+As is the case for each ANSP, the amount of return on equity (RoE) presented in this analysis for DFS is derived using the assumptions provided in the German submission of terminal reporting tables (rate of RoE and share of financing through equity). However, it should be noted that the actual 2025 cost of capital figure reported for DFS in the terminal reporting tables (13.6 M€) differs from the value that is calculated on the basis of the assumptions provided (25.9 M€). It is understood that DFS decided to net-off the actual cost of capital using an *"interest income from temporarily invested fixed deposits"*.
 
 #### **TZ1.3.3.2. NOTE 2**
 

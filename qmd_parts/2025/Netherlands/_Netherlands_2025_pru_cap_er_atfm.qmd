@@ -1,8 +1,8 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   The Netherlands had 1 239k flights in 2025, lower than the 1 254k flights in 2024.
+- The Netherlands had 1 239k flights in 2025, lower than the 1 254k flights in 2024.
 
--   En route ANSPs in the Netherlands: LVNL and MUAC (DECO sector group), applied en route ATFM regulations resulting in 96k minutes of delay in 2025, a decrease from the 119k minutes in 2024.
+- En route ANSPs in the Netherlands: LVNL and MUAC (DECO sector group), applied en route ATFM regulations resulting in 96k minutes of delay in 2025, a decrease from the 119k minutes in 2024.
 
--   Following the NM post operations re-attributions process, the en route ANSPs in the Netherlands were responsible for 93k minutes of en route ATFM delay, compared to 115k minutes in 2024.
+- Following the NM post operations re-attributions process, the en route ANSPs in the Netherlands were responsible for 93k minutes of en route ATFM delay, compared to 115k minutes in 2024.
 

@@ -12,7 +12,7 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the addition of the traffic adjustment (+0.83 SEK/SU or +0.08 €/SU) for the costs not subject to traffic risk sharing;
 
-- the impact of the financial incentives (+17.36 SEK/SU or +1.57 €/SU); and
+- the impact of financial incentives (+17.36 SEK/SU or +1.57 €/SU); and,
 
 - the deduction of other revenues (-11.69 SEK/SU or -1.06 €/SU).
 

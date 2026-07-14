@@ -7,13 +7,13 @@ When comparing to 2024, the rate of separation minima infringements has decrease
 
 According to the monitoring report, PANSA\'s measures to improve the SMI PI include regular occurrence investigations accompanied by recommendations, local Safety Days, during which incidents are discussed, as well as Safety Lessons which enable lessons learned from investigated occurrences to be shared with all operational staff, including ATCO training. Furthermore, in accordance with the National Aviation Safety Plan 2026--2028 (Area A.3 -- Mid-Air Collision -- MAC which includes Level busts, Separation Minima Infringements and Airspace Infringements), the NSA is implementing a number of measures to enhance the Separation Minima Infringements (SMI) indicator at the Member State level. Key initiatives include:
 
--   Systematic investigation of occurrences, followed by the issuance of safety recommendations to PANSA and other stakeholders.
+- Systematic investigation of occurrences, followed by the issuance of safety recommendations to PANSA and other stakeholders.
 
--   Support for PANSA's Local Safety Days and Safety Lessons programme, with an emphasis on sharing lessons learned with operational staff and ATCOs.
+- Support for PANSA's Local Safety Days and Safety Lessons programme, with an emphasis on sharing lessons learned with operational staff and ATCOs.
 
--   Enhanced oversight of PANSA's Safety Management System (SMS), focusing on separation management processes and human factors.
+- Enhanced oversight of PANSA's Safety Management System (SMS), focusing on separation management processes and human factors.
 
--   Promotion of targeted training programmes for air traffic controllers in conflict detection and resolution.
+- Promotion of targeted training programmes for air traffic controllers in conflict detection and resolution.
 
 In addition, as described in the monitoring report, the NSA continuously monitors the SMI SPI through the national occurrence database (ECCAIRS2) and quarterly reports submitted by PANSA. The effectiveness of these measures is evaluated based on indicator trends, the number and severity of separation-related events, the implementation rate of safety recommendations, and the outcomes of regular SMS audits. The results are reviewed annually within the framework of reporting on the National Safety Plan.
 

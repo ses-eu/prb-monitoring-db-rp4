@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme
+## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
 
 In the first year of RP4, with an ATFM arrival delay of 5.46 min/arr, Greece **did not achieve the national target** of 1.5 min/arr. The KPI falls beyond the end of the penalty sliding range for the incentive scheme, meaning that **the maximum penalty of 1.5%** applies. As such, the NSA computes a penalty of -€393,906.72.
 

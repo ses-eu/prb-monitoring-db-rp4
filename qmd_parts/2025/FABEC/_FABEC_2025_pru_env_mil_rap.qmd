@@ -1,0 +1,34 @@
+## ERT1.2. Rate of planning via available airspace structures (PI#10) {#ert1.2.-rate-of-planning-via-available-airspace-structures-pi10 .Heading-2-ER}
+
+BELGIUM and LUXEMBOURG report that:
+
+- The ratio of planning via available airspace structures is **8%** (via available restricted and segregated airspaces)
+
+- The ratio of planning via available airspace structures is **51%** (via available conditional routes -- CDR)
+
+FRANCE reports that:
+
+- The ratio of planning via available airspace structures is **50.81%** (via available restricted and segregated airspaces)
+
+- The ratio of planning via available airspace structures is **74.86%** (via available conditional routes -- CDR)
+
+GERMANY reports that:
+
+- The ratio of planning via available airspace structures is **33.50%** (via available restricted and segregated airspaces)
+
+- The ratio of planning via available airspace structures is **68.13%** (via available conditional routes -- CDR)
+
+LUXEMBOURG -- not applicable (see BELGIUM and LUXEMBOURG)
+
+NETHERLANDS reports that:
+
+- The ratio of planning via available airspace structures is **20.24%** (via available restricted and segregated airspaces)
+
+- The ratio of planning via available airspace structures is **37.90%** (via available conditional routes -- CDR)
+
+SWITZERLAND reports that:
+
+- The ratio of planning via available airspace structures is **81.05%** (via available restricted and segregated airspace)
+
+MUAC -- not applicable
+

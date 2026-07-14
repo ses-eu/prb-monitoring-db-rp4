@@ -1,12 +1,12 @@
-## ERT1.1. Effective use of reserved or segregated local airspace (PI#9)
+## ERT1.1. Effective use of reserved or segregated local airspace (PI#9) {#ert1.1.-effective-use-of-reserved-or-segregated-local-airspace-pi9 .Heading-2-ER}
 
 ITALY report a ratio of **42%**
 
--   BRINDISI ACC reports a ratio of **47%**
+- BRINDISI ACC reports a ratio of **47%**
 
--   MILANO ACC reports a ratio of **14%**
+- MILANO ACC reports a ratio of **14%**
 
--   PADOVA ACC reports a ratio of **48%**
+- PADOVA ACC reports a ratio of **48%**
 
--   ROME ACC reports a ratio of **25%**
+- ROME ACC reports a ratio of **25%**
 

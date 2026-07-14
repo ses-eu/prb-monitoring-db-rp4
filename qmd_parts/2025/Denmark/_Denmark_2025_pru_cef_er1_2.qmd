@@ -2,7 +2,7 @@
 
 ### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (562.18 DKK or 75.34 €) is +2.1% higher than the nominal DUC (550.42 DKK or 73.76 €) which includes DUC initially charged: 558.44 DKK (or 74.84 € ), and DUC to be charged retroactively: -8.03 DKK (or -1.08 € ). The difference between the AUCU and the nominal DUC (+11.76 DKK/SU or +1.58 €/SU) is due to:
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (562.18 DKK or 75.34 €) is +2.1% higher than the nominal DUC (550.42 DKK or 73.76 €) which includes DUC initially charged: 558.44 DKK (or 74.84 €), and DUC to be charged retroactively: -8.03 DKK (or -1.08 €). The difference between the AUCU and the nominal DUC (+11.76 DKK/SU or +1.58 €/SU) is due to:
 
 - the negative inflation adjustment resulting from lower than planned inflation (-0.60 DKK/SU or -0.08 €/SU);
 
@@ -10,7 +10,7 @@ The actual en route unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the addition of the traffic risk sharing adjustments (+10.48 DKK/SU or +1.40 €/SU);
 
-- the addition of the traffic adjustment (+4.18 DKK/SU or +0.56 €/SU) for the costs not subject to traffic risk sharing; and
+- the addition of the traffic adjustment (+4.18 DKK/SU or +0.56 €/SU) for the costs not subject to traffic risk sharing; and,
 
 - the deduction of other revenues (-4.91 DKK/SU or -0.66 €/SU).
 

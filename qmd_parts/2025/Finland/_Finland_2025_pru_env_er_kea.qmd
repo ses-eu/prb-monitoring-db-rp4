@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 The absolute value of the indicator has been slightly degrading over the last three years. For KEA, it went from 3.39% in 2023 to 3.41% in 2024 to 3.71% in 2025. For the corrected KEA, it went from 1.53% in 2023 to 1.60% in 2024 to 1.69% in 2025. This places Finland in the bottom of the third quartile in terms of KEA (18^th^ in 2023 and 2024, 21^st^ in 2025), but in the top of the second quartile in terms of KEA corrected (8^th^ in 2023 and 2024, 9^th^ in 2025).
 

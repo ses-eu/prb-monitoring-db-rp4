@@ -1,4 +1,4 @@
-## ERT1.2. En route capacity incentive scheme
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
 
 The Swedish NSA reports a financial bonus for the ANSP of SEK 16 932 176 for en route capacity performance in 2025.
 

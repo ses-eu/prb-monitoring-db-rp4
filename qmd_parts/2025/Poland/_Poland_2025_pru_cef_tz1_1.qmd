@@ -28,13 +28,17 @@ The slightly higher than planned terminal costs in real terms for PANSA in 2025 
 
 The NSA of Poland provides the following overall assessment of the actual performance in 2025 at charging zone level:
 
-***"PANSA:\
-**AUC was by 9.1% lower than DUC. The reason for this difference was significantly higher number of actual service units for EPWA than the forecast (+12.1%). This is a factor beyond PANSA control. Actual costs in real terms were slightly higher than determined (+1.9%) what resulted from lower inflation index (-3.4 pp.). Actual costs in nominal terms were 0.7% below planned -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 1 (EPWA).\
-\
-**IMWM:**\
-The difference between the actual and planned costs of the en-route charges was 197 715 PLN and results from:\
-- lower other operating costs by 7.22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4.97%, while the actual inflation level in 2025 according to EUROSTAT data was 3.30%.\
-- lower personnel costs by 10.26% resulting from the lack of filling the vacancies planed in PSD."*
+***"PANSA:***
+
+*AUC was by 9.1% lower than DUC. The reason for this difference was significantly higher number of actual service units for EPWA than the forecast (+12.1%). This is a factor beyond PANSA control. Actual costs in real terms were slightly higher than determined (+1.9%) what resulted from lower inflation index (-3.4 pp.). Actual costs in nominal terms were 0.7% below planned -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 1 (EPWA).*
+
+***IMWM:***
+
+*The difference between the actual and planned costs of the en-route charges was 197 715 PLN and results from:*
+
+*- lower other operating costs by 7.22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4.97%, while the actual inflation level in 2025 according to EUROSTAT data was 3.30%.*
+
+*- lower personnel costs by 10.26% resulting from the lack of filling the vacancies planed in PSD."*
 
 ### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 

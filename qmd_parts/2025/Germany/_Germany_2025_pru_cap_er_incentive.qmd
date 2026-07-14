@@ -1,4 +1,4 @@
-## ERT1.2. En route capacity incentive scheme
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
 
 The FABEC NSAs report that, because the overall FABEC capacity incentive target was missed, no FABEC ANSP could be eligible for a bonus. However, financial penalties could still be imposed.
 

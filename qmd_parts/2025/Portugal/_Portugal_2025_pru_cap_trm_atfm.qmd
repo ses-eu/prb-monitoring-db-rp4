@@ -1,12 +1,12 @@
-## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
 
 Average ATFM arrival delay in Portugal was 1.88 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 2.70 min/arr. This represents a 30% reduction in average.
 
 Both of the main airports in RP4 contributed to this reduction:
 
--   Lisbon, from 4.20 min/arr to 2.83 min/arr in 2025 thanks to reductions in Aerodrome and ATC Capacity regulations, reached its target of 3.78 min/arr.
+- Lisbon, from 4.20 min/arr to 2.83 min/arr in 2025 thanks to reductions in Aerodrome and ATC Capacity regulations, reached its target of 3.78 min/arr.
 
--   Porto, from 3.02 min/arr to 2.45 min/arr mostly due to reductions in Weather regulations, although still not meeting its target of 1.57 min/arr.
+- Porto, from 3.02 min/arr to 2.45 min/arr mostly due to reductions in Weather regulations, although still not meeting its target of 1.57 min/arr.
 
 Except Madeira (0.31 min/arr), other airports had zero or almost zero ATFM arrival delay, including Cascais which improved from 0.92 min/arr to zero.
 

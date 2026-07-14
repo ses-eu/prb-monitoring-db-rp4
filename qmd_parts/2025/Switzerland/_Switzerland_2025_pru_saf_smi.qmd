@@ -6,21 +6,21 @@ When comparing to 2024, the rate of separation minima infringements has increase
 
 In terms of the initiatives implemented or planned to improve this performance indicator, the report defines the following elements:
 
--   NRH3 Geneva will remove the system interpretation of the route, allowing for a better conflict detection prediction (tools).
+- NRH3 Geneva will remove the system interpretation of the route, allowing for a better conflict detection prediction (tools).
 
--   Improvement on CPDLC, which when used more, reduces the risk of Undetected Simultaneous Transmissions (USiT).
+- Improvement on CPDLC, which when used more, reduces the risk of Undetected Simultaneous Transmissions (USiT).
 
--   4D downlink trajectories will show the discrepancy between the FMS route and the filed FPL in system, better trajectory prediction.
+- 4D downlink trajectories will show the discrepancy between the FMS route and the filed FPL in system, better trajectory prediction.
 
--   ADST will allow to downlink.
+- ADST will allow to downlink.
 
--   LORD-CH (Leading Optimised Runway Delivery). The LORD project aims at delivering the following benefits:
+- LORD-CH (Leading Optimised Runway Delivery). The LORD project aims at delivering the following benefits:
 
-    -   Reduced controller workload (via increased automation).
+  - Reduced controller workload (via increased automation).
 
-    -   Safety: reduced number of SMIs on final.
+  - Safety: reduced number of SMIs on final.
 
-    -   Efficiency: systematic optimised spacing between pairs.
+  - Efficiency: systematic optimised spacing between pairs.
 
-    -   Increased runway throughput (3% to 8%), leading to reduced delays.
+  - Increased runway throughput (3% to 8%), leading to reduced delays.
 

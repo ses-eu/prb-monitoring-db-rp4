@@ -20,7 +20,7 @@ cef_titles_s1 <- c(
   paste0(jump_page, 
          "**Explanation of the differences between actual and determined costs at charging zone level reported by the NSA**"),
   paste0(jump_page, 
-         "**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situations and actions taken by the ANSP**")
+         "**Recommendations formulated by the NSA to the ANSP (", main_ansp, ") to rectify the situation and actions taken by the ANSP**")
 )
 
 # fmt: skip

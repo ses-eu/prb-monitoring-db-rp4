@@ -1,3 +1,3 @@
-## TRM1.5. Vertical flight efficiency of the climb (PI#8)
+## TRM1.5. Vertical flight efficiency of the climb (PI#8) {#trm1.5.-vertical-flight-efficiency-of-the-climb-pi8 .Heading-2-TZ}
 
 Compared to the overall RP4 average value (34.8 seconds per flight), the average time flown level during climb is 4.3 seconds per flight higher in Czechia. Prague (LKPR) has an average time flown level of 39.1 seconds per flight during climb.

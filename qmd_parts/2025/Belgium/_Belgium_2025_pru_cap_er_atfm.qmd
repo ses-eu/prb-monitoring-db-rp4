@@ -1,8 +1,8 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   Belgium had 1 270k flights in 2025, up from 1 200k flights in 2024.
+- Belgium had 1 270k flights in 2025, up from 1 200k flights in 2024.
 
--   The en route ANSPs in Belgium: skeyes and MUAC (Brussels sector group), applied en route ATFM regulations resulting in 494k minutes of delay in 2025, an increase from the 254k minutes in 2024.
+- The en route ANSPs in Belgium: skeyes and MUAC (Brussels sector group), applied en route ATFM regulations resulting in 494k minutes of delay in 2025, an increase from the 254k minutes in 2024.
 
--   Following the NM post operations re-attributions process, en route ANSPs in Belgium were responsible for 458k minutes of en route ATFM delay.
+- Following the NM post operations re-attributions process, en route ANSPs in Belgium were responsible for 458k minutes of en route ATFM delay.
 

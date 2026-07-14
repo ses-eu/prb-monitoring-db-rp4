@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 The value for KEA has been deteriorating in 2025 with respect to 2024 (4.27% vs 4.05%), while the value of KEA corrected for the influence of the war in Ukraine has been stable (2.12% in 2024 and 2025). In 2025, Slovakia is 23^rd^ for KEA and 16^th^ for KEA corrected.
 

@@ -1,12 +1,12 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1)
+## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
 
--   Slovenia had 588k flights in 2025, an increase from 545k flights in 2024.
+- Slovenia had 588k flights in 2025, an increase from 545k flights in 2024.
 
--   Slovenia Control applied en route ATFM regulations resulting in 49k minutes of delay, an increase from the 21k minutes in 2024.
+- Slovenia Control applied en route ATFM regulations resulting in 49k minutes of delay, an increase from the 21k minutes in 2024.
 
--   As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, \<1k minutes of delay originating in Slovenia were re-attributed **to other ANSPs.**
+- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, \<1k minutes of delay originating in Slovenia were re-attributed **to other ANSPs.**
 
--   Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, \<1k minutes of en route ATFM delay were re-attributed **to Slovenia Control** -- while \<1k minutes of delay originating in Slovenia, being re-attributed **to other ANSPs**.
+- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, \<1k minutes of en route ATFM delay were re-attributed **to Slovenia Control** -- while \<1k minutes of delay originating in Slovenia, being re-attributed **to other ANSPs**.
 
--   When the above post-operations re-attributions are factored in, the total en route delay for Slovenia in 2025 was 49k minutes in 2025 up from 21k minutes in 2024.
+- When the above post-operations re-attributions are factored in, the total en route delay for Slovenia in 2025 was 49k minutes in 2025 up from 21k minutes in 2024.
 

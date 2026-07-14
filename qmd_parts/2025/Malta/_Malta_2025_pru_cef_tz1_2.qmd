@@ -10,7 +10,7 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the deduction of the traffic risk sharing adjustments (-3.60 €/SU);
 
-- the deduction of the traffic adjustment (-0.80 €/SU) for the costs not subject to traffic risk sharing; and
+- the deduction of the traffic adjustment (-0.80 €/SU) for the costs not subject to traffic risk sharing; and,
 
 - the deduction of other revenues (-5.49 €/SU).
 

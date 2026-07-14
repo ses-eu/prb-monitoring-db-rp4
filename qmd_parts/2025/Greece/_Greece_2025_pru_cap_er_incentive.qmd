@@ -1,6 +1,6 @@
-## ERT1.2. En route capacity incentive scheme
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
 
-## The Greek NSA reports a financial penalty of €2 564 514 for the ANSP because of the 2025 performance. 
+## The Greek NSA reports a financial penalty of €2 564 514 for the ANSP because of the 2025 performance.  {#the-greek-nsa-reports-a-financial-penalty-of-2-564-514-for-the-ansp-because-of-the-2025-performance. .Heading-2-ER}
 
-## The local incentive target for en route ATFM delays was set at 0.34 mins/flight. The actual achieved performance was 0.89 mins/flight.
+## The local incentive target for en route ATFM delays was set at 0.34 mins/flight. The actual achieved performance was 0.89 mins/flight. {#the-local-incentive-target-for-en-route-atfm-delays-was-set-at-0.34-minsflight.-the-actual-achieved-performance-was-0.89-minsflight. .Heading-2-ER}
 

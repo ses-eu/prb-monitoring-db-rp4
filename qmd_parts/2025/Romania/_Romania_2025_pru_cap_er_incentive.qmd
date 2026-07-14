@@ -1,4 +1,4 @@
-## ERT1.2. En route capacity incentive scheme
+## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
 
 The Romanian NSA reports a financial bonus for the ANSP of RON 10 747 134 for en route capacity performance in 2025. A local incentive target was set at 0.24 min/flight, for all causes of delay, and the NSA reports that an actual value of 0.06 mins/flight was achieved.
 

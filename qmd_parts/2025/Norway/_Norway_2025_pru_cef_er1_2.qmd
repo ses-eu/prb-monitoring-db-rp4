@@ -6,7 +6,7 @@ The actual en route unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the positive inflation adjustment resulting from higher than planned inflation (+0.84 NOK/SU or +0.07 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-7.45 NOK/SU or -0.64 €/SU); and
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-7.45 NOK/SU or -0.64 €/SU); and,
 
 - the addition of the traffic adjustment (+0.07 NOK/SU or +0.01 €/SU) for the costs not subject to traffic risk sharing.
 

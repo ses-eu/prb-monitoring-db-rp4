@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
 
 The absolute value of the indicator has seen a slight deterioration with respect to 2024, but with an improvement with respect to 2023. For KEA, it went from 3.33% in 2023 to 3.29% in 2024 to 3.31% in 2025. For the corrected KEA, it went from 3.30% in 2023 to 3.25% in 2024 to 3.27% in 2025. This places France in 17^th^ position in terms of KEA and 25^th^ position in terms of KEA corrected (2025).
 

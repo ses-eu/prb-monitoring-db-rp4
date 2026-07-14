@@ -6,7 +6,7 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the positive inflation adjustment resulting from higher than planned inflation (+2.29 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+22.55 €/SU); and
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (+22.55 €/SU); and,
 
 - the addition of the traffic adjustment (+0.17 €/SU) for the costs not subject to traffic risk sharing.
 

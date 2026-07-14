@@ -22,7 +22,7 @@ Based on the additional information to the en route reporting tables, the higher
 
 - Significantly lower than planned depreciation (-11.4%), mainly "*due to changes in the projects MaRS, iCAS Lower Airspace as well as in the product management ATS-LAN*".
 
-- Significantly lower than planned cost of capital (-8.9%), which are understood to mainly reflect the fact that actual costs of capital are netted off using an *"interest income from temporarily invested fixed deposits"* (see also the analysis of Regulatory Result for details).
+- Significantly lower than planned cost of capital (-8.9%), which is understood to mainly reflect the fact that the actual cost of capital is netted off using an *"interest income from temporarily invested fixed deposits"* (see also the analysis of Regulatory Result for details).
 
 - No deduction of exceptional costs which were included as part of the determined cost-base for DFS for 2025 (negative amount). This negative amount of -11.4 M€ (in nominal terms) which was used to reduce the chargeable cost base for 2025 is understood to be related to depreciation costs charged to the airspace users but not spent during RP2.
 

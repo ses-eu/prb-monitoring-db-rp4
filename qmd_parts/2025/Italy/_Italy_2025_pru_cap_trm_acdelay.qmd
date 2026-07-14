@@ -1,4 +1,4 @@
-## TRM1.5. Average departure delay from all causes per flight (PI#3)
+## TRM1.5. Average departure delay from all causes per flight (PI#3) {#trm1.5.-average-departure-delay-from-all-causes-per-flight-pi3 .Heading-2-TZ}
 
 Rome Fiumicino, Milan Malpensa, Milan Linate and Bergamo are the only Italian airports subject to the monitoring of this indicator. All of them reduced their average departure delay per flight in 2025.
 

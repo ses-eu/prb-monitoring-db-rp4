@@ -1,24 +1,10 @@
 ## **2.3.3 ATCO Planning 1**
 
-### **Additional comments**
+### **ATCOs (ALL)**
 
-By the end of 2025, the total number of operational Air Traffic Control Officers (ATCOs in OPS) employed by DCAC Cyprus stood at 142 (141.5 FTEs), compared to the 138 FTEs projected in the Performance Plan (PP). This deviation does not stem from an accelerated recruitment policy or unplanned hiring campaigns. It is the result of a data rectification and subsequent operational reassignments identified during the 2025 monitoring cycle:
+ATCOs in OPS
 
-• Statistical Omission (+6 ATCOs): the 2025 monitoring review revealed that six ATCOs executing mixed duties across two distinct operational units---the Area Control Centre (ACC) and the newly established Approach Unit---were erroneously omitted from the initial PP baseline headcount.
+### **Number of ATCOs in OPS operational at year-end (FTEs)**
 
-• Operational Reassignments (-2 ATCOs): This statistical increase was partially offset by the reassignment of two ATCOs to non-operational duties due to medical and other reasons. These two cases are additional to the reassignments already anticipated in the CY RP4 Performance Plan.
-
-The net operational impact of these two factors results in a factual increase of +3.5 FTEs compared to the Performance Plan. This correction ensures full transparency and accuracy in reporting the actual operational capacity.
-
-### **Additional comments**
-
-Nicosia (LCCC ACC):The year-end ACC ATCOs (FTEs) of the Cyprus ATSp, at the end of 2025, stands at 101.5, falling short of the planned target of 107 --- a variance of 5 FTEs. This shortfall is attributable to one ATCO retirement AND (mainly) a tactical operational decision regarding the extension of operating hours of the Approach Unit:
-
-During the PR4 planning phase, it was anticipated that 5 Tower/Approach ATCOs would be transferred to the ACC by mid-2025. However, following a tactical reassessment, it was determined that retaining these personnel within the Approach Unit would yield greater operational benefit by facilitating an extension of that Unit\'s hours of operation. The expanded operating schedule of the new Approach Unit strengthens the ANSP\'s overall safety performance and indirectly enhances ACC capacity by absorbing a portion of the en-route sector workload, thereby offsetting the impact of the ACC staffing levels.
-
-This proved to be a correct operational decision because, in the end, the capacity targets were met.
-
-### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
-
-Selection and recruitement process for new ATCOs has commenced in 2025, however it will be completed within 2026 (due to long, bureaucratic administrative processes). New ATCO training is expected to begin before the end of 2026. This will shift ATCO planning forward by one year.
+### **Number ATCO trainees at year end**
 
