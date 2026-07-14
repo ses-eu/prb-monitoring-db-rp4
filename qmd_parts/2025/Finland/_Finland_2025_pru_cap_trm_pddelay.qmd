@@ -1,4 +1,4 @@
-## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+## TRM1.4. Air traffic control pre-departure delay (PI#2)
 
 The delay in 2025 decreased to 0.15 min/dep, lower than the value of 2024 -- last year of RP3 -- of 0.22 min/dep.
 

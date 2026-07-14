@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+With respect to 2024, the value of the indicator has been improving in terms of both the KEA (from 3.52% in 2024 to 3.38% in 2025) and the KEA corrected to take into consideration the effect of the conflict in Ukraine (from 2.18% to 2.10%). In terms of "ranking" those values place Bulgaria in 19^th^ and 15^th^ place among the States.
+
+In terms of additional distance, the average per flight is 0.84km of internal additional distance out of 9.41km additional distance. This suggests the presence of "straight" internal portions which are not well aligned with the entire trajectories.
+
+The additional distance for Bulgaria corresponds to 4.01% of the additional distance in the SES area (21^st^ contribution). This value has been increasing from 3.79% in 2023 and 3.98% in 2024.
+

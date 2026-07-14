@@ -1,0 +1,6 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+The value of the indicator has been improving over the last three years. For KEA, it went from 6.55% in 2023 to 6.14% in 2024 to 5.75 in 2025. For the corrected KEA, it went from 2.38% in 2023 to 2.25 in 2024 to 2.12 in 2025. This places Estonia as 3^rd^ worse (26^th^) in terms of KEA, but as 18^th^ in terms of KEA corrected in 2023 and 2024, and 16^th^ in 2025.
+
+This should also be put in perspective considering the overall contribution to the total additional distance, which is 0.75% in 2025, corresponding to the 5^th^ lowest.
+

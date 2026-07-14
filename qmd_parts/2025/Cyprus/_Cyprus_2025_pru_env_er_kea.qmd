@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+With respect to 2024, the value of the indicator has been improving in terms of both the KEA (from 5.43% in 2024 to 4.52% in 2025) and the KEA corrected to take into consideration the effect of the conflict in Ukraine (from 4.28% to 3.53%). In terms of "ranking" those values place Cyprus in 24^th^ and 26^th^ place among the States.
+
+In terms of additional distance, the average per flight is 2.92km of internal additional distance (4^th^ worst) out of 14.23km additional distance (6^th^ worst).
+
+The additional distance for Croatia corresponds to 2.34% of the additional distance in the SES area (20^th^ contribution). This value has been decreasing from 2.52% in 2024 (the ranking was the same).
+

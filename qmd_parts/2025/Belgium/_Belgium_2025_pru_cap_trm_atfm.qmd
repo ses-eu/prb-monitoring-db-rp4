@@ -1,4 +1,4 @@
-## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
 Average ATFM arrival delay in Belgium was 0.77 min/arr in 2025, the first year of RP4. The **performance has worsened compared to 2024**, last year of RP3, when there were 0.28 min/arr.
 

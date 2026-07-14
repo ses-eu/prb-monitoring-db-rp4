@@ -1,4 +1,4 @@
-## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+## TRM1.4. Air traffic control pre-departure delay (PI#2)
 
 The calculation of the ATC pre-departure delay is based on the data provided by the airport operators through the Airport Operator Data Flow (APDF) which is properly implemented at Prague airport, the only Czech airport subject to RP4 monitoring.
 
