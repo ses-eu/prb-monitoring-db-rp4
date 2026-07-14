@@ -44,9 +44,9 @@ The NSA 2025 monitoring report indicates the following recommendations formulate
 
 *"The NSA recommends that the ANSP:*
 
-- *continue monitoring and controlling operational and administrative costs;*
+-   *continue monitoring and controlling operational and administrative costs;*
 
-- *identify the main drivers of the cost increase and implement mitigating measures where feasible."*
+-   *identify the main drivers of the cost increase and implement mitigating measures where feasible."*
 
 LPS reports the implementation of the following actions:
 

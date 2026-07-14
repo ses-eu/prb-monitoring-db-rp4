@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+The values of KEA and the KEA corrected for the influence of the war in Ukraine have both improved with respect to 2024. KEA went from 3.30% to 3.23%, while the corrected KEA went from 3.28% to 3.20%.
+
+Spain has a high value in terms of the average internal additional distance per flight (6.71 km, the second highest) and the average additional distance (15.32 km, the third highest).
+
+As a result, Spain is the second highest in terms of contribution to the total additional distance in the SES area with 14.06%.
+

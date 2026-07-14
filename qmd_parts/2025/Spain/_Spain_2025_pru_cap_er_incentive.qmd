@@ -1,4 +1,4 @@
-## ERT1.2. En route capacity incentive scheme {#ert1.2.-en-route-capacity-incentive-scheme .Heading-2-ER}
+## ERT1.2. En route capacity incentive scheme
 
 The Spanish NSA reports a financial penalty of €7 785 082 for the ANSP because of the 2025 performance. The local incentive target for en route ATFM delays, due to CRSTMP causes only, was set at 0.2890 mins/flight.
 

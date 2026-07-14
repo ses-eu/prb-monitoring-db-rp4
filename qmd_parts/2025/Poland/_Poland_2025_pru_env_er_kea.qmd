@@ -1,0 +1,6 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+Poland saw a deterioration with respect to 2024, both in terms of KEA and of the KEA corrected for the influence of the war in Ukraine. The values of KEA were 4.49% in 2024 and 4.71% for 2025; those of the corrected KEA were 2.12% in 2024 and 2.21% in 2025. For 2025, those values place Poland as 25^th^ in terms of KEA and 18^th^ in terms of corrected KEA.
+
+In terms of contribution to the overall additional distance in the SES area, Poland is the 6^th^ highest (23^rd^) with 4.49%.
+

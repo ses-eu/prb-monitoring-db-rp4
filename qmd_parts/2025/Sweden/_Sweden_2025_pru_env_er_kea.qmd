@@ -1,0 +1,10 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+From 2023, Sweden has been improving in terms of KEA: it went from 1.75% in 2023 to 1.72% in 2024 to 1.71% in 2025.
+
+For the corrected KEA the values are 1.19% in 2023, 1.13% in 2024 and 1.14%.
+
+In 2025, those values correspond to a ranking of 7^th^ for KEA and best for the corrected KEA.
+
+In terms of contribution to the additional distance in the SES area, Sweden is 11^th^ with 1.26%.
+

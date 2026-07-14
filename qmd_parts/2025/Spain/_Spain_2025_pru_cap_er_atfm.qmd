@@ -1,14 +1,14 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+## ERT1.1. En route ATFM delay per flight (KPI#1)
 
-- Spain had 2 472k flights in 2025, up from 2 362k flights in 2024.
+-   Spain had 2 472k flights in 2025, up from 2 362k flights in 2024.
 
-- ENAIRE applied en route ATFM regulations resulting in 2 457k minutes of delay, an increase from the 2 405k minutes in 2024.
+-   ENAIRE applied en route ATFM regulations resulting in 2 457k minutes of delay, an increase from the 2 405k minutes in 2024.
 
-- As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, 43k minutes of delay originating in Spain were re-attributed **to other ANSPs.**
+-   As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, 43k minutes of delay originating in Spain were re-attributed **to other ANSPs.**
 
-- Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, 7k minutes of en route ATFM delay were re-attributed **to ENAIRE**; 6k minutes of delay originating in Spain were re-attributed **to other ANSPs**.
+-   Under the auspices of the Route Network (RN) Scenarios during Capacity & Weather Based Operations between June and September 2025, 7k minutes of en route ATFM delay were re-attributed **to ENAIRE**; 6k minutes of delay originating in Spain were re-attributed **to other ANSPs**.
 
-- A further 42k minutes of en route ATFM delay, attributed to a national power failure, were excluded from the SES performance scheme, through agreement of ENAIRE, the Spanish NSA and the Network Manager. \[The incentive scheme was not affected in this case, since the delays had already been classified as 'Other' and since the achieved performance by Spain was already beyond the point at which maximum penalties would be applied.\]
+-   A further 42k minutes of en route ATFM delay, attributed to a national power failure, were excluded from the SES performance scheme, through agreement of ENAIRE, the Spanish NSA and the Network Manager. \[The incentive scheme was not affected in this case, since the delays had already been classified as 'Other' and since the achieved performance by Spain was already beyond the point at which maximum penalties would be applied.\]
 
-- When the above post-operations re-attributions are factored in, the total en route delay for Spain in 2025 was 2 351k minutes in 2025 up from 2 404k minutes in 2024.
+-   When the above post-operations re-attributions are factored in, the total en route delay for Spain in 2025 was 2 351k minutes in 2025 up from 2 404k minutes in 2024.
 

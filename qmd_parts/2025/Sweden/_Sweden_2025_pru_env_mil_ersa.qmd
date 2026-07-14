@@ -1,20 +1,20 @@
-## ERT1.1. Effective use of reserved or segregated local airspace (PI#9) {#ert1.1.-effective-use-of-reserved-or-segregated-local-airspace-pi9 .Heading-2-ER}
+## ERT1.1. Effective use of reserved or segregated local airspace (PI#9)
 
 SWEDEN reports a ratio of **65%**.
 
-- Total number of hours allocated & notified to NM: **953**
+-   Total number of hours allocated & notified to NM: **953**
 
-- Total number of hours used: **617**
+-   Total number of hours used: **617**
 
 MALMO ACC reports a ratio of **56%**
 
-- Total number of hours allocated & notified to NM: **529**
+-   Total number of hours allocated & notified to NM: **529**
 
-- Total number of hours used: **294**
+-   Total number of hours used: **294**
 
 STOCKHOLM reports a ratio of **71%**
 
-- Total number of hours allocated & notified to NM: **425**
+-   Total number of hours allocated & notified to NM: **425**
 
-- Total number of hours used: **302**
+-   Total number of hours used: **302**
 

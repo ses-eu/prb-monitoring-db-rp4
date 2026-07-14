@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM arrival delay of 0.17 min/arr, Romania **achieved the national target** of 0.40 min/arr.
 

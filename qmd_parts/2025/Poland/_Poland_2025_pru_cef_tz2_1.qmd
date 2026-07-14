@@ -28,33 +28,24 @@ Based on the additional information to the terminal reporting tables, the slight
 
 The NSA of Poland provides the following overall assessment of the actual performance in 2025 at charging zone level:
 
-***"PANSA:***
-
-*AUC was by 5,5% lower than DUC. The main reason for this difference was higher number of actual service units for the regional airports than the forecast (+4.8%). This is a factor beyond PANSA control. Actual costs in real terms were slightly lower than determined (-0,9%) what resulted from lower actual costs in nominal terms (-3.3%) -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 2 (other airports). Inflation index was also lower than forecasted (-3.4 pp.).*
-
-***IMWM:***
-
-*The difference between the actual and planned costs of the en-route charges was 2.317.168 PLN and results from:*
-
-*- lower personnel costs by 10,26% resulting from the lack of filling the vacancies planed in PSD.*
-
-*- lower other operating costs by 7,22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4,97%, while the actual inflation level in 2025 according to EUROSTAT data was 3,30%.*
-
-*- lower depreciation costs resulting above all from the postponement in the time of purchase process. Some of the planned investments for 2025 have been implemented as current costs and some have been postponed to 2026.*
-
-*- higher cost of capital by 39,69% resulting from the recognition of costs related to interest on the balance in the cost of capital in connection with the settlement concluded with PANSA regarding the terms of repayment of the amount constituting the balance between the contractual remuneration and the regulatory remuneration, arising by December 31, 2024. The settlement was concluded on July 30, 2025 and was not planned in the PSD.*
-
-***Airport Meteo:***
-
-*ANSP has noted AUC equal to 7.86 PLN (in 2022 prices), while the DUC was equal to 7.64 PLN (in 2022 prices), which resulted in not meeting the cost-efficiency target.*
-
-***Warmia i Mazury:***
-
-*WiM\'s AUC was equal to 18.22 PLN2022 which was a lower value than DUC (18.35 PLN2022). This means that the target has been met. The actual costs in nominal terms were slightly higher (3%) than planned.*
-
-***PL Bydgoszcz:***
-
-*AUC level (16.71 PLN) was lower than DUC level (25.68 PLN), which means that the ANSP has met the target, therefore no further comment has to be made."*
+***"PANSA:**\
+AUC was by 5,5% lower than DUC. The main reason for this difference was higher number of actual service units for the regional airports than the forecast (+4.8%). This is a factor beyond PANSA control. Actual costs in real terms were slightly lower than determined (-0,9%) what resulted from lower actual costs in nominal terms (-3.3%) -- the reasons for the difference are presented in additional information to terminal charges' reporting tables for the charging zone 2 (other airports). Inflation index was also lower than forecasted (-3.4 pp.).\
+\
+**IMWM:**\
+The difference between the actual and planned costs of the en-route charges was 2.317.168 PLN and results from:\
+- lower personnel costs by 10,26% resulting from the lack of filling the vacancies planed in PSD.\
+- lower other operating costs by 7,22%. The above situation is mainly caused by falling inflation. The plan took into account inflation at 4,97%, while the actual inflation level in 2025 according to EUROSTAT data was 3,30%.\
+- lower depreciation costs resulting above all from the postponement in the time of purchase process. Some of the planned investments for 2025 have been implemented as current costs and some have been postponed to 2026.\
+- higher cost of capital by 39,69% resulting from the recognition of costs related to interest on the balance in the cost of capital in connection with the settlement concluded with PANSA regarding the terms of repayment of the amount constituting the balance between the contractual remuneration and the regulatory remuneration, arising by December 31, 2024. The settlement was concluded on July 30, 2025 and was not planned in the PSD.\
+\
+**Airport Meteo:**\
+ANSP has noted AUC equal to 7.86 PLN (in 2022 prices), while the DUC was equal to 7.64 PLN (in 2022 prices), which resulted in not meeting the cost-efficiency target.\
+\
+**Warmia i Mazury:**\
+WiM\'s AUC was equal to 18.22 PLN2022 which was a lower value than DUC (18.35 PLN2022). This means that the target has been met. The actual costs in nominal terms were slightly higher (3%) than planned.\
+\
+**PL Bydgoszcz:**\
+AUC level (16.71 PLN) was lower than DUC level (25.68 PLN), which means that the ANSP has met the target, therefore no further comment has to be made."*
 
 ### **TZ2.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 

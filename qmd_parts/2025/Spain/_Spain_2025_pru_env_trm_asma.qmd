@@ -1,4 +1,4 @@
-## TRM1.3. Additional time in terminal airspace (PI#6) {#trm1.3.-additional-time-in-terminal-airspace-pi6 .Heading-2-TZ}
+## TRM1.3. Additional time in terminal airspace (PI#6)
 
 Six Spanish airports are subject to the monitoring of this indicator: Madrid -- Barajas, Barcelona, Palma de Mallorca, Málaga, Gran Canaria and Alicante.
 

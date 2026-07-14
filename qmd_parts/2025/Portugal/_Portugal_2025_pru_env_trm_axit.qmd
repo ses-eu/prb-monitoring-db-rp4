@@ -1,4 +1,4 @@
-## TRM1.2. Additional time in taxi-in phase (PI#5) {#trm1.2.-additional-time-in-taxi-in-phase-pi5 .Heading-2-TZ}
+## TRM1.2. Additional time in taxi-in phase (PI#5)
 
 Lisbon and Porto are the only Portuguese airports subject to the monitoring of this indicator.
 
