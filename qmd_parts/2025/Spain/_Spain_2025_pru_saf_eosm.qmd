@@ -1,5 +1,7 @@
 ## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
 
+[ENAIRE]{.underline}
+
 In 2025, ENAIRE achieved the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, ENAIRE exceeded the planned levels in all areas, reaching the highest level D in all components.
 
 In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements:
@@ -14,9 +16,13 @@ In terms of main measures put in place to achieve the safety performance targets
 
 - Commitment to benchmarking and the exchange of best practices.
 
+[EA]{.underline}
+
 In 2025, EA met the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, EA exceeded the planned target in the area of Safety Risk Management, reaching level D together with Safety Culture component.
 
 According to the monitoring report, some differences should be noted in the fields (c) and (d) due to the military condition of the EA and the comprehensive approach to safety of the EA that under Flight Safety includes all the Operational Safety aspects of all the activities done by the EA, some of then the not easily releasable to the public.
+
+[Skyway]{.underline}
 
 Skyway met the planned maturity levels set out in its performance plan for four out of five components of the EoSM. In more detail, the area where Skyway missed the planned level was Safety Policy and Objectives.
 
