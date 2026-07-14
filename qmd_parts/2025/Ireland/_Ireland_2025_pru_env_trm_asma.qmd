@@ -1,4 +1,4 @@
-## TRM1.3. Additional time in terminal airspace (PI#6) {#trm1.3.-additional-time-in-terminal-airspace-pi6 .Heading-2-TZ}
+## TRM1.3. Additional time in terminal airspace (PI#6)
 
 Dublin is the only Irish airport subject to the monitoring of this indicator. The additional time in 2025 increased to 3.98 min/arr, above the 2024 value -- last year of RP3 -- of 3.46 min/arr (*using the new methodology*). This represents a 15% increment and results in the second highest additional time in terminal airspace of states included in RP4.
 

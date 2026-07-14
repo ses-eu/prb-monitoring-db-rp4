@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM arrival delay of 0.28 min/arr, Ireland **did not achieve the national target** of 0.20 min/arr.
 

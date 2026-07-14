@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+In terms of absolute values, there has been a slight degradation with respect to 2024 both in terms of KEA and the KEA corrected (KEA: 1.44% in 2023, 1.40% in 2024, 1.63% in 2025; corrected KEA: 1.42% in 2023, 1.38% in 2024, 1.60% in 2025).
+
+Part of the deterioration in 2025 must be ascribed to the inclusion of Iceland in the reference area. In any case, in 2025 those values mean that Ireland ranks 5^th^ in terms of KEA and 7^th^ in terms of corrected KEA.
+
+In terms of contribution to the overall additional distance in the SES area, the value of Ireland is 0.93% (7^th^ lowest contribution).
+

@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM Arr delay of 4.44 min/arr, the Netherlands **did not achieve the national target** of 2.20 min/arr. However, the pivot value for incentives (0.10 min/arr) is limited to CRSTMP delay causes. As State-reported CRSTMP delay of 0.07\* min/arr falls **within the bonus sliding range** for the incentive scheme, the NSA calculates a financial **bonus of** **EUR** **159,397.32**.
 

@@ -1,4 +1,4 @@
-## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2) {#trm1.1.-terminal-and-airport-ans-atfm-arrival-delay-per-flight-kpi2 .Heading-2-TZ}
+## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
 Average ATFM arrival delay in Italy was 0.29 min/arr in 2025, the first year of RP4. The **performance is almost equal to 2024**, last year of RP3, when there were 0.28 min/arr. It has to be noted that in RP3, Italy included only its five largest airports for the calculation of this indicator, whereas in the first year of RP4 there are 48 airports.
 

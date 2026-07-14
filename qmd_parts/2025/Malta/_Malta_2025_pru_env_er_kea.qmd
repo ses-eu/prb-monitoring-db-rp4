@@ -1,0 +1,6 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+With respect to 2024, there has been a degradation for the values of KEA and the KEA corrected for the influence of war in Ukraine. Kea went from 1.49% to 1.67%, while the corrected KEA went from 1.45% to 1.61%. In both cases they are relatively good values, as they Malta as 6^th^ (for KEA) and 8^th^ (for KEA corrected).
+
+Moreover, Malta has the second lowest contribution to the overall additional distance in the SES area with 0.41%.
+

@@ -1,0 +1,6 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+Latvia has seen improvement in the value of the indicator over the last three years, both for KEA and the KEA corrected to consider the influence of the war in Ukraine. The values are 7.97% in 2023, 7.36% in 2024 and 7.15% for KEA (corresponding to a ranking of 27^th^ in each of the 3 years); and 2.83% in 2023, 2.62% in 2024 and 2.55% for the corrected KEA (20^th^ in each of the three years).
+
+The small distance within Latvia means that the contribution to the additional distance in the SES area is the 8^th^ lowest (0.98%).
+
