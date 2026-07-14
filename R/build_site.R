@@ -37,7 +37,7 @@ single_state <- 'Spain' # set your one country/stakeholder here (Home for home p
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
-update_pru_analysis <- TRUE
+update_pru_analysis <- FALSE
 if (update_pru_analysis) {
   KPI <- c(
     'cef',

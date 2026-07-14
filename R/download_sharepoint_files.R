@@ -95,12 +95,12 @@ stop()
 
 # PRU files ----
 pru_kpi <- c(
-  # "environment-ENR",
-   "environment-CIVMIL",
-   "environment-TRM",
-   "capacity-ENR",
-   "capacity-TRM",
-  "cost-efficiency-CEF",
+  "environment-ENR",
+  #  "environment-CIVMIL",
+  #  "environment-TRM",
+  #  "capacity-ENR",
+  #  "capacity-TRM",
+  # "cost-efficiency-CEF",
   NULL
 )
 
@@ -142,4 +142,3 @@ download_pru_analysis_files <- function(kpi) {
 }
 
 purrr::walk(pru_kpi, download_pru_analysis_files)
-
