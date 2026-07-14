@@ -1,4 +1,4 @@
-## TRM1.3. Additional time in terminal airspace (PI#6) {#trm1.3.-additional-time-in-terminal-airspace-pi6 .Heading-2-TZ}
+## TRM1.3. Additional time in terminal airspace (PI#6)
 
 Six German airports are subject to the monitoring of this indicator: Frankfurt, Munich, Berlin, Düsseldorf, Hamburg and Cologne/Bonn. In most cases there was less than 0.1 minutes of difference compared to 2024.
 

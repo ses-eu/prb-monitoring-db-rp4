@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+In terms of absolute values, the indicator has been improving both for KEA and the KEA corrected for the war in Ukraine (2.26% in 2023, 2.19% in 2024 and 2.15% for KEA; 2.13% in 2023, 2.04% in 2024 and 1.97% in 2025).
+
+The values of the internal additional distance are relatively high (24^th^ in ranking every year) but improving: 3.11 km per flight in 2023, 2.90 km per flight in 2024, 2.77 km per flight in 2025.
+
+In terms of overall contribution to the additional distance in the SES area, Greece sits 22^nd^ with 4.42%.
+

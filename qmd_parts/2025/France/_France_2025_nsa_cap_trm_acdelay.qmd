@@ -2,9 +2,11 @@
 
 ### Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance
 
-Regarding ATC part of the delays and related corrective measures, please do refer to Capacity KPI #2: Terminal and airport ANS ATFM arrival delay per flight.
+Regarding ATC part of the delays and related corrective measures, please do refer to 2.3.1.B. KPI#2.
 
 The values reflect the difficulties encountered in LFMN last year mainly due to staffing issues.
+
+LFPG (-1,08) and LFPO (-2,55) improved.
 
 ### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
 

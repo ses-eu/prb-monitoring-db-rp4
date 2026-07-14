@@ -1,0 +1,8 @@
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+The absolute values of the indicator see an improvement with respect to both 2023 and 2024, and this true both for KEA indicator and the KEA corrected for the influence of the war in Ukraine. The values are 2.11% in 2023, 2.23% in 2024 and 2.10% in 2025 for KEA, and 1.36% for 2023, 1.44% for 2024 and 1.35% for 2025 for the corrected KEA.
+
+The value for the KEA places Hungary as 10^th^ best, and in the top 3 (3^rd^) for the corrected KEA.
+
+In terms of contribution to the overall additional distance in the SES area, the value is 2.05% (16^th^).
+

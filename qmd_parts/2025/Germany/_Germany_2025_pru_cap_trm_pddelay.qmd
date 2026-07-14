@@ -1,4 +1,4 @@
-## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+## TRM1.4. Air traffic control pre-departure delay (PI#2)
 
 Six German airports are subject to the monitoring of this indicator: Frankfurt, Munich, Berlin, Düsseldorf, Hamburg and Cologne/Bonn. However, the share of unidentified delay reported by Cologne/Bonn was above 40% for more than 2 months in the year during the entire RP3, preventing the calculation of this indicator for this airport.
 
