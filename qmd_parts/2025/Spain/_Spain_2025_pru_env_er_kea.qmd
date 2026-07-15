@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 The values of KEA and the KEA corrected for the influence of the war in Ukraine have both improved with respect to 2024. KEA went from 3.30% to 3.23%, while the corrected KEA went from 3.28% to 3.20%.
 

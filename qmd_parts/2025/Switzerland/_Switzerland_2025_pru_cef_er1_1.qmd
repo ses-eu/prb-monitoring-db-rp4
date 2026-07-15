@@ -22,7 +22,7 @@ Based on the additional information to the en route reporting tables, the lower 
 
 - Slightly higher than planned depreciation (+0.4%), with depreciation of assets broadly in line with the Performance Plan.
 
-- Significantly lower than planned cost of capital (-5.6%). mainly due to a lower asset base and lower WACC.
+- Significantly lower than planned cost of capital (-5.6%), mainly due to a lower asset base and lower WACC.
 
 - Slightly higher than planned deduction for VFR exempted flights (+0.1%).
 

@@ -1,4 +1,4 @@
-## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+## TRM1.4. Vertical flight efficiency of the descent (PI#7)
 
 Compared to the overall RP4 average value (149.2 seconds per flight), average times flown level during descent are on average 41.1 seconds per flight lower in Portugal. The highest average time flown level during descent happens at Cascais (LPCS) (189.4 seconds per flight), while the lowest happens at Santa Maria (LPAZ) (18.9 seconds per flight).
 

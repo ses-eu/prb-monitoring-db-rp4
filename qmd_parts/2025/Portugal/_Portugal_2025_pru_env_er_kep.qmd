@@ -1,2 +1,2 @@
-## ERT1.2. Horizontal en route flight efficiency of last filed flight plan trajectory (KEP) (PI#1) {#ert1.2.-horizontal-en-route-flight-efficiency-of-last-filed-flight-plan-trajectory-kep-pi1 .Heading-2-ER}
+## ERT1.2. Horizontal en route flight efficiency of last filed flight plan trajectory (KEP) (PI#1)
 

@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 After an improvement in 2024, Switzerland has seen a slight degradation in 2025. The values are 4.43% in 2023, 4.10% in 2024 and 4.14% in 2025 for KEA. For the value corrected for the influence of the war in Ukraine, on the other hand, the values are 4.36% in 2023, 4.02% in 2024 and 4.07% in 2025. Those values correspond to a ranking of 22^nd^ for KEA and 28^th^ for the corrected KEA.
 

@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 The value of KEA for Slovenia has improved from 1.77% to 1.58% between 2025 and 2024. Similarly, the value of the corrected KEA has improved from 1.66% to 1.5%.
 

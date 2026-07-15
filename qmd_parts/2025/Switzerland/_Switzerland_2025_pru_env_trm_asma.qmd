@@ -1,4 +1,4 @@
-## TRM1.3. Additional time in terminal airspace (PI#6) {#trm1.3.-additional-time-in-terminal-airspace-pi6 .Heading-2-TZ}
+## TRM1.3. Additional time in terminal airspace (PI#6)
 
 The additional time in Zurich in 2025 decreased to 3.46 min/arr, 2% lower than the 2024 value -- last year of RP3 -- of 3.54 min/arr (*using the new methodology*).
 

@@ -1,4 +1,4 @@
-## TRM1.4. Air traffic control pre-departure delay (PI#2) {#trm1.4.-air-traffic-control-pre-departure-delay-pi2 .Heading-2-TZ}
+## TRM1.4. Air traffic control pre-departure delay (PI#2)
 
 Delay in Zurich in 2025 decreased to 0.97 min/dep, 18% lower than 2024 value-- last year of RP3 -- of 1.18 min/dep.
 

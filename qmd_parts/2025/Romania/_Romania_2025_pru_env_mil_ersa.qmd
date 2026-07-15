@@ -1,8 +1,8 @@
-## ERT1.1. Effective use of reserved or segregated local airspace (PI#9) {#ert1.1.-effective-use-of-reserved-or-segregated-local-airspace-pi9 .Heading-2-ER}
+## ERT1.1. Effective use of reserved or segregated local airspace (PI#9)
 
 ROMANIA reports a ratio of **80.15%**
 
-- Total number of hours allocated & notified to NM: **94,535**
+-   Total number of hours allocated & notified to NM: **94,535**
 
-- Total number of hours used: **75,766**
+-   Total number of hours used: **75,766**
 

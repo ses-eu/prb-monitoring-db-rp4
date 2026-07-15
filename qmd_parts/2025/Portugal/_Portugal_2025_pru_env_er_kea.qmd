@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 Due to its geographical position, the values of KEA and the KEA corrected for the influence of the war in Ukraine are essentially the same. There has been a degradation from 2023 to 2025, with KEA moving from 1.50% in 2023 to 1.61% in 2024 to 1.71% in 2025. These values place Portugal in the top 10 performing States (in 2025, 7^th^ for KEA and 10^th^ for corrected KEA).
 

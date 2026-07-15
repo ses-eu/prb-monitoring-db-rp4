@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM arrival delay of 1.88 min/arr, Portugal **achieved the national target** of 2.19 min/arr. However, the pivot value for incentives indicated by the Member State, 0.39 min/arr\*, is limited to CRSTMP delay causes. As CRSTMP delay of 0.102 min/arr falls beyond the end of the bonus sliding range for the incentive scheme, meaning that the **maximum bonus of 1.0%** applies. As such, the NSA computes a bonus of EUR 519.77.
 

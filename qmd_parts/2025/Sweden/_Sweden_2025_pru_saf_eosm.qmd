@@ -8,15 +8,15 @@ According to the monitoring report, Sweden notes that from Swedish experience th
 
 In terms of main measures put in place to achieve the planned levels, the monitoring report defines the following elements:
 
-- Well known SMS. Training in SMS. Yearly review of SMS.
+-   Well known SMS. Training in SMS. Yearly review of SMS.
 
-- Regular review of hazards and risks and associated processes.
+-   Regular review of hazards and risks and associated processes.
 
-- A system for investigation and follow up of results. Internal audits. Follow up on targets.
+-   A system for investigation and follow up of results. Internal audits. Follow up on targets.
 
-- Refresher training and well established forms of communication.
+-   Refresher training and well established forms of communication.
 
-- A reporting system and follow up (also investigative) that gives feedback to the reporter.
+-   A reporting system and follow up (also investigative) that gives feedback to the reporter.
 
 [ACR]{.underline}
 
@@ -24,15 +24,15 @@ In 2025, ACR achieved the planned maturity levels set out in its performance pla
 
 In terms of main measures put in place to achieve the planned levels, the monitoring report defines the following elements:
 
-- Established and well-known SMS. Training in SMS. Procedures for improvement of SMS.
+-   Established and well-known SMS. Training in SMS. Procedures for improvement of SMS.
 
-- Risk and hazards are identified in change processes. Assessment of level of risk acceptable. New and updated processes for monitoring and evaluation of risks and hazards.
+-   Risk and hazards are identified in change processes. Assessment of level of risk acceptable. New and updated processes for monitoring and evaluation of risks and hazards.
 
-- System for handling of occurrence reports. Exchange with others for best practices. Internal audits.
+-   System for handling of occurrence reports. Exchange with others for best practices. Internal audits.
 
-- Refresher training. Monthly reports.
+-   Refresher training. Monthly reports.
 
-- Good reporting culture. Reports are disseminated. Safety culture surveys.
+-   Good reporting culture. Reports are disseminated. Safety culture surveys.
 
 [AFAB]{.underline}
 
@@ -42,15 +42,15 @@ Sweden notes in the monitoring report that AFAB has not reached all target level
 
 In terms of main measures put in place to achieve the planned levels, the monitoring report defines the following elements:
 
-- Well known SMS and policy. Yearly review of SMS. Management has safety on the agenda at meetings.
+-   Well known SMS and policy. Yearly review of SMS. Management has safety on the agenda at meetings.
 
-- Yearly review of risks and hazards. Training in risk reduction. New staff.
+-   Yearly review of risks and hazards. Training in risk reduction. New staff.
 
-- Audit plan. Safety analysis twice a year. Trends are followed up.
+-   Audit plan. Safety analysis twice a year. Trends are followed up.
 
-- Training of staff, both internal and external. Follow up by safety survey. New staff.
+-   Training of staff, both internal and external. Follow up by safety survey. New staff.
 
-- Feedback on reports. Take result from safety analysis into account for refresher training.
+-   Feedback on reports. Take result from safety analysis into account for refresher training.
 
 [SDATS]{.underline}
 
@@ -58,13 +58,13 @@ In 2025, SDATAS achieved the planned maturity levels set out in its performance 
 
 In terms of main measures put in place to achieve the planned levels, the monitoring report defines the following elements:
 
-- Well-established policy: An approach to disseminating the throughout the organization. Safety performance monitoring: Continuous tracking of safety metrics and outcomes.
+-   Well-established policy: An approach to disseminating the throughout the organization. Safety performance monitoring: Continuous tracking of safety metrics and outcomes.
 
-- Well established hazard logs. Monitoring function. Safety action group.
+-   Well established hazard logs. Monitoring function. Safety action group.
 
-- Internal audits. Safety review board. Monitoring function.
+-   Internal audits. Safety review board. Monitoring function.
 
-- Awareness training. Well disseminated chain of information.
+-   Awareness training. Well disseminated chain of information.
 
-- Reporting culture. Exchange of information with others.
+-   Reporting culture. Exchange of information with others.
 

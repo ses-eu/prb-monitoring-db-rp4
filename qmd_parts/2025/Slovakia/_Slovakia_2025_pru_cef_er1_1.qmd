@@ -10,11 +10,11 @@ The difference between actual and planned TSUs (-8.4%) falls outside the ±2% de
 
 ### **ER1.1.3. EN ROUTE COSTS BY ENTITY**
 
-Actual real en route costs are +5.8% (+4.4 M€2022) higher than planned. This is the result of higher costs for the main ANSP, LPS (+6.7%, or +4.5 M€2022) and the NSA/EUROCONTROL (+2.1%, or +0.1 M€2022) and lower costs for the MET service provider (-9.2%, or -0.3 M€2022).
+Actual real en route costs are +5.8% (+4.4 M€2022) higher than planned. This is the result of higher costs for the main ANSP, LPS SR (+6.7%, or +4.5 M€2022) and the NSA/EUROCONTROL (+2.1%, or +0.1 M€2022) and lower costs for the MET service provider (-9.2%, or -0.3 M€2022).
 
-### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (LPS) AT CHARGING ZONE LEVEL**
+### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (LPS SR) AT CHARGING ZONE LEVEL**
 
-Based on the additional information to the en route reporting tables, the significantly higher than planned en route costs in real terms for LPS in 2025 (+6.7%, or +4.5 M€2022) result from:
+Based on the additional information to the en route reporting tables, the significantly higher than planned en route costs in real terms for LPS SR in 2025 (+6.7%, or +4.5 M€2022) result from:
 
 - Higher than planned staff costs (+2.0%), mainly due to legislative changes in social security contribution.
 
@@ -38,17 +38,17 @@ The NSA provides the following explanation for the differences between actual an
 
 *"Actual en-route costs in 2025 were approximately 5.8% higher than the determined costs. The increase was mainly attributable to higher operational and staff-related expenditures necessary to maintain the required level of safety, retaining qualified personnel and service provision. At the same time, traffic volumes remained below the level assumed in the Performance Plan, with total service units being approximately 8.4% lower than planned. The combination of higher costs and lower traffic resulted in an actual unit cost significantly above the determined value."*
 
-### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LPS) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
+### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (LPS SR) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 
 The NSA 2025 monitoring report indicates the following recommendations formulated by the NSA:
 
 *"The NSA recommends that the ANSP:*
 
-- *continue monitoring and controlling operational and administrative costs;*
+-   *continue monitoring and controlling operational and administrative costs;*
 
-- *identify the main drivers of the cost increase and implement mitigating measures where feasible."*
+-   *identify the main drivers of the cost increase and implement mitigating measures where feasible."*
 
-LPS reports the implementation of the following actions:
+LPS SR reports the implementation of the following actions:
 
 *"The management of ANSP has initiated personal audit."*
 

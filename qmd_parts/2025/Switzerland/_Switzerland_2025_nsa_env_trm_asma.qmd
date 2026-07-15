@@ -2,6 +2,8 @@
 
 ### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
 
+Efficiency within the last 40NM (additional time in descent flight phase) around LSZH and LSGG decreased in 2025 due to traffic increase.
+
 In LSZH, XMAN, AOP (thanks to the TTA used through the TTMS tool implemented by Zurich Airport) and Leading Optimised Runway Delivery (LORD) projects should help improving performance.
 
 In LSGG, the deployment of an AMAN and LORD should help improve the performance.
