@@ -18,9 +18,11 @@ Based on the additional information to the terminal reporting tables, the higher
 
 - Significantly higher than planned staff costs (+13.0%), mainly due to traffic being significantly higher than planned and pay rises exceeding the plan in nominal terms for both ATCO and non-ATCO positions as a result of inflation that was slightly higher than expected.
 
-- Significantly lower than planned other operating costs (-6.7%), due to: more favourable air traffic control liability insurance; favourable changes in the energy market; lower than planned manufacturer support costs, shifts in planned investments impacting IT services expenditure.- Significantly lower than planned depreciation (-7.3%), mainly due to later than planned implementation of some investments and some assets being put into operation later than planned.
+- Significantly lower than planned other operating costs (-6.7%), due to: more favourable air traffic control liability insurance; favourable changes in the energy market; lower than planned manufacturer support costs, shifts in planned investments impacting IT services expenditure.
 
-- Higher than planned cost of capital (+4.2%), mainly due to the average net current assets - being slightly above plan, although this was partially offset by the value of fixed assets under construction being below plan.
+- Significantly lower than planned depreciation (-7.3%), mainly due to later than planned implementation of some investments and some assets being put into operation later than planned.
+
+- Higher than planned cost of capital (+4.2%), mainly due to the average net current assets being slightly above plan, although this was partially offset by the value of fixed assets under construction being below plan.
 
 ### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 
