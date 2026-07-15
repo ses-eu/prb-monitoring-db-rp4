@@ -62,11 +62,17 @@ if (knitr::is_latex_output()) {
   c_height <- myheight + 30
 }
 
+if (country == 'Luxembourg' & cztype == 'enroute') {
+  main_ansp_graph <- 'skeyes'
+} else {
+  main_ansp_graph <- main_ansp
+}
+
 c_title_text <- paste0(
   "Net gain/loss for ",
   # if_else(cztype == 'terminal', 'terminal', 'en route'),
   # " activity - ",
-  if_else(country == rp_full, "Main ANSPs ", paste0(main_ansp, " ")),
+  if_else(country == rp_full, "Main ANSPs ", paste0(main_ansp_graph, " ")),
   year_report
 )
 

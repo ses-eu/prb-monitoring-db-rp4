@@ -210,7 +210,7 @@ range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE) / 10^myroundup) *
   10^myroundup +
   10^myroundup / 2
 
-if (country=="Netherlands" & year_report==2025 & cztype=="enroute"){
+if (country == "Netherlands" & year_report == 2025 & cztype == "enroute") {
   range_max <- 3.5
 }
 
@@ -220,13 +220,19 @@ if (country=="Netherlands" & year_report==2025 & cztype=="enroute"){
 #}
 
 # chart parameters ----
+if (country == 'Luxembourg' & cztype == 'enroute') {
+  main_ansp_graph <- 'skeyes'
+} else {
+  main_ansp_graph <- main_ansp
+}
+
 c_title_text <- paste0(
   if_else(
     country == rp_full,
     "Costs by nature for main ANSPs (difference\nbetween actual and determined) - ",
     paste0(
       "Costs by nature (difference between\nactual and determined) - ",
-      main_ansp,
+      main_ansp_graph,
       " "
     )
   ),

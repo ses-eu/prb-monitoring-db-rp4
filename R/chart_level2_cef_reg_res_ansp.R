@@ -91,10 +91,16 @@ c_trace_showlegend <- FALSE
 
 c_barmode <- "group"
 
+if (country == 'Luxembourg' & cztype == 'enroute') {
+  main_ansp_graph <- 'skeyes'
+} else {
+  main_ansp_graph <- main_ansp
+}
+
 c_title_text <- if_else(
   country == rp_full,
   "RR - Main ANSPs",
-  paste0("RR - ", main_ansp)
+  paste0("RR - ", main_ansp_graph)
 )
 
 c_yaxis_title <- "RR (M€)"
@@ -358,7 +364,11 @@ legend_annotations <- list(
     xanchor = "left",
     x = 0.07,
     y = c_legend_y - 0.1 - 0.04 * negative_check,
-    text = paste0("RR as percentage of ",if_else(cztype == "enroute", "en route", "terminal")," revenues"),
+    text = paste0(
+      "RR as percentage of ",
+      if_else(cztype == "enroute", "en route", "terminal"),
+      " revenues"
+    ),
     font = list(size = myfont * 0.9, color = "black"),
     xref = "paper",
     yref = "paper",
@@ -397,7 +407,11 @@ mybarchart2(
     data = data_prep,
     x = ~xlabel,
     y = ~share,
-    name = paste0("RR as percentage of ",if_else(cztype == "enroute", "en route", "terminal")," revenues"),
+    name = paste0(
+      "RR as percentage of ",
+      if_else(cztype == "enroute", "en route", "terminal"),
+      " revenues"
+    ),
     yaxis = "y2",
     # mode = "markers",
     text = "",
