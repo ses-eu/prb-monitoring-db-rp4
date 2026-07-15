@@ -33,17 +33,17 @@ out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- TRUE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Czech Republic' # set your one country/stakeholder here (Home for home page)
+single_state <- 'Denmark' # set your one country/stakeholder here (Home for home page)
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
-update_pru_analysis <- FALSE
+update_pru_analysis <- TRUE
 if (update_pru_analysis) {
   KPI <- c(
     'cef',
     'cap_ert',
     'cap_trm',
-     'env_ert',
+    'env_ert',
     'env_mil',
     'env_trm',
     'saf',
@@ -52,7 +52,7 @@ if (update_pru_analysis) {
 }
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
-update_data <- FALSE
+update_data <- TRUE
 
 if (update_data) {
   # delete cached files
@@ -88,7 +88,8 @@ if (!all_states) {
   state_list_prod <- state_list
   # state_list_prod <- c(state_list, "Home")  #add home to list
   # state_list_prod <- setdiff(state_list_prod, "FABEC") #remove state
-  states_from <- c(1:31) # 1st number is the index of 1st state from which you want to generate
+  states_from <- c(19:31) # 1st number is the index of 1st state from which you want to generate
+  state_list_prod <- state_list_prod[states_from]
   # state_list_prod <- c(
   #'Austria',
   #'Bulgaria',
@@ -144,7 +145,6 @@ for (i in 2025) {
   }
   year_folder <- i
 
-
   ## set site parameters
   source("R/params_site.R")
 
@@ -165,9 +165,7 @@ for (i in 2025) {
 
     ## copy site to network folder ----
     if (out_format == 'web') {
-     
       if (investments & country != "Home") {
-       
         ### delete previous version
         unlink(
           paste0(destination_dir_investments, country_lower),
@@ -182,7 +180,6 @@ for (i in 2025) {
           recursive = TRUE,
           copy.mode = TRUE
         )
-      
 
         ### rename _site with state name
         file.rename(
