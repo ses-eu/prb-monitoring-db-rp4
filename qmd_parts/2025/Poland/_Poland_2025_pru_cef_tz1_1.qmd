@@ -14,9 +14,9 @@ Actual real terminal costs are +2.0% (+0.3 M€2022) higher than planned. This i
 
 ### **TZ1.1.4. TERMINAL CHARGING ZONE 1 COSTS FOR THE MAIN ANSP (PANSA) AT CHARGING ZONE LEVEL**
 
-The slightly higher than planned terminal costs in real terms for PANSA in 2025 (+1.9%, or +0.3 M€2022) are mainly due to lower than planned actual inflation index (-3.4 p.p), since, in nominal terms, the costs were slightly below plan (-0.7%). Based on the additional information to the terminal reporting tables, this results from:
+The slightly higher than planned terminal costs in real terms for PANSA in 2025 (+1.9%, or +0.3 M€2022) are mainly due to lower than planned actual inflation index (-3.4 p.p.), since, in nominal terms, the costs were slightly below plan (-0.7%). Based on the additional information to the terminal reporting tables, this results from:
 
-- Significantly higher than planned staff costs (+5.4%), mainly due to the evolution of costs related to provisions, including; 1) the fact that "*determined ER costs for 2025 included forecasted net change in the value of accounting provisions related to court cases of -28 MPLN \[some 6.6 M€\] for PANSA overall which did not materialise*" , as well as 2) higher than forecast net change in provisions for pensions and related benefits and 3) additional costs stemming from revaluation of provisions for unused employee holidays.
+- Significantly higher than planned staff costs (+5.4%), mainly due to the evolution of costs related to provisions, including; 1) the fact that "*determined costs for 2025 included forecasted net change in the value of accounting provisions related to court cases of -28 MPLN \[some 6.6 M€\] for PANSA overall which did not materialise*" , as well as 2) higher than forecast net change in provisions for pensions and related benefits and 3) additional costs stemming from revaluation of provisions for unused employee holidays.
 
 - Significantly lower than planned other operating costs (-17.7%) mainly due to lower than planned costs for electricity, repairs, maintenance and support of IT systems as well as lower than planned expenses for meetings as well as "*some works initially planned to be financed under opex executed as capex due to either expanded scope of the necessary works or higher unit value*".
 

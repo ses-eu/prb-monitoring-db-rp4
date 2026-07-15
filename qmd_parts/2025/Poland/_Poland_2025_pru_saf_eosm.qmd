@@ -8,37 +8,37 @@ According to the monitoring report, PANSA achieved all targets set for that year
 
 In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements:
 
-- The \"PANSA Safety Culture\" document was prepared in 2025 and approved by the Safety Manager. It is accompanied by the \"Safety Culture Assessment Programme\" based on the blocks and target audience defined in the document. The Assessment Programme was approved by the Safety Manager and market research started for the purpose of obtaining a contractor for the assessment.
+-   The \"PANSA Safety Culture\" document was prepared in 2025 and approved by the Safety Manager. It is accompanied by the \"Safety Culture Assessment Programme\" based on the blocks and target audience defined in the document. The Assessment Programme was approved by the Safety Manager and market research started for the purpose of obtaining a contractor for the assessment.
 
-- Various meetings in local ATS units, including "Safety Days", were continued in 2025 to popularise PANSA's Safety Vision, promote Just Culture, including Reporting Culture and discuss local safety issues.
+-   Various meetings in local ATS units, including "Safety Days", were continued in 2025 to popularise PANSA's Safety Vision, promote Just Culture, including Reporting Culture and discuss local safety issues.
 
-- Local Safety Experts have become key experts in risk assessment.
+-   Local Safety Experts have become key experts in risk assessment.
 
-- PANSA has updated the training programme for all personnel which covers Safety Management matters. Dedicated training has been developed for the top management in a classroom form. SMS training for the operational personnel is part of the operational training. Other PANSA personnel are provided with mandatory e-learning.
+-   PANSA has updated the training programme for all personnel which covers Safety Management matters. Dedicated training has been developed for the top management in a classroom form. SMS training for the operational personnel is part of the operational training. Other PANSA personnel are provided with mandatory e-learning.
 
-- The integrated Hazard Register was ramped-up under the control of the dedicated unit for hazard identification and SMS development.
+-   The integrated Hazard Register was ramped-up under the control of the dedicated unit for hazard identification and SMS development.
 
-- All SMS procedures have been reviewed and updated, and new Just Culture Policy was agreed with all trade unions, signed and published.
+-   All SMS procedures have been reviewed and updated, and new Just Culture Policy was agreed with all trade unions, signed and published.
 
-- A rolling programme of verifying working time based on rostering was continued (planned and executed) for all units (3 subsequent operational units at once on a quarterly basis). The reports were provided to the Director of Operations for on-going corrections.
+-   A rolling programme of verifying working time based on rostering was continued (planned and executed) for all units (3 subsequent operational units at once on a quarterly basis). The reports were provided to the Director of Operations for on-going corrections.
 
-- Co-operation was established with other ANSPs and information exchanged on practices in safety performance and procedures.
+-   Co-operation was established with other ANSPs and information exchanged on practices in safety performance and procedures.
 
-- PANSA joined the Data4Safety programme of EASA.
+-   PANSA joined the Data4Safety programme of EASA.
 
-- PANSA joined the CANSO/EUROCONTROL safety benchmarking programme Standard of Excellence in SMS.
+-   PANSA joined the CANSO/EUROCONTROL safety benchmarking programme Standard of Excellence in SMS.
 
-- Initiation of integration of change management with safety assessment processes within the safety management department.
+-   Initiation of integration of change management with safety assessment processes within the safety management department.
 
-- Training and implementing the Kanban method using MS Teams to oversee air traffic occurrence investigations.
+-   Training and implementing the Kanban method using MS Teams to oversee air traffic occurrence investigations.
 
 The Polish NSA notes in the monitoring report that certain initiatives still need to be undertaken and implemented in order to allow achievement of the targets set for PANSA for the upcoming years of RP4. These include:
 
-- Dedicated Human Factor expert(s) to be employed to provide support across PANSA. Actions are planned to be taken to acquire a contract expert (Safety Risk Management -- Level D -- 2029).
+-   Dedicated Human Factor expert(s) to be employed to provide support across PANSA. Actions are planned to be taken to acquire a contract expert (Safety Risk Management -- Level D -- 2029).
 
-- Fatigue Risk Management procedure to be revised and adapted to improve the management of fatigue-related risk based on internally and externally collected data (Safety Risk Management -- Level D -- 2029). HR data research started in 2025.
+-   Fatigue Risk Management procedure to be revised and adapted to improve the management of fatigue-related risk based on internally and externally collected data (Safety Risk Management -- Level D -- 2029). HR data research started in 2025.
 
-- Safety Dashboard shall be ready in 2026 and is intended to be the tool to identify and present operational risk for acceptance by the operational managers. The current operational risk identification is limited to sector overload (Safety Risk Management -- Level D -- 2029). Formalisation of current practices to analyse trends arising from SMS audits and surveys (Safety Assurance -- Level C -- 2026).
+-   Safety Dashboard shall be ready in 2026 and is intended to be the tool to identify and present operational risk for acceptance by the operational managers. The current operational risk identification is limited to sector overload (Safety Risk Management -- Level D -- 2029). Formalisation of current practices to analyse trends arising from SMS audits and surveys (Safety Assurance -- Level C -- 2026).
 
 Furthermore, as per the monitoring report, the NSA will closely monitor the implementation of measures aimed at improving the effectiveness of safety management, including through ongoing monitoring activities, as well as planned and unplanned inspections carried out as part of the continuous oversight of the ANSP.
 
@@ -62,9 +62,9 @@ In terms of main measures put in place to achieve the planned safety performance
 
 To demonstrate the continuous maturity of Level C within safety risk management, the monitoring report notes that the following evidence-backed processes were confirmed:
 
-- A comprehensive review of the SMS framework is conducted at least annually.
+-   A comprehensive review of the SMS framework is conducted at least annually.
 
-- Risk management processes utilise a combination of reactive, proactive, and predictive methods.
+-   Risk management processes utilise a combination of reactive, proactive, and predictive methods.
 
 In terms of reaching the targets in future years of the reference period, according to the report, based on the results of the 2025 questionnaire assessment, the CAA considers that in order to achieve the target RP4 safety levels Warmia i Mazury Sp. z o.o. will need to implement additional measures related to safety requirements. In the coming years the ANSP is expected to further strengthen internal governance arrangements and ensure that board-level management is systematically informed about key operational and organisational risks, safety hotspots, safety initiatives and safety culture outcomes. A stronger and more consistent top-down commitment from senior and middle management is required to actively promote and sustain a positive safety culture, supported by clear communication, visible leadership engagement and structured organisational messaging. Further development is also expected in the integration of human performance principles into day-to-day operations, including the adoption and effective use of recognised good practices and the active involvement of Human Factors expertise across relevant organisational areas. In addition, the organisation should continue to mature its safety culture process, including regular and structured safety culture assessments, the implementation and tracking of improvement actions, and effective monitoring of their outcomes. Overall, the ANSP is expected to ensure greater consistency, integration and effectiveness across all SMS and safety culture elements, with a clear focus on continuous improvement and operational resilience.
 

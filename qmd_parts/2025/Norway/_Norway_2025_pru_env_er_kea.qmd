@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 Norway has seen a slight deterioration in terms of the absolute values of the indicator. The values for KEA went from 1.29% in 2023 to 1.33% in 2024 to 1.60% in 2025. The values for the KEA corrected for the influence of the war in Ukraine went from 1.15% in 2023 to 1.18% in 2024 to 1.41% in 2025. Those values place Norway in the top 5 performers (4^th^ for KEA and 5^th^ for corrected KEA in 2025).
 

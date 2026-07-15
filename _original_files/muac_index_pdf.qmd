@@ -354,6 +354,26 @@ replace_headings(path, character(0))
 
 \needspace{3\baselineskip}
 
+`\biggertext{Focus on ATCOs in operations}`{=latex}
+
+```{r cap_ert_text_atco}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, cap_er_nsa_titles_atco)
+
+``` 
+
+
+\needspace{3\baselineskip}
+
 # COST-EFFIENCY - `r toupper(params$country)`
 
 ## PRB monitoring

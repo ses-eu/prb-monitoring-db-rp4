@@ -1,4 +1,4 @@
-## TRM1.3. Adherence to ATFM slots (PI#1) {#trm1.3.-adherence-to-atfm-slots-pi1 .Heading-2-TZ}
+## TRM1.3. Adherence to ATFM slots (PI#1)
 
 ATFM slot adherence in 2025 was equal to 97.3%, very close to the 2024 value -- last year of RP3 -- of 96.8%. All airports except Katowice-Pyrzowice (93.8%) were above 95.0%.
 
