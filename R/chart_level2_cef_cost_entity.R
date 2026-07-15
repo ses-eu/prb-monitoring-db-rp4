@@ -43,6 +43,16 @@ if (cztype == "terminal") {
   nsa_cost_title <- "NSA (including\nEUROCONTROL)"
 }
 
+entity_groups <- c(
+  "Main ATSP",
+  "Other ATSP",
+  "METSP",
+  nsa_cost_title
+)
+
+type <- c("Actual costs", "Determined costs")
+
+
 data_prep <- data_raw %>%
   filter(
     charging_zone_code == mycz,
@@ -74,12 +84,7 @@ data_prep <- data_raw %>%
   mutate(
     xlabel = factor(
       entity_group,
-      levels = c(
-        "Main ATSP",
-        "Other ATSP",
-        "METSP",
-        nsa_cost_title
-      )
+      levels = entity_groups
     )
   )
 
@@ -149,4 +154,27 @@ p1 <- mybarchart2(
 
   legend_y = c_legend_y
 )
-p1
+
+fake_data <- tibble::tibble(
+  entity_group = entity_groups,
+  fake_value = 0
+) |>
+  mutate(
+    entity_group = factor(entity_group, levels = entity_groups)
+  )
+
+p1 |>
+  add_trace(
+    inherit = FALSE,
+    data = fake_data,
+    x = ~entity_group,
+    y = ~fake_value,
+    type = "scatter",
+    mode = "markers",
+    marker = list(
+      opacity = 0,
+      size = 0
+    ),
+    hoverinfo = "none",
+    showlegend = FALSE
+  )
