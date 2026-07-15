@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM arrival delay of 0.18 min/arr, Finland **did not achieve the national target** of 0.14 min/arr. However, the pivot value for incentives (0.010 min/arr) is limited to CRSTMP delay causes. As CRSTMP delay of 0.008 min/arr falls **within the deadband** for the incentive scheme, **no bonus or penalty** applies.
 

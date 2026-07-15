@@ -40,7 +40,7 @@ The NSA provides the following explanation for the differences between actual an
 
 ### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DSNA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 
-The NSA 2025 monitoring report indicates that NSA did not propose any specific recommendations.
+The NSA 2025 monitoring report indicates that the NSA did not propose any specific recommendations.
 
 ### **ER1.1.8. NOTES**
 

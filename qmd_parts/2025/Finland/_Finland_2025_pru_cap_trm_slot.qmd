@@ -1,4 +1,4 @@
-## TRM1.3. Adherence to ATFM slots (PI#1) {#trm1.3.-adherence-to-atfm-slots-pi1 .Heading-2-TZ}
+## TRM1.3. Adherence to ATFM slots (PI#1)
 
 ATFM slot adherence in 2025 increased to 97.0%, above the 2024 value -- last year of RP3 -- of 95.5%. With regard to the 3.0% of flights that did not adhere, 0.5% were early and 2.5% were late.
 

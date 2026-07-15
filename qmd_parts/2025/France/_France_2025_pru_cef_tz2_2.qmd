@@ -12,7 +12,7 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the impact of financial incentives (-1.94 €/SU);
 
-- cross- financing between terminal charging zones 1 and 2 (-99.12 €/SU); and,
+- cross-financing between terminal charging zones 1 and 2 (-99.12 €/SU); and,
 
 - the deduction of other revenues (-82.73 €/SU).
 

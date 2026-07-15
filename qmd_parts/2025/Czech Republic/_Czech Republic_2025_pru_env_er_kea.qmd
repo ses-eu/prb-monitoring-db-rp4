@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 In terms of value of the indicator, there has been continuous improvement from 2023 for both the KEA (from 2.61% in 2023 to 2.48% in 2024 to 2.45% in 2025) and the KEA corrected to take into consideration the effect of the conflict in Ukraine (from 2.26% in 2023 to 2.11% to 2024 to 2.08% in 2025). In terms of "ranking" those values place the Czech Republic in 12^th^ and 14^th^ place among the States.
 

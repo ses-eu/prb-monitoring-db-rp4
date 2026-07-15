@@ -38,9 +38,9 @@ if (year_folder == rp_summary_year) {
     ) %>% 
       mutate(
         ert_trm_share = paste0(
-          format(round(en_route_costs/(en_route_costs + terminal_costs)*100, 0), nsmall = 0),
+          format(janitor::round_half_up(en_route_costs/(en_route_costs + terminal_costs)*100, 0), nsmall = 0),
           "% / ",
-                   format(round(terminal_costs/(en_route_costs + terminal_costs)*100, 0), nsmall = 0),
+                   format(janitor::round_half_up(terminal_costs/(en_route_costs + terminal_costs)*100, 0), nsmall = 0),
           "%"
         )
       )

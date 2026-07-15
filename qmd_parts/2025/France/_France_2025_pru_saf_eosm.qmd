@@ -4,25 +4,25 @@ In 2025, DSNA did not achieve the planned maturity levels set out in its perform
 
 The monitoring report states that in 2025, an internal evaluation project of the DSNA\'s SMS was conducted in light of the new EoSM questionnaire. The project yielded results below target for each of the five pillars for the year 2025:
 
-- Safety policy: The EoSM rating of A is primarily due to the lack of formalization of responsibilities, accountability and authorizations related to the activities described in the SMS, as well as the absence of a validated SMS implementation plan.
+-   Safety policy: The EoSM rating of A is primarily due to the lack of formalization of responsibilities, accountability and authorizations related to the activities described in the SMS, as well as the absence of a validated SMS implementation plan.
 
 <!-- -->
 
-- Safety risk management: DSNA does not have an established hazard reference framework, defined risk and safety levels, or formal processes for assessing risk or the effectiveness of a risk reduction mechanism.
+-   Safety risk management: DSNA does not have an established hazard reference framework, defined risk and safety levels, or formal processes for assessing risk or the effectiveness of a risk reduction mechanism.
 
-- Safety assurance: the A rating is explained by the absence of a safety survey process.
+-   Safety assurance: the A rating is explained by the absence of a safety survey process.
 
-- Safety promotion: the absence of a formalized skills framework prevents the formal assessment of these skills.
+-   Safety promotion: the absence of a formalized skills framework prevents the formal assessment of these skills.
 
-- Safety culture: the EoSM rating of A is primarily due to the absence of a recurring safety culture survey since 2011 and a lack of training on the principles of a just culture.
+-   Safety culture: the EoSM rating of A is primarily due to the absence of a recurring safety culture survey since 2011 and a lack of training on the principles of a just culture.
 
 In terms of main measures put in place to achieve the safety performance targets, the monitoring report defines the following elements:
 
-- Implementation of a SMS transformation program, with a dedicated program director, and a program structure based on industry standards (sponsor, steering committee, management of deliverables, schedules, human and financial resources, risk management, and interdependencies). This program will involve internal expertise within the various DSNA directions, both nationally and locally, as well as external resources (contracts with service providers).
+-   Implementation of a SMS transformation program, with a dedicated program director, and a program structure based on industry standards (sponsor, steering committee, management of deliverables, schedules, human and financial resources, risk management, and interdependencies). This program will involve internal expertise within the various DSNA directions, both nationally and locally, as well as external resources (contracts with service providers).
 
-- Strengthening the safety culture, through the implementation of a safety culture survey involving each DSNA employee, the results of which will identify the actions to be taken.
+-   Strengthening the safety culture, through the implementation of a safety culture survey involving each DSNA employee, the results of which will identify the actions to be taken.
 
-- Implementation of a contract with a qualified external service provider specializing in organizational and human factors, risk management, and safety management systems, to strengthen expertise in these areas and provide an external perspective.
+-   Implementation of a contract with a qualified external service provider specializing in organizational and human factors, risk management, and safety management systems, to strengthen expertise in these areas and provide an external perspective.
 
 In terms of remedial actions implemented or planned, as described in the monitoring report, DSNA SMS transformation program aims for the highest level of maturity realistically achievable within the allotted time for each pillar. However, the current state of the DSNA\'s SMS, as well as the constraints of the questionnaire (e.g., some processes must be reviewed once per reference period, with two reviews required to demonstrate compliance), will not allow the expected level to be reached before the next reference period: regarding safety risk management, the stated ambition for 2029 is not the D rating required by RP4. However, it is necessary to build the safety risk management activity from scratch and, in parallel, to carry out a profound cultural transformation, both within DSNA and in our relationships with our partners and subcontractors.
 
@@ -32,21 +32,21 @@ According to the annex for the monitoring report, this programme, named DSNA SMS
 
 The objective of this programme is to install within DSNA, by the end of the current reference period, a compliant, effective and efficient SMS, as well as a positive and shared safety culture.
 
-- The first phase, launched in the early months of 2026 and running until the end of that year, is dedicated to:
+-   The first phase, launched in the early months of 2026 and running until the end of that year, is dedicated to:
 
-  - Proposing solutions to address the main shortcomings identified and reclaim B-level as soon as possible on most pillars,
+    -   Proposing solutions to address the main shortcomings identified and reclaim B-level as soon as possible on most pillars,
 
-  - Organizing the work of the subsequent phase by establishing a qualified team to carry out the remaining activities,
+    -   Organizing the work of the subsequent phase by establishing a qualified team to carry out the remaining activities,
 
-  - Initiating foundational activities, such as conducting a safety culture survey, establishing a DSNA-wide hazard log, or reviewing the organization of the SMS, which will be completed during the second phase.
+    -   Initiating foundational activities, such as conducting a safety culture survey, establishing a DSNA-wide hazard log, or reviewing the organization of the SMS, which will be completed during the second phase.
 
-- The second phase, with a duration of three years (2027--2029), aimed at achieving a "managed" or "resilient" level across all components of the SMS.
+-   The second phase, with a duration of three years (2027--2029), aimed at achieving a "managed" or "resilient" level across all components of the SMS.
 
 Furthermore, the annex notes that as the first phase of the programme is currently underway and DSNA's Safety Management System (SMS) improvement is a top priority, DSNA has undertaken the following measures:
 
-- Mobilisation of its management around the SMS and its reconstruction, the strengthening of the safety culture, and the reaffirmation of the essential leadership role of management in safety matters, through a management seminar dedicated to safety and the SMS that took place in December 2025. Following this seminar, all operational units are fully engaged in the SMS improvement process.
+-   Mobilisation of its management around the SMS and its reconstruction, the strengthening of the safety culture, and the reaffirmation of the essential leadership role of management in safety matters, through a management seminar dedicated to safety and the SMS that took place in December 2025. Following this seminar, all operational units are fully engaged in the SMS improvement process.
 
-- Strengthening of the safety culture through the launch of a safety culture assessment involving all DSNA staff, the results of which will be used to identify areas for improvement and define appropriate actions. This initiative was presented to DSNA management and to staff representative organizations in February 2026.
+-   Strengthening of the safety culture through the launch of a safety culture assessment involving all DSNA staff, the results of which will be used to identify areas for improvement and define appropriate actions. This initiative was presented to DSNA management and to staff representative organizations in February 2026.
 
-- Establishment of a contract with a qualified external service provider specializing in organizational and human factors, risk management and safety management systems, to enhance expertise in these areas and provide an independent external perspective.
+-   Establishment of a contract with a qualified external service provider specializing in organizational and human factors, risk management and safety management systems, to enhance expertise in these areas and provide an independent external perspective.
 

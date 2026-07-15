@@ -1,10 +1,10 @@
-## ERT1.3. Rate of using available airspace structures (PI#11) {#ert1.3.-rate-of-using-available-airspace-structures-pi11 .Heading-2-ER}
+## ERT1.3. Rate of using available airspace structures (PI#11)
 
 FINLAND reports that:
 
-- The ratio of the use of the available airspace structures is **13.48%** (via available restricted and segregated airspaces)
+-   The ratio of the use of the available airspace structures is **13.48%** (via available restricted and segregated airspaces)
 
-- The ratio of the use of the available airspace structure is **42.26%** (via available conditional routes -- CDR)
+-   The ratio of the use of the available airspace structure is **42.26%** (via available conditional routes -- CDR)
 
 *[Comment]{.underline}*
 

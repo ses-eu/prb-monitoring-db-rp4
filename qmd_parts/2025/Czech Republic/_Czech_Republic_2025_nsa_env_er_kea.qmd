@@ -1,0 +1,32 @@
+## **2.2.1.A. KPI #1**
+
+### **Assessment of the achieved level of actual performance in the environment KPA**
+
+The key performance indicator of horizontal efficiency has been met---the actual KEA value (2.45%) is 0.09 percentage points lower than the target value (2.54%). The ANS CR is creating the conditions for its fulfillment (since February 23, 2023, FRA has been implemented in the Czech Republic as part of SEE FRA (South East Europe Free Route Airspace). As of November 28, 2024, the Czech Free Route Airspace (FRA) within the SEE FRA (South East Europe Free Route Airspace) is interconnected with the BALTIC FRA and SECSI FRA. However, ANS CR has no control over many factors influencing the actual flight path. Tasks related to the implementation of CP1 projects and other projects contributing to the mitigation of the environmental impact of civil aviation were also successfully completed. This success was achieved despite changes in traffic patterns at LKAA (a decrease in long-haul flights), which had a negative impact on the achieveability of this KPI.
+
+### **Has the ANSP implemented any major operational or structural changes (incl. any new fixed assets put into operation) during the calendar year impacting performance in this key performance area? Please outline the relevant changes and their estimated impact**
+
+Successful deployment of the new ATM master system during RP3 enabled further development and created the conditions for meeting the horizontal efficiency targets.
+
+A major project - CRONOS project (Step 2 and Step 2a, connections to Baltic FRA and SECSI FRA) was completed in November 2024. All internal objectives contributing to the KPA ENV were succesfully met.
+
+### **Progress on the implementation of the measures committed to in the ERNIP**
+
+Ongoing implementation of cross border projects, reduction of RAD.
+
+### **Identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved**
+
+N/A
+
+### **Recommendations to the ANSP to rectify the situation**
+
+N/A
+
+### **Description of the remedial measures that have been / will be taken by the ANSP to rectify the situation. If no measures will be taken by the ANSP, please explain why**
+
+N/A
+
+### **Follow up of the remedial measures indicated in the previous monitoring report(s)**
+
+No remedial measures were requested by NSA in the previous years.
+
