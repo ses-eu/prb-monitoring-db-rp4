@@ -236,7 +236,7 @@ source("R/get_level2_headings.R")
 
 ## Contextual information
 
-\emph{This document is based on the version of the Annual Monitoring Report file version}
+\emph{This document is based on the version of the Annual Monitoring Report file}
 `r knitr::asis_output(sprintf(
   "\\begingroup\\small\\texttt{%s}\\endgroup\\ ",
   stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1")
