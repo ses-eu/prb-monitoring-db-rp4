@@ -241,7 +241,7 @@ source("R/get_level2_headings.R")
   "\\begingroup\\small\\texttt{%s}\\endgroup\\ ",
   stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1")
 ))`
-\emph{submitted by `r pp_country_name` on `r fac_val_date`.}
+\emph{submitted by `r pp_country_name` on `r fac_val_date` and the accompanying submission of en route and terminal (if applicable) reporting tables.}
 
 `r if_else(pp_version == "", "", paste0("*",pp_version,"*"))`
 

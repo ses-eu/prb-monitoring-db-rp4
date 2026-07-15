@@ -210,6 +210,14 @@ range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE) / 10^myroundup) *
   10^myroundup +
   10^myroundup / 2
 
+if (country=="Netherlands" & year_report==2025 & cztype=="enroute"){
+  range_max <- 3.5
+}
+
+
+#if(max(data_prep$mymetric)>0 & range_max<2.5){
+#  range_max <-3.5
+#}
 
 # chart parameters ----
 c_title_text <- paste0(

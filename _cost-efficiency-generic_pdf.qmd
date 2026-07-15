@@ -124,10 +124,13 @@ cat(make_quarto_latex_table(
 ``` {r, eval = (no_cz >= czindex), include = (no_cz >= czindex) }
 #| echo: false
 #| results: asis
- 
+
+data_prep_pdf <- data_prep %>%
+  mutate(across(everything(), ~ tidyr::replace_na(as.character(.x), "NA")))
+
 cat(make_quarto_latex_table(
   title = NA,
-  df = data_prep,
+  df = data_prep_pdf ,
   col_align = "lrrrrr",
   col_widths = c(35, rep(65/5, 5))
 ))
