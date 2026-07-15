@@ -1,4 +1,4 @@
-## TRM1.2. Terminal capacity incentive scheme {#trm1.2.-terminal-capacity-incentive-scheme .Heading-2-TZ}
+## TRM1.2. Terminal capacity incentive scheme
 
 In the first year of RP4, with an ATFM Arr delay of 0.29 min/arr, Italy **achieved the national target** of 0.35 min/arr. However, the pivot value for incentives (0.06 min/arr) is limited to CRSTMP delay causes. As the State-reported CRSTMP delay of 0.046 min/arr\* falls **within the bonus sliding range** for the incentive scheme, the NSA calculates a financial bonus of EUR 461,895.
 

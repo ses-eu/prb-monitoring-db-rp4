@@ -1,6 +1,6 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+## ERT1.1. En route ATFM delay per flight (KPI#1)
 
-- Latvia had 238k flights in 2025, up from the 224k flights in 2024.
+-   Latvia had 238k flights in 2025, up from the 224k flights in 2024.
 
-- LGS applied en route ATFM regulations resulting in 3k minutes of delay.
+-   LGS applied en route ATFM regulations resulting in 3k minutes of delay.
 

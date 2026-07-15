@@ -1,6 +1,6 @@
-## ERT1.1. En route ATFM delay per flight (KPI#1) {#ert1.1.-en-route-atfm-delay-per-flight-kpi1 .Heading-2-ER}
+## ERT1.1. En route ATFM delay per flight (KPI#1)
 
-- Lithuania had 222k flights in 2025, up from the 209k flights in 2024.
+-   Lithuania had 222k flights in 2025, up from the 209k flights in 2024.
 
-- Oro Navigacija did not apply any en route ATFM regulations that resulted in delay.
+-   Oro Navigacija did not apply any en route ATFM regulations that resulted in delay.
 

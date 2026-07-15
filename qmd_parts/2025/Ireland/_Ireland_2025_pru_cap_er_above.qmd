@@ -1,4 +1,4 @@
-## ERT1.3. Capacity PI #4: Percentage of total en route ATFM delay that occurred on days when the daily throughput was above the expected daily traffic (ACC) {#ert1.3.-capacity-pi-4-percentage-of-total-en-route-atfm-delay-that-occurred-on-days-when-the-daily-throughput-was-above-the-expected-daily-traffic-acc .Heading-2-ER}
+## ERT1.3. Capacity PI #4: Percentage of total en route ATFM delay that occurred on days when the daily throughput was above the expected daily traffic (ACC)
 
 \[And some more text.\]
 
