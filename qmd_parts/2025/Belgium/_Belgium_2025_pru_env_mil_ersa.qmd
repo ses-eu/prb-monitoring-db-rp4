@@ -1,8 +1,8 @@
-## ERT1.1. Effective use of reserved or segregated local airspace (PI#9) {#ert1.1.-effective-use-of-reserved-or-segregated-local-airspace-pi9 .Heading-2-ER}
+## ERT1.1. Effective use of reserved or segregated local airspace (PI#9)
 
 BELGIUM and LUXEMBOURG report a ratio of **66.32%**
 
-- Total number of hours allocated & notified to NM: **1,550**
+-   Total number of hours allocated & notified to NM: **1,550**
 
-- Total number of hours used: **1,028**
+-   Total number of hours used: **1,028**
 

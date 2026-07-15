@@ -1,4 +1,4 @@
-## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1) {#ert1.1.-horizontal-en-route-flight-efficiency-of-the-actual-trajectory-kea-kpi1 .Heading-2-ER}
+## ERT1.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
 
 Belgium has been improving both in terms of KEA and corrected KEA to consider the influence of war in Ukraine. The values for KEA are 3.59% in 2023, 3.48% in 2024 and 3.35% in 2025. For the corrected KEA the values are 3.51% in 2023, 3.39% in 2024 and 3.25% in 2025.
 

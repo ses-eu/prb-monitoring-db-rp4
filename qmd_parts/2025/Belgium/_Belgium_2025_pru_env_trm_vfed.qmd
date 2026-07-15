@@ -1,4 +1,4 @@
-## TRM1.4. Vertical flight efficiency of the descent (PI#7) {#trm1.4.-vertical-flight-efficiency-of-the-descent-pi7 .Heading-2-TZ}
+## TRM1.4. Vertical flight efficiency of the descent (PI#7)
 
 Compared to the overall RP4 average value (149.2 seconds per flight), the average time flown level during descent is 51.4 seconds per flight higher in Belgium. Brussels (EBBR) has an average time flown level of 200.6 seconds per flight during descent.
 
