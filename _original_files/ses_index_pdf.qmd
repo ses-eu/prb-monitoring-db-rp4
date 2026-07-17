@@ -548,6 +548,86 @@ cat(make_quarto_latex_table(
 ))
 ```
 
+
+## Civil-Military dimension
+
+```{r chart_ersa}
+#| file: R/chart_level2_env_ersa.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+`r layout_2fig("chart_cdr", "chart_rsa")`
+
+\needspace{3\baselineskip}
+
+`\biggertext{Focus on Civil-Military dimension}`{=latex}
+
+**Effective use of reserved or segregated local airspace**
+
+```{r env_mil_text_ersa}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
+
+cat("\n\n")
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_ersa))
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+``` 
+
+\needspace{3\baselineskip}
+
+**Rate of planning via available airspace structures**
+
+```{r env_mil_text_rap}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1) 
+
+cat("\n\n")
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rap))
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+``` 
+
+\needspace{3\baselineskip}
+
+**Rate of using available airspace structures**
+
+```{r env_mil_nsa_rau}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext1 <- capture.output(replace_headings(path, character(0)))
+cat(mytext1)
+
+cat("\n\n")
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
+
+mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rau))
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat(cat("No comment provided."))} else {cat(mytext2)}
+
+``` 
+
+
+
 \needspace{3\baselineskip}
 
 # CAPACITY - `r rp_full`
@@ -636,7 +716,7 @@ cat(make_quarto_latex_table(
 ))
 ```
 
-### Other terminal performance indicators (PI#1-3)
+### All causes pre-departure delay (PI#1)
 
 ```{r chart_cap_all_causes_delay_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_all_causes_delay.R

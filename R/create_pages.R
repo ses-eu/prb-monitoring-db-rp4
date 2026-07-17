@@ -640,8 +640,8 @@ if (out_format == 'web') {
     }
 
     if (state_type != 0) {
-      ### SES/luxembourg, remove env-mil ----
-      if (country == rp_full | country == "Luxembourg") {
+      ### luxembourg, remove env-mil ----
+      if (country == "Luxembourg") {
         tx <- str_replace(
           tx,
           '- text: "<b>CIV-MIL</b>"',

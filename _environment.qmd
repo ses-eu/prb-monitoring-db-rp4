@@ -172,10 +172,32 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 
 
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+### Summary of performance at local level
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+:::: {layout="[ 20, 60, 20 ]"}
 
-`r if (params$no_tcz == 0) "::: {.content-hidden}"`
+::::: {#empty-div}
+:::::
+
+::::: {.chart-container}  
+```{r table-kea-summary}
+#| file: R/table_env_kea_all_states.R
+#| out.width: "100%"
+```
+:::::
+
+::::: {#empty-div}
+:::::
+
+::::
+
+`r if (params$country != params$rp_full) ":::"`
+
+
+
+
+`r if (params$no_tcz == 0 | params$country == params$rp_full) "::: {.content-hidden}"`
 
 ::: {#container-axot-asma}
 
@@ -373,8 +395,7 @@ replace_headings(path, env_trm_nsa_titles_vfed)
 :::
 
 
-
-`r if (params$no_tcz == 0) ":::"`
+`r if (params$no_tcz == 0 | params$country == params$rp_full) ":::"`
 
 
 `r if (params$country == "Luxembourg" | params$country == "FABEC") "::: {.content-hidden}"`
@@ -478,27 +499,5 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 :::
 `r if (params$country == "Luxembourg" | params$country == "FABEC") ":::"`
-`r if (params$country == params$rp_full) ":::"`
 
 
-`r if (params$country != params$rp_full) "::: {.content-hidden}"`
-### Summary of performance at local level
-
-:::: {layout="[ 20, 60, 20 ]"}
-
-::::: {#empty-div}
-:::::
-
-::::: {.chart-container}  
-```{r table-kea-summary}
-#| file: R/table_env_kea_all_states.R
-#| out.width: "100%"
-```
-:::::
-
-::::: {#empty-div}
-:::::
-
-::::
-
-`r if (params$country != params$rp_full) ":::"`
