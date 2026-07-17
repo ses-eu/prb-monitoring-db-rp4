@@ -3,11 +3,7 @@ if (!exists("data_loaded")) {
 }
 
 ## import data  ----
-if (country == rp_full) {
-  data_raw <- cap_all_c_predep_delay_actual_ses
-} else {
-  data_raw <- cap_all_c_predep_delay_actual
-}
+data_raw <- cap_all_c_predep_delay_actual
 
 ## prepare data ----
 data_prep <- data_raw %>%

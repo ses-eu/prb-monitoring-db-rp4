@@ -739,7 +739,7 @@ cap_all_c_predep_delay_actual_ses <- readxl::read_xlsx(
 ) %>%
   as_tibble() %>%
   clean_names() |>
-  filter(kpi == "PCT_COMPL_DLY_ALL") |>
+  filter(kpi == "STATE_DLY_ALL") |>
   mutate(state = rp_full) |>
   select(
     year,
