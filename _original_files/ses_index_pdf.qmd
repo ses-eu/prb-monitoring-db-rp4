@@ -383,7 +383,7 @@ cat(quarto_paragraph_breaks(saf_eosm_text))
 \needspace{2\baselineskip}
 
 
-## Rate of runway incursions (RIs) (PI#1)
+## Rate of runway incursions (RIs) (PI#1) and Rate of runway incursion with ANS contribution (PI#3)
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_ri_year_report")`
 
@@ -428,7 +428,7 @@ cat(make_quarto_latex_table_2level(
 \needspace{2\baselineskip}
 
 
-## Rate of separation minima infringements (SMIs) (PI#2)
+## Rate of separation minima infringements (SMIs) (PI#2) and Rate of separation minima infringements with ANS contribution (PI#4)
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_smi_year_report")`
 
@@ -690,7 +690,7 @@ cat(make_quarto_latex_table(
 
 ## Terminal performance
 
-### Arrival ATFM delay (KPI#2)
+### Arrival ATFM delay (PI#1)
 
 `r layout_2fig("chart_cap_trm_l2", "chart_cap_trm_month")`
 
@@ -716,7 +716,7 @@ cat(make_quarto_latex_table(
 ))
 ```
 
-### All causes pre-departure delay (PI#1)
+### Other performance indicators (PI#3)
 
 ```{r chart_cap_all_causes_delay_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_all_causes_delay.R

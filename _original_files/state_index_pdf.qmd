@@ -564,7 +564,7 @@ replace_headings(path, character(0))
 
 ## Safety occurrences
 
-### Rate of runway incursions (RIs) (PI#1)
+### Rate of runway incursions (RIs) (PI#1) and Rate of runway incursion with ANS contribution (PI#3)
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_ri_year_report")`
 
@@ -606,7 +606,7 @@ replace_headings(path, character(0))
 
 \needspace{2\baselineskip}
 
-### Rate of separation minima infringements (SMIs) (PI#2)
+### Rate of separation minima infringements (SMIs) (PI#2) and Rate of separation minima infringements with ANS contribution (PI#4)
 
 `r layout_2fig("chart_saf_smi", "chart_level2_saf_smi_year_report")`
 
