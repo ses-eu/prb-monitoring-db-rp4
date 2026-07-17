@@ -25,22 +25,34 @@ if (country != rp_full) {
     filter(state == .env$country) %>%
     mutate(myentity = entity)
 } else {
+  # myentity_order <- data_raw %>%
+  #   group_by(state) %>%
+  #   summarise(total_fh = sum(flight_hours, na.rm = TRUE)) %>%
+  #   arrange(desc(total_fh)) %>%
+  #   mutate(myentity = factor(state, levels = state)) %>%
+  #   select(myentity)
+  #
+  # data_calc <- data_raw %>%
+  #   group_by(year, state) %>%
+  #   summarise(
+  #     smi = sum(smi, na.rm = TRUE),
+  #     flight_hours = sum(flight_hours, na.rm = TRUE),
+  #     rate_per_100_000 = janitor::round_half_up(smi / flight_hours * 100000, 2),
+  #     .groups = "drop"
+  #   ) %>%
+  #   mutate(myentity = state)
+
   myentity_order <- data_raw %>%
-    group_by(state) %>%
+    # filter(state == .env$country) %>%
+    group_by(entity) %>%
     summarise(total_fh = sum(flight_hours, na.rm = TRUE)) %>%
     arrange(desc(total_fh)) %>%
-    mutate(myentity = factor(state, levels = state)) %>%
+    mutate(myentity = factor(entity, levels = entity)) %>%
     select(myentity)
 
   data_calc <- data_raw %>%
-    group_by(year, state) %>%
-    summarise(
-      smi = sum(smi, na.rm = TRUE),
-      flight_hours = sum(flight_hours, na.rm = TRUE),
-      rate_per_100_000 = janitor::round_half_up(smi / flight_hours * 100000, 2),
-      .groups = "drop"
-    ) %>%
-    mutate(myentity = state)
+    # filter(state == .env$country) %>%
+    mutate(myentity = entity)
 }
 
 # if (knitr::is_latex_output()) {
@@ -113,7 +125,7 @@ data_prep <- data_calc %>%
 if (country == rp_full) {
   data_prep <- data_prep %>%
     rename(
-      State = myentity
+      ANSP = myentity
     )
 } else {
   data_prep <- data_prep %>%
