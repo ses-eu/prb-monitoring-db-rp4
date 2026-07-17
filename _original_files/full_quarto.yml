@@ -244,10 +244,10 @@ website:
             contents: #safety-occurrences
 # block muac beginning
             - text: "Runway incursions"
-              href: safety.html#rate-of-runway-incursions-ris-pi1
+              href: safety.html#rate-of-runway-incursions-ris-pi1-and-rate-of-runway-incursion-with-ans-contribution-pi3
 # block muac end
             - text: "Separation minima infringements"
-              href: safety.html#rate-of-separation-minima-infringements-smis-pi2
+              href: safety.html#rate-of-separation-minima-infringements-smis-pi2-and-rate-of-separation-minima-infringements-with-ans-contribution-pi4
             - text: "Occurrences reporting"
               href: safety.html#quality-of-occurences-reporting
       - text: "---"
