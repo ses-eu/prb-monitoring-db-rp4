@@ -724,13 +724,31 @@ cap_delay_bin_actual <- readxl::read_xlsx(
   clean_names()
 
 #### ALL-CAUSE PREDEP DELAY ----
-cap_all_c_predep_delay_actual <- readxl::read_xlsx(
+cap_all_c_predep_delay_actual_state <- readxl::read_xlsx(
   here(data_folder, cap_data_file),
   sheet = "all_cause_predep_delay",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
   clean_names()
+
+cap_all_c_predep_delay_actual_ses <- readxl::read_xlsx(
+  here(data_folder, ses_data_file),
+  sheet = "V_STAT_RP4_BY_RP",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() |>
+  filter(kpi == "PCT_COMPL_DLY_ALL") |>
+  mutate(state = rp_full) |>
+  select(
+    year,
+    state,
+    all_cause_predep_dly = value
+  )
+
+cap_all_c_predep_delay_actual <- cap_all_c_predep_delay_actual_state |>
+  rbind(cap_all_c_predep_delay_actual_ses)
 
 #### ATCOs IN OPS ----
 cap_atco_acc_actual <- readxl::read_xlsx(
@@ -860,17 +878,7 @@ cap_trm_atfm_actual_mm_ses <- cap_trm_atfm_actual_mm %>%
   )
 
 #### ALL-CAUSE PREDEP DELAY ----
-# cap_all_c_predep_delay_actual_ses <- cap_all_c_predep_delay_actual %>%
-#   group_by(year) %>%
-#   summarise(
-#     fl_total = sum(fl_total, na.rm = TRUE),
-#     dly_all_min_total = sum(dly_all_min_total, na.rm = TRUE),
-#     .groups = "drop"
-#   ) %>%
-#   mutate(
-#     all_cause_predep_dly = dly_all_min_total / fl_total,
-#     state = rp_full
-#   )
+# see State
 
 #### DELAY TIME BIN ----
 cap_delay_bin_actual_ses <- cap_delay_bin_actual %>%
