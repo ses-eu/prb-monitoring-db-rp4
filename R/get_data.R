@@ -204,7 +204,7 @@ saf_eosm_interdep_ses <- readxl::read_xlsx(
 saf_ri_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "RI - occurrences",
-  range = cell_limits(c(1, 1), c(NA, 5))
+  range = cell_limits(c(1, 1), c(NA, 6))
 ) %>%
   as_tibble() %>%
   clean_names() |>
@@ -213,7 +213,7 @@ saf_ri_actual_ses <- readxl::read_xlsx(
 saf_smi_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
   sheet = "SMI - occurrences",
-  range = cell_limits(c(1, 1), c(NA, 5))
+  range = cell_limits(c(1, 1), c(NA, 6))
 ) %>%
   as_tibble() %>%
   clean_names() |>

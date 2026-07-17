@@ -10,12 +10,11 @@ if (!exists("data_loaded")) {
 # import data  ----
 if (country == rp_full) {
   ## SES case ----
-  data_raw <- saf_ri_actual_ses %>%
+  data_raw <- saf_ri_actual_ses |>
+    #so they have the same structure
     mutate(
-      rate_per_100_000 = NA
-    ) %>%
-    rename(
-      eu_wide_average = eu_wide_average_per_100_000
+      rate_per_100_000 = NA,
+      rate_per_100_000_with_ans_contribution = NA
     )
 } else {
   ## State case ----

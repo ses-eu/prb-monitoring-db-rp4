@@ -7,7 +7,8 @@ if (country == rp_full) {
   ## SES case ----
   data_raw <- saf_smi_actual_ses %>%
     mutate(
-      rate_per_100_000 = NA
+      rate_per_100_000 = NA,
+      rate_per_100_000_with_ans_contribution = NA
     )
 } else {
   ## State case ----
