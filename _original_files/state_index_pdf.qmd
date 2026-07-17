@@ -906,7 +906,7 @@ cat(make_quarto_latex_table_2level(
 ```
 
 
-###  Average duration in climb (PI#8) and descent (PI#7)
+###  Vertical flight efficiency of the descent (PI#7) and of the climb (PI#8)
 
 ```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
 #| file: R/chart_level2_env_cdo_apt.R
@@ -935,9 +935,9 @@ if(!exists("cdo_airports")) {cdo_airports <-0}
 
 \needspace{2\baselineskip}
 
-`\biggertext{Focus on average duration in descent and climb}`{=latex}
+`\biggertext{Focus on vertical flight efficiency of the descent and of the climb}`{=latex}
 
-**Average duration in descent**
+**Vertical flight efficiency of the descent**
 
 ```{r env_trm_text_vfed, eval=(params$no_tcz != 0)}
 #| echo: false
@@ -954,10 +954,10 @@ replace_headings(path, env_trm_nsa_titles_vfed)
 
 ``` 
 
+
 \needspace{3\baselineskip}
 
-**Average duration in climb**
-
+**Vertical flight efficiency of the climb**
 
 ```{r env_trm_text_vfec, eval=(params$no_tcz != 0)}
 #| echo: false
