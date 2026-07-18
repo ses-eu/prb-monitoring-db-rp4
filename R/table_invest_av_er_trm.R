@@ -4,19 +4,27 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_new_major")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep <- data_new_major %>%
+data_prep <- data_assets %>%
   filter(member_state == .env$country) %>%
+  group_by(member_state) |>
+  summarise(
+    en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),
+    terminal_asset_value = sum(terminal_asset_value, na.rm = TRUE),
+  ) |>
+  ungroup() |>
   mutate(
-    enroute_value = total_value_of_the_asset_nominal_euros_en_route / 10^6,
-    terminal_value = total_value_of_the_asset_nominal_euros_terminal / 10^6,
-    enroute_share = total_value_of_the_asset_nominal_euros_en_route /
+    total_value_of_the_asset_nominal_euros = en_route_asset_value +
+      terminal_asset_value,
+    enroute_value = en_route_asset_value / 10^6,
+    terminal_value = terminal_asset_value / 10^6,
+    enroute_share = en_route_asset_value /
       total_value_of_the_asset_nominal_euros,
-    terminal_share = total_value_of_the_asset_nominal_euros_terminal /
+    terminal_share = terminal_asset_value /
       total_value_of_the_asset_nominal_euros,
     NULL
   ) %>%
