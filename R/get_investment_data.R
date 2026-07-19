@@ -1,7 +1,23 @@
 # import data  ----
+data_assets <- readxl::read_xlsx(
+  here(data_folder, investments_data_file),
+  sheet = "Output_Assets_MR",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() |>
+  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .))) |>
+  rename(
+    value_of_the_assets = value_of_the_assets_allocated_to_ans_in_the_scope_of_the_pp_in_national_currency
+  ) |>
+  mutate(
+    value_of_the_assets = as.numeric(value_of_the_assets)
+  )
+
+
 ## State case ----
 data_new_major <- readxl::read_xlsx(
-  here(data_folder, investments_data_file),
+  here(data_folder, investments_data_file_old),
   sheet = "New Major Inv pivot",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%

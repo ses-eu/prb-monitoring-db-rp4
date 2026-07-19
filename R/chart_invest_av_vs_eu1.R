@@ -3,45 +3,54 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_capex") | !exists("data_union_wide")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep_uw <- data_union_wide %>%
+data_pre_prep <- data_assets |>
   filter(
-    variable == "New major investments" | variable == "Other new investments"
-  ) %>%
-  mutate(
-    mymetric = percent * 100
-  ) %>%
-  select(
-    xlabel = union_wide_median,
-    type = variable,
-    mymetric
-  )
+    type_of_investment %in%
+      c("New major investment", "Other new investments") &
+      ansp_type == "Main"
+  ) |>
+  group_by(member_state, type_of_investment) |>
+  summarise(
+    value_of_the_assets = sum(value_of_the_assets, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  group_by(member_state) |>
+  mutate(mymetric = value_of_the_assets / sum(value_of_the_assets) * 100) |>
+  ungroup() |>
+  rename(type = type_of_investment)
 
 
-data_prep_ansp <- data_capex %>%
-  filter(member_state == .env$country) %>%
+data_prep_uw <- data_pre_prep |>
+  group_by(type) |>
+  summarise(
+    mymetric = median(mymetric),
+    .groups = "drop"
+  ) |>
   mutate(
-    share_new_major_inv = total_new_major_investments / total,
-    share_other_new_inv = other_new_investments_as_per_pp / total
-  ) %>%
-  select(share_new_major_inv, share_other_new_inv) %>%
-  gather() %>%
-  mutate(
-    xlabel = "ANSP",
-    type = case_when(
-      key == "share_new_major_inv" ~ "New major investments",
-      key == "share_other_new_inv" ~ "Other new investments"
-    ),
-    mymetric = value * 100
-  ) %>%
+    xlabel = "Union-wide median"
+  ) |>
   select(xlabel, type, mymetric)
 
-data_prep <- rbind(data_prep_ansp, data_prep_uw) %>%
-  mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide median")))
+
+data_prep_ansp <- data_pre_prep |>
+  filter(member_state == .env$country) |>
+  mutate(xlabel = "ANSP") |>
+  select(xlabel, type, mymetric)
+
+data_prep <- rbind(data_prep_ansp, data_prep_uw) |>
+  mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide median"))) |>
+  mutate(
+    type = if_else(
+      type == "New major investment",
+      "New major investments",
+      type
+    )
+  )
 
 
 # chart ----
