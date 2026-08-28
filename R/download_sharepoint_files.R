@@ -90,17 +90,16 @@ if (Sys.info()["user"] == "ncashman") {
 #
 # purrr::walk(state_list_download, download_nsa_excel_reports)
 
-stop()
-
+# stop()
 
 # PRU files ----
 pru_kpi <- c(
-  "environment-ENR",
+  # "environment-ENR",
   #  "environment-CIVMIL",
   #  "environment-TRM",
   #  "capacity-ENR",
   #  "capacity-TRM",
-  # "cost-efficiency-CEF",
+  "cost-efficiency-CEF",
   NULL
 )
 
@@ -142,3 +141,37 @@ download_pru_analysis_files <- function(kpi) {
 }
 
 purrr::walk(pru_kpi, download_pru_analysis_files)
+
+stop()
+
+
+#rename files
+base_folder <- "G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/deliverables/2025/pdf_documents_for_fact_validation"
+
+# Old and new prefixes
+old_prefix <- "PRB-Annual-Monitoring-Report"
+new_prefix <- "PRB-AMR-Version for fact validation"
+
+# List matching files (non-recursive)
+files <- list.files(
+  path = base_folder,
+  pattern = paste0("^", old_prefix),
+  full.names = TRUE
+)
+
+# Rename files
+for (old_path in files) {
+  file_name <- basename(old_path)
+
+  new_name <- sub(
+    paste0("^", old_prefix),
+    new_prefix,
+    file_name
+  )
+
+  new_path <- file.path(base_folder, new_name)
+
+  file.rename(old_path, new_path)
+
+  cat("Renamed:\n", file_name, "\n-> ", new_name, "\n\n")
+}

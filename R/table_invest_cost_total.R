@@ -1,70 +1,101 @@
 if (exists("country") == FALSE) {
-  country <- "Belgium"
+  country <- "Denmark"
   source("R/params_country.R")
 }
 
 # import data  ----
-if (!exists("data_new_major")) {
+if (!exists("data_costs")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-c_prefixes <- c("nm", "on", "e")
-c_suffixes <- c("d", "a")
-
-cols <- c(
-  as.vector(outer(paste0(c_prefixes, "_d"), rp_years, paste, sep = "_")),
-  as.vector(outer(paste0(c_prefixes, "_a"), rp_years, paste, sep = "_"))
-)
-
-data_calc <- data_cost_inv %>%
-  filter(member_state == .env$country) %>%
-  select(all_of(cols)) %>%
+data_calc <- data_costs |>
+  filter(member_state == .env$country, ansp_type == "Main") |>
+  select(category = type_of_investment, contains('20'), -contains("wacc")) |>
+  group_by(category) |>
+  summarise(
+    across(where(is.numeric), ~ sum(.x, na.rm = TRUE) / 10^6),
+    .groups = "drop"
+  ) |>
   pivot_longer(
-    cols = everything(), # Pivot all columns
-    names_to = c("category", "year"), # Create "type" and "year" columns
-    names_pattern = "(.+?)_(\\d{4})", # Regex: Extract "type" + 4-digit year
-    values_to = "value" # Store values in "value" column
-  ) %>%
+    cols = -category,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  pivot_wider(
+    names_from = year,
+    values_from = value
+  ) |>
   mutate(
-    type = if_else(str_detect(category, "_d"), "Determined", "Actual"),
-    value = if_else(
-      type == "Actual" & as.numeric(year) > year_report,
-      NA,
-      value / 10^6
-    ),
-    category = case_when(
-      str_detect(category, "nm_") ~ "New major investments",
-      str_detect(category, "on_") ~ "Other new investments",
-      str_detect(category, "e_") ~ "Existing investments",
+    type = if_else(type == 'd', 'Determined', 'Actual'),
+    RP4 = rowSums(across(matches("^\\d{4}$")), na.rm = TRUE)
+  ) |>
+  group_by(category) |>
+  mutate(
+    summarise(
+      across(where(is.numeric), ~ sum(.x, na.rm = TRUE)),
+      .groups = "drop"
     )
-  ) %>%
-  pivot_wider(
-    id_cols = c(category, year),
-    names_from = "type",
-    values_from = "value"
-  ) %>%
+  ) |>
+  mutate(across(
+    matches("^\\d{4}$"),
+    ~ if (as.integer(cur_column()) > as.integer(.env$year_report)) {
+      if_else(type == "Actual", NA_real_, .x)
+    } else {
+      .x
+    }
+  ))
+
+difference_rows <- data_calc |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ .x[type == "Actual"] - .x[type == "Determined"]
+    ),
+    .groups = "drop"
+  ) |>
+  mutate(type = "Difference", .after = category)
+
+difference_perc_rows <- data_calc |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ if_else(
+        .x[type == "Determined"] == 0,
+        NA_real_,
+        .x[type == "Actual"] / .x[type == "Determined"] - 1
+      )
+    ),
+    .groups = "drop"
+  ) |>
+  mutate(type = "Difference_perc", .after = category)
+
+data_prep <- bind_rows(
+  data_calc,
+  difference_rows,
+  difference_perc_rows
+) |>
   mutate(
-    Difference = Actual - Determined,
-    Difference_perc = if_else(Actual == 0, 0, Actual / Determined - 1) * 100
-  ) %>%
-  pivot_longer(-c(category, year), names_to = "type", values_to = "value")
-
-data_calc_summary <- data_calc %>%
-  filter(as.numeric(year) <= year_report) %>%
-  group_by(category, type) %>%
-  summarise(value = sum(value, na.rm = TRUE)) %>%
-  ungroup() %>%
-  mutate(year = rp_short) %>%
-  select(category, year, type, value)
-
-data_prep <- rbind(data_calc, data_calc_summary) %>%
-  arrange(year) %>%
-  pivot_wider(
-    id_cols = c(category, type),
-    names_from = "year",
-    values_from = "value"
-  )
+    category = case_when(
+      category == 'New major investment' ~ 'New major investments from RP4',
+      category == 'Other new investments' ~ 'Other new investments from RP4',
+      .default = category
+    ),
+    category = factor(
+      category,
+      levels = c(
+        'New major investments from RP4',
+        'Other new investments from RP4',
+        'Major investments from RP3',
+        'Existing investments from previous RPs'
+      )
+    )
+  ) |>
+  arrange(category, type) |>
+  ungroup()
 
 data_prep1 <- data_prep %>%
   filter(type == "Determined") %>%
@@ -311,7 +342,9 @@ table3 <- mygtable(data_prep3, myfont) %>%
   ) %>%
   tab_style(
     style = cell_text(style = "italic"),
-    locations = cells_body(rows = c(3, 5, 7))
+    locations = cells_body(
+      rows = grepl("% change", category, fixed = TRUE)
+    )
   ) %>%
   tab_style(
     style = cell_borders(

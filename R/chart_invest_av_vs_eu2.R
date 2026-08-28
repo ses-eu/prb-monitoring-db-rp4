@@ -3,20 +3,47 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_capex")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep <- data_capex %>%
-  filter(member_state == .env$country | member_state == rp_full) %>%
-  select(member_state, total) %>%
+data_pre_prep <- data_assets |>
+  filter(
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "Other new investments",
+        "Additional new major investment",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
+  group_by(member_state) |>
+  summarise(
+    value = sum(value_of_the_assets, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  ungroup() |>
   mutate(
-    type = case_when(
-      member_state == .env$country ~ "ANSP",
-      member_state == rp_full ~ "Union-wide"
-    ),
-    mymetric = total / lead(total, 1) * 100,
+    type = "ANSP"
+  )
+
+total_uw <- data_pre_prep |>
+  summarise(
+    value = sum(value, na.rm = TRUE)
+  ) |>
+  pull()
+
+data_prep <- data_pre_prep |>
+  filter(member_state == .env$country) |>
+  mutate(
+    mymetric = value / total_uw * 100
+  ) |>
+  select(type, mymetric) |>
+  rbind(tibble(type = "Union-wide", mymetric = NA)) |>
+  mutate(
     mymetric = case_when(
       type == "Union-wide" ~ 100 - lag(mymetric, 1),
       .default = mymetric
@@ -27,7 +54,7 @@ data_prep <- data_capex %>%
       " ",
       paste0(format(janitor::round_half_up(mymetric, 0), nsmall = 0), "%")
     )
-  ) %>%
+  ) |>
   select(type, mymetric, textlabel, textposition)
 
 

@@ -4,68 +4,79 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_new_major")) {
+if (!exists("data_costs")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-rp_years <- as.integer(rp_years)
 
-d_idx <- 13:(13 + length(rp_years) - 1)
-a_idx <- 19:(19 + length(rp_years) - 1)
-
-d_old <- paste0("x", rp_years, "_", d_idx)
-a_old <- paste0("x", rp_years, "_", a_idx)
-
-# Final names: 2025A, 2025D, 2026A, 2026D, ...
-old_cols <- as.vector(rbind(a_old, d_old)) # A then D per year
-new_cols <- as.vector(rbind(paste0(rp_years, "A"), paste0(rp_years, "D")))
-
-
-data_calc <- data_new_major_detail %>%
-  select(
-    member_state,
-    category = investment_name,
-    !!!rlang::set_names(rlang::syms(old_cols), new_cols)
-  ) %>%
-  right_join(as_tibble(state_list), by = c("member_state" = "value")) %>%
-  mutate(across(
-    -c(member_state, category),
-    .fns = ~ if_else(is.na(.), 0, .)
-  )) %>%
-  filter(member_state == .env$country) %>%
-  select(-member_state) %>%
+data_calc <- data_costs |>
+  filter(
+    member_state == .env$country,
+    ansp_type == "Main",
+    !is.na(name_of_investment),
+    name_of_investment != 'n/a'
+  ) |>
+  # mutate(
+  #   name_of_investment = if_else(
+  #     (name_of_investment == 'n/a' | is.na(name_of_investment)),
+  #     type_of_investment,
+  #     name_of_investment
+  #   ),
+  #   name_of_investment = if_else(
+  #     name_of_investment == "Other new investments",
+  #     "Other new investments from RP4",
+  #     name_of_investment
+  #   )
+  # ) |>
+  select(category = name_of_investment, contains("20"), -contains("wacc")) |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ sum(.x, na.rm = TRUE) / 10^6
+    ),
+    .groups = "drop"
+  ) |>
   pivot_longer(
-    cols = -category, # Pivot all columns
-    names_to = c("year", "type"), # Create "type" and "year" columns
-    names_pattern = "(\\d{4})(.+?)", # Regex: Extract "type" + 4-digit year
-    values_to = "value" # Store values in "value" column
-  ) %>%
+    cols = -category,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
   mutate(
-    type = if_else(type == "D", "Determined", "Actual"),
+    type = if_else(type == "d", "Determined", "Actual"),
     value = if_else(
       type == "Actual" & as.numeric(year) > year_report,
       NA,
-      value / 10^6
+      value
     )
-  ) %>%
+  ) |>
   pivot_wider(
     id_cols = c(category, year),
     names_from = "type",
     values_from = "value"
-  ) %>%
+  ) |>
   mutate(
     Difference = Actual - Determined,
-  ) %>%
+  ) |>
   pivot_longer(-c(category, year), names_to = "type", values_to = "value")
+
 
 data_calc_summary <- data_calc %>%
   filter(as.numeric(year) <= year_report) %>%
   group_by(category, type) %>%
-  summarise(value = sum(value, na.rm = TRUE)) %>%
-  ungroup() %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
   mutate(year = rp_short) %>%
   select(category, year, type, value)
+
+# end_categories <- c(
+#   "Other new investments from RP4",
+#   "Major investments from RP3",
+#   "Existing investments from previous RPs"
+# )
+#
+# other_categories <- sort(setdiff(unique(data_calc$category), end_categories))
 
 data_prep <- rbind(data_calc, data_calc_summary) %>%
   arrange(year) %>%
@@ -73,7 +84,14 @@ data_prep <- rbind(data_calc, data_calc_summary) %>%
     id_cols = c(category, type),
     names_from = "year",
     values_from = "value"
-  )
+  ) |>
+  # mutate(
+  #   category = factor(
+  #     category,
+  #     levels = c(other_categories, end_categories)
+  #   )
+  # ) |>
+  arrange(category, type)
 
 data_prep1 <- data_prep %>%
   filter(type == "Determined") %>%

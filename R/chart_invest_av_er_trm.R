@@ -9,7 +9,7 @@ if (!exists("data_assets")) {
 
 # process data  ----
 data_prep <- data_assets %>%
-  filter(member_state == .env$country) %>%
+  filter(member_state == .env$country & ansp_type == "Main") %>%
   group_by(member_state) |>
   summarise(
     en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),

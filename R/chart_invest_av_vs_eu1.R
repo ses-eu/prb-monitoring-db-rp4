@@ -11,8 +11,32 @@ if (!exists("data_assets")) {
 data_pre_prep <- data_assets |>
   filter(
     type_of_investment %in%
-      c("New major investment", "Other new investments") &
+      c(
+        "New major investment",
+        "New major investments",
+        "Other new investments",
+        "Other new investment",
+        "Additional new major investment",
+        "Additional new major investments",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
       ansp_type == "Main"
+  ) |>
+  mutate(
+    type_of_investment = case_when(
+      type_of_investment == "New major investments" ~ "New major investment",
+      type_of_investment ==
+        "Additional new major investment" ~ "New major investment",
+      type_of_investment ==
+        "Additional new major investments" ~ "New major investment",
+      type_of_investment == "Other new investment" ~ "Other new investments",
+      type_of_investment ==
+        "Additional other new investment" ~ "Other new investments",
+      type_of_investment ==
+        "Additional other new investments" ~ "Other new investments",
+      .default = type_of_investment
+    )
   ) |>
   group_by(member_state, type_of_investment) |>
   summarise(

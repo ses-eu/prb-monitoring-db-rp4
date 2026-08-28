@@ -3,43 +3,44 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_costs")) {
   source("R/get_investment_data.R")
 }
 
 
 # process data  ----
-data_prep <- data_new_major_detail %>%
-  select(
-    member_state,
-    investment_name,
-    determined := all_of(paste0("total_rp", rp, "_18")),
-    actual := all_of(paste0("total_rp", rp, "_24"))
-  ) %>%
-  right_join(as_tibble(state_list), by = c("member_state" = "value")) %>%
-  mutate(across(
-    -c(member_state, investment_name),
-    .fns = ~ if_else(is.na(.), 0, .)
-  )) %>%
-  filter(member_state == .env$country) %>%
-  select(-member_state) %>%
+data_prep <- data_costs |>
+  filter(
+    member_state == .env$country,
+    ansp_type == "Main",
+    !is.na(name_of_investment),
+    name_of_investment != 'n/a'
+  ) |>
+  select(category = name_of_investment, contains("20"), -contains("wacc")) |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ sum(.x, na.rm = TRUE) / 10^6
+    ),
+    .groups = "drop"
+  ) |>
   pivot_longer(
-    cols = -c(investment_name), # Pivot all columns
-    names_to = c("type"), # Create "type" and "year" columns
-    values_to = "value" # Store values in "value" column
-  ) %>%
+    cols = -category,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  group_by(category, type) |>
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") |>
   mutate(
-    xlabel = investment_name,
-    type = if_else(type == "determined", "Determined", "Actual"),
-    type = factor(type, levels = c("Determined", "Actual")),
-    mymetric = value / 10^6
-  ) %>%
+    type = if_else(type == "d", "Determined", "Actual")
+  ) |>
   select(
-    xlabel,
+    xlabel = category,
     type,
-    mymetric
-  ) %>%
-  mutate(xlabel = sapply(xlabel, wrap_label))
+    mymetric = value
+  )
 
 ## find number of investments
 no_investments <- data_prep %>% nrow() / 2

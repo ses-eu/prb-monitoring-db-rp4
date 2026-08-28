@@ -3,35 +3,52 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_capex")) {
+if (!exists("data_funding_rt")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep <- data_funding %>%
-  filter(member_state == .env$country | member_state == rp_full) %>%
-  filter(type != "SDM data" & year == rp_short) %>%
-  select(member_state, value) %>%
-  mutate(
-    type = case_when(
-      member_state == .env$country ~ "ANSP",
-      member_state == rp_full ~ "Union-wide"
-    )
-  ) %>%
-  arrange(type) %>%
-  mutate(
-    mymetric = value / lead(value, 1) * 100,
-    mymetric = case_when(
-      type == "Union-wide" ~ 100 - lag(mymetric, 1),
-      .default = mymetric
+data_prep_all <- data_funding_rt |>
+  group_by(member_state) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ sum(.x, na.rm = TRUE) / 10^3
     ),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = -member_state,
+    names_to = c("year"),
+    names_pattern = "^x(\\d{4})",
+    values_to = "value"
+  )
+
+total_funding_state <- data_prep_all |>
+  filter(member_state == .env$country) |>
+  summarise(value = sum(value, na.rm = TRUE))
+
+total_funding_uw <- data_prep_all |>
+  summarise(value = sum(value, na.rm = TRUE)) |>
+  pull()
+
+share_funding_uw <- (1 - pull(total_funding_state) / total_funding_uw) * 100
+
+data_prep <- total_funding_state |>
+  mutate(
+    mymetric = value / total_funding_uw * 100,
+    type = "ANSP"
+  ) |>
+  select(-value) |>
+  add_row(mymetric = share_funding_uw, type = "Union-wide") |>
+  mutate(
     textposition = if_else(mymetric == 0 | mymetric > 2, "inside", "outside"),
     textlabel = if_else(
       mymetric == 0,
       " ",
       paste0(format(janitor::round_half_up(mymetric, 0), nsmall = 0), "%")
     )
-  ) %>%
+  ) |>
   select(type, mymetric, textlabel, textposition)
 
 

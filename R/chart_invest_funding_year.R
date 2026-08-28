@@ -1,31 +1,51 @@
-if (exists("country") == FALSE) {country <- "Bulgaria"}
+if (exists("country") == FALSE) {
+  country <- "Bulgaria"
+}
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_funding_rt")) {
   source("R/get_investment_data.R")
 }
 
 
 # process data  ----
-data_prep1 <- data_funding %>% 
-  filter(member_state == .env$country) %>% 
-  mutate(mymetric = if_else(as.numeric(year) > year_report & year != rp_short, NA, value/10^6),
-         year = if_else(year == rp_short, rp_full, year)) %>% 
-  arrange(year) %>% 
+data_prep1 <- data_funding_rt |>
+  filter(member_state == .env$country) |>
+  group_by(member_state) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ sum(.x, na.rm = TRUE) / 10^3
+    ),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = -member_state,
+    names_to = c("year"),
+    names_pattern = "^x(\\d{4})",
+    values_to = "value"
+  ) |>
+  select(-member_state)
+
+data_prep_total <- data_prep1 |>
+  summarise(value = sum(value, na.rm = TRUE)) |>
+  mutate(year = rp_short) |>
+  select(year, value)
+
+data_prep <- rbind(data_prep1, data_prep_total) |>
+  mutate(
+    type = "Total self-declared funding"
+  ) |>
   select(
     xlabel = year,
     type,
-    mymetric)   
-
-myx_levels <- unique(data_prep1$xlabel)
-
-data_prep <- data_prep1 %>% 
-  mutate(xlabel = factor(xlabel, levels = myx_levels))
+    mymetric = value
+  )
 
 # chart ----
 ## chart parameters ----
 local_suffix <- ""
-local_decimals <- 1
+local_decimals <- 2
 
 ###set up order of traces
 local_hovertemplate <- paste0('%{y:,.', local_decimals, 'f}', local_suffix)
@@ -35,53 +55,51 @@ if (knitr::is_latex_output()) {
   local_legend_y <- mylegend_y
   local_legend_x <- -0.18
   local_legend_xanchor <- 'left'
-  local_legend_fontsize <- myfont-1
-  
+  local_legend_fontsize <- myfont - 1
 } else {
   local_legend_y <- -0.12
   local_legend_x <- 0.5
   local_legend_xanchor <- 'center'
   local_legend_fontsize <- myfont
-  
 }
 
 # plot chart ----
-myplot <- mybarchart2(data_prep, 
-                      height = myheight,
-                      colors = c(PRBPlannedColor, PRBActualColor),
-                      local_factor = c("Total self-declared funding",
-                                       "SDM data",
-                                        NULL),
-                      # shape = c("/", "", "/", "", "/", "", "/", "", "/", ""),
-                      
-                      suffix = local_suffix,
-                      decimals = local_decimals,
-                      
-                      hovertemplate = local_hovertemplate,
-                      hovermode = "x unified",
-                      
-                      textangle = 0,
-                      textposition = "outside",
-                      textfont_color = 'black',
-                      insidetextanchor = 'middle',
-                      
-                      bargap = 0.25,
-                      barmode = 'group',
-                      
-                      title_text = "Total funding",
-                      title_y = 0.99,
-                      
-                      yaxis_title = paste0("Total funding (M€<sub>",cef_ref_year,"</sub>)"),
-                      yaxis_ticksuffix = local_suffix,
-                      yaxis_tickformat = ".0f",
-                      
-                      legend_y = local_legend_y, 
-                      legend_x = local_legend_x,
-                      legend_xanchor = local_legend_xanchor,
-                      legend_fontsize = local_legend_fontsize)
+myplot <- mybarchart2(
+  data_prep,
+  height = myheight,
+  colors = c(PRBPlannedColor),
+  local_factor = c("Total self-declared funding", NULL),
+  # shape = c("/", "", "/", "", "/", "", "/", "", "/", ""),
+
+  suffix = local_suffix,
+  decimals = local_decimals,
+
+  hovertemplate = local_hovertemplate,
+  hovermode = "x unified",
+
+  textangle = 0,
+  textposition = "outside",
+  textfont_color = 'black',
+  insidetextanchor = 'middle',
+
+  bargap = 0.25,
+  barmode = 'group',
+
+  title_text = "Total self-declared funding (reporting tables)",
+  title_y = 0.99,
+
+  yaxis_title = paste0(
+    "Total self-declared funding (M€<sub>",
+    cef_ref_year,
+    "</sub>)"
+  ),
+  yaxis_ticksuffix = local_suffix,
+  yaxis_tickformat = ".0f",
+
+  legend_y = local_legend_y,
+  legend_x = local_legend_x,
+  legend_xanchor = local_legend_xanchor,
+  legend_fontsize = local_legend_fontsize
+)
 
 myplot
-
-
-
-

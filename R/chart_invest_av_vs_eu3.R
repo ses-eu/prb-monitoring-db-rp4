@@ -3,62 +3,94 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_union_wide") | !exists("data_category")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep_uw <- data_union_wide %>%
+data_pre_prep <- data_assets |>
   filter(
-    variable == "ATM systems" |
-      variable == "CNS systems" |
-      variable == "Infrastructure" |
-      variable == "Other" |
-      variable == "Unknown"
-  ) %>%
-  mutate(
-    mymetric = percent * 100,
-    union_wide_median = "Union-wide"
-  ) %>%
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Other new investments",
+        "Additional new major investment",
+        "Additional new major investments",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
   select(
-    xlabel = union_wide_median,
-    type = variable,
-    mymetric
-  )
-
-data_prep_ansp <- data_category %>%
-  filter(member_state_1 == .env$country) %>%
-  select(atm, cns, infra, ancillary, unknown, other) %>%
-  summarise(
-    atm = sum(atm, na.rm = TRUE),
-    cns = sum(cns, na.rm = TRUE),
-    infra = sum(infra, na.rm = TRUE),
-    unknown = sum(unknown, na.rm = TRUE),
-    other = sum(other, na.rm = TRUE) + sum(ancillary, na.rm = TRUE)
-  ) %>%
+    member_state,
+    value_of_the_assets,
+    new_atm_system,
+    overhaul_of_existing_atm_system,
+    other_atm,
+    cns,
+    infrastructure,
+    ancillary,
+    other,
+    unknown
+  ) |>
   mutate(
-    total = rowSums(across(everything())),
-    atm_share = atm / total * 100,
-    cns_share = cns / total * 100,
-    infra_share = infra / total * 100,
-    unknown_share = unknown / total * 100,
-    other_share = other / total * 100
-  ) %>%
-  select(atm_share, cns_share, infra_share, unknown_share, other_share) %>%
-  gather() %>%
+    across(-c(member_state, unknown), ~ replace_na(.x, "0")),
+    across(-c(member_state, unknown), ~ as.numeric(.x)),
+  ) |>
+  select(
+    member_state,
+    value_of_the_assets,
+    new_atm_system,
+    overhaul_of_existing_atm_system,
+    other_atm,
+    cns,
+    infrastructure,
+    ancillary,
+    other,
+    unknown
+  ) |>
+  pivot_longer(
+    -c(member_state, value_of_the_assets),
+    values_to = "value",
+    names_to = "type"
+  ) |>
+  group_by(member_state, type) |>
+  summarise(
+    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
+    .groups = "drop"
+  ) |>
   mutate(
     type = case_when(
-      key == "atm_share" ~ "ATM systems",
-      key == "cns_share" ~ "CNS systems",
-      key == "infra_share" ~ "Infrastructure",
-      key == "unknown_share" ~ "Unknown",
-      key == "other_share" ~ "Other"
-    ),
-    xlabel = "ANSP",
-    mymetric = value,
-    NULL
-  ) %>%
+      type == "new_atm_system" ~ "New ATM system",
+      type ==
+        "overhaul_of_existing_atm_system" ~ "Overhaul of existing\nATM system",
+      type == "other_atm" ~ "Other ATM",
+      type == "cns" ~ "CNS",
+      type == "infrastructure" ~ "Infrastructure",
+      type == "ancillary" ~ "Ancillary",
+      type == "other" ~ "Other",
+      type == "unknown" ~ "Unknown",
+    )
+  )
+
+data_prep_uw <- data_pre_prep |>
+  group_by(type) |>
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    mymetric = 100 * value / sum(value, na.rm = TRUE),
+    xlabel = "Union-wide"
+  ) |>
   select(xlabel, type, mymetric)
+
+data_prep_ansp <- data_pre_prep |>
+  filter(member_state == .env$country) |>
+  mutate(
+    mymetric = 100 * value / sum(value, na.rm = TRUE),
+    xlabel = "ANSP"
+  ) |>
+  select(xlabel, type, mymetric)
+
 
 data_prep <- rbind(data_prep_ansp, data_prep_uw) %>%
   mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide")))
@@ -89,15 +121,45 @@ if (knitr::is_latex_output()) {
 myplot <- mybarchart2(
   data_prep,
   height = myheight + 20,
-  colors = c('#044598', '#22A0DD', '#58595B', '#FFF000', '#7030A0'),
+  colors = c(
+    '#044598',
+    '#22A0DD',
+    '#58595B',
+    '#FFF000',
+    '#7030A0',
+    '#2E8B57',
+    '#F28E2B',
+    '#D62728'
+  ),
+  # colors = c('#044598', '#22A0DD', '#58595B', '#FFF000', '#7030A0'),
   local_factor = c(
-    "ATM systems",
-    "CNS systems",
+    "New ATM system",
+    "Overhaul of existing\nATM system",
+    "Other ATM",
+    "CNS",
     "Infrastructure",
+    "Ancillary",
     "Other",
     "Unknown"
   ),
-  shape = c("", "/", "", "/", "", "/", "", "/", "", "/"),
+  shape = c(
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/",
+    "",
+    "/"
+  ),
 
   suffix = local_suffix,
   decimals = local_decimals,

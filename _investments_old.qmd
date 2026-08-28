@@ -24,11 +24,6 @@ inv_conc1 <- get_prb_conclusions(prb_findings_file, "investments", "Table_Findin
 #| file: R/table_invest_av_type.R
 #| out.width: "100%"
 ```
-
-```{r table_invest_av_vs_eu2, eval=(params$country != params$rp_full)}
-#| file: R/table_invest_av_vs_eu2.R
-#| out.width: "100%"
-```
 ::::
 
 :::: {.chart-container}
@@ -74,6 +69,17 @@ inv_conc1 <- get_prb_conclusions(prb_findings_file, "investments", "Table_Findin
 ```
 ::::
 :::
+
+
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+
+```{r chart_invest_av_state_type, eval=(params$country == params$rp_full)}
+#| file: R/chart_invest_av_state_type.R
+#| out.width: "100%"
+```
+
+`r if (params$country != params$rp_full) ":::"`
+
 
 ## Costs related to investments included in the Performance Plan `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)`
 
@@ -128,6 +134,7 @@ table3
 
 `r if (params$country != params$rp_full) ":::"`
 
+
 ### Costs of investments by nature - En route
 
 ```{r, options= (cost_type = "en route")}
@@ -151,6 +158,7 @@ table3
 
 <br>
 
+
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ::: {layout="[10, 80, 10]"}
 :::: {#empty_div}
@@ -167,6 +175,7 @@ table3
 ::::
 :::
 `r if (params$country == params$rp_full) ":::"`
+
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 ```{r chart_invest_difference_cost_country_e, eval=(params$country == params$rp_full), options= (cost_type = "en route")}
@@ -232,6 +241,7 @@ table3
 
 
 
+
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ### Costs by new major investments
 
@@ -289,88 +299,25 @@ no_investments <- no_investments
 `r if (params$country == params$rp_full) ":::"`
 
 
-### Costs by Common Project One (CP1) ATM Functionality (AF)
-
-```{r}
-#| label: table_invest_cost_cp1
-#| out.width: "100%"
-#| echo: false
-#| results: asis
-
-source("R/table_invest_cost_cp1.R")
-if (identical(table1, "")) {
-  cat("No costs associated to CP1.")
-} else {
-  print(table1)
-}
-```
-
-```{r}
-#| echo: false
-#| results: asis
-
-if (identical(table2, "")) {
-  cat("")
-} else {
-  print(table2)
-}
-```
-
-```{r}
-#| echo: false
-#| results: asis
-
-if (identical(table3, "")) {
-  cat("")
-} else {
-  print(table3)
-}
-```
-
-
-<br>
-
-### Costs by Strategic Deployment Objective (SDO)
-
-```{r}
-#| label: table_invest_cost_sdo
-#| out.width: "100%"
-#| echo: false
-#| results: asis
-
-source("R/table_invest_cost_sdo.R")
-if (identical(table1, "")) {
-  cat("No costs associated to SDOs.")
-} else {
-  print(table1)
-}
-```
-
-```{r}
-#| echo: false
-#| results: asis
-
-if (identical(table2, "")) {
-  cat("")
-} else {
-  print(table2)
-}
-```
-
-```{r}
-#| echo: false
-#| results: asis
-
-if (identical(table3, "")) {
-  cat("")
-} else {
-  print(table3)
-}
-```
-
-<br>
-
 ## Expected benefit and impact per new major investment `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)`
+
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+
+```{r table_invest_benefits_kpa_ses, eval=(params$country == params$rp_full)}
+#| file: R/table_invest_benefits_kpa_ses.R
+#| out.width: "100%"
+```
+
+```{r table_invest_impact_ses, eval=(params$country == params$rp_full)}
+#| file: R/table_invest_impact_ses.R
+#| out.width: "100%"
+```
+
+`r if (params$country != params$rp_full) ":::"`
+
+
+<br>
+
 
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
@@ -380,6 +327,26 @@ if (identical(table3, "")) {
 ```
 
 `r if (params$country == params$rp_full) ":::"`
+
+
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+
+```{r, eval=(params$country == params$rp_full)}
+#| label: table_invest_benefit_type_ses
+#| out.width: "100%"
+#| echo: false
+
+source("R/table_invest_benefit_type_ses.R")
+table1
+```
+
+```{r}
+#| echo: false
+table2
+```
+
+`r if (params$country != params$rp_full) ":::"`
+
 
 <br>
 
@@ -405,7 +372,14 @@ if (identical(table3, "")) {
 
 ## Public funding granted for total CAPEX (CEF/TEN-T)
 
+### Actual funding declaration vs payments
 
+```{r table_invest_funding}
+#| file: R/table_invest_funding.R
+#| out.width: "100%"
+```
+
+<br>
 
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ::: {layout="[ 50, 0, 50 ]"}
@@ -448,3 +422,4 @@ if (identical(table3, "")) {
 :::
 
 `r if (params$country != params$rp_full) ":::"`
+

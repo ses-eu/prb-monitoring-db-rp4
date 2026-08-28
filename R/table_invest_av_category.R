@@ -1,59 +1,100 @@
 if (exists("country") == FALSE) {
-  country <- "Belgium"
-  source("R/params_country.R")
+  country <- "Bulgaria"
 }
 
 # import data  ----
-if (!exists("data_new_major")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_prep <- data_category %>%
-  filter(member_state_1 == .env$country) %>%
-  select(atm, cns, infra, ancillary, unknown, other) %>%
-  summarise(
-    atm_value = sum(atm, na.rm = TRUE),
-    cns_value = sum(cns, na.rm = TRUE),
-    infra_value = sum(infra, na.rm = TRUE),
-    unknown_value = sum(unknown, na.rm = TRUE),
-    other_value = sum(other, na.rm = TRUE) + sum(ancillary, na.rm = TRUE)
-  ) %>%
-  mutate(
-    total = rowSums(across(everything())),
-    atm_share = atm_value / total,
-    cns_share = cns_value / total,
-    infra_share = infra_value / total,
-    unknown_share = unknown_value / total,
-    other_share = other_value / total
-  ) %>%
+data_pre_prep <- data_assets |>
+  filter(
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Other new investments",
+        "Additional new major investment",
+        "Additional new major investments",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
   select(
-    atm_value,
-    cns_value,
-    infra_value,
-    unknown_value,
-    other_value,
-
-    atm_share,
-    cns_share,
-    infra_share,
-    unknown_share,
-    other_share,
-    NULL
-  ) %>%
-  gather() %>%
+    member_state,
+    value_of_the_assets,
+    new_atm_system,
+    overhaul_of_existing_atm_system,
+    other_atm,
+    cns,
+    infrastructure,
+    ancillary,
+    other,
+    unknown
+  ) |>
+  mutate(
+    across(-c(member_state, unknown), ~ replace_na(.x, "0")),
+    across(-c(member_state, unknown), ~ as.numeric(.x)),
+  ) |>
+  select(
+    member_state,
+    value_of_the_assets,
+    new_atm_system,
+    overhaul_of_existing_atm_system,
+    other_atm,
+    cns,
+    infrastructure,
+    ancillary,
+    other,
+    unknown
+  ) |>
+  pivot_longer(
+    -c(member_state, value_of_the_assets),
+    values_to = "value",
+    names_to = "type"
+  ) |>
+  group_by(member_state, type) |>
+  summarise(
+    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
+    .groups = "drop"
+  ) |>
   mutate(
     type = case_when(
-      str_detect(key, "atm") ~ "ATM systems",
-      str_detect(key, "cns") ~ "CNS systems",
-      str_detect(key, "infra") ~ "Infrastructure",
-      str_detect(key, "other") ~ "Other",
-      str_detect(key, "unknown") ~ "Unknown"
-    ),
-    key = str_remove_all(key, "atm_|cns_|infra_|unknown_|other_")
-  ) %>%
-  pivot_wider(id_cols = type, names_from = "key", values_from = "value") %>%
-  arrange(type)
+      type == "new_atm_system" ~ "New ATM system",
+      type ==
+        "overhaul_of_existing_atm_system" ~ "Overhaul of existing ATM system",
+      type == "other_atm" ~ "Other ATM",
+      type == "cns" ~ "CNS",
+      type == "infrastructure" ~ "Infrastructure",
+      type == "ancillary" ~ "Ancillary",
+      type == "other" ~ "Other",
+      type == "unknown" ~ "Unknown",
+    )
+  )
+
+data_prep <- data_pre_prep |>
+  filter(member_state == .env$country) |>
+  mutate(
+    share = value / sum(value, na.rm = TRUE),
+    type = factor(
+      type,
+      levels = c(
+        "New ATM system",
+        "Overhaul of existing ATM system",
+        "Other ATM",
+        "CNS",
+        "Infrastructure",
+        "Ancillary",
+        "Other",
+        "Unknown"
+      )
+    )
+  ) |>
+  arrange(type) |>
+  select(type, value, share)
+
 
 total_value <- format(
   janitor::round_half_up(sum(data_prep$value, na.rm = TRUE), 2),

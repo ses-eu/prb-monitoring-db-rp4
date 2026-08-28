@@ -6,70 +6,32 @@ if (!exists("cost_type")) {
 }
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_costs_rt")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-rp_years <- as.integer(rp_years)
-
-
-if (cost_type == "en route") {
-  c_prefixes1 <- c("d_enr", "a_enr")
-} else {
-  c_prefixes1 <- c("d_ter", "a_ter")
-}
-
-
-cols1 <- c(
-  as.vector(outer(c_prefixes1, rp_years, paste, sep = "_"))
-)
-
-cols2 <- cols1 %>%
-  stringr::str_remove_all(., "ter_") %>%
-  stringr::str_remove_all(., "enr_")
-
-# ---- rename mapping: d_enr_2025 -> d_year1, a_enr_2025 -> a_year1, etc.
-# keep only "d_" / "a_" and replace year with year1, year2...
-prefix_letter <- sub("_.*$", "", c_prefixes1) # "d" / "a"
-new_names <- as.vector(outer(
-  paste0(prefix_letter, "_"),
-  paste0("year", seq_along(rp_years)),
-  paste0
-))
-
-rename_map <- setNames(cols1, new_names)
-rename_map_inv <- setNames(new_names, cols2)
-
-data_filtered <- data_cost_inv_rt %>%
-  filter(member_state == .env$country) %>%
-  select(member_state, all_of(cols1)) %>%
-  rename(!!!rename_map)
-
-data_prep_year <- data_filtered %>%
-  group_by(member_state) %>%
-  summarise(
-    d_year1 = sum(d_year1, na.rm = TRUE),
-    d_year2 = sum(d_year2, na.rm = TRUE),
-    d_year3 = sum(d_year3, na.rm = TRUE),
-    d_year4 = sum(d_year4, na.rm = TRUE),
-    d_year5 = sum(d_year5, na.rm = TRUE),
-
-    a_year1 = sum(a_year1, na.rm = TRUE),
-    a_year2 = sum(a_year2, na.rm = TRUE),
-    a_year3 = sum(a_year3, na.rm = TRUE),
-    a_year4 = sum(a_year4, na.rm = TRUE),
-    a_year5 = sum(a_year5, na.rm = TRUE)
-  ) %>%
-  rename(!!!rename_map_inv) %>%
-  select(-member_state) %>%
+data_prep_year <- data_costs_rt |>
+  filter(
+    member_state == .env$country &
+      tolower(en_route_terminal) == cost_type &
+      ansp_type == "Main"
+  ) |>
+  select(contains('20')) |>
   pivot_longer(
-    cols = everything(), # Pivot all columns
-    names_to = c("type", "year"), # Create "type" and "year" columns
-    names_pattern = "(.+?)_(\\d{4})", # Regex: Extract "type" + 4-digit year
-    values_to = "value" # Store values in "value" column
-  ) %>%
-  mutate(value = if_else(year > year_report, NA, value))
+    cols = everything(),
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  group_by(year, type) |>
+  summarise(
+    value = sum(value, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(
+    value = if_else(year > year_report, NA_real_, value)
+  )
 
 data_prep_total <- data_prep_year %>%
   group_by(type) %>%
@@ -80,7 +42,6 @@ data_prep_total <- data_prep_year %>%
     ),
     .groups = "drop"
   ) %>%
-  ungroup() %>%
   mutate(year = rp_short) %>%
   select(type, year, value)
 

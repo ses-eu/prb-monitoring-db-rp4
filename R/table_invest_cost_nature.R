@@ -8,88 +8,102 @@ if (!exists("cost_type")) {
 }
 
 # import data  ----
-if (!exists("data_new_major")) {
+if (!exists("data_cost_rt")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-if (cost_type == "en route") {
-  c_prefixes1 <- c("d_enr", "a_enr")
-} else {
-  c_prefixes1 <- c("d_ter", "a_ter")
-}
-
-cols1 <- c(
-  as.vector(outer(c_prefixes1, rp_years, paste, sep = "_"))
-)
-new_names <- cols1 %>%
-  stringr::str_remove_all(., "ter_") %>%
-  stringr::str_remove_all(., "enr_") %>%
-  sub("^([da])_(\\d{4})$", "\\2\\U\\1", ., perl = TRUE)
-
-rename_map <- setNames(cols1, new_names)
-
-data_filtered <- data_cost_inv_rt %>%
-  select(member_state, cost_type, all_of(cols1)) %>%
-  rename(!!!rename_map)
-
-data_filtered <- data_filtered %>%
-  filter(member_state == .env$country)
-
-data_calc <- data_filtered %>%
-  select(-member_state) %>%
+data_calc <- data_costs_rt |>
+  filter(
+    member_state == .env$country &
+      tolower(en_route_terminal) == cost_type &
+      ansp_type == "Main"
+  ) |>
+  select(category = cost_details, contains('20')) |>
+  mutate(
+    category = str_remove(category, "^3\\.\\d{2}\\s+")
+  ) |>
+  group_by(category) |>
+  summarise(
+    across(where(is.numeric), ~ sum(.x, na.rm = TRUE) / 10^3),
+    .groups = "drop"
+  ) |>
   pivot_longer(
-    cols = -cost_type,
-    names_to = c("year", "type"), # Create "type" and "year" columns
-    names_pattern = "(\\d{4})(.+?)", # Regex: Extract "type" + 4-digit year
-    values_to = "value" # Store values in "value" column
-  ) %>%
+    cols = -category,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  pivot_wider(
+    names_from = year,
+    values_from = value
+  ) |>
   mutate(
-    value = value / 10^3,
-    type = if_else(type == "D", "Determined", "Actual")
-  ) %>%
-  group_by(cost_type, type, year) %>%
-  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+    type = if_else(type == 'd', 'Determined', 'Actual'),
+    RP4 = rowSums(across(matches("^\\d{4}$")), na.rm = TRUE)
+  ) |>
+  group_by(category) |>
   mutate(
-    value = if_else(
-      type == "Actual" & as.numeric(year) > year_report,
-      NA,
-      value
+    summarise(
+      across(where(is.numeric), ~ sum(.x, na.rm = TRUE)),
+      .groups = "drop"
     )
-  ) %>%
-  rename(category = cost_type) %>%
-  pivot_wider(
-    id_cols = c(category, year),
-    names_from = "type",
-    values_from = "value"
-  ) %>%
-  mutate(
-    Difference = Actual - Determined
-  ) %>%
-  pivot_longer(-c(category, year), names_to = "type", values_to = "value")
+  ) |>
+  mutate(across(
+    matches("^\\d{4}$"),
+    ~ if (as.integer(cur_column()) > as.integer(.env$year_report)) {
+      if_else(type == "Actual", NA_real_, .x)
+    } else {
+      .x
+    }
+  )) |>
+  ungroup() |>
+  arrange(desc(category), desc(type))
 
-data_calc_summary <- data_calc %>%
-  filter(as.numeric(year) <= year_report) %>%
-  group_by(category, type) %>%
-  summarise(value = sum(value, na.rm = TRUE)) %>%
-  ungroup() %>%
-  mutate(year = rp_short) %>%
-  select(category, year, type, value)
+difference_rows <- data_calc |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ .x[type == "Actual"] - .x[type == "Determined"]
+    ),
+    .groups = "drop"
+  ) |>
+  mutate(type = "Difference", .after = category)
 
-data_prep <- rbind(data_calc, data_calc_summary) %>%
-  arrange(year) %>%
-  pivot_wider(
-    id_cols = c(category, type),
-    names_from = "year",
-    values_from = "value"
-  ) %>%
+difference_perc_rows <- data_calc |>
+  group_by(category) |>
+  summarise(
+    across(
+      where(is.numeric),
+      ~ if_else(
+        .x[type == "Determined"] == 0,
+        NA_real_,
+        .x[type == "Actual"] / .x[type == "Determined"] - 1
+      )
+    ),
+    .groups = "drop"
+  ) |>
+  mutate(type = "Difference_perc", .after = category)
+
+data_prep <- bind_rows(
+  data_calc,
+  difference_rows,
+  difference_perc_rows
+) |>
   mutate(
     category = factor(
       category,
-      levels = c("Depreciation", "Cost of capital", "Cost of leasing")
+      levels = c(
+        'Depreciation',
+        'Cost of capital',
+        'Cost of leasing'
+      )
     )
-  ) %>%
-  arrange(category)
+  ) |>
+  arrange(category, type) |>
+  ungroup()
+
 
 data_prep1 <- data_prep %>%
   filter(type == "Determined") %>%

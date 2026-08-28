@@ -4,69 +4,96 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-# if (!exists("data_new_major")) {
-#   source("R/get_investment_data.R")
-# }
+if (!exists("data_assets")) {
+  source("R/get_investment_data.R")
+}
 
 # process data  ----
-data_prep <- data_capex %>%
-  filter(member_state == .env$country) %>%
+data_pre_prep <- data_assets |>
+  filter(
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Other new investments",
+        "Other new investment",
+        "Additional new major investment",
+        "Additional new major investments",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
   mutate(
-    pp_new_major_value = new_major_investments_as_per_pp / 10^6,
-    pp_other_new_value = other_new_investments_as_per_pp / 10^6,
-    add_new_major_value = additional_new_major_investments / 10^6,
-    new_major_value = pp_new_major_value + add_new_major_value,
-
-    pp_new_major_share = new_major_investments_as_per_pp / total,
-    pp_other_new_share = other_new_investments_as_per_pp / total,
-    add_new_major_share = additional_new_major_investments / total,
-    new_major_share = pp_new_major_share + add_new_major_share,
-    NULL
-  ) %>%
+    type_of_investment = case_when(
+      type_of_investment ==
+        "New major investments" ~ "Included in the performance plan",
+      type_of_investment ==
+        "New major investment" ~ "Included in the performance plan",
+      type_of_investment == "Additional new major investments" ~ "Additional",
+      type_of_investment == "Additional new major investment" ~ "Additional",
+      type_of_investment ==
+        "Other new investments" ~ "Other new investments (below 5M€ each)",
+      type_of_investment ==
+        "Other new investment" ~ "Other new investments (below 5M€ each)",
+      type_of_investment ==
+        "Additional other new investment" ~ "Other new investments (below 5M€ each)",
+      type_of_investment ==
+        "Additional other new investments" ~ "Other new investments (below 5M€ each)",
+      .default = type_of_investment
+    )
+  ) |>
+  group_by(member_state, type_of_investment) |>
+  summarise(
+    value_of_the_assets = sum(value_of_the_assets, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  group_by(member_state) |>
+  mutate(
+    value = value_of_the_assets / 10^6
+  ) |>
+  ungroup() |>
+  filter(member_state == .env$country) |>
   select(
-    pp_new_major_value,
-    pp_other_new_value,
-    add_new_major_value,
-    new_major_value,
-    pp_new_major_share,
-    pp_other_new_share,
-    add_new_major_share,
-    new_major_share,
-    NULL
-  ) %>%
-  gather() %>%
+    type = type_of_investment,
+    value
+  )
+
+total_asset_value <- data_pre_prep |>
+  summarise(value = sum(value, na.rm = TRUE)) |>
+  pull()
+
+asset_types <- tibble(
+  type = c(
+    "New major investments (above 5M€ each)",
+    "Included in the performance plan",
+    "Additional",
+    "Other new investments (below 5M€ each)"
+  )
+)
+
+
+data_prep <- data_pre_prep |>
+  filter(type %in% c("Included in the performance plan", "Additional")) |>
+  summarise(value = sum(value, na.rm = TRUE)) |>
   mutate(
-    type = case_when(
-      str_detect(key, "pp_new_major") ~ "Included in the performance plan",
-      str_detect(key, "add") ~ "Additional",
-      str_detect(key, "new_major") ~ "New major investments (above 5M€ each)",
-      str_detect(key, "other") ~ "Other new investments (below 5M€ each)"
-    ),
-    key = str_remove_all(
-      key,
-      "pp_new_major_|add_new_major_|new_major_|pp_other_new_"
-    )
-  ) %>%
-  pivot_wider(id_cols = type, names_from = "key", values_from = "value") %>%
+    type = "New major investments (above 5M€ each)"
+  ) |>
+  relocate(type, .before = everything()) |>
+  rbind(data_pre_prep) |>
+  right_join(asset_types, by = "type") |>
   mutate(
-    type = factor(
-      type,
-      levels = c(
-        "New major investments (above 5M€ each)",
-        "Included in the performance plan",
-        "Additional",
-        "Other new investments (below 5M€ each)"
-      )
-    )
-  ) %>%
+    type = factor(type, levels = asset_types$type),
+    value = replace_na(value, 0),
+    share = value / total_asset_value
+  ) |>
   arrange(type)
 
-total_value <- data_prep %>%
-  filter(data_prep$type != "New major investments (above 5M€ each)") %>%
-  select(value) %>%
-  sum(., na.rm = TRUE) %>%
-  janitor::round_half_up(., 2) %>%
-  format(., nsmall = 2, big.mark = ",")
+total_value <- format(
+  janitor::round_half_up(total_asset_value, 2),
+  nsmall = 2,
+  big.mark = ","
+)
 
 table1 <- mygtable(data_prep, myfont) %>%
   tab_options(
