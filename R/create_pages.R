@@ -661,7 +661,7 @@ if (out_format == 'web') {
           'href: environment.html#en-route-performance',
           'contents: #environment',
           '- text: "Flight efficiency"',
-          'href: environment.html#horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-scr-pi2-and-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3',
+          'href: environment.html#horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2-and-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3',
           '- section: "<b>En route performance</b>" #capacity',
           'href: capacity.html#en-route-performance',
           'contents: #capacity',

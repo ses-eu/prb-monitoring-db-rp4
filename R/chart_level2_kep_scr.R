@@ -53,7 +53,7 @@ c_decimals <- 2
 c_colors = c(PRBActualColor, PRBPlannedColor)
 
 ###set up order of traces
-c_factor <- c("KEP", "SCR")
+c_factor <- c("KEP", "KES")
 
 c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
@@ -62,10 +62,10 @@ c_textposition <- "inside"
 c_insidetextanchor <- 'middle'
 
 #### title
-c_title_text <- paste0("KEP & SCR")
+c_title_text <- paste0("KEP & KES")
 
 #### yaxis
-c_yaxis_title <- "KEP & SCR (%)"
+c_yaxis_title <- "KEP & KES (%)"
 c_yaxis_tickformat <- paste0(".", c_decimals, "f")
 
 # plot chart ----

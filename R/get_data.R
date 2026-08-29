@@ -352,14 +352,17 @@ kep_actual_mm <- readxl::read_xlsx(
   clean_names() %>%
   mutate(month = as.Date(month))
 
-#### SCR ----
+#### SCR/KES ----
 scr_actual <- readxl::read_xlsx(
   here(data_folder, env_data_file),
   sheet = "scr",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
-  clean_names()
+  clean_names() |>
+  mutate(
+    indicator_type = "KES"
+  )
 
 
 scr_actual_mm <- readxl::read_xlsx(

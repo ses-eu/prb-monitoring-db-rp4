@@ -513,7 +513,7 @@ cat(make_quarto_latex_table_2level(
 
 ## En route performance
 
-### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (SCR) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
+### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
 
 `r layout_2fig("chart_env_kea_l2", "chart_env_kea_month")`
 
