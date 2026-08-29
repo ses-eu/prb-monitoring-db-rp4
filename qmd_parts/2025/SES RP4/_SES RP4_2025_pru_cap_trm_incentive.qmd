@@ -1,0 +1,24 @@
+## CAP-TRM6.2. Other performance indicators
+
+**Average departure delay from all causes per flight**
+
+Average Union-wide all-causes pre-departure delays was 16.5 minutes in 2025. This is a significantly lower value (-12%) than what was measured in 2024, i.e. 18.8 minutes per flight. This difference is notable also because all-causes pre-departure delays in 2022 and 2023 were very similar to 2024 (19.0 and 19.2 respectively) despite much lower traffic volumes in those years. Although there is a limited differences in the airports in scope in RP3 and RP4, the reduction in average all causes pre-departure delays does point towards a clear improvement in performance. This is supported by the fact that at individual airport level, all causes pre-departure delays reduced by one minute or more for a strong majority of airports.
+
+**Gate-to-gate delay analysis**
+
+A gate-to-gate analysis that combines ATFM delays with other delay types and other sources of flight time extensions demonstrates the overall impact on performance. For this analysis, four performance indicators defined in the Regulation are used to illustrate gate-to-gate delays:
+
+-   All cause pre-departure delays, including en route ATFM delays and airport arrival ATFM delays;
+
+-   Additional taxi-in time;
+
+-   Additional taxi-out time; and
+
+-   Additional time spent in terminal area on arrival (Arrival Sequencing and Metering Area).
+
+Based on these indicators, on average airspace users experienced a gate-to-gate delay of 22.9 minutes per flight in 2025 while in 2024 a gate-to-gate delay of 25.2 minutes per flight was measured (noting again that these figures cannot be compared directly due to limited differences in the airports in scope). Additional taxi-in and -out times and additional time spent in ASMA were all broadly the same in 2024 and 2025, and the gate-to-gate delay reductions is therefore almost completely due to reduced all-causes pre-departure delays.
+
+Due to a combined reduction from 3.12 minutes per flight in 2024 to 2.61 minutes per flight in 2025, en route and airport ATFM regulations (i.e. the delays assessed under the Regulation and counted within the all causes departure delay group) contributed -0.5 minutes per flight to the -2.3 minutes per flight improvement to gate-to-gate delays in 2025.
+
+# CEF-ERT7. En route Cost-efficiency performance -- SES RP4
+

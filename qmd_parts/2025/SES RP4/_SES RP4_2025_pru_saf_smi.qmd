@@ -1,0 +1,24 @@
+## SAF1.3. Rate of separation minima infringements (SMIs) (PI#2)
+
+**SMIs rate**
+
+In 2025, the rate of separation minima infringements (SMIs) equalled 7.87 occurrences per 100,000 aircraft movements, a decrease from 9.75 in 2024. The SMIs with ANS contribution equalled 6.02 per 100,000 aircraft movements, a decrease from 6.74. Austria did not provide information on the SMIs with ANS contribution.
+
+A significant drop was observed in SMIs occurrences, decreasing from 1464 in 2024 to 1187 in 2025 (-19%). Similarly, the SMIs occurrences with ANS contribution decreased from 982 to 888 (-10%).
+
+**SMIs by Member State**
+
+Comparing absolute numbers and rates of occurrences between Member States and ANSPs for SMIs must be done with caution. The number of occurrences reported is much dependent on the reporting culture of the organisation, the classification on occurrences, use of automated systems, etc. A high rate of occurrences in one Member State or ANSP is therefore not necessarily equal to a worse performance compared with Member States or ANSPs with lower rates.
+
+Based on the reported SMI data, the Member States with the highest number of SMI occurrences were France (353 occurrences), Italy (296), the Netherlands (106), Spain (85) and Greece (68). The lowest number of SMIs were recorded by Croatia, Denmark and Luxembourg with 1 SMI each and Latvia, Lithuania, and Slovenia with 2 SMIs each.
+
+When normalized by controlled flight hours, the highest occurrence rates were recorded by Italy (19.41), France (17.54), and Norway (16.27). On the opposite, the lowest occurrence rates were recorded by Croatia (0.29), Denmark (0.48) and Portugal (1.24).
+
+**SMIs with ANS contribution by ANSP**
+
+Based on the reported data, the ANSPs with the highest number of SMI occurrences with ANS contribution were DSNA (285 occurrences), Enaire (133), ENAV (127), LVNL (85) and HASP (68). The lowest number of SMIs with ANS contribution (0) were recorded by Arvidsjaur AB (AFAB), Saab Digital ATS (SDATS), Port Lotniczy Bydgoszcz S.A., Warmia i Mazury Sp. z o.o., Saerco, and Skyway.
+
+When normalized by controlled flight hours, the highest rate of SMIs with ANS contribution in 2025 has been recorded in the LVNL airspace (15.1), followed by DNSA (14.1), and Skeyes (9.3). On the opposite side, aside the ANSPs that recorded 0 SMIs with ANS contribution, the lowest rates were recorded by Croatia Control (0.29), MUAC (0.31), and Naviair (0.48).
+
+# ENV-ERT2. En route Environnent performance -- SES RP4
+

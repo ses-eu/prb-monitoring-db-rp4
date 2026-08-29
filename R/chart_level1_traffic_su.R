@@ -13,6 +13,7 @@ data_raw_rts <- ceff_t1_ert
 
 ## rts data
 data_prep_rts_ses <- data_raw_rts |>
+  filter(entity_type == 'ECZ') |>
   select(year, status, x5_4_total_su) %>%
   group_by(year, status) %>%
   summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE), .groups = "drop")

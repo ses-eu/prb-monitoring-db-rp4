@@ -219,7 +219,11 @@ if (
 } else if (country == "MUAC") {
   level2_files <- c("capacity.qmd", "cost-efficiency-muac.qmd", "safety.qmd")
 } else {
-  level2_files <- c("capacity.qmd", "environment.qmd", "safety.qmd")
+  level2_files <- c(
+    "capacity.qmd",
+    "environment.qmd",
+    "safety.qmd"
+  )
 
   for (i in 1:no_ecz) {
     # add level2 cef er .qmd file name to list

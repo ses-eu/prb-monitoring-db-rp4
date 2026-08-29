@@ -1,0 +1,4 @@
+## CEF-ERT7.2. Actual Unit Cost incurred by the users (PI#1)
+
+The en route actual unit cost incurred by users in 2025 was -1.9% (or -1.14€) lower than the DUC, and the terminal actual unit cost incurred by users in 2025 was -12.5% (or -29.19€) lower than the DUC. The main difference for en route stems from other revenues, while from other revenues and the application of a lower unit rate for terminal.
+

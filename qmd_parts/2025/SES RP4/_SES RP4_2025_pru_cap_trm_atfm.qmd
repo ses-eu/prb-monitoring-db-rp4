@@ -1,0 +1,16 @@
+## CAP-TRM6.1. Arrival ATFM delay per flight (PI#1)
+
+**Terminal and airport ANS ATFM arrival delay per flight**
+
+Terminal capacity is monitored by one key performance indicator at the local level, which is the average airport arrival ATFM delay. In 2025, the average Union-wide airport arrival ATFM delay was 0.97 minutes per flight.
+
+The average arrival ATFM delay in 2025 was comparable to 2024, which was 0.93 minutes per flight (due to limited differences in the airports in scope in RP3 and RP4, these figures cannot be compared directly). The top 20 busiest airports in 2025 experienced a +3.5% increase in IFR arrivals on average compared to 2024, while experiencing a +10.4% increase in total arrival ATFM delay minutes. Average arrival ATFM delay per flight increased at six of the top 20 airports: Amsterdam, Paris CdG, Athens, Zurich, Palma de Mallorca, and Warsaw.
+
+Weather and other non-ATC issues continue to account for a large proportion of the delays; in 2025 this was 75%. The majority of the airport arrival ATFM delay was generated between May and October, when average Union-wide arrival ATFM delays were consistently equal to or above 1 minute, although the seasonal pattern that can be observed clearly for en route ATFM delays is much less prominent for arrival ATFM delays. Where the ratio of highest to lowest average ATFM delays per month is 8.4 for en route, for arrival ATFM delay this is only 2.7 (July vs February for both cases). As was already noted for 2024, the pattern of high delays occurring also outside the summer period reflects negatively on both network resilience and the predictability of network performance.
+
+While taking into account that there is a limited difference in the airports in scope, average arrival ATFM delays for most causes remained stable, with only delays due to ATC Capacity issues showing a clear increase, from 0.13 minutes per flight to 0.19 minutes per flight.
+
+**Terminal incentive scheme**
+
+For terminal capacity, based on the parameters defined in the performance plans, ten ANSPs are eligible for a bonus, with the maximum bonus for two ANSPs being set to 0% and therefore not having a financial effect. Seven ANSPs are subject to a financial penalty. The total bonuses amount to 2.3M€, whereas the sum of penalties is -4.1M€, giving a net effect of -1.8M€ to be returned to users.
+

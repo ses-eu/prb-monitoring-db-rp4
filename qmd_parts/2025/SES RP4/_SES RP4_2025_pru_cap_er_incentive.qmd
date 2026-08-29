@@ -1,0 +1,28 @@
+## CAP-ERT5.2. Summary of performance at local level
+
+A limited number of ACCs registered a significant increase in delays. The following ACCs with 2025 delays above 0.15 min/flight saw clear increases:
+
+-   In France, delays in Brest ACC and Marseille ACC increased by +52% and +102% respectively. In Brest, the increase was mainly due to weather and 'other' causes, i.e. capacity reduction due to ATM system implementation and associated training. In Marseille ACC the increase was to a very large extent driven by ATC Capacity issues, which caused an additional 1.5 million minutes of delay compared to 2024.
+
+-   In Spain, delays increased in Madrid ACC by +37%, due to a combination of a lack of ATC Capacity and 'other' causes, in particular military exercises.
+
+-   Delays in MUAC increased by +37%, with in particular ATC Capacity issues increasing significantly. These issues were mostly linked to traffic shifts within MUAC-controlled airspace from the Netherlands to Belgium.
+
+Consistent with Union-wide performance, there were notable improvements in a number of ACCs. Clear reductions in delays were observed in the ACCs listed below, which all showed a performance above 0.15 min/flight (meaning that in a number of cases they still experienced relatively high delays, despite improvements):
+
+-   For several ACCs, the improvements were due to reduced ATC Capacity issues in combination with reduced impact of adverse weather conditions: average delays decreased by -35% in Bremen ACC, by -52% in Canarias ACC, by -47% in Karlsruhe UAC, and by -76% in Zagreb ACC.
+
+-   ATC Capacity and weather were also the main contributors to improvements in Vienna ACC, but the improvements were partly countered by increased delay due to ATC Staffing issues, resulting in an overall reduction of average delays by -24%.
+
+-   In Paris ACC, the reduced average delays (-34%) were largely due to the absence of 'other' causes (ATM system implementation) that affected 2024 performance. ATC Capacity issues in fact increased in 2025 compared to 2024.
+
+-   In Budapest ACC, average delays decreased by -79% due to reduced impact of 'other' causes (complexity resulting from the closure of Ukraine airspace) in addition to fewer delays due to ATC Capacity and weather.
+
+-   In Warsaw ACC, the -25% reduction in average delay was due to a combination of lower delays due to ATC Capacity and Staffing but higher delays due to 'other' causes (ATFM trials and complexity resulting from the closure of Ukraine airspace).
+
+-   Sevilla ACC showed a significant reduction in ATC Capacity issues, leading to -37% lower average delay.
+
+-   In Geneva ACC (-33% average delays) and Zurich ACC (-42%) the improvement was mainly due to the absence of disruptions which occurred during 2024.
+
+Although average en route ATFM delays were still well above the target in 2025, actual performance shows an improvement compared to 2024 and also breaks the trend of increasing delays in the post-Covid years 2022-2024. These improvements have been achieved while traffic increased by 4.2%. However, in some parts of the network capacity is still insufficient to deal with strong traffic growth, especially during peak periods.
+

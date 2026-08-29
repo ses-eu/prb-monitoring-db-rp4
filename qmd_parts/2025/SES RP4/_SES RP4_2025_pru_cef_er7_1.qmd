@@ -1,0 +1,66 @@
+## CEF-ERT7.1. Unit Cost (KPI#1)
+
+The 2025 actual unit cost (AUC) variation from the 2024 baseline (-4.0%) is better than the variations derived from the Union-wide targets (-1.2%) and the RP4 performance plans (-1.2%). The resulting AUC (52.87€2022) is -2.8% lower than the Union-wide DUC from the RP4 performance plans (54.39€2022). The 2025 Union-wide AUC was better than the en route cost-efficiency target mainly due to a combination of higher service units than planned (+1.8%) and lower actual costs than planned (-1.0%).
+
+In terms of traffic, the comparison between actual and planned service units showed significant variations between Member States: En route service units were higher than planned for 16 charging zones, with notable differences in Cyprus (+12.2%), Malta (+10.5%), and Hungary (+9.5%), while for the remaining 13 charging zones the number of actual service units was below the plan, with the largest differences observed in Finland (-16.9%), Slovakia (-8.4%), and Switzerland (-6.8%). These marked differences were largely driven by the continued impact of Russia's war of aggression against Ukraine on traffic flows within the SES area, the effects of which have already been significant despite this being only the first year of RP4. In addition, the geopolitical situation in the Middle East also affected traffic patterns.
+
+In terms of costs, 20 Member States incurred lower actual en route total costs than planned, with five of them by more than -5%. The Member States with the largest percentage reduction in actual costs were Sweden (-9.0%), Latvia (-6.7%) and Ireland (-6.6%). Only Slovakia increased actual costs by +5% or more compared to determined (+5.8%).
+
+**Difference in inflation between actual and determined**
+
+Actual cost in nominal terms and real terms has evolved at the same rate. In the first year of the reference period, actual inflation rates are broadly in line with the forecast inflation indexes.
+
+**Cost differences in Member States with approved capacity deviation plan for RP4**
+
+In their submitted performance plans, eight Member States initially presented a deviation from the criteria to achieve capacity targets (criterion d) i) of Section 1.4 of Annex IV of the Regulation). This deviation was considered justified for four Member States (Belgium-Luxembourg, Germany, Hungary, and Ireland). Out of these, two Member States reported lower actual costs compared to planned for 2025: Belgium-Luxembourg (-11.7M€~2022~, or -4.5%) and Ireland (-9.8M€~2022~, or -6.6%). The other two Member States reported 2025 actual costs broadly in line with the plan: Germany (+4.6M€~2022~, or +0.4%) and Hungary (+0.4M€~2022~, or +0.3%).
+
+However, these four Member States have underspent in 2025 in the additional costs of measure necessary to achieve capacity targets. Belgium-Luxembourg has reported lower actual costs compared to determined (-1.8M€~2022~, or -9.7%), mainly due to lower depreciation (-1.8M€~2022~, or -83.5%) than planned. Germany has reported lower actual costs compared to determined (-14.1M€~2022~, or -28.1%), mainly due to lower staff costs (-12.2M€~2022~, or -42.2%) than planned. Hungary has reported lower actual costs compared to determined (-0.8M€~2022~, or -11.7%), mainly due to lower other operating costs (-0.7M€~2022~, or -18.9%) than planned. Ireland has reported lower actual costs compared to determined (-5.4M€~2022~, or -41.9%), mainly due to lower staff costs (-4.7M€~2022~, or -51.8%) than planned. Three of these four Member States achieved the 2025 en route capacity target, only Germany has not.
+
+**Verification of cost eligibility**
+
+The NSAs must ensure the eligibility of the costs charged as part of the cost base for air navigation charges: In Article 15(2) of Regulation (EU) 550/2004, the Member States/ANSPs are only allowed to include items in their cost base (determined costs) which are related to eligible air navigation services and facilities. In the monitoring reports, the NSAs were requested to report the findings of their verifications of actual costs, and where applicable, the corrections made to the actual costs following this verification. Two NSAs reported that they are still in the process of verifying costs (Poland, and Romania). Five NSAs reported corrections made to the actual costs after verification (Cyprus, Czech Republic, Finland, Germany, and Sweden). No corrections were reported by the remaining NSAs.
+
+Six NSAs reported that the costs for non-ANS activities or ANS provided to third countries have been presented separately in the ANSPs accounts as required in Article 12(3) of Regulation 550/2004. Four NSAs (Denmark, Slovenia, Sweden, and Switzerland) did not provide sufficient information. Finally, most NSAs (19) reported that they had verified that such costs had been excluded from the en route cost base. The Member States concerned should take immediate action to enforce the application of Article 12(3) of Regulation 550/2004 and that the NSAs concerned provide more detailed information on their oversight activities regarding the compliance of cost eligibility.
+
+**En route costs by entity**
+
+The Union-wide en route actual costs for 2025 amounted to 7.3B€~2022~. 89.8%, or 6.6B€~2022~, of these costs were attributable to the ATSPs/CNSPs. Their actual costs were -0.9% below the determined costs (6.7B€~2022~).
+
+The costs for the MET providers for the year 2025 amounted to 215M€~2022~, or 2.9% of the Union-wide en route total actual costs. Actual MET costs were -3.4% below the determined values (222M€~2022~).
+
+NSAs' 2025 costs were 453M€~2022~, equivalent to 6.2% of the Union-wide en route total actual costs. Actual NSA costs were -1.3% below the determined values (459M€~2022~).
+
+Eurocontrol's actual 2025 costs reported by the SES States amounted to 77M€~2022~, representing 1.1% of the Union-wide en route total actual costs. Eurocontrol's actual costs were -0.8% lower than determined values presented in the performance plans (78M€~2022~).
+
+**En route costs by cost category**
+
+Union-wide actual en route staff costs for 2025 amounted to 4,655M€~2022~, or -0.9% below the determined costs (4,695M€~2022~). The actual pension costs (which are included in the staff costs) summed to 811M€~2022~, -4.1% lower than the determined values (845M€~2022~).
+
+At Member State level, the results show significant variation. When analysing the percentage difference for staff costs, four Member States reported underspending by more than 5% of the determined costs, with Sweden (-15.4%), Portugal (-8.3%), and Malta (-7.8%) being the largest. At the other end of the spectrum, Hungary (+8.7%), Poland (+6.2%), and Denmark (+5.5%) presented the largest overspend.
+
+At the Union-wide level, actual ATCO FTEs were -0.5% lower than planned. At Member State level the results varied significantly ranging from -11.5% for Greece to +6.3% for Lithuania. Austria and Italy have not reported the actual FTEs in 2025, thus they have not been included in the computation.
+
+Union-wide actual en route other operating costs for 2025 amounted to 1,627M€~2022~, or -1.7% below the determined costs (1,655M€~2022~).
+
+When analysing the percentage difference for other operating costs, 13 Member States reported underspending by more than 5% of the determined costs, with Austria (-19.8%), Belgium-Luxembourg (-17.8%), and Malta (-16.6%) being the largest. At the other end of the spectrum, Slovakia (+32.9%), Slovenia (+11.5%), and Romania (+10.0%) presented the largest overspend.
+
+Union-wide actual en route depreciation costs for 2025 amounted to 730M€~2022~, or -1.7% below the determined costs (743M€~2022~).
+
+When analysing the percentage difference for depreciation costs, 15 Member States reported underspending by more than 5% of the determined costs, with Ireland (-20.5%), Croatia (-17.8%), and Austria (-16.7%) being the largest. At the other end of the spectrum, France (+11.7%), Malta (+9.3%), and Estonia (+9.1%) presented the largest overspend.
+
+Union-wide en route actual cost of capital for 2025 amounted to 334M€~2022~, or -1.7% below the determined costs (340M€~2022~).
+
+When analysing the percentage difference for depreciation costs, 13 Member States reported underspending by more than 5% of the determined costs, with Ireland (-29.8%), Croatia (-17.2%), and Hungary (-16.8%) being the largest. At the other end of the spectrum, Malta (+40.1%), Slovenia (+32.4%), and the Netherlands (+14.5%) presented the largest overspend.
+
+Union-wide en route actual exceptional costs for 2025 amounted to 10M€~2022~, +10.8M€~2022~ above the determined costs (-0.7M€~2022~).
+
+The main contributor to the difference was Germany (+10.3M€~2022~). The NSA explained that the determined costs for DFS in 2025 included an exceptional item related to depreciation costs that had been charged, but not incurred, during RP2. This reduced the amounts charged to airspace users in 2025, although it is not reflected in the 2025 actual costs.
+
+**Costs related to investments**
+
+The costs related to investments include cost of capital, depreciation costs, and leasing costs for new and existing investments as included in the performance plans.
+
+The en route and terminal actual costs for investments in 2025 amounted to 1.20B€~2022~. Member States spent -39.3M€~2022~ (-3.2%) less than determined (1.24B€~2022~). The gap was due to lower cost of capital. There was significant variation between Member States (e.g. Ireland -18.8%, Estonia +15.7%).
+
+When considering the data submitted in the NSA reports on the verification of cost risk sharing for 2025 (September 2026), the difference to be reimbursed to airspace users via cost risk sharing mechanism, in accordance with Article 28 of the Regulation equals -[XX]{.mark}M€ (of which -[XX]{.mark}M€ for en route and -[XX]{.mark}M€ for terminal charging zones).
+

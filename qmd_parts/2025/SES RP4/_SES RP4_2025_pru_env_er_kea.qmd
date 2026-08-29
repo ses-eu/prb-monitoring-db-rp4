@@ -1,0 +1,44 @@
+## ENV-ERT2.1. Horizontal en route flight efficiency of the actual trajectory (KEA) (KPI#1)
+
+**KEA**
+
+Environmental performance is measured through the Horizontal en route flight efficiency of the actual flight path (KEA). KEA measures the additional distance flown in addition to the great circle distance. Additional distance flown is impacted by the trajectory planned by airspace users and by airspace restrictions and ATM measures including air traffic flow management (ATFM)-related restrictions to reduce delay. The higher the KEA value, the worse the performance.
+
+In 2025, the Union-wide target for environment was 2.80%. Actual value was 2.93%, therefore the target was not achieved by 0.13 percentage points. The impact of the capacity shortfall (estimated at 0.1 percentage points) was not the only reason for not achieving the Union-wide KEA target. The Union-wide target would still have been missed by 0.03 percentage points when accounting for these issues. However, this gap between the target and the actual performance has reduced since 2024 by 0.43 percentage points. As highlighted in earlier monitoring reports, this demonstrates that ANSPs and Member States must continue taking action and implement initiatives, including cross border Free Route Airspace where applicable, to improve horizontal flight efficiency and to focus on the interdependency between the environment and capacity KPAs by resolving capacity bottlenecks.
+
+The PRB estimates that over 11 million kilometres of additional distance were flown in 2025 as a result of missing the Union-wide target by 0.13 percentage points. The excess fuel burn in 2025 equates to approximately 50 million kilograms of fuel or some 158 million kilograms of CO~2~.
+
+**Summary of performance at local level**
+
+In 2025, 12 Member States achieved their KEA targets, some with a considerable margin, others closer to the target: Austria, Belgium, Czech Republic, Estonia, Germany, Hungary, Latvia, Lithuania, the Netherlands, Slovenia, Sweden, and Switzerland. The Baltic States, who also have a higher KEA target due to Russia's war of aggression against Ukraine, achieved their KEA with the highest margin.
+
+-   Lithuania achieved a KEA of 11.41% (1.72 p.p. better than the target of 13.13%).
+
+-   Latvia achieved a KEA of 7.15% (0.81 p.p. better than the target of 7.96%).
+
+-   Estonia achieved a KEA of 5.75% (0.79 p.p. better than the target of 6.54%).
+
+Conversely, 16 Member States did not achieve their targets:
+
+-   Five Member States were within 0.1 percentage points of their targets: Bulgaria, Croatia, Cyprus, Denmark, and Greece.
+
+-   Seven Member States missed their targets by between 0.1 and 0.3 percentage point: Ireland, Italy, Malta, Poland, Portugal Romania, and Slovakia. The KES also degraded or stayed the same for all but Romania.
+
+-   The remaining four Member States missed their targets by more than 0.3 percentage point: Finland, France, Norway, and Spain. Among this group, only Spain's performance has improved slightly (both KEA and KES) compared to 2024. On the other side, the targets included an allowance for the impact on Ukraine, however Finland still noted that the target was not achieved due to the shift in traffic flows from Russia to Kaliningrad, as a result of the airspace closure.
+
+**KEP and KES**
+
+## KEP measures the efficiency of the routes planned by airspace users according to their own planning tools and criteria. KEP is one of two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. Although it does not directly relate to fuel burn or CO2 emissions, it helps explain the constraining factors that limit horizontal flight efficiency.
+
+KES is the other of the two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. KES does not directly relate to fuel burn or CO2 emissions, but it helps explain the constraining factors that limit horizontal flight efficiency. KES is relevant because environmental performance correlates with traffic levels and available capacity. It considers the available airspace, including capacity and restrictions, during the flight planning stage. It therefore reflects the options airspace users had when planning their flights.
+
+Both KEP (from 4.35% in 2024 to 4.3% in 2025) and KES (from 4.19% in 2024 to 4.15% in 2025) improved in 2025. The gap between KEP and KES is the smallest that it has ever been. This slight improvement could be due to the airspace effectively adjusting to account for new route restrictions. The gap between KEP and KES has decreased each year since 2020, showing that airspace users are planning routes increasingly closer to the shortest route available.
+
+**VFE**
+
+This performance indicator, which is new for RP4, measures how closely an aircraft's flown vertical profile matches its planned path. During the en route phase the indicator measures flights cruising at inefficient levels below the optimal, last-filed flight plan altitude.
+
+For 2025 the en route VFE was at 76.4%. Since it is the first year of measuring this indicator, there is no historical data. Ireland had the highest score (80.8%), while Cyprus had the lowest score (66.9%) among the Member States.
+
+# CAP-ERT5. En route Capacity performance -- SES RP4
+

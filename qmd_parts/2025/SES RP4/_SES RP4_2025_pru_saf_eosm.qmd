@@ -1,0 +1,30 @@
+## SAF1.1. Effectiveness of Safety Management (EoSM) (KPI#1)
+
+**Number of ANSPs on target**
+
+In the first year of RP4, six ANSPs achieved the RP4 targets for the effectiveness of safety management. More specifically, six ANSPs reached the target for Safety Risk Management and 17 ANSPs achieved the RP4 targets for all the other Management Objectives (MOs). However, overall performance remained below the planned intermediate targets for 2025, with 13 ANSPs still behind their 2025 intermediate targets (skeyes, CYATS, NAVIAIR, DNSA, ANA LUX, LVNL, Avinor, Romatsa, Skyways, LFV, ACR, SDATS, AFAB). Moreover, four ANSPs (skeyes, NAVIAIR, DSNA, ANA LUX), are at the lowest maturity level A (informal arrangements), below the regulatory requirements.
+
+The NSAs in eight Member States (Belgium, Cyprus, France, Luxembourg, the Netherlands, Poland, Romania and Spain) have expressed concerns regarding the ability of their ANSP to meet the safety performance targets, either in the upcoming year or over the course of the next reference period.
+
+-   6 out of 38 ANSPs achieved the RP4 target level D for Safety Risk Management.
+
+-   17 out of 38 ANSPs achieved the RP4 target level C for all other MOs.
+
+-   6 out of 38 ANSPs achieved the 2024 EoSM targets for RP4 in full.
+
+**Actual versus planned**
+
+Seven ANSPs planned to achieve RP4 maturity target for Safety Risk Management already in the first year of the reference period, and19 ANSPs planned to achieve the RP4 maturity targets for all the other Management Objectives (MOs). However, only six ANSPs achieved the Safety Risk Management target, and 17 ANSPs achieved the targets for all the other MOs.
+
+Seven ANSPs (EANS, AirNav Ireland, Slovenia Control, LFV, ACR, SDATS, and AFAB) planned to achieve the RP4 maturity targets in 2025 for all the Management Objectives. Three of them (EANS, AirNav Ireland and Slovenia Control) successfully achieved these targets, while the remaining four were unable.
+
+Overall, 13 ANSPs did not meet their planned intermediate targets for 2025 and remain behind their performance plan already from the first year of reference period (skeyes, CYATS, NAVIAIR, DNSA, ANA LUX, LVNL, Avinor, Romatsa, Skyways, LFV, ACR, SDATS, and AFAB).
+
+**Number of ANSPs per Management Objective**
+
+Six ANSPs reached the most demanding target, Level D, for the Safety Risk Management objective. Among the other Management Objectives, which have a RP4 target level of C, 21 ANSPs achieved the target for Safety Culture, 23 ANSPs achieved the target for Safety Policy and Objectives, 19 ANSPs achieved the target for Safety Assurance, and 22 ANSPs achieved the target for Safety Promotion.
+
+**Interdependency**
+
+The Component "Interdependencies, Resilient System Performance, Buffers and Trade-offs" proved particularly critical during RP3 and is expected to remain so throughout RP4. ANSPs continue to face complex operational and strategic challenges arising from shifts in traffic flows caused by Russia's war of aggression against Ukraine and the geopolitical situation in the Middle East. In 2025, 2 ANSPs were assessed at levels A, 13 were assessed at levels B, 18 were assessed at levels C and 5 at level D.
+

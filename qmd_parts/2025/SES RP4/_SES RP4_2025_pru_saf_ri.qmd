@@ -1,0 +1,22 @@
+## SAF1.2. Rate of runway incursions (RIs) (PI#1)
+
+Both rates of runway incursions and runway incursions with the contribution from ANS decreased compared to 2024.
+
+**RI rate**
+
+In 2025, the rate of runway incursion (RI) equalled 2.50 occurrences per 100,000 aircraft movements, a decrease from 3.8 in 2024 and therefore returning to the downward trend observed in previous years. The runway incursions with ANS contribution equalled 0.87 per 100,000 aircraft movements, a decrease from 0.95. Austria did not provide information on the runway incursions with ANS contribution. The absolute number of RIs decreased from 563 in 2024 to 325 in 2025 (-42%), while the number of RIs with ANS contribution from 123 to 113 (-8%).
+
+**RI by Member State**
+
+Comparing absolute numbers and rates of occurrences between Member States and between airports must be done with caution. The number of occurrences reported is greatly dependent on the reporting culture of the organisation, the classification of occurrences, use of automated systems, etc. A high rate of occurrences in one Member State or airport is therefore not necessarily equal to a worsening performance compared with Member States or airports with lower rates.
+
+Although the highest rate of RIs was recorded in Malta (9.64), but only 7 occurrences were reported, and the highest rate is due to relatively low traffic volume at Malta airport. The Netherlands are at the second position with the rate 6.41 and Norway at third position with the rate 4.13. Both Member States recorded the increase on the rate to compare to the 2024. The lowest rate of RIs was recorded in Denmark and Luxembourg, where both Member States reported 0 RIs. Third lowest was Ireland, with rate of RIs of 0.29.
+
+**RI by Airport**
+
+The analysis included 189 airports across multiple European countries. Of these, 91 airports (48.1%) reported 0 RI occurrences, while the remaining 97 airports reported at least one RI occurrence. Data for one airport were not reported.
+
+The airports with the highest number of RI occurrences were: Hannover (EDDV, 21 occurrences), Eelde (EHGG, 15), Munich (EDDM, 14), Amsterdam (EHAM, 14), and Lisbon (LPPT) and Zurich (LSZH) with 13 occurrences each.
+
+When normalized by traffic volume, the highest RI rates per 100,000 movements were observed at LIMZ (Cuneo Levaldigi) (81.48), LICB (Comiso Pio La Torre) (80.10), EHBK (Beek) (43.46), EDDE (Erfurt) (31.11) and EDDV (Hannover) (27.74). These results indicate that while some major airports recorded the greatest number of RI occurrences due to their high traffic volumes, smaller regional airports often exhibited substantially higher occurrence rates when adjusted for traffic.
+

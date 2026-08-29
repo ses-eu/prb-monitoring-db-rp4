@@ -27,8 +27,7 @@ if (country == "Network Manager") {
   data_raw_target <- kea_target_ses %>%
     mutate(kea_target = kea_reference_value_percent / 100, state = rp_full)
 
-  data_raw_actual <- kea_actual_ses %>%
-    mutate(value = hfe_kpi_percent / 100, state = rp_full)
+  data_raw_actual <- kea_actual
 } else {
   # State case ----
   data_raw_target <- kea_target

@@ -1,0 +1,26 @@
+## CAP-ERT5.3. Other indicators
+
+**Staffing**
+
+The following analysis is based on planned and reported actual ATCOs at ACC level. Austria did not report relevant ATCO numbers for 2025. Additionally, the reports of some Member States give rise to questions regarding the scope of the numbers provided, while for Ireland the distribution of ACC ATCOs over the listed ACC centres shows a very large difference between planned and actual values, even though national level the figures seem comparable. Austria has been excluded from the analysis, for all other States the figures are used as provided in the annual monitoring reports for 2025 despite these concerns.
+
+At Union-wide level, the reported number of ATCOs is -61, or -0.8%, below the planned number. However, this Union-wide result is strongly influenced by the fact that the number of ATCOs reported by France is +80 above the plans. Excluding France, the reported number of ATCOs at Union-wide level is -2.1% below planned number.
+
+The difference between reported and planned numbers range from +6.3% for Lithuania to -11.5% for Greece. Only seven States report a higher number of ATCOs than planned, with 21 States (incl. MUAC) reporting fewer ATCOs than planned. Of these 21 States, eight report the number of ATCOs being -5% or more below the planned number.
+
+There was no clear link in 2025 between average en route ATFM delays and deviations between reported and planned ATCOs. Of the seven States that did not meet their capacity targets (noting that this includes Austria, which did not report ATCO numbers), only three report ATCO number being -5% or more below planned levels, while two of these States in fact report more ATCOs than planned.
+
+Most States meeting their en route capacity targets shows that in general ANSPs, often in coordination with the NM, they manage to take the necessary measures to provide sufficient capacity despite the ATCO shortage. However, at the same time such measures confirm the need to close the gap between planned and actual ATCO numbers because of the limits to the applicability or benefits of the measures taken. For example, some Member States report temporary agreements with ATCOs which by definition cannot be structural solutions, while others mention optimisation of rostering and shifts which availability of existing resources but has limits in terms of potential further optimisation.
+
+When analysing the ATCOs in training, it is worrying that Member States report -7.4% fewer ATCOs in training than planned at the end of 2025, the first year of the reference period. Specifically, 10 States which already report a shortage of ATCOs, also report fewer ATCOs trainees than planned.
+
+**Sector opening hours**
+
+At Union-wide level, the sector opening hours increased by 4.1% in 2025, which is broadly aligned with the traffic increase at network level (4.2%). However, behind this figure there is a significant variation in the situation at the level of individual ACCs, ranging from a +385% increase in sector opening hours in Vilnius ACC to a -22.9% decrease in Malmo ACC.
+
+The number of IFR movements handled per sector opening hour can be seen as an indication of operational efficiency of an ACC, although there are various issues that may influence this ratio. Increasing the number of sector opening hours at a higher rate than the increase in traffic can contribute to reducing delays, but it will also reduce the operational efficiency determined through this ratio. Furthermore, reducing the number of sector opening hours may be necessary during periods of e.g. major system replacements, leading to a temporary change in the IFR movements to sector opening hours ratio. Additionally, calculating this ratio at an annual level may not reflect the impact of peak traffic periods during the year.
+
+In 16 ACCs, the number of IFR movements handled per sector opening hour decreased in 2025 compared to 2024. In seven of those ACCs, delays also decreased, which suggests that increasing sector opening hours at a higher rate than traffic growth contributed to closing the capacity gap and therefore any perceived reduction in operational efficiency is outbalanced by improved capacity performance. In a further five ACCS with already very low delays (\<0.05 min/flight) the delays remained broadly stable. Only in Copenhagen, Reims, Barcelona and Madrid ACCs did delays increase more clearly despite reduced IFR movements per sector opening hour.
+
+# CAP-TRM6. Terminal Capacity performance -- SES RP4
+

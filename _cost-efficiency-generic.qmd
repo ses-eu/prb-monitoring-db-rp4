@@ -150,8 +150,6 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 `r if (params$country != params$rp_full) ":::"`
 
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
-
 ::: {.callout-note collapse=true}
 
 #### Focus on unit cost
@@ -164,15 +162,20 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year
                 if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
                 if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
                 as.character(year_report),
-                cz_short, 
-                czindex)
+                cz_short,
+                if_else(country == rp_full, 
+                        7,
+                        czindex)
+)
 
-replace_headings(path, cef_titles_s1)
+if (country != rp_full) {
+  replace_headings(path, cef_titles_s1)
+} else {
+  replace_headings(path, character(0))
+}  
 ``` 
 
 :::
-
-`r if (params$country == params$rp_full) ":::"`
 
 
 ::: {#container-cef-aucu}
@@ -213,7 +216,6 @@ replace_headings(path, cef_titles_s1)
 ::::
 :::
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
 ::: {.callout-note collapse=true}
 
@@ -228,15 +230,21 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year
                 if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
                 as.character(year_report),
                 cz_short, 
-                czindex)
+                if_else(country == rp_full, 
+                        7,
+                        czindex)
+                )
 
-replace_headings(path, cef_titles_s2)
+if (country != rp_full) {
+  replace_headings(path, cef_titles_s2)
+} else {
+  replace_headings(path, character(0))
+}  
 
 ``` 
 
 :::
 
-`r if (params$country == params$rp_full) ":::"`
 
 
 ::: {#container-cef-reg-res}
@@ -277,7 +285,6 @@ replace_headings(path, cef_titles_s2)
 
 :::
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
 ::: {.callout-note collapse=true}
 
@@ -292,13 +299,19 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year
                 if_else(country == 'Luxembourg' & cztype == 'enroute', 'Belgium', country),
                 as.character(year_report),
                 cz_short, 
-                czindex)
+                if_else(country == rp_full, 
+                        7,
+                        czindex)
+                )
 
-replace_headings(path, cef_titles_s3)
+if (country != rp_full) {
+  replace_headings(path, cef_titles_s3)
+} else {
+  replace_headings(path, character(0))
+}  
 
 ```
 
 :::
 
-`r if (params$country == params$rp_full) ":::"`
 
