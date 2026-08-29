@@ -28,7 +28,7 @@ Conversely, 16 Member States did not achieve their targets:
 
 **KEP and KES**
 
-## KEP measures the efficiency of the routes planned by airspace users according to their own planning tools and criteria. KEP is one of two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. Although it does not directly relate to fuel burn or CO2 emissions, it helps explain the constraining factors that limit horizontal flight efficiency.
+KEP measures the efficiency of the routes planned by airspace users according to their own planning tools and criteria. KEP is one of two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. Although it does not directly relate to fuel burn or CO2 emissions, it helps explain the constraining factors that limit horizontal flight efficiency.
 
 KES is the other of the two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. KES does not directly relate to fuel burn or CO2 emissions, but it helps explain the constraining factors that limit horizontal flight efficiency. KES is relevant because environmental performance correlates with traffic levels and available capacity. It considers the available airspace, including capacity and restrictions, during the flight planning stage. It therefore reflects the options airspace users had when planning their flights.
 

@@ -175,11 +175,6 @@
 
 <!-- # End of charts and tables -->
 
-<!-- Level2 text -->
-```{r level_2_text}
-source(here("R","get_level2_text.R"))
-```
-
 <!-- params -->
 ```{r fetch-data-state, eval=TRUE}
 pp_version <- params$pp_version

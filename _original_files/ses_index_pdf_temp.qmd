@@ -1,7 +1,3 @@
-<!-- Level2 text -->
-```{r level_2_text}
-source(here("R","get_level2_text.R"))
-```
 
 <!-- Level2 -->
 <!-- ## Safety -->

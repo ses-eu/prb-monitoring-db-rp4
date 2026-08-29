@@ -164,7 +164,7 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year
                 as.character(year_report),
                 cz_short,
                 if_else(country == rp_full, 
-                        7,
+                        if_else(cz_short == 'er', 7, 8),
                         czindex)
 )
 
@@ -231,7 +231,7 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year
                 as.character(year_report),
                 cz_short, 
                 if_else(country == rp_full, 
-                        7,
+                        if_else(cz_short == 'er', 7, 8),
                         czindex)
                 )
 
@@ -300,7 +300,7 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year
                 as.character(year_report),
                 cz_short, 
                 if_else(country == rp_full, 
-                        7,
+                        if_else(cz_short == 'er', 7, 8),
                         czindex)
                 )
 
