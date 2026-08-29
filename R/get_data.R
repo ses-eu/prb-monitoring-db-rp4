@@ -481,59 +481,15 @@ env_mil_actual <- readxl::read_xlsx(
   clean_names()
 
 ### SES ----
-#### KEA ----
-kea_actual_ses <- readxl::read_xlsx(
+#### MIL ----
+env_mil_actual_ses <- readxl::read_xlsx(
   here(data_folder, ses_data_file),
-  sheet = "Table_HFE",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names() |>
-  mutate(entity_name = rp_full)
-
-kea_actual_mm_ses <- readxl::read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Table_HFE MM",
+  sheet = "mil_pis",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
   clean_names()
 
-#### KEP ----
-kep_actual_ses <- readxl::read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Table_KEP",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names() |>
-  mutate(entity_name = rp_full)
-
-kep_actual_mm_ses <- readxl::read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Table_KEP MM",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names()
-
-#### SCR ----
-scr_actual_ses <- readxl::read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Table_SCR",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names() |>
-  mutate(entity_name = rp_full)
-
-scr_actual_mm_ses <- readxl::read_xlsx(
-  here(data_folder, ses_data_file),
-  sheet = "Table_SCR MM",
-  range = cell_limits(c(1, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names()
 
 ### NM ----
 kep_nm <- readxl::read_xlsx(

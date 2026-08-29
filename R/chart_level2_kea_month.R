@@ -10,15 +10,13 @@ if (country == rp_full) {
   ## import data  ----
   data_raw_target <- kea_target_ses %>%
     mutate(kea_target = kea_reference_value_percent / 100, state = rp_full)
-
-  data_raw_actual <- kea_actual_mm_ses %>%
-    mutate(value = hfe_kpi_percent / 100, state = rp_full)
 } else {
   # State case ----
   ## import data  ----
   data_raw_target <- kea_target
-  data_raw_actual <- kea_actual_12m
 }
+
+data_raw_actual <- kea_actual_12m
 
 ## prepare data ----
 target_value <- data_raw_target %>%

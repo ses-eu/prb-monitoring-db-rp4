@@ -11,7 +11,7 @@ data_prep <- data_raw %>%
         'cap_pi1' ~ 'Average daily number of ATM regulatons (producing >200 min) (PI#1)',
       pi == 'cap_pi2' ~ 'Average en route ATFM weekend delay (PI#2)',
       pi ==
-        'cap_pi3' ~ 'Annual percentage of all first rotations ATFM delaus with most potential delay reduction (PI#3)',
+        'cap_pi3' ~ 'Annual percentage of all first rotations ATFM delays with most potential delay reduction (PI#3)',
     )
   )
 

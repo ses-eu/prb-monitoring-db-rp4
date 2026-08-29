@@ -3,7 +3,11 @@ if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
-data_raw <- env_mil_actual
+if (country == rp_full) {
+  data_raw <- env_mil_actual_ses
+} else {
+  data_raw <- env_mil_actual
+}
 
 
 ## prepare data ----

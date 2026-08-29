@@ -3,18 +3,8 @@ if (!exists("data_loaded")) {
 }
 
 # import data  ----
-if (country == rp_full) {
-  ## SES case ----
-  data_raw_kep <- kep_actual_ses %>%
-    mutate(value = kep_value_percent / 100, state = rp_full)
-
-  data_raw_scr <- scr_actual_ses %>%
-    mutate(value = scr_value, state = rp_full)
-} else {
-  ## State case ----
-  data_raw_kep <- kep_actual
-  data_raw_scr <- scr_actual
-}
+data_raw_kep <- kep_actual
+data_raw_scr <- scr_actual
 
 # prepare data ----
 ## create sequence of years to ensure full series

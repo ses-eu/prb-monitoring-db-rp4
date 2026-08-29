@@ -6,22 +6,9 @@ if (!exists("data_loaded")) {
 }
 
 # import data  ----
-if (country == rp_full) {
-  ## SES case ----
-  data_raw_kep <- kep_actual_mm_ses %>%
-    mutate(value = kep_value_percent / 100, state = rp_full)
-
-  data_raw_scr <- scr_actual_mm_ses %>%
-    mutate(value = scr_value, state = rp_full)
-
-  data_raw_kea <- kea_actual_mm_ses %>%
-    mutate(value = hfe_kpi_percent / 100, state = rp_full)
-} else {
-  ## State case ----
-  data_raw_kea <- kea_actual_mm
-  data_raw_kep <- kep_actual_mm
-  data_raw_scr <- scr_actual_mm
-}
+data_raw_kea <- kea_actual_mm
+data_raw_kep <- kep_actual_mm
+data_raw_scr <- scr_actual_mm
 
 # prepare data ----
 data_raw_kep_p <- data_raw_kep %>%
