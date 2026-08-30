@@ -322,7 +322,7 @@ format:
  
 book:
   title: "Performance Review Board"
-  subtitle: "Monitoring Report (Version for fact validation)" 
+  subtitle: "Monitoring Report" 
   author: "{{< var doc.country >}} - {{< var doc.year_folder >}}"
   chapters:
     - index.qmd
