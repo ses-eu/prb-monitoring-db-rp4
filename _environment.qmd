@@ -32,7 +32,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ## En route performance
 
-### Horizontal flight efficiency of the actual trajectory ([**KEA**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2)) (KPI#1), of the last filed flight plan ([**KEP**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2)) (PI#1), shortest constrained route ([**KES**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2)) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
+### Horizontal flight efficiency of the actual trajectory ([**KEA**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3)) (KPI#1), of the last filed flight plan ([**KEP**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3)) (PI#1), shortest constrained route ([**KES**](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3)) (PI#2) and [vertical flight efficiency of the actual trajectory](`r params$home_address`/about.html#environment---horizontal-flight-efficiency-of-the-actual-trajectory-kea-kpi1-of-the-last-filed-flight-plan-kep-pi1-shortest-constrained-route-kes-pi2-and-vertical-flight-efficiency-of-the-actual-trajectory-pi3) (PI#3)
 
 :::: {layout="[ 50, 50 ]"}
 
@@ -224,7 +224,7 @@ replace_headings(path, env_er_nsa_titles_kea)
 
 ## Terminal performance
 
-### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#4), Additional taxi-in time ([**AXIT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi3-arrival-sequencing-and-metering-area-asma-time-pi4)) time (PI#6)
+### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) (PI#4), Additional taxi-in time ([**AXIT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) time (PI#6)
 
 :::: {layout="[ 20, 60, 20 ]"}
 
@@ -331,7 +331,7 @@ replace_headings(path, env_trm_nsa_titles_asma)
 
 ::: {#container-cdo}
 
-### Vertical flight efficiency of the descent ([**PI#7**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5)) and of the climb ([**PI#8**](`r params$home_address`/about.html#environment---share-of-arrivals-applying-continuous-descent-operations-cdos-pi5))
+### Vertical flight efficiency of the descent ([**PI#7**](`r params$home_address`/about.html#environment---vertical-flight-efficiency-of-the-descent-pi7-and-of-the-climb-pi8)) and of the climb ([**PI#8**](`r params$home_address`/about.html#environment---vertical-flight-efficiency-of-the-descent-pi7-and-of-the-climb-pi8))
 
 ```{r chart-cdo-apt-param, eval = (params$no_tcz > 0), include=FALSE}
 #| file: R/chart_level2_env_cdo_apt.R

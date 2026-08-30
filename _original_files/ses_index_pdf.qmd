@@ -729,13 +729,13 @@ replace_headings(path, character(0))
 
 \needspace{3\baselineskip}
 
-### Other information
+### Other en route information
 
 `r layout_2fig("chart_cap_atco", "chart_cap_sector_opening_ses")`
 
 \needspace{3\baselineskip}
 
-\biggertext{Focus on other en route indicators}
+\biggertext{Focus on other en route information}
 
 ```{r cap_er_text_other}
 #| echo: false
@@ -794,7 +794,7 @@ replace_headings(path, character(0))
 \needspace{3\baselineskip}
 
 
-### Other information
+### Other terminal performance indicators
 
 ```{r chart_cap_all_causes_delay_ses, eval=(year_folder != params$rp_summary_year)}
 #| file: R/chart_level2_cap_all_causes_delay.R
@@ -805,7 +805,7 @@ replace_headings(path, character(0))
 
 \needspace{3\baselineskip}
 
-\biggertext{Focus on other terminal indicators}
+\biggertext{Focus on other terminal performance indicators}
 
 ```{r cap_er_text_trm_other}
 #| echo: false
