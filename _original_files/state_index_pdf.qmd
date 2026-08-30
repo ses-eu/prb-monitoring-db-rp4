@@ -1218,7 +1218,7 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 ``` 
 
 
-### Other indicators
+### Other en route information
 
 `r layout_2fig("chart_cap_atco", "chart_cap_atco_acc")`
 
@@ -1231,7 +1231,7 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 \needspace{3\baselineskip}
 
-`\biggertext{Focus on ATCOs in operations}`{=latex}
+`\biggertext{Focus on other en route information}`{=latex}
 
 ```{r cap_ert_text_atco}
 #| echo: false
@@ -1364,7 +1364,7 @@ cat(make_quarto_latex_table_2level(
 
 \needspace{3\baselineskip}
 
-`\biggertext{Focus on performance indicators at airport level}`{=latex}
+`\biggertext{Focus on other terminal performance indicators}`{=latex}
 
 **ATFM slot adherence**
 
