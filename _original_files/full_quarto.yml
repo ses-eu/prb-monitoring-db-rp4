@@ -249,7 +249,7 @@ website:
             - text: "Separation minima infringements"
               href: safety.html#rate-of-separation-minima-infringements-smis-pi2-and-rate-of-separation-minima-infringements-with-ans-contribution-pi4
             - text: "Occurrences reporting"
-              href: safety.html#quality-of-occurences-reporting
+              href: safety.html#quality-of-occurrences-reporting
       - text: "---"
 # environment level2 beginning
       - section: "<b>Environment</b>"
@@ -279,8 +279,9 @@ website:
               href: capacity.html#en-route-atfm-delay-kpi1
             - text: "En route performance indicators at ACC level"
               href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4
-            - text: "Other indicators"
-              href: capacity.html#other-indicators
+            - text: "Other information"
+              href: capacity.html#other-en-route-information
+              
 # include cap_terminal block
       - text: "---"
 # cost-efficiency level2 beginning

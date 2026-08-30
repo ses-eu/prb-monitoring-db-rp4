@@ -1425,16 +1425,16 @@ replace_links <- function(filename) {
 
   # last minute fix to avoid complicating the issue
   if (country == rp_full) {
-    tmp_text <- str_replace_all(
-      tmp_text,
-      fixed("#effectiveness-of-safety-management-eosm-kpi1"),
-      fixed(paste0(
-        "#actual-versus-planned-number-of-ansps-achieving-the-level-of-the-eosm-targets-for-",
-        rp_summary_year,
-        "-ahead-of-",
-        rp_max_year
-      ))
-    )
+    # tmp_text <- str_replace_all(
+    #   tmp_text,
+    #   fixed("#effectiveness-of-safety-management-eosm-kpi1"),
+    #   fixed(paste0(
+    #     "#actual-versus-planned-number-of-ansps-achieving-the-level-of-the-eosm-targets-for-",
+    #     rp_summary_year,
+    #     "-ahead-of-",
+    #     rp_max_year
+    #   ))
+    # )
   }
 
   #restore strings I didn't want modified

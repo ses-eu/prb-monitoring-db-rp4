@@ -477,7 +477,7 @@ cat(make_quarto_latex_table_2level(
 
 \needspace{2\baselineskip}
 
-## Quality of occurences reporting 
+## Quality of occurrences reporting 
 
 `r saf_qr_text`
 

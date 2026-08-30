@@ -310,7 +310,7 @@ replace_headings(path, character(0))
 
 \needspace{2\baselineskip}
 
-### Quality of occurences reporting 
+### Quality of occurrences reporting 
 
 ```{r saf_text_occ}
 #| echo: false
