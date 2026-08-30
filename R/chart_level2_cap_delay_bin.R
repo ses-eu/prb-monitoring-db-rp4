@@ -75,15 +75,15 @@ c_barmode <- 'stack'
 
 #### title
 if (knitr::is_latex_output()) {
-  c_title_text <- "Distribution of IFR flights per\nthe duration of en route ATFM delay"
+  c_title_text <- "Distribution of delayed IFR flights per\nthe duration of en route ATFM delay"
   c_title_y <- 0.95
   c_legend_y <- -0.2
   c_legend_x <- -0.1
   c_legend_xanchor <- 'left'
   c_margin <- list(t = 50)
 } else {
-  c_title_text <- "Distribution of IFR flights per the duration of en route ATFM delay"
-  c_title_y <- 0.99
+  c_title_text <- "Distribution of delayed IFR flights per\nthe duration of en route ATFM delay"
+  c_title_y <- 0.95
   c_legend_y <- mylegend_y
   c_legend_x <- 0.5
   c_legend_xanchor <- 'center'
@@ -91,7 +91,7 @@ if (knitr::is_latex_output()) {
 }
 
 #### yaxis
-c_yaxis_title <- "Share of IFR flights (%)"
+c_yaxis_title <- "Share of delayed IFR flights (%)"
 c_yaxis_tickformat <- ".0f"
 
 

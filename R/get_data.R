@@ -840,6 +840,14 @@ cap_trm_atfm_actual_mm_ses <- cap_trm_atfm_actual_mm %>%
 # see State
 
 #### DELAY TIME BIN ----
+# total_ifr_mvt_ses <- statfor_mvt |>
+#   filter(tz == paste0("SES-RP", rp),
+#          rank == "Actual",
+#          forecast_id == max(forecast_id)) |>
+#   select(
+#     year, mvts
+#   )
+
 cap_delay_bin_actual_ses <- cap_delay_bin_actual %>%
   group_by(year) %>%
   summarise(
