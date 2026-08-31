@@ -1,0 +1,7 @@
+## PRB1.6. Cost-efficiency
+
+-   The real en route actual unit cost (AUC) Union-wide was -2.8% lower than the determined unit cost (DUC).
+
+-   Real en route actual costs were -1.0% below determined costs, while actual service units were +1.8% higher than the determined service units.
+
+-   The en route actual unit cost for airspace users (AUCU) was -1.9% lower than the DUC, mainly stemming from other revenues.

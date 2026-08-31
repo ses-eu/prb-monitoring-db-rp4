@@ -1,0 +1,12 @@
+## PRB1.4. Environment
+
+-   The Union-wide horizontal flight efficiency (KEA) performance target was not achieved (2.93% compared to the target of 2.80%). 13 Member States did not achieve their local targets. Additionally, FABEC did not achieve their local target of 2.89%. All Member States in FABEC achieved their local breakdown values apart from France.
+
+-   The third full year of Russia's war of aggression against Ukraine continues to affect the environmental performance, but marginally less than previous years (2.93% in 2025 compared to 2.96% in 2024).
+
+-   The VFE of the actual trajectory was at 76.4%.
+
+-   For terminal airspace, additional ASMA (arrival sequencing and metering area) time increased and additional taxi-out time decreased. Combined, this shows a +0.1 min increase compared to 2024, driven by additional ASMA time. Additional AXIT time was at 1.62 min (+0.03 min compared to 2024).
+
+-   The average time in level flight during decent and climb remained stable year-on-year, with a slight increase from 2024 levels.
+

@@ -1,0 +1,14 @@
+## PRB1.5. Capacity
+
+-   The average en route ATFM delay per flight in 2025 was 1.64 minutes, 0.74 minutes above the target. Average delays showed a significant reduction compared to the 2.19 minutes per flight in 2024. Delays were also below 2022 levels despite 19% more traffic.
+
+-   For 19 ANSPs, average en route ATFM delays in 2025 were lower than or equal to 2024. For a further five ANSPs, average delays were still below 0.05 minutes per flight despite a minor increase.
+
+-   Of the seven ANSPs that did not meet their local en route capacity target, five ANSPs still managed to improve their performance compared to 2024.
+
+-   Similar to the previous year, the main causes of delay in 2025 were ATC Capacity, weather and ATC Staffing.
+
+-   A significant proportion of the 0.55 minutes decrease in average delays in 2025 compared to 2024 was due to reductions in delays related to weather (-0.30) and other non-ATC reasons (-0.10).
+
+-   While noting that the scope of airports included in the RP4 performance plans is not fully aligned with the scope of RP3, Union-wide terminal capacity performance in 2025 was comparable to 2024, with an average delay of 0.97 minutes per flight in 2025 and 0.93 minutes per flight in 2024. The contribution of delays due to weather and non-ATC related airport capacity problems remained high at 75% of total arrival ATFM delays. ATC Capacity was responsible for a further 19% of delays.
+
