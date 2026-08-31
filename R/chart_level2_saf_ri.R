@@ -14,7 +14,8 @@ if (country == rp_full) {
     #so they have the same structure
     mutate(
       rate_per_100_000 = NA,
-      rate_per_100_000_with_ans_contribution = NA
+      rate_per_100_000_with_ans_contribution = NA,
+      eu_wide_average_ans_contribution = eu_wide_average_per_100_000_with_ans_contribution
     )
 } else {
   ## State case ----

@@ -8,7 +8,8 @@ if (country == rp_full) {
   data_raw <- saf_smi_actual_ses %>%
     mutate(
       rate_per_100_000 = NA,
-      rate_per_100_000_with_ans_contribution = NA
+      rate_per_100_000_with_ans_contribution = NA,
+      eu_wide_average_with_ans_contribution = eu_wide_average_per_100_000_with_ans_contribution
     )
 } else {
   ## State case ----
