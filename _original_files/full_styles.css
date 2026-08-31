@@ -103,8 +103,8 @@ h3 {
   }
   
   .equal-column {
-    float: left; 
-    margin-right: 20px;
+    float: right; 
+    margin-right: 10px;
     width: 50%;
   }
   
@@ -123,7 +123,7 @@ h3 {
   }
   
   .equal-column {
-    float: left; 
+    float: none; 
     width: 100%;
   }
 

@@ -114,13 +114,13 @@ data_prep_planned <- data_raw_planned %>%
   mutate(rank = 'Determined')
 
 if (country == rp_full) {
-  data_prep_planned <- data_raw_planned %>%
+  data_prep_planned <- data_prep_rts_ses %>%
     filter(
-      year >= rp_min_year
+      status == "D"
     ) %>%
-    select(state, year, x121_ecz_su) %>%
+    select(year, tsu = x5_4_total_su) %>%
     group_by(year) %>%
-    summarise(tsu = sum(x121_ecz_su, na.rm = TRUE)) %>%
+    summarise(tsu = sum(tsu, na.rm = TRUE) / 10^3) %>%
     mutate(rank = 'Determined')
 }
 

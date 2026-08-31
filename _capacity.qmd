@@ -341,7 +341,7 @@ replace_headings(path, character(0))
 :::: {#container-cap-trm}
 ## Terminal performance
 
-### [**Arrival ATFM delay**](`r params$home_address`/about.html#capacity---arrival-atfm-delay-kpi2) `r if_else(params$country == 'rp_full', '(PI#1)', '(KPI#2)')`
+### [**Arrival ATFM delay**](`r params$home_address`/about.html#capacity---arrival-atfm-delay-kpi2) `r if_else(params$country == rp_full, '(PI#1)', '(KPI#2)')`
 
 ::::: {layout="[ 50, 50 ]"}
 

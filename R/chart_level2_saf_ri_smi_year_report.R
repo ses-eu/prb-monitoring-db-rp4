@@ -8,7 +8,7 @@ if (!exists("data_loaded")) {
 }
 
 if (!exists("safindicator")) {
-  safindicator <- "ri"
+  safindicator <- "smi"
 }
 
 
@@ -250,7 +250,7 @@ p1 <- myhbarc2(
 
   title_text = "",
   hovermode = "closest",
-  margin = list(t = 40)
+  margin = list(t = 40, r = 30)
 )
 
 p2 <- myhbarc2(

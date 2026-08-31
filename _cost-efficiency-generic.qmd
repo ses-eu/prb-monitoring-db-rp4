@@ -154,6 +154,8 @@ replace_headings(path, character(0))
 `r if (params$country != params$rp_full) ":::"`
 
 
+`r if (params$country == params$rp_full & cztype == 'terminal') "::: {.content-hidden}"`
+
 ::: {.callout-note collapse=true}
 
 #### Focus on unit cost
@@ -180,6 +182,8 @@ if (country != rp_full) {
 ``` 
 
 :::
+
+`r if (params$country == params$rp_full & cztype == 'terminal') ":::"`
 
 
 ::: {#container-cef-aucu}
@@ -221,6 +225,8 @@ if (country != rp_full) {
 :::
 
 
+`r if (params$country == params$rp_full & cztype == 'terminal') "::: {.content-hidden}"`
+
 ::: {.callout-note collapse=true}
 
 #### Focus on AUCU
@@ -248,6 +254,8 @@ if (country != rp_full) {
 ``` 
 
 :::
+
+`r if (params$country == params$rp_full & cztype == 'terminal') ":::"`
 
 
 
@@ -289,6 +297,7 @@ if (country != rp_full) {
 
 :::
 
+`r if (params$country == params$rp_full & cztype == 'terminal') "::: {.content-hidden}"`
 
 ::: {.callout-note collapse=true}
 
@@ -317,5 +326,7 @@ if (country != rp_full) {
 ```
 
 :::
+
+`r if (params$country == params$rp_full & cztype == 'terminal') ":::"`
 
 

@@ -705,20 +705,6 @@ replace_headings(path, character(0))
 
 ``` 
 
-\needspace{2\baselineskip}
-
-### Quality of occurrences reporting 
-
-```{r saf_text_occ}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_occ.qmd", as.character(year_report),country,country, as.character(year_report))
-
-replace_headings(path, character(0))
-
-``` 
-
 `r if (params$country == "FABEC") ":::"`
 
 
@@ -744,7 +730,7 @@ replace_headings(path, character(0))
 
 ## En route performance
 
-### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
+### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (VFE) (PI#3)
 
 
 `r layout_2fig("chart_env_kea_l2", "chart_env_kea_month")`

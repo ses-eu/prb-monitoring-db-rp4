@@ -88,7 +88,7 @@ The rate of separation minima infringements within the airspace of all controlli
 
 ## ENVIRONMENT
 
-### Environment - Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1), shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3) 
+### Environment - Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1), shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (VFE) (PI#3) 
 
 Environmental performance is measured through the average horizontal en route flight efficiency of the actual trajectory (KEA) KPI. The KEA measures the additional distance of the flown trajectory beyond the great circle distance. The en route part of a flight is defined as the portion of the flight outside a circle of 40 NM around the airport(s). The indicator is calculated for the whole calendar year and for each year of the reference period, as an average (excluding the ten highest daily values and the ten lowest daily values).
 

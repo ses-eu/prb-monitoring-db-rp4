@@ -248,8 +248,6 @@ website:
 # block muac end
             - text: "Separation minima infringements"
               href: safety.html#rate-of-separation-minima-infringements-smis-pi2-and-rate-of-separation-minima-infringements-with-ans-contribution-pi4
-            - text: "Occurrences reporting"
-              href: safety.html#quality-of-occurrences-reporting
       - text: "---"
 # environment level2 beginning
       - section: "<b>Environment</b>"

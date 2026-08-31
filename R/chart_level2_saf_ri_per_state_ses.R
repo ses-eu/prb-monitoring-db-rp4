@@ -1,30 +1,33 @@
-if (!exists("doclevel")) {doclevel = "level1"}
+if (!exists("doclevel")) {
+  doclevel = "level1"
+}
 
 if (!exists("data_loaded")) {
   source("R/get_data.R")
 }
 
 # import data  ----
-data_raw  <-  saf_ri_actual
+data_raw <- saf_ri_actual
 
 # prepare data ----
-data_prep <- data_raw %>% 
+data_prep <- data_raw %>%
   filter(
     type == "RI",
     year == year_report
-  ) %>% 
+  ) %>%
   mutate(
     rate_per_100_000 = if_else(is.na(rate_per_100_000), 0, rate_per_100_000),
     type = "Rate of RI with safety impact by State"
-    ) %>% 
-  arrange (desc(rate_per_100_000)) %>% 
-  mutate(xlabel = factor(state, levels = state)) %>% 
+  ) %>%
+  arrange(desc(rate_per_100_000)) %>%
+  mutate(xlabel = factor(state, levels = state)) %>%
   select(
-    -year, - reference_period,
+    -year,
+    -reference_period,
     xlabel,
     mymetric = rate_per_100_000,
     myothermetric = eu_wide_average
-  ) 
+  )
 
 eu_average <- data_prep$myothermetric[1]
 
@@ -45,81 +48,77 @@ if (knitr::is_latex_output()) {
   local_legend_x <- 0.5
   local_legend_xanchor <- 'center'
   local_fontsize <- 7
-  local_minsize <- local_fontsize 
+  local_minsize <- local_fontsize
   local_textangle <- -90
   local_textfont_color <- 'grey20'
-  
 } else {
-  local_height <- myheight+20
+  local_height <- myheight + 20
   local_legend_y <- 1.35
   local_legend_x <- 0.5
   local_legend_xanchor <- 'center'
-  local_fontsize <- myfont-1
+  local_fontsize <- myfont - 1
   local_minsize <- myminsize
   local_textangle <- 0
   local_textfont_color <- 'black'
 }
 
 # plot chart ----
-myplot <- mybarchart2(data_prep, 
-                      height = local_height,
-                      colors = c('#00B0F0'),
-                      local_factor = c("Rate of RI with safety impact by State",
-                                       NULL),
-                      
-                      suffix = local_suffix,
-                      decimals = local_decimals,
-                      
-                      hovertemplate = local_hovertemplate,
-                      hovermode = "x unified",
-                      
-                      textangle = local_textangle,
-                      textposition = "outside",
-                      textfont_color = local_textfont_color,
-                      textfont_size = local_fontsize-1,
-                      insidetextanchor = NA,
-                      minsize = local_minsize,
-                      
-                      bargap = 0.4,
-                      barmode = 'group',
-                      
-                      title_text = "",
-                      title_y = 0.99,
-                      
-                      xaxis_tickangle =  -90,
-                      xaxis_tickfont_size = local_fontsize,
-                      
-                      yaxis_title = "Rate of RIs per 100,000 airport movements",
-                      yaxis_titlefont_size = local_fontsize,
-                      yaxis_tickfont_size = local_fontsize,
-                      yaxis_ticksuffix = local_suffix,
-                      yaxis_tickformat = ".0f",
-                      
-                      legend_y = local_legend_y, 
-                      legend_x = local_legend_x,
-                      legend_xanchor = local_legend_xanchor,
-                      legend_fontsize = local_fontsize) %>%
+myplot <- mybarchart2(
+  data_prep,
+  height = local_height,
+  colors = c('#00B0F0'),
+  local_factor = c("Rate of RI with safety impact by State", NULL),
+
+  suffix = local_suffix,
+  decimals = local_decimals,
+
+  hovertemplate = local_hovertemplate,
+  hovermode = "x unified",
+
+  textangle = local_textangle,
+  textposition = "outside",
+  textfont_color = local_textfont_color,
+  textfont_size = local_fontsize - 1,
+  insidetextanchor = NA,
+  minsize = local_minsize,
+
+  bargap = 0.4,
+  barmode = 'group',
+
+  title_text = "",
+  title_y = 0.99,
+
+  xaxis_tickangle = -90,
+  xaxis_tickfont_size = local_fontsize,
+
+  yaxis_title = "Rate of RIs per 100,000 airport movements",
+  yaxis_titlefont_size = local_fontsize,
+  yaxis_tickfont_size = local_fontsize,
+  yaxis_ticksuffix = local_suffix,
+  yaxis_tickformat = ".0f",
+
+  legend_y = local_legend_y,
+  legend_x = local_legend_x,
+  legend_xanchor = local_legend_xanchor,
+  legend_fontsize = local_fontsize
+) %>%
   add_trace(
     inherit = FALSE,
     data = data_prep,
-    x = ~ xlabel,
-    y = ~ myothermetric,
+    x = ~xlabel,
+    y = ~myothermetric,
     yaxis = "y1",
     type = 'scatter',
     mode = "line",
-    name = paste0("Union-wide average: ", eu_average),
-    line = list (color = '#00B0F0', width = 2, dash = 'dot'),
+    name = paste0(
+      "Union-wide average: ",
+      format(janitor::round_half_up(eu_average, 2), nsmall = 2)
+    ),
+    line = list(color = '#00B0F0', width = 2, dash = 'dot'),
     hoverinfo = 'none',
     opacity = 0.6,
     showlegend = T
-  ) 
+  )
 
 
-
-myplot 
-
-
-
-
-
-
+myplot

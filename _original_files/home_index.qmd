@@ -1,71 +1,17 @@
-## PRB Annual Monitoring Report (AMR) digital dashboard (detailed analysis per Member State)
-
-::: {#container-su style="clear: both"}
-:::: {#summary-kpi-table class="equal-column"}
-### 2024 PERFORMANCE IN A NUTSHELL{style="margin-top: 0rem; margin-bottom: 1rem;"} 
-::::: grid
-:::::: {.g-col-12}
-
-::::::: {.grid style="gap: 0rem"}
-:::::::: {.g-col-3 .text-center .text-pad-top style="border: 1px solid black"}
-[{{< fa solid plane >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
-::::::::
-
-:::::::: {.g-col-9  style="border-top: 1px solid black; border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 1.5rem;"}
-[**TRAFFIC**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
-9.6 million flights controlled in the SES airspace
-::::::::
-:::::::
-
-::::::: {.grid style="gap: 0rem"}
-:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
-[{{< fa solid helmet-safety >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
-::::::::
-
-:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
-[**SAFETY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
-Most of the service providers achieved or exceeded the targeted safety maturity levels
-::::::::
-:::::::
-
-::::::: {.grid style="gap: 0rem"}
-:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
-[{{< fa solid seedling >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
-::::::::
-
-:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
-[**ENVIRONMENT**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
-Average air route +20% longer than the targeted distance 
-::::::::
-:::::::
-
-::::::: {.grid style="gap: 0rem"}
-:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
-[{{< fa solid clock >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
-::::::::
-
-:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 1.5rem;"}
-[**CAPACITY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
-Average en route ATFM delay of 2.19 minutes per flight 
-::::::::
-:::::::
-
-::::::: {.grid style="gap: 0rem"}
-:::::::: {.g-col-3 .text-center .text-pad-top style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;"}
-[{{< fa solid coins >}}]{style="color: #0F9ED5; font-size: 2.5rem;"}
-::::::::
-
-:::::::: {.g-col-9  style="border-bottom: 1px solid black; border-right: 1px solid black; padding-left: 1rem; padding-top: 0.9rem;"}
-[**COST-EFFICIENCY**]{style="color: #0F9ED5; line-height: 1.5; font-size: 1.1rem;"}\
-The unitary cost of providing air navigation services amounts to 46.62€ 
-::::::::
-:::::::
-
-::::::
-:::::
+::: {.grid .align-items-center}
+:::: {.g-col-9}
+## PRB annual monitoring 2025
 ::::
 
-### REMARKS FROM THE CHAIR
+:::: {.g-col-3 style="text-align: right"}
+<span class="no-external-icon">[<i class="fa fa-download"></i> PRB conclusions](){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+::::
+:::
+
+
+### Remark from the chair
+
+::: {#chair-remarks1}
 
 The annual monitoring report for 2024 comes at a time when the Performance Review Board, appointed by the Commission in September 2025, is beginning the mandate. I would like to welcome my colleagues within the Board and extend my thanks to the previous Performance Review Body for its extensive contribution to the field of air traffic management performance over the last eight years. 
 
@@ -75,6 +21,17 @@ During this time of transition, this version of the report was developed by the 
 
 Traffic increased in 2024, approaching the levels seen in 2019 before the COVID-19 pandemic. Many Member States see traffic levels significantly above pre-pandemic levels, whereas some (those mainly proximate to Ukraine and Russia) remain below.
 Nine ANSPs did not achieve the RP3 targets for the effectiveness of safety management, moreover rates of runway incursions and separation minima infringements increased.
+
+:::
+
+::: {#chair-remarks2}
+
+:::: {#chart-ses class="equal-column"}
+
+<div id="observablehq-mmm-a2de41c4"></div>
+<div id="observablehq-link-a2de41c4"></div>
+
+::::
 
 The geopolitical situations in Ukraine and the Middle East and the high levels of delay continue to impact on environmental performance, with en route flight efficiency remaining well in excess of the Union-wide targets.
 The high levels of delay observed in 2022 and 2023 further increased in 2024 to over two minutes per flight. These delays are driven by a lack of capacity in some Member States with air navigation service providers struggling to recruit sufficient numbers of air traffic controllers to meet demand. Capacity shortfalls need to be addressed to reduce the costs of delay incurred by airspace users and to drive performance to achieve the Union-wide targets.
@@ -91,30 +48,6 @@ PRB Chair
 
 :::
 
-
-
-### SINGLE EUROPEAN SKY – GEOGRAPHICAL SCOPE{style="margin-bottom: 1.1rem;"} 
-
-::: {.cell}
-<div class="equal-column-right">
-
-<div id="observablehq-mmm-a2de41c4"></div>
-<div id="observablehq-link-a2de41c4"></div>
-
-</div>
-
-<p> 
-The Single European Sky (SES) framework covers the provision of Air Navigation Servies in the airspace of 29 European States (27 members of the European Union, Norway, and Switzerland). 
-
-Over 70 different entities are involved, at national level, in the provision of air traffic, communication, navigation and surveillance and/or meteorological services in this area.
-
-Air traffic services are delivered to airspace users through 49 Area Control Centres (ACCs) and 145 airports. 
-
-The costs related to the provision of these services are financed directly by the users though a system of charges, which is organised on the basis of 29 en route and 26 terminal charging zones.
-</p>
-
-
-:::
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">

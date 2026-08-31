@@ -572,21 +572,6 @@ replace_headings(path, character(0))
 
 \needspace{2\baselineskip}
 
-## Quality of occurrences reporting 
-
-```{r saf_text_occ}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_saf_occ.qmd", as.character(year_report),country,country, as.character(year_report))
-
-replace_headings(path, character(0))
-
-``` 
-
-
-\needspace{2\baselineskip}
-
 # ENVIRONMENT - `r rp_full`
 
 ## PRB monitoring
@@ -605,7 +590,7 @@ replace_headings(path, character(0))
 
 ## En route performance
 
-### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (PI#3)
+### Horizontal flight efficiency of the actual trajectory (KEA) (KPI#1), of the last filed flight plan (KEP) (PI#1) , shortest constrained route (KES) (PI#2) and vertical flight efficiency of the actual trajectory (VFE) (PI#3)
 
 `r layout_2fig("chart_env_kea_l2", "chart_env_kea_month")`
 
@@ -665,21 +650,6 @@ replace_headings(path, character(0))
 ```
 
 `r layout_2fig("chart_cdr", "chart_rsa")`
-
-\needspace{3\baselineskip}
-
-`\biggertext{Focus on Civil-Military dimension}`{=latex}
-
-```{r env_mil_text_ersa}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
-
-mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
-``` 
-
 
 
 \needspace{3\baselineskip}
@@ -1086,25 +1056,6 @@ cat(make_quarto_latex_table(
 
 \needspace{3\baselineskip}
 
-\biggertext{Focus on unit cost}
-
-```{r}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_1.qmd", as.character(year_report),
-                country,
-                country,
-                as.character(year_report),
-                'tz',
-                8
-)
-
-replace_headings(path, character(0))
-  
-``` 
-
-\needspace{3\baselineskip}
 
 ### Actual unit cost incurred by the users (AUCU) (PI#1)
 
@@ -1172,50 +1123,10 @@ cat(make_quarto_latex_table(
 
 \needspace{3\baselineskip}
 
-\biggertext{Focus on AUCU}
-
-```{r}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_2.qmd", as.character(year_report),
-                country,
-                country,
-                as.character(year_report),
-                'tz',
-                8
-)
-
-replace_headings(path, character(0))
-  
-``` 
-
-\needspace{3\baselineskip}
-
 ### Regulatory result (RR)
 
 `r layout_2fig("chart_cef_reg_res_tz", "chart_cef_reg_res_aucu_tz")`
 
 `r layout_2fig("chart_cef_reg_res_ansp_tz", "chart_cef_net_res_main_ansp_tz")`
-
-\needspace{3\baselineskip}
-
-\biggertext{Focus on regulatory result}
-
-```{r}
-#| echo: false
-#| output: asis
-
-path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cef_%s%d_3.qmd", as.character(year_report),
-                country,
-                country,
-                as.character(year_report),
-                'tz',
-                8
-)
-
-replace_headings(path, character(0))
-  
-``` 
 
 `r if (year_folder == params$rp_summary_year) ":::"`
