@@ -29,12 +29,15 @@
 #| fig-pos: "H"
 ```
 
-```{r concl-eosm}
-saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_findings_EoSM")
-```
+```{r saf_prb}
+#| echo: false
+#| output: asis
 
-`r saf_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
 
+replace_headings(path, character(0))
+
+``` 
 
 ```{r chart_deliveries}
 #| file: R/chart_level1_saf_deliveries_nm.R
@@ -43,12 +46,7 @@ saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_fin
 #| fig-pos: "H"
 ```
 
-
-```{r concl-deliveries}
-saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_findings_over")
-```
-
-`r saf_conc2`
+<!-- placeholder -->
 
 \needspace{2\baselineskip}
 
@@ -64,11 +62,15 @@ saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_fin
 ```
 
 
-```{r concl-env}
-env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_findings_KEP")
-```
+```{r env_prb}
+#| echo: false
+#| output: asis
 
-`r env_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
@@ -102,12 +104,15 @@ cat(make_quarto_latex_table(
 
 ```
 
+```{r cap_prb}
+#| echo: false
+#| output: asis
 
-```{r concl-cap}
-cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_findings_CAP")
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-`r cap_er_conc1`
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
@@ -122,9 +127,14 @@ cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_f
 #| fig-pos: "H"
 ```
 
-```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CEFF", "NM_findings_CEFF")
-```
+```{r cef_prb}
+#| echo: false
+#| output: asis
 
-`r cef_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 

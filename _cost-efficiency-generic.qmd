@@ -45,11 +45,15 @@ source("R/get_level2_headings_cef.R")
 
 ## PRB monitoring
 
-```{r concl-cef-duc}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
+```{r cef_prb}
+#| echo: false
+#| output: asis
 
-`r cef_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (cztype == 'terminal' | czindex == 2) ":::"`
 

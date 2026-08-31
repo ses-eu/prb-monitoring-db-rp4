@@ -346,10 +346,6 @@ other_met_str_1 <- reduce(other_met_list, ~ paste(.x, .y, sep = fixed('`\\\\`{=t
 
 ## Traffic (En route traffic zone)
 
-```{r mvt_conc}
-mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
-```
-
 ```{r chart_level1_traffic_mvt, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_traffic_mvt.R
 #| out.width: "52%"
@@ -357,12 +353,15 @@ mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r mvt_conc1`
+```{r mvt_prb}
+#| echo: false
+#| output: asis
 
-```{r su_conc1}
-tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_ifr_movements.qmd", as.character(year_report),country,country, as.character(year_report))
 
-```
+replace_headings(path, character(0))
+
+``` 
 
 ```{r chart_level1_traffic_su, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_traffic_su.R
@@ -371,13 +370,17 @@ tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r tsu_conc1`
+```{r tsu_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_service_units.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ## Safety (Main ANSP)
-
-```{r saf_conc1}
-saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
-```
 
 ```{r chart_saf_l1, options = (saf_ansp_index = 1), eval = (params$country != "FABEC")}
 #| file: R/chart_level1_saf.R
@@ -386,7 +389,15 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 #| fig-pos: "H"
 ```
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (params$country == "FABEC") ":::"`
 
@@ -395,10 +406,6 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 
 ## Environment (Member State)
 
-```{r concl_env}
-env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
-```
-
 ```{r chart_env_kea_l1, options = (doclevel=c("level1"))}
 #| file: R/chart_level1_kea.R
 #| out.width: "52%"
@@ -406,18 +413,19 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r env_conc1`
+```{r env_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (params$country == "Luxembourg") ":::"`
 
 ## Capacity (Member State)
-
-```{r concl_cap}
-cap_er_conc1 <-  get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
-
-cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_conc1, "\n\n")), if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1))
-```
 
 ```{r chart_cap_er, options = (cztype=c("enroute")), include = (params$country != "Luxembourg")}
 #| file: R/chart_level1_cap.R
@@ -426,8 +434,6 @@ cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_c
 #| fig-pos: "H"
 ```
 
-`r if_else(params$country != "Luxembourg", cap_er_conc1, '')`
-
 ```{r chart_cap_trm, options = (cztype=c("terminal")), include = params$no_tcz != 0, eval = (params$country != "FABEC")}
 #| file: R/chart_level1_cap.R
 #| out.width: "52%"
@@ -435,16 +441,20 @@ cap_conc1 <- paste0(if_else(cap_er_conc1 == "character(0\n", "", paste0(cap_er_c
 #| fig-pos: "H"
 ```
 
-`r if_else(params$no_tcz != 0, cap_trm_conc1, '')`
+```{r cap_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 
 `r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 ## Cost-efficiency (En route/Terminal charging zone(s))
-
-```{r concl-cef}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
 
 `r if ((params$no_ecz + params$no_tcz) >1) ":::: {.content-hidden}"`
 ```{=latex}
@@ -487,7 +497,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 `r layout_2fig("chart_cef_trm_2", "chart_cef_trm_3")`
 `r if ((params$no_ecz + params$no_tcz) != 4) "::::"`
 
-`r cef_conc1`
+```{r cef_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (params$country == "FABEC") ":::"`
 
@@ -499,7 +517,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 ## PRB monitoring
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{2\baselineskip}
 
@@ -689,7 +715,15 @@ replace_headings(path, character(0))
 
 ## PRB monitoring
 
-`r env_conc1`
+```{r env_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 `r if (params$country == "Luxembourg") "::: {.content-hidden}"`
 
@@ -1049,28 +1083,15 @@ replace_headings(path, env_mil_nsa_titles_rau)
 
 ## PRB monitoring
 
-```{r cap-prb}
-if (params$country == "Luxembourg") {
-  cap_er_conc1 <- ""
-  } else {
-  cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-}
-```
+```{r cap_prb}
+#| echo: false
+#| output: asis
 
-`r cap_er_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-`r if (params$no_tcz == 0) "::: {.content-hidden}"`
+replace_headings(path, character(0))
 
-```{r cap-trm-prb}
-cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
-
-cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
-```
-
-`r cap_trm_conc1`
-
-`r if (params$no_tcz == 0) ":::"`
-
+``` 
 
 
 `r if (params$country == "Luxembourg") "::: {.content-hidden}"`
@@ -1370,12 +1391,15 @@ replace_headings(path, cap_trm_nsa_titles_acdelay)
 
 ## PRB monitoring
 
-```{r concl_cef_duc_e1}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
+```{r cef_prb}
+#| echo: false
+#| output: asis
 
-`r cef_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
 
+replace_headings(path, character(0))
+
+``` 
 
 ```{r generate_ceff_er sections, eval = (params$country != "FABEC")}
 #| echo: false

@@ -18,16 +18,22 @@
 :::: {#chart-eosm class="mychart"}
 ```{r chart-eosm}
 #| file: R/chart_level1_saf_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-eosm}
-```{r concl-eosm}
-saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_findings_EoSM")
-```
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -38,16 +44,14 @@ saf_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_EoSM", "NM_fin
 :::: {#chart-deliveries class="mychart"}
 ```{r chart-deliveries}
 #| file: R/chart_level1_saf_deliveries_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-deliveries}
-```{r concl-deliveries}
-saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_findings_over")
-```
 
-`r saf_conc2`
+<!-- placeholder -->
+
 ::::
 :::
 
@@ -62,16 +66,22 @@ saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_fin
 :::: {#chart-env class="mychart"}
 ```{r chart-env-kea, options = (doclevel=c("level1"))}
 #| file: R/chart_level1_kea.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-env}
-```{r concl-env}
-env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_findings_KEP")
-```
 
-`r env_conc1`
+```{r env_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -86,30 +96,36 @@ env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_find
 :::: {#chart-cap class="mychart"}
 ```{r chart-cap-er}
 #| file: R/chart_level1_cap_er_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 <br>
 
 ```{r chart-cap-trm}
 #| file: R/chart_level1_cap_trm_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 ### Other performance indicators (PIs#1-3)
 
 ```{r table-cap-pis-nm}
 #| file: R/table_level2_cap_pis_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-cap}
-```{r concl-cap}
-cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_findings_CAP")
-```
 
-`r cap_er_conc1`
+```{r cap_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -124,15 +140,21 @@ cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_f
 :::: {#chart-cef class="mychart"}
 ```{r chart-cef}
 #| file: R/chart_level1_cef_nm.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-cef}
-```{r concl-cef}
-cef_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CEFF", "NM_findings_CEFF")
-```
 
-`r cef_conc1`
+```{r cef_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::

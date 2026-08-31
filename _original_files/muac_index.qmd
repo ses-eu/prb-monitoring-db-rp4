@@ -108,7 +108,7 @@ Netherlands
 
 ```{r chart-saf-code}
 #| label: chart_saf_eosm
-#| out.width: "100%"
+#| out.width: "99%"
 #| echo: false
 
 source("R/chart_level1_saf.R")
@@ -123,11 +123,17 @@ mycharts[[1]]
 ::::
 
 :::: {#concl-eosm}
-```{r concl-eosm}
-saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
-```
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -140,16 +146,22 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 :::: {#chart-cap class="mychart"}
 ```{r chart-cap-er}
 #| file: R/chart_level1_cap.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-cap}
-```{r concl-cap}
-cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-```
 
-`r cap_er_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -162,15 +174,21 @@ cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Fin
 :::: {#chart-cef class="mychart"}
 ```{r chart-cef}
 #| file: R/chart_level2_cef_cost.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-cef}
-```{r concl-cef}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
 
-`r cef_conc1`
+```{r cef_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::

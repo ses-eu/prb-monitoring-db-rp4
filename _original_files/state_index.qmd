@@ -153,16 +153,22 @@ tcz_list_string <- if_else(no_tcz == 0, '',
 :::: {#chart-mvt class="mychart"}
 ```{r chart-mvt}
 #| file: R/chart_level1_traffic_mvt.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-mvt}
-```{r concl-mvt}
-mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
-```
 
-`r mvt_conc1`
+```{r mvt_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_ifr_movements.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -173,16 +179,22 @@ mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findin
 :::: {#chart-su class="mychart"}
 ```{r chart-su}
 #| file: R/chart_level1_traffic_su.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-su}
-```{r concl-su}
-tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
-```
 
-`r tsu_conc1`
+```{r tsu_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_service_units.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -193,7 +205,7 @@ tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findin
 ## Safety (Main ANSP)
 
 ```{r chart_saf_eosm}
-#| out.width: "100%"
+#| out.width: "99%"
 #| echo: false
 
 source("R/chart_level1_saf.R")
@@ -207,11 +219,17 @@ mycharts[[1]]
 ::::
 
 :::: {#concl-saf}
-```{r concl-saf}
-saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
-```
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 
@@ -226,16 +244,22 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 :::: {#chart-env class="mychart"}
 ```{r chart-env-kea, options = (doclevel=c("level1"))}
 #| file: R/chart_level1_kea.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 ::::
 
 :::: {#concl-env}
-```{r concl-env}
-env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
-```
 
-`r env_conc1`
+```{r env_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::
 `r if (params$country == "Luxembourg") ":::"`
@@ -251,7 +275,7 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 `r if (params$country == "Luxembourg") "::::: {.content-hidden}"`
 ```{r chart-cap-er, options = (cztype=c("enroute"))}
 #| file: R/chart_level1_cap.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 <br>
@@ -263,25 +287,23 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 
 ```{r chart-cap-trm, options = (cztype=c("terminal"))}
 #| file: R/chart_level1_cap.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 `r if (params$no_tcz == 0) ":::::"`
 ::::
 
 :::: {#concl-cap}
-```{r concl-cap}
-cap_er_conc1 <-  if_else(country == "Luxembourg", "", get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity"))
 
-cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
+```{r cap_prb}
+#| echo: false
+#| output: asis
 
-cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-```
+replace_headings(path, character(0))
 
-`r cap_er_conc1`
-
-`r cap_trm_conc1`
+``` 
 
 ::::
 :::
@@ -295,7 +317,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 :::: {#chart-cef-1 class="mychart"}
 ```{r chart-cef-er-1, options = (cz=c("1", "enroute", "level1"))}
 #| file: R/chart_level1_cef.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 <br>
@@ -304,7 +326,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ```{r chart-cef-er-2, options = (cz=c("2", "enroute", "level1"))}
 #| file: R/chart_level1_cef.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 `r if (params$no_ecz < 2) ":::::"`
@@ -315,7 +337,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ```{r chart-cef-trm-1, options = (cz=c("1", "terminal", "level1"))}
 #| file: R/chart_level1_cef.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 `r if (params$no_tcz == 1) ":::::: {.content-hidden}"`
@@ -323,7 +345,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ```{r chart-cef-trm-2, options = (cz=c("2", "terminal", "level1"))}
 #| file: R/chart_level1_cef.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 `r if (params$no_tcz == 1) "::::::"`
@@ -333,7 +355,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ```{r chart-cef-trm-3, options = (cz=c("3", "terminal", "level1"))}
 #| file: R/chart_level1_cef.R
-#| out.width: "100%"
+#| out.width: "99%"
 ```
 
 `r if (params$no_tcz < 3) "::::::"`
@@ -343,10 +365,16 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 ::::
 
 :::: {#concl-cef}
-```{r concl-cef}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
 
-`r cef_conc1`
+```{r cef_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
+
 ::::
 :::

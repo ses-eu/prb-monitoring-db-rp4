@@ -1,3 +1,25 @@
+<!-- Level1 -->
+```{r chart_cap_er, options = (cztype=c("enroute")), include = FALSE}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+
+```{r chart_cap_trm, options = (cztype=c("terminal")), include = FALSE}
+#| file: R/chart_level1_cap.R
+#| out.width: "100%"
+```
+
+
+```{r chart_level1_cef_er_ses, include = FALSE}
+#| file: R/chart_level1_cef_er_ses.R
+#| out.width: "100%"
+```
+
+```{r chart_cef_trm_1, options = (cz=c("1", "terminal", "level1")), include = FALSE}
+#| file: R/chart_level1_cef.R
+#| out.width: "100%"
+```
+
 
 <!-- Level2 -->
 <!-- ## Safety -->
@@ -266,18 +288,9 @@ met_ansp_context <- data_context %>% select(met_providers) %>% pull()
 
 ## Main PRB findings - `r year_folder`
 
-```{r main-concl}
-main_conc1 <- get_prb_conclusions(prb_findings_file, "main", "Table_Findings_main")
-```
-
-`r main_conc1`
-
+[Placeholder for text]
 
 ## Traffic (`r rp_full` area)
-
-```{r mvt_conc1}
-mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findings_traffic_IFR")
-```
 
 ```{r chart_level1_traffic_mvt}
 #| file: R/chart_level1_traffic_mvt.R
@@ -286,11 +299,15 @@ mvt_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_IFR", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r mvt_conc1`
+```{r mvt_prb}
+#| echo: false
+#| output: asis
 
-```{r su_conc1}
-tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findings_traffic_TSU")
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_ifr_movements.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ```{r chart_level1_traffic_su}
 #| file: R/chart_level1_traffic_su.R
@@ -299,13 +316,17 @@ tsu_conc1 <- get_prb_conclusions(prb_findings_file, "traffic_SUs", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r tsu_conc1`
+```{r tsu_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_service_units.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ## Safety (`r rp_full` area)
-
-```{r saf_conc1}
-saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_safety")
-```
 
 ```{r chart_level1_saf_ses}
 #| file: R/chart_level1_saf_ses.R
@@ -314,13 +335,17 @@ saf_conc1 <- get_prb_conclusions(prb_findings_file, "safety", "Table_Findings_sa
 #| fig-pos: "H"
 ```
 
-`r saf_conc1`
+```{r saf_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ## Environment (`r rp_full` area)
-
-```{r env_conc1}
-env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findings_environment")
-```
 
 ```{r chart_env_kea, options = (doclevel=c("level1"))}
 #| file: R/chart_level1_kea.R
@@ -329,51 +354,43 @@ env_conc1 <- get_prb_conclusions(prb_findings_file, "environment", "Table_Findin
 #| fig-pos: "H"
 ```
 
-`r env_conc1`
+```{r env_prb}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ## Capacity (`r rp_full` area)
 
-```{r chart_cap_er, options = (cztype=c("enroute"))}
-#| file: R/chart_level1_cap.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
+`r layout_2fig("chart_cap_er", "chart_cap_trm")`
 
-```{r chart_cap_trm, options = (cztype=c("terminal"))}
-#| file: R/chart_level1_cap.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
+```{r cap_prb}
+#| echo: false
+#| output: asis
 
-```{r cap_er_conc1}
-cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-`r cap_er_conc1`
+replace_headings(path, character(0))
+
+``` 
 
 ## Cost-efficiency (`r rp_full` area)
 
-```{r cef_conc_l1}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
+`r layout_2fig("chart_level1_cef_er_ses", "chart_cef_trm_1")`
 
-```{r chart_level1_cef_er_ses}
-#| file: R/chart_level1_cef_er_ses.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
+```{r cef_prb}
+#| echo: false
+#| output: asis
 
-```{r chart_cef_trm_1, options = (cz=c("1", "terminal", "level1"))}
-#| file: R/chart_level1_cef.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
 
-`r cef_conc1`
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{3\baselineskip}
 
@@ -383,7 +400,15 @@ cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Fi
 
 ## PRB monitoring
 
-`r saf_conc1`
+```{r saf_prb2}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 ## Actual versus planned number of ANSPs achieving the level of the EoSM targets for RP3 ahead of 2024
 
@@ -566,7 +591,15 @@ replace_headings(path, character(0))
 
 ## PRB monitoring
 
-`r env_conc1`
+```{r env_prb2}
+#| echo: false
+#| output: asis
+
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_env.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{3\baselineskip}
 
@@ -655,11 +688,15 @@ cat(mytext1)
 
 ## PRB monitoring
 
-```{r cap_prb}
-  cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-```
+```{r cap_prb2}
+#| echo: false
+#| output: asis
 
-`r cap_er_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
+
+replace_headings(path, character(0))
+
+``` 
 
 \needspace{3\baselineskip}
 
@@ -823,14 +860,15 @@ replace_headings(path, character(0))
 
 ## PRB monitoring
 
-:::: {#concl-cef-duc}
-```{r concl_cef_duc}
-cef_conc1 <- get_prb_conclusions(prb_findings_file, "cost-efficiency", "Table_Findings_CEFF")
-```
-::::
+```{r cef_prb2}
+#| echo: false
+#| output: asis
 
-`r cef_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cef.qmd", as.character(year_report),country,country, as.character(year_report))
 
+replace_headings(path, character(0))
+
+``` 
 
 ## En route charging zone
 

@@ -1447,69 +1447,68 @@ replace_links <- function(filename) {
 }
 
 
-# get PRB conclusions  ----
-as_markdown_bullets <- function(x) {
-  # Split on 2+ newlines (blank-line separated paragraphs)
-  items <- strsplit(x, "\\n{2,}", perl = TRUE)[[1]]
-  items <- trimws(items)
-  items <- items[nzchar(items)]
-
-  # Remove leading unicode bullet if present
-  items <- sub("^\\s*[▪•·]\\s*", "", items)
-
-  # Emit Markdown bullets with a blank line between items
-  paste0("- ", items, collapse = "\n\n")
-}
-
-get_prb_conclusions <- function(filename, kpi, table) {
-  # filename <- prb_findings_file
-  # kpi <- "investments"
-  # table <- "Table_Findings_investments"
-
-  if (country == 'Network Manager') {
-    conc <- readxl::read_xlsx(
-      here(data_folder, filename),
-      sheet = kpi,
-      range = cell_limits(c(1, 1), c(NA, NA))
-    ) %>%
-      as_tibble() %>%
-      clean_names() %>%
-      filter(year_report == as.character(year_folder)) %>%
-      select(conclusion)
-  } else {
-    conc <- readxl::read_xlsx(
-      here(data_folder, filename),
-      sheet = kpi,
-      range = cell_limits(c(1, 1), c(NA, NA))
-    ) %>%
-      as_tibble() %>%
-      clean_names() %>%
-      filter(year_report == as.character(year_folder), state == country) %>%
-      select(conclusion)
-  }
-
-  conc_string <- conc %>%
-    toString() %>%
-    paste0(., if_else(nrow(conc) == 1, "", "@"))
-
-  prb_conc <- conc_string %>%
-    str_replace_all(c('", ' = '\n\n', '\"' = '', '\n\n\n' = '\n\n')) %>%
-    str_replace(fixed('c('), '') %>%
-    str_replace(fixed(')@'), '\n')
-
-  if (knitr::is_latex_output()) {
-    prb_conc <- prb_conc %>%
-      # str_replace_all(c('▪' = '\\\\textbullet\\\\quad ', '%' = '\\\\%'))  # Escape `%` for LaTeX
-      as_markdown_bullets
-  }
-
-  if (!prb_conclusions_ready) {
-    prb_conc <- ''
-  }
-
-  return(prb_conc)
-}
-
+# # get PRB conclusions  ----
+# as_markdown_bullets <- function(x) {
+#   # Split on 2+ newlines (blank-line separated paragraphs)
+#   items <- strsplit(x, "\\n{2,}", perl = TRUE)[[1]]
+#   items <- trimws(items)
+#   items <- items[nzchar(items)]
+#
+#   # Remove leading unicode bullet if present
+#   items <- sub("^\\s*[▪•·]\\s*", "", items)
+#
+#   # Emit Markdown bullets with a blank line between items
+#   paste0("- ", items, collapse = "\n\n")
+# }
+#
+# get_prb_conclusions <- function(filename, kpi, table) {
+#   # filename <- prb_findings_file
+#   # kpi <- "investments"
+#   # table <- "Table_Findings_investments"
+#
+#   if (country == 'Network Manager') {
+#     conc <- readxl::read_xlsx(
+#       here(data_folder, filename),
+#       sheet = kpi,
+#       range = cell_limits(c(1, 1), c(NA, NA))
+#     ) %>%
+#       as_tibble() %>%
+#       clean_names() %>%
+#       filter(year_report == as.character(year_folder)) %>%
+#       select(conclusion)
+#   } else {
+#     conc <- readxl::read_xlsx(
+#       here(data_folder, filename),
+#       sheet = kpi,
+#       range = cell_limits(c(1, 1), c(NA, NA))
+#     ) %>%
+#       as_tibble() %>%
+#       clean_names() %>%
+#       filter(year_report == as.character(year_folder), state == country) %>%
+#       select(conclusion)
+#   }
+#
+#   conc_string <- conc %>%
+#     toString() %>%
+#     paste0(., if_else(nrow(conc) == 1, "", "@"))
+#
+#   prb_conc <- conc_string %>%
+#     str_replace_all(c('", ' = '\n\n', '\"' = '', '\n\n\n' = '\n\n')) %>%
+#     str_replace(fixed('c('), '') %>%
+#     str_replace(fixed(')@'), '\n')
+#
+#   if (knitr::is_latex_output()) {
+#     prb_conc <- prb_conc %>%
+#       # str_replace_all(c('▪' = '\\\\textbullet\\\\quad ', '%' = '\\\\%'))  # Escape `%` for LaTeX
+#       as_markdown_bullets
+#   }
+#
+#   if (!prb_conclusions_ready) {
+#     prb_conc <- ''
+#   }
+#
+#   return(prb_conc)
+# }
 
 # latex layout 2 figures side by side  ----
 layout_2fig <- function(chart1, chart2, width1 = 0.48, width2 = 0.48) {
@@ -3057,8 +3056,12 @@ replace_headings <- function(path, mytitles) {
   cat(out)
 }
 
-refresh_qmd_parts_country <- function(update_pru_analysis, update_nsa_input) {
-  if (!(update_pru_analysis || update_nsa_input)) {
+refresh_qmd_parts_country <- function(
+  update_pru_analysis,
+  update_nsa_input,
+  update_prb_conclusions
+) {
+  if (!(update_pru_analysis || update_nsa_input || update_prb_conclusions)) {
     return(invisible(NULL))
   }
 
@@ -3070,6 +3073,7 @@ refresh_qmd_parts_country <- function(update_pru_analysis, update_nsa_input) {
       repo_env <- new.env(parent = globalenv())
       repo_env$update_nsa_input <- update_nsa_input
       repo_env$update_pru_analysis <- update_pru_analysis
+      repo_env$update_prb_conclusions <- update_prb_conclusions
       repo_env$year_report <- year_report
       repo_env$COUNTRY_NAME_REPORT <- country
 

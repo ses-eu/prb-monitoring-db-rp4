@@ -20,28 +20,15 @@ title-block: false
 
 ## PRB monitoring
 
-```{r cap-prb}
-if (params$country == "Luxembourg") {
-  cap_er_conc1 <- ""
-  } else {
-  cap_er_conc1 <- get_prb_conclusions(prb_findings_file, "ER_capacity", "Table_Findings_ER_capacity")
-}
-```
+```{r cap_prb}
+#| echo: false
+#| output: asis
 
-`r cap_er_conc1`
+path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_cap.qmd", as.character(year_report),country,country, as.character(year_report))
 
-`r if (params$no_tcz == 0) ":::: {.content-hidden}"`
+replace_headings(path, character(0))
 
-```{r cap-trm-prb}
-cap_trm_conc1 <- get_prb_conclusions(prb_findings_file, "TRM_capacity", "Table_Findings_TRM_capacity")
-
-cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_conc1, "character"), "", cap_trm_conc1)
-```
-
-`r cap_trm_conc1`
-
-`r if (params$no_tcz == 0) "::::"`
-
+``` 
 
 `r if (params$country == "Luxembourg") "::: {.content-hidden}"`
 ::: {#container-cap-er}
