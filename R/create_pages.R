@@ -795,7 +795,7 @@ quarto::quarto_render(
     rp_short = rp_short,
     rp_summary_year = rp_summary_year,
     cef_ref_year = cef_ref_year,
-    prb_conclusions_ready = prb_conclusions_ready,
+    update_prb_conclusions = update_prb_conclusions,
 
     state_list = state_list,
     country = country,

@@ -1503,7 +1503,7 @@ replace_links <- function(filename) {
 #       as_markdown_bullets
 #   }
 #
-#   if (!prb_conclusions_ready) {
+#   if (!update_prb_conclusions) {
 #     prb_conc <- ''
 #   }
 #

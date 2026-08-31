@@ -10,7 +10,7 @@ params:
   rp_short:       $rp_short
   rp_summary_year: $rp_summary_year
   cef_ref_year:   $cef_ref_year
-  prb_conclusions_ready: $prb_conclusions_ready
+  update_prb_conclusions: $update_prb_conclusions
   
   country:        $country
   year_report:    $year_report
@@ -174,7 +174,7 @@ rp_full <- params$rp_full
 rp_short <- params$rp_short
 rp_summary_year <- params$rp_summary_year
 cef_ref_year <- params$cef_ref_year
-prb_conclusions_ready <- params$prb_conclusions_ready
+update_prb_conclusions <- params$update_prb_conclusions
 
 country <- params$country
 forecast <- params$forecast

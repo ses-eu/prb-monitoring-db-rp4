@@ -1,6 +1,11 @@
+```{r mvt_prb}
+#| echo: false
+source("R/params_project.R")
+```
+
 ## Document download
 
-### PRB Annual Monitoring Report {{< var rp_year1 >}}
+### PRB Annual Monitoring Report `r rp_years[[1]]`
 
 ::: {.grid}
 :::: {.g-col-1}
