@@ -88,30 +88,30 @@ myc <- function(
       )
     ),
     colors = c(PRBSecondBlue, '#44546A', '#DAE3F3', '#00B0F0', '#002060'),
-    text = ~ paste0(type, ': ', score_text),
+    customdata = ~ paste0(type, ': ', score_text),
     textfont = list(color = 'transparent'),
-    hovertemplate = paste0('%{text}<extra></extra>'),
+    hovertemplate = paste0('%{customdata}<extra></extra>'),
     # hoverinfo = "none",
     showlegend = T
   ) %>%
-    add_trace(
-      inherit = FALSE,
-      data = filter(
-        data_prep_eosm,
-        year <= year_report & tolower(entity_name) == tolower(ansp_name)
-      ),
-      x = ~year,
-      y = ~eo_sm_score,
-      yaxis = "y2",
-      type = 'scatter',
-      mode = "markers",
-      name = "EoSM score",
-      marker = list(color = PRBActualColor, symbol = "diamond", size = 11),
-      hovertemplate = paste0('EoSM score %{y}<extra></extra>'),
-      # hovertemplate = paste('%{text}<extra></extra>'),
-      # hoverinfo = "none",
-      showlegend = T
-    ) %>%
+    # add_trace(
+    #   inherit = FALSE,
+    #   data = filter(
+    #     data_prep_eosm,
+    #     year <= year_report & tolower(entity_name) == tolower(ansp_name)
+    #   ),
+    #   x = ~year,
+    #   y = ~eo_sm_score,
+    #   yaxis = "y2",
+    #   type = 'scatter',
+    #   mode = "markers",
+    #   name = "EoSM score",
+    #   marker = list(color = PRBActualColor, symbol = "diamond", size = 11),
+    #   hovertemplate = paste0('EoSM score %{y}<extra></extra>'),
+    #   # hovertemplate = paste('%{text}<extra></extra>'),
+    #   # hoverinfo = "none",
+    #   showlegend = T
+    # ) %>%
     add_trace(
       inherit = FALSE,
       data = filter(data_prep_eosm, tolower(entity_name) == tolower(ansp_name)),
@@ -230,21 +230,21 @@ myc <- function(
         # showticklabels = FALSE
         tickfont = list(size = fontsize, color = 'black')
       ),
-      yaxis2 = list(
-        title = "EoSM score",
-        overlaying = "y",
-        side = "right",
-        showgrid = FALSE,
-        showline = FALSE,
-        ticksuffix = "",
-        tickformat = ",.0f",
-        dtick = 25,
-        range = list(0, 113),
-        zeroline = TRUE,
-        zerolinecolor = 'rgb(255,255,255)',
-        titlefont = list(size = fontsize),
-        tickfont = list(size = fontsize)
-      ),
+      # yaxis2 = list(
+      #   title = "EoSM score",
+      #   overlaying = "y",
+      #   side = "right",
+      #   showgrid = FALSE,
+      #   showline = FALSE,
+      #   ticksuffix = "",
+      #   tickformat = ",.0f",
+      #   dtick = 25,
+      #   range = list(0, 113),
+      #   zeroline = TRUE,
+      #   zerolinecolor = 'rgb(255,255,255)',
+      #   titlefont = list(size = fontsize),
+      #   tickfont = list(size = fontsize)
+      # ),
       # showlegend = FALSE
       legend = list(
         orientation = 'h',
