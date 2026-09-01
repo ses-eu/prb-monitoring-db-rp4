@@ -87,6 +87,15 @@ statfor_tsu <- readxl::read_xlsx(
     tz_id = stringr::str_replace_all(tz_id, "Norway-Continental", "Norway")
   )
 
+rt_tsu <- readxl::read_xlsx(
+  here(data_folder, ceff_data_file),
+  sheet = "tsu",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names()
+
+
 ## targets ----
 traffic_target <- readxl::read_xlsx(
   here(data_folder, targets_data_file),

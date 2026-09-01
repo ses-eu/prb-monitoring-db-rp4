@@ -247,7 +247,7 @@ source("R/get_level2_headings.R")
 `r if_else(pp_version == "", "", paste0("*",pp_version,"*"))`
 
 `r if (params$country != "FABEC") "::: {.content-hidden}"`
-See FABEC States' reports.
+The Functional Airspace Block Europe Central (FABEC) includes the following States: Belgium, France, Germany, Luxembourg, Netherlands and Switzerland. This page provides information on the environment and capacity  performance at FAB level. The information at national level is presented in the pages for the relevant States.
 `r if (params$country != "FABEC") ":::"`
 
 `r if (params$country == "FABEC") "::: {.content-hidden}"`

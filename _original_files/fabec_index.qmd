@@ -15,8 +15,8 @@
 ```
 
 ## Contextual information
-[to be added]
 
+The Functional Airspace Block Europe Central (FABEC) includes the following States: Belgium, France, Germany, Luxembourg, Netherlands and Switzerland. This page provides information on the environment and capacity  performance at FAB level. The information at national level is presented in the pages for the relevant States.
 
 ::: {#container-env style="clear: both"}
 

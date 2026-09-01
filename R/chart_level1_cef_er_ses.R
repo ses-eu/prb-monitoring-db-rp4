@@ -137,7 +137,7 @@ p1 %>%
     yaxis = 'y1',
     mode = 'line+markers',
     type = 'scatter',
-    name = "Target trend",
+    name = "Union-wide target trend",
     text = ~ paste0(
       "<b>",
       format(mymetric, big.mark = ",", nsmall = 1),
@@ -149,7 +149,7 @@ p1 %>%
     textfont = list(color = PRBTargetColor, size = myfont),
     line = list(color = PRBTargetColor, width = mylinewidth),
     marker = list(size = mylinewidth * 3, color = PRBTargetColor, symbol = NA),
-    hovertemplate = "Target trend: %{text}<extra></extra>",
+    hovertemplate = "Union-wide target trend: %{text}<extra></extra>",
     showlegend = T
   ) %>%
   add_trace(
@@ -159,8 +159,14 @@ p1 %>%
     yaxis = 'y1',
     mode = 'line+markers',
     type = 'scatter',
-    name = "Actual trend",
+    name = "Union-wide actual trend",
     text = ~ paste0(
+      "<b>",
+      format(janitor::round_half_up(mymetric, 1), big.mark = ",", nsmall = 1),
+      "%",
+      "</b>"
+    ),
+    customdata = ~ paste0(
       "<b>",
       format(janitor::round_half_up(mymetric, 1), big.mark = ",", nsmall = 1),
       "%",
@@ -171,6 +177,6 @@ p1 %>%
     textfont = list(color = 'black', size = myfont),
     line = list(color = '#ED7D31', width = mylinewidth),
     marker = list(size = mylinewidth * 3, color = '#ED7D31', symbol = NA),
-    hovertemplate = "Actual trend: %{text}<extra></extra>",
+    hovertemplate = "Union-wide actual trend: %{customdata}<extra></extra>",
     showlegend = T
   )

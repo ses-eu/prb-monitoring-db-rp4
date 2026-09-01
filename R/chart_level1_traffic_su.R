@@ -7,34 +7,9 @@ if (!exists("data_loaded")) {
 
 data_raw <- statfor_tsu
 data_raw_planned <- traffic_target
-data_raw_rts <- ceff_t1_ert
+data_raw_rts <- rt_tsu
 
 # prepare data ----
-
-## rts data
-data_prep_rts_ses <- data_raw_rts |>
-  filter(entity_type == 'ECZ') |>
-  select(year, status, x5_4_total_su) %>%
-  group_by(year, status) %>%
-  summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE), .groups = "drop")
-
-data_prep_rts <- data_raw_rts |>
-  filter(entity_code == ecz_list$ecz_id[1]) |>
-  select(year, status, x5_4_total_su)
-
-if (country == "Spain") {
-  data_canarias_rts <- data_raw_rts |>
-    filter(entity_code == ecz_list$ecz_id[2]) |>
-    select(year, status, x5_4_total_su)
-
-  data_prep_rts <- data_prep_rts |>
-    rbind(data_canarias_rts) |>
-    group_by(year, status) |>
-    summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE))
-} else if (country == rp_full) {
-  data_prep_rts <- data_prep_rts_ses
-}
-
 ## statfor data
 max_actual_year <- as.numeric(substrRight(forecast, 4)) - 1
 
@@ -65,38 +40,45 @@ data_prep_forecast <- data_prep %>%
     )
   )
 
-## we take the actuals from the rts
-data_prep_actual_rts <- data_prep_rts |>
-  filter(status == "A") |>
-  mutate(
-    tsu = case_when(
-      year > year_report ~ NA,
-      .default = x5_4_total_su
-    ),
-    rank = 'Actual'
-  ) |>
-  select(year, rank, tsu)
 
-## but we need the base year from statfor
-data_prep_actual_statfor <- data_prep %>%
-  filter(
-    forecast_id == max(forecast_id),
-    rank == 'Base forecast'
-  ) %>%
-  mutate(
-    forecast_id = .env$forecast_id,
-    rank = 'Actual'
-    # , tsu = case_when (
-    # year <= year_report ~ tsu,
-    # TRUE ~ NA
-    # )
-  ) |>
-  filter(year == rp_min_year - 1) |>
-  select(year, rank, tsu)
+## rts data
+data_prep_rts_ses <- data_raw_rts |>
+  select(year, status, x5_4_total_su) %>%
+  group_by(year, status) %>%
+  summarise(
+    x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+data_prep_rts <- data_raw_rts |>
+  filter(entity_code == ecz_list$ecz_id[1]) |>
+  select(year, status, x5_4_total_su)
+
+if (country == "Spain") {
+  data_canarias_rts <- data_raw_rts |>
+    filter(entity_code == ecz_list$ecz_id[2]) |>
+    select(year, status, x5_4_total_su)
+
+  data_prep_rts <- data_prep_rts |>
+    rbind(data_canarias_rts) |>
+    group_by(year, status) |>
+    summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE))
+} else if (country == rp_full) {
+  data_prep_rts <- data_prep_rts_ses
+}
+
 
 ## merge actual tables
-data_prep_actual <- data_prep_actual_rts |>
-  rbind(data_prep_actual_statfor) |>
+data_prep_actual <- data_prep_rts |>
+  filter(status == 'A') |>
+  mutate(
+    status = "Actual",
+    x5_4_total_su = case_when(
+      year > year_report ~ NA,
+      .default = x5_4_total_su
+    )
+  ) |>
+  select(year, tsu = x5_4_total_su, rank = status) |>
   arrange(year)
 
 data_prep_planned <- data_raw_planned %>%

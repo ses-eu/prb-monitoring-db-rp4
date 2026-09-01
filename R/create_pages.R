@@ -515,13 +515,13 @@ if (out_format == 'web') {
 
         tx <- str_replace(
           tx,
-          '- text: "Other indicators"',
-          '# - text: "Other indicators"'
+          '- text: "Other information"',
+          '# - text: "Other information"'
         )
         tx <- str_replace(
           tx,
-          'href: capacity.html#other-indicators',
-          '# href: capacity.html#other-indicators'
+          'href: capacity.html#other-en-route-information',
+          '# href: capacity.html#other-en-route-information'
         )
       }
 
@@ -673,8 +673,8 @@ if (out_format == 'web') {
           'href: capacity.html#en-route-atfm-delay-kpi1',
           '- text: "En route performance indicators at ACC level"',
           'href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4',
-          '- text: "Other indicators"',
-          'href: capacity.html#other-indicators'
+          '- text: "Other information"',
+          'href: capacity.html#other-en-route-information'
         )
 
         for (i in 1:length(lines_to_comment)) {
