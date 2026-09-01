@@ -225,9 +225,11 @@ replace_headings(path, env_er_nsa_titles_kea)
 
 `r if (params$no_tcz == 0 | params$country == params$rp_full) "::: {.content-hidden}"`
 
-::: {#container-axot-asma}
-
 ## Terminal performance
+
+`r if (params$country == "Malta") ":::: {.content-hidden}"`
+
+::: {#container-axot-asma}
 
 ### Additional taxi-out time ([**AXOT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) (PI#4), Additional taxi-in time ([**AXIT**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) (PI#5) & Arrival Sequencing and Metering Area ([**ASMA**](`r params$home_address`/about.html#environment---additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6)) time (PI#6)
 
@@ -261,7 +263,12 @@ replace_headings(path, env_er_nsa_titles_kea)
 :::::
 
 ::::
+
 :::
+`r if (params$country == "Malta") ":::"`
+
+
+`r if (params$country == "Malta") "::: {.content-hidden}"`
 
 ::: {.callout-note collapse=true}
 
@@ -331,7 +338,11 @@ replace_headings(path, env_trm_nsa_titles_asma)
 ```
 
 ::::
+
 :::
+
+`r if (params$country == "Malta") ":::"`
+
 
 
 ::: {#container-cdo}

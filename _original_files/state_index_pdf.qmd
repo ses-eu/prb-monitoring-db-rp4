@@ -842,6 +842,8 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 ## Terminal performance
 
+`r if (params$country == "Malta") "::: {.content-hidden}"`
+
 ### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
 `r layout_2fig("chart_axot_asma_country", "chart_axot_apt")`
@@ -930,6 +932,8 @@ cat(make_quarto_latex_table_2level(
 ))
 ```
 
+
+`r if (params$country == "Malta") ":::"`
 
 ###  Vertical flight efficiency of the descent (PI#7) and of the climb (PI#8)
 

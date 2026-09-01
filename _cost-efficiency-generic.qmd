@@ -69,7 +69,7 @@ replace_headings(path, character(0))
 
 ::: {#container-cef-duc}
 
-### [**Unit cost**](`r params$home_address`/about.html#cost-efficiency---unit-costs-ducaucu-kpi1-for-en-route-charging-zones-and-kpi2-for-terminal-charging-zones) (KPI#1)
+### [**Unit cost**](`r params$home_address`/about.html#cost-efficiency---unit-costs-ducaucu-kpi1-for-en-route-charging-zones-and-kpi2-for-terminal-charging-zones) `r if (params$country != params$rp_full & cztype != "terminal") "(KPI#1)"`
 
 :::: {layout="[ 50, 50 ]"}
 

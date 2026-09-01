@@ -159,7 +159,7 @@ p1 %>%
     yaxis = 'y1',
     mode = 'line+markers',
     type = 'scatter',
-    name = "Union-wide actual trend",
+    name = "Actual trend",
     text = ~ paste0(
       "<b>",
       format(janitor::round_half_up(mymetric, 1), big.mark = ",", nsmall = 1),
@@ -177,6 +177,6 @@ p1 %>%
     textfont = list(color = 'black', size = myfont),
     line = list(color = '#ED7D31', width = mylinewidth),
     marker = list(size = mylinewidth * 3, color = '#ED7D31', symbol = NA),
-    hovertemplate = "Union-wide actual trend: %{customdata}<extra></extra>",
+    hovertemplate = "Actual trend: %{customdata}<extra></extra>",
     showlegend = T
   )
