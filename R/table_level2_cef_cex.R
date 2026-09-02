@@ -92,8 +92,7 @@ data_prep_eur_ses <- data_prep_eur %>%
   group_by(year, xlabel) %>%
   summarise(
     mymetric = sum(mymetric, na.rm = TRUE),
-    ################### TB Verified ----
-    x4_7_total_su = sum(x4_7_total_su, na.rm = TRUE) / n_distinct(entity_code),
+    x4_7_total_su = sum(x4_7_total_su, na.rm = TRUE) / n_distinct(xlabel),
     .groups = "drop"
   ) %>%
   mutate(entity_code = "SES") %>%
