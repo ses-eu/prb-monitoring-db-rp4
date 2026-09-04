@@ -209,8 +209,8 @@ main_ansp <- params$main_ansp
 other_ansps_str <- params$other_ansps_str
 other_met_str <- params$other_met_str
 
-fac_val_date <- params$fac_val_date
-fac_val_file <- params$fac_val_file
+publication_version_date <- params$publication_version_date
+publication_version_file <- params$publication_version_file
 
 pp_country_name <- if_else(params$country %in% c('France', 'Belgium', 'FABEC', 'Luxembourg', 'MUAC', 'Netherlands', 'Switzerland'), 'FABEC', 'the state')
 
@@ -242,7 +242,7 @@ source("R/get_level2_headings.R")
 
 ## Contextual information
 
-\emph{This document is based on the version of the Annual Monitoring Report file submitted by `r pp_country_name` on `r fac_val_date` (`r knitr::asis_output(sprintf( "\\begingroup\\small\\texttt{%s}\\endgroup", stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1") ))`) and the accompanying submission of en route and terminal (if applicable) reporting tables.}
+\emph{This document is based on the version of the Annual Monitoring Report file submitted by `r pp_country_name` on `r publication_version_date` (`r knitr::asis_output(sprintf( "\\begingroup\\small\\texttt{%s}\\endgroup", stringr::str_replace_all(publication_version_file, "([_#%&{}$])", "\\\\\\1") ))`) and the accompanying submission of en route and terminal (if applicable) reporting tables.}
 
 `r if_else(pp_version == "", "", paste0("*",pp_version,"*"))`
 
@@ -441,7 +441,7 @@ replace_headings(path, character(0))
 
 ## Capacity (Member State)
 
-```{r chart_cap_er, options = (cztype=c("enroute")), include = ((params$no_tcz == 0) | (params$country == "FABEC")), eval = ((params$no_tcz == 0) | (params$country == "FABEC"))}
+```{r chart_cap_er2, options = (cztype=c("enroute")), include = ((params$no_tcz == 0) | (params$country == "FABEC")), eval = ((params$no_tcz == 0) | (params$country == "FABEC"))}
 #| file: R/chart_level1_cap.R
 #| out.width: "52%"
 #| fig.align: "center"
@@ -776,14 +776,14 @@ replace_headings(path, env_er_nsa_titles_kea)
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kep.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_kep))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, env_er_nsa_titles_kep)}
 
 ``` 
 
@@ -798,14 +798,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_kes.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_kes))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, env_er_nsa_titles_kes)}
 
 ``` 
 
@@ -820,14 +820,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_er_vfe.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_er_nsa_titles_vfe))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, env_er_nsa_titles_vfe)}
 
 ``` 
 
@@ -1059,14 +1059,14 @@ cat(make_quarto_latex_table_2level(
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_ersa.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_ersa))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, env_mil_nsa_titles_ersa)}
 ``` 
 
 \needspace{3\baselineskip}
@@ -1080,14 +1080,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1) 
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rap.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rap))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, env_mil_nsa_titles_rap)}
 ``` 
 
 \needspace{3\baselineskip}
@@ -1101,14 +1101,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_mil_rau.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, env_mil_nsa_titles_rau))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat(cat("No comment provided."))} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat(cat("No comment provided."))} else {replace_headings(path, env_mil_nsa_titles_rau)}
 
 ``` 
 
@@ -1174,6 +1174,8 @@ replace_headings(path, cap_er_nsa_titles_atfm)
 
 \needspace{3\baselineskip}
 
+`r if (params$country == "FABEC") "::: {.content-hidden}"`
+
 **En route capacity incentive scheme**
 
 ```{r cap_er_text_incentive, eval=((params$no_ecz != 0) | (params$country == "FABEC"))}
@@ -1185,8 +1187,6 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_incentive.qmd", as.characte
 replace_headings(path, character(0))
 
 ``` 
-
-`r if (params$country == "FABEC") "::: {.content-hidden}"`
 
 ### En route performance indicators at ACC level (PI#4-5)
 
@@ -1205,14 +1205,14 @@ replace_headings(path, character(0))
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_above.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_above))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, cap_er_nsa_titles_above)}
 
 ``` 
 
@@ -1227,14 +1227,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_tput.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_tput))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, cap_er_nsa_titles_tput)}
 
 ``` 
 
@@ -1261,14 +1261,14 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_pru_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext1 <- capture.output(replace_headings(path, character(0)))
-cat(mytext1)
+replace_headings(path, character(0))
 
 cat("\n\n")
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_cap_er_atco.qmd", as.character(year_report),country,country, as.character(year_report))
 
 mytext2 <- capture.output(replace_headings(path, cap_er_nsa_titles_atco))
-if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {cat(mytext2)}
+if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){cat("No comment provided.")} else {replace_headings(path, cap_er_nsa_titles_atco)}
 
 ``` 
 

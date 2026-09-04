@@ -40,14 +40,14 @@ data_prep <- data_filtered %>%
   select(
     year,
     Airport = apt_name,
-    `Avg. duration in climb (PI#7)` = avg_seconds_per_climb,
-    `Avg. duration in descent (PI#8)` = avg_seconds_per_descent
+    `Avg. duration in climb (PI#8)` = avg_seconds_per_climb,
+    `Avg. duration in descent (PI#7)` = avg_seconds_per_descent
   ) %>%
   pivot_wider(
     names_from = "year",
     values_from = c(
-      "Avg. duration in climb (PI#7)",
-      "Avg. duration in descent (PI#8)"
+      "Avg. duration in climb (PI#8)",
+      "Avg. duration in descent (PI#7)"
     )
     # , names_glue = "{year}_{.value}" #suffix to prefix
   ) %>%

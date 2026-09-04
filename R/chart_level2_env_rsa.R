@@ -42,7 +42,7 @@ c_insidetextanchor <- NA
 
 #### title
 c_title_text <- paste0(
-  "RAI & RAU via available restricted\nand segregated airspace (PIs#9 & 10)"
+  "RAI & RAU via available restricted\nand segregated airspace (PIs#10 & 11)"
 )
 
 #### yaxis

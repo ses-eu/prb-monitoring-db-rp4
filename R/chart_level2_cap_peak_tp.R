@@ -48,6 +48,33 @@ data_prep <- data_raw %>%
     linedash
   )
 
+## adjustments due to comment by France/Spain during FV2025
+data_prep <- data_prep |>
+  mutate(
+    textposition = if_else(
+      type %in% c("Brest ACC", "Palma ACC") & xlabel == rp_min_year,
+      "bottom",
+      textposition
+    )
+  )
+
+if (country == 'Spain') {
+  data_prep <- data_prep |>
+    mutate(
+      type = factor(
+        type,
+        levels = c(
+          'Madrid ACC',
+          'Barcelona ACC',
+          'Sevilla ACC',
+          'Canarias ACC',
+          'Palma ACC'
+        )
+      )
+    )
+}
+
+
 # chart parameters ----
 c_suffix <- ""
 c_decimals <- 1
@@ -95,6 +122,7 @@ p1 <- mylinechart2(
   # textposition = c_textposition,
   # insidetextanchor = c_insidetextanchor,
   textfont_color = "black",
+  textfontsize = myfont - 1,
   #
   title_text = c_title_text,
 
@@ -107,82 +135,9 @@ p1 <- mylinechart2(
 p1 %>%
   layout(
     yaxis = list(
-      rangemode = "tozero"
+      rangemode = if_else(country %in% c('France', 'Spain'), "nomral", "tozero")
     ),
     xaxis = list(
       range = c(rp_min_year - 0.5, rp_max_year + 0.5)
     )
   )
-
-# `%||%` <- function(x, y) if (is.null(x)) y else x
-#
-# add_bar_top_annotations <- function(
-#     p,
-#     data,
-#     x_col = "xlabel",
-#     group_col = "type",
-#     y_col = "mymetric",
-#     label_col = "myothermetric",
-#     group_levels = NULL,     # pass c_factor here if you want explicit ordering
-#     xshift_step = 50,        # NOTE: -25 for left bar in 2-group case => step=50
-#     y_pad_frac = 0.02,
-#     font_size = myfont
-# ) {
-#   stopifnot(all(c(x_col, group_col, y_col, label_col) %in% names(data)))
-#
-#   df <- data %>%
-#     transmute(
-#       .x = as.character(.data[[x_col]]),
-#       .g = as.character(.data[[group_col]]),
-#       .y = as.numeric(.data[[y_col]]),
-#       .lbl = as.character(.data[[label_col]])
-#     )
-#
-#   if (is.null(group_levels)) {
-#     group_levels <- sort(unique(df$.g))
-#   } else {
-#     group_levels <- as.character(group_levels)
-#   }
-#
-#   n_g <- length(group_levels)
-#   if (n_g == 0L) return(p)
-#
-#   g_idx <- match(df$.g, group_levels) - 1L
-#   xshift <- (g_idx - (n_g - 1) / 2) * xshift_step
-#
-#   y_rng <- range(df$.y, na.rm = TRUE)
-#   y_pad <- (y_rng[2] - y_rng[1]) * y_pad_frac
-#   if (!is.finite(y_pad) || y_pad == 0) y_pad <- 0
-#
-#   ann <- lapply(seq_len(nrow(df)), function(i) {
-#     lbl <- df$.lbl[i]
-#     if (is.na(lbl) || lbl == "" || lbl == "NA") return(NULL)
-#
-#     list(
-#       x = df$.x[i], xref = "x",
-#       y = df$.y[i] + y_pad, yref = "y",
-#       text = lbl,
-#       showarrow = FALSE,
-#       xanchor = "center",
-#       yanchor = "bottom",
-#       xshift = xshift[i],
-#       font = list(size = font_size)
-#     )
-#   })
-#   ann <- Filter(Negate(is.null), ann)
-#
-#   p %>%
-#     layout(
-#       annotations = (p$x$layout$annotations %||% list()) |> c(ann),
-#       cliponaxis = FALSE
-#     )
-# }
-#
-# p1 <- add_bar_top_annotations(
-#   p1,
-#   data = data_prep,
-#   group_levels = c_factor,  # keeps year order identical to your bars
-#   xshift_step = 48          # keep this if -25 worked for the left bar
-# )
-
-# p1

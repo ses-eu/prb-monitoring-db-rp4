@@ -509,8 +509,8 @@ if (out_format == 'web') {
         )
         tx <- str_replace(
           tx,
-          'href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4',
-          '# href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4'
+          'href: capacity.html#en-route-performance-indicators-at-acc-level-pi4-5',
+          '# href: capacity.html#en-route-performance-indicators-at-acc-level-pi4-5'
         )
 
         tx <- str_replace(
@@ -672,7 +672,7 @@ if (out_format == 'web') {
           '- text: "En route ATFM delay"',
           'href: capacity.html#en-route-atfm-delay-kpi1',
           '- text: "En route performance indicators at ACC level"',
-          'href: capacity.html#en-route-performance-indicators-at-acc-level-pi3-4',
+          'href: capacity.html#en-route-performance-indicators-at-acc-level-pi4-5',
           '- text: "Other information"',
           'href: capacity.html#other-en-route-information'
         )
@@ -852,6 +852,9 @@ quarto::quarto_render(
 
     fac_val_date = fac_val_date,
     fac_val_file = fac_val_file,
+
+    publication_version_date = publication_version_date,
+    publication_version_file = publication_version_file,
 
     PRBPlannedColor = PRBPlannedColor,
     PRBTargetColor = PRBTargetColor,

@@ -92,8 +92,8 @@ share_EH <- paste0(janitor::round_half_up(pull(select(filter(data_muac, entity_c
 ## Contextual information
 
 ```{r context-info}
-fac_val_date <- params$fac_val_date
-fac_val_file <- params$fac_val_file
+publication_version_date <- params$publication_version_date
+publication_version_file <- params$publication_version_file
 
 pp_country_name <- if_else(params$country %in% c('France', 'Belgium', 'FABEC', 'Luxembourg', 'MUAC', 'Netherlands', 'Switzerland'), 'FABEC', 'the state')
 
@@ -102,9 +102,9 @@ pp_country_name <- if_else(params$country %in% c('France', 'Belgium', 'FABEC', '
 \emph{This document is based on the version of the Annual Monitoring Report file version}
 `r knitr::asis_output(sprintf(
   "\\begingroup\\small\\texttt{%s}\\endgroup\\ ",
-  stringr::str_replace_all(fac_val_file, "([_#%&{}$])", "\\\\\\1")
+  stringr::str_replace_all(publication_version_file, "([_#%&{}$])", "\\\\\\1")
 ))`
-\emph{submitted by `r pp_country_name` on `r fac_val_date`.}
+\emph{submitted by `r pp_country_name` on `r publication_version_date`.}
 
 `r if_else(pp_version == "", "", paste0("*",pp_version,"*"))`
 

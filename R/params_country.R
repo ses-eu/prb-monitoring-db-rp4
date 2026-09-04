@@ -230,10 +230,12 @@ no_apt_big <- context_data$no_apts_big
 no_apt_small <- context_data$no_apts_small
 
 other_orgs <- other_orgs_table %>% filter(state == .env$country)
+
 other_ansps <- other_orgs %>%
   filter(type == "Other ANSPs") %>%
   select(ansp) %>%
   filter(ansp != '-')
+
 other_met <- other_orgs %>%
   filter(type == "MET Providers") %>%
   select(ansp) %>%
@@ -270,6 +272,15 @@ fac_val_date <- fact_val_table |>
   format(format = "%Y-%m-%d")
 
 fac_val_file <- fact_val_table |> filter(state == country) |> pull(file_version)
+
+publication_version_date <- publication_version_table |>
+  filter(state == country) |>
+  pull(max_date) |>
+  format(format = "%Y-%m-%d")
+
+publication_version_file <- publication_version_table |>
+  filter(state == country) |>
+  pull(file_version)
 
 
 # # get level 2 data files (not needed for SES or NM) ----

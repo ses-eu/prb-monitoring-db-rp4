@@ -157,6 +157,9 @@ params:
   
   fac_val_date:       $fac_val_date
   fac_val_file:       $fac_val_file
+
+  publication_version_date:       $publication_version_date
+  publication_version_file:       $publication_version_file
   
 ---
 
@@ -210,6 +213,9 @@ state_icao_vef_code <- params$state_icao_vef_code
 
 fac_val_date <- params$fac_val_date
 fac_val_file <- params$fac_val_file
+
+publication_version_date <- params$publication_version_date
+publication_version_file <- params$publication_version_file
 
 # yearly_xrates <- params$yearly_xrates
 

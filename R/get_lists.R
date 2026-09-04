@@ -62,3 +62,11 @@ fact_val_table <- read_mytable(
 ) %>%
   clean_names() |>
   mutate(state = trimws(state))
+
+publication_version_table <- read_mytable(
+  lists_data_file,
+  "lists",
+  "Table_publication_version"
+) %>%
+  clean_names() |>
+  mutate(state = trimws(state))

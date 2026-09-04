@@ -21,7 +21,7 @@ env_er_nsa_titles_kea <- c(
   ),
   paste0(
     jump_page,
-    "Regarding the implementation any major operational or structural changes during the calendar year impacting performance in this key performance area, ",
+    "Regarding the implementation of major operational or structural changes during the calendar year impacting performance in this key performance area, ",
     head_suffix
   ),
   paste0(
@@ -171,14 +171,19 @@ cap_er_nsa_titles_atfm <- c(
   paste0(jump_page, 
          "Regarding the reasons and circumstances resulting in the achieved level of actual performance of the en route ATFM delay per flight KPI, ",  head_suffix),
   paste0(jump_page, 
+         if_else(!knitr::is_latex_output(),"\n\n", ""),
          "Regarding the description of the adjustments to the capacity plan included in adopted performance plan, ",  head_suffix),
   paste0(jump_page, 
+         if_else(!knitr::is_latex_output(),"\n\n", ""),
          "Regarding the identification and analysis by the NSA of the underlying reasons or circumstances having led to the performance target not being achieved, ",  head_suffix),
   paste0(jump_page, 
+         if_else(!knitr::is_latex_output(),"\n\n", ""),
          "Regarding recommendations to the ANSP to rectify the situation, ",  head_suffix),
   paste0(jump_page, 
+         if_else(!knitr::is_latex_output(),"\n\n", ""),
          "Regarding remedial measures that have been / will be taken by the ANSP to rectify the situation, ",  head_suffix),
   paste0(jump_page, 
+         if_else(!knitr::is_latex_output(),"\n\n", ""),
          "Regarding follow up of the remedial measures indicated in the previous monitoring report(s), ",  head_suffix)
   
 )
