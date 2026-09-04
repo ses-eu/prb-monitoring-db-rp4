@@ -746,6 +746,23 @@ cap_apt_pis_actual <- readxl::read_xlsx(
   as_tibble() %>%
   clean_names()
 
+# for sorting french airports by movements
+apt_traffic <- readxl::read_xlsx(
+  here(data_folder, cap_data_file),
+  sheet = "TRM_ATFM_DELAY_MM",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() |>
+  filter(year >= rp_min_year) |>
+  select(country_name, year, month, arp_code, arp_name, ttf_arr) |>
+  group_by(country_name, year, arp_code, arp_name) |>
+  summarise(
+    ttf_arr = sum(ttf_arr, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+
 #### AVG PEAK THROUPUT ----
 cap_avg_peak_tp_actual <- readxl::read_xlsx(
   here(data_folder, cap_data_file),

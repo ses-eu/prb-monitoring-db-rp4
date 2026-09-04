@@ -24,12 +24,12 @@
 #| out.width: "100%"
 ```
 
-```{r chart_cef_trm_2, options = (cz=c("2", "terminal", "level1")), eval = (params$no_tcz == 2), include = FALSE}
+```{r chart_cef_trm_2, options = (cz=c("2", "terminal", "level1")), eval = (params$no_tcz >= 2), include = FALSE}
 #| file: R/chart_level1_cef.R
 #| out.width: "100%"
 ```
 
-```{r chart_cef_trm_3, options = (cz=c("3", "terminal", "level1")), eval = (params$no_tcz == 3), include = FALSE}
+```{r chart_cef_trm_3, options = (cz=c("3", "terminal", "level1")), eval = (params$no_tcz >= 3), include = FALSE}
 #| file: R/chart_level1_cef.R
 #| out.width: "100%"
 ```
@@ -848,6 +848,31 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 `r layout_2fig("chart_axot_asma_country", "chart_axot_apt")`
 
+```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+#| file: R/table_level2_env_apt_pis.R
+#| include: false
+```
+
+
+``` {r, eval=!(params$no_tcz == 0 | params$country == params$rp_full), include=(!(params$no_tcz == 0 | params$country == params$rp_full))}
+#| echo: false
+#| results: asis
+ 
+cat(make_quarto_latex_table_2level(
+  title = paste0("Airport level"),
+  df = data_prep_pdf,    
+  caption_fontsize = c(10, 10),
+  body_fontsize = c(8, 9.6),
+  col_align = "lrrrrrrrrrrrrrrr",
+  col_widths = c(10,rep(90/15,15)),
+  wrap_raw_block = FALSE,
+  header_row_height_ex = 2.4,
+  row_extrarowheight_pt = 2,
+  paginate = (country == "France") 
+))
+```
+
+
 \needspace{3\baselineskip}
 
 `\biggertext{Focus on AXOT, AXIT \& ASMA}`{=latex}
@@ -906,31 +931,6 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_nsa_env_trm_asma.qmd", as.character(ye
 replace_headings(path, env_trm_nsa_titles_asma)
 
 ``` 
-
-
-```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
-#| file: R/table_level2_env_apt_pis.R
-#| include: false
-```
-
-
-``` {r, eval=!(params$no_tcz == 0 | params$country == params$rp_full), include=(!(params$no_tcz == 0 | params$country == params$rp_full))}
-#| echo: false
-#| results: asis
- 
-cat(make_quarto_latex_table_2level(
-  title = paste0("Airport level"),
-  df = data_prep_pdf,    
-  caption_fontsize = c(10, 10),
-  body_fontsize = c(8, 9.6),
-  col_align = "lrrrrrrrrrrrrrrr",
-  col_widths = c(10,rep(90/15,15)),
-  wrap_raw_block = FALSE,
-  header_row_height_ex = 2.4,
-  row_extrarowheight_pt = 2,
-  paginate = (country == "France") 
-))
-```
 
 
 `r if (params$country == "Malta") ":::"`

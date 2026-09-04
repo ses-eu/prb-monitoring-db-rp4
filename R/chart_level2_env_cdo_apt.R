@@ -4,6 +4,17 @@ if (!exists("data_loaded")) {
 }
 
 data_raw <- cdo_cco_actual
+data_raw_mvt <- apt_traffic
+
+apt_cdo_france <- apt_traffic |>
+  filter(
+    country_name == .env$country,
+    year == year_report
+  ) |>
+  arrange(desc(ttf_arr)) |>
+  slice_head(n = 20) |>
+  select(arp_code) |>
+  pull()
 
 ## prepare data ----
 airports_country <- airports_table %>%
@@ -21,9 +32,7 @@ data_filtered <- data_raw %>%
 ### We take the top 15 airports for France
 if (country == "France") {
   data_filtered <- data_filtered |>
-    filter(is.na(nbr_flights_descent) == FALSE) |>
-    arrange(desc(nbr_flights_descent)) |>
-    slice_head(n = 15)
+    filter(apt_icao %in% apt_cdo_france)
 }
 
 data_prep <- data_filtered %>%
@@ -110,7 +119,7 @@ if (knitr::is_latex_output()) {
   )
   c_title_font_size <- c_title_font_size * pdf_ratio
   c_textfont_size <- c_textfont_size * pdf_ratio
-  c_minsize <- c_textfont_size * pdf_ratio
+  c_minsize <- max(8, c_textfont_size)
 
   c_xaxis_tickfont_size <- c_xaxis_tickfont_size * pdf_ratio
 

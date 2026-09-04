@@ -6,12 +6,20 @@ if (!exists("data_loaded")) {
 
 data_raw <- rbind(axot_actual_apt, axit_actual_apt, asma_actual_apt)
 
+big_airports <- airports_table |>
+  filter(
+    country_name == .env$country,
+    big == 1
+  ) |>
+  select(apt_code) |>
+  pull()
+
+
 ## prepare data ----
 data_prep <- data_raw %>%
   filter(
-    state == .env$country,
     year == .env$year_report,
-    airport_code %in% airports_table$apt_code
+    airport_code %in% big_airports
   ) %>%
   left_join(airports_table, by = c("airport_code" = "apt_code")) %>%
   mutate(

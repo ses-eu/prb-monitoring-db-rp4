@@ -7,11 +7,18 @@ data_raw_axot <- axot_actual_apt
 data_raw_asma <- asma_actual_apt
 data_raw_axit <- axit_actual_apt
 
+big_airports <- airports_table |>
+  filter(
+    country_name == .env$country,
+    big == 1
+  ) |>
+  select(apt_code) |>
+  pull()
+
 ## prepare data ----
 data_prep_axot <- data_raw_axot %>%
   filter(
-    state == .env$country,
-    airport_code %in% airports_table$apt_code
+    airport_code %in% big_airports
   ) %>%
   mutate_at(
     vars(-one_of(c('year', 'airport_code'))),
@@ -28,8 +35,7 @@ data_prep_axot <- data_raw_axot %>%
 
 data_prep_asma <- data_raw_asma %>%
   filter(
-    state == .env$country,
-    airport_code %in% airports_table$apt_code
+    airport_code %in% big_airports
   ) %>%
   mutate_at(
     vars(-one_of(c('year', 'indicator_type', 'airport_code'))),
@@ -44,8 +50,7 @@ data_prep_asma <- data_raw_asma %>%
 
 data_prep_axit <- data_raw_axit %>%
   filter(
-    state == .env$country,
-    airport_code %in% airports_table$apt_code
+    airport_code %in% big_airports
   ) %>%
   mutate_at(
     vars(-one_of(c('year', 'airport_code'))),
