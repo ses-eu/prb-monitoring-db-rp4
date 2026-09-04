@@ -26,7 +26,7 @@ Number of ACC ATCOs in OPS who have stopped working in the OPS room (FTEs): 6.09
 
 ### **Description of the training process, including details on the effective failure rate and the process used to allocate newly qualified ATCOs between ACC, APP and TWR positions**
 
-Additional information for the above tables
+Additional information for the above tables:
 
 The values in lines \"Number ATCO trainees at year end\", for planned and actual values, are totals (No of persons) at the given year\'s end of Staff categories 3 (Ab-initio trainees) and 4 (On-the-job trainees) as defined in EUROCONTROL Specification for Economic Information Disclosure.
 
@@ -34,7 +34,7 @@ The actual values in line "Number of trainees entering the training program(s) d
 
 The actual value in line "Number of trainees completing the training program(s) during the year" for 2025 includes 43 new ATCOs, while the total number of new trainees completing the training program during 2025 was 45 (this value includes 2 endorsements of ATCOs who completed the training program in 2024, but they at once started another training; those ATCOs have been employed under PRU1 category only from 2025).
 
-Description of the training process
+Description of the training process:
 
 In 2025 PANSA was the only organisation under the Performance Scheme involved in the ATCO training process.
 

@@ -1,6 +1,6 @@
-## **2.3.2.E. PI #5**
+## **2.3.2.A. PI #1**
 
 ### **Please provide background information on the actual performance: - If performance improved compared to previous years, please describe the measures that were implemented (if any), - If performance deteriorated compared to previous years, please explain the reasons which lead to the deterioration, and describe the improvement measures which are planned to improve performance. How does the NSA intend on monitoring their effectiveness on performance**
 
-Data on this PI has been included in the scope of the SES monitoring activities for the first time in 2025. Therefore, the NSA will provide comments on y-o-y trends in the AMR 2026.
+EBBR is in line with requirements. Performance is quite stable over years, and slightly improved by +0.1% compared to 2024.
 

@@ -1,10 +1,10 @@
-## **2.2.2.F. PI #6**
+## 2.2.2.F. PI #6
 
-### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
+### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
 
 The NSAs are monitoring the performance by using the SES dashboards
 
-https://www.sesperformance.eu/dataportal/vis/2025/
+\[[link](https://www.sesperformance.eu/dataportal/vis/2025/)\].
 
 Direct coordination between NSAs and ANSPs is done regularly and additionally ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
 
@@ -32,7 +32,7 @@ Values for LFPO and LFPG achievements are standard thanks to AMAN/XMAN implement
 
 skeyes : no initiative is currently planned at skeyes.
 
-### **If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation**
+### If the data at airport level are not available, please explain the reasons why data is missing and describe the measures planned to resolve the situation
 
 N/A
 
