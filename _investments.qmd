@@ -192,29 +192,35 @@ table3
 #| echo: false
 
 source("R/table_invest_cost_nature.R")
-table1
+if(table_exists) {
+  table1} else {
+  cat(paste0(main_ansp, " does not provide ", cost_type, " services", "."))
+  }
+
 ```
 
 ```{r, eval=(params$no_tcz != 0 | params$country == params$rp_full)}
 #| echo: false
-table2
+if(table_exists) {
+  table2}
 ```
 
 ```{r, eval=(params$no_tcz != 0 | params$country == params$rp_full)}
 #| echo: false
-table3
+if(table_exists) {
+  table3}
 ```
 
 <br>
 
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+`r if (params$country == params$rp_full | params$country == "Sweden") "::: {.content-hidden}"`
 ::: {layout="[10, 80, 10]"}
 :::: {#empty_div}
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_difference_cost_trm, eval=(params$no_tcz != 0 & params$country != params$rp_full), options= (cost_type = "terminal")}
+```{r chart_invest_difference_cost_trm, eval=(params$no_tcz != 0 & params$country != params$rp_full & params$country != "Sweden"), options= (cost_type = "terminal")}
 #| file: R/chart_invest_difference_cost.R
 #| out.width: "100%"
 ```
@@ -223,7 +229,7 @@ table3
 :::: {#empty_div}
 ::::
 :::
-`r if (params$country == params$rp_full) ":::"`
+`r if (params$country == params$rp_full | params$country == "Sweden") ":::"`
 
 `r if (params$no_tcz == 0 & params$country != params$rp_full) ":::"`
 

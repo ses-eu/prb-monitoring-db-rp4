@@ -83,12 +83,12 @@ if (nrow(data_pre_calc) == 0) {
       names_from = "year",
       values_from = "value"
     ) |>
-    # mutate(
-    #   category = factor(
-    #     category,
-    #     levels = c(other_categories, end_categories)
-    #   )
-    # ) |>
+    mutate(
+      category = factor(
+        category,
+        levels = c(paste0("Total costs SDO – ", 1:10))
+      )
+    ) |>
     arrange(category, type)
 
   data_prep1 <- data_prep %>%

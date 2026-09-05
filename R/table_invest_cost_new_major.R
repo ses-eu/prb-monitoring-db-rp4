@@ -15,7 +15,7 @@ data_calc <- data_costs |>
     member_state == .env$country,
     ansp_type == "Main",
     !is.na(name_of_investment),
-    name_of_investment != 'n/a'
+    !name_of_investment %in% c('n/a', '0')
   ) |>
   # mutate(
   #   name_of_investment = if_else(

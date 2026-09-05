@@ -13,8 +13,11 @@ data_pre_prep <- data_assets |>
     type_of_investment %in%
       c(
         "New major investment",
+        "New major investments",
+        "Other new investment",
         "Other new investments",
         "Additional new major investment",
+        "Additional new major investments",
         "Additional other new investment",
         "Additional other new investments"
       ) &
@@ -47,12 +50,15 @@ data_prep <- data_pre_prep |>
   ) |>
   select(type, mymetric)
 
+eu_share <- data_prep |> pull(mymetric) * 100
 
-# table ----
+inv_decimals <- ceiling(abs(min(1, log10(eu_share))))
+
+# table ---  -
 table1 <- mygtable(data_prep, myfont) |>
   fmt_percent(
     columns = 2, # replace with your actual column name
-    decimals = 0
+    decimals = inv_decimals
   ) |>
   tab_options(column_labels.hidden = TRUE) |>
   tab_style(
@@ -63,50 +69,10 @@ table1 <- mygtable(data_prep, myfont) |>
     locations = cells_body(
       rows = c(1)
     )
+  ) |>
+  cols_width(
+    c(2) ~ pct(15)
   )
-
-# tab_options(
-#   column_labels.background.color = "#F2F2F2",
-#   column_labels.font.weight = 'bold',
-#   container.padding.y = 0
-# ) %>%
-# cols_align(columns = 1, align = "left") %>%
-# cols_label(
-#   type = html(paste0(
-#     "Total value of the asset for new investments (M€<sub>",
-#     cef_ref_year,
-#     "</sub>)"
-#   )),
-#   value = total_value
-# )
-
-#
-# fmt_number(
-#   columns = 2, # replace with your actual column name
-#   decimals = 2,
-#   use_seps = TRUE,
-#   sep_mark = ",",
-#   dec_mark = "."
-# ) %>%
-# fmt_percent(
-#   columns = 3, # replace with your actual column name
-#   decimals = 0
-# ) %>%
-# tab_style(
-#   style = list(
-#     cell_text(weight = "bold")
-#   ),
-#   locations = cells_body(
-#     rows = c(1, 4)
-#   )
-# ) %>%
-# tab_style(
-#   style = cell_text(indent = px(20)),
-#   locations = cells_body(
-#     columns = c(type),
-#     rows = type == "Additional" | type == "Included in the performance plan"
-#   )
-# )
 
 # create latex table
 if (knitr::is_latex_output()) {

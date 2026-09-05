@@ -14,7 +14,7 @@ data_prep <- data_costs |>
     member_state == .env$country,
     ansp_type == "Main",
     !is.na(name_of_investment),
-    name_of_investment != 'n/a'
+    !name_of_investment %in% c('n/a', '0')
   ) |>
   select(category = name_of_investment, contains("20"), -contains("wacc")) |>
   group_by(category) |>
@@ -40,7 +40,8 @@ data_prep <- data_costs |>
     xlabel = category,
     type,
     mymetric = value
-  )
+  ) |>
+  mutate(xlabel = sapply(xlabel, wrap_label))
 
 ## find number of investments
 no_investments <- data_prep %>% nrow() / 2

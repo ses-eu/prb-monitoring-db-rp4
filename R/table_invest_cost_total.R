@@ -81,7 +81,12 @@ data_prep <- bind_rows(
   mutate(
     category = case_when(
       category == 'New major investment' ~ 'New major investments from RP4',
+      category == 'New major investments' ~ 'New major investments from RP4',
       category == 'Other new investments' ~ 'Other new investments from RP4',
+      category == 'Other new investment' ~ 'Other new investments from RP4',
+      category == 'Major investment from RP3' ~ 'Major investments from RP3',
+      category ==
+        'Existing investment from previous RPs' ~ 'Existing investments from previous RPs',
       .default = category
     ),
     category = factor(

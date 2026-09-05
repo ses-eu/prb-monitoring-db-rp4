@@ -43,7 +43,7 @@ data_prep <- data_costs |>
 # chart ----
 ## chart parameters ----
 local_suffix <- ""
-local_decimals <- 0
+local_decimals <- 1
 
 ###set up order of traces
 local_hovertemplate <- paste0('%{y:,.', local_decimals, 'f}', local_suffix)

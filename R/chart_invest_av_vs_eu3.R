@@ -15,6 +15,7 @@ data_pre_prep <- data_assets |>
         "New major investment",
         "New major investments",
         "Other new investments",
+        "Other new investment",
         "Additional new major investment",
         "Additional new major investments",
         "Additional other new investment",

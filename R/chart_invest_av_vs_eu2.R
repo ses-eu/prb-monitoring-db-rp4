@@ -13,8 +13,11 @@ data_pre_prep <- data_assets |>
     type_of_investment %in%
       c(
         "New major investment",
+        "New major investments",
         "Other new investments",
+        "Other new investment",
         "Additional new major investment",
+        "Additional new major investments",
         "Additional other new investment",
         "Additional other new investments"
       ) &

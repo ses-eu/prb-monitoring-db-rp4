@@ -7,11 +7,12 @@ data_assets <- readxl::read_xlsx(
   as_tibble() %>%
   clean_names() |>
   mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .))) |>
-  rename(
-    value_of_the_assets = value_of_the_assets_allocated_to_ans_in_the_scope_of_the_pp_in_national_currency
-  ) |>
   mutate(
-    value_of_the_assets = as.numeric(value_of_the_assets)
+    value_of_the_assets = en_route_asset_value + terminal_asset_value,
+    across(
+      where(is.character),
+      ~ stringr::str_remove_all(.x, stringr::fixed("_x000D_"))
+    )
   )
 
 data_costs <- readxl::read_xlsx(
@@ -31,7 +32,15 @@ data_costs_rt <- readxl::read_xlsx(
 ) %>%
   as_tibble() %>%
   clean_names() |>
-  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .)))
+  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .))) |>
+  mutate(
+    member_state = case_when(
+      str_detect(ansp_name, "MUAC") ~ "MUAC",
+      tolower(ansp_name) == "skeyes" ~ "Belgium",
+      tolower(ansp_name) == "ana lux" ~ "Luxembourg",
+      .default = member_state
+    )
+  )
 
 data_costs_cp1 <- readxl::read_xlsx(
   here(data_folder, investments_data_file),
