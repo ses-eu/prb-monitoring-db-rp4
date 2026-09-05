@@ -227,6 +227,9 @@ if (year_folder == "rp4") {
 xrate_ref <- context_data[[paste0("xrate", cef_ref_year)]]
 
 no_apt_big <- context_data$no_apts_big
+if (country %in% c("FABEC", "MUAC", "Network Manager", rp_full)) {
+  no_apt_big <- 0
+}
 no_apt_small <- context_data$no_apts_small
 
 other_orgs <- other_orgs_table %>% filter(state == .env$country)
