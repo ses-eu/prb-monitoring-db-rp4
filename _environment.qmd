@@ -227,7 +227,7 @@ replace_headings(path, env_er_nsa_titles_kea)
 
 ## Terminal performance
 
-`r if (params$country == "Malta") ":::: {.content-hidden}"`
+`r if (params$no_apt_big == 0) ":::: {.content-hidden}"`
 
 ::: {#container-axot-asma}
 
@@ -253,7 +253,7 @@ replace_headings(path, env_er_nsa_titles_kea)
 :::::
 
 ::::: {.chart-container}  
-```{r chart-axot-apt}
+```{r chart-axot-apt, eval=!(params$no_tcz == 0 | params$no_apt_big == 0)}
 #| file: R/chart_level2_env_axot_apt.R
 #| out.width: "100%"
 ```
@@ -265,15 +265,15 @@ replace_headings(path, env_er_nsa_titles_kea)
 ::::
 
 :::
-`r if (params$country == "Malta") ":::"`
+`r if (params$no_apt_big == 0) ":::"`
 
 
-`r if (params$country == "Malta") "::: {.content-hidden}"`
+`r if (params$no_apt_big == 0) "::: {.content-hidden}"`
 
 ::: {#container-env-apt-pis}
 :::: {#table-env-apt-pis}
 
-```{r table-env-apt-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+```{r table-env-apt-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full | params$no_apt_big == 0)}
 #| file: R/table_level2_env_apt_pis.R
 #| out.width: "100%"
 ```
@@ -342,7 +342,7 @@ replace_headings(path, env_trm_nsa_titles_asma)
 ``` 
 :::
 
-`r if (params$country == "Malta") ":::"`
+`r if (params$no_apt_big == 0) ":::"`
 
 
 

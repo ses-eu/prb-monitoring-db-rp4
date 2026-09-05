@@ -674,7 +674,9 @@ if (out_format == 'web') {
           '- text: "En route performance indicators at ACC level"',
           'href: capacity.html#en-route-performance-indicators-at-acc-level-pi4-5',
           '- text: "Other information"',
-          'href: capacity.html#other-en-route-information'
+          'href: capacity.html#other-en-route-information',
+          '- text: "AXOT, AXIT & ASMA"',
+          'href: environment.html#additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6'
         )
 
         for (i in 1:length(lines_to_comment)) {
@@ -727,8 +729,8 @@ if (out_format == 'web') {
       tx <- append(tx, tx_cap, cap_block_beg + length(tx_env))
       tx <- append(tx, tx_tcz, cef_block_beg + length(tx_cap) + +length(tx_env))
 
-      ### malta, remove axit section ----
-      if (country == "Malta") {
+      ###  remove axit section for states without big airports ----
+      if (no_apt_big == 0) {
         lines_to_comment <- c(
           '- text: "AXOT, AXIT & ASMA"',
           'href: environment.html#additional-taxi-out-time-axot-pi4-additional-taxi-in-time-axit-pi5-arrival-sequencing-and-metering-area-asma-time-pi6'

@@ -842,19 +842,19 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 
 ## Terminal performance
 
-`r if (params$country == "Malta") "::: {.content-hidden}"`
+`r if (params$no_apt_big == 0) "::: {.content-hidden}"`
 
 ### Additional taxi-out time (AXOT) (PI#4), Additional taxi-in time (AXIT) (PI#5) & Arrival Sequencing and Metering Area (ASMA) time (PI#6)
 
 `r layout_2fig("chart_axot_asma_country", "chart_axot_apt")`
 
-```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full | params$no_apt_big == 0)}
 #| file: R/table_level2_env_apt_pis.R
 #| include: false
 ```
 
 
-``` {r, eval=!(params$no_tcz == 0 | params$country == params$rp_full), include=(!(params$no_tcz == 0 | params$country == params$rp_full))}
+``` {r, eval=!(params$no_tcz == 0 | params$country == params$rp_full | params$no_apt_big == 0), include=(!(params$no_tcz == 0 | params$country == params$rp_full | params$no_apt_big == 0))}
 #| echo: false
 #| results: asis
  
@@ -933,7 +933,7 @@ replace_headings(path, env_trm_nsa_titles_asma)
 ``` 
 
 
-`r if (params$country == "Malta") ":::"`
+`r if (params$no_apt_big == 0) ":::"`
 
 ###  Vertical flight efficiency of the descent (PI#7) and of the climb (PI#8)
 
