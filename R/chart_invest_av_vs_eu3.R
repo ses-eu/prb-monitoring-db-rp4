@@ -21,6 +21,7 @@ data_pre_prep <- data_assets |>
   ) |>
   select(
     member_state,
+    ansp_type,
     value_of_the_assets,
     new_atm_system,
     overhaul_of_existing_atm_system,
@@ -32,30 +33,13 @@ data_pre_prep <- data_assets |>
     unknown
   ) |>
   mutate(
-    across(-c(member_state, unknown), ~ replace_na(.x, "0")),
-    across(-c(member_state, unknown), ~ as.numeric(.x)),
-  ) |>
-  select(
-    member_state,
-    value_of_the_assets,
-    new_atm_system,
-    overhaul_of_existing_atm_system,
-    other_atm,
-    cns,
-    infrastructure,
-    ancillary,
-    other,
-    unknown
+    across(-c(member_state, unknown, ansp_type), ~ replace_na(.x, "0")),
+    across(-c(member_state, unknown, ansp_type), ~ as.numeric(.x)),
   ) |>
   pivot_longer(
-    -c(member_state, value_of_the_assets),
+    -c(member_state, value_of_the_assets, ansp_type),
     values_to = "value",
     names_to = "type"
-  ) |>
-  group_by(member_state, type) |>
-  summarise(
-    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
-    .groups = "drop"
   ) |>
   mutate(
     type = case_when(
@@ -71,9 +55,12 @@ data_pre_prep <- data_assets |>
     )
   )
 
+
 data_prep_uw <- data_pre_prep |>
   group_by(type) |>
-  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") |>
+  summarise(
+    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
+    .groups = "drop") |>
   mutate(
     mymetric = 100 * value / sum(value, na.rm = TRUE),
     xlabel = "Union-wide"
@@ -81,7 +68,11 @@ data_prep_uw <- data_pre_prep |>
   select(xlabel, type, mymetric)
 
 data_prep_ansp <- data_pre_prep |>
-  filter(member_state == .env$country) |>
+  filter(member_state == .env$country & ansp_type == "Main") |>
+  group_by(type) |>
+  summarise(
+    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
+    .groups = "drop") |>
   mutate(
     mymetric = 100 * value / sum(value, na.rm = TRUE),
     xlabel = "ANSP"

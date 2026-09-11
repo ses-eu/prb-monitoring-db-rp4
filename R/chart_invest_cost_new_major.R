@@ -13,6 +13,13 @@ data_prep <- data_costs |>
   filter(
     member_state == .env$country,
     ansp_type == "Main",
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Additional major investment",
+        "Additional major investment"
+      ),
     !is.na(name_of_investment),
     !name_of_investment %in% c('n/a', '0')
   ) |>
@@ -89,7 +96,7 @@ myplot <- mybarchart2(
   bargap = 0.25,
   barmode = 'group',
 
-  title_text = paste0("Total costs of major investments - RP", rp),
+  title_text = paste0("Total costs of new major investments - RP", rp),
   title_y = 0.99,
 
   textfont_size = myfont - 2,
@@ -97,7 +104,8 @@ myplot <- mybarchart2(
   xaxis_tickangle = -90,
 
   yaxis_title = paste0(
-    "Total costs of investments\nin RP",
+    "Total costs of new major investments\n",
+    "in RP",
     rp,
     " (M€<sub>",
     cef_ref_year,
@@ -117,13 +125,22 @@ myplot <- mybarchart2(
   margin = list(t = 60)
 )
 
-if (country == "Spain") {
-  myplot |>
-    layout(
-      yaxis = list(
-        range = c(0, 400)
-      )
+# if (country == "Spain") {
+#   myplot |>
+#     layout(
+#       yaxis = list(
+#         range = c(0, 400)
+#       )
+#     )
+# } else {
+myplot |>
+  layout(
+    yaxis = list(
+      rangemode = "nonnegative"
+    ),
+    xaxis = list(
+      rangemode = "nonnegative",
+      zeroline = FALSE
     )
-} else {
-  myplot
-}
+  )
+# }

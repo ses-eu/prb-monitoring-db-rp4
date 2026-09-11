@@ -10,9 +10,10 @@ if (!exists("data_costs")) {
 
 # process data  ----
 data_calc_all <- data_costs |>
-  filter(ansp_type == "Main") |>
+  filter() |>
   select(
     member_state,
+    ansp_type,
     type_of_investment,
     contains('20'),
     -contains("wacc")
@@ -21,7 +22,7 @@ data_calc_all <- data_costs |>
 if (country != rp_full) {
   data_calc_filtered <- data_calc_all |>
     filter(
-      member_state == .env$country
+      member_state == .env$country & ansp_type == "Main"
     )
 } else {
   data_calc_filtered <- data_calc_all

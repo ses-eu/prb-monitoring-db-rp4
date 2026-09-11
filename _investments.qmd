@@ -13,7 +13,7 @@ title-block: false
 
 path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_inv.qmd", as.character(year_report),country,country, as.character(year_report))
 
-replace_headings(path, character(0))
+# replace_headings(path, character(0))
 
 ``` 
 
@@ -78,7 +78,7 @@ replace_headings(path, character(0))
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu3}
+```{r chart_invest_av_vs_eu3, eval = FALSE, include=FALSE}
 #| file: R/chart_invest_av_vs_eu3.R
 #| out.width: "100%"
 ```
@@ -195,10 +195,8 @@ table3
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 
 ```{r chart_invest_difference_cost_country_e, eval=(params$country == params$rp_full), options= (cost_type = "en route")}
-
-# <!-- #| file: R/chart_invest_difference_cost_country.R -->
-# <!-- #| out.width: "100%" -->
-
+#| file: R/chart_invest_difference_cost_country.R
+#| out.width: "100%"
 ```
 
 `r if (params$country != params$rp_full) ":::"`
@@ -259,10 +257,8 @@ if(table_exists) {
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 ```{r chart_invest_difference_cost_country_t, eval=(params$country == params$rp_full), options= (cost_type = "terminal")}
-
-# <!-- #| file: R/chart_invest_difference_cost_country.R -->
-# <!-- #| out.width: "100%" -->
-
+#| file: R/chart_invest_difference_cost_country.R
+#| out.width: "100%"
 ```
 `r if (params$country != params$rp_full) ":::"`
 
@@ -277,17 +273,23 @@ if(table_exists) {
 #| echo: false
 
 source("R/table_invest_cost_new_major.R")
-table1
+if(table_exists) {
+  table1} else {
+  cat(paste0("No new major investments."))
+  }
+
 ```
 
 ```{r, eval=(params$country != params$rp_full)}
 #| echo: false
-table2
+if(table_exists) {
+  table2} 
 ```
 
 ```{r, eval=(params$country != params$rp_full)}
 #| echo: false
-table3
+if(table_exists) {
+  table3} 
 ```
 
 <br>
@@ -311,7 +313,7 @@ no_investments <- 0
 
 
 
-`r if (no_investments > 6)"::: {.content-hidden}"`
+`r if (no_investments > 6 | no_investments == 0)"::: {.content-hidden}"`
 ::: {layout="[ 10, 80, 10 ]"}
 :::: {#empty_div}
 ::::
@@ -326,7 +328,7 @@ no_investments <- 0
 :::: {#empty_div}
 ::::
 :::
-`r if (no_investments > 6)":::"`
+`r if (no_investments > 6  | no_investments == 0)":::"`
 `r if (params$country == params$rp_full) ":::"`
 
 

@@ -21,8 +21,7 @@ data_pre_prep <- data_assets |>
         "Additional new major investments",
         "Additional other new investment",
         "Additional other new investments"
-      ) &
-      ansp_type == "Main"
+      ) 
   ) |>
   mutate(
     type = case_when(

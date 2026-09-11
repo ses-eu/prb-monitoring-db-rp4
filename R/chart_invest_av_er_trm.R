@@ -16,10 +16,9 @@ data_calc <- data_assets |>
         "New major investments",
         "Additional new major investment",
         "Additional new major investments"
-      ) &
-      ansp_type == "Main"
+      ) 
   ) |>
-  group_by(member_state) |>
+  group_by(member_state, ansp_type) |>
   summarise(
     en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),
     terminal_asset_value = sum(terminal_asset_value, na.rm = TRUE),
@@ -28,7 +27,8 @@ data_calc <- data_assets |>
 
 if (country != rp_full) {
   data_pre_prep <- data_calc |>
-    filter(member_state == .env$country)
+    filter(member_state == .env$country&
+             ansp_type == "Main")
 } else {
   data_pre_prep <- data_calc |>
     summarise(
@@ -88,7 +88,7 @@ if (nrow(data_pre_prep) != 0) {
     data_prep,
     height = myheight - 95,
     colors = c('#22A0DD', '#044598'),
-    hovertemplate = "%{label}: %{value}%",
+    hovertemplate = "%{label}: %{value:.1f}%<extra></extra>",
     title_text = "Asset value: en route and terminal",
     minsize = 14,
     legend_x = local_legend_x,

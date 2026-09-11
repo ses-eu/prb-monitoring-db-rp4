@@ -2,47 +2,66 @@ if (!exists("country")) {country <- "Bulgaria"}
 if (!exists("cost_type")) {cost_type <- "terminal"}
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_costs_rt")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-if (cost_type == "en route") {
-  data_filtered <- data_cost_ses %>% 
+  data_filtered <- data_costs_rt |> 
+    filter(tolower(en_route_terminal) == cost_type) |> 
     select(
-      member_state = state,
-      dif = difference_a_d_value_en_route,
-      dif_perc = difference_a_d_percent_en_route
-    ) %>% 
-    filter(member_state != "Luxembourg")
-} else {
-  data_filtered <- data_cost_ses %>% 
+      member_state,
+      contains('20')) |> 
+    group_by(member_state) |> 
+    summarise(
+      across(where(is.numeric), ~ sum(.x, na.rm = TRUE) / 10^3),
+      .groups = "drop"
+    ) |> 
+    pivot_longer(
+      cols = -member_state,
+      names_to = c("year", "type"),
+      names_pattern = "^x(\\d{4})([da])$",
+      values_to = "value"
+    ) |> 
+    filter(
+      year <= year_report
+    ) |> 
+    pivot_wider(
+      names_from = "type",
+      values_from = "value"
+    ) |> 
+    group_by(member_state) |> 
+    summarise(
+      d = sum(d, na.rm = TRUE),
+      a = sum(a, na.rm = TRUE)
+    ) |> 
+    mutate(
+      mymetric = d-a,
+      myothermetric = (d/a -1)*100
+    ) |> 
     select(
-      member_state = state,
-      dif = difference_a_d_value_terminal,
-      dif_perc = difference_a_d_percent_terminal
-    ) %>% 
-    filter(!(is.na(dif)))
-}
+      xlabel = member_state,
+      mymetric,
+      myothermetric
+    ) |> 
+    filter(
+      !is.na(mymetric) & !is.na(myothermetric)
+    ) |> 
+    arrange(desc(mymetric))
 
-data_calc <- data_filtered %>% 
+sort_country <- data_filtered |> select( xlabel) |> pull()
+  
+data_prep <- data_filtered |> 
+select (xlabel, mymetric)  |> 
   mutate(
-    dif = dif / 10^6,
-    dif_perc = dif_perc  * 100
-  ) %>% 
-  select(
-    member_state,
-    mymetric = dif,
-    myothermetric = dif_perc
-  ) %>% 
-  arrange(desc(mymetric)) %>% 
-  mutate(xlabel = factor(member_state, levels = member_state))
+    xlabel = factor(xlabel, levels = sort_country),
+    type = "Difference (magnigude)"
+    )
 
-data_prep <- data_calc %>% select (xlabel, mymetric) %>%
-  mutate(type = "Difference (magnigude)")
-
-data_prep2 <- data_calc %>% select (xlabel, myothermetric) %>%
-  mutate(type = "Difference %")
+data_prep2 <- data_filtered %>% select (xlabel, myothermetric) %>%
+  mutate(
+    xlabel = factor(xlabel, levels = sort_country),
+    type = "Difference %")
 
 # chart ----
 ## chart parameters ----

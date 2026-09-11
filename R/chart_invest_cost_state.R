@@ -3,7 +3,7 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_costs")) {
+if (!exists("data_cost_inv")) {
   source("R/get_investment_data.R")
 }
 

@@ -20,16 +20,15 @@ data_pre_prep <- data_assets |>
         "Additional new major investments",
         "Additional other new investment",
         "Additional other new investments"
-      ) &
-      ansp_type == "Main"
+      )
   ) |>
   mutate(
     type_of_investment = case_when(
-      type_of_investment == "New major investments" ~ "New major investment",
+      type_of_investment == "New major investment" ~ "New major investments",
       type_of_investment ==
-        "Additional new major investment" ~ "New major investment",
+        "Additional new major investment" ~ "New major investments",
       type_of_investment ==
-        "Additional new major investments" ~ "New major investment",
+        "Additional new major investments" ~ "New major investments",
       type_of_investment == "Other new investment" ~ "Other new investments",
       type_of_investment ==
         "Additional other new investment" ~ "Other new investments",
@@ -38,18 +37,22 @@ data_pre_prep <- data_assets |>
       .default = type_of_investment
     )
   ) |>
-  group_by(member_state, type_of_investment) |>
+  group_by(member_state, type_of_investment, ansp_type) |>
   summarise(
     value_of_the_assets = sum(value_of_the_assets, na.rm = TRUE),
     .groups = "drop"
-  ) |>
-  group_by(member_state) |>
-  mutate(mymetric = value_of_the_assets / sum(value_of_the_assets) * 100) |>
-  ungroup() |>
+  ) |> 
   rename(type = type_of_investment)
 
 
 data_prep_uw <- data_pre_prep |>
+  group_by(member_state, type) |>
+  summarise(
+    value_of_the_assets = sum(value_of_the_assets, na.rm = TRUE),
+    .groups = "drop"
+  ) |> 
+  group_by(member_state) |>
+  mutate(mymetric = value_of_the_assets / sum(value_of_the_assets) * 100) |>
   group_by(type) |>
   summarise(
     mymetric = median(mymetric),
@@ -62,19 +65,14 @@ data_prep_uw <- data_pre_prep |>
 
 
 data_prep_ansp <- data_pre_prep |>
-  filter(member_state == .env$country) |>
+  filter(member_state == .env$country &
+           ansp_type == "Main") |>
+  mutate(mymetric = value_of_the_assets / sum(value_of_the_assets) * 100) |>
   mutate(xlabel = "ANSP") |>
   select(xlabel, type, mymetric)
 
 data_prep <- rbind(data_prep_ansp, data_prep_uw) |>
-  mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide median"))) |>
-  mutate(
-    type = if_else(
-      type == "New major investment",
-      "New major investments",
-      type
-    )
-  )
+  mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide median"))) 
 
 
 # chart ----
