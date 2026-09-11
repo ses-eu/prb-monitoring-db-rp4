@@ -12,8 +12,7 @@ data_prep_eosm <- data_raw_eosm %>%
   select(
     ms,
     entity_name,
-    year,
-    eo_sm_score
+    year
   )
 
 data_prep_maturity <- data_raw_maturity %>%
@@ -175,7 +174,7 @@ myc <- function(local_width, local_height, local_font, local_margin) {
         # tickcolor = 'rgb(127,127,127)',
         # ticks = 'outside',
         zeroline = TRUE,
-        range = c(0, 110),
+        range = c(0, 90),
         tickvals = c(20, 40, 60, 80, 100),
         ticktext = c("A  ", "B  ", "C  ", "D  ", "  "),
         zerolinecolor = 'rgb(240,240,240)',

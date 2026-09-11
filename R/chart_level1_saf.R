@@ -16,8 +16,7 @@ data_prep_eosm <- saf_eosm %>%
   select(
     ms,
     entity_name,
-    year,
-    eo_sm_score
+    year
   ) %>%
   arrange(
     entity_name,

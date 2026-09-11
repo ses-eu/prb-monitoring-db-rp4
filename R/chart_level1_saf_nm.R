@@ -73,26 +73,28 @@ myc <- function(mywidth, myheight, myfont, mymargin) {
   ) %>%
     add_trace(
       inherit = FALSE,
-      data = data_prep_maturity,
+      data = filter(data_prep_maturity, type == "Assurance"),
       x = ~year,
-      y = 60,
+      y = c(NA, NA, NA, NA, 60),
       yaxis = "y1",
       type = 'scatter',
       mode = "line",
       name = "Target other MOs",
+      marker = list(color = PRBTargetColor, size = 9),
       line = list(color = PRBTargetColor, width = 3, dash = 'solid'),
       hoverinfo = 'none',
       showlegend = F
     ) %>%
     add_trace(
       inherit = FALSE,
-      data = data_prep_maturity,
+      data = filter(data_prep_maturity, type == "Assurance"),
       x = ~year,
-      y = 80,
+      y = c(NA, NA, NA, NA, 80),
       yaxis = "y1",
       type = 'scatter',
       mode = "line",
       name = "Target risk mgt",
+      marker = list(color = PRBTargetColor, size = 9),
       line = list(color = PRBTargetColor, width = 3, dash = 'solid'),
       # hovertemplate = paste0('%{x}'),
       hoverinfo = 'none',
