@@ -47,6 +47,8 @@ data_actual_trend <- data_raw %>%
   filter(status == "A") %>%
   arrange(year) %>%
   mutate(
+    # baseline value as defined by ec decision
+    duc_value = if_else(year == rp_min_year - 1, 55.07, duc_value),
     duc_py = lag(duc_value, 1),
     mymetric = (duc_value / duc_py - 1) * 100
   ) %>%
