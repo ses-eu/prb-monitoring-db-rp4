@@ -2,7 +2,7 @@ if (!exists("country") | is.na(country)) {
   country = "Spain"
 }
 if (exists("cztype") == FALSE) {
-  cztype = "terminal"
+  cztype = "enroute"
 }
 if (!exists("data_loaded")) {
   source("R/get_data.R")
@@ -155,6 +155,9 @@ c_xaxis_tickformat <- "%b"
 c_yaxis_title <- "ATFM delay (min/flight)"
 c_yaxis_tickformat <- ".2f"
 
+### ticks
+max_check <- max(data_prep_actual$mymetric, na.rm = TRUE)
+
 # plot chart ----
 p1 <- mybarchart2(
   data_prep_actual,
@@ -206,7 +209,7 @@ p1 <- mybarchart2(
     yaxis = list(rangemode = "tozero")
   )
 
-p1 %>%
+p2 <- p1 %>%
   add_annotations(
     data = data_prep_total,
     x = ~xlabel,
@@ -217,3 +220,31 @@ p1 %>%
     font = list(color = "black", size = mytextfont_size - 1),
     yshift = c_yshift
   )
+
+if (max_check > 0.05) {
+p2
+} else if (max_check != 0) {
+  p2 |> 
+    layout(
+      yaxis = list(
+        tickmode = "linear",
+        tick0 = 0,
+        dtick = 0.01,
+        rangemode = "tozero",
+        tickformat = ".2f"
+      )
+    )
+  
+} else {
+  p2 |> 
+    layout(
+      yaxis = list(
+        tickmode = "linear",
+        range = c(0, 0.01),
+        tick0 = 0,
+        dtick = 0.01,
+        rangemode = "tozero",
+        tickformat = ".2f"
+      )
+    )
+}

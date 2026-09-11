@@ -57,7 +57,10 @@ c_title_y <- 0.95
 
 #### yaxis
 c_yaxis_title <- paste0("% of en route ATFM Delay minutes")
-c_yaxis_tickformat <- ",.0f"
+
+check_max <- max(data_prep$mymetric, na.rm = TRUE)
+
+c_yaxis_tickformat <- if_else(check_max <=2, ",.1f", ",.0f")
 
 c_margin <- list(t = 60)
 
@@ -89,4 +92,26 @@ p1 <- mybarchart2(
 )
 
 
-p1
+
+
+if (all(is.na(data_prep$mymetric)) | sum(data_prep$mymetric, na.rm = TRUE) == 0) {
+  p1 |> 
+    layout(
+      xaxis = list(
+        type = "linear",
+        range = c(rp_min_year - 0.5, rp_max_year + 0.5),
+        tickmode = "array",
+        tickvals = seq(rp_min_year, rp_max_year, by = 1),
+        ticktext = as.character(seq(rp_min_year, rp_max_year, by = 1)),
+        showticklabels = TRUE
+      ),
+      yaxis = list(
+        # rangemode = "nonnegative",
+        range = c(0, 1),
+        dtick = 1
+      )
+    )
+} else {
+  
+  p1
+}

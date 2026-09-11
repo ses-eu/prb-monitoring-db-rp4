@@ -31,7 +31,7 @@ data_prep_acc <- data_raw |>
 
 data_prep_ansp <- data_prep_acc %>%
   group_by(type, year) %>%
-  summarise(value = sum(value)) %>%
+  summarise(value = sum(value, na.rm = TRUE)) %>%
   mutate(acc = if_else(country == rp_full, rp_full, main_ansp)) %>%
   ungroup()
 
@@ -81,7 +81,7 @@ myc <- function(
         y = ~value,
         yaxis = "y1",
         cliponaxis = FALSE,
-        yaxis = "y1",
+        # yaxis = "y1",
         type = 'scatter',
         mode = 'lines+markers',
         line = list(width = linewidth, dash = 'solid'),
@@ -98,7 +98,7 @@ myc <- function(
         opacity = 1,
         visible = ifelse(i == 1, TRUE, FALSE), # Set the initial visibility
         # visible = c(rep(TRUE, 2), rep(FALSE, length(acc_list_for_chart)*2 - 2)),  # Set the initial visibility
-        # hovertemplate = paste('Target: %{y:.2f}%<extra></extra>'),
+        hovertemplate = paste('%{fullData.name}: %{y:.1f}<extra></extra>'),
         # hoverinfo = "none",
         showlegend = T
       ) %>%
@@ -185,7 +185,7 @@ myc <- function(
         showline = FALSE,
         tickformat = ",",
         tickprefix = " ",
-        # rangemode = "tozero",
+        rangemode = "tozero",
         # autorange = 'max',
         # showticklabels = TRUE,
         # tickcolor = 'rgb(127,127,127)',
