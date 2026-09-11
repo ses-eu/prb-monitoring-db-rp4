@@ -161,7 +161,13 @@ if (nrow(data_pre_calc) == 0) {
     ungroup() %>%
     select(-type) %>%
     mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) %>%
-    mutate(category = purrr::map(category, gt::html))
+    mutate(category = purrr::map(category, gt::html)) |> 
+    mutate(
+      across(
+        all_of(rp_short),
+        ~ replace(.x, year_report < rp_max_year, NA)
+      )
+    )
 
   # render tables ----
   first_column_width <- 40

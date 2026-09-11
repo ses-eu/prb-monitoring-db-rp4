@@ -10,9 +10,9 @@ if (!exists("data_costs")) {
 
 # process data  ----
 data_calc_all <- data_costs |>
-  filter(ansp_type == "Main") |>
   select(
     member_state,
+    ansp_type,
     category = type_of_investment,
     contains('20'),
     -contains("wacc")
@@ -21,7 +21,7 @@ data_calc_all <- data_costs |>
 if (country != rp_full) {
   data_calc_filtered <- data_calc_all |>
     filter(
-      member_state == .env$country
+      member_state == .env$country & ansp_type == "Main"
     )
 } else {
   data_calc_filtered <- data_calc_all
@@ -191,7 +191,13 @@ data_prep3 <- data_prep %>%
   select(-type) %>%
   mutate(category = purrr::map(category, gt::html)) %>%
   relocate(category, .before = everything()) %>%
-  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x)))
+  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) |> 
+  mutate(
+    across(
+      all_of(rp_short),
+      ~ replace(.x, year_report < rp_max_year, NA)
+    )
+  )
 
 
 # render tables ----

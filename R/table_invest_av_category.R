@@ -16,11 +16,11 @@ data_calc <- data_assets |>
         "New major investments",
         "Additional new major investment",
         "Additional new major investments"
-      ) &
-      ansp_type == "Main"
+      ) 
   ) |>
   select(
     member_state,
+    ansp_type,
     value_of_the_assets,
     new_atm_system,
     overhaul_of_existing_atm_system,
@@ -32,19 +32,15 @@ data_calc <- data_assets |>
     unknown
   ) |>
   mutate(
-    across(-c(member_state, unknown), ~ replace_na(.x, "0")),
-    across(-c(member_state, unknown), ~ as.numeric(.x)),
+    across(-c(member_state, unknown, ansp_type), ~ replace_na(.x, "0")),
+    across(-c(member_state, unknown, ansp_type), ~ as.numeric(.x)),
   ) |>
   pivot_longer(
-    -c(member_state, value_of_the_assets),
+    -c(member_state, value_of_the_assets, ansp_type),
     values_to = "value",
     names_to = "type"
   ) |>
-  group_by(member_state, type) |>
-  summarise(
-    value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
-    .groups = "drop"
-  ) |>
+  group_by(member_state, type, ansp_type) |>
   mutate(
     type = case_when(
       type == "new_atm_system" ~ "New ATM system",
@@ -61,12 +57,18 @@ data_calc <- data_assets |>
 
 if (country != rp_full) {
   data_pre_prep <- data_calc |>
-    filter(member_state == .env$country)
+    filter(member_state == .env$country &
+             ansp_type == "Main") |> 
+    summarise(
+      value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
+      .groups = "drop"
+    ) 
+    
 } else {
   data_pre_prep <- data_calc |>
     group_by(type) |>
     summarise(
-      value = sum(value, na.rm = TRUE),
+      value = sum(value * value_of_the_assets, na.rm = TRUE) / 10^6,
       .groups = "drop"
     ) |>
     mutate(
@@ -93,7 +95,7 @@ if (nrow(data_pre_prep) != 0) {
       )
     ) |>
     arrange(type) |>
-    select(type, value, share)
+    select(type, value)
 
   total_value <- format(
     janitor::round_half_up(sum(data_prep$value, na.rm = TRUE), 2),
@@ -108,15 +110,15 @@ if (nrow(data_pre_prep) != 0) {
       container.padding.y = 0
     ) %>%
     cols_align(columns = 1, align = "left") %>%
-    cols_label(
-      type = html(paste0(
-        "Total value of the asset for new major investments (M€<sub>",
-        cef_ref_year,
-        "</sub>)"
-      )),
-      value = total_value,
-      share = "% of total"
-    ) %>%
+    # cols_label(
+    #   type = html(paste0(
+    #     "Total value of the asset for new major investments (M€<sub>",
+    #     cef_ref_year,
+    #     "</sub>)"
+    #   )),
+    #   value = total_value
+    #   # share = "% of total"
+    # ) %>%
     fmt_number(
       columns = 2, # replace with your actual column name
       decimals = 2,
@@ -124,10 +126,10 @@ if (nrow(data_pre_prep) != 0) {
       sep_mark = ",",
       dec_mark = "."
     ) %>%
-    fmt_percent(
-      columns = 3, # replace with your actual column name
-      decimals = 0
-    ) %>%
+    # fmt_percent(
+    #   columns = 3, # replace with your actual column name
+    #   decimals = 0
+    # ) %>%
     tab_style(
       style = list(
         # cell_text(weight = "bold")
@@ -135,7 +137,15 @@ if (nrow(data_pre_prep) != 0) {
       locations = cells_body(
         columns = 1
       )
+    ) |>
+    tab_options(
+      column_labels.hidden = TRUE
+    )|>
+    tab_footnote(
+      footnote = "When summing the assets for new major investments by investment type, the total may differ from the overall asset value for new major investments, as some investments have been categorised under multiple investment types.",
+      locations = cells_column_labels(columns = type)
     )
+  
   table1
 } else {
   cat("No new major investments.")

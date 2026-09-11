@@ -17,10 +17,9 @@ data_calc <- data_assets %>%
         "New major investments",
         "Additional new major investment",
         "Additional new major investments"
-      ) &
-      ansp_type == "Main"
+      ) 
   ) |>
-  group_by(member_state) |>
+  group_by(member_state, ansp_type) |>
   summarise(
     en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),
     terminal_asset_value = sum(terminal_asset_value, na.rm = TRUE),
@@ -29,7 +28,8 @@ data_calc <- data_assets %>%
 
 if (country != rp_full) {
   data_pre_prep <- data_calc |>
-    filter(member_state == .env$country)
+    filter(member_state == .env$country &
+             ansp_type == "Main")
 } else {
   data_pre_prep <- data_calc |>
     summarise(

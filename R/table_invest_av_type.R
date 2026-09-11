@@ -21,8 +21,7 @@ data_calc <- data_assets |>
         "Additional new major investments",
         "Additional other new investment",
         "Additional other new investments"
-      ) &
-      ansp_type == "Main"
+      )
   ) |>
   mutate(
     type_of_investment = case_when(
@@ -43,12 +42,12 @@ data_calc <- data_assets |>
       .default = type_of_investment
     )
   ) |>
-  group_by(member_state, type_of_investment) |>
+  group_by(member_state, ansp_type, type_of_investment) |>
   summarise(
     value_of_the_assets = sum(value_of_the_assets, na.rm = TRUE),
     .groups = "drop"
   ) |>
-  group_by(member_state) |>
+  group_by(member_state, ansp_type) |>
   mutate(
     value = value_of_the_assets / 10^6
   ) |>
@@ -56,7 +55,10 @@ data_calc <- data_assets |>
 
 if (country != rp_full) {
   data_pre_prep <- data_calc |>
-    filter(member_state == .env$country) |>
+    filter(
+      member_state == .env$country &
+        ansp_type == "Main"
+    ) |>
     select(
       type = type_of_investment,
       value

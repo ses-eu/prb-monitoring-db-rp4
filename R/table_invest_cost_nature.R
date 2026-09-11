@@ -15,14 +15,14 @@ if (!exists("data_costs_rt")) {
 # process data  ----
 data_calc_all <- data_costs_rt |>
   filter(
-    tolower(en_route_terminal) == cost_type &
-      ansp_type == "Main"
+    tolower(en_route_terminal) == cost_type 
   )
 
 if (country != rp_full) {
   data_calc_filtered <- data_calc_all |>
     filter(
-      member_state == .env$country
+      member_state == .env$country &
+        ansp_type == "Main"
     )
 } else {
   data_calc_filtered <- data_calc_all
@@ -171,7 +171,13 @@ if (nrow(data_calc) != 0) {
     ungroup() %>%
     select(-type) %>%
     mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) %>%
-    mutate(category = purrr::map(category, gt::html))
+    mutate(category = purrr::map(category, gt::html))|> 
+    mutate(
+      across(
+        all_of(rp_short),
+        ~ replace(.x, year_report < rp_max_year, NA)
+      )
+    )
 
   # render tables ----
   first_column_width <- 40

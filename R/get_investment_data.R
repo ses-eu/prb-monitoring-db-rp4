@@ -196,7 +196,7 @@ data_funding_rt <- readxl::read_xlsx(
 #
 # ## SES case ----
 # data_cost_ses <- readxl::read_xlsx(
-#   here(data_folder, investments_data_file),
+#   here(data_folder, investments_data_file_old),
 #   sheet = "Union-wide chart",
 #   range = cell_limits(c(1, 30), c(NA, 40))
 # ) %>%
