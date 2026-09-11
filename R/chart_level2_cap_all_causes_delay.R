@@ -74,6 +74,9 @@ myplot <- mybarchart2(
     xaxis = list(
       range = c(rp_min_year - 0.5, rp_max_year + 0.5),
       tickformat = '.0f'
+    ),
+    yaxis = list(
+      rangemode = "nonnegative"
     )
   )
 
