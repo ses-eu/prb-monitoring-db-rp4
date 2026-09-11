@@ -1,6 +1,6 @@
 ## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
-Average ATFM arrival delay in Germany was 0.37 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 0.46 min/arr.
+Average ATFM arrival delay in Germany was 0.37 min/arr in 2025, the first year of RP4. The performance has improved compared to 2024, last year of RP3, when there were 0.46 min/arr.
 
 The national average is primarily driven by Frankfurt airport, which suffered 0.87 min/arr compared to 1.15 min/arr in 2024. After this improvement, Frankfurt met its individual 2025 target of 0.90 min/arr. The other main airport, Munich, also met its target (0.43 min/arr) by presenting 0.36 min/arr.
 

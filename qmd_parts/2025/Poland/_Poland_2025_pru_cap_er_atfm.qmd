@@ -4,7 +4,7 @@
 
 -   PANSA applied en route ATFM regulations resulting in 136k minutes of delay, a reduction from the 175k minutes in 2024.
 
--   As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, 2k minutes of delay originating in Poland were re-attributed **to other ANSPs.**
+-   As part of the strategic traffic re-orientation programme (S25/NTDM) operated by the Network Manager, 2k minutes of delay originating in Poland were re-attributed to other ANSPs.
 
 -   When the above post-operations re-attribution is factored in, the total en route delay for PANSA in 2025 was 134k minutes in 2025 down from 172k minutes in 2024.
 

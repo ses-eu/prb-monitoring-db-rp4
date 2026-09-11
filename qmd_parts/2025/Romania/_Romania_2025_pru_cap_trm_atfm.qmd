@@ -1,6 +1,6 @@
 ## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
-Average ATFM arrival delay in Romania was 0.17 min/arr in 2025, the first year of RP4. The **performance is very close to 2024**, last year of RP3, when there were 0.12 min/arr.
+Average ATFM arrival delay in Romania was 0.17 min/arr in 2025, the first year of RP4. The performance is very close to 2024, last year of RP3, when there were 0.12 min/arr.
 
 However, it should be noted that in RP4 there are nine more airports included in Romania's report. Focusing on Bucharest Otopeni, the main airport, ATFM arrival delay went from 0.13 min/arr in 2024 to 0.29 min/arr in 2025 but still remained below Performance Plan individual airport target. All other airports had no ATFM arrival delay in 2025.
 

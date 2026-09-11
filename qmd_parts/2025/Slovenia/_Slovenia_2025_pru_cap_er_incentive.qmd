@@ -4,7 +4,7 @@ The Slovenian NSA reports a financial bonus for the ANSP because of the 2025 per
 
 The NSA reports an achieved CRSTMP performance of 0.03 mins/flight but does not report how this value was verified.
 
-**[The value of the bonus needs to be confirmed.]{.mark}**
+The NSA reports a bonus of €225,200 for the ANSP.
 
 \[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified\]
 

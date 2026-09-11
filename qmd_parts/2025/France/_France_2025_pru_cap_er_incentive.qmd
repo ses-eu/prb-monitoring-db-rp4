@@ -6,5 +6,5 @@ For DSNA, the local incentive target for en route ATFM delays, due to CRSTMP cau
 
 The FABEC NSAs report an achieved CRSTMP performance, for DSNA, of 1.38 mins/flight using data from the ansperformance.eu dashboard including post ops adjustments. \[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified.\]
 
-Subsequently, DSNA is liable for a financial penalty of € 6 889 117, for its 2025 en route capacity performance.
+Subsequently, DSNA is liable for a financial penalty of € 6,889,117 for its 2025 en route capacity performance.
 

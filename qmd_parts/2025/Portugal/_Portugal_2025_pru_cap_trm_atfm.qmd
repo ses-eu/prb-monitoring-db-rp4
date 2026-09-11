@@ -1,6 +1,6 @@
 ## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
-Average ATFM arrival delay in Portugal was 1.88 min/arr in 2025, the first year of RP4. The **performance has improved compared to 2024**, last year of RP3, when there were 2.70 min/arr. This represents a 30% reduction in average.
+Average ATFM arrival delay in Portugal was 1.88 min/arr in 2025, the first year of RP4. The performance has improved compared to 2024, last year of RP3, when there were 2.70 min/arr. This represents a 30% reduction in average.
 
 Both of the main airports in RP4 contributed to this reduction:
 

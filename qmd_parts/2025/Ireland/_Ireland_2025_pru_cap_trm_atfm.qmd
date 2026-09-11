@@ -1,6 +1,6 @@
 ## TRM1.1. Terminal and airport ANS ATFM arrival delay per flight (KPI#2)
 
-Average ATFM arrival delay in Ireland was 0.28 min/arr in 2025, the first year of RP4. The **performance remains very close to 2024**, last year of RP3, when there were 0.32 min/arr.
+Average ATFM arrival delay in Ireland was 0.28 min/arr in 2025, the first year of RP4. The performance remains very close to 2024, last year of RP3, when there were 0.32 min/arr.
 
 2025 delays took place mainly at Dublin airport (0.33 min/arr) as Cork (0.01 min/arr) and Shannon (0.00 min/arr) had very little to no delay.
 

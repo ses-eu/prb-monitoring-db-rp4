@@ -8,7 +8,7 @@ For DFS, the local incentive target for en route ATFM delays, due to CRSTMP caus
 
 The FABEC NSAs report an achieved CRSTMP performance, for DFS, of 0.57 mins/flight using data from the ansperformance.eu dashboard including post ops adjustments. \[NB The attribution of original delay causes on the ansperformance.eu dashboard is unverified.\]
 
-Subsequently, DFS is liable for a financial penalty of € 4 809 209, for its 2025 en route capacity performance.
+Subsequently, DFS is liable for a financial penalty of € 4,809,209 for its 2025 en route capacity performance.
 
 For MUAC, the local incentive target for en route AFTM delays, due to CRSTMP causes only, was set at 0.19 mins/flight, (with a deadband of +/- 0.04 mins).
 
