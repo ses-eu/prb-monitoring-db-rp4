@@ -1,5 +1,5 @@
 if (exists("cztype") == FALSE) {
-  cztype = "enroute"
+  cztype = "terminal"
 }
 if (!exists("data_loaded")) {
   source("R/utils.R")
@@ -12,10 +12,16 @@ if (country == rp_full) {
   ## import data  ----
   if (cztype == "enroute") {
     data_raw_actual <- cap_ert_atfm_actual_ses
+    data_raw_target <- cap_ert_target_ses
   } else {
     data_raw_actual <- cap_trm_atfm_actual_ses
+    data_raw_target <- cap_ert_target_ses |> 
+      # we don't show the target for SES - PRB instruction
+      mutate(
+        delay_target = NA
+      )
   }
-  data_raw_target <- cap_ert_target_ses
+  
 } else {
   # state case ----
   ## import data  ----
