@@ -56,7 +56,7 @@ data_prep <- data_prep_target %>%
         format(janitor::round_half_up(Actual, 2), nsmall = 2),
         "</span>",
         if_else(
-          Actual <= Target,
+          janitor::round_half_up(Actual, 2) <= janitor::round_half_up(Target, 2),
           "<span style='color:green; font-weight:bold; font-size:0.8rem;'>&nbsp;&nbsp;&#10003;</span>",
           "<span style='color:red; font-size:0.8rem;'>&nbsp;&nbsp;&#10008;</span>"
         )
@@ -70,6 +70,7 @@ data_prep_pdf <- data_prep_target |>
   left_join(data_prep_actual, by = "State") |>
   mutate(
     Actual = format(janitor::round_half_up(Actual, 2), nsmall = 2),
+    Target = format(janitor::round_half_up(Target, 2), nsmall = 2),
     "_" = if_else(Actual <= Target, 1, 0)
   )
 
