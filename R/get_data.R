@@ -97,26 +97,26 @@ rt_tsu <- readxl::read_xlsx(
 
 
 ## targets ----
-traffic_target <- readxl::read_xlsx(
-  here(data_folder, targets_data_file),
-  sheet = "IFR_MVTS",
-  range = cell_limits(c(3, 1), c(NA, NA))
-) %>%
-  as_tibble() %>%
-  clean_names() %>%
-  select(state, year, x121_ecz_name, x121_ecz_ifr_mvt, x121_ecz_su) %>%
-  mutate(
-    x121_ecz_name = stringr::str_replace_all(
-      x121_ecz_name,
-      "Portugal Continental",
-      "Portugal-Continental"
-    ),
-    x121_ecz_name = stringr::str_replace_all(
-      x121_ecz_name,
-      "Belgium-Luxembourg",
-      "Belgium/Luxembourg"
-    )
-  )
+# traffic_target <- readxl::read_xlsx(
+#   here(data_folder, targets_data_file),
+#   sheet = "IFR_MVTS",
+#   range = cell_limits(c(3, 1), c(NA, NA))
+# ) %>%
+#   as_tibble() %>%
+#   clean_names() %>%
+#   select(state, year, x121_ecz_name, x121_ecz_ifr_mvt, x121_ecz_su) %>%
+#   mutate(
+#     x121_ecz_name = stringr::str_replace_all(
+#       x121_ecz_name,
+#       "Portugal Continental",
+#       "Portugal-Continental"
+#     ),
+#     x121_ecz_name = stringr::str_replace_all(
+#       x121_ecz_name,
+#       "Belgium-Luxembourg",
+#       "Belgium/Luxembourg"
+#     )
+#   )
 
 # SAF ----
 ## State ----

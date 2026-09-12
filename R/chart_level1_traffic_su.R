@@ -6,7 +6,7 @@ if (!exists("data_loaded")) {
 }
 
 data_raw <- statfor_tsu
-data_raw_planned <- traffic_target
+# data_raw_planned <- traffic_target
 data_raw_rts <- rt_tsu
 
 # prepare data ----
@@ -81,19 +81,18 @@ data_prep_actual <- data_prep_rts |>
   select(year, tsu = x5_4_total_su, rank = status) |>
   arrange(year)
 
-data_prep_planned <- data_raw_planned %>%
-  filter(
-    if (country == "Spain") {
-      x121_ecz_name == country
-    } else {
-      state == country
-    },
-    year >= rp_min_year
-  ) %>%
-  select(state, year, x121_ecz_su) %>%
-  group_by(year) %>%
-  summarise(tsu = sum(x121_ecz_su, na.rm = TRUE)) %>%
-  mutate(rank = 'Determined')
+data_prep_planned <- data_prep_rts |>
+  filter(status == "D", year >= rp_min_year) |>
+  mutate(
+    tsu = x5_4_total_su / 1000,
+    rank = "Determined"
+  ) |>
+  select(
+    year,
+    rank,
+    tsu
+  )
+
 
 if (country == rp_full) {
   data_prep_planned <- data_prep_rts_ses %>%
