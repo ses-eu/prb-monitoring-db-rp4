@@ -2,7 +2,7 @@
 
 ### **TZ1.1.1. AUC VS. DUC**
 
-In 2025, the terminal AUC was -5.7% (or -361.70 CZK2022, -14.75 €2022) lower than the planned DUC. This results from the combination of higher than planned TNSUs (+3.1%) and lower than planned terminal costs in real terms (-2.8%, or -15.2 MCZK2022, -0.6 M€2022).
+In 2025, the terminal AUC was -5.7% (or -361.02 CZK2022, -14.72 €2022) lower than the planned DUC. This results from the combination of higher than planned TNSUs (+3.1%) and lower than planned terminal costs in real terms (-2.8%, or -15.1 MCZK2022, -0.6 M€2022).
 
 ### **TZ1.1.2. TERMINAL SERVICE UNITS**
 
@@ -22,7 +22,7 @@ Based on the additional information to the terminal reporting tables, the lower 
 
 - Significantly lower than planned depreciation (-16.5%), mainly because some planned system upgrades were postponed.
 
-- Significantly lower than planned cost of capital (-9.7%), mainly due to a gap in some investments resulting in a lower NBV of fixed assets.
+- Significantly lower than planned cost of capital (-9.5%), mainly due to a gap in some investments resulting in a lower NBV of fixed assets.
 
 ### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 

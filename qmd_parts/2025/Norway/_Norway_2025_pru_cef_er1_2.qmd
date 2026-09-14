@@ -2,17 +2,15 @@
 
 ### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (581.90 NOK or 49.73 €) is -1.1% lower than the nominal DUC (588.45 NOK or 50.29 €) which includes DUC initially charged: 599.14 NOK (or 51.20 € ), and DUC to be charged retroactively: -10.69 NOK (or -0.91 € ). The difference between the AUCU and the nominal DUC (-6.55 NOK/SU or -0.56 €/SU) is due to:
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (580.87 NOK or 49.64 €) is -1.3% lower than the nominal DUC (588.45 NOK or 50.29 €) which includes DUC initially charged: 599.14 NOK (or 51.20 €), and DUC to be charged retroactively: -10.69 NOK (or -0.91 €). The difference between the AUCU and the nominal DUC (-7.58 NOK/SU or -0.65 €/SU) is due to:
 
 - the positive inflation adjustment resulting from higher than planned inflation (+0.84 NOK/SU or +0.07 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-7.45 NOK/SU or -0.64 €/SU); and,
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-8.49 NOK/SU or -0.73 €/SU); and,
 
 - the addition of the traffic adjustment (+0.07 NOK/SU or +0.01 €/SU) for the costs not subject to traffic risk sharing.
 
-The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 8.1%.
-
-Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.9%.
 
 ### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
 

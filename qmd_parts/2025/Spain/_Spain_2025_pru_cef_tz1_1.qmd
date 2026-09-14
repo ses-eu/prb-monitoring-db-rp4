@@ -10,13 +10,13 @@ The difference between actual and planned TNSUs (+3.6%) falls outside the ±2% d
 
 ### **TZ1.1.3. TERMINAL COSTS BY ENTITY**
 
-Actual real terminal costs are -12.1% (-14.7 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ENAIRE (-12.5%, or -14.5 M€2022), the NSA (-6.3%, or -0.1 M€2022) and the MET service provider (-0.9%, or 0.03 M€2022).
+Actual real terminal costs are -12.1% (-14.7 M€2022) lower than planned. This is the result of lower costs for the main ANSP, ENAIRE (-12.5%, or -14.5 M€2022), the NSA (-6.3%, or -0.1 M€2022) and the MET service provider (-0.9%, or -0.03 M€2022).
 
 ### **TZ1.1.4. TERMINAL COSTS FOR THE MAIN ANSP (ENAIRE) AT CHARGING ZONE LEVEL**
 
 Based on the additional information to the terminal reporting tables, the significantly lower than planned terminal costs in real terms for ENAIRE in 2025 (-12.5%, or -14.5 M€2022) result from:
 
-- Significantly lower than planned staff costs (-13.7%), driven by "*significant decrease in "Other Staff Related Benefits", due to lower-than-expected allocations to provisions related to the Special Active Reserve (RAE) and, to a lesser extent, the Active Reserve (RA)*" (as of RP4 these provisions are treated as pension costs).
+- Significantly lower than planned staff costs (-13.7%), driven by "*significant decrease in "Other Staff Related Benefits", due to lower-than-expected allocations to provisions related to the Special Active Reserve (RAE, see below for details) and, to a lesser extent, the Active Reserve (RA)*" (as of RP4 these provisions are treated as pension costs).
 
 - Significantly lower than planned other operating costs (-11.1%), in particular for professional services, communications, insurance and energy-related items.
 
@@ -24,9 +24,11 @@ Based on the additional information to the terminal reporting tables, the signif
 
 - Higher than planned cost of capital (+4.8%), mainly driven by higher average interest on debt while the total asset base remained slightly below the determined level.
 
+\*According to ENAIRE, the reduction in staff costs associated with the RAE should not be interpreted as an efficiency gain, a cost-saving measure, or a positive deviation from ENAIRE's 2025 planning. It results from the annual actuarial valuation of a long-term employment obligation, performed by an independent external actuarial firm, which led to a reduction in the estimated liability and, consequently, to a reversal of provisions recognised in previous years. Therefore, this decrease does not reflect any operational improvement, management decision, productivity gain, or cost-efficiency measure implemented by ENAIRE during 2025. It is a non-operational accounting adjustment arising from the reassessment of obligations generated in prior years and outside the scope of ENAIRE's annual planning and performance.
+
 ### **TZ1.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 
-The NSA of Spain Continental provides the following overall assessment of the actual performance in 2025 at charging zone level:
+The NSA of Spain provides the following overall assessment of the actual performance in 2025 at charging zone level:
 
 *"The reduction in costs is mainly due to widespread savings across the majority of the entities. In general, there have been decreases across all actual cost categories compared to the determined costs for the year 2025. For further details, please refer to the Additional Information file.*
 

@@ -34,7 +34,9 @@ The NSA of France provides the following overall assessment of the actual perfor
 
 ### **TZ1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 
-No information was provided in the NSA 2025 Monitoring Report.
+The NSA provides the following explanation:
+
+*"Regarding the actual unit costs, 2025 achievement is slightly higher than the target, but this is due to the difference between the actual traffic compared to the STATFOR forecast (-3,9%). The domestic traffic is recovering at a slower pace than expected, compared to international and overflights."*
 
 ### **TZ1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (DSNA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 

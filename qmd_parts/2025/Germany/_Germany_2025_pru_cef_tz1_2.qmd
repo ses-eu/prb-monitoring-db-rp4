@@ -2,11 +2,11 @@
 
 ### **TZ1.2.1. FOCUS ON TERMINAL AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (260.38 €) is -6.1% lower than the nominal DUC (277.42 €) which includes DUC initially charged: 281.64 €, and DUC to be charged retroactively: -4.22 €. The difference between the AUCU and the nominal DUC (-17.04 €/SU) is due to:
+The actual terminal unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (256.15 €) is -7.7% lower than the nominal DUC (277.42 €) which includes DUC initially charged: 281.64 €, and DUC to be charged retroactively: -4.22 €. The difference between the AUCU and the nominal DUC (-21.27 €/SU) is due to:
 
 - the positive inflation adjustment resulting from higher than planned inflation (+0.48 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.14 €/SU);
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-4.37 €/SU);
 
 - the addition of the traffic adjustment (+0.03 €/SU) for the costs not subject to traffic risk sharing;
 
@@ -16,17 +16,13 @@ The actual terminal unit cost incurred by airspace users (AUCU) in respect of ac
 
 - the application of a lower unit rate as foreseen in Art. 29(6) in year 2025 (-15.63 €/SU).
 
-The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 7.7%.
-
-Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
+The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 3.8%.
 
 ### **TZ1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
 
 The NSA of Germany provides the following information regarding the initiatives:
 
-*"During the last years the PI was primarily influenced by regulatory adjustments according to Art. 29 (6), adjustments for traffic risk sharing and inflation as well as the incurred malus from the incentive scheme. The indicator is monitored on an ongoing basis while the possibility and necessity of a regulatory adjustment through Art. 29(6) is being assessed respectively. Art. 29(6) has been used to lower unit rates multiple times in the past years.*
-
-*Referring to (...) the cost-exempt from cost-sharing, (...) the value provided is provisional since the verification in accordance with Article 28 (7) of IR (EU) 2019/317 is not yet finalised since it is only due by 1 September 2026."*
+*"During the last years the PI was primarily influenced by regulatory adjustments according to Art. 29 (6), adjustments for traffic risk sharing and inflation as well as the incurred malus from the incentive scheme. The indicator is monitored on an ongoing basis while the possibility and necessity of a regulatory adjustment through Art. 29(6) is being assessed respectively. Art. 29(6) has been used to lower unit rates multiple times in the past years."*
 
 ### **TZ1.2.3. NOTES** 
 

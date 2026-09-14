@@ -14,7 +14,7 @@ Actual real en route costs are -1.3% (-0.3 M€2022) lower than planned. This is
 
 ### **ER1.1.4. EN ROUTE COSTS FOR THE MAIN ANSP (ORO NAVIGACIJA) AT CHARGING ZONE LEVEL**
 
-The slightly lower than planned en route costs in real terms for Oro Navigacija in 2025 (-0.9%, or -0.2 M€2022) are mainly due to higher than planned actual inflation index (+1.3 p.p), since, in nominal terms, the costs were slightly above plan (+0.3%). Based on the additional information to the terminal reporting tables, this results from:
+The slightly lower than planned en route costs in real terms for Oro Navigacija in 2025 (-0.9%, or -0.2 M€2022) are mainly due to higher than planned actual inflation index (+1.3 p.p), since, in nominal terms, the costs were slightly above plan (+0.3%). Based on the additional information to the en route reporting tables, this results from:
 
 - Slightly higher than planned staff costs (+0.7%), mainly driven by a higher share of costs allocated to en-route services as overflight traffic exceeded expectations, while staffing levels remained below plan.
 
@@ -30,15 +30,13 @@ The slightly lower than planned en route costs in real terms for Oro Navigacija 
 
 The NSA of Lithuania provides the following overall assessment of the actual performance in 2025 at charging zone level:
 
-*"The actual en route unit costs in Lithuania\'s charging zone, expressed at 2022 prices, were lower by -4.3% than the determined real en route unit costs. This resulted due to higher by +3.1% than planned number of total en route service units and both the lower by -0.3% number of total costs expressed in nominal terms and higher inflation than it was forecasted at the time of drafting RP4 PP. Consequently, the combination of higher traffic and lower real costs expressed at 2022 prices resulted in actual en route unit costs below the determined en route unit costs."*
-
-\[It should be noted that some of the amounts indicated by the NSA in the analysis cited above and provided in the respective data table in the NSA Monitoring Report differ from the amounts reported in the submission of en route reporting tables.\]
+*"The actual en route unit costs in Lithuania\'s charging zone, expressed at 2022 prices, were lower by -4.2% than the determined real en route unit costs. This resulted due to higher by +3.1% than planned number of total en route service units and both the lower by -0.2% number of total costs expressed in nominal terms and higher inflation than it was forecasted at the time of drafting RP4 PP. Consequently, the combination of higher traffic and lower real costs expressed at 2022 prices resulted in actual en route unit costs below the determined en route unit costs."*
 
 ### **ER1.1.6. EXPLANATION OF THE DIFFERENCES BETWEEN ACTUAL AND DETERMINED COSTS AT CHARGING ZONE LEVEL REPORTED BY THE NSA**
 
 The NSA provides the following explanation for the differences between actual and determined costs in the charging zone:
 
-*"At the charging zone level, the difference between the actual and determined costs is very small (-0.3%)."*
+*"At the charging zone level, the difference between the actual and determined costs is very small (-0.2%)."*
 
 ### **ER1.1.7. RECOMMENDATIONS FORMULATED BY THE NSA TO THE ANSP (ORO NAVIGACIJA) TO RECTIFY THE SITUATION AND ACTIONS TAKEN BY THE ANSP**
 

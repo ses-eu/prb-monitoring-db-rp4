@@ -2,7 +2,7 @@
 
 ### **ER1.1.1. AUC VS. DUC**
 
-In 2025, the en route AUC was -0.8% (or -11.15 CZK2022, -0.45 €2022) lower than the planned DUC. This results from the combination of slightly lower than planned en route costs in real terms (-0.8%, or -28.9 MCZK2022, -1.2 M€2022) and TSUs that are in line with the plan.
+In 2025, the en route AUC was -0.8% (or -10.94 CZK2022, -0.45 €2022) lower than the planned DUC. This results from the combination of slightly lower than planned en route costs in real terms (-0.8%, or -28.3 MCZK2022, -1.2 M€2022) and TSUs that are in line with the plan.
 
 ### **ER1.1.2. EN ROUTE SERVICE UNITS**
 
@@ -22,7 +22,7 @@ Based on the additional information to the en route reporting tables, the slight
 
 - Significantly lower than planned depreciation (-11.7%), mainly because some planned system upgrades were postponed.
 
-- Significantly higher than planned cost of capital (+8.3%), mainly due to a higher proportion of equity financing, with equity being much more expensive than debt.
+- Significantly higher than planned cost of capital (+8.6%), mainly due to a higher proportion of equity financing, with equity being much more expensive than debt.
 
 - Significantly higher than planned deduction for VFR exempted flights (+23.6%).
 

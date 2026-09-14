@@ -16,13 +16,15 @@ Actual real en route costs are -2.8% (-3.3 M€2022) lower than planned. This is
 
 Based on the additional information to the en route reporting tables, the lower than planned en route costs in real terms for ENAIRE in 2025 (-2.2%, or -1.9 M€2022) result from:
 
-- Lower than planned staff costs (-2.5%), mainly resulting from a "*significant decrease in "Other Staff Related Benefits", due to lower-than-expected allocations to provisions related to the Special Active Reserve (RAE) and, to a lesser extent, the Active Reserve (RA)*" (as of the RP4 these provisions are treated as pension costs). This decrease was only partly offset by a higher than expected (2.5%) salary increase approved by the Government, higher ATCO costs due to the implementation of a new unilateral, non consolidated incentive under the "Summer Plan 2025", implemented to address higher than expected traffic levels and increased overtime requirements.
+- Lower than planned staff costs (-2.5%), mainly resulting from a "*significant decrease in "Other Staff Related Benefits", due to lower-than-expected allocations to provisions related to the Special Active Reserve (RAE, see below for details) and, to a lesser extent, the Active Reserve (RA)*" (as of the RP4 these provisions are treated as pension costs). This variation was only partly offset by a higher than expected (+2.5%) salary increase approved by the Government, higher ATCO costs due to the implementation of a new unilateral, non-consolidated incentive under the "*Summer Plan 2025*", implemented to address higher than expected traffic levels and increased overtime requirements.
 
 - Significantly lower than planned other operating costs (-8.9%), reflecting a more efficient resource use and lower-than-expected expenditure across several operating categories, including certain professional services, communications, insurance and energy related items.
 
 - Higher than planned depreciation (+1.0%), explained by earlier than planned entry into service of some investments during 2025.
 
-- Higher than planned cost of capital (+3.8%), driven by higher total asset base and higher average interest rate on debt.
+- Higher than planned cost of capital (+3.8%), driven by higher average interest rate on debt, while the total cost base remained slightly below the determined level.
+
+\*According to ENAIRE, the reduction in staff costs associated with the RAE should not be interpreted as an efficiency gain, a cost-saving measure, or a positive deviation from ENAIRE's 2025 planning. It results from the annual actuarial valuation of a long-term employment obligation, performed by an independent external actuarial firm, which led to a reduction in the estimated liability and, consequently, to a reversal of provisions recognised in previous years. Therefore, this decrease does not reflect any operational improvement, management decision, productivity gain, or cost-efficiency measure implemented by ENAIRE during 2025. It is a non-operational accounting adjustment arising from the reassessment of obligations generated in prior years and outside the scope of ENAIRE's annual planning and performance.
 
 ### **ER2.1.5. ASSESSMENT OF THE ACTUAL PERFORMANCE IN THE CHARGING ZONE REPORTED BY THE NSA**
 

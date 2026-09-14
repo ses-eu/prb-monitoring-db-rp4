@@ -22,9 +22,9 @@ Based on the additional information to the en route reporting tables, the lower 
 
 - Slightly higher than planned depreciation (+0.4%), with depreciation of assets broadly in line with the Performance Plan.
 
-- Significantly lower than planned cost of capital (-5.6%), mainly due to a lower asset base and lower WACC.
+- Significantly lower than planned cost of capital (-5.6%), mainly due to a lower asset base.
 
-- Slightly higher than planned deduction for VFR exempted flights (+0.1%).
+- Slightly higher than planned deduction for VFR exempted flights (+0.1%) reflecting the impact of the inflation index as the nominal amounts are in line with the plan.
 
 It is understood that the costs for Skyguide are netted off by the financing received for activities outside of the Swiss FIR. This should be considered when interpreting the variation in costs detailed above.
 

@@ -2,11 +2,11 @@
 
 ### **ER1.2.1. FOCUS ON EN ROUTE AUCU MONITORING AT CHARGING ZONE LEVEL**
 
-The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (43.16 €) is -3.3% lower than the nominal DUC (44.61 €) which includes DUC initially charged: 54.03 €, and DUC to be charged retroactively: -9.41 €. The difference between these two figures (-1.45 €/SU) is due to:
+The actual en route unit cost incurred by airspace users (AUCU) in respect of activities performed in 2025 (43.14 €) is -3.3% lower than the nominal DUC (44.61 €) which includes DUC initially charged: 54.03 €, and DUC to be charged retroactively: -9.41 €. The difference between these two figures (-1.47 €/SU) is due to:
 
 - the positive inflation adjustment resulting from higher than planned inflation (+0.46 €/SU);
 
-- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.62 €/SU);
+- the impact of adjustments resulting from the costs exempted from cost sharing mechanism (-0.64 €/SU);
 
 - the addition of the traffic risk sharing adjustments (+0.13 €/SU);
 
@@ -19,8 +19,6 @@ The actual en route unit cost incurred by airspace users (AUCU) in respect of ac
 - application of a lower unit rate as foreseen in Art. 29(6) in year 2025 (-0.67 €/SU).
 
 The share of the regulatory result (see next sub-section) in the AUCU (before the deduction of other revenues) is 8.9%.
-
-Costs exempt from cost sharing for 2025 presented here are based on preliminary figures and remain subject to revision pending the receipt of the NSA Reports on the verification of cost sharing due by 1 September 2026. Any changes may affect the analysis of Actual Costs for Users and the Regulatory Results.
 
 ### **ER1.2.2. INITIATIVES IMPLEMENTED OR PLANNED THAT WILL IMPROVE THIS PI REPORTED BY THE NSA**
 
