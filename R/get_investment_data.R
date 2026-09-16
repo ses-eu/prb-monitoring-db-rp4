@@ -24,15 +24,17 @@ data_costs <- readxl::read_xlsx(
   clean_names() |>
   mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .)))
 
-
-data_costs_rt <- readxl::read_xlsx(
+data_costs_rt_muac_not_split <- readxl::read_xlsx(
   here(data_folder, investments_data_file),
-  sheet = "Output_Costs_RT",
+  sheet = "Output_InvCosts_RT",
   range = cell_limits(c(1, 1), c(NA, NA))
 ) %>%
   as_tibble() %>%
   clean_names() |>
-  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .))) |>
+  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .)))
+
+
+data_costs_rt <- data_costs_rt_muac_not_split |>
   mutate(
     member_state = case_when(
       str_detect(ansp_name, "MUAC") ~ "MUAC",
@@ -41,6 +43,16 @@ data_costs_rt <- readxl::read_xlsx(
       .default = member_state
     )
   )
+
+data_total_costs_rt <- readxl::read_xlsx(
+  here(data_folder, investments_data_file),
+  sheet = "Output_TotalCosts_RT",
+  range = cell_limits(c(1, 1), c(NA, NA))
+) %>%
+  as_tibble() %>%
+  clean_names() |>
+  mutate(across(-member_state, .fns = ~ if_else(. == 'n/a', NA, .)))
+
 
 data_costs_cp1 <- readxl::read_xlsx(
   here(data_folder, investments_data_file),
