@@ -144,10 +144,8 @@ table3
 [Placehoder for chart - missing total costs]
 
 ```{r chart_invest_cost_state, eval=(params$country == params$rp_full)}
-
-# <!-- #| file: R/chart_invest_cost_state.R -->
-# <!-- #| out.width: "100%" -->
-
+#| file: R/chart_invest_cost_state.R
+#| out.width: "100%"
 ```
 
 `r if (params$country != params$rp_full) ":::"`
@@ -304,31 +302,31 @@ no_investments <- 0
 ```
 
 
-`r if (no_investments <= 6)"::: {.content-hidden}"`
+`r if (no_investments <= 6)":::: {.content-hidden}"`
 ```{r chart_invest_cost_new_major_many, eval=(no_investments > 6) & (params$country != params$rp_full)}
 #| file: R/chart_invest_cost_new_major.R
 #| out.width: "100%"
 ```
-`r if (no_investments <= 6)":::"`
+`r if (no_investments <= 6)"::::"`
 
 
 
-`r if (no_investments > 6 | no_investments == 0)"::: {.content-hidden}"`
-::: {layout="[ 10, 80, 10 ]"}
-:::: {#empty_div}
-::::
+`r if (no_investments > 6 | no_investments == 0)":::: {.content-hidden}"`
+::::: {layout="[ 10, 80, 10 ]"}
+:::::: {#empty_div}
+::::::
 
-:::: {.chart-container}
+:::::: {.chart-container}
 ```{r chart_invest_cost_new_major_few, eval=(no_investments <= 6) & (params$country != params$rp_full)}
 #| file: R/chart_invest_cost_new_major.R
 #| out.width: "100%"
 ```
-::::
+::::::
 
-:::: {#empty_div}
+:::::: {#empty_div}
+::::::
 ::::
-:::
-`r if (no_investments > 6  | no_investments == 0)":::"`
+`r if (no_investments > 6  | no_investments == 0)"::::"`
 `r if (params$country == params$rp_full) ":::"`
 
 
@@ -344,7 +342,7 @@ source("R/table_invest_cost_cp1.R")
 if (identical(table1, "")) {
   cat("No costs associated to CP1.")
 } else {
-  print(table1)
+  table1
 }
 ```
 
@@ -355,7 +353,7 @@ if (identical(table1, "")) {
 if (identical(table2, "")) {
   cat("")
 } else {
-  print(table2)
+  table2
 }
 ```
 
@@ -366,7 +364,7 @@ if (identical(table2, "")) {
 if (identical(table3, "")) {
   cat("")
 } else {
-  print(table3)
+  table3
 }
 ```
 
@@ -385,7 +383,7 @@ source("R/table_invest_cost_sdo.R")
 if (identical(table1, "")) {
   cat("No costs associated to SDOs.")
 } else {
-  print(table1)
+  table1
 }
 ```
 
@@ -396,7 +394,7 @@ if (identical(table1, "")) {
 if (identical(table2, "")) {
   cat("")
 } else {
-  print(table2)
+  table2
 }
 ```
 
@@ -407,7 +405,7 @@ if (identical(table2, "")) {
 if (identical(table3, "")) {
   cat("")
 } else {
-  print(table3)
+  table3
 }
 ```
 
@@ -429,38 +427,37 @@ if (identical(table3, "")) {
 ## Public funding granted for total CAPEX (CEF/TEN-T)
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
-::: {.chart-container}
+:::: {.chart-container}
 
 ```{r chart_invest_funding_year_ses, eval = (params$country == params$rp_full)}
 #| file: R/chart_invest_funding_year.R
 #| out.width: "50%"
 ```
 
-:::
+::::
 `r if (params$country != params$rp_full) ":::"`
 
 
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
-::: {layout="[ 50, 0, 50 ]"}
-:::: {.chart-container}
+:::: {layout="[ 50, 0, 50 ]"}
+::::: {.chart-container}
 ```{r chart_invest_funding_year, eval = (params$country != params$rp_full) }
 #| file: R/chart_invest_funding_year.R
 #| out.width: "100%"
 ```
-::::
+:::::
 
-::::{#empty_div}
-::::
+:::::{#empty_div}
+:::::
 
-:::: {.chart-container}
+::::: {.chart-container}
 ```{r chart_invest_funding_vs_eu, eval = (params$country != params$rp_full) }
 #| file: R/chart_invest_funding_vs_eu.R
 #| out.width: "100%"
 ```
+:::::
 ::::
-:::
 
-`r if (params$country == params$rp_full) ":::}"`
-
+`r if (params$country == params$rp_full) ":::"`
 
