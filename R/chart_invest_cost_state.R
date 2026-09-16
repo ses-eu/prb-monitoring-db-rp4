@@ -3,35 +3,88 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_total_costs_rt")) {
   source("R/get_investment_data.R")
 }
 
 
 # process data  ----
-data_prep <- data_cost_ses %>%
-  mutate(
-    Determined = determined_costs_of_investments / total_determined_costs * 100,
-    Actual = actual_costs_of_investments / total_actual_costs * 100,
-  ) %>%
+## total costs
+data_raw <- data_total_costs_rt |>
   select(
-    state,
-    Determined,
-    Actual
-  ) %>%
+    member_state,
+    contains('20')
+  ) |>
   pivot_longer(
-    -state,
-    names_to = "type",
-    values_to = "mymetric"
-  ) %>%
+    cols = -member_state,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  filter(
+    year == year_report,
+    !is.na(member_state)
+  )
+
+
+data_total_cost_all <- data_raw |>
+  mutate(
+    member_state = if_else(
+      member_state == "Belgium-Luxembourg",
+      "Belgium",
+      member_state,
+    )
+  ) |>
+  select(member_state, type, value) |>
+  group_by(member_state, type) |>
+  summarise(
+    total_costs = sum(value, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+## investment costs
+data_inv_costs <- data_costs_rt_muac_not_split |>
+  mutate(
+    member_state = if_else(
+      member_state == "Belgium-Luxembourg",
+      "Belgium",
+      member_state,
+    )
+  ) |>
   select(
-    xlabel = state,
+    member_state,
+    contains('20')
+  ) |>
+  pivot_longer(
+    cols = -member_state,
+    names_to = c("year", "type"),
+    names_pattern = "^x(\\d{4})([da])$",
+    values_to = "value"
+  ) |>
+  filter(year == year_report) |>
+  group_by(member_state, type) |>
+  summarise(
+    value = sum(value, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+data_prep <- data_inv_costs |>
+  left_join(data_total_cost_all, by = c("member_state", "type")) |>
+  mutate(
+    type = if_else(type == 'd', "Determined", "Actual"),
+    mymetric = value / total_costs * 100
+  ) |>
+  select(
+    xlabel = member_state,
     type,
     mymetric
-  ) %>%
+  )
+
+data_sort <- data_prep |>
+  filter(type == "Determined") |>
   arrange(desc(mymetric))
 
-states_factor <- unique(data_prep$xlabel)
+states_factor <- unique(data_sort$xlabel)
 
 data_prep <- data_prep %>%
   mutate(xlabel = factor(xlabel, levels = states_factor))
