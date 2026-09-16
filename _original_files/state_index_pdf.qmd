@@ -448,11 +448,19 @@ replace_headings(path, character(0))
 #| fig-pos: "H"
 ```
 
-`r if ((params$no_tcz == 0) | (params$country == "FABEC")) "::: {.content-hidden}"`
+```{r chart_cap_er3, options = (cztype=c("terminal")), include = (params$country == "Luxembourg"), eval = (params$country == "Luxembourg")}
+#| file: R/chart_level1_cap.R
+#| out.width: "52%"
+#| fig.align: "center"
+#| fig-pos: "H"
+```
+
+
+`r if ((params$no_tcz == 0) | (params$country == "FABEC") | (params$country == "Luxembourg")) "::: {.content-hidden}"`
 
 `r layout_2fig("chart_cap_er", "chart_cap_trm")`
 
-`r if ((params$no_tcz == 0) | (params$country == "FABEC")) ":::"`
+`r if ((params$no_tcz == 0) | (params$country == "FABEC") | (params$country == "Luxembourg")) ":::"`
 
 
 ```{r cap_prb}
@@ -1327,12 +1335,17 @@ replace_headings(path, character(0))
 
 ### Other terminal performance indicators (PI#1-3)
 
-```{r chart_cap_all_causes_delay, eval=(year_folder != params$rp_summary_year)}
+`r if (params$no_apt_big == 0) "::: {.content-hidden}"`
+
+```{r chart_cap_all_causes_delay, eval=(year_folder != params$rp_summary_year & params$no_apt_big != 0)}
 #| file: R/chart_level2_cap_all_causes_delay.R
 #| out.width: "52%"
 #| fig.align: "center"
 #| fig-pos: "H"
 ```
+
+`r if (params$no_apt_big == 0) ":::"`
+
 
 ```{r table_level2_cap_apt_pis_pdf1, eval=(params$no_tcz != 0)}
 #| file: R/table_level2_cap_apt_pis_pdf1.R
@@ -1357,15 +1370,17 @@ cat(make_quarto_latex_table_2level(
 ))
 ```
 
+`r if (params$no_apt_big == 0) "::: {.content-hidden}"`
+
 \vspace{-20pt}
 
-```{r table_level2_cap_apt_pis_pdf2, eval=(params$no_tcz != 0)}
+```{r table_level2_cap_apt_pis_pdf2, eval=(params$no_tcz != 0  & params$no_apt_big != 0)}
 #| file: R/table_level2_cap_apt_pis_pdf2.R
 #| include: false
 ```
 
 
-``` {r eval=(params$no_tcz != 0), include=(params$no_tcz != 0)}
+``` {r eval=(params$no_tcz != 0), include=(params$no_tcz != 0  & params$no_apt_big != 0)}
 #| echo: false
 #| results: asis
  
@@ -1381,6 +1396,8 @@ cat(make_quarto_latex_table_2level(
   paginate = (country == "France" | country == "Italy") 
 ))
 ```
+
+`r if (params$no_apt_big == 0) ":::"`
 
 
 \needspace{3\baselineskip}
