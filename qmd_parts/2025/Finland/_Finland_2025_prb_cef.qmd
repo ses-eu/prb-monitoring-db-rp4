@@ -8,7 +8,5 @@
 
 -   Fintraffic ANS spent 6.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -14.9% less than determined (7.9M€2022). According to the NSA, this reduction is mainly attributable to delays in investments, due to limited internal resources and system suppliers constraints.
 
--   The en route actual unit cost incurred by users in 2025 was 69.76€ (+9.2% above the 2025 DUC), while the terminal actual unit cost incurred by users was 183.19€ (-4.8% below the 2025 DUC). The difference between the AUCU and the DUC for the en route charging zone is driven by the traffic adjustments, while for the terminal charging zone it is mainly driven by pension costs in cost exempt from cost sharing.
-
--   
+-   The en route actual unit cost incurred by users in 2025 was 69.76€ (+9.2% above the 2025 DUC), while the terminal actual unit cost incurred by users was 183.19€ (-4.8% below the 2025 DUC). The difference between the AUCU and the DUC for the en route charging zone is driven by the traffic adjustments, while for the terminal charging zone it is mainly driven by pension costs in cost exempt from cost sharing.   
 
