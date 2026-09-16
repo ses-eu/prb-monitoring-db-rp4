@@ -119,7 +119,7 @@ if (knitr::is_latex_output()) {
   )
   c_title_font_size <- c_title_font_size * pdf_ratio
   c_textfont_size <- c_textfont_size * pdf_ratio
-  c_minsize <- max(8, c_textfont_size)
+  c_minsize <- max(if_else(cdo_airports > 6, 6, 8), c_textfont_size)
 
   c_xaxis_tickfont_size <- c_xaxis_tickfont_size * pdf_ratio
 
