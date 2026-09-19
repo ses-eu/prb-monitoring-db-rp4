@@ -1,6 +1,11 @@
   sidebar:
     collapse-level: 3
     contents:
+      - text: '<b style= "font-size: 1.2rem">Reference period</b>'
+      - text: '<span style= "color: #2151bf">RP4 &#10003</span>'
+      - text: 'RP3'
+        href: 'home_address/rp3/investments/rp3/country_lower/index.html'
+      - text: "---"
       - text: '<b style= "font-size: 1.2rem">Investments - country placeholder</b>'
         href: index.html
       - text: "<b>PRB monitoring</b>"

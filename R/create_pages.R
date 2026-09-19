@@ -302,7 +302,13 @@ if (out_format == 'web') {
   tx <- str_replace(tx, 'destination-dir/', external_address)
   ## set home address for other year reports
   tx <- str_replace(tx, 'home_address', home_address)
-  # tx <- str_replace(tx, 'country_lower', country_lower)
+  tx <- str_replace(
+    tx,
+    'country_lower_rp3',
+    if_else(country == rp_full, "ses-rp3", country_lower)
+  )
+  tx <- str_replace(tx, 'country_lower', country_lower)
+
   ## add check box to year report
   tx <- str_replace(
     tx,
@@ -333,6 +339,12 @@ if (out_format == 'web') {
       sidebar_text <- readLines("_original_files/side_bar_investments.yml")
       ### modify tags
       sidebar_text <- str_replace(sidebar_text, 'country placeholder', country)
+      sidebar_text <- str_replace(
+        sidebar_text,
+        'country_lower',
+        if_else(country == rp_full, "ses-rp3", country_lower)
+      )
+      sidebar_text <- str_replace(sidebar_text, 'home_address', home_address)
       sidebar_text <- str_replace(
         sidebar_text,
         '_countryansp',
