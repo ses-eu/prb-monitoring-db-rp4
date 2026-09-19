@@ -437,46 +437,46 @@ replace_headings(path, env_trm_nsa_titles_vfec)
 
 
 `r if (params$country == "Luxembourg" | params$country == "FABEC") "::: {.content-hidden}"`
-::: {#container-mil-pi}
+:::: {#container-mil-pi}
 
 ## [**Civil-Military dimension**](`r params$home_address`/about.html#civil-military-dimension)  
 
-:::: {layout="[ 20, 60, 20 ]"}
+::::: {layout="[ 20, 60, 20 ]"}
 
-::::: {#empty-div}
-:::::
+:::::: {#empty-div}
+::::::
 
-::::: {.chart-container}  
+:::::: {.chart-container}  
 ```{r chart-ersa}
 #| file: R/chart_level2_env_ersa.R
 #| out.width: "100%"
 ```
+::::::
 :::::
-::::
 
-:::: {layout="[ 50, 50 ]"}
+::::: {layout="[ 50, 50 ]"}
 
-::::: {.chart-container}  
+:::::: {.chart-container}  
 ```{r chart-cdr}
 #| file: R/chart_level2_env_cdr.R
 #| out.width: "100%"
 ```
-:::::
+::::::
 
-::::: {.chart-container}  
+:::::: {.chart-container}  
 ```{r chart-rsa}
 #| file: R/chart_level2_env_rsa.R
 #| out.width: "100%"
 ```
+::::::
+
 :::::
-
 ::::
-:::
 
 
-`r if (params$country == rp_full) "::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::: {.content-hidden}"`
 
-::: {.callout-note collapse=true}
+::::: {.callout-note collapse=true}
 
 #### Focus on Civil-Military dimension
 
@@ -538,9 +538,9 @@ if(paste(mytext1, collapse = "") == "" & paste(mytext2, collapse = "") == ""){ca
 ``` 
 
 
-:::
+:::::
 
-`r if (params$country == rp_full) "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::::"`
 
 `r if (params$country == "Luxembourg" | params$country == "FABEC") ":::"`
 

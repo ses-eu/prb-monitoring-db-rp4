@@ -18,7 +18,7 @@ data_prep_target <- data_raw_target %>%
   filter(year == year_report) |>
   mutate(
     # type = 'Target',
-    target = janitor::round_half_up(kea_target, 2)
+    target = janitor::round_half_up(kea_target * 100, 2)
   ) %>%
   select(
     State = state,
@@ -27,7 +27,7 @@ data_prep_target <- data_raw_target %>%
 
 data_prep_actual <- data_raw_actual %>%
   filter(year == year_report) %>%
-  mutate(Actual = janitor::round_half_up(value, 2)) %>%
+  mutate(Actual = janitor::round_half_up(value * 100, 2)) %>%
   select(
     State = state,
     Actual
