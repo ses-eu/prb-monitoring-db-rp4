@@ -1,8 +1,8 @@
 ## SAF1.3. Rate of runway incursions (RIs) (PI#1)
 
-In 2025, Spain reported 8 runway incursions (RI) at all the airports listed in the performance plan (7). When comparing the RIs at airport level to Union-wide level, Spain was lower than Union-wide average (0.50 vs 2.53). The rate of runway incursions has decreased significantly compared to 2024 at airport level (0.50 vs 11.91).
+In 2025, Spain reported 8 runway incursions (RI) at all the airports listed in the performance plan (7). When comparing the RIs at airport level to Union-wide level, Spain was lower than Union-wide average (0.50 vs 2.70). The rate of runway incursions has decreased significantly compared to 2024 at airport level (0.50 vs 11.91).
 
-In 2025, Spain reported 8 runway incursions with ATS/CNS contribution. When comparing the rate of RIs at airport level with ATS/CNS contribution, Spain was lower than Union-wide average (0.50 vs 0.96). The rate of RIs with ATS/CNS contribution has decreased compared to 2024 (0.50 vs 1.43).
+In 2025, Spain reported 8 runway incursions with ANS contribution. When comparing the rate of RIs at airport level with ANS contribution, Spain was lower than Union-wide average (0.50 vs 0.87). The rate of RIs with ANS contribution has decreased compared to 2024 (0.50 vs 1.43).
 
 In terms of the initiatives implemented or planned to improve this performance indicator, the report defines the following elements for ENAIRE: An A-SMGCS level 2 System has been reactivated in LEPA in early 2026 (out of service due to technical issues throughout 2025). In addition, a runway incursion alerts system has also been implemented in LEMG in early 2026. The implementation of a system for Non-Conformity Alerts and Conflicting Authorisations (CMAC / CATC) is planned for 2026. On the other hand, the effectiveness of the implementation of measures in the different action plans activated in previous years is monitored, especially a specific Action Plan at the Barcelona-El Prat Tower (February 2025).
 

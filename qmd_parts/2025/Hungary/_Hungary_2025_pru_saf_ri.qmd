@@ -1,8 +1,8 @@
 ## SAF1.3. Rate of runway incursions (RIs) (PI#1)
 
-Hungary reported 2 runway incursions (RI) at Budapest airport during 2025. When comparing the RIs at airport level to Union-wide level, Hungary was below the Union-wide average (1.45 vs 2.53).
+Hungary reported 2 runway incursions (RI) at Budapest airport during 2025. When comparing the RIs at airport level to Union-wide level, Hungary was below the Union-wide average (1.45 vs 2.70).
 
-Hungary reported 2 RIs with ATS/CNS contribution in 2025. When comparing airport level with ATS/CNS contribution to the Union-wide level, Hungary was above the Union-wide average (1.45 vs 0.96).
+Hungary reported 2 RIs with ANS contribution in 2025. When comparing airport level with ANS contribution to the Union-wide level, Hungary was above the Union-wide average (1.45 vs 0.87).
 
 The rate of runway incursions at both levels has increased compared to 2024, when Hungary reported 0 RIs.
 

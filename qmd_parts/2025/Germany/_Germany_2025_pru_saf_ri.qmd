@@ -1,8 +1,8 @@
 ## SAF1.3. Rate of runway incursions (RIs) (PI#1)
 
-Germany reported 70 runway incursions (RI) during 2025 for all airports listed in the performance plans (15). When comparing the rate of RIs at airport level to Union-wide level, Germany was higher than Union-wide average (3.69 vs 2.53).
+Germany reported 70 runway incursions (RI) during 2025 for all airports listed in the performance plans (15). When comparing the rate of RIs at airport level to Union-wide level, Germany was higher than Union-wide average (3.69 vs 2.70).
 
-Germany reported 14 runway incursions with ATS/CNS contribution in 2025. When comparing the rate of RIs at airport level with ATS/CNS contribution, Germany was slightly lower than Union-wide average (0.74 vs 0.96).
+Germany reported 14 runway incursions with ANS contribution in 2025. When comparing the rate of RIs at airport level with ANS contribution, Germany was slightly lower than Union-wide average (0.74 vs 0.87).
 
 The rate of runway incursions at both levels has increased compared to 2024, when Germany reported 0 RIs.
 

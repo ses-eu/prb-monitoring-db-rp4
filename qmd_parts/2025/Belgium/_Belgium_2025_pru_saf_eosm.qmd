@@ -4,15 +4,15 @@ In 2025, Skeyes did not meet the planned maturity levels set out in its performa
 
 As described in the monitoring report, Skeyes has not achieved the expected intermediate targets. In terms of main measures put in place to achieve the safety performance targets, the report defines the following elements:
 
--   Safety risk management: Human factors integration, revision of internal and external interfaces.
+- Safety risk management: Human factors integration, revision of internal and external interfaces.
 
--   Safety assurance: updated audit cycle to ensure sustained compliance in RP4.
+- Safety assurance: updated audit cycle to ensure sustained compliance in RP4.
 
--   Safety culture development: conduct of regular safety culture assessment across the organisation.
+- Safety culture development: conduct of regular safety culture assessment across the organisation.
 
--   Benchmarking and peer learning.
+- Benchmarking and peer learning.
 
--   Monitoring and corrective actions: Corrective action plans will be launched whenever deviations from the safety targets are observed.
+- Monitoring and corrective actions: Corrective action plans will be launched whenever deviations from the safety targets are observed.
 
 As the planned levels were not achieved, Belgium explains in the monitoring report the reasons leading to this situation; Skeyes is not always able to demonstrate compliance with the guidance provided in the EoSM questionnaire. In addition, Skeyes did not make use of the time allotted to provide and update the justification and evidence required to meet the intermediate targets.
 

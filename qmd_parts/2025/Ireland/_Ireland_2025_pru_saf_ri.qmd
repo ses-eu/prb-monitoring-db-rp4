@@ -1,10 +1,10 @@
 ## SAF1.3. Rate of runway incursions (RIs) (PI#1)
 
-Ireland reported 1 runway incursion (RI) at Shannon airport during 2025. When comparing the RIs at airport level to Union-wide level, Ireland was below the Union-wide average (0.29 vs 2.53).
+Ireland reported 1 runway incursion (RI) at Shannon airport during 2025. When comparing the RIs at airport level to Union-wide level, Ireland was below the Union-wide average (0.29 vs 2.70).
 
-Ireland reported 1 RI with ATS/CNS contribution in 2025. When comparing airport level with ATS/CNS contribution to the Union-wide level, Ireland was below the Union-wide average (0.29 vs 0.96).
+Ireland reported 1 RI with ANS contribution in 2025. When comparing airport level with ANS contribution to the Union-wide level, Ireland was below the Union-wide average (0.29 vs 0.87).
 
-The rate of runway incursions has decreased significantly compared to 2024 at both airport level (0.29 vs 5.16) and at ATS/CNS contribution-level (0.29 vs 2.35).
+The rate of runway incursions has decreased significantly compared to 2024 at both airport level (0.29 vs 5.16) and at ANS contribution-level (0.29 vs 2.35).
 
 As described in the monitoring report, AirNav Ireland acknowledges that preventing runway incursions requires vigilance, technological advancements, and industry-wide collaboration to ensure runway safety. The organisation focuses on enhancing cooperation among airports, air traffic management, and airlines to reduce the risk of incursions. This approach includes continuous engagement and representation at both Local Runway Safety Teams and the IAA National Runway Safety Team, supporting the Global Action Plan for the Prevention of Runway Incursions, and addressing any gaps in current safety measures. Additionally, AirNav Ireland has received Board approval for the installation of advanced surface movement and guidance systems at Cork and Shannon Airports. AirNav Ireland has developed and implemented leading and lagging indicators to monitor the effectiveness of safety measures to prevent runway incursions. These indicators are reviewed at the Safety Review Board and through Safety Action Group. Runway incursions are documented on the enterprise risk register and monitored for safety assurance.
 
