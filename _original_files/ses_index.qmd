@@ -142,10 +142,6 @@ met_ansp <- data_context %>% select(met_providers) %>% pull()
 :::
 
 
-## Main PRB findings - `r toupper(year_folder)`
-
-[placeholder for text]
-
 ## Traffic (`r rp_full` area)
 
 ::: {#container-mvt}
