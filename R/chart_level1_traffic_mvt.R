@@ -40,7 +40,14 @@ data_prep_actual <- data_prep %>%
     )
   )
 
-data_prep_planned <- data_raw_planned %>%
+data_prep_planned <- data_raw_planned |>
+  mutate(
+    state = if_else(
+      .env$country == "Luxembourg" & state == "Belgium",
+      "Luxembourg",
+      state
+    )
+  ) |>
   filter(state == .env$country, year >= rp_min_year) %>%
   select(state, year, x121_ecz_ifr_mvt, x121_ecz_name) %>%
   rename(mvts = x121_ecz_ifr_mvt) %>%

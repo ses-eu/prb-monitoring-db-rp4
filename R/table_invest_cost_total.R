@@ -82,7 +82,7 @@ difference_perc_rows <- data_calc |>
       ~ if_else(
         .x[type == "Determined"] == 0,
         NA_real_,
-        .x[type == "Actual"] / .x[type == "Determined"] - 1
+        (.x[type == "Actual"] / .x[type == "Determined"] - 1) * 100
       )
     ),
     .groups = "drop"
@@ -111,7 +111,8 @@ data_prep <- bind_rows(
         'New major investments from RP4',
         'Other new investments from RP4',
         'Major investments from RP3',
-        'Existing investments from previous RPs'
+        'Existing investments from previous RPs',
+        'Additional major investments'
       )
     )
   ) |>
@@ -191,7 +192,7 @@ data_prep3 <- data_prep %>%
   select(-type) %>%
   mutate(category = purrr::map(category, gt::html)) %>%
   relocate(category, .before = everything()) %>%
-  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) |> 
+  mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) |>
   mutate(
     across(
       all_of(rp_short),

@@ -73,7 +73,7 @@ if (nrow(data_pre_calc) == 0) {
     pivot_longer(-c(category, year), names_to = "type", values_to = "value")
 
   data_calc_summary <- data_calc %>%
-    filter(as.numeric(year) <= year_report) %>%
+    # filter(as.numeric(year) <= year_report) %>%
     group_by(category, type) %>%
     summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
     mutate(year = rp_short) %>%
@@ -165,7 +165,7 @@ if (nrow(data_pre_calc) == 0) {
     ungroup() %>%
     select(-type) %>%
     mutate(across(2:7, ~ if_else(str_detect(.x, "NA%"), NA, .x))) %>%
-    mutate(category = purrr::map(category, gt::html)) |> 
+    mutate(category = purrr::map(category, gt::html)) |>
     mutate(
       across(
         all_of(rp_short),
