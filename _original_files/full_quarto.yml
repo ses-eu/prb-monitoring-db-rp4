@@ -163,7 +163,7 @@ website:
         target: "_blank"
 
   sidebar:
-    collapse-level: 2
+    collapse-level: 3
     contents:
       - section: '<b style= "font-size: 1.2rem">Year report</b>'
         contents:
@@ -196,7 +196,7 @@ website:
       - text: "---"
       - text: '<b style= "font-size: 1.2rem">country placeholder</b>'
         href: index.html
-      - text: "<b>Overview</b>"
+      - section: "<b>Overview</b>"
         href: index.html
         contents:
 # block level1 state beginning
@@ -251,7 +251,7 @@ website:
             href: safety.html#prb-monitoring
           - text: "<b>EoSM</b>"
             href: safety.html#effectiveness-of-safety-management-eosm-kpi1
-          - text: "<b>Safety occurrences</b>"
+          - section: "<b>Safety occurrences</b>"
             href: safety.html#safety-occurrences
             contents: #safety-occurrences
 # block muac beginning
