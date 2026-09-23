@@ -59,12 +59,12 @@
 
 <!-- ### Rate of runway incursions (RIs) (PI#1) -->
 
-```{r chart_saf_ri, eval = (params$country != "FABEC"), include=FALSE}
+```{r chart_saf_ri, eval = !(params$country == "MUAC" | params$no_tcz == 0 | params$country == "FABEC"), include=FALSE}
 #| file: R/chart_level2_saf_ri.R
 #| out.width: "100%"
 ```
 
-```{r chart_level2_saf_ri_year_report, eval= (params$country != "MUAC" & params$country != "FABEC"), options = (safindicator=c("ri")), include=FALSE}
+```{r chart_level2_saf_ri_year_report, eval= !(params$country == "MUAC" | params$no_tcz == 0 | params$country == "FABEC"), options = (safindicator=c("ri")), include=FALSE}
 #| file: R/chart_level2_saf_ri_smi_year_report.R
 #| out.width: "100%"
 ```
@@ -597,7 +597,7 @@ replace_headings(path, character(0))
 
 ``` 
 
-`r if (params$country == "MUAC") "::: {.content-hidden}"`
+`r if (params$country == "MUAC" | params$no_tcz == 0) "::: {.content-hidden}"`
 
 \needspace{2\baselineskip}
 
@@ -607,12 +607,12 @@ replace_headings(path, character(0))
 
 `r layout_2fig("chart_saf_ri", "chart_level2_saf_ri_year_report")`
 
-```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC")}
+```{r table_level2_saf_ri_apt, eval= !(params$country == "MUAC" | params$no_tcz == 0)}
 #| file: R/table_level2_saf_ri_apt.R
 #| include: false
 ```
 
-``` {r, eval= (params$country != "MUAC")}
+``` {r, eval= !(params$country == "MUAC" | params$no_tcz == 0)}
 #| echo: false
 #| results: asis
  
@@ -626,7 +626,7 @@ cat(make_quarto_latex_table(
 ))
 ```
 
-`r if (params$country == "MUAC") ":::"`
+`r if (params$country == "MUAC" | params$no_tcz == 0) ":::"`
 
 \needspace{3\baselineskip}
 

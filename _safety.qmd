@@ -176,20 +176,20 @@ replace_headings(path, character(0))
 
 ## Safety occurrences
 
-`r if (params$country == "MUAC") ":::: {.content-hidden}"`
+`r if (params$country == "MUAC" | params$no_tcz == 0) ":::: {.content-hidden}"`
 
 ### Rate of runway incursions ([**RIs**](`r params$home_address`/about.html#occurrences---rate-of-runway-incursions-ris-pi1-rate-of-separation-minima-infringements-smis-pi2)) (PI#1) and Rate of runway incursion with ANS contribution (PI#3)
 
 :::: {layout="[ 45, 55 ]"}
 ::::: {.chart-container}  
-```{r chart_saf_ri, eval= params$country != "MUAC"}
+```{r chart_saf_ri, eval= !(params$country == "MUAC" | params$no_tcz == 0)}
 #| file: R/chart_level2_saf_ri.R
 #| out.width: "100%"
 ```
 :::::
 
 ::::: {.chart-container}  
-```{r chart_level2_saf_ri_year_report, eval= (params$country != "MUAC"), options = (safindicator=c("ri"))}
+```{r chart_level2_saf_ri_year_report, eval= !(params$country == "MUAC" | params$no_tcz == 0), options = (safindicator=c("ri"))}
 #| file: R/chart_level2_saf_ri_smi_year_report.R
 #| out.width: "100%"
 ```
@@ -214,7 +214,7 @@ replace_headings(path, character(0))
 :::::
 
 ::::: {.chart-container}  
-```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC") & (params$country != params$rp_full)}
+```{r table_level2_saf_ri_apt, eval= !(params$country == "MUAC" | params$no_tcz == 0 | params$country == params$rp_full)}
 #| file: R/table_level2_saf_ri_apt.R
 #| out.width: "100%"
 ```
@@ -240,7 +240,7 @@ replace_headings(path, character(0))
 
 ::::
 
-`r if (params$country == "MUAC") "::::"`
+`r if (params$country == "MUAC" | params$no_tcz == 0) "::::"`
 
 ### Rate of separation minima infringements ([**SMIs**](`r params$home_address`/about.html#occurrences---rate-of-runway-incursions-ris-pi1-rate-of-separation-minima-infringements-smis-pi2)) (PI#2) and Rate of separation minima infringements with ANS contribution (PI#4)
 
