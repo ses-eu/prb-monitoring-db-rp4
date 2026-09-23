@@ -790,6 +790,20 @@ if (out_format == 'web') {
 
         tx <- append(tx, tx_ecz, block_beg)
       }
+    } else if (state_type == 0) {
+      ## no terminal zone ----
+      lines_to_comment <- c(
+        '- text: "Runway incursions"',
+        'href: safety.html#rate-of-runway-incursions-ris-pi1-and-rate-of-runway-incursion-with-ans-contribution-pi3'
+      )
+
+      for (i in 1:length(lines_to_comment)) {
+        tx <- str_replace(
+          tx,
+          lines_to_comment[i],
+          paste0("# ", lines_to_comment[i])
+        )
+      }
     }
   }
 
