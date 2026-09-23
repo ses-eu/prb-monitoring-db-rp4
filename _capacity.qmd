@@ -455,10 +455,17 @@ replace_headings(path, character(0))
 ::::
 
 :::: {#container-cap-table-apt-pis}
-```{r table-cap-apt-pis, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
-#| file: R/table_level2_cap_apt_pis.R
+```{r table-cap-apt-pis-1, eval=!(params$no_tcz == 0 | params$country == params$rp_full)}
+#| file: R/table_level2_cap_apt_pis_t1.R
 #| out.width: "100%"
 ```
+
+`r if (params$no_apt_big == 0) "::::: {.content-hidden}"`
+```{r table-cap-apt-pis-2, eval=!(params$no_tcz == 0 | params$country == params$rp_full | params$no_apt_big == 0)}
+#| file: R/table_level2_cap_apt_pis_t2.R
+#| out.width: "100%"
+```
+`r if (params$no_apt_big == 0) ":::::"`
 ::::
 
 :::: {.callout-note collapse=true}
