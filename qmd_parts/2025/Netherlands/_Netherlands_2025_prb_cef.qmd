@@ -1,8 +1,6 @@
 ## PRB1.6. Cost-efficiency {#prb1.6.-cost-efficiency .Heading-2-ER}
 
-- The en route 2025 actual unit cost of the Netherlands was 106.12€2022, +3.7% higher than the determined unit cost (102.29€2022). The terminal 2025 actual unit cost was 224.05€2022,
-
--2.8% lower than the determined unit cost (230.40€2022).
+- The en route 2025 actual unit cost of the Netherlands was 106.12€2022, +3.7% higher than the determined unit cost (102.29€2022). The terminal 2025 actual unit cost was 224.05€2022, -2.8% lower than the determined unit cost (230.40€2022).
 
 - The en route 2025 actual service units (2.9M) were -5.3% lower than the determined service units (3.1M).
 

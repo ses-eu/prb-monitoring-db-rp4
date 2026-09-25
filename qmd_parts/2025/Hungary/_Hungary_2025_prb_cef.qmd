@@ -1,8 +1,6 @@
 ## PRB1.6. Cost-efficiency {#prb1.6.-cost-efficiency .Heading-2-ER}
 
-- The en route 2025 actual unit cost of Hungary was 28.24€2022, -8.4% lower than the determined unit cost (30.81€2022). The terminal 2025 actual unit cost was 256.88€2022,
-
-- -9.4% lower than the determined unit cost (283.49€2022).
+- The en route 2025 actual unit cost of Hungary was 28.24€2022, -8.4% lower than the determined unit cost (30.81€2022). The terminal 2025 actual unit cost was 256.88€2022, -9.4% lower than the determined unit cost (283.49€2022).
 
 - The en route 2025 actual service units (4.4M) were +9.5% higher than the determined service units (4.0M).
 
