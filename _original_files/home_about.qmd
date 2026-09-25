@@ -31,7 +31,7 @@ Differently, actual values are updated with the latest information provided each
 
 In addition to the ongoing fourth reference period, the digital dashboard includes monitoring data and conclusions for the previous third reference period (RP3, 2020-2024). For RP3, Commission Implementing Regulation (EU) 2019/317 was complemented by [Commission Implementing Regulation (EU) 2020/1627](https://eur-lex.europa.eu/eli/reg_impl/2020/1627/oj/eng), while the Union-wide revised performance targets were defined in [Commission Implementing Decision (EU) 2021/891](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021D0891). The monitoring analysis for RP3 as a whole is presented on a dedicated page, providing an overview of the various KPIs and their evolution throughout the entire period.
 
-During RP3, the values and comments presented in the digital dashboard were complemented by annual PRB publications accessible on the [EU Single Sky Commission website](https://eu-single-sky.transport.ec.europa.eu/public-library_en). By contrast, from RP4 onwards – that is, from the 2025 annual monitoring exercise – the digital dashboard will serve as the sole source of detailed information on performance monitoring in the SES area. The PRB complements the monitoring analysis with a set of tailored Recommendations, both at Union-wide level and for the individual Member States. The documents presenting the PRB recommendations can be accessed from the dedicated page [XXX]. 
+During RP3, the values and comments presented in the digital dashboard were complemented by annual PRB publications accessible on the [EU Single Sky Commission website](https://eu-single-sky.transport.ec.europa.eu/public-library_en). By contrast, from RP4 onwards – that is, from the 2025 annual monitoring exercise – the digital dashboard will serve as the sole source of detailed information on performance monitoring in the SES area. The PRB complements the monitoring analysis with a set of tailored Recommendations, both at Union-wide level and for the individual Member States. The documents presenting the key PRB conclusions and recommendations can be accessed from the dedicated Home page. 
 
 Finally, each page of this digital report – whether relating to RP4 or RP3 – can be downloaded in Portable Document Format (PDF) either though the specific “Download Report” button at the top-right corner of each page or via the Download page accessible from the menu bar at the top of the screen.
 
@@ -65,7 +65,7 @@ The EoSM for ANSPs is a set of questions to determine the minimum level of matur
 -   Level C which is defined as ‘Managed’ — SMS processes and/or requirements are fully documented and consistently applied.
 -   Level D which is defined as ‘Assured’ — Evidence is available to provide confidence that SMS processes and/or requirements are being applied appropriately and are delivering positive, measurable results.
 
-EoSM data are directly extracted based on the questionnaires provided by the different ANSPs and complemented by the information included in the monitoring reports submitted yearly by the NSAs.  
+EoSM data are directly extracted based on the questionnaires provided by the different ANSPs and complemented by the information included in the monitoring reports submitted yearly by the NSAs.    
 
 At Union-wide level, the EoSM KPI is presented and analysed in terms of the total number of ANSPs achieving the intermediate and/or final targets for the different MOs. 
 
@@ -82,7 +82,7 @@ While the first two PIs are monitored at both Union-wide and local level, PI#3 a
 
 The rate of runway incursions at airports located in a Member State (PI#1) is calculated as the total number of runway incursions with a safety impact (classified in terms of safety risk according to the European Risk Classification Scheme, ERCS) that occurred at those airports divided by the total number of IFR and VFR movements at those airports (per 100,000). By contrast, at local level, PI#3 includes a subset of the RIs recorded at airport level, i.e. those with an ATS/CNS contribution (classified in terms of severity according to the RAT methodology). The RIs included in the indicators are those occurring at the airports included by the Member States in their adopted performance plans; the airports to be considered as a minimum are specified by Article 1(3) of Commission Implementing Regulation (EU) 2019/317. 
 
-The indicators are presented both at aggregate State level and at individual airport level. The data used to compute this indicator – i.e. the number of occurrences recorded and the airport movements – are sourced from the monitoring report provided annually by the NSAs. 
+The indicators are presented both at aggregate State level and at individual airport level. The data used to compute this indicator – i.e. the number of occurrences recorded and the airport movements – are sourced from the monitoring report provided annually by the NSAs. For the State having no airport falling within the scope of the performance scheme, this section is not included.
 
 The rate of separation minima infringements within the airspace of all controlling air traffic services units in a Member State (PI#2), is calculated as the total number of separation minima infringements with a safety impact that occurred in that airspace divided by the total number of controlled flight hours within that airspace. This indicator captures all SMIs that occur within the geographical boundary of a Member State, irrespective of which ANSP is providing the ATC service. Differently, the rate of separation minima infringements with ATS/CNS contribution (PI#4) is monitored at the level of the individual ANSP. As for RIs, SMIs indicators are also computed on the basis of the information provided by the NSA in the monitoring reports. 
 
@@ -115,7 +115,7 @@ The AXOT and AXIT indicators are both computed as the difference between the act
 
 Similarly, the additional time in terminal airspace is computed as the difference between the Arrival Sequencing and Metering Area (ASMA) – defined as a cylinder with a radius of 40 NM around the arrival airport – transit time and the reference time required to execute the approach without holding or vectoring. This indicator is expressed in minutes per arrival over the whole calendar year. 
 
-These three indicators are computed at airport level, for all airports with a minimum of 80,000 IFR movements per year. The indicators are presented at national level and broken down at the level of the individual airport. As a result, this section is not presented for Member States having no airport in the scope of the performance plans.
+These three indicators are computed at airport level, for all airports with a minimum of 80,000 IFR movements per year. The indicators are presented at national level and broken down at the level of the individual airport. As a result, this section is not presented for Member States having no airport in the scope of the performance plans. Similarly, these PI are aggregated at national level only in case of complete data for all the relevant airports (i.e. above the 80,000 IFR movements threshold).
 
 As for the en route environmental indicators, also these three indicators are monitored on the basis of the data recorded in the Eurocontrol operational systems and validated through the annual submission of the NSAs’ monitoring reports. 
 
@@ -166,7 +166,7 @@ Average en route ATFM delay per flight is defined by the Implementing Regulation
 
 The capacity targets included in the dashboard are extracted from the adopted performance plans, while the actual year delay data are provided by Eurocontrol and validated by the NSAs though the submission of the annual monitoring reports. 
 
-The en route capacity section of the dashboard includes also information concerning the distribution of delayed IFR flights per duration of en route ATFM delay. This chart presents the share of delayed flights based on the duration of the delay incurred (i.e. less than 5 minutes, between 5 and 15, 15 to 30, 30 to 60 or more than 60 minutes of ATMF delay). It provides useful details on the actual impact of ATFM regulations on the airspace users and it is closely related to the analysis of the Union-wide PI#2 – i.e. the percentage of flights with en route ATFM delay greater than 15 minutes. 
+The en route capacity section of the dashboard includes also information concerning the distribution of delayed IFR flights per duration of en route ATFM delay. This chart presents the share of delayed flights based on the duration of the delay incurred (i.e. less than 5 minutes, between 5 and 15, 15 to 30, 30 to 60 or more than 60 minutes of ATMF delay). It provides useful details on the actual impact of ATFM regulations on the airspace users and it is closely related to the analysis of the Union-wide PI#2 – i.e. the percentage of flights with en route ATFM delay greater than 15 minutes. The metric it is computed on the basis of the ATFM delay and IFR flight data recorded and provided by Eurocontrol.
 
 ### Capacity – En route performance indicators at ACC level (PI#4-5)
 
@@ -183,11 +183,11 @@ For both indicators the local level refers to the level of the Area Control Cent
 
 ### Capacity – Other en route information
 
-In addition to the KPIs on en route ATFM delay and the two PIs at ACC level, the evolution of the number of air traffic control officers (ATCOs) in operations (OPS) expressed as full-time equivalents (FTEs), and the sum of sector-opening hours provided by the ANSPs are also used to monitor en route performance for the capacity KPA. Although not formally recognised by the Implementing Regulation as PIs, these metrics are relevant to understand the evolution of capacity performance.
+In addition to the KPIs on en route ATFM delay and the two PIs at ACC level, the evolution of the number of air traffic control officers (ATCOs) in operations (OPS) expressed as full-time equivalents (FTEs), and the sum of sector-opening hours are also used to monitor en route performance for the capacity KPA. Although not formally recognised by the Implementing Regulation as PIs, these metrics are relevant to understand the evolution of capacity performance.
 
 In relation to the number of ATCOs in OPS FTEs, both the values planned in the performance plans and the actual figures reported by the Member States in the yearly monitoring reports are shown at the level of the ANSP and broken down at the level of the individual ACC for the reference year. 
 
-The sum of sector-opening hours is defined as the total opening time of each Air Traffic Services (ATS) sector that was activated over a calendar year. The total number of sector-opening hours is calculated as the product of the number of sectors in each sector configuration and the time during which each configuration was active. 
+The sum of sector-opening hours is defined as the total opening time of each Air Traffic Services (ATS) sector that was activated over a calendar year. The total number of sector-opening hours is calculated as the product of the number of sectors in each sector configuration and the time during which each configuration was active. This metric is computed on the basis of the data provided by the ANSPs to the Network Manager.
 
 ATCOs data are directly provided by the NSAs though their yearly monitoring reports submission. By contrast, the sum of sector-opening hours is calculated for each year of the reference period based on the data provided by Eurocontrol.
 
@@ -218,7 +218,7 @@ All causes departure delay is the average delay attributable to:
 -  Reactionary (knock-on) delay; and
 -  Airport operations delay, including ATFM airport delay reported by airspace users caused by regulation based on traffic volume which has a reference location classified as Aerodrome Zone or Aerodrome.
 
-All these indicators (except all causes departure delay PI) are computed only at local, airport, level, with PI#2 and PI#3 only computed for airports with more than 80,000 IFR movements per year. The table provided details the value of these indicators for the relevant airports. The data used to monitor these PIs are provided by Eurocontrol and included in the NSA monitoring report. 
+All these indicators (except all causes departure delay PI) are computed only at local, airport, level, with PI#2 and PI#3 only computed for airports with more than 80,000 IFR movements per year. The tables provided detail the value of these indicators for the relevant airports. The data used to monitor these PIs are provided by Eurocontrol and included in the NSA monitoring report. 
 
 This section is not presented for Member States having no airports in their performance plans.
 
@@ -241,7 +241,7 @@ Determined and actual data for the monitoring of cost-efficiency performance are
 
 ### Cost-efficiency - Actual unit cost incurred by the users (AUCU) (PI#1)
 
-The Actual Unit Cost for Users (AUCU) reflects the price per service unit that is charged in fine to users for the services provided in the year. It corresponds to the sum of the DUC for the year and of the different adjustments stemming from that year. The monitoring of the AUCU is carried out in EURO nominal terms.
+The Actual Unit Cost for Users (AUCU) reflects the price per service unit that is charged in fine to users for the services provided in the year. It corresponds to the sum of the DUC for the year and of the different adjustments in accordance with Article 25(2) stemming from that year. The monitoring of the AUCU is carried out in EURO nominal terms.
 
 Starting from the DUC (EURO nominal terms), the analysis presents all the adjustments required to compute the AUCU, i.e. the unit cost that airspace users genuinely incur in respect of the activities performed in the reference year:
 
@@ -254,6 +254,8 @@ Starting from the DUC (EURO nominal terms), the analysis presents all the adjust
 -  Cross-financing between en route charging zones, or between terminal charging zones;
 -  Other revenues; and
 -  Application of a lower unit rate as Art. 29(6) of (EU) 2019/317.
+
+The data used to compute the AUCU PI are sourced from the monitoring report and the accompanying en route/terminal reporting tables (T2). The various adjustments are divided by the number of actual service units to reflect their impact on the unit cost.
 
 Additionally, details on the amounts related to the costs reported by the Member State as being exempted from cost-sharing are presented for each reference year and broken down across the different categories defined in Art. 28(3) to 28(6) of Implementing Regulation 2019/317.
 
@@ -268,9 +270,14 @@ The RR, when expressed in percentage of the revenues, can be associated to a “
 -  Ex-ante, the RR is equal to the RoE (in value) included in the determined cost of capital.
 -  Ex-post, the RR is the sum of the RoE (in value) in the actual cost of capital and the net gain/loss resulting from risk sharing and incentives generated from that year.
 
-The net gain/loss results from the combination of three distinct items: a) the outcome of the cost-sharing mechanism to be retained by the ANSP (including the impact of costs exempted from cost-sharing and of the inflation adjustment); b) the outcome of the traffic risk sharing mechanism; and c) the outcome of the financial incentive mechanism for capacity and environment targets.
+The net gain/loss results from the combination of three distinct items: 
 
-As for the AUCU, also the monitoring of the RR is carried out in EURO nominal terms, on the basis of the yearly average exchange rate.
+a)  the outcome of the cost-sharing mechanism to be retained by the ANSP (including the impact of costs exempted from cost-sharing and of the inflation adjustment); 
+b)  the outcome of the traffic risk sharing mechanism; and 
+c)  the outcome of the financial incentive mechanism for capacity and environment targets.
+
+As for the AUCU, also the monitoring of the RR is carried out in EURO nominal terms, on the basis of the yearly average exchange rate. The metric is computed on the basis of the cost efficiency data provided in the en route and terminal reporting tables. 
+
 This analysis is repeated for all the en route and terminal charging zones within the scope of Implementing Regulation 2019/317.
 
 ## Network Manger view 

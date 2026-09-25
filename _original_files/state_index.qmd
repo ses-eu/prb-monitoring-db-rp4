@@ -205,17 +205,27 @@ replace_headings(path, character(0))
 ## Safety (Main ANSP)
 
 ```{r chart_saf_eosm}
-#| out.width: "99%"
+#| out.width: "100%"
 #| echo: false
 
 source("R/chart_level1_saf.R")
 ```
 
 :::: {#chart-saf class="mychart"}
+
+::::: {layout="[ 99, 1 ]"}
+:::::: {.chart-container}  
+
 ```{r chart-saf}
 #| echo: false
 mycharts[[1]]
 ```
+
+::::::
+
+:::::: {#empty-div}
+::::::
+:::::
 ::::
 
 :::: {#concl-saf}

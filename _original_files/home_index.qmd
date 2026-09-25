@@ -9,18 +9,15 @@
 :::
 
 
-### Remark from the chair
+### Remarks from the chair
 
 ::: {#chair-remarks1}
 
-The annual monitoring report for 2024 comes at a time when the Performance Review Board, appointed by the Commission in September 2025, is beginning the mandate. I would like to welcome my colleagues within the Board and extend my thanks to the previous Performance Review Body for its extensive contribution to the field of air traffic management performance over the last eight years. 
+This year’s PRB Annual Monitoring is the first monitoring publication of the fourth reference period (RP4) covering the results from the year 2025 and reflects the new working arrangements of the Performance Review Board (PRB) that was established together with its Secretariat.
 
-The new arrangement sees the group of experts become a board. Naturally, the ways of working will change compared to the previous eight years and I look forward to working with my fellow PRB colleagues and the European Commission to define our working arrangements under the SES II+ legislation. We will publish further information about this in the coming months, but one of our guiding principles is to work closely with stakeholders, particularly our colleagues at National Supervisory Authorities, on performance of the industry. 
+In this context, the PRB has introduced a new format for the Annual Monitoring centred on a digital dashboard, through which stakeholders can consult the data and information provided by the NSAs. This has enabled the PRB to focus its efforts on identifying the most significant trends at both Union and local level, and on formulating targeted recommendations to further improve the performance of ANSPs and the Network Manager.
 
-During this time of transition, this version of the report was developed by the PRB secretariat and provides the findings of the performance in 2024 but does not yet provide conclusions and recommendations. The PRB and I will draw them in the coming weeks and publish an update later in 2025. However, it remains important to highlight several of the key performance outcomes observed in 2024:
-
-Traffic increased in 2024, approaching the levels seen in 2019 before the COVID-19 pandemic. Many Member States see traffic levels significantly above pre-pandemic levels, whereas some (those mainly proximate to Ukraine and Russia) remain below.
-Nine ANSPs did not achieve the RP3 targets for the effectiveness of safety management, moreover rates of runway incursions and separation minima infringements increased.
+In this regard, the PRB has also launched a process aimed at fostering a more direct, continuous and constructive dialogue with all key actors involved in the development of the European ATM sector. Reliable and transparent data are essential for the analysis, the PRB will continue to engage with the NSAs to obtain additional information whenever needed.
 
 :::
 
@@ -33,14 +30,9 @@ Nine ANSPs did not achieve the RP3 targets for the effectiveness of safety manag
 
 ::::
 
-The geopolitical situations in Ukraine and the Middle East and the high levels of delay continue to impact on environmental performance, with en route flight efficiency remaining well in excess of the Union-wide targets.
-The high levels of delay observed in 2022 and 2023 further increased in 2024 to over two minutes per flight. These delays are driven by a lack of capacity in some Member States with air navigation service providers struggling to recruit sufficient numbers of air traffic controllers to meet demand. Capacity shortfalls need to be addressed to reduce the costs of delay incurred by airspace users and to drive performance to achieve the Union-wide targets.
-Cost-efficiency targets have been met also in 2024. As for the previous years, 2024 was also characterised by a significantly higher actual inflation than planned, leading to substantial inflation adjustments being charged to airspace users.
+Overall, performance in 2025 must be assessed against a backdrop of persistent traffic volatility and uncertainty, which has created substantial challenges for the implementation of the performance plans only recently adopted. Rapidly changing traffic flows reduce the reliability of forecasts and make the planning and delivery of service provision more complex. It is essential that ANSPs fully deliver on their commitments by implementing the measures presented and agreed during the planning phase. The Performance Review Board and its Secretariat are committed to supporting this objective.
 
-2024 is the final year of RP3. The first monitoring report for RP4, to be published in September next year, will monitor performance of the new indicators included within the Regulation and under the performance plans approved. There remain several Member States with performance plans currently under revision, and the PRB looks forward to working with the Commission and NSAs to ensure robust plans are in place at the earliest opportunity.
-
-On behalf of all the PRB members, I would like to thank the PRB secretariat for its invaluable help in preparing this report. I would also like to thank our colleagues from European Aviation Safety Agency (EASA) and from EUROCONTROL, namely the Aviation Transformation Directorate and its Aviation Intelligence Unit as well as the Network Management Directorate for their contributions. 
-
+I would like to acknowledge the invaluable contributions of the PRB Secretariat, EASA and EUROCONTROL, whose expertise has been critical to this report. Our mission is now clear: to address today’s challenges with determination and to deliver an air traffic management system that is resilient, sustainable and fit for the future.
 
 ![](images/prb_chair_signature.jpg){width=20%}\
 Koen Milis\
