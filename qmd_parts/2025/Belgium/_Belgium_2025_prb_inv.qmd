@@ -1,5 +1,7 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Skeyes planned a total asset value for new investments in RP4 of 52.0M€2022, of which 32.8% relates to new major investments. Skeyes planned 2 new major investments for RP4, of which none have started.
 
--   Bullet 2
+- According to the reporting tables, skeyes underspent -1.1M€2022 (-5.4%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- Skeyes reported no funding from Union assistance programmes in 2025.

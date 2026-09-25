@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Austro Control planned a total asset value for new investments in RP4 of 447.3M€2022, of which 98.9% relates to new major investments. Austro Control planned 6 new major investments for RP4.
 
--   Bullet 2
+- According to the reporting tables, Austro Control underspent -4.4M€2022 (-14.5%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- Austria has not provided an annual breakdown of the average net book value, depreciation, or leasing costs for any investment of Austro Control. There is therefore a lack of adequate and detailed information on investments to ensure transparency and compliance with reporting requirements.
+
+- Austro Control reported no funding from Union assistance programmes in 2025.

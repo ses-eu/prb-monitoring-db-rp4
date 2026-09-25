@@ -1,8 +1,8 @@
-## PRB1.1. IFR movements
+## PRB1.1. IFR movements {#prb1.1.-ifr-movements .Heading-2-ER}
 
--   Austria recorded 1,681K actual IFR movements in 2025, +11.5% compared to 2024 (1,507K).
+- Austria recorded 1,681K actual IFR movements in 2025, +11.5% compared to 2024 (1,507K).
 
--   Actual 2025 IFR movements were +7.2% above the plan (1,568K).
+- Actual 2025 IFR movements were +7.2% above the plan (1,568K).
 
--   Actual 2025 IFR movements were +23.2% above the actual 2019 level (1,365K).
+- Actual 2025 IFR movements were +23.2% above the actual 2019 level (1,365K).
 
