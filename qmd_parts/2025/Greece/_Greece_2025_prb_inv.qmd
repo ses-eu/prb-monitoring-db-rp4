@@ -1,5 +1,7 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- HASP planned a total asset value for new investments in RP4 of 243.9M€2022, of which 87.8% relates to new major investments. HASP planned 7 new major investments for RP4, none of which have started.
 
--   Bullet 2
+- According to the reporting tables, HASP underspent -0.3M€2022 (-12.9%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- HASP reported no funding from Union assistance programmes in 2025.

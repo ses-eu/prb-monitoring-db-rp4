@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- EANS planned a total asset value for new investments in RP4 of 31.8M€2022, of which 55.2% relates to new major investments. EANS planned 1 new major investment for RP4, which has started.
 
--   Bullet 2
+- In 2025, EANS overspent +0.3M€2022 (+321.4%) in costs related to new major investments. This is mainly due to the updated payment schedule and earlier cost recognition.
+
+- According to the reporting tables, EANS overspent +0.6M€2022 (+15.7%) in costs related to investments in 2025.
+
+- EANS reported 0.4M€2022 in funding from Union assistance programmes in 2025.

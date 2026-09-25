@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Skyguide planned a total asset value for new investments in RP4 of 393.6M€2022, of which 98.9% relates to new major investments. Skyguide planned 8 new major investments for RP4, of which 7 have started and 1 has not yet started.
 
--   Bullet 2
+- In 2025, Skyguide underspent -4.3M€2022 (-52.2%) in costs related to new major investments. This is mainly due to some delays.
+
+- According to the reporting tables, Skyguide overspent +0.8M€2022 (+1.9%) in costs related to investments in 2025.
+
+- Skyguide reported no funding from Union assistance programmes in 2025.

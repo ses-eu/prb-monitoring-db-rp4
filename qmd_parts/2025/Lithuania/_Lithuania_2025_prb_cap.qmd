@@ -1,10 +1,10 @@
-## PRB1.5. Capacity
+## PRB1.5. Capacity {#prb1.5.-capacity .Heading-2-ER}
 
--   Lithuania registered 0 minutes of average en route ATFM delay per flight during 2025, which remained 0 after the post-ops adjustment process, thus achieving the local target value of 0.03. Delays in Lithuania remained stable year-on-year.
+- Lithuania registered 0 minutes of average en route ATFM delay per flight during 2025, which remained 0 after the post-ops adjustment process, thus achieving the local target value of 0.03. Delays in Lithuania remained stable year-on-year.
 
--   The number of ATCOs in OPS is 34, being above the 2025 plan in Vilnius ACC by 2 FTE.
+- The number of ATCOs in OPS was 34, being above the 2025 plan in Vilnius ACC by 2 FTE.
 
--   The yearly total of sector opening hours in Vilnius ACC was 43,681, showing a 385% increase compared to 2024.
+- The yearly total of sector opening hours in Vilnius ACC was 43,681, showing a -1% decrease compared to 2024.
 
--   Vilnius ACC registered \[NUMBER\] IFR movements per one sector opening hour in 2025, being \[PERCENTAGE\]% \[below/above\] 2024 levels.
+- Vilnius ACC registered 5.07 IFR movements per one sector opening hour in 2025, being 19% above 2024 levels.
 

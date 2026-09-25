@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Oro Navigacija planned a total asset value for new investments in RP4 of 15.2M€2022, of which 45.3% relates to new major investments. Oro Navigacija planned 1 new major investment for RP4, which has started.
 
--   Bullet 2
+- In 2025, Oro Navigacija overspent +0.04M€2022 (+73.3%) in costs related to new major investments. This is attributable to a higher average net book value than planned.
+
+- According to the reporting tables, Oro Navigacija underspent -0.5M€2022 (-11.5%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- Oro Navigacija reported no funding from Union assistance programmes in 2025.

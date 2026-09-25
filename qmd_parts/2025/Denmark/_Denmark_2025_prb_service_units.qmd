@@ -1,8 +1,8 @@
-## PRB1.2. En route service units
+## PRB1.2. En route service units {#prb1.2.-en-route-service-units .Heading-2-ER}
 
--   Denmark recorded 1,558K actual service units in 2025, -0.8% compared to 2024 (1,571K).
+- Denmark recorded 1,558K actual service units in 2025, -0.8% compared to 2024 (1,571K).
 
--   Actual 2025 service units were -5.0% below the plan (1,640K).
+- Actual 2025 service units were -5.0% below the plan (1,640K).
 
--   Actual 2025 service units are -12.5% below the actual 2019 level (1,781K).
+- Actual 2025 service units are -12.5% below the actual 2019 level (1,781K).
 

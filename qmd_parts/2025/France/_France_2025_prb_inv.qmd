@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- DSNA planned a total asset value for new investments in RP4 of 325.0M€2022, all of which relate to new major investments. DSNA planned 3 new major investments for RP4, all of which have started.
 
--   Bullet 2
+- In 2025, DSNA overspent +3.5M€2022 (+973.5%) in costs related to new major investments. This is attributable to the 4-flight revolution project.
+
+- According to the reporting tables, DSNA overspent +9.2M€2022 (+4.0%) in costs related to investments in 2025.
+
+- DSNA reported no funding from Union assistance programmes in 2025.

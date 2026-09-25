@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- AirNav Ireland planned a total asset value for new investments in RP4 of 151.0M€2022, of which 56.9% relates to new major investments. AirNav Ireland planned 6 new major investments for RP4, of which 1 has started and 5 have not yet started.
 
--   Bullet 2
+- In 2025, AirNav Ireland overspent +0.2M€2022 in costs related to new major investments. This is attributable to the COOPANS TopsSky ATC One project.
+
+- According to the reporting tables, AirNav Ireland underspent -3.9M€2022 (-19.4%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- AirNav Ireland reported no funding from Union assistance programmes in 2025.

@@ -1,5 +1,7 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Croatia Control planned a total asset value for other new investments in RP4 of 56.5M€2022. Croatia Control planned no new major investments for RP4.
 
--   Bullet 2
+- According to the reporting tables, Croatia Control underspent -2.6M€2022 (-14.4%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- Croatia Control reported no funding from Union assistance programmes in 2025.

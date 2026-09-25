@@ -1,8 +1,8 @@
-## PRB1.1. IFR movements
+## PRB1.1. IFR movements {#prb1.1.-ifr-movements .Heading-2-ER}
 
--   Greece recorded 1,146K actual IFR movements in 2025, +6.6% compared to 2024 (1,075K).
+- Greece recorded 1,146K actual IFR movements in 2025, +6.6% compared to 2024 (1,075K).
 
--   Actual 2025 IFR movements were in line with the plan (1,143K).
+- Actual 2025 IFR movements were in line with the plan (1,143K).
 
--   Actual 2025 IFR movements were +29.7% above the actual 2019 level (884K).
+- Actual 2025 IFR movements were +29.7% above the actual 2019 level (884K).
 

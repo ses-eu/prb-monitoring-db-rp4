@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- LPS SR planned a total asset value for new investments in RP4 of 67.3M€2022, of which 49.8% relates to new major investments. LPS SR planned 2 new major investments for RP4, of which 1 has started and 1 has not yet started.
 
--   Bullet 2
+- In 2025, LPS SR overspent +0.1M€2022 (+167.3%) in costs related to new major investments. This is attributable to the flight calibration systems project.
+
+- According to the reporting tables, LPS SR underspent -0.4M€2022 (-3.3%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- LPS SR reported 0.1M€2022 in funding from Union assistance programmes in 2025.

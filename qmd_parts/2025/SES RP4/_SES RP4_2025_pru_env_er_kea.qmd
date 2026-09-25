@@ -12,23 +12,23 @@ The PRB estimates that over 11 million kilometres of additional distance were fl
 
 In 2025, 12 Member States achieved their KEA targets, some with a considerable margin, others closer to the target: Austria, Belgium, Czech Republic, Estonia, Germany, Hungary, Latvia, Lithuania, the Netherlands, Slovenia, Sweden, and Switzerland. The Baltic States, who also have a higher KEA target due to Russia's war of aggression against Ukraine, achieved their KEA with the highest margin.
 
--   Lithuania achieved a KEA of 11.41% (1.72 p.p. better than the target of 13.13%).
+- Lithuania achieved a KEA of 11.41% (1.72 p.p. better than the target of 13.13%).
 
--   Latvia achieved a KEA of 7.15% (0.81 p.p. better than the target of 7.96%).
+- Latvia achieved a KEA of 7.15% (0.81 p.p. better than the target of 7.96%).
 
--   Estonia achieved a KEA of 5.75% (0.79 p.p. better than the target of 6.54%).
+- Estonia achieved a KEA of 5.75% (0.79 p.p. better than the target of 6.54%).
 
 Conversely, 16 Member States did not achieve their targets:
 
--   Five Member States were within 0.1 percentage points of their targets: Bulgaria, Croatia, Cyprus, Denmark, and Greece.
+- Five Member States were within 0.1 percentage points of their targets: Bulgaria, Croatia, Cyprus, Denmark, and Greece.
 
--   Seven Member States missed their targets by between 0.1 and 0.3 percentage point: Ireland, Italy, Malta, Poland, Portugal Romania, and Slovakia. The KES also degraded or stayed the same for all but Romania.
+- Seven Member States missed their targets by between 0.1 and 0.3 percentage point: Ireland, Italy, Malta, Poland, Portugal Romania, and Slovakia. The KES also degraded or stayed the same for all but Romania.
 
--   The remaining four Member States missed their targets by more than 0.3 percentage point: Finland, France, Norway, and Spain. Among this group, only Spain's performance has improved slightly (both KEA and KES) compared to 2024. On the other side, the targets included an allowance for the impact on Ukraine, however Finland still noted that the target was not achieved due to the shift in traffic flows from Russia to Kaliningrad, as a result of the airspace closure.
+- The remaining four Member States missed their targets by more than 0.3 percentage point: Finland, France, Norway, and Spain. Among this group, only Spain's performance has improved slightly (both KEA and KES) compared to 2024. On the other side, the targets included an allowance for the impact on Ukraine, however Finland still noted that the target was not achieved due to the shift in traffic flows from Russia to Kaliningrad, as a result of the airspace closure.
 
 **KEP and KES**
 
-KEP measures the efficiency of the routes planned by airspace users according to their own planning tools and criteria. KEP is one of two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. Although it does not directly relate to fuel burn or CO2 emissions, it helps explain the constraining factors that limit horizontal flight efficiency.
+KEP measures the efficiency of the routes planned by airspace users according to their own planning tools and criteria. **KEP is one of two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. Although it does not directly relate to fuel burn or CO2 emissions, it helps explain the constraining factors that limit horizontal flight efficiency.**
 
 KES is the other of the two performance indicators that help explain Union-wide environmental performance, in addition to measuring horizontal flight efficiency. KES does not directly relate to fuel burn or CO2 emissions, but it helps explain the constraining factors that limit horizontal flight efficiency. KES is relevant because environmental performance correlates with traffic levels and available capacity. It considers the available airspace, including capacity and restrictions, during the flight planning stage. It therefore reflects the options airspace users had when planning their flights.
 

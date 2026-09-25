@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- ENAIRE planned a total asset value for new investments in RP4 of 828.5M€2022, of which 98.6% relates to new major investments. ENAIRE planned 18 new major investments for RP4, of which 15 have started and 3 have not yet started.
 
--   Bullet 2
+- In 2025, ENAIRE overspent +1.5M€2022 (+71.4%) in costs related to new major investments. This is mainly attributable to the ICT systems project.
+
+- According to the reporting tables, ENAIRE overspent +0.2M€2022 (+0.1%) in costs related to investments in 2025.
+
+- ENAIRE reported 2.0M€2022 in funding from Union assistance programmes in 2025.

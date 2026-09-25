@@ -1,10 +1,10 @@
-## PRB1.3. Safety
+## PRB1.3. Safety {#prb1.3.-safety .Heading-2-ER}
 
--   6 ANSPs achieved the RP4 target level D on safety risk management already in 2025.
+- 6 ANSPs achieved the RP4 target level D on safety risk management already in 2025.
 
--   17 ANSPs achieved the EoSM intermediate targets on all Management Objectives in 2025.
+- 17 ANSPs achieved the EoSM intermediate targets on all Management Objectives in 2025.
 
--   Four ANSPs scored minimum level A (below regulatory requirements) at least on one of the Management Objectives.
+- Four ANSPs scored minimum level A (below regulatory requirements) at least on one of the Management Objectives.
 
--   The rate of Runway Incursions (Ris) and Separation Minima Infringements (SMIs) have decreased compared to 2024.
+- The rate of Runway Incursions (Ris) and Separation Minima Infringements (SMIs) have decreased compared to 2024.
 

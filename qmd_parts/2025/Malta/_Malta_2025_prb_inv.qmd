@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- MATS planned a total asset value for new investments in RP4 of 85.7M€2022, of which 98.0% relates to new major investments. MATS planned 7 new major investments for RP4, of which 1 has started and 6 have not yet started.
 
--   Bullet 2
+- In 2025, MATS underspent -0.7M€2022 (-99.5%) in costs related to new major investments. This is mainly attributable to the new civil and architecture premises project.
+
+- According to the reporting tables, MATS overspent +0.1M€2022 (+4.6%) in costs related to investments in 2025.
+
+- MATS reported 1.2M€2022 in funding from Union assistance programmes in 2025.

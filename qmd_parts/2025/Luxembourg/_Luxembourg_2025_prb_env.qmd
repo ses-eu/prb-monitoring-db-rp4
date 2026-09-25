@@ -1,4 +1,4 @@
-## PRB1.4. Environment
+## PRB1.4. Environment {#prb1.4.-environment .Heading-2-ER}
 
--   Please refer to the KEA indicator for Belgium.
+- Please refer to the KEA indicator for Belgium.
 

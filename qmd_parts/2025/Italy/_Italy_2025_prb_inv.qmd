@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- ENAV planned a total asset value for new investments in RP4 of 377.2M€2022, of which 89.9% relates to new major investments. ENAV planned 13 new major investments for RP4, of which 12 have started and 1 has not yet started.
 
--   Bullet 2
+- In 2025, ENAV overspent +2.2M€2022 (+82.3%) in costs related to new major investments. This is mainly attributable to SISTEMI, LICENZE/APPLICAZIONI GESTIONALI project.
+
+- According to the reporting tables, ENAV underspent -2.2M€2022 (-1.4%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- ENAV reported 5.9M€2022 in funding from Union assistance programmes in 2025.

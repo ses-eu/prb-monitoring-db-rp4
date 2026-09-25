@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- Fintraffic ANS planned a total asset value for new investments in RP4 of 87.5M€2022, of which 43.5% relates to new major investments. Fintraffic ANS planned 2 new major investments for RP4, of which 1 has started and 1 has not yet started.
 
--   Bullet 2
+- In 2025, Fintraffic ANS overspent +0.2M€2022 (+117.2%) in costs related to new major investments. This is attributable to contract milestone payment higher than planned.
+
+- According to the reporting tables, Fintraffic ANS underspent -1.2M€2022 (-14.9%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- Fintraffic ANS reported 0.003M€2022 in funding from Union assistance programmes in 2025.

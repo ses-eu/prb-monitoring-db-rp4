@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- LGS planned a total asset value for new investments in RP4 of 19.3M€2022, of which 23.8% relates to new major investments. LGS planned 1 new major investment for RP4, which has started.
 
--   Bullet 2
+- In 2025, LGS overspent +0.01M€2022 (+47.3%) in costs related to new major investments. This is due to the commissioning of core projects.
+
+- According to the reporting tables, LGS underspent -0.4M€2022 (-7.3%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- LGS reported 0.1M€2022 in funding from Union assistance programmes in 2025.

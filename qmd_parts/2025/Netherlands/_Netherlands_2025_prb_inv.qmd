@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- LVNL planned a total asset value for new investments in RP4 of 212.6M€2022, of which 93.0% relates to new major investments. LVNL planned 4 new major investments for RP4, all of which have started.
 
--   Bullet 2
+- In 2025, LVNL underspent -0.01M€2022 (-1.1%) in costs related to new major investments. This is mainly attributable to the iTEC SkyNex project.
+
+- According to the reporting tables, LVNL overspent +0.9M€2022 (+2.9%) in costs related to investments in 2025.
+
+- LVNL reported 6.0M€2022 in funding from Union assistance programmes in 2025.

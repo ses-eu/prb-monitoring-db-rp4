@@ -1,5 +1,7 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- ANA LUX planned a total asset value for new investments in RP4 of 48.7M€2022, of which 39.6% relates to new major investments. ANA LUX planned 1 new major investment for RP4, which has not started yet.
 
--   Bullet 2
+- According to the reporting tables, ANA LUX overspent +0.1M€2022 (+5.1%) in costs related to investments in 2025.
+
+- ANA LUX reported no funding from Union assistance programmes in 2025.

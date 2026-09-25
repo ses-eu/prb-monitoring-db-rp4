@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- BULATSA planned a total asset value for new investments in RP4 of 194.0M€2022, of which 50.2% relates to new major investments. BULATSA planned 6 new major investments for RP4, of which 4 have started and 2 have not yet started.
 
--   Bullet 2
+- In 2025, BULATSA underspent -0.3M€2022 (-19.0%) in costs related to new major investments. This is mainly attributable to the new ATM, simulator and contingency system.
+
+- According to the reporting tables, BULATSA overspent +0.4M€2022 (+1.8%) in costs related to investments in 2025.
+
+- BULATSA reported 0.1M€2022 in funding from Union assistance programmes in 2025.

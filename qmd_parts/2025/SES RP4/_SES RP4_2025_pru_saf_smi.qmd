@@ -16,7 +16,7 @@ When normalized by controlled flight hours, the highest occurrence rates were re
 
 **SMIs with ANS contribution by ANSP**
 
-Based on the reported data, the ANSPs with the highest number of SMI occurrences with ANS contribution were DSNA (285 occurrences), Enaire (133), ENAV (127), LVNL (85) and HASP (68). The lowest number of SMIs with ANS contribution (0) were recorded by Arvidsjaur AB (AFAB), Saab Digital ATS (SDATS), Port Lotniczy Bydgoszcz S.A., Warmia i Mazury Sp. z o.o., Saerco, and Skyway.
+Based on the reported data, the ANSPs with the highest number of SMI occurrences with ANS contribution were DSNA (285 occurrences), ENAIRE (133), ENAV (127), LVNL (85) and HASP (68). The lowest number of SMIs with ANS contribution (0) were recorded by Arvidsjaur AB (AFAB), Saab Digital ATS (SDATS), Port Lotniczy Bydgoszcz S.A., Warmia i Mazury Sp. z o.o., Saerco, and Skyway.
 
 When normalized by controlled flight hours, the highest rate of SMIs with ANS contribution in 2025 has been recorded in the LVNL airspace (15.1), followed by DNSA (14.1), and Skeyes (9.3). On the opposite side, aside the ANSPs that recorded 0 SMIs with ANS contribution, the lowest rates were recorded by Croatia Control (0.29), MUAC (0.31), and Naviair (0.48).
 

@@ -1,5 +1,9 @@
-## PRB1.7. Investments
+## PRB1.7. Investments {#prb1.7.-investments .Heading-2-ER}
 
--   Bullet 1
+- DFS planned a total asset value for new investments in RP4 of 120.4M€2022, of which 93.2% relates to new major investments. DFS planned 4 new major investments for RP4, of which 1 has started and 3 have not yet started. DFS reported 3 additional major investments not foreseen as part of the performance plan, of which 1 has started.
 
--   Bullet 2
+- In 2025, DFS underspent -0.04M€2022 (-64.5%) in costs related to new major investments. This is mainly attributable to the improvement and deployment of the new ATS system functionalities project.
+
+- According to the reporting tables, DFS underspent -12.3M€2022 (-11.2%) in costs related to investments in 2025. These amounts must be reimbursed to the airspace users through a reduction of future unit rate(s), unless the NSA decides after consultation with the users, that the ANSP must not reimburse a part of the difference according to article 28 of Regulation (EU) 2019/317.
+
+- DFS reported 3.1M€2022 in funding from Union assistance programmes in 2025.
