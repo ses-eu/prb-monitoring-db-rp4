@@ -6,5 +6,5 @@
 
 - Actual 2025 IFR movements were in line with the actual 2019 level (9,985K).
 
-- In 2025, Russia's war of aggression against Ukraine continued to significantly affect traffic flows within the SES area. In addition, the geopolitical situation in the Middle East also influenced traffic patterns. As a result, some ANSPs experienced unexpectedly strong traffic growth compared with the Union-wide average, which remained unchanged compared to 2019, while others had yet to recover to the 2019 traffic levels.
+- In 2025, Russia's war of aggression against Ukraine continued to significantly affect traffic flows within the SES area. In addition, the geopolitical situation in the Middle East also influenced traffic patterns. As a result, some ANSPs experienced unexpectedly strong traffic growth compared with the Union-wide average, while others had yet to recover to the 2019 traffic levels.
 

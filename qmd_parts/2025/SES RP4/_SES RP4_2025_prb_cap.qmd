@@ -4,9 +4,9 @@
 
 - For 19 ANSPs, average en route ATFM delays in 2025 were lower than or equal to 2024. For a further five ANSPs, average delays were still below 0.05 minutes per flight despite a minor increase.
 
-- Of the seven ANSPs that did not meet their local en route capacity target, five ANSPs still managed to improve their performance compared to 2024.
+- Of the seven ANSPs that did not meet their local en route capacity target in 2025, five ANSPs managed to improve their performance compared to 2024.
 
-- Similar to the previous year, the main causes of delay in 2025 were ATC Capacity, weather and ATC Staffing.
+- Similar to the previous years, the main causes of delay in 2025 were ATC Capacity, weather and ATC Staffing.
 
 - A significant proportion of the 0.55 minutes decrease in average delays in 2025 compared to 2024 was due to reductions in delays related to weather (-0.30) and other non-ATC reasons (-0.10).
 
