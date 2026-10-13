@@ -4,7 +4,7 @@
 ::::
 
 :::: {.g-col-3 style="text-align: right"}
-<span class="no-external-icon">[<i class="fa fa-download"></i> PRB conclusions](){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
+<span class="no-external-icon">[<i class="fa fa-download"></i> PRB conclusions](`r params$home_address`/download/{{< var doc.year_report >}}/PRB-Annual-Monitoring-Report_{{< var doc.year_report >}}.pdf){.btn .btn-light .text-dark .border .bg-secondary-subtle .rounded}</span>
 ::::
 :::
 

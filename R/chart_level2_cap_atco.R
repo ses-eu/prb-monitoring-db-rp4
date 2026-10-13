@@ -43,9 +43,17 @@ data_for_chart <- rbind(data_prep_ansp, data_prep_acc) %>%
     value = case_when(
       year > year_report & type == "Actual" ~ NA,
       .default = janitor::round_half_up(value, 0)
-    ),
-    textposition = if_else((type == "Planned"), "top center", "bottom center")
-  )
+    )
+  ) |>
+  group_by(acc, year) %>%
+  mutate(
+    textposition = case_when(
+      is.na(value) ~ NA_character_,
+      value == max(value, na.rm = TRUE) ~ "top center",
+      TRUE ~ "bottom center"
+    )
+  ) %>%
+  ungroup()
 
 acc_list_for_chart <- unique(data_for_chart$acc)
 

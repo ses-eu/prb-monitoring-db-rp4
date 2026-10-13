@@ -33,7 +33,7 @@ out_format <- 'web' # set your output format here: 'pdf' or 'web'
 
 ## set all_states to FALSE to build only one state site, TRUE for all
 all_states <- FALSE # go below after lists below if you want to to manipulate the state list
-single_state <- 'Austria' # set your one country/stakeholder here (Home for home page)
+single_state <- 'SES RP4' # set your one country/stakeholder here (Home for home page)
 
 # Set to TRUE to refresh pru analysis and/or nsa input
 update_nsa_input <- FALSE
@@ -52,7 +52,7 @@ if (update_pru_analysis) {
 }
 
 # The data from the excel files is cached. Set to TRUE if you want to update. It's faster if you don't need to.
-update_data <- TRUE
+update_data <- FALSE
 
 if (update_data) {
   # delete cached files
@@ -60,7 +60,7 @@ if (update_data) {
 }
 
 # Set to TRUE when you want to include them
-prb_conclusions_ready <- FALSE
+update_prb_conclusions <- FALSE
 
 # libraries ----
 source("R/libraries.R")
@@ -86,10 +86,10 @@ if (!all_states) {
 } else {
   ## modify state list as required
   state_list_prod <- state_list
-  # state_list_prod <- c(state_list, "Home")  #add home to list
+  # state_list_prod <- c(state_list, "Home") #add home to list
   # state_list_prod <- setdiff(state_list_prod, "FABEC") #remove state
-  states_from <- c(1:31) # 1st number is the index of 1st state from which you want to generate
-  state_list_prod <- state_list_prod[states_from]
+  # states_from <- c(9:29) # 1st number is the index of 1st state from which you want to generate
+  # state_list_prod <- state_list_prod[states_from]
   # state_list_prod <- c(
   #'Austria',
   #'Bulgaria',
@@ -111,7 +111,7 @@ if (!all_states) {
   # 'Lithuania',
   # 'Luxembourg',
   #'Malta',
-  #'Netherlands',
+  # 'Netherlands',
   #'Norway',
   #  'Poland',
   #'Portugal',
@@ -120,7 +120,7 @@ if (!all_states) {
   #'Slovenia',
   # 'Spain',
   #   'Sweden',
-  #  'Switzerland'
+  # 'Switzerland',
   # NULL
   # )
 }
@@ -156,7 +156,8 @@ for (i in 2025) {
     # refresh level 2 text
     refresh_qmd_parts_country(
       update_pru_analysis = update_pru_analysis,
-      update_nsa_input = update_nsa_input
+      update_nsa_input = update_nsa_input,
+      update_prb_conclusions = update_prb_conclusions
     )
 
     # country <- state_list_prod
@@ -204,6 +205,9 @@ for (i in 2025) {
         ]
         files_to_be_deleted <- files_to_be_deleted[
           (files_to_be_deleted == "dataportal") == FALSE
+        ]
+        files_to_be_deleted <- files_to_be_deleted[
+          (files_to_be_deleted == "rp3") == FALSE
         ]
 
         ## otherwise it deletes everything

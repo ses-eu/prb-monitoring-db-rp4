@@ -2,12 +2,11 @@
 #
 # Start with dry_run <- TRUE to preview the affected files. After checking the
 # output, change it to FALSE to apply the replacements.
-slug <- "switzerland"
 folder <- paste0(
-  "//ihx-vdm05/LIVE_var_www_performance$/prb-monitoring/rp4/test/rp3/rp3"
+  "//ihx-vdm05/LIVE_var_www_performance$/prb-monitoring/rp4/prod"
 )
-old_text <- 'collapse list-unstyled sidebar-section depth2'
-new_text <- 'collapse list-unstyled sidebar-section depth2 show'
+old_text <- 'https://www.eurocontrol.int/performance/prb-monitoring/rp4/test'
+new_text <- 'https://www.sesperformance.eu'
 
 recursive <- TRUE
 make_backups <- FALSE

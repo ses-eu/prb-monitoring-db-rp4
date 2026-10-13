@@ -1,3 +1,5 @@
+# source("R/get_data.R")
+
 # import data  ----
 state_table <- state_list |>
   as_tibble() |>
@@ -55,7 +57,7 @@ data_prep_pdf <- state_table |>
   mutate(
     Actual = format(janitor::round_half_up(Actual, 2), nsmall = 2),
     Target = format(janitor::round_half_up(Target, 2), nsmall = 2),
-    Assessment = if_else(Actual <= Target, 0, 1)
+    Assessment = if_else(Actual <= Target, 1, 0)
   )
 
 
